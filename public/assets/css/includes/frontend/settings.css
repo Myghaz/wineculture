@@ -1,0 +1,51 @@
+
+/* ------------ ☀️ / 🌒 Switch Toggle ------------ */
+span.toggle {
+    position: absolute;
+    display: inline;
+    cursor: pointer;
+    top: 20px;
+    right: 25px;
+    font-size: 150%;
+    z-index: 20;
+}
+
+span.toggle:before {
+    content: "\f0eb";
+    font-family: 'FontAwesome'; 
+    color: black;  
+}
+
+span.toggle.active:before {
+    content: "\f0eb";
+    font-family: 'FontAwesome'; 
+    color: white;
+}
+
+span.toggle.animate {
+    animation: animate 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* ------------ 🌊 wave effect ------------ */
+span.wave {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    border-radius: 100%;
+    width: 2px;
+    height: 2px;
+    display: block;
+    box-shadow: 0 0 0 0 #212121;
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+span.wave.active {
+    background: #212121;
+    box-shadow: 0 0 0 9999px #212121;
+}
+
+@keyframes animate {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(0); }
+    100% { transform: scale(1); }
+}

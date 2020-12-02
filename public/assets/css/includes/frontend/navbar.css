@@ -1,0 +1,186 @@
+html{
+    --background: #FFF;
+    --color: black;
+    --background-image: url("../../../img/layouts/wineculture_logo_lightmode.png");
+    --border-bottom: 2px solid #742f37;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.theme-dark  {
+    --background: #212121;  
+    --color: #FFF;
+    --background-image: url("../../../img/layouts/wineculture_logo_darkmode.png");
+    --border-bottom: 2px solid white;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+}
+body{
+    overflow-x: hidden;
+}
+ .navv {
+     width: 100%;
+     margin: auto;
+     position: relative;
+     box-shadow: var(--box-shadow);
+ }  
+ 
+ 
+ /* --- NAVBAR ---*/
+ 
+ .navbar {
+     display: flex;
+     position: relative;
+     align-items: center;
+     height: 75px;
+     background: var(--background);
+     font-size: 13.5pt;
+     border-radius: 3px;
+     box-shadow: var(--box-shadow);
+     padding: 0 300px;
+     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+     z-index: 20;
+ }
+
+
+.img {
+    height: 100%;
+    width: 7%;
+    cursor: pointer;
+    margin-left: 17%;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: 40% 40%;
+    z-index: 20;
+ }
+ 
+ .navbar ul {
+     flex: 1;
+     text-align: right;
+     margin-right: 17%;
+     padding-top: 18px;
+     z-index: 20;
+ }
+ 
+ 
+ .navbar ul li {
+     display: inline-block;
+     list-style: none;
+     margin: 0 5px;
+ }
+ 
+ .navbar ul li a {
+     font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+     text-decoration: none;
+     color: var(--color);
+     padding: 10px 10px;
+     position: relative;
+     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+ 
+ }
+ 
+ .navbar ul li a:hover::after {
+     width: 100%;
+ }
+ div.bb a:before, div.bb a:after
+ {
+     position: absolute;
+     opacity: 0;
+     height: 100%;
+     width: 2px;
+     content: '';
+     border-bottom: var(--border-bottom);
+     transition: all 0.2s;
+ }
+ 
+ div.bb a:before
+ {
+     left: 0px;
+     top: 0px;
+ }
+ 
+ div.bb a:after
+ {
+     right: 0px;
+     bottom: 0px;
+ }
+ 
+ div.bb a:hover:before, div.bb a:hover:after
+ {
+     opacity: 1;
+     height: 2px;
+     width: 100%;
+ }
+.menu{
+    right: 0;
+    margin-right: 20px;
+    font-size: 20pt;
+    display: none;
+}
+ 
+@media screen and (max-width: 1492px) {
+    .navbar ul {
+        margin-right: 2%;
+    }
+    .navbar .img {
+        margin-left: 2%;
+        margin-top: 5px;
+        width: 100px;
+    }
+    .navbar {
+        border-radius: 0;
+     }
+}
+
+@media screen and (max-width: 1020px) {
+    
+    .menu{
+        display: inline;
+        position: absolute;
+        float: right;
+    }
+    .navbar ul li{
+        display: none;
+    }
+    .navbarmin {
+        display: flex;
+        position: relative;
+        align-items: center;
+        height: 75px;
+        font-size: 13.5pt;
+        width: 100%;
+        background-color: var(--background);
+    }
+    .navbarmin ul{
+        left: 0;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin-top: 560px;  
+        position: absolute;
+        width: 100%;
+        background-color:var(--background);
+        padding-top: 70px;
+        z-index: 20;
+        list-style: none;
+    }
+    .navbarmin li{
+        float: left;
+        width: 100%;
+        clear: left;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 16pt;    
+    }
+    .navbarmin ul li a {
+        font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        text-decoration: none;
+        color: #000;
+        padding: 10px 10px;
+        position: relative;
+    }
+    .navbarmin div.bb a:before, div.bb a:after
+    {
+     background: none;
+    }
+    .navbarmin .img {
+       margin-left: 3.5%;
+       width: 130px; 
+    }
+}   

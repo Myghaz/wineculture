@@ -1,0 +1,70 @@
+html{
+    --background: #FFF;
+    --color: black;
+    --btn-background: #27000A;
+    --btn-color: #fff;
+	--inputs: #fff;
+    --placeholder: rgb(107, 107, 107);
+  
+}
+.theme-dark  {
+    --background: #212121;  
+    --color: #FFF;
+    --btn-background:black;
+    --btn-color: #fff;
+    --inputs: #2e2e2e;
+    --placeholder: #fff;
+}
+body {
+    overflow-x: hidden;
+	background-image: url("/assets/img/paginas/frontend/back.jpg");
+}
+  
+.container{
+    margin-top: 120px;
+}
+.formulario {
+    background-color: var(--background);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.contactos {
+    background-color: green;
+}
+
+.icon {
+    font-size: 35px;
+    color: var(--color);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.row{
+    color:  var(--color)!important;
+    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+span {
+    display: none;
+    color: red;
+}
+input.form-control, textarea.form-control{
+    background-color: var(--inputs)!important;
+    color: var(--color)!important;
+    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+::placeholder { 
+	color: var(--placeholder)!important;
+	transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+.btn{
+    border-radius: 0 0 5px 0;
+    background-color:  var(--btn-background);
+    color:  var(--btn-color);
+    border-radius: 40px!important;
+    width: 90%;
+    height: 40px;
+    font-size: 20px!important;
+    line-height: 20px!important;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.btn:hover{
+    opacity: 0.7;
+}
