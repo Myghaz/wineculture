@@ -40,7 +40,7 @@
             </div>
             @if (Route::has('password.request'))
             <a class="btn btn-link" href="{{ route('password.request') }}">
-                {{ __('Esqueceu-se da Password?') }}s
+                {{ __('Esqueceu-se da Password?') }}saa
             </a>
             @endif
             <button class="form-btn dx" type="submit">Log In</button>
