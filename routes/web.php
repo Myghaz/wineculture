@@ -28,6 +28,11 @@ Route::get('/contactos', function () {
 Route::get('/sobre', function () {
     return view('paginas.frontend.sobre');
 });
+
+Route::get('/faq', function () {
+    return view('paginas.frontend.faq');
+});
+
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
 });
