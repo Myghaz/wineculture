@@ -19,8 +19,13 @@ function getCookie(name) {
     return null;
 }
 
-function eraseCookie(name) {
-  document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+function switchTheme() {
+  if (getCookie('theme') == "dark") {
+    setCookie('theme', 'light', 365);
+
+  } else if (getCookie('theme') == "light") {
+    setCookie('theme', 'dark', 365);
+    }
 }
 
 if (getCookie('theme') == "dark") {
@@ -29,15 +34,6 @@ if (getCookie('theme') == "dark") {
   document.querySelector('.wave').classList.toggle('active');
   document.documentElement.classList.toggle('theme-dark');
 }
-
-function switchTheme() {
-  if (getCookie('theme') == "dark") {
-    setCookie('theme', 'light', 365);
-  } else if (getCookie('theme') == "light") {
-    setCookie('theme', 'dark', 365);
-    }
-}
-
 document.querySelector('.toggle').addEventListener('click', function () {
   this.classList.add('animate');
   setTimeout(() => {
