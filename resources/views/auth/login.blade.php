@@ -40,7 +40,11 @@
             </div>
             @if (Route::has('password.request'))
             <a class="btn btn-link" href="{{ route('password.request') }}">
+<<<<<<< HEAD
                 {{ __('Esqueceu-se da Password?') }}saa
+=======
+                {{ __('Esqueceu-se da Password?') }} foweigfo+wejfgopewjfp
+>>>>>>> 85894dcc23b150eb26c8709dd20de55cf8a6bf3f
             </a>
             @endif
             <button class="form-btn dx" type="submit">Log In</button>
