@@ -9,8 +9,8 @@
 
 <body>
     @include('includes.frontend.navbar')
-    <div class="banner">
-        <img class="img-fluid" src="{{ URL::asset('assets/img/paginas/frontend/faq-banner.jpg') }}" alt="banner">
+    <div>
+        <img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/faq-banner.jpg') }}" alt="banner">
     </div>
     <div class="container-fluid">
         <div class="row">
