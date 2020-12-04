@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->enum('tipouser', array('Administrador', 'Utilizador', 'Produtor'));
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('nome');
+            $table->string('name');
             $table->string('apelido');
             $table->date('data_nasc');
             $table->timestamp('email_verified_at')->nullable();
@@ -26,7 +26,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

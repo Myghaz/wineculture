@@ -39,6 +39,13 @@ Route::get('/sobre_vinhos', function () {
 Route::get('/settings', function () {
     return view('includes.frontend.settings');
 });
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//Admin
+Route::get('/admin/dashboard', function () {
+    return view('paginas.backend.dashboard');
+});
