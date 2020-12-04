@@ -27,8 +27,8 @@ class UsersSeeder extends Seeder
             'tipouser' => 'Utilizador',
             'email' => 'miguel.ciencia655@gmail.com',
             'password' => bcrypt('123456'),
-            'nome' => 'Miguel',
-            'apelido' => 'Peireira',
+            'name' => 'Miguel',
+            'apelido' => 'Pereira',
             'data_nasc' => Carbon::parse('2000-06-26'),
         ]);
     }
