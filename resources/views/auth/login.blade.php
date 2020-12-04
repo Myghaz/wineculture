@@ -2,13 +2,12 @@
 <html>
 
 <head>
-    @section('title', 'Login')
+    <title>Login</title>
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/login.css') }}">
 </head>
 
 <body>
     @include('includes.frontend.navbar')
-    @yield('content')
     <div class="backimg">
     <div class="forms">
         <form class="signIn" method="POST" action="{{ route('login') }}">
