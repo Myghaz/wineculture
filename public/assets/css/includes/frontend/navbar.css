@@ -58,7 +58,7 @@ body{
      padding-top: 18px;
      z-index: 20;
  }
- 
+
  
  .navbar ul li {
      display: inline-block;
@@ -75,7 +75,14 @@ body{
      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
  
  }
- 
+ .navbar ul li.active a:before, .navbar ul li.active a:after{
+    border-bottom: var(--border-bottom);
+    content: '';
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
+
  .navbar ul li a:hover::after {
      width: 100%;
  }

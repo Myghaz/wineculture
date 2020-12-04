@@ -18,34 +18,27 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('paginas.frontend.index');
-});
+})->name('index');
 
-Route::get('/login',[MainController::class, 'login']);
 
 Route::get('/contactos', function () {
     return view('paginas.frontend.contactos');
-});
+})->name('contactos');
 Route::get('/sobre', function () {
     return view('paginas.frontend.sobre');
-});
+})->name('sobre');
 
 Route::get('/faq', function () {
     return view('paginas.frontend.faq');
-});
+})->name('faq');
 
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
-});
+})->name('sobre_vinhos');
 Route::get('/settings', function () {
     return view('includes.frontend.settings');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-//Admin
-Route::get('/admin/dashboard', function () {
-    return view('paginas.backend.dashboard');
-});
+Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
