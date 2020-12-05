@@ -35,10 +35,13 @@ Route::get('/faq', function () {
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
 })->name('sobre_vinhos');
-Route::get('/settings', function () {
-    return view('includes.frontend.settings');
-});
 
 Auth::routes();
 
-Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//Admin
+Route::get('/admin/dashboard', function () {
+    return view('paginas.backend.dashboard');
+});
