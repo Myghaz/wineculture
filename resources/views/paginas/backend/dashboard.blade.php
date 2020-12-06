@@ -4,8 +4,7 @@
 @section('content')
 <div class="content-wrapper">
 
-			{{$totalUsersJan}}
-        <div class="content">						 
+        <div class="content">
                   <!-- Top Statistics -->
                   <div class="row">
                     <div class="col-xl-3 col-sm-6">
