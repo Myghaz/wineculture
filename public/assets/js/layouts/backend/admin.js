@@ -4345,7 +4345,7 @@
 
 	      if (showEvent.isDefaultPrevented()) {
 	        return;
-	      } // Disable totally Popper.js for Dropdown in Navbar
+	      } // Disable totalUsersly Popper.js for Dropdown in Navbar
 
 
 	      if (!this._inNavbar && usePopper) {
@@ -8286,7 +8286,7 @@
 	            label: "" // for legend
 	          }
 	        ],
-	        labels: ["Total Sales", "Rejected", "Completed", "Pending", "Reserve"]
+	        labels: ["totalUsers Sales", "Rejected", "Completed", "Pending", "Reserve"]
 	      },
 	      options: {
 	        responsive: true,
@@ -9005,7 +9005,7 @@
 	  }
 	});
     /*======== 20. BAR CHART ========*/
-    var barX = document.getElementById("barChart");
+    var barX = document.getElementById("graficousersbarras");
 	
 	if (barX !== null) {
 	  var myChart = new Chart(barX, {
@@ -9028,9 +9028,158 @@
 	      datasets: [
 	        {
 	          label: "Registos",
-              data: [totalJan, totalFev, totalMar, totalAbr, totalMai, totalJun, totalJul, totalAgo, totalSet, totalOut, totalNov, totalDez],
-	          // data: [2, 3.2, 1.8, 2.1, 1.5, 3.5, 4, 2.3, 2.9, 4.5, 1.8, 3.4, 2.8],
+              data: [totalUsersJan, totalUsersFev, totalUsersMar, totalUsersAbr, totalUsersMai, totalUsersJun, totalUsersJul, totalUsersAgo, totalUsersSet, totalUsersOut, totalUsersNov, totalUsersDez],
 	          backgroundColor: "#4c84ff"
+	        }
+	      ]
+	    },
+	    options: {
+	      responsive: true,
+	      maintainAspectRatio: false,
+	      legend: {
+	        display: false
+	      },
+	      scales: {
+	        xAxes: [
+	          {
+	            gridLines: {
+	              drawBorder: false,
+	              display: false
+	            },
+	            ticks: {
+	              display: false, // hide main x-axis line
+	              beginAtZero: true
+	            },
+	            barPercentage: 1.8,
+	            categoryPercentage: 0.2
+	          }
+	        ],
+	        yAxes: [
+	          {
+	            gridLines: {
+	              drawBorder: false, // hide main y-axis line
+	              display: false
+	            },
+	            ticks: {
+	              display: false,
+	              beginAtZero: true
+	            }
+	          }
+	        ]
+	      },
+	      tooltips: {
+	        titleFontColor: "#888",
+	        bodyFontColor: "#555",
+	        titleFontSize: 12,
+	        bodyFontSize: 15,
+	        backgroundColor: "rgba(256,256,256,0.95)",
+	        displayColors: false,
+	        borderColor: "rgba(220, 220, 220, 0.9)",
+	        borderWidth: 2
+	      }
+	    }
+	  });
+	}
+	var barX = document.getElementById("graficoprodutoresbarras");
+	
+	if (barX !== null) {
+	  var myChart = new Chart(barX, {
+	    type: "bar",
+	    data: {
+	      labels: [
+	        "Janeiro",
+	        "Fevereiro",
+	        "Março",
+	        "Abril",
+	        "Maio",
+	        "Junho",
+	        "Julho",
+	        "Agosto",
+	        "Setembro",
+	        "Outubro",
+	        "Novembro",
+	        "Dezembro"
+	      ],
+	      datasets: [
+	        {
+	          label: "Registos",
+              data: [totalProdutoresJan, totalProdutoresFev, totalProdutoresMar, totalProdutoresAbr, totalProdutoresMai, totalProdutoresJun, totalProdutoresJul, totalProdutoresAgo, totalProdutoresSet, totalProdutoresOut, totalProdutoresNov, totalProdutoresDez],
+	          backgroundColor: "#ff1a1a"
+	        }
+	      ]
+	    },
+	    options: {
+	      responsive: true,
+	      maintainAspectRatio: false,
+	      legend: {
+	        display: false
+	      },
+	      scales: {
+	        xAxes: [
+	          {
+	            gridLines: {
+	              drawBorder: false,
+	              display: false
+	            },
+	            ticks: {
+	              display: false, // hide main x-axis line
+	              beginAtZero: true
+	            },
+	            barPercentage: 1.8,
+	            categoryPercentage: 0.2
+	          }
+	        ],
+	        yAxes: [
+	          {
+	            gridLines: {
+	              drawBorder: false, // hide main y-axis line
+	              display: false
+	            },
+	            ticks: {
+	              display: false,
+	              beginAtZero: true
+	            }
+	          }
+	        ]
+	      },
+	      tooltips: {
+	        titleFontColor: "#888",
+	        bodyFontColor: "#555",
+	        titleFontSize: 12,
+	        bodyFontSize: 15,
+	        backgroundColor: "rgba(256,256,256,0.95)",
+	        displayColors: false,
+	        borderColor: "rgba(220, 220, 220, 0.9)",
+	        borderWidth: 2
+	      }
+	    }
+	  });
+	}
+	var barX = document.getElementById("graficoprodsbarras");
+	
+	if (barX !== null) {
+	  var myChart = new Chart(barX, {
+	    type: "bar",
+	    data: {
+	      labels: [
+	        "Janeiro",
+	        "Fevereiro",
+	        "Março",
+	        "Abril",
+	        "Maio",
+	        "Junho",
+	        "Julho",
+	        "Agosto",
+	        "Setembro",
+	        "Outubro",
+	        "Novembro",
+	        "Dezembro"
+	      ],
+	      datasets: [
+	        {
+	          label: "Registos",
+              data: [totalProdsJan, totalProdsFev, totalProdsMar, totalProdsAbr, totalProdsMai, totalProdsJun, totalProdsJul, totalProdsAgo, totalProdsSet, totalProdsOut, totalProdsNov, totalProdsDez],
+	          backgroundColor: "#29cc97"
 	        }
 	      ]
 	    },
@@ -9420,7 +9569,7 @@
 	          backgroundColor: gradientFill,
 	          borderColor: "#ffffff",
 	          borderWidth: 2,
-	          data: [0, 4, 3, 5.5, 3, 4.7, 1]
+	          data: [20, 4, 3, 5.5, 3, 4.7, 1]
 	        }
 	      ]
 	    },

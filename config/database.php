@@ -90,6 +90,20 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+        'wordpress_db' => [
+            'driver'    => env('DB_CONNECTION_SECOND'),
+            'host'      => env('DB_HOST_SECOND'),
+            'port'      => env('DB_PORT_SECOND'),
+            'database'  => env('DB_DATABASE_SECOND'),
+            'username'  => env('DB_USERNAME_SECOND'),
+            'password'  => env('DB_PASSWORD_SECOND'),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => 'wp_',
+            'strict' => true,
+            'engine' => null,
+        ],
 
     ],
 

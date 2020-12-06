@@ -8,7 +8,7 @@
   <meta name="description" content="Sleek Dashboard - Free Bootstrap 4 Admin Dashboard Template and UI Kit. It is very powerful bootstrap admin dashboard, which allows you to build products like admin panels, content management systems and CRMs etc.">
 
 
-  <title>Sleek - Admin Dashboard Template</title>
+  <title>WineCulture Dashboard</title>
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet" />
   <link href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css" rel="stylesheet" />
@@ -98,7 +98,7 @@
                     <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
                   </g>
                 </svg>
-                <span class="brand-name text-truncate">Sleek Dashboard</span>
+                <span class="brand-name text-truncate">Dashboard</span>
               </a>
             </div>
             <!-- begin sidebar scrollbar -->

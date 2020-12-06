@@ -48,7 +48,7 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Dois',
             'data_nasc' => Carbon::parse('1994-06-20'),
-            'created_at' => Carbon::parse('2020-06-20'),
+            'created_at' => Carbon::parse('2020-10-20'),
         ]);
         User::create([
             'tipouser' => 'Produtor',
@@ -166,6 +166,123 @@ class UsersSeeder extends Seeder
             'apelido' => 'Doze',
             'data_nasc' => Carbon::parse('1993-03-26'),
             'created_at' => Carbon::parse('2020-07-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor4@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Quatro',
+            'data_nasc' => Carbon::parse('1974-09-26'),
+            'created_at' => Carbon::parse('2020-06-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor5@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'cinco',
+            'data_nasc' => Carbon::parse('1974-09-26'),
+            'created_at' => Carbon::parse('2020-04-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor6@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Seis',
+            'data_nasc' => Carbon::parse('1980-12-15'),
+            'created_at' => Carbon::parse('2020-01-15'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor7@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Sete',
+            'data_nasc' => Carbon::parse('1998-01-26'),
+            'created_at' => Carbon::parse('2020-07-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor8@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Oito',
+            'data_nasc' => Carbon::parse('1993-02-26'),
+            'created_at' => Carbon::parse('2020-08-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor9@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Nove',
+            'data_nasc' => Carbon::parse('1993-09-26'),
+            'created_at' => Carbon::parse('2020-09-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor10@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Dez',
+            'data_nasc' => Carbon::parse('1993-09-26'),
+            'created_at' => Carbon::parse('2020-02-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor11@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Onze',
+            'data_nasc' => Carbon::parse('1993-11-26'),
+            'created_at' => Carbon::parse('2020-11-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor12@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Doze',
+            'data_nasc' => Carbon::parse('1993-03-26'),
+            'created_at' => Carbon::parse('2020-06-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor13@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Treze',
+            'data_nasc' => Carbon::parse('1993-03-26'),
+            'created_at' => Carbon::parse('2020-12-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor14@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Quatorze',
+            'data_nasc' => Carbon::parse('1993-03-26'),
+            'created_at' => Carbon::parse('2020-02-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor15@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Quinze',
+            'data_nasc' => Carbon::parse('1993-03-26'),
+            'created_at' => Carbon::parse('2020-06-26'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'produtor16@gmail.com',
+            'password' => bcrypt('123456'),
+            'name' => 'Produtor',
+            'apelido' => 'Dezasseis',
+            'data_nasc' => Carbon::parse('1993-03-26'),
+            'created_at' => Carbon::parse('2020-12-26'),
         ]);
     }
 }
