@@ -3,8 +3,12 @@
 
 @section('content')
 <div class="content-wrapper">
+<<<<<<< HEAD
 
         <div class="content">
+=======
+        <div class="content">						 
+>>>>>>> 262eade9044a9072aa30da502a615104231e07eb
                   <!-- Top Statistics -->
                   <div class="row">
                     <div class="col-xl-3 col-sm-6">
