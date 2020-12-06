@@ -42,6 +42,4 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 
 //Admin
-Route::get('/admin/dashboard', function () {
-    return view('paginas.backend.dashboard');
-});
+Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
