@@ -237,24 +237,38 @@ a {
     color: #C49CDE;
     text-shadow: none;
  }
-
- 
- .credit {
-    margin: 24px 20px 120px 0;
-    text-align: right;
-    color: #EEEEEE;
- }
- 
- .credit a {
-    padding: 8px 0;
-    color: #C49CDE;
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
- }
- 
- .credit a:hover {
-    text-decoration: underline;
- }
  div.chartjs-wrapper canvas{
      margin-top: 20px;
  }
+ #baricon,  #lineicon,  #pieicon,  #doughnuticon{
+   color:black;
+   font-size: 14pt;
+ }
+ #baricon{
+   top: 30%;
+   position: absolute;
+   pointer-events:none;
+   left: 10px;
+ }
+#lineicon{
+   top: 30%;
+   position: absolute;
+   pointer-events:none;
+   left: 11px;
+ }
+ 
+#pieicon{
+   top: 27%;
+   position: absolute;
+   pointer-events:none;
+   left: 12px;
+ }
+#doughnuticon{
+   top: 25%;
+   position: absolute;
+   pointer-events:none;
+   left: 9px;
+   font-size: 17pt;
+ }
+ 
+ 

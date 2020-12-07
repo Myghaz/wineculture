@@ -18,10 +18,10 @@
                 <span class="lines line-2"></span>
                 <span class="lines line-3"></span>
               </label>
-              <button value="bar" onclick="updateusersChartType()" class="menu-item barras"> <i class="fa fa-anchor"></i> </button>
-              <button value="line" onclick="updateusersChartType()" class="menu-item linhas"> <i class="fa fa-coffee"></i> </button>
-              <button value="pie" onclick="updateusersChartType()" class="menu-item torta"> <i class="fa fa-heart"></i> </button>
-              <button value="doughnut" onclick="updateusersChartType()" class="menu-item donut"> <i class="fa fa-microphone"></i> </button>
+              <button value="bar" onclick="updateusersChartType()" class="menu-item barras"><i id="baricon" class="fa fa-chart-bar"></i></button>
+              <button value="line" onclick="updateusersChartType()" class="menu-item linhas"><i id="lineicon" class="fa fa-area-chart"></i></button>
+              <button value="pie" onclick="updateusersChartType()" class="menu-item torta"><i id="pieicon" class="fas fa-chart-pie"></i></button>
+              <button value="doughnut" onclick="updateusersChartType()" class="menu-item donut"><i id="doughnuticon" class="far fa-dot-circle"></i></button>
             </div>
             <div class="chartjs-wrapper">
               <canvas id="usersgrafico"></canvas>
@@ -44,10 +44,10 @@
                 <span class="lines line-2"></span>
                 <span class="lines line-3"></span>
               </label>
-              <button value="bar" onclick="updateprodutoresChartType()" class="menu-item barras"> <i class="fa fa-anchor"></i> </button>
-              <button value="line" onclick="updateprodutoresChartType()" class="menu-item linhas"> <i class="fa fa-coffee"></i> </button>
-              <button value="pie" onclick="updateprodutoresChartType()" class="menu-item torta"> <i class="fa fa-heart"></i> </button>
-              <button value="doughnut" onclick="updateprodutoresChartType()"  class="menu-item donut"> <i class="fa fa-microphone"></i> </button>
+              <button value="bar" onclick="updateprodutoresChartType()" class="menu-item barras"><i id="baricon" class="fa fa-chart-bar"></i></button>
+              <button value="line" onclick="updateprodutoresChartType()" class="menu-item linhas"><i id="lineicon" class="fa fa-area-chart"></i></button>
+              <button value="pie" onclick="updateprodutoresChartType()" class="menu-item torta"><i id="pieicon" class="fas fa-chart-pie"></i></button>
+              <button value="doughnut" onclick="updateprodutoresChartType()"  class="menu-item donut"><i id="doughnuticon" class="far fa-dot-circle"></i></button>
             </div>
             <div class="chartjs-wrapper">
               <canvas id="produtoresgrafico"></canvas>
@@ -67,10 +67,10 @@
                 <span class="lines line-2"></span>
                 <span class="lines line-3"></span>
               </label>
-              <button value="bar" onclick="updatecomprasChartType()" class="menu-item barras"> <i class="fa fa-anchor"></i> </button>
-              <button value="line" onclick="updatecomprasChartType()" class="menu-item linhas"> <i class="fa fa-coffee"></i> </button>
-              <button value="pie" onclick="updatecomprasChartType()" class="menu-item torta"> <i class="fa fa-heart"></i> </button>
-              <button value="doughnut" onclick="updatecomprasChartType()" class="menu-item donut"> <i class="fa fa-microphone"></i> </button>
+              <button value="bar" onclick="updatecomprasChartType()" class="menu-item barras"><i id="baricon" class="fa fa-chart-bar"></i></button>
+              <button value="line" onclick="updatecomprasChartType()" class="menu-item linhas"><i id="lineicon" class="fa fa-area-chart"></i></button>
+              <button value="pie" onclick="updatecomprasChartType()" class="menu-item torta"><i id="pieicon" class="fas fa-chart-pie"></i></button>
+              <button value="doughnut" onclick="updatecomprasChartType()" class="menu-item donut"><i id="doughnuticon" class="far fa-dot-circle"></i></button>
             </div>
             <div class="chartjs-wrapper">
               <canvas id="comprasgrafico"></canvas>
@@ -90,10 +90,10 @@
                 <span class="lines line-2"></span>
                 <span class="lines line-3"></span>
               </label>
-              <button value="bar" onclick="updateprodsChartType()" class="menu-item barras"> <i class="fa fa-anchor"></i> </button>
-              <button value="line" onclick="updateprodsChartType()" class="menu-item linhas"> <i class="fa fa-coffee"></i> </button>
-              <button value="pie" onclick="updateprodsChartType()" class="menu-item torta"> <i class="fa fa-heart"></i> </button>
-              <button value="doughnut" onclick="updateprodsChartType()" class="menu-item donut"> <i class="fa fa-microphone"></i> </button>
+              <button value="bar" onclick="updateprodsChartType()" class="menu-item barras"><i id="baricon" class="fa fa-chart-bar"></i></button>
+              <button value="line" onclick="updateprodsChartType()" class="menu-item linhas"><i id="lineicon" class="fa fa-area-chart"></i></button>
+              <button value="pie" onclick="updateprodsChartType()" class="menu-item torta"><i id="pieicon" class="fas fa-chart-pie"></i></button>
+              <button value="doughnut" onclick="updateprodsChartType()" class="menu-item donut"><i id="doughnuticon" class="far fa-dot-circle"></i></button>
             </div>
             <div class="chartjs-wrapper">
               <canvas id="prodsgrafico"></canvas>
