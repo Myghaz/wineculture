@@ -43,3 +43,5 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 //Admin
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
+
+Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');

@@ -3478,7 +3478,9 @@
   .card-body {
 	flex: 1 1 auto;
 	min-height: 1px;
-	padding: 1.25rem; }
+	padding-left: 1.25rem;
+	padding-right:  1.25rem;
+	padding-top:  1.25rem;}
   
   .card-title {
 	margin-bottom: 0.75rem; }
@@ -8975,7 +8977,10 @@
   .card-mini {
 	border: 1px solid #e5e9f2; }
 	.card-mini .card-body {
-	  padding: 1.63rem; }
+	  padding-top: 1.63rem;
+	  padding-left: 1.63rem;
+	  padding-right: 1.63rem;
+	  padding-bottom: 0.5rem;}
 	  .card-mini .card-body h2 {
 		color: #1b223c;
 		font-size: 1.49625rem; }

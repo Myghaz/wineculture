@@ -1267,5 +1267,6 @@
 
 
 <script src="{{asset('assets\js\layouts\backend\admin.js')}}"></script>
+<script src="{{asset('assets\js\paginas\backend\dashboard.js')}}"></script>
 </body>
 </html>
