@@ -101,8 +101,7 @@ a {
  } */
  
  .menu-item:hover {
-    background: #EEEEEE;
-    color: #3290B1;
+   background-color: #ff8080;
  }
  
  .menu-item:nth-child(3) {
