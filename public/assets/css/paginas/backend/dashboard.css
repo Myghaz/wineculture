@@ -80,6 +80,22 @@ a {
     transform: translate3d(0, 0, 0) rotate(-45deg);
  }
  
+
+ .table-menu-open:checked + .table-menu-open-button .line-1 {
+   -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+   transform: translate3d(0, 0, 0) rotate(45deg);
+}
+
+.table-menu-open:checked + .table-menu-open-button .line-2 {
+   -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+   transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+.table-menu-open:checked + .table-menu-open-button .line-3 {
+   -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+   transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+ 
  .menu {
     margin: auto;
     position: absolute;
@@ -210,7 +226,6 @@ a {
  
  .linhas {
     background-color: #70CC72;
-
  }
  
  .linhas:hover {
@@ -220,7 +235,6 @@ a {
  
  .torta {
     background-color: #FE4365;
-
  }
  
  .torta:hover {
@@ -239,7 +253,7 @@ a {
  div.chartjs-wrapper canvas{
      margin-top: 20px;
  }
- #baricon,  #lineicon,  #pieicon,  #doughnuticon{
+ #baricon,  #lineicon,  #pieicon,  #doughnuticon, #table-users, #table-produtores, #table-produtos, #table-compras, #table-produtoswp{
    color:black;
    font-size: 14pt;
  }
@@ -301,10 +315,11 @@ a {
    outline: none;
    cursor: pointer;
 }
-.table-item-menu .table-menu-open-button {
-   background: #12cc66;
-   border-radius: 100%;
 
+.table-item-menu .table-menu-open-button {
+   background: #EEEEEE;
+   color: #FFFFFF;
+   border-radius: 100%;
    color: white;
    text-align: center;
    line-height: 80px;
@@ -318,53 +333,55 @@ a {
    display: none;
 }
 .table-item-menu .plus {
-   width: 18px;
-   height: 2px;
-   background: white;
-   display: block;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   margin-left: -9px;
-   margin-top: -1px;
-   transition: transform 200ms;
-}
-.table-item-menu .plus.plus-1 {
-   transform: rotate(90deg) translate3d(0, 0, 0);
-}
-.table-item-menu .plus.plus-2 {
-   transform: rotate(0) translate3d(0, 0, 0);
-}
-.table-item-menu .table-menu-item:hover {
-   background: white;
-   color: #12cc66;
+   background: #EEEEEE;
+   color: #FFFFFF;
+   border-radius: 100%;
+   color: white;
+   text-align: center;
+   line-height: 80px;
+   transition: transform ease-out 200ms;
+   display: inline-block;
+   position: relative;
+   width: 45px;
+   height: 45px;
 }
 .table-item-menu .table-menu-item:nth-child(1) {
    transition-duration: 70ms;
    transform: translate3d(90px, 0, 0) scale(0.5);
+   background-color: #669AE1;
 }
 .table-item-menu .table-menu-item:nth-child(2) {
    transition-duration: 130ms;
    transform: translate3d(45px, 0, 0) scale(0.5);
+   background-color: #70CC72;
 }
 .table-item-menu .table-menu-item:nth-child(3) {
    transition-duration: 190ms;
    transform: translate3d(0, 0, 0) scale(0.5);
+   background-color: #FE4365;
 }
 .table-item-menu .table-menu-item:nth-child(4) {
    transition-duration: 130ms;
    transform: translate3d(-45px, 0, -20px) scale(0.5);
+   background-color: #C49CDE;
 }
 .table-item-menu .table-menu-item:nth-child(5) {
    transition-duration: 70ms;
    transform: translate3d(-90px, 0, -20px) scale(0.5);
+}
+.table-item-menu .table-menu-item:nth-child(1):hover, 
+.table-item-menu .table-menu-item:nth-child(2):hover,
+.table-item-menu .table-menu-item:nth-child(3):hover ,
+.table-item-menu .table-menu-item:nth-child(4):hover,
+.table-item-menu .table-menu-item:nth-child(5):hover
+{
+   background-color: #ff8080;
 }
 .table-item-menu .table-menu-item:after {
    content: attr(data-name);
    position: absolute;
    font-size: 14px;
    font-weight: 500;
-   color: #12cc66;
    line-height: 40px;
    left: 50%;
    white-space: nowrap;
@@ -380,11 +397,6 @@ a {
 }
 .table-item-menu .table-menu-open-button:hover {
    transform: scale(1.2, 1.2) translate3d(0, 0, 0);
-}
-.table-item-menu .table-menu-open:checked + .table-menu-open-button {
-   transition-timing-function: linear;
-   transition-duration: 200ms;
-   transform: scale(1, 1) rotate(-45deg) translate3d(0, 0, 0);
 }
 .table-item-menu .table-menu-open:checked ~ .table-real-menu {
    transform: translate3d(0, 0, 0);

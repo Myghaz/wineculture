@@ -111,15 +111,16 @@
             <nav class="table-item-menu">
               <input type="checkbox" href="#" class="table-menu-open" name="table-menu-open" id="table-menu-open" />
               <label id="table-menu-open-handler" class="table-menu-open-button" for="table-menu-open">
-                <span class="plus plus-1"></span>
-                <span class="plus plus-2"></span>
+              <span class="lines line-1"></span>
+                <span class="lines line-2"></span>
+                <span class="lines line-3"></span>
               </label>
               <div class="table-real-menu">
-                <button value="Utilizadores" class="table-menu-item"> <i class="fa fa-file"></i> </button>
-                <button value="Produtores" class="table-menu-item"> <i class="fa fa-image"></i> </button>
-                <button value="Produtos" class="table-menu-item"> <i class="fa fa-video-camera"></i> </button>
-                <button value="Loja" class="table-menu-item"> <i class="fa fa-code"></i> </button>
-                <button value="Blogs" class="table-menu-item"> <i class="fa fa-folder"></i> </button>
+                <button value="Utilizadores" class="table-menu-item"> <i id="table-users" class="fa fa-users"></i> </button>
+                <button value="Produtores" class="table-menu-item"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
+                <button value="Produtos" class="table-menu-item"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
+                <button value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
+                <button value="Loja" class="table-menu-item"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button>
               </div>
             </nav>
           </div>
