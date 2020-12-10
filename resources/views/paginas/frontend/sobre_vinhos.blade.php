@@ -10,6 +10,7 @@
 <body id="body">
     @include('includes.frontend.navbar')
     @yield('content')
+<div class="bruh">
     <div class="all">
         <div class="all2">
 
@@ -790,8 +791,9 @@
             <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
         </div>
-    <footer id="footer">
-        </footer>
+    </div>
+</div>
+@include('includes.frontend.footer')
         <script src="{{ URL::asset('assets/js/paginas/frontend/sobre_vinhos.js') }}"></script>
 </body>
 
