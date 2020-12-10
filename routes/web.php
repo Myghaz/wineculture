@@ -36,9 +36,12 @@ Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
 })->name('sobre_vinhos');
 
+Route::get('/login', function () {
+    return view('paginas.frontend.login');
+})->name('login');
+
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 //Admin
