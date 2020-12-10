@@ -13,7 +13,7 @@
     <div class="all">
         <div class="all2">
 
-            <div class="sidenav">
+            <div class="sidenav1">
                 <a onclick="toggle('one')">História do Vinho</a>
                 <a onclick="toggle('two')">Classificação dos Vinhos</a>
                 <a onclick="toggle('three')">O processo de produção e fermentação</a>
@@ -259,15 +259,15 @@
                                 </p>
                                 <p>
                                     Obter um aroma e cor equilibrado e que vá de encontro ao paladar e aos olhos do consumidor ao final do processo de produção do vinho é um dos pontos chaves envolvidas no decorrer do processo. A utilização de leveduras não
-                                    <i>Saccharomyces</i> ganharam popularidade em enologia</a>, pois a maioria delas tem a capacidade de aumentar a acidez do vinho ao mesmo tempo que reduz o teor alcoólico e aumentam a estabilidade da cor, além de modificar
+                                    <i>Saccharomyces</i> ganharam popularidade em enologia, pois a maioria delas tem a capacidade de aumentar a acidez do vinho ao mesmo tempo que reduz o teor alcoólico e aumentam a estabilidade da cor, além de modificar
                                     e produzir compostos químicos aromáticos específicos que estão diretamente relacionados ao aroma e sabor do vinho. Em estudos anteriores onde foram utilizadas cepas de
                                     <i>T. delbrueckii</i> e <i>S. cerevisiae</i> demostraram que na fermentação mista o teor dos principais esteres etílicos aumentaram levemente na fermentação simultânea, enquanto diminui em 44% na fermentação sequencial
                                     utilizando essa duas cepas, em outros casos a inoculação sequencial de <i>Wickerhamomyces anomalus</i> e <i>S.
-              cerevisiae</i> pode elevar a concentração de acetato de etila a um nível inaceitável, ou seja, o potencial enológico de leveduras não <i>Saccharomyces</i> varia de acordo com as diferentes estratégias de inoculação para a fermentação.
+                             cerevisiae</i> pode elevar a concentração de acetato de etila a um nível inaceitável, ou seja, o potencial enológico de leveduras não <i>Saccharomyces</i> varia de acordo com as diferentes estratégias de inoculação para a fermentação.
                                 </p>
                                 <p>
                                     Na produção de vinho descrita por Kong e colaboradores, 2019 foi utilizado uma fermentação mista com a cepa de <i>Pichia fermentans</i> e <i>S.
-              cerevisiae</i> utilizando como substrato a uva Pearl com origem no sul da China. Foi obtido um vinho com teores de antocianina e antocianina polimérica elevados, sendo que esses compostos estão diretamente relacionados a estabilidade da cor
+                             cerevisiae</i> utilizando como substrato a uva Pearl com origem no sul da China. Foi obtido um vinho com teores de antocianina e antocianina polimérica elevados, sendo que esses compostos estão diretamente relacionados a estabilidade da cor
                                     do vinho tinto, além de ter apresentado um uma maior taxa de polimerização de compostos taninos que são os compostos responsáveis por dar a sensação de ressecamento na boca. As concentrações de compostos aromáticos derivados
                                     da também foram melhoradas por fermentação mista, incluindo álcoois, ésteres e feniletílicos superiores.
                                 </p>
