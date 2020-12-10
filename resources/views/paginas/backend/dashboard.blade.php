@@ -36,7 +36,7 @@
         <div class="card card-mini mb-4">
           <div class="card-body">
             <h2 class="mb-1">{{$totalProdutores}}</h2>
-            <p>Produtores Totais (2020)</p>
+            <p>Produtores Totais(2020)</p>
             <div class="mudargraf">
               <input type="checkbox" href="#" class="menu-open" name="menu-open" id="produtoresmenu-open" />
               <label class="menu-open-button" for="produtoresmenu-open">
@@ -128,156 +128,33 @@
           <table id="tabelausers" class="table card-table table-responsive table-responsive-large">
                         <thead>
                           <tr>
-                            <th>Order ID</th>
-                            <th>Product Name</th>
-                            <th class="d-none d-lg-table-cell">Units</th>
-                            <th class="d-none d-lg-table-cell">Order Date</th>
-                            <th class="d-none d-lg-table-cell">Order Cost</th>
-                            <th>Status</th>
-                            <th></th>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th class="d-none d-lg-table-cell">Apelido</th>
+                            <th class="d-none d-lg-table-cell">Email</th>
+                            <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td >24541</td>
-                            <td >
-                              <a class="text-dark" href=""> àCoach Swagger</a>
+                          @foreach($users as $key => $user)
+                            <td>{{$user->id}}</td>
+                            <td>
+                              <a class="text-dark" href="">{{$user->name}}</a>
                             </td>
-                            <td class="d-none d-lg-table-cell">1 Unit</td>
-                            <td class="d-none d-lg-table-cell">Oct 20, 2018</td>
-                            <td class="d-none d-lg-table-cell">$230</td>
-                            <td >
-                              <span class="badge badge-success">Completed</span>
+                            <td>
+                              <a class="text-dark" href="">{{$user->apelido}}</a>
                             </td>
-                            <td class="text-right">
-                              <div class="dropdown show d-inline-block widget-dropdown">
-                                <a class="dropdown-toggle icon-burger-mini" href="" role="button" id="dropdown-recent-order1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"></a>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-recent-order1">
-                                  <li class="dropdown-item">
-                                    <a href="#">View</a>
-                                  </li>
-                                  <li class="dropdown-item">
-                                    <a href="#">Remove</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
+                            <td class="d-none d-lg-table-cell">{{$user->email}}</td>
+                            <td class="d-none d-lg-table-cell">{{$user->tipouser}}</td>
                           </tr>
-                          <tr>
-                            <td >24541</td>
-                            <td >
-                              <a class="text-dark" href=""> Toddler Shoes, Gucci Watch</a>
-                            </td>
-                            <td class="d-none d-lg-table-cell">2 Units</td>
-                            <td class="d-none d-lg-table-cell">Nov 15, 2018</td>
-                            <td class="d-none d-lg-table-cell">$550</td>
-                            <td >
-                              <span class="badge badge-warning">Delayed</span>
-                            </td>
-                            <td class="text-right">
-                              <div class="dropdown show d-inline-block widget-dropdown">
-                                <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdown-recent-order2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"></a>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-recent-order2">
-                                  <li class="dropdown-item">
-                                    <a href="#">View</a>
-                                  </li>
-                                  <li class="dropdown-item">
-                                    <a href="#">Remove</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td >24541</td>
-                            <td >
-                              <a class="text-dark" href=""> Hat Black Suits</a>
-                            </td>
-                            <td class="d-none d-lg-table-cell">1 Unit</td>
-                            <td class="d-none d-lg-table-cell">Nov 18, 2018</td>
-                            <td class="d-none d-lg-table-cell">$325</td>
-                            <td >
-                              <span class="badge badge-warning">On Hold</span>
-                            </td>
-                            <td class="text-right">
-                              <div class="dropdown show d-inline-block widget-dropdown">
-                                <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdown-recent-order3" data-toggle="dropdown" aria-haspopup="true"
-                                  aria-expanded="false" data-display="static"></a>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-recent-order3">
-                                  <li class="dropdown-item">
-                                    <a href="#">View</a>
-                                  </li>
-                                  <li class="dropdown-item">
-                                    <a href="#">Remove</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td >24541</td>
-                            <td >
-                              <a class="text-dark" href=""> Backpack Gents, Swimming Cap Slin</a>
-                            </td>
-                            <td class="d-none d-lg-table-cell">5 Units</td>
-                            <td class="d-none d-lg-table-cell">Dec 13, 2018</td>
-                            <td class="d-none d-lg-table-cell">$200</td>
-                            <td >
-                              <span class="badge badge-success">Completed</span>
-                            </td>
-                            <td class="text-right">
-                              <div class="dropdown show d-inline-block widget-dropdown">
-                                <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdown-recent-order4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"></a>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-recent-order4">
-                                  <li class="dropdown-item">
-                                    <a href="#">View</a>
-                                  </li>
-                                  <li class="dropdown-item">
-                                    <a href="#">Remove</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td >24541</td>
-                            <td >
-                              <a class="text-dark" href=""> Speed 500 Ignite</a>
-                            </td>
-                            <td class="d-none d-lg-table-cell">1 Unit</td>
-                            <td class="d-none d-lg-table-cell">Dec 23, 2018</td>
-                            <td class="d-none d-lg-table-cell">$150</td>
-                            <td >
-                              <span class="badge badge-danger">Cancelled</span>
-                            </td>
-                            <td class="text-right">
-                              <div class="dropdown show d-inline-block widget-dropdown">
-                                <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdown-recent-order5" data-toggle="dropdown" aria-haspopup="true"
-                                  aria-expanded="false" data-display="static"></a>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-recent-order5">
-                                  <li class="dropdown-item">
-                                    <a href="#">View</a>
-                                  </li>
-                                  <li class="dropdown-item">
-                                    <a href="#">Remove</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
+                          @endforeach
                         </tbody>
                       </table> 
           </div>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
   </div>
   <script>
     var totalUsersJan = {{$totalUsersJan}};

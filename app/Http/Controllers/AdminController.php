@@ -96,6 +96,9 @@ class AdminController extends Controller
         $totalProds = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->count();
         //Ir buscar os produtos da loja(worpress) organizados por mes
 
+
+        $users = User::all();
+
         return view('paginas.backend.dashboard', compact([
         'totalUsersJan',
         'totalUsersFev',
@@ -135,6 +138,7 @@ class AdminController extends Controller
         'totalProdsOut',
         'totalProdsNov',
         'totalProdsDez',
-        'totalProds',]));
+        'totalProds',
+        'users']));
     }
 }

@@ -554,12 +554,10 @@ $('#tabelausers').dataTable({
         null,
         null,
         null,
-        null,
-        null,
         null
     ],
     "order": [
-        [1, 'asc']
+        [0, 'asc']
     ],
     "language": {
         "emptyTable": "Não existem registos a apresentar",
@@ -576,11 +574,11 @@ $('#tabelausers').dataTable({
     },
     "columnDefs": [{
         type: 'portugues',
-        targets: [0, 1, 2, 3, 4, 5, 6]
+        targets: [0, 1, 2, 3, 4]
     }],
     "columnDefs": [{
         type: 'locale-compare',
-        targets: [0, 1, 2, 3, 4, 5, 6]
+        targets: [0, 1, 2, 3, 4]
     }],
 });
 });
