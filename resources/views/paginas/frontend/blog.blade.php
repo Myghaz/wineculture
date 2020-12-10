@@ -30,5 +30,5 @@
     </div><!-- End Thumbnails -->
 
 </body>
-
+@include('includes.frontend.footer')
 </html>

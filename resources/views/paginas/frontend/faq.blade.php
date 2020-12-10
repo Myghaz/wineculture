@@ -109,6 +109,7 @@
             });
 
         </script>
+        @include('includes.frontend.footer')
     </body>
 
     </html>

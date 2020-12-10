@@ -471,3 +471,4 @@
         <script src="{{ URL::asset('assets/js/paginas/frontend/index.js') }}"></script>
 
 </body>
+@include('includes.frontend.footer')

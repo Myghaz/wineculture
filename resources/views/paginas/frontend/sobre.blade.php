@@ -34,7 +34,7 @@
                             <a href="" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
                         </div>
                         <!--<img src="images/about.jpg" class="img-fluid" alt="video" data-aos="fade-up">
-						<a href="" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>	
+						<a href="" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
 					<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/6twzfiatFxA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
                 </div>
             </div>
@@ -51,5 +51,6 @@
     </div>
     <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.js') }}"></script>
     <script src="{{ URL::asset('assets/js/paginas/frontend/sobre.js') }}"></script>
+    @include('includes.frontend.footer')
 </body>
 </html>
