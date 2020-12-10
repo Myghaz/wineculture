@@ -423,17 +423,20 @@ a {
 .table-item-menu .table-menu-open:checked ~ .table-real-menu .table-menu-item:after {
    display: block;
 }
-
-
-
-.dataTables_filter {
+.card-table-border-none .card-header h2{
+   font-size: 20pt;
+}
+.card-table-border-none .card-header{
+   margin-bottom: 10px;
+}
+div.dataTables_wrapper div.dataTables_filter {
    text-align: left;
-   margin-top: 10px;
+}
+div.dataTables_wrapper div.dataTables_length label {
+   margin-bottom: 20px;
 }
 
-table.dataTable {
-   margin-top: 20px !important;
-   margin-bottom: 25px !important;
-   clear: both;
+.dataTables_filter{
+   margin-bottom: 20px;
 }
 
