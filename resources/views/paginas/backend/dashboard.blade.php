@@ -280,43 +280,43 @@
 
   </div>
   <script>
-    var totalUsersJan = @json($totalUsersJan);
-    var totalUsersFev = @json($totalUsersFev);
-    var totalUsersMar = @json($totalUsersMar);
-    var totalUsersAbr = @json($totalUsersAbr);
-    var totalUsersMai = @json($totalUsersMai);
-    var totalUsersJun = @json($totalUsersJun);
-    var totalUsersJul = @json($totalUsersJul);
-    var totalUsersAgo = @json($totalUsersAgo);
-    var totalUsersSet = @json($totalUsersSet);
-    var totalUsersOut = @json($totalUsersOut);
-    var totalUsersNov = @json($totalUsersNov);
-    var totalUsersDez = @json($totalUsersDez);
+    var totalUsersJan = {{$totalUsersJan}};
+    var totalUsersFev = {{$totalUsersFev}};
+    var totalUsersMar = {{$totalUsersMar}};
+    var totalUsersAbr = {{$totalUsersAbr}};
+    var totalUsersMai = {{$totalUsersMai}};
+    var totalUsersJun = {{$totalUsersJun}};
+    var totalUsersJul = {{$totalUsersJul}};
+    var totalUsersAgo = {{$totalUsersAgo}};
+    var totalUsersSet = {{$totalUsersSet}};
+    var totalUsersOut = {{$totalUsersOut}};
+    var totalUsersNov = {{$totalUsersNov}};
+    var totalUsersDez = {{$totalUsersDez}};
 
-    var totalProdutoresJan = @json($totalProdutoresJan);
-    var totalProdutoresFev = @json($totalProdutoresFev);
-    var totalProdutoresMar = @json($totalProdutoresMar);
-    var totalProdutoresAbr = @json($totalProdutoresAbr);
-    var totalProdutoresMai = @json($totalProdutoresMai);
-    var totalProdutoresJun = @json($totalProdutoresJun);
-    var totalProdutoresJul = @json($totalProdutoresJul);
-    var totalProdutoresAgo = @json($totalProdutoresAgo);
-    var totalProdutoresSet = @json($totalProdutoresSet);
-    var totalProdutoresOut = @json($totalProdutoresOut);
-    var totalProdutoresNov = @json($totalProdutoresNov);
-    var totalProdutoresDez = @json($totalProdutoresDez);
+    var totalProdutoresJan = {{$totalProdutoresJan}};
+    var totalProdutoresFev = {{$totalProdutoresFev}};
+    var totalProdutoresMar = {{$totalProdutoresMar}};
+    var totalProdutoresAbr = {{$totalProdutoresAbr}};
+    var totalProdutoresMai = {{$totalProdutoresMai}};
+    var totalProdutoresJun = {{$totalProdutoresJun}};
+    var totalProdutoresJul = {{$totalProdutoresJul}};
+    var totalProdutoresAgo = {{$totalProdutoresAgo}};
+    var totalProdutoresSet = {{$totalProdutoresSet}};
+    var totalProdutoresOut = {{$totalProdutoresOut}};
+    var totalProdutoresNov = {{$totalProdutoresNov}};
+    var totalProdutoresDez = {{$totalProdutoresDez}};
 
-    var totalProdsJan = @json($totalProdsJan);
-    var totalProdsFev = @json($totalProdsFev);
-    var totalProdsMar = @json($totalProdsMar);
-    var totalProdsAbr = @json($totalProdsAbr);
-    var totalProdsMai = @json($totalProdsMai);
-    var totalProdsJun = @json($totalProdsJun);
-    var totalProdsJul = @json($totalProdsJul);
-    var totalProdsAgo = @json($totalProdsAgo);
-    var totalProdsSet = @json($totalProdsSet);
-    var totalProdsOut = @json($totalProdsOut);
-    var totalProdsNov = @json($totalProdsNov);
-    var totalProdsDez = @json($totalProdsDez);
+    var totalProdsJan = {{$totalProdsJan}};
+    var totalProdsFev = {{$totalProdsFev}};
+    var totalProdsMar = {{$totalProdsMar}};
+    var totalProdsAbr = {{$totalProdsAbr}};
+    var totalProdsMai = {{$totalProdsMai}};
+    var totalProdsJun = {{$totalProdsJun}};
+    var totalProdsJul = {{$totalProdsJul}};
+    var totalProdsAgo = {{$totalProdsAgo}};
+    var totalProdsSet = {{$totalProdsSet}};
+    var totalProdsOut = {{$totalProdsOut}};
+    var totalProdsNov = {{$totalProdsNov}};
+    var totalProdsDez = {{$totalProdsDez}};
   </script>
   @endsection
