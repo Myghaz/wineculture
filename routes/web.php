@@ -40,6 +40,8 @@ Route::get('/login', function () {
     return view('paginas.frontend.login');
 })->name('login');
 
+Route::get('/faq', [App\Http\Controllers\MainController::class, 'faq'])->name('faq');
+
 Auth::routes();
 
 

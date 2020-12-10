@@ -17,7 +17,7 @@ class CreatePerguntasTable extends Migration
             $table->id();
             $table->string('pergunta');
             $table->string('categoria');
-            $table->string('resposta', 500);
+            $table->string('resposta', 2000);
             $table->timestamps();
         });
     }
