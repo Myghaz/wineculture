@@ -40,8 +40,11 @@ Route::get('/login', function () {
     return view('paginas.frontend.login');
 })->name('login');
 
-Auth::routes();
+Route::get('/receitas', function () {
+    return view('paginas.frontend.receitas');
+})->name('receitas');
 
+Auth::routes();
 
 
 //Admin
