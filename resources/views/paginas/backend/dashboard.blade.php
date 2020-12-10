@@ -133,21 +133,20 @@
                             <th class="d-none d-lg-table-cell">Apelido</th>
                             <th class="d-none d-lg-table-cell">Email</th>
                             <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
-                            <th></th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                           @foreach($users as $key => $user)
-                            <td >{{$user->id}}</td>
-                            <td >
-                              <a class="text-dark" href="">{$user->name}}</a>
+                            <td>{{$user->id}}</td>
+                            <td>
+                              <a class="text-dark" href="">{{$user->name}}</a>
                             </td>
-                            <td >
-                              <a class="text-dark" href="">{$user->apelido}}</a>
+                            <td>
+                              <a class="text-dark" href="">{{$user->apelido}}</a>
                             </td>
-                            <td class="d-none d-lg-table-cell">{$user->apelido}}</td>
-                            <td class="d-none d-lg-table-cell">{$user->tipousers}}</td>
+                            <td class="d-none d-lg-table-cell">{{$user->email}}</td>
+                            <td class="d-none d-lg-table-cell">{{$user->tipouser}}</td>
                           </tr>
                           @endforeach
                         </tbody>
