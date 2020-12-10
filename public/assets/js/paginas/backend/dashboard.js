@@ -555,7 +555,6 @@ $('#tabelausers').dataTable({
         null,
         null,
         null,
-        null,
         null
     ],
     "order": [
@@ -576,11 +575,11 @@ $('#tabelausers').dataTable({
     },
     "columnDefs": [{
         type: 'portugues',
-        targets: [0, 1, 2, 3, 4, 5, 6]
+        targets: [0, 1, 2, 3, 4, 5]
     }],
     "columnDefs": [{
         type: 'locale-compare',
-        targets: [0, 1, 2, 3, 4, 5, 6]
+        targets: [0, 1, 2, 3, 4, 5]
     }],
 });
 });
