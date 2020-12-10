@@ -1,5 +1,5 @@
 .hero-image1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('assets/js/paginas/frontend/sobre_vinhos.js/1.jpg') }}");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/paginas/frontend/sobre_vinhos/1.png");
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 }
 
 .hero-image2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('assets/js/paginas/frontend/sobre_vinhos.js/2.jpg') }}");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/2.png");
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 }
 
 .hero-image3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('assets/js/paginas/frontend/sobre_vinhos.js/3.jpg') }}");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/laragon/www/wineculture/public/assets/img/paginas/frontend/sobre_vinhos/3.png");
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 }
 
 .hero-image4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('assets/js/paginas/frontend/sobre_vinhos.js/4.jpg') }}");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/paginas/frontend/sobre_vinhos/4.png");
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@
 }
 
 .hero-image5 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('assets/js/paginas/frontend/sobre_vinhos.js/5.jpg') }}");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/paginas/frontend/sobre_vinhos/5.png");
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@
 }
 
 .hero-image6 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('assets/js/paginas/frontend/sobre_vinhos.js/6.jpg') }}");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/frontend/sobre_vinhos/6.png");
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@
 }
 
 .hero-image7 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('assets/js/paginas/frontend/sobre_vinhos.js/7.jpg') }}");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/sobre_vinhos/7.png");
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@
 }
 
 .hero-image8 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('assets/js/paginas/frontend/sobre_vinhos.js/8.jpg') }}");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("8.png");
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -79,7 +79,8 @@
 }
 
 .hero-image9 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('assets/js/paginas/frontend/sobre_vinhos.js/9.jpg') }}");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/9.png");
+
     height: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,7 +99,7 @@
 }
 /* The sidebar menu */
 
-.sidenav {
+.sidenav1 {
     height: auto;
     /* Full-height: remove this if you want "auto" height */
     width: 200px;
@@ -107,21 +108,20 @@
     /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1;
     /* Stay on top */
-    top: 25;
+    top: 2;
     /* Stay at the top */
     left: 10;
-    background-color: hsl(0, 0%, 100%);
     /* Black */
     overflow-x: hidden;
     /* Disable horizontal scroll */
-    padding-top: 20px;
+    padding-top: 35px;
     /*round egeds */
     border-radius: 30px;
     padding-bottom: 20px;
 }
 /* The navigation menu links */
 
-.sidenav a {
+.sidenav1 a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
@@ -131,23 +131,23 @@
 }
 /* When you mouse over the navigation links, change their color */
 
-.sidenav a:hover {
+.sidenav1 a:hover {
     color: #cacaca;
 }
 /* Style page content */
 
 .main {
-    margin-left: 200px;
+    margin-left: 175px;
     /* Same as the width of the sidebar */
     padding: 0px 10px;
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 
 @media screen and (max-height: 450px) {
-    .sidenav {
+    .sidenav1 {
         padding-top: 15px;
     }
-    .sidenav a {
+    .sidenav1 a {
         font-size: 18px;
     }
 }
@@ -199,12 +199,14 @@
 }
 
 #myBtn:hover {
-    background-color: #555;
+    background-color: rgb(124, 123, 123);
     /* Add a dark-grey background on hover */
 }
 
 .text {
     padding: 1%;
+    margin-left: 5px;
+    margin-top: 200px;
 }
 
 .mainTXT {
@@ -218,10 +220,11 @@
 
 .all2,
 .sidenav {
-    margin-left: 250px;
+    margin-left: 100px;
 }
 
 .all2 {
-    margin-right: 250px;
+    margin-left: 100px;
+    margin-right: 100px;
     background-color: white;
 }
