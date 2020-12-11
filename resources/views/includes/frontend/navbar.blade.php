@@ -12,7 +12,7 @@
                 <li @if (Route::currentRouteName()=='index') class="active" @endif><a href="/">Início</a></li>
                 <li @if (Route::currentRouteName()=='sobre_vinhos') class="active" @endif><a href="/sobre_vinhos">Sobre Vinhos</a></li>
                 <li @if (Route::currentRouteName()=='sobre') class="active" @endif><a href="/sobre">Sobre</a></li>
-                <li @if (Route::currentRouteName()=='contactos') class="active" @endif><a href="/contactos">Contacte-nos!</a></li>
+                <li @if (Route::currentRouteName()=='contactos') class="active" @endif><a href="/contactos">Contactos</a></li>
                 <li @if (Route::currentRouteName()=='login') class="active" @endif><a href="{{route('login')}}">Login</a></li>
             </ul>
             <div class="menu">
