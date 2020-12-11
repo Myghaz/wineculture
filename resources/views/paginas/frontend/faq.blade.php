@@ -4,11 +4,12 @@
 <head>
     @section('title', 'FAQ')
         @include('includes.frontend.head')
+        @include('includes.frontend.navbar')
         <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/faq.css') }}">
     </head>
 
     <body>
-        @include('includes.frontend.navbar')
+
         <div>
             <img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/faq-banner.jpg') }}" alt="banner">
         </div>
@@ -33,11 +34,11 @@
                     <h1>Conta</h1>
                     @foreach ($perguntas_conta as $key => $pergunta_conta)
                         <div class="categoria">
-                            <a class="btn pergunta h3" data-toggle="collapse" href="#collapseExample" role="button"
-                                aria-expanded="false" aria-controls="collapseExample">
+                            <a class="btn pergunta h3" data-toggle="collapse" href="#a{{ $pergunta_conta->id }}"
+                                role="button" aria-expanded="false" aria-controls="a{{ $pergunta_conta->id }}">
                                 {{ $pergunta_conta->pergunta }}
                             </a>
-                            <div class="resposta" id="collapseExample">
+                            <div class="collapse resposta" id="a{{ $pergunta_conta->id }}">
                                 <div class="resposta1">
                                     {{ $pergunta_conta->resposta }}
                                 </div>
@@ -47,11 +48,11 @@
                     <h1>Encomenda</h1>
                     @foreach ($perguntas_encomenda as $key => $pergunta_encomenda)
                         <div class="categoria">
-                            <a class="btn pergunta h3" data-toggle="collapse" href="#collapseExample" role="button"
-                                aria-expanded="false" aria-controls="collapseExample">
+                            <a class="btn pergunta h3" data-toggle="collapse" href="#b{{ $pergunta_encomenda->id }}"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
                                 {{ $pergunta_encomenda->pergunta }}
                             </a>
-                            <div class="resposta" id="collapseExample">
+                            <div class="resposta" id="b{{ $pergunta_encomenda->id }}">
                                 <div class="resposta1">
                                     {{ $pergunta_encomenda->resposta }}
                                 </div>
@@ -61,11 +62,11 @@
                     <h1>Pagamento</h1>
                     @foreach ($perguntas_pagamento as $key => $pergunta_pagamento)
                         <div class="categoria">
-                            <a class="btn pergunta h3" data-toggle="collapse" href="#collapseExample" role="button"
-                                aria-expanded="false" aria-controls="collapseExample">
+                            <a class="btn pergunta h3" data-toggle="collapse" href="#c{{ $pergunta_pagamento->id }}"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
                                 {{ $pergunta_pagamento->pergunta }}
                             </a>
-                            <div class="resposta" id="collapseExample">
+                            <div class="resposta" id="c{{ $pergunta_pagamento->id }}">
                                 <div class="resposta1">
                                     {{ $pergunta_pagamento->resposta }}
                                 </div>
@@ -75,6 +76,8 @@
                 </div>
             </div>
         </div>
+        <br>
+        <br>
         <!--SCRIPTS-->
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
