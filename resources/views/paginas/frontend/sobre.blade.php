@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-7 m-3 mt-5" ,style="width=1000px" data-aos="fade-up">
                 <div class="text-left">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jRVUhtd_O1M" frameborder="0" autoplay="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jRVUhtd_O1M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <!--<div class="video-box about">
                             <img src="/assets/img/paginas/frontend/sobre/about.jpg" class="img-fluid" alt="">
                             <a href="" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
