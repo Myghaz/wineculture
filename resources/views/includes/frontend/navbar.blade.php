@@ -21,7 +21,7 @@
         </div>
         @include('includes.frontend.settings')
     </div>
-    @include('includes.frontend.scripts')
+
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
 </body>
 </html>
