@@ -14,10 +14,10 @@
         <div class="thumbnail">
         <img src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" alt="" class="img-responsive"/>
           <div class="caption">
-            <h3 class=""> Titulo:{{$value->titulo}}</h3>
-            <h4 class="">Data:{{$value->data}}</h4>
-            <p>Preview:{{$value->preview}}</p>
-            <h1>Descrição:{{$value->descricao}}</h1>
+            <h3 class="">{{$value->titulo}}</h3>
+            <h4 class="">{{$value->data}}</h4>
+            <p>{{$value->preview}}</p>
+            <h1>{{$value->descricao}}</h1>
             <div class="btn-toolbar text-center">
               <a href="previewBlog.html" role="button" class="btn btn-primary pull-right">Ver Mais</a>
             </div>
