@@ -438,5 +438,14 @@ div.dataTables_wrapper div.dataTables_length label {
 
 .dataTables_filter{
    margin-bottom: 20px;
+} 
+.dataTables_info{
+   width: 50%;
+   margin-top: 30px;
+}
+.paging_simple_numbers{
+   width: 50%;
+   padding-top: -30px;
+   float: right;
 }
 

@@ -125,7 +125,7 @@
             </nav>
           </div>
           <div class="card-body pt-0 pb-5">
-          <table id="tabelausers" class="ui celled table">
+          <table id="tabelausers" class="ui celled table" style="width:100%">
                         <thead>
                           <tr>
                             <th>ID</th>
