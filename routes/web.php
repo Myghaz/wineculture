@@ -50,3 +50,5 @@ Auth::routes();
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
 Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
+
+Route::get('/previewblog', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');

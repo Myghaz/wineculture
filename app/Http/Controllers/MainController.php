@@ -15,6 +15,12 @@ class MainController extends Controller
         $blogs = Blog::all();
         return view('paginas.frontend.blog', ['blogs' => $blogs]);
     }
+
+    public function previewblog() {
+        $previewblog = Blog::all();
+        return view('paginas.frontend.previewblog', ['previewblog' => $previewblog]);
+    }
+
     public function faq() {
         $perguntas_conta = Perguntas::where('categoria', '=', "Conta")->get();
         $perguntas_encomenda = Perguntas::where('categoria', '=', "Encomenda")->get();
@@ -29,3 +35,4 @@ class MainController extends Controller
          'perguntas_pagamento' => $perguntas_pagamento, 'categorias' => $categorias]);
     }
 }
+

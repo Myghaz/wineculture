@@ -10,7 +10,7 @@
 <body>
     @include('includes.frontend.navbar')
     <div class="container thumbs">
-      @foreach($blogs as $value)
+      @foreach($previewblog as $value)
         <div class="thumbnail">
         <img src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" alt="" class="img-responsive"/>
           <div class="caption">
@@ -19,7 +19,7 @@
             <p>Preview:{{$value->preview}}</p>
             <h1>Descrição:{{$value->descricao}}</h1>
             <div class="btn-toolbar text-center">
-              <a href="previewBlog.html" role="button" class="btn btn-primary pull-right">Ver Mais</a>
+              <a href="/blog" role="button" class="btn btn-primary pull-right">Voltar á Página Anterior</a>
             </div>
           </div>
         </div>
