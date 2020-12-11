@@ -459,7 +459,8 @@
 
         <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
 
-        @include('includes.frontend.scripts')
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
         <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
         <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
         <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/venobox/venobox.min.js') }}"></script>
