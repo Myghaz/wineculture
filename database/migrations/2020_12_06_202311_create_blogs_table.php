@@ -17,10 +17,10 @@ class CreateBlogsTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->date('data');
-            $table->date('autor');
-            $table->date('categoria');
+            $table->string('autor');
+            $table->string('categoria');
             $table->string('preview');
-            $table->string('descricao');
+            $table->longText('descricao');
             $table->string('img');
             $table->timestamps();
         });
