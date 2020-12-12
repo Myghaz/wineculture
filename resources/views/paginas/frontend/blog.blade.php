@@ -20,7 +20,7 @@
                     <div class="blogContent">
                         <h3>{{$value->titulo}}<span>{{$value->categoria}}</span></h3>
                         <p>By <a href="#">{{$value->autor}}</a> | <a href="#">{{$value->data}}</a></p>
-                        <a href="#" class="btn">Read More</a>
+                        <a href="\previewblog?id={{$value->id}}" class="btn">Read More</a>
                     </div>
                 </div>
             </main>
