@@ -1,31 +1,36 @@
-a {
+.a {
     transition: all .5s !important;
     text-decoration: none !important;
     color: #fff;
 }
 
 img {
-    width: 550px !important;
+    width: 100% !important;
+    height: 100% !important;
     transition: all .5s !important;
 }
 
 section {
-    padding: 40px 0 !important;
     margin-top: 50px !important;
     text-align: center !important;
+    max-width: 1650px;
 }
 
 .container {
-    max-width: 1200px !important;
+    max-width: 1100px !important;
     width: 100% !important;
     margin: 0 auto !important;
 }
 
 main {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     grid-gap: 30px !important;
-    margin: 30px 15px 0px 15px !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100% !important
 }
 
 .singleBlog {
@@ -56,7 +61,7 @@ main {
     width: 100% !important;
     color: #fff !important;
     padding: 10px 5px !important;
-    background: linear-gradient(45deg, rgba(21, 82, 153, 1) 0%, rgba(144, 192, 229, .4) 100%) !important;
+    background: linear-gradient(45deg, rgb(153, 21, 21) 0%, rgba(229, 144, 144, 0.4) 100%) !important;
     transition: all .5s !important;
 }
 
@@ -76,7 +81,7 @@ main {
     font-size: 60% !important;
     margin-top: 5px !important;
     font-weight: 600 !important;
-    color: rgba(52, 73, 94, 1.0)
+    color: rgb(255, 161, 161)
 }
 
 .blogContent a {
@@ -90,10 +95,11 @@ main {
     border: 1px solid #fff !important;
     border-radius: 3px !important;
     font-weight: 400 !important;
+    color: #fff;
 }
 
 .blogContent .btn:hover {
-    background: rgba(52, 152, 219, 1.0) !important;
+    background: rgb(255, 150, 150) !important;
     transition: all .5s !important;
     text-decoration: none !important;
 }

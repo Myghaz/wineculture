@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <div class="all">
+    <div class="class1">
     @foreach($previewblog as $value)
-    <div class="imgs">
+    <div class="class2">
     <img src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" width="1300px" height="300px" ></img>
     </div>
     <br>
@@ -26,7 +26,7 @@
         <p><big>{{$value->descricao}}</big></p>
     </main>
     <footer>
-        <div class="buton">
+        <div class="class3">
         <a href="/blog" role="button" class="btn btn-default">Voltar á Página Inicial</a>
         </div>
     </footer>

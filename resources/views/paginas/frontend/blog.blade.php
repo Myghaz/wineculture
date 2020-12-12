@@ -13,21 +13,23 @@
     @include('includes.frontend.navbar')
     <section>
         <div class="container">
-            @foreach($blogs as $value)
+
             <main>
+                @foreach($blogs as $value)
                 <div class="singleBlog">
                     <img src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" alt="">
                     <div class="blogContent">
                         <h3>{{$value->titulo}}<span>{{$value->categoria}}</span></h3>
-                        <p>By <a href="#">{{$value->autor}}</a> | <a href="#">{{$value->data}}</a></p>
+                        <p>By <a class="a">{{$value->autor}}</a> | <a class="a">{{$value->data}}</a></p>
                         <a href="\previewblog?id={{$value->id}}" class="btn">Read More</a>
                     </div>
                 </div>
+                @endforeach
             </main>
-            @endforeach
+
         </div>
     </section>
-
+    <br>
 
 </body>
 @include('includes.frontend.footer')
