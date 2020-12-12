@@ -23,6 +23,10 @@
 
                      </div>
     </div>
+    <br>
+    <br>
+    <br>
+
     </body>
         @include('includes.frontend.footer')
 </html>

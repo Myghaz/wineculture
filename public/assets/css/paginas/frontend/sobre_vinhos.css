@@ -1,7 +1,6 @@
 .hero-image1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('{{asset("assets/img/paginas/frontend/sobre_vinhos/2.png")}}');
-    height: 30%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/1.png");
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,8 +9,8 @@
 }
 
 .hero-image2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/img/paginas/frontend/sobre_vinhos/2.png");
-    height: 30%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/2.png");
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,7 +20,7 @@
 
 .hero-image3 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/3.png");
-    height: 30%;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,7 +30,7 @@
 
 .hero-image4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/4.png");
-    height: 30%;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,7 +40,7 @@
 
 .hero-image5 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/5.png");
-    height: 30%;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,7 +50,7 @@
 
 .hero-image6 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/6.png");
-    height: 30%;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,7 +60,7 @@
 
 .hero-image7 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/7.png");
-    height: 30%;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,7 +70,7 @@
 
 .hero-image8 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/8.png");
-    height: 30%;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,7 +80,7 @@
 
 .hero-image9 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/assets/img/paginas/frontend/sobre_vinhos/9.png");
-    height: 30%;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,7 +111,7 @@
     /* Stay on top */
     top: 2;
     /* Stay at the top */
-    left: 10;
+    left: 8;
     /* Black */
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -218,6 +217,7 @@
 .text {
     padding: 1%;
     margin-left: 5px;
+    min-height: 782px;
 }
 
 .mainTXT {
@@ -225,8 +225,6 @@
     padding-bottom: 10px;
     padding-right: 1%;
     padding-left: 1%;
-    background-color: white;
-    border-radius: 30px;
 }
 
 .all2,
