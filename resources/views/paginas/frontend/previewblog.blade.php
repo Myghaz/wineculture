@@ -10,19 +10,18 @@
 
 <body>
     <div class="all">
-        @foreach($previewblog as $value )
-            <img class="class2" src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" ></img>
+            <img class="class2" src="{{ url('assets/img/paginas/frontend/blog/' .$previewblog->img)}}" ></img>
                 <div class="text">
-                    <h1>{{$value->titulo}}</h1>
-                    <p>Publicado por <em>{{$value->autor}}</em> | Publicado em <em>{{$value->data}}</em></p>
-                    <p><big><strong>{{$value->preview}}</strong></big></p>
+                    <h1>{{$previewblog->titulo}}</h1>
+                    <p>Publicado por <em>{{$blogs->autor}}</em> | Publicado em <em>{{$blogs->data}}</em></p>
+                    <p><big><strong>{{$blogs->preview}}</strong></big></p>
                     <br>
-                    <p><big>{{$value->descricao}}</big></p>
+                    <p><big>{{$blogs->descricao}}</big></p>
                 </div>
                 <div class="bnt">
                     <a href="/blog" role="button" class="btn btn-default">Voltar á Página Inicial</a>
-                </div>
-        @endforeach
+
+                     </div>
     </div>
     </body>
         @include('includes.frontend.footer')

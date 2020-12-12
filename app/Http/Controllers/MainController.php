@@ -17,7 +17,7 @@ class MainController extends Controller
     }
 
     public function previewblog() {
-        $previewblog = Blog::all();
+        $previewblog = Blog::where('id', '=', 'id')->get();
         return view('paginas.frontend.previewblog', ['previewblog' => $previewblog]);
     }
 
