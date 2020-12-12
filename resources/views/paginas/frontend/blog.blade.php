@@ -2,29 +2,31 @@
 <html>
 
 <head>
-    @section('title', 'FAQ')
+    @section('title', 'Blog')
     @include('includes.frontend.head')
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/blog.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
 <body>
     @include('includes.frontend.navbar')
-    <div class="container thumbs">
-      @foreach($blogs as $value)
-        <div class="thumbnail">
-        <img src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" alt="" class="img-responsive"/>
-          <div class="caption">
-            <h3 class="">{{$value->titulo}}</h3>
-            <h4 class="">{{$value->data}}</h4>
-            <p>{{$value->preview}}</p>
-            <h1>{{$value->descricao}}</h1>
-            <div class="btn-toolbar text-center">
-              <a href="previewBlog.html" role="button" class="btn btn-primary pull-right">Ver Mais</a>
-            </div>
-          </div>
+    <section>
+        <div class="container">
+            @foreach($blogs as $value)
+            <main>
+                <div class="singleBlog">
+                    <img src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" alt="">
+                    <div class="blogContent">
+                        <h3>{{$value->titulo}}<span>{{$value->categoria}}</span></h3>
+                        <p>By <a href="#">{{$value->autor}}</a> | <a href="#">{{$value->data}}</a></p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </main>
+            @endforeach
         </div>
-        @endforeach
-      </div>
+    </section>
 
 
 </body>
