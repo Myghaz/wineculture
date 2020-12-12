@@ -51,4 +51,4 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'da
 
 Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
 
-Route::get('/previewblog', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
+Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');

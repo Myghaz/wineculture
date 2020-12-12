@@ -21,7 +21,7 @@
                     <div class="blogContent">
                         <h3>{{$value->titulo}}<span>{{$value->categoria}}</span></h3>
                         <p>By <a class="a">{{$value->autor}}</a> | <a class="a">{{$value->data}}</a></p>
-                        <a href="{{ route('previewblog', ['id' => $value->id]) }}" class="btn">Read More</a>
+                        <a href="{{ route('previewblog', $value) }}" class="btn">Read More</a>
                     </div>
                 </div>
                 @endforeach

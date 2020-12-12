@@ -13,10 +13,10 @@
             <img class="class2" src="{{ url('assets/img/paginas/frontend/blog/' .$previewblog->img)}}" ></img>
                 <div class="text">
                     <h1>{{$previewblog->titulo}}</h1>
-                    <p>Publicado por <em>{{$blogs->autor}}</em> | Publicado em <em>{{$blogs->data}}</em></p>
-                    <p><big><strong>{{$blogs->preview}}</strong></big></p>
+                    <p>Publicado por <em>{{$previewblog->autor}}</em> | Publicado em <em>{{$previewblog->data}}</em></p>
+                    <p><big><strong>{{$previewblog->preview}}</strong></big></p>
                     <br>
-                    <p><big>{{$blogs->descricao}}</big></p>
+                    <p><big>{{$previewblog->descricao}}</big></p>
                 </div>
                 <div class="bnt">
                     <a href="/blog" role="button" class="btn btn-default">Voltar á Página Inicial</a>
