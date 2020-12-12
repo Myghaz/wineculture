@@ -5,7 +5,7 @@
 <div class="content-wrapper">
   <div class="content">
     <!-- Top Statistics -->
-    <div class="row">
+    <!--<div class="row">
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
           <div class="card-body">
@@ -101,13 +101,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
+
     <div class="row">
       <div class="col-12">
         <!-- Recent Order Table -->
         <div class="card card-table-border-none" id="recent-orders">
           <div class="card-header justify-content-between">
-            <h2>Tabela de Utilizadores</h2>
+            <h2>Tabela de Posts</h2>
             <nav class="table-item-menu">
               <input type="checkbox" href="#" class="table-menu-open" name="table-menu-open" id="table-menu-open" />
               <label id="table-menu-open-handler" class="table-menu-open-button" for="table-menu-open">
@@ -129,24 +130,20 @@
                         <thead>
                           <tr>
                             <th>ID</th>
-                            <th>Nome</th>
-                            <th class="d-none d-lg-table-cell">Apelido</th>
-                            <th class="d-none d-lg-table-cell">Email</th>
-                            <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
+                            <th class="d-none d-lg-table-cell">Titulo</th>
+                            <th class="d-none d-lg-table-cell">Autor</th>
+                            <th class="d-none d-lg-table-cell">Data</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                          @foreach($users as $key => $user)
-                            <td>{{$user->id}}</td>
+                          @foreach($blogs as $value => $id)
+                            <td>{{$id}}</td>>
                             <td>
-                              <a class="text-dark" href="">{{$user->name}}</a>
+                              <a class="text-dark" href="">{{$valuer->titulo}}</a>
                             </td>
-                            <td>
-                              <a class="text-dark" href="">{{$user->apelido}}</a>
-                            </td>
-                            <td class="d-none d-lg-table-cell">{{$user->email}}</td>
-                            <td class="d-none d-lg-table-cell">{{$user->tipouser}}</td>
+                            <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
+                            <td class="d-none d-lg-table-cell">{{$value->data}}</td>
                           </tr>
                           @endforeach
                         </tbody>

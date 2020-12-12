@@ -141,5 +141,33 @@ class AdminController extends Controller
         'totalProds',
         'users']));
     }
-    public function blog() {}
+    public function blog() {
+                //Ir buscar os posts organizados por mes
+                $postJan = blogs::whereYear('data', '=', 2020)->whereMonth('data', '=', 1)->get();
+                $postFev = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 2)->get();
+                $postMar = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 3)->get();
+                $postAbr = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 4)->get();
+                $postMai = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 5)->get();
+                $postJun = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 6)->get();
+                $postJul = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 7)->get();
+                $postAgo = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 8)->get();
+                $postSet = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 9)->get();
+                $postOut = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 10)->get();
+                $postNov = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 11)->get();
+                $postDez = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 12)->get();
+                $totalpostJan = $postJan->count();
+                $totalpostFev = $postFev->count();
+                $totalpostMar = $postMar->count();
+                $totalpostAbr = $postAbr->count();
+                $totalpostMai = $postMai->count();
+                $totalpostJun = $postJun->count();
+                $totalpostJul = $postJul->count();
+                $totalpostAgo = $postAgo->count();
+                $totalpostSet = $postSet->count();
+                $totalpostOut = $postOut->count();
+                $totalpostNov = $postNov->count();
+                $totalpostDez = $postDez->count();
+                $totalpost = Blog::whereYear('data', '=', 2020)->count();
+                //Ir buscar os posts organizados por mes
+    }
 }
