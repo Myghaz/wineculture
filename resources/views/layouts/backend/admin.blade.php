@@ -130,7 +130,8 @@
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#app" aria-expanded="false" aria-controls="app">
                 <i class="mdi mdi-pencil-box-multiple"></i>
-                <span class="nav-text">App</span> <b class="caret"></b>
+                <span class="nav-text">Blog</span> <b class="caret"></b>
+                <span class="badge badge-success">new</span>
               </a>
               <ul class="collapse" id="app" data-parent="#sidebar-menu">
                 <div class="sub-menu">
@@ -138,8 +139,8 @@
 
 
                   <li>
-                    <a class="sidenav-item-link" href="chat.html">
-                      <span class="nav-text">Chat</span>
+                    <a class="sidenav-item-link" href="/admin/blog">
+                      <span class="nav-text">Data Table</span>
 
                     </a>
                   </li>
@@ -151,7 +152,7 @@
 
                   <li>
                     <a class="sidenav-item-link" href="contacts.html">
-                      <span class="nav-text">Contacts</span>
+                      <span class="nav-text">Insert Info</span>
 
                     </a>
                   </li>
@@ -163,7 +164,7 @@
 
                   <li>
                     <a class="sidenav-item-link" href="team.html">
-                      <span class="nav-text">Team</span>
+                      <span class="nav-text">Edit Info</span>
 
                     </a>
                   </li>

@@ -44,11 +44,14 @@ Route::get('/faq', [App\Http\Controllers\MainController::class, 'faq'])->name('f
 
 Auth::routes();
 
+Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
+
+Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
 
 
 //Admin
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
-Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
+Route::get('/admin/blog', [App\Http\Controllers\AdminController::class, 'blog'])->name('admin_blog');
 
-Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
+

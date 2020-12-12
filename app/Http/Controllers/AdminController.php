@@ -141,4 +141,5 @@ class AdminController extends Controller
         'totalProds',
         'users']));
     }
+    public function blog() {}
 }
