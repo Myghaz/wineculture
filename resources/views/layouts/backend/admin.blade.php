@@ -176,7 +176,7 @@
 
                   <li>
                     <a class="sidenav-item-link" href="calendar.html">
-                      <span class="nav-text">Calendar</span>
+                      <span class="nav-text">Delete Info</span>
 
                     </a>
                   </li>
@@ -1204,6 +1204,7 @@
   <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
   <script src="{{asset('assets\js\layouts\backend\admin.js')}}"></script>
   <script src="{{asset('assets\js\paginas\backend\dashboard.js')}}"></script>
+  <script src="{{asset('assets\js\paginas\backend\blog.js')}}"></script>
 </body>
 
 </html>

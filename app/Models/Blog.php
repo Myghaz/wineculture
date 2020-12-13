@@ -18,6 +18,8 @@ class Blog extends Model
      */
     protected $fillable = [
         'titulo',
+        'autor',
+        'categoria',
         'data',
         'preview',
         'descricao',

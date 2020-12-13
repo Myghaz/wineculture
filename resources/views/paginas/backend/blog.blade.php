@@ -5,11 +5,11 @@
 <div class="content-wrapper">
   <div class="content">
     <!-- Top Statistics -->
-    <!--<div class="row">
+    <div class="row">
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
           <div class="card-body">
-            <h2 class="mb-1">{{$totalUsers}}</h2>
+            <h2 class="mb-1">{{$totalpost}}</h2>
             <p>Registos Totais (2020)</p>
             <div class="mudargraf">
               <input type="checkbox" href="#" class="menu-open" name="menu-open" id="usersmenu-open" />
@@ -31,7 +31,7 @@
       </div>
 
 
-
+<!--
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
           <div class="card-body">
@@ -138,9 +138,9 @@
                         <tbody>
                           <tr>
                           @foreach($blogs as $value => $id)
-                            <td>{{$id}}</td>>
+                            <td>{{$value->id}}</td>>
                             <td>
-                              <a class="text-dark" href="">{{$valuer->titulo}}</a>
+                              <a class="text-dark" href="">{{$value->titulo}}</a>
                             </td>
                             <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
                             <td class="d-none d-lg-table-cell">{{$value->data}}</td>

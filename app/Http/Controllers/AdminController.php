@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 Use App\Models\User;
 use App\Models\WPProdutos;
+use App\Models\Blog;
 
 class AdminController extends Controller
 {
@@ -143,7 +144,7 @@ class AdminController extends Controller
     }
     public function blog() {
                 //Ir buscar os posts organizados por mes
-                $postJan = blogs::whereYear('data', '=', 2020)->whereMonth('data', '=', 1)->get();
+                $postJan = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 1)->get();
                 $postFev = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 2)->get();
                 $postMar = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 3)->get();
                 $postAbr = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 4)->get();
