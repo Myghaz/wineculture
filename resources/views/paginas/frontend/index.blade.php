@@ -89,7 +89,7 @@
 
                         <div class="section-title">
                             <h2>Sobre Nós</h2>
-                            <p>WineCulture é uma associação sem fins lucrativos que procura dar a conhecer ao seu público uma cultura aprofundade sobre a vinicultura, uma área bastante importante em Portugal. Venha nos conhecer!</p>
+                            <p>WineCulture é uma instituição sem fins lucrativos que procura dar a conhecer ao seu público uma cultura aprofundade sobre a vinicultura, uma área bastante importante em Portugal. Venha conhecer-nos!</p>
                         </div>
 
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -177,7 +177,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon"><i class="icofont-support-faq"></i></div>
-                        <h4 class="title"><a href="">FaQ</a></h4>
+                        <h4 class="title"><a href="/faq">FaQ</a></h4>
                         <p class="description">Podes esclarecer todas as duvidas e mais alguma!</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
