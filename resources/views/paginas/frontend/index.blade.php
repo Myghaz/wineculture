@@ -167,7 +167,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
                         <div class="icon"><i class="icofont-newspaper"></i></div>
-                        <h4 class="title"><a href="">Tudo Sobre Vinhos</a></h4>
+                        <h4 class="title"><a href="/sobre_vinhos">Tudo Sobre Vinhos</a></h4>
                         <p class="description">Oferecemos uma página completa e cheia de informação!</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
