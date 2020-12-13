@@ -64,7 +64,6 @@
     </div>
     <br>
     <br>
-    @include('includes.frontend.scripts')
     <script src="{{ URL::asset('assets/js/paginas/frontend/contactos.js') }}"></script>
 </body>
 @include('includes.frontend.footer')

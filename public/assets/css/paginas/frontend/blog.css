@@ -61,7 +61,7 @@ main {
     width: 100% !important;
     color: #fff !important;
     padding: 10px 5px !important;
-    background: linear-gradient(45deg, rgb(153, 21, 21) 0%, rgba(229, 144, 144, 0.4) 100%) !important;
+    background: linear-gradient(45deg, rgb(93, 13, 13) 0%, rgba(172, 108, 108, 0.4) 100%) !important;
     transition: all .5s !important;
 }
 

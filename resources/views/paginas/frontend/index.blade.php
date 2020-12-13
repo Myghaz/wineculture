@@ -94,7 +94,7 @@
 
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                            <h4 class="title"><a href="">Contacte-nos</a></h4>
+                            <h4 class="title"><a href="/contactos">Contacte-nos</a></h4>
                             <p class="description">Procure mais informações na nossa página dos Contactos!</p>
                         </div>
 
