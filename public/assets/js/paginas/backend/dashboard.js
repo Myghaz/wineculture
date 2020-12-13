@@ -548,6 +548,8 @@ $(document).ready(function() {
 
 $('#tabelausers').dataTable({
     dom: 'lBfrtip',
+    "scrollY": "350px",
+    "scrollCollapse": true,
     "autoWidth": true,
     "columns": [
         { "type": "num" },
