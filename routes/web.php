@@ -54,4 +54,6 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'da
 
 Route::get('/admin/blog', [App\Http\Controllers\AdminController::class, 'blog'])->name('admin_blog');
 
+Route::get('/admin/inserir_post', [App\Http\Controllers\AdminController::class, 'inser_blog'])->name('inser_blog');
+
 

@@ -151,7 +151,7 @@
 
 
                   <li>
-                    <a class="sidenav-item-link" href="contacts.html">
+                    <a class="sidenav-item-link" href="/admin/inserir_post">
                       <span class="nav-text">Insert Info</span>
 
                     </a>

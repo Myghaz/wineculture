@@ -189,4 +189,8 @@ class AdminController extends Controller
         'totalpost',
         'post']));
     }
+    public function inser_blog(){
+        return view('paginas.backend.inser_blog');
+
+    }
 }
