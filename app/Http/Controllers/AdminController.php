@@ -190,11 +190,16 @@ class AdminController extends Controller
         'totalpost',
         'post']));
     }
+//backoffice blog
 
     public function inser_blog(Request $post) {
 
         Blog::create($post->all());
     }
+
+    //backoffice blog functions such as insert, update and destroy
+
+        // Insert
 
     public function inserir_blog(){
 
@@ -203,7 +208,7 @@ class AdminController extends Controller
         return view('paginas.backend.inser_blog', compact('categories'));
     }
 
-
+        // Update
     public function editBlog(Blog $blog)
     {
         $categories= Category::all();
