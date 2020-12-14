@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 Use App\Models\User;
 use App\Models\WPProdutos;
 use App\Models\Blog;
+use App\Models\Category;
 
 class AdminController extends Controller
 {
@@ -189,8 +190,30 @@ class AdminController extends Controller
         'totalpost',
         'post']));
     }
-    public function inser_blog(){
-        return view('paginas.backend.inser_blog');
+
+    public function inser_blog(Request $post) {
+
+        Blog::create($post->all());
+    }
+
+    public function inserir_blog(){
+
+        $categories= Category::all();
+
+        return view('paginas.backend.inser_blog', compact('categories'));
+    }
+
+
+    public function editBlog(Blog $blog)
+    {
+        $categories= Category::all();
+
+        return view('paginas.backend.edit_blog', compact('categories', 'blog'));
+    }
+
+
+    public function updateBlog(Request $request, Blog $blog)
+    {
 
     }
 }

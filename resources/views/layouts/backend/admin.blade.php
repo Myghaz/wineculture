@@ -151,7 +151,7 @@
 
 
                   <li>
-                    <a class="sidenav-item-link" href="/admin/inserir_post">
+                    <a class="sidenav-item-link" href="/admin/inser_blog">
                       <span class="nav-text">Insert Info</span>
 
                     </a>
@@ -1046,14 +1046,14 @@
               <li class="dropdown user-menu">
                 <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                   <img src="assets/img/user/user.png" class="user-image" alt="User Image" />
-                  <span class="d-none d-lg-inline-block">Abdus Salam</span>
+                  <span class="d-none d-lg-inline-block">Administrador</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <!-- User image -->
                   <li class="dropdown-header">
                     <img src="assets/img/user/user.png" class="img-circle" alt="User Image" />
                     <div class="d-inline-block">
-                      Abdus Salam <small class="pt-1">iamabdus@gmail.com</small>
+                      Administrador <small class="pt-1">admin@wineculure.com</small>
                     </div>
                   </li>
 
@@ -1148,8 +1148,8 @@
       <footer class="footer mt-auto">
         <div class="copyright bg-white">
           <p>
-            &copy; <span id="copy-year">2019</span> Copyright Sleek Dashboard Bootstrap Template by
-            <a class="text-primary" href="http://www.iamabdus.com/" target="_blank">Abdus</a>.
+            &copy; <span id="copy-year">2020</span> Copyright by
+            <a class="text-primary">Wineculture</a>.
           </p>
         </div>
         <script>
@@ -1176,7 +1176,7 @@
   <script src="{{asset('assets\plugins\backend\jvectormap\jquery-jvectormap-2.0.3.min.js')}}"></script>
   <script src="{{asset('assets\plugins\backend\jvectormap\jquery-jvectormap-world-mill.js')}}"></script>
 
-
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
   <script src="{{asset('assets\plugins\backend\daterangepicker\moment.min.js')}}"></script>
   <script src="{{asset('assets\plugins\backend\daterangepicker\daterangepicker.js')}}"></script>
 
@@ -1197,6 +1197,11 @@
       });
     });
   </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script>
 
 
 

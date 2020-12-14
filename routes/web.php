@@ -54,6 +54,12 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'da
 
 Route::get('/admin/blog', [App\Http\Controllers\AdminController::class, 'blog'])->name('admin_blog');
 
-Route::get('/admin/inserir_post', [App\Http\Controllers\AdminController::class, 'inser_blog'])->name('inser_blog');
+Route::post('/admin/blog/create', [App\Http\Controllers\AdminController::class, 'inser_blog'])->name('blog.store');
+
+Route::get('/admin/blog/create', [App\Http\Controllers\AdminController::class, 'inserir_blog'])->name('blog.create');
+
+Route::put('/admin/blog/{blog}/update', [App\Http\Controllers\AdminController::class, 'updateBlog'])->name('blog.update');
+
+Route::get('/admin/blog/{blog}/edit/', [App\Http\Controllers\AdminController::class, 'editBlog'])->name('blog.edit');
 
 
