@@ -96,8 +96,8 @@
 
 
                   <li class="active">
-                    <a class="sidenav-item-link" href="index.html">
-                      <span class="nav-text">Ecommerce</span>
+                    <a class="sidenav-item-link" href="/admin/dashboard">
+                      <span class="nav-text">Data Users</span>
 
                     </a>
                   </li>
