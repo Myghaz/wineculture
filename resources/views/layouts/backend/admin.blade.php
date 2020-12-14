@@ -1084,6 +1084,7 @@
         </nav>
       </header>
       @yield ('content')
+      @yield ('content1')
       <div class="right-sidebar-2">
         <div class="right-sidebar-container-2">
           <div class="slim-scroll-right-sidebar-2">

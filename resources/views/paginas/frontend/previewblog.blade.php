@@ -17,6 +17,8 @@
                     <p><big><strong>{{$previewblog->preview}}</strong></big></p>
                     <br>
                     <p><big>{{$previewblog->descricao}}</big></p>
+                    <br>
+                    <p><big>{{$previewblog->descricao}}</big></p>
                 </div>
                 <div class="bnt">
                     <a href="/blog" role="button" class="btn btn-default">Voltar á Página Inicial</a>

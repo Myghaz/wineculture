@@ -29,13 +29,10 @@
           </div>
         </div>
       </div>
-
-
-<!--
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
           <div class="card-body">
-            <h2 class="mb-1">{{$totalProdutores}}</h2>
+            <h2 class="mb-1"><!-- --></h2>
             <p>Produtores Totais(2020)</p>
             <div class="mudargraf">
               <input type="checkbox" href="#" class="menu-open" name="menu-open" id="produtoresmenu-open" />
@@ -81,7 +78,7 @@
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
           <div class="card-body">
-            <h2 class="mb-1">{{$totalProds}}</h2>
+            <h2 class="mb-1"><!-- --></h2>
             <p>Produtos Totais (2020)</p>
             <div class="mudargraf">
               <input type="checkbox" href="#" class="menu-open" name="menu-open" id="prodsmenu-open" />
@@ -101,7 +98,7 @@
           </div>
         </div>
       </div>
-    </div>-->
+    </div>
 
     <div class="row">
       <div class="col-12">
@@ -137,7 +134,7 @@
                         </thead>
                         <tbody>
                           <tr>
-                          @foreach($blogs as $value => $id)
+                          @foreach($post as $value)
                             <td>{{$value->id}}</td>>
                             <td>
                               <a class="text-dark" href="">{{$value->titulo}}</a>
