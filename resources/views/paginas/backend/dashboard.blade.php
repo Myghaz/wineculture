@@ -126,56 +126,62 @@
           </div>
           <div class="card-body pt-0 pb-5">
             <table id="tableausers" class="ui celled table" style="width:100%">
-            </table>
-            <table id="tableproutores" class="ui celled table" style="width:100%">
               <thead>
                 <tr>
-                  <th>ID2</th>
-                  <th>Nome2</th>
-                  <th class="d-none d-lg-table-cell">Apelido2</th>
-                  <th class="d-none d-lg-table-cell">Email2</th>
-                  <th class="d-none d-lg-table-cell">Tipo de Utilizador2</th>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th class="d-none d-lg-table-cell">Apelido</th>
+                  <th class="d-none d-lg-table-cell">Email</th>
+                  <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   @foreach($users as $key => $user)
-                  <td>{{$user->id}}-2</td>
+                  <td>{{$user->id}}</td>
                   <td>
-                    <a class="text-dark" href="">{{$user->name}}2</a>
+                    <a class="text-dark" href="">{{$user->name}}</a>
                   </td>
                   <td>
-                    <a class="text-dark" href="">{{$user->apelido}}2</a>
+                    <a class="text-dark" href="">{{$user->apelido}}</a>
                   </td>
-                  <td class="d-none d-lg-table-cell">{{$user->email}}2</td>
-                  <td class="d-none d-lg-table-cell">{{$user->tipouser}}2</td>
+                  <td class="d-none d-lg-table-cell">{{$user->email}}</td>
+                  <td class="d-none d-lg-table-cell">{{$user->tipouser}}</td>
                 </tr>
                 @endforeach
               </tbody>
             </table>
+            <table id="tableaprodutores" class="ui celled table" style="width:100%">
+              <thead id="tableprodutoresthead">
+                <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th class="d-none d-lg-table-cell">Apelido</th>
+                  <th class="d-none d-lg-table-cell">Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  @foreach($produtores as $key => $produtor)
+                  <td>{{$user->id}}</td>
+                  <td>
+                    <a class="text-dark" href="">{{$produtor->name}}</a>
+                  </td>
+                  <td>
+                    <a class="text-dark" href="">{{$produtor->apelido}}</a>
+                  </td>
+                  <td class="d-none d-lg-table-cell">{{$produtor->email}}</td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  $dataSet2 = [
-  [
-    @foreach($users as $key => $user)
-    "{{$user->id}}",
-    "{{$user->name}}",
-    "{{$user->apelido}}",
-    "<{{$user->tipouser}}",
-    @endforeach
-  ],
-  [
-    "4",
-    "44",
-    "444",
-    "43434",
-  ],
-];
-{{$dataSet2}}
+  
   <script>
     var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};

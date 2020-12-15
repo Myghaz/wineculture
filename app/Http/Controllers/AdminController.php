@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 Use App\Models\User;
 use App\Models\WPProdutos;
+use App\Models\WPProdsPreco;
 use App\Models\receitas;
 class AdminController extends Controller
 {
@@ -98,6 +99,9 @@ class AdminController extends Controller
 
 
         $users = User::all();
+        $wp_prods = WPProdsPreco::all();
+        $produtores = User::where('tipouser', '=', 'Produtor')->get();
+        $prosdwp = WPProdutos::where('post_status', '=', 'publish')->get();
 
         return view('paginas.backend.dashboard', compact([
         'totalUsersJan',
@@ -139,7 +143,10 @@ class AdminController extends Controller
         'totalProdsNov',
         'totalProdsDez',
         'totalProds',
-        'users']));
+        'users',
+        'produtores',
+        'prosdwp',
+        'wp_prods']));
     }
 
     public function receitas_index(){

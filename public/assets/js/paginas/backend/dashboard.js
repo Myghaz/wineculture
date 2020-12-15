@@ -1,4 +1,5 @@
-// Define data set for the chart
+
+
 let usersdata = [totalUsersJan, totalUsersFev, totalUsersMar, totalUsersAbr, totalUsersMai, totalUsersJun, totalUsersJul, totalUsersAgo, totalUsersSet, totalUsersOut, totalUsersNov, totalUsersDez];
 Datausers = {
     labels: [
@@ -583,4 +584,51 @@ $('#tableausers').dataTable({
         targets: [0, 1, 2, 3, 4]
     }],
 });
+
+$('#tableaprodutores').dataTable({
+  dom: 'lBfrtip',
+  "scrollY": "350px",
+  "scrollCollapse": true,
+  "autoWidth": true,
+  "columns": [
+      { "type": "num" },
+      null,
+      null,
+      null
+  ],
+  "order": [
+      [0, 'asc']
+  ],
+  "language": {
+      "emptyTable": "Não existem registos a apresentar",
+      "info": "A mostrar _START_ até _END_ de _TOTAL_ registos",
+      "infoEmpty": "",
+      "sSearch": "Procurar:",
+      "paginate": {
+          "next": "Próximo",
+          "previous": "Anterior"
+      },
+      "sLengthMenu": "Mostrar _MENU_ registos",
+      "infoFiltered": "(filtrado do total de _MAX_ registos)",
+      "zeroRecords": "Não existem resultados baseados na pesquisa",
+  },
+  "columnDefs": [{
+      type: 'portugues',
+      targets: [0, 1, 2, 3]
+  }],
+  "columnDefs": [{
+      type: 'locale-compare',
+      targets: [0, 1, 2, 3]
+  }],
+});
+});
+
+$( "#btnusers" ).click(function() {
+  $( "#tableausers" ).hide();
+  $( "#tableausers_wrapper" ).hide();
+  $( "#tableaprodutores" ).show();
+  $("#tableaprodutores_wrapper").css("display", "inline");
+  $("#tableprodutoresthead").css("width", "100%");
+  $($.fn.dataTable.tables(true)).DataTable()
+   .columns.adjust();
 });
