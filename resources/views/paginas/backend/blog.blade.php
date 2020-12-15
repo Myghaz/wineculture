@@ -149,6 +149,9 @@
                           @endforeach
                         </tbody>
                       </table>
+<div class="paginator">
+                      {{$post->links()}}
+</div>
           </div>
         </div>
       </div>

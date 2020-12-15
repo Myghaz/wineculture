@@ -172,7 +172,7 @@ class AdminController extends Controller
                 $totalpost = Blog::whereYear('data', '=', 2020)->count();
                 //Ir buscar os posts organizados por mes
 
-                $post = Blog::all();
+                $post = Blog::paginate(5);
 
         return view('paginas.backend.blog', compact([
         'totalpostJan',
