@@ -40,13 +40,11 @@ Route::get('/login', function () {
     return view('paginas.frontend.login');
 })->name('login');
 
-Route::get('/faq', [App\Http\Controllers\MainController::class, 'faq'])->name('faq');
+Route::get('/receitas', function () {
+    return view('paginas.frontend.receitas');
+})->name('receitas');
 
 Auth::routes();
-
-Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
-
-Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
 
 
 //Admin
