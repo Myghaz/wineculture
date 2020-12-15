@@ -50,4 +50,8 @@ h1 {
     .resposta {
         margin-left: -23px;
     }
+
+    h1 {
+        margin-left: -3px;
+    }
 }

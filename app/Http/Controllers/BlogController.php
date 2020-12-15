@@ -6,12 +6,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Category;
+
 class BlogController extends Controller
 {
 
 
 
-    public function blog() {
+    public function blog()
+    {
         //Ir buscar os posts organizados por mes
         $postJan = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 1)->get();
         $postFev = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 2)->get();
@@ -42,64 +44,66 @@ class BlogController extends Controller
 
         $post = Blog::paginate(10);
 
-return view('paginas.backend.blog', compact([
-'totalpostJan',
-'totalpostFev',
-'totalpostMar',
-'totalpostAbr',
-'totalpostMai',
-'totalpostJun',
-'totalpostJul',
-'totalpostAgo',
-'totalpostSet',
-'totalpostOut',
-'totalpostNov',
-'totalpostDez',
-'totalpost',
-'post']));
-}
-//backoffice blog
+        return view('paginas.backend.blog', compact([
+            'totalpostJan',
+            'totalpostFev',
+            'totalpostMar',
+            'totalpostAbr',
+            'totalpostMai',
+            'totalpostJun',
+            'totalpostJul',
+            'totalpostAgo',
+            'totalpostSet',
+            'totalpostOut',
+            'totalpostNov',
+            'totalpostDez',
+            'totalpost',
+            'post'
+        ]));
+    }
+    //backoffice blog
 
-public function inser_blog(Request $post) {
+    public function inser_blog(Request $post)
+    {
 
-Blog::create($post->all());
-}
+        Blog::create($post->all());
+    }
 
-//backoffice blog functions such as insert, update and destroy
+    //backoffice blog functions such as insert, update and destroy
 
-// Insert
+    // Insert
 
-public function inserir_blog(){
+    public function inserir_blog()
+    {
 
-$categories= Category::all();
+        $categories = Category::all();
 
-return view('paginas.backend.inser_blog', compact('categories'));
-}
+        return view('paginas.backend.inser_blog', compact('categories'));
+    }
 
-// Update
+    // Update
 
-public function editBlog(Blog $blog)
-{
-$categories= Category::all();
+    public function editBlog(Blog $blog)
+    {
+        $categories = Category::all();
 
-return view('paginas.backend.edit_blog', compact('categories', 'blog'));
-}
+        return view('paginas.backend.edit_blog', compact('categories', 'blog'));
+    }
 
 
-public function updateBlog(Request $request, Blog $blog)
-{
+    public function updateBlog(Request $request, Blog $blog)
+    {
+    }
+    // Destroy
 
-}
-// Destroy
+    public function destroyBlog(Blog $blog)
+    {
+        Blog::destroy($blog->id());
+        $blog = Blog::find(1);
+        $blog->delete();
 
-public function destroyBlog(Blog $blog)
-{
-Blog::destroy($blog->id());
-$blog = Blog::find(1);
-$blog->delete();
-
-return view('paginas.backend.blog', compact('blog'));
-}
+        return view('paginas.backend.blog', compact('blog'));
+    }
 
 
     /**
