@@ -4,35 +4,50 @@ img {
 }
 
 .categorias {
-  width: 100%;
-  line-height: 55px;
-  height: fit-content;
-  text-align: center;
-  margin-top:30px;
-  padding-top:30px;
+    width: 100%;
+    line-height: 55px;
+    height: fit-content;
+    text-align: center;
+    line-height: 60px;
+    padding-top: 30px;
+    margin-top: 70px;
 }
 
 .categoria {
-  margin-top: 30px;
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+h1 {
+    margin: 10px 0px;
 }
 
 .btn {
-  color: black;
-  font-size: 25px;
+    color: black;
+    font-size: 25px;
 }
 
 .btn.disabled,
 .btn:disabled {
-  opacity: 1;
+    opacity: 1;
 }
 
 .dropdown {
-  margin: 25px 40px 25px 40px;
+    margin: 25px 40px 25px 40px;
 }
 
 @media only screen and (max-width: 991px) {
-  .categoria {
-    margin-top: 0px;
-    margin-left: 20px;
-  }
+    .categoria {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+
+    .pergunta {
+        font-size: 7pt;
+        margin-left: -34px;
+    }
+
+    .resposta {
+        margin-left: -23px;
+    }
 }
