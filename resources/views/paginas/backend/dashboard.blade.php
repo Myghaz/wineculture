@@ -105,7 +105,7 @@
     <div class="row">
       <div class="col-12">
         <!-- Recent Order Table -->
-        <div class="card card-table-border-none" id="recent-orders">
+        <div class="card card-table-border-none" id="users">
           <div class="card-header justify-content-between">
             <h2>Tabela de Utilizadores</h2>
             <nav class="table-item-menu">
@@ -116,41 +116,67 @@
                 <span class="lines line-3"></span>
               </label>
               <div class="table-real-menu">
-                <button title="Utilizadores" value="Utilizadores" class="table-menu-item"> <i id="table-users" class="fa fa-users"></i> </button>
-                <button title="Produtores" value="Produtores" class="table-menu-item"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
-                <button title="Produtos" value="Produtos" class="table-menu-item"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
-                <button title="Produtos(WordPress)" value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
-                <button title="Compras" value="Loja" class="table-menu-item"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button>
+                <button title="Utilizadores" id="btnusers" value="Utilizadores" class="table-menu-item"> <i id="table-users" class="fa fa-users"></i> </button>
+                <button title="Produtores" id="btnprodutores" value="Produtores" class="table-menu-item"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
+                <button title="Produtos" id="btnprods" value="Produtos" class="table-menu-item"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
+                <button title="Produtos(WordPress)" id="btnprods(wp)" value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
+                <button title="Compras" id="btncompras" value="Loja" class="table-menu-item"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button>
               </div>
             </nav>
           </div>
           <div class="card-body pt-0 pb-5">
-          <table id="tabelausers" class="ui celled table" style="width:100%">
-                        <thead>
-                          <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th class="d-none d-lg-table-cell">Apelido</th>
-                            <th class="d-none d-lg-table-cell">Email</th>
-                            <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                          @foreach($users as $key => $user)
-                            <td>{{$user->id}}</td>
-                            <td>
-                              <a class="text-dark" href="">{{$user->name}}</a>
-                            </td>
-                            <td>
-                              <a class="text-dark" href="">{{$user->apelido}}</a>
-                            </td>
-                            <td class="d-none d-lg-table-cell">{{$user->email}}</td>
-                            <td class="d-none d-lg-table-cell">{{$user->tipouser}}</td>
-                          </tr>
-                          @endforeach
-                        </tbody>
-                      </table> 
+            <table id="tableausers" class="ui celled table" style="width:100%">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th class="d-none d-lg-table-cell">Apelido</th>
+                  <th class="d-none d-lg-table-cell">Email</th>
+                  <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  @foreach($users as $key => $user)
+                  <td>{{$user->id}}</td>
+                  <td>
+                    <a class="text-dark" href="">{{$user->name}}</a>
+                  </td>
+                  <td>
+                    <a class="text-dark" href="">{{$user->apelido}}</a>
+                  </td>
+                  <td class="d-none d-lg-table-cell">{{$user->email}}</td>
+                  <td class="d-none d-lg-table-cell">{{$user->tipouser}}</td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+            <table id="tableproutores" class="ui celled table" style="width:100%">
+              <thead>
+                <tr>
+                  <th>ID2</th>
+                  <th>Nome2</th>
+                  <th class="d-none d-lg-table-cell">Apelido2</th>
+                  <th class="d-none d-lg-table-cell">Email2</th>
+                  <th class="d-none d-lg-table-cell">Tipo de Utilizador2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  @foreach($users as $key => $user)
+                  <td>{{$user->id}}-2</td>
+                  <td>
+                    <a class="text-dark" href="">{{$user->name}}2</a>
+                  </td>
+                  <td>
+                    <a class="text-dark" href="">{{$user->apelido}}2</a>
+                  </td>
+                  <td class="d-none d-lg-table-cell">{{$user->email}}2</td>
+                  <td class="d-none d-lg-table-cell">{{$user->tipouser}}2</td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

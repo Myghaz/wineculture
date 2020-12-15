@@ -546,7 +546,7 @@ $(document).ready(function() {
 
     });
 
-$('#tabelausers').dataTable({
+$('#tableausers').dataTable({
     dom: 'lBfrtip',
     "scrollY": "350px",
     "scrollCollapse": true,
@@ -583,4 +583,11 @@ $('#tabelausers').dataTable({
         targets: [0, 1, 2, 3, 4]
     }],
 });
+});
+
+$( "#btnusers" ).click(function() {
+  var table = $('#tableusers').DataTable();
+table
+    .clear()
+    .draw();
 });

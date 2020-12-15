@@ -451,4 +451,6 @@ div.dataTables_wrapper div.dataTables_length label {
 ul.pagination{
    margin-top: -30px!important;
 }    
-
+table#tableproutores{
+   display:none;
+}
