@@ -63,3 +63,4 @@ Route::get('/admin/blog/{blog}/edit/', [App\Http\Controllers\AdminController::cl
 Route::get('/admin/blog/{blog}/destroy/', [App\Http\Controllers\AdminController::class, 'destroyBlog'])->name('destroy.blog');
 
 
+Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('receitas_index');

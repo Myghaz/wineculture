@@ -7,7 +7,7 @@ Use App\Models\User;
 use App\Models\WPProdutos;
 use App\Models\Blog;
 use App\Models\Category;
-
+use App\Models\receitas;
 class AdminController extends Controller
 {
     public function dashboard() {
@@ -231,5 +231,12 @@ class AdminController extends Controller
         $blog->delete();
 
         return view('paginas.backend.blog', compact('blog'));
+    }
+
+    public function receitas_index(){
+
+        $receitas= receitas::all();
+
+        return view('paginas.backend.receitas', compact('receitas'));
     }
 }
