@@ -49,6 +49,8 @@ Auth::routes();
 //Admin
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
+Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq');
+
 Route::get('/admin/blog', [App\Http\Controllers\BlogController::class, 'blog'])->name('admin_blog');
 
 Route::post('/admin/blog/create', [App\Http\Controllers\BlogController::class, 'inser_blog'])->name('blog.store');
@@ -61,5 +63,5 @@ Route::get('/admin/blog/{blog}/edit/', [App\Http\Controllers\BlogController::cla
 
 Route::get('/admin/blog/{blog}/destroy/', [App\Http\Controllers\BlogController::class, 'destroyBlog'])->name('destroy.blog');
 
-
 Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('receitas_index');
+
