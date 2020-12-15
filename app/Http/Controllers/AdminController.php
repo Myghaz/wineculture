@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 Use App\Models\User;
 use App\Models\WPProdutos;
+use App\Models\Blog;
+use App\Models\Category;
 
 class AdminController extends Controller
 {
@@ -96,6 +98,9 @@ class AdminController extends Controller
         $totalProds = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->count();
         //Ir buscar os produtos da loja(worpress) organizados por mes
 
+
+        $users = User::all();
+
         return view('paginas.backend.dashboard', compact([
         'totalUsersJan',
         'totalUsersFev',
@@ -135,6 +140,96 @@ class AdminController extends Controller
         'totalProdsOut',
         'totalProdsNov',
         'totalProdsDez',
-        'totalProds',]));
+        'totalProds',
+        'users']));
+    }
+    public function blog() {
+                //Ir buscar os posts organizados por mes
+                $postJan = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 1)->get();
+                $postFev = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 2)->get();
+                $postMar = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 3)->get();
+                $postAbr = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 4)->get();
+                $postMai = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 5)->get();
+                $postJun = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 6)->get();
+                $postJul = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 7)->get();
+                $postAgo = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 8)->get();
+                $postSet = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 9)->get();
+                $postOut = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 10)->get();
+                $postNov = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 11)->get();
+                $postDez = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 12)->get();
+                $totalpostJan = $postJan->count();
+                $totalpostFev = $postFev->count();
+                $totalpostMar = $postMar->count();
+                $totalpostAbr = $postAbr->count();
+                $totalpostMai = $postMai->count();
+                $totalpostJun = $postJun->count();
+                $totalpostJul = $postJul->count();
+                $totalpostAgo = $postAgo->count();
+                $totalpostSet = $postSet->count();
+                $totalpostOut = $postOut->count();
+                $totalpostNov = $postNov->count();
+                $totalpostDez = $postDez->count();
+                $totalpost = Blog::whereYear('data', '=', 2020)->count();
+                //Ir buscar os posts organizados por mes
+
+                $post = Blog::all();
+
+        return view('paginas.backend.blog', compact([
+        'totalpostJan',
+        'totalpostFev',
+        'totalpostMar',
+        'totalpostAbr',
+        'totalpostMai',
+        'totalpostJun',
+        'totalpostJul',
+        'totalpostAgo',
+        'totalpostSet',
+        'totalpostOut',
+        'totalpostNov',
+        'totalpostDez',
+        'totalpost',
+        'post']));
+    }
+//backoffice blog
+
+    public function inser_blog(Request $post) {
+
+        Blog::create($post->all());
+    }
+
+    //backoffice blog functions such as insert, update and destroy
+
+        // Insert
+
+    public function inserir_blog(){
+
+        $categories= Category::all();
+
+        return view('paginas.backend.inser_blog', compact('categories'));
+    }
+
+        // Update
+
+    public function editBlog(Blog $blog)
+    {
+        $categories= Category::all();
+
+        return view('paginas.backend.edit_blog', compact('categories', 'blog'));
+    }
+
+
+    public function updateBlog(Request $request, Blog $blog)
+    {
+
+    }
+        // Destroy
+
+    public function destroyBlog(Blog $blog)
+    {
+        Blog::destroy($blog->id());
+        $blog = Blog::find(1);
+        $blog->delete();
+
+        return view('paginas.backend.blog', compact('blog'));
     }
 }

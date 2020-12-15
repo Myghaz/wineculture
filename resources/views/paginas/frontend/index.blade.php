@@ -89,12 +89,12 @@
 
                         <div class="section-title">
                             <h2>Sobre Nós</h2>
-                            <p>WineCulture é uma associação sem fins lucrativos que procura dar a conhecer ao seu público uma cultura aprofundade sobre a vinicultura, uma área bastante importante em Portugal. Venha nos conhecer!</p>
+                            <p>WineCulture é uma instituição sem fins lucrativos que procura dar a conhecer ao seu público uma cultura aprofundade sobre a vinicultura, uma área bastante importante em Portugal. Venha conhecer-nos!</p>
                         </div>
 
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                            <h4 class="title"><a href="">Contacte-nos</a></h4>
+                            <h4 class="title"><a href="/contactos">Contacte-nos</a></h4>
                             <p class="description">Procure mais informações na nossa página dos Contactos!</p>
                         </div>
 
@@ -167,7 +167,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
                         <div class="icon"><i class="icofont-newspaper"></i></div>
-                        <h4 class="title"><a href="">Tudo Sobre Vinhos</a></h4>
+                        <h4 class="title"><a href="/sobre_vinhos">Tudo Sobre Vinhos</a></h4>
                         <p class="description">Oferecemos uma página completa e cheia de informação!</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -177,7 +177,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon"><i class="icofont-support-faq"></i></div>
-                        <h4 class="title"><a href="">FaQ</a></h4>
+                        <h4 class="title"><a href="/faq">FaQ</a></h4>
                         <p class="description">Podes esclarecer todas as duvidas e mais alguma!</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
@@ -459,7 +459,8 @@
 
         <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
 
-        @include('includes.frontend.scripts')
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
         <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
         <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
         <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/venobox/venobox.min.js') }}"></script>
@@ -471,3 +472,4 @@
         <script src="{{ URL::asset('assets/js/paginas/frontend/index.js') }}"></script>
 
 </body>
+@include('includes.frontend.footer')

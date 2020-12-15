@@ -2,33 +2,35 @@
 <html>
 
 <head>
-    @section('title', 'FAQ')
+    @section('title', 'Blog')
     @include('includes.frontend.head')
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/blog.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
 <body>
     @include('includes.frontend.navbar')
-        <!-- Thumbnails -->
-    <div class="container thumbs">
-      <div class="col-sm-6 col-md-4">
-      @foreach($blogs as $value)
-        <div class="thumbnail">
-        <img src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" alt="" class="img-responsive"/>
-          <div class="caption">
-            <h3 class=""> Titulo:{{$value->titulo}}</h3>
-            <h4 class="">Data:{{$value->data}}</h4>
-            <p>Preview:{{$value->preview}}</p>
-            <h1>Descrição:{{$value->descricao}}</h1>
-            <div class="btn-toolbar text-center">
-              <a href="previewBlog.html" role="button" class="btn btn-primary pull-right">Ver Mais</a>
-            </div>
-          </div>
+    <section>
+        <div class="container">
+
+            <main>
+                @foreach($blogs as $value)
+                <div class="singleBlog">
+                    <img src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" alt="">
+                    <div class="blogContent">
+                        <h3>{{$value->titulo}}<span>{{$value->categoria}}</span></h3>
+                        <p>By <a class="a">{{$value->autor}}</a> | <a class="a">{{$value->data}}</a></p>
+                        <a href="{{ route('previewblog', $value) }}" class="btn">Ler Mais</a>
+                    </div>
+                </div>
+                @endforeach
+            </main>
+
         </div>
-        @endforeach
-      </div>
-    </div><!-- End Thumbnails -->
+    </section>
+    <br>
 
 </body>
-
+@include('includes.frontend.footer')
 </html>

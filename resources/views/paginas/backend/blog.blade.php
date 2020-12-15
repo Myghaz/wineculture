@@ -1,5 +1,5 @@
 @extends ('layouts.backend.admin')
-@section('title', 'Dashboard')
+@section('title', 'Blog')
 
 @section('content')
 <div class="content-wrapper">
@@ -9,7 +9,7 @@
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
           <div class="card-body">
-            <h2 class="mb-1">{{$totalUsers}}</h2>
+            <h2 class="mb-1">{{$totalpost}}</h2>
             <p>Registos Totais (2020)</p>
             <div class="mudargraf">
               <input type="checkbox" href="#" class="menu-open" name="menu-open" id="usersmenu-open" />
@@ -29,13 +29,10 @@
           </div>
         </div>
       </div>
-
-
-
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
           <div class="card-body">
-            <h2 class="mb-1">{{$totalProdutores}}</h2>
+            <h2 class="mb-1"><!-- --></h2>
             <p>Produtores Totais(2020)</p>
             <div class="mudargraf">
               <input type="checkbox" href="#" class="menu-open" name="menu-open" id="produtoresmenu-open" />
@@ -81,7 +78,7 @@
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
           <div class="card-body">
-            <h2 class="mb-1">{{$totalProds}}</h2>
+            <h2 class="mb-1"><!-- --></h2>
             <p>Produtos Totais (2020)</p>
             <div class="mudargraf">
               <input type="checkbox" href="#" class="menu-open" name="menu-open" id="prodsmenu-open" />
@@ -102,12 +99,13 @@
         </div>
       </div>
     </div>
+
     <div class="row">
       <div class="col-12">
         <!-- Recent Order Table -->
         <div class="card card-table-border-none" id="recent-orders">
           <div class="card-header justify-content-between">
-            <h2>Tabela de Utilizadores</h2>
+            <h2>Tabela de Posts</h2>
             <nav class="table-item-menu">
               <input type="checkbox" href="#" class="table-menu-open" name="table-menu-open" id="table-menu-open" />
               <label id="table-menu-open-handler" class="table-menu-open-button" for="table-menu-open">
@@ -129,71 +127,31 @@
                         <thead>
                           <tr>
                             <th>ID</th>
-                            <th>Nome</th>
-                            <th class="d-none d-lg-table-cell">Apelido</th>
-                            <th class="d-none d-lg-table-cell">Email</th>
-                            <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
+                            <th class="d-none d-lg-table-cell">Titulo</th>
+                            <th class="d-none d-lg-table-cell">Autor</th>
+                            <th class="d-none d-lg-table-cell">Data</th>
+                            <th class="d-none d-lg-table-cell">Editar</th>
+                            <th class="d-none d-lg-table-cell">Apagar</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                          @foreach($users as $key => $user)
-                            <td>{{$user->id}}</td>
+                          @foreach($post as $value)
+                            <td>{{$value->id}}</td>
                             <td>
-                              <a class="text-dark" href="">{{$user->name}}</a>
+                              <a class="text-dark" href="">{{$value->titulo}}</a>
                             </td>
-                            <td>
-                              <a class="text-dark" href="">{{$user->apelido}}</a>
-                            </td>
-                            <td class="d-none d-lg-table-cell">{{$user->email}}</td>
-                            <td class="d-none d-lg-table-cell">{{$user->tipouser}}</td>
+                            <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
+                            <td class="d-none d-lg-table-cell">{{$value->data}}</td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="" class="btn btn-primary">Editar</button></td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('destroy.blog', $value) }}" class="btn btn-danger">Apagar</button></td>
                           </tr>
                           @endforeach
                         </tbody>
-                      </table> 
+                      </table>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script>
-    var totalUsersJan = {{$totalUsersJan}};
-    var totalUsersFev = {{$totalUsersFev}};
-    var totalUsersMar = {{$totalUsersMar}};
-    var totalUsersAbr = {{$totalUsersAbr}};
-    var totalUsersMai = {{$totalUsersMai}};
-    var totalUsersJun = {{$totalUsersJun}};
-    var totalUsersJul = {{$totalUsersJul}};
-    var totalUsersAgo = {{$totalUsersAgo}};
-    var totalUsersSet = {{$totalUsersSet}};
-    var totalUsersOut = {{$totalUsersOut}};
-    var totalUsersNov = {{$totalUsersNov}};
-    var totalUsersDez = {{$totalUsersDez}};
-
-    var totalProdutoresJan = {{$totalProdutoresJan}};
-    var totalProdutoresFev = {{$totalProdutoresFev}};
-    var totalProdutoresMar = {{$totalProdutoresMar}};
-    var totalProdutoresAbr = {{$totalProdutoresAbr}};
-    var totalProdutoresMai = {{$totalProdutoresMai}};
-    var totalProdutoresJun = {{$totalProdutoresJun}};
-    var totalProdutoresJul = {{$totalProdutoresJul}};
-    var totalProdutoresAgo = {{$totalProdutoresAgo}};
-    var totalProdutoresSet = {{$totalProdutoresSet}};
-    var totalProdutoresOut = {{$totalProdutoresOut}};
-    var totalProdutoresNov = {{$totalProdutoresNov}};
-    var totalProdutoresDez = {{$totalProdutoresDez}};
-
-    var totalProdsJan = {{$totalProdsJan}};
-    var totalProdsFev = {{$totalProdsFev}};
-    var totalProdsMar = {{$totalProdsMar}};
-    var totalProdsAbr = {{$totalProdsAbr}};
-    var totalProdsMai = {{$totalProdsMai}};
-    var totalProdsJun = {{$totalProdsJun}};
-    var totalProdsJul = {{$totalProdsJul}};
-    var totalProdsAgo = {{$totalProdsAgo}};
-    var totalProdsSet = {{$totalProdsSet}};
-    var totalProdsOut = {{$totalProdsOut}};
-    var totalProdsNov = {{$totalProdsNov}};
-    var totalProdsDez = {{$totalProdsDez}};
-  </script>
   @endsection

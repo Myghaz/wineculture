@@ -6,8 +6,7 @@
 </head>
 <body>
 <span onclick="switchTheme()" id="toggle" class="toggle"></span>
-        <span class="wave"></span>        
-    @include('includes.frontend.scripts')
+        <span class="wave"></span>
     <script src="{{ URL::asset('assets/js/layouts/frontend/settings.js') }}"></script>
 </body>
 </html>

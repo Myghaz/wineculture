@@ -50,4 +50,16 @@ Auth::routes();
 //Admin
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
-Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
+Route::get('/admin/blog', [App\Http\Controllers\AdminController::class, 'blog'])->name('admin_blog');
+
+Route::post('/admin/blog/create', [App\Http\Controllers\AdminController::class, 'inser_blog'])->name('blog.store');
+
+Route::get('/admin/blog/create', [App\Http\Controllers\AdminController::class, 'inserir_blog'])->name('blog.create');
+
+Route::put('/admin/blog/{blog}/update', [App\Http\Controllers\AdminController::class, 'updateBlog'])->name('blog.update');
+
+Route::get('/admin/blog/{blog}/edit/', [App\Http\Controllers\AdminController::class, 'editBlog'])->name('blog.edit');
+
+Route::get('/admin/blog/{blog}/destroy/', [App\Http\Controllers\AdminController::class, 'destroyBlog'])->name('destroy.blog');
+
+

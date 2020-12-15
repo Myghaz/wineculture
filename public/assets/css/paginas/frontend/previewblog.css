@@ -1,0 +1,35 @@
+body {
+    background-image: url("/assets/img/paginas/frontend/back.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.all {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.class2 {
+    border-radius: 30px !important;
+    width: 100% !important;
+    max-width: 1765px !important;
+    height: 400px !important;
+    text-align: center !important;
+    margin-top: 30px !important;
+    margin-left: 50px;
+    margin-right: 50px;
+    size: cover;
+    position: relative;
+    object-fit: cover;
+}
+
+.text {
+    padding: 50px !important;
+    justify-content: center;
+}
+
+.bnt {
+    text-align: center !important;
+}
