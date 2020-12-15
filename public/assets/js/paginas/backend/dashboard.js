@@ -584,10 +584,3 @@ $('#tableausers').dataTable({
     }],
 });
 });
-
-$( "#btnusers" ).click(function() {
-  var table = $('#tableusers').DataTable();
-table
-    .clear()
-    .draw();
-});
