@@ -16,6 +16,7 @@
                       <th class="d-none d-lg-table-cell">Nome</th>
                       <th class="d-none d-lg-table-cell">Descrição</th>
                       <th class="d-none d-lg-table-cell">Tipo de Vinhos</th>
+                      <th class="d-none d-lg-table-cell">Foto</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -30,6 +31,9 @@
                       </td>
                       <td class="d-none d-lg-table-cell">{{$receita->tipovinho}}</td>
                     </tr>
+                </td>
+                <td class="d-none d-lg-table-cell">{{$receita->foto}}</td>
+              </tr>
                     @endforeach
                   </tbody>
                 </table>

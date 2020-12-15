@@ -160,7 +160,7 @@
 
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#components" aria-expanded="false" aria-controls="components">
-                <i class="mdi mdi-folder-multiple-outline"></i>
+                <i class="mdi mdi-table"></i>
                 <span class="nav-text">Receitas</span> <b class="caret"></b>
               </a>
               <ul class="collapse" id="components" data-parent="#sidebar-menu">
