@@ -76,7 +76,6 @@ body{
  
  }
  .navbar ul li.active a:before, .navbar ul li.active a:after{
-    border-bottom: var(--border-bottom);
     content: '';
     opacity: 1;
     height: 2px;

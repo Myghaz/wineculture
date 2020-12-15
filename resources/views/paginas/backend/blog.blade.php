@@ -137,7 +137,7 @@
                         <tbody>
                           <tr>
                           @foreach($post as $value)
-                            <td>{{$value->id}}</td>>
+                            <td>{{$value->id}}</td>
                             <td>
                               <a class="text-dark" href="">{{$value->titulo}}</a>
                             </td>
