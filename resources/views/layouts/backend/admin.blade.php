@@ -177,7 +177,7 @@
                             <ul class="collapse" id="icons" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="material-icon.html">
+                                        <a class="sidenav-item-link" href="/admin/faq">
                                             <span class="nav-text">Data Table</span>
                                         </a>
                                     </li>
@@ -902,6 +902,7 @@
     <script src="{{ asset('assets\js\paginas\backend\dashboard.js') }}"></script>
     <script src="{{ asset('assets\js\paginas\backend\receitas.js') }}"></script>
     <script src="{{ asset('assets\js\paginas\backend\blog.js') }}"></script>
+    <script src="{{ asset('assets\js\paginas\backend\faq.js') }}"></script>
 </body>
 
 </html>

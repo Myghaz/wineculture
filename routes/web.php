@@ -49,7 +49,7 @@ Auth::routes();
 //Admin
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
-Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'perguntas'])->name('perguntas');
+Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq');
 
 Route::get('/admin/blog', [App\Http\Controllers\BlogController::class, 'blog'])->name('admin_blog');
 

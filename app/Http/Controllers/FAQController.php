@@ -12,7 +12,7 @@ class FAQController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function faq()
     {
         $perguntas = Perguntas::all();
         return view('paginas.backend.faq', compact('perguntas'));
