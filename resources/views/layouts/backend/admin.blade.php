@@ -39,6 +39,7 @@
 
     <link rel="stylesheet" href="{{ URL::asset('assets/css/layouts/backend/admin.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/backend/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/backend/faq_backend.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"
         integrity="sha512-bUg5gaqBVaXIJNuebamJ6uex//mjxPk8kljQTdM1SwkNrQD7pjS+PerntUSD+QRWPNJ0tq54/x4zRV8bLrLhZg=="
         crossorigin="anonymous"></script>
@@ -171,7 +172,7 @@
                         <li class="has-sub">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#icons" aria-expanded="false" aria-controls="icons">
-                                <i class="mdi mdi-diamond-stone"></i>
+                                <i class="fas fa-question-circle"></i>
                                 <span class="nav-text">FAQ</span> <b class="caret"></b>
                             </a>
                             <ul class="collapse" id="icons" data-parent="#sidebar-menu">
@@ -183,7 +184,7 @@
                                     </li>
                                     <li>
                                         <a class="sidenav-item-link" href="flag-icon.html">
-                                            <span class="nav-text">Insert Info</span>
+                                            <span class="nav-text">Inserir Pergunta</span>
                                         </a>
                                     </li>
                                 </div>
@@ -193,36 +194,13 @@
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#forms" aria-expanded="false" aria-controls="forms">
                                 <i class="mdi mdi-email-mark-as-unread"></i>
-                                <span class="nav-text">Forms</span> <b class="caret"></b>
+                                <span class="nav-text">Contactos</span> <b class="caret"></b>
                             </a>
                             <ul class="collapse" id="forms" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
                                         <a class="sidenav-item-link" href="basic-input.html">
-                                            <span class="nav-text">Basic Input</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="sidenav-item-link" href="input-group.html">
-                                            <span class="nav-text">Input Group</span>
-
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="sidenav-item-link" href="checkbox-radio.html">
-                                            <span class="nav-text">Checkbox & Radio</span>
-
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="sidenav-item-link" href="form-validation.html">
-                                            <span class="nav-text">Form Validation</span>
-
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="sidenav-item-link" href="form-advance.html">
-                                            <span class="nav-text">Form Advance</span>
+                                            <span class="nav-text">Mensagens</span>
                                         </a>
                                     </li>
                                 </div>

@@ -15,7 +15,9 @@ class FAQController extends Controller
     public function faq()
     {
         $perguntas = Perguntas::all();
-        return view('paginas.backend.faq', compact('perguntas'));
+        $totalperguntas = Perguntas::all('id')->count();
+        $totalcategorias = Perguntas::distinct('categoria')->count();
+        return view('paginas.backend.faq', compact('perguntas', 'totalperguntas', 'totalcategorias'));
     }
 
     /**
