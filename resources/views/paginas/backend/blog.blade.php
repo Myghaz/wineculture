@@ -130,6 +130,8 @@
                             <th class="d-none d-lg-table-cell">Titulo</th>
                             <th class="d-none d-lg-table-cell">Autor</th>
                             <th class="d-none d-lg-table-cell">Data</th>
+                            <th class="d-none d-lg-table-cell">Editar</th>
+                            <th class="d-none d-lg-table-cell">Apagar</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -141,6 +143,8 @@
                             </td>
                             <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
                             <td class="d-none d-lg-table-cell">{{$value->data}}</td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('edit.blog', $value) }}" class="btn btn-primary">Editar</button></td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('edit.blog', $value) }}" class="btn btn-danger">Apagar</button></td>
                           </tr>
                           @endforeach
                         </tbody>

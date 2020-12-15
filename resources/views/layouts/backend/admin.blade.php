@@ -126,16 +126,14 @@
 
 
 
-
+<!-- Blog Menu -->
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#app" aria-expanded="false" aria-controls="app">
                 <i class="mdi mdi-pencil-box-multiple"></i>
                 <span class="nav-text">Blog</span> <b class="caret"></b>
-                <span class="badge badge-success">new</span>
               </a>
               <ul class="collapse" id="app" data-parent="#sidebar-menu">
                 <div class="sub-menu">
-
 
 
                   <li>
@@ -145,11 +143,6 @@
                     </a>
                   </li>
 
-
-
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="/admin/inser_blog">
                       <span class="nav-text">Insert Info</span>
@@ -157,37 +150,10 @@
                     </a>
                   </li>
 
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="team.html">
-                      <span class="nav-text">Edit Info</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="calendar.html">
-                      <span class="nav-text">Delete Info</span>
-
-                    </a>
-                  </li>
-
-
-
-
                 </div>
               </ul>
             </li>
-
+<!-- End of Blog Menu -->
 
 
 
