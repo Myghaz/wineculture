@@ -226,7 +226,9 @@ class AdminController extends Controller
 
     public function destroyBlog(Blog $blog)
     {
-        App\Model::destroy(1);
+        Blog::destroy($blog->id());
+        $blog = Blog::find(1);
+        $blog->delete();
 
         return view('paginas.backend.blog', compact('blog'));
     }
