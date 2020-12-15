@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 Use App\Models\User;
 use App\Models\WPProdutos;
-use App\Models\Blog;
-
+use App\Models\receitas;
 class AdminController extends Controller
 {
     public function dashboard() {
@@ -142,55 +141,11 @@ class AdminController extends Controller
         'totalProds',
         'users']));
     }
-    public function blog() {
-                //Ir buscar os posts organizados por mes
-                $postJan = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 1)->get();
-                $postFev = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 2)->get();
-                $postMar = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 3)->get();
-                $postAbr = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 4)->get();
-                $postMai = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 5)->get();
-                $postJun = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 6)->get();
-                $postJul = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 7)->get();
-                $postAgo = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 8)->get();
-                $postSet = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 9)->get();
-                $postOut = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 10)->get();
-                $postNov = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 11)->get();
-                $postDez = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 12)->get();
-                $totalpostJan = $postJan->count();
-                $totalpostFev = $postFev->count();
-                $totalpostMar = $postMar->count();
-                $totalpostAbr = $postAbr->count();
-                $totalpostMai = $postMai->count();
-                $totalpostJun = $postJun->count();
-                $totalpostJul = $postJul->count();
-                $totalpostAgo = $postAgo->count();
-                $totalpostSet = $postSet->count();
-                $totalpostOut = $postOut->count();
-                $totalpostNov = $postNov->count();
-                $totalpostDez = $postDez->count();
-                $totalpost = Blog::whereYear('data', '=', 2020)->count();
-                //Ir buscar os posts organizados por mes
 
-                $post = Blog::all();
+    public function receitas_index(){
 
-        return view('paginas.backend.blog', compact([
-        'totalpostJan',
-        'totalpostFev',
-        'totalpostMar',
-        'totalpostAbr',
-        'totalpostMai',
-        'totalpostJun',
-        'totalpostJul',
-        'totalpostAgo',
-        'totalpostSet',
-        'totalpostOut',
-        'totalpostNov',
-        'totalpostDez',
-        'totalpost',
-        'post']));
-    }
-    public function inser_blog(){
-        return view('paginas.backend.inser_blog');
+        $receitas= receitas::all();
 
+        return view('paginas.backend.receitas', compact('receitas'));
     }
 }

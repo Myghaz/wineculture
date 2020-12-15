@@ -6,7 +6,7 @@
     <div class="content">
         <h2>Inserir novo post</h2>
         <br>
-<form action="{{route('blog.store')}}" method="POST">
+<form action="{{route('blog.update', $blog)}}" method="POST">
     {{csrf_field()}}
 @if (session('status'))
 <div class=”alert alert-success”>
@@ -15,11 +15,11 @@
 @endif
     <div class="form-group">
         <label for="formGroupExampleInput">Nome do Post</label>
-        <input type="text" class="form-control" name="titulo" id="formGroupExampleInput" placeholder="Nome do Post" >
+        <input type="text" class="form-control" name="titulo" id="formGroupExampleInput" placeholder="Nome do Post" value="{{$blog->titulo}}">
       </div>
       <div class="form-group">
         <label for="formGroupExampleInput">Autor</label>
-        <input type="text" class="form-control" name="autor" id="formGroupExampleInput" placeholder="Autor" >
+        <input type="text" class="form-control" name="autor" id="formGroupExampleInput" placeholder="Autor"value="{{$blog->autor}}" >
       </div>
       <div class="form-group row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Data</label>

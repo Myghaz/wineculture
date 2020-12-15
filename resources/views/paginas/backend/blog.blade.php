@@ -106,21 +106,6 @@
         <div class="card card-table-border-none" id="recent-orders">
           <div class="card-header justify-content-between">
             <h2>Tabela de Posts</h2>
-            <nav class="table-item-menu">
-              <input type="checkbox" href="#" class="table-menu-open" name="table-menu-open" id="table-menu-open" />
-              <label id="table-menu-open-handler" class="table-menu-open-button" for="table-menu-open">
-                <span class="lines line-1"></span>
-                <span class="lines line-2"></span>
-                <span class="lines line-3"></span>
-              </label>
-              <div class="table-real-menu">
-                <button title="Utilizadores" value="Utilizadores" class="table-menu-item"> <i id="table-users" class="fa fa-users"></i> </button>
-                <button title="Produtores" value="Produtores" class="table-menu-item"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
-                <button title="Produtos" value="Produtos" class="table-menu-item"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
-                <button title="Produtos(WordPress)" value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
-                <button title="Compras" value="Loja" class="table-menu-item"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button>
-              </div>
-            </nav>
           </div>
           <div class="card-body pt-0 pb-5">
           <table id="tabelausers" class="ui celled table" style="width:100%">
@@ -130,21 +115,28 @@
                             <th class="d-none d-lg-table-cell">Titulo</th>
                             <th class="d-none d-lg-table-cell">Autor</th>
                             <th class="d-none d-lg-table-cell">Data</th>
+                            <th class="d-none d-lg-table-cell">Editar</th>
+                            <th class="d-none d-lg-table-cell">Apagar</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                           @foreach($post as $value)
-                            <td>{{$value->id}}</td>>
+                            <td>{{$value->id}}</td>
                             <td>
                               <a class="text-dark" href="">{{$value->titulo}}</a>
                             </td>
                             <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
                             <td class="d-none d-lg-table-cell">{{$value->data}}</td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="" class="btn btn-primary">Editar</button></td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('destroy.blog', $value) }}" class="btn btn-danger">Apagar</button></td>
                           </tr>
                           @endforeach
                         </tbody>
                       </table>
+<div class="paginator">
+                      {{$post->links()}}
+</div>
           </div>
         </div>
       </div>

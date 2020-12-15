@@ -4,12 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
 
-
-class Blog extends Model
+class Category extends Model
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -17,13 +15,7 @@ class Blog extends Model
      * @var array
      */
     protected $fillable = [
-        'titulo',
-        'autor',
-        'categoria',
-        'data',
-        'preview',
-        'descricao',
-        'img',
+    'nome',
     ];
     /**
      * The attributes that should be cast to native types.
