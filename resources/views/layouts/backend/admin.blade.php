@@ -160,8 +160,8 @@
 
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#components" aria-expanded="false" aria-controls="components">
-                <i class="mdi mdi-folder-multiple-outline"></i>
-                <span class="nav-text">Components</span> <b class="caret"></b>
+                <i class="mdi mdi-table"></i>
+                <span class="nav-text">Receitas</span> <b class="caret"></b>
               </a>
               <ul class="collapse" id="components" data-parent="#sidebar-menu">
                 <div class="sub-menu">
@@ -169,8 +169,8 @@
 
 
                   <li>
-                    <a class="sidenav-item-link" href="alert.html">
-                      <span class="nav-text">Alert</span>
+                    <a class="sidenav-item-link" href="/admin/receitas">
+                      <span class="nav-text">Data table</span>
 
                     </a>
                   </li>
@@ -182,215 +182,10 @@
 
                   <li>
                     <a class="sidenav-item-link" href="badge.html">
-                      <span class="nav-text">Badge</span>
+                      <span class="nav-text">Inserte Info</span>
 
                     </a>
                   </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="breadcrumb.html">
-                      <span class="nav-text">Breadcrumb</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="button-default.html">
-                      <span class="nav-text">Button Default</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="button-dropdown.html">
-                      <span class="nav-text">Button Dropdown</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="button-group.html">
-                      <span class="nav-text">Button Group</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="button-social.html">
-                      <span class="nav-text">Button Social</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="button-loading.html">
-                      <span class="nav-text">Button Loading</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="card.html">
-                      <span class="nav-text">Card</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="carousel.html">
-                      <span class="nav-text">Carousel</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="collapse.html">
-                      <span class="nav-text">Collapse</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="list-group.html">
-                      <span class="nav-text">List Group</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="modal.html">
-                      <span class="nav-text">Modal</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="pagination.html">
-                      <span class="nav-text">Pagination</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="popover-tooltip.html">
-                      <span class="nav-text">Popover & Tooltip</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="progress-bar.html">
-                      <span class="nav-text">Progress Bar</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="spinner.html">
-                      <span class="nav-text">Spinner</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="switcher.html">
-                      <span class="nav-text">Switcher</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="tab.html">
-                      <span class="nav-text">Tab</span>
-
-                    </a>
-                  </li>
-
 
 
 
@@ -1176,6 +971,7 @@
   <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
   <script src="{{asset('assets\js\layouts\backend\admin.js')}}"></script>
   <script src="{{asset('assets\js\paginas\backend\dashboard.js')}}"></script>
+  <script src="{{asset('assets\js\paginas\backend\receitas.js')}}"></script>
   <script src="{{asset('assets\js\paginas\backend\blog.js')}}"></script>
 </body>
 
