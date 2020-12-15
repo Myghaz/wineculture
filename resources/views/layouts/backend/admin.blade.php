@@ -971,6 +971,7 @@
   <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
   <script src="{{asset('assets\js\layouts\backend\admin.js')}}"></script>
   <script src="{{asset('assets\js\paginas\backend\dashboard.js')}}"></script>
+  <script src="{{asset('assets\js\paginas\backend\receitas.js')}}"></script>
   <script src="{{asset('assets\js\paginas\backend\blog.js')}}"></script>
 </body>
 

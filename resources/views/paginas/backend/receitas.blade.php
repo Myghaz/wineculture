@@ -30,9 +30,8 @@
                         <a class="text-dark" href="">{{$receita->descricao}}</a>
                       </td>
                       <td class="d-none d-lg-table-cell">{{$receita->tipovinho}}</td>
+                      <td class="d-none d-lg-table-cell">{{$receita->foto}}</td>
                     </tr>
-                </td>
-                <td class="d-none d-lg-table-cell">{{$receita->foto}}</td>
               </tr>
                     @endforeach
                   </tbody>
