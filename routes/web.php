@@ -62,4 +62,6 @@ Route::put('/admin/blog/{blog}/update', [App\Http\Controllers\AdminController::c
 
 Route::get('/admin/blog/{blog}/edit/', [App\Http\Controllers\AdminController::class, 'editBlog'])->name('blog.edit');
 
+Route::get('/admin/blog/{blog}/destroy/', [App\Http\Controllers\AdminController::class, 'destroyBlog'])->name('destroy.edit');
+
 

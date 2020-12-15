@@ -144,7 +144,7 @@
                             <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
                             <td class="d-none d-lg-table-cell">{{$value->data}}</td>
                             <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('edit.blog', $value) }}" class="btn btn-primary">Editar</button></td>
-                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('edit.blog', $value) }}" class="btn btn-danger">Apagar</button></td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('destroy.blog', $value) }}" class="btn btn-danger">Apagar</button></td>
                           </tr>
                           @endforeach
                         </tbody>

@@ -209,6 +209,7 @@ class AdminController extends Controller
     }
 
         // Update
+
     public function editBlog(Blog $blog)
     {
         $categories= Category::all();
@@ -220,5 +221,13 @@ class AdminController extends Controller
     public function updateBlog(Request $request, Blog $blog)
     {
 
+    }
+        // Destroy
+
+    public function destroyBlog(Blog $blog)
+    {
+        App\Model::destroy(1);
+
+        return view('paginas.backend.blog', compact('blog'));
     }
 }
