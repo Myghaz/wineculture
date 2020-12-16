@@ -560,7 +560,7 @@ $('#tableausers').dataTable({
         null
     ],
     "order": [
-        [0, 'asc']
+        [1, 'asc']
     ],
     "language": {
         "emptyTable": "Não existem registos a apresentar",
@@ -597,7 +597,7 @@ $('#tableaprodutores').dataTable({
       null
   ],
   "order": [
-      [0, 'asc']
+      [1, 'asc']
   ],
   "language": {
       "emptyTable": "Não existem registos a apresentar",
@@ -628,7 +628,7 @@ $('#tableaprods_wp').dataTable({
   "scrollCollapse": true,
   "autoWidth": true,
   "columns": [
-      null,
+      { "type": "num" },
       null,
       null,
       null,
@@ -672,6 +672,7 @@ $( "#btnusers" ).click(function() {
 
   $( "#tableausers" ).show();
   $("#tableausers_wrapper").css("display", "inline");
+  document.getElementById("titulotable").innerHTML = "Tabela de Utilizadores";
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });
@@ -689,6 +690,7 @@ $( "#btnprodutores" ).click(function() {
 
   $( "#tableaprodutores" ).show();
   $("#tableaprodutores_wrapper").css("display", "inline");
+  document.getElementById("titulotable").innerHTML = "Tabela de Produtores";
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });
@@ -706,6 +708,7 @@ $( "#btnprods_wp" ).click(function() {
 
   $("#tableaprods_wp").show();
   $("#tableaprods_wp_wrapper").css("display", "inline");
+  document.getElementById("titulotable").innerHTML = "Tabela de Produtos (WordPress)";
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });

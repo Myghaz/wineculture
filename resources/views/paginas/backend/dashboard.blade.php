@@ -107,7 +107,7 @@
         <!-- Recent Order Table -->
         <div class="card card-table-border-none" id="users">
           <div class="card-header justify-content-between">
-            <h2>Tabela de Utilizadores</h2>
+            <h2 id="titulotable">Tabela de Utilizadores</h2>
             <nav class="table-item-menu">
               <input type="checkbox" href="#" class="table-menu-open" name="table-menu-open" id="table-menu-open" />
               <label id="table-menu-open-handler" class="table-menu-open-button" for="table-menu-open">
