@@ -70,15 +70,8 @@
             <div id="sidebar" class="sidebar sidebar-with-footer">
                 <!-- Aplication Brand -->
                 <div class="app-brand">
-                    <a href="/admin" title="Sleek Dashboard">
-                        <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
-                            width="30" height="33" viewBox="0 0 30 33">
-                            <g fill="none" fill-rule="evenodd">
-                                <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
-                                <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
-                            </g>
-                        </svg>
-                        <span class="brand-name text-truncate">WineCulture</span>
+                    <a href="/admin" title="logo" style="width: 100px !important; ">
+<img src="{{ URL::asset('assets\img\logos\wineculture_logo_lightmode.png') }}">
                     </a>
                 </div>
                 <!-- begin sidebar scrollbar -->
@@ -392,13 +385,7 @@
                 </div>
 
             </div>
-            <footer class="footer mt-auto">
-                <div class="copyright bg-white">
-                    <p>
-                        &copy; <span id="copy-year">2020</span> Copyright by
-                        <a class="text-primary">Wineculture</a>.
-                    </p>
-                </div>
+
                 <script>
                     var d = new Date();
                     var year = d.getFullYear();
