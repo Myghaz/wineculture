@@ -57,6 +57,8 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'da
 
 Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq');
 
+//blog Admin
+
 Route::get('/admin/blog', [App\Http\Controllers\BlogController::class, 'blog'])->name('admin_blog');
 
 Route::post('/admin/blog/create', [App\Http\Controllers\BlogController::class, 'inser_blog'])->name('blog.store');
@@ -67,7 +69,11 @@ Route::put('/admin/blog/{blog}/update', [App\Http\Controllers\BlogController::cl
 
 Route::get('/admin/blog/{blog}/edit/', [App\Http\Controllers\BlogController::class, 'editBlog'])->name('blog.edit');
 
-Route::get('/admin/blog/{blog}/destroy/', [App\Http\Controllers\BlogController::class, 'destroyBlog'])->name('destroy.blog');
+Route::get('/admin/blog/{blog}/show/', [App\Http\Controllers\BlogController::class, 'showBlog'])->name('blog.show');
+
+Route::delete('/admin/blog/{blog}', [App\Http\Controllers\BlogController::class, 'destroyBlog'])->name('destroy.blog');
+
+//receitas Admin
 
 Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('receitas_index');
 

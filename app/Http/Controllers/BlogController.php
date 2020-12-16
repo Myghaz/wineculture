@@ -91,8 +91,9 @@ class BlogController extends Controller
     }
 
 
-    public function updateBlog(Request $request, Blog $blog)
+    public function showblog(Request $request, Blog $blog)
     {
+        return view('paginas.backend.edit_blog', compact('blog'));
     }
     // Destroy
 
