@@ -151,30 +151,45 @@
                 @endforeach
               </tbody>
             </table>
+
+
+
             <table id="tableaprodutores" class="ui celled table" style="width:100%">
               <thead id="tableprodutoresthead">
                 <tr>
                   <th>ID</th>
-                  <th>Nome</th>
-                  <th class="d-none d-lg-table-cell">Apelido</th>
-                  <th class="d-none d-lg-table-cell">Email</th>
+                  <th>Titulo</th>
+                  <th>Descrição</th>
+                  <th class="d-none d-lg-table-cell">Preço</th>
+                  <th class="d-none d-lg-table-cell">Data de Criação</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  @foreach($produtores as $key => $produtor)
-                  <td>{{$user->id}}</td>
+                @foreach($prosdwp as $key => $prodwp)
+                
+                  <td>{{$prodwp->ID}}</td>
                   <td>
-                    <a class="text-dark" href="">{{$produtor->name}}</a>
+                    <a class="text-dark" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_title}}</a>
                   </td>
                   <td>
-                    <a class="text-dark" href="">{{$produtor->apelido}}</a>
+                  <a class="text-dark" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_content}}</a>
                   </td>
-                  <td class="d-none d-lg-table-cell">{{$produtor->email}}</td>
+                  @foreach($wp_prods as $key => $wp_prod)
+                  @if ($wp_prod->post_id == $prodwp->ID)
+                  <td>
+                    <a class="text-dark" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$wp_prod->meta_value}}€</a>
+                    </td>
+                  @endif
+                  @endforeach 
+                  <td>
+                  <a class="text-dark" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_date}}</a>
+                  </td>
                 </tr>
                 @endforeach
               </tbody>
             </table>
+
 
           </div>
         </div>

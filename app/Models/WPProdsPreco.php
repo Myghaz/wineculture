@@ -16,7 +16,7 @@ class WPProdsPreco extends Model
   {
     parent::boot();
 
-    static::addGlobalScope('post_type', function (Builder $builder) {
+    static::addGlobalScope('meta_key', function (Builder $builder) {
       $builder->where('meta_key','_regular_price');
        
     });
