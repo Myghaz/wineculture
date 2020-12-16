@@ -71,7 +71,7 @@
                 <!-- Aplication Brand -->
                 <div class="app-brand">
                     <a href="/admin" title="logo" style="width: 100px !important; ">
-<img src="{{ URL::asset('assets\img\logos\wineculture_logo_lightmode.png') }}">
+<img src="{{ URL::asset('assets\img\logos\wineculture_logo_darkmode.png') }}">
                     </a>
                 </div>
                 <!-- begin sidebar scrollbar -->
@@ -117,7 +117,7 @@
                                     </li>
 
                                     <li>
-                                        <a class="sidenav-item-link" @if (Route::currentRouteName()=='blog.store') class="active" @endif href="/admin/inser_blog">
+                                        <a class="sidenav-item-link" @if (Route::currentRouteName()=='blog.store') class="active" @endif href="/admin/blog/create">
                                             <span class="nav-text">Insert Info</span>
 
                                         </a>

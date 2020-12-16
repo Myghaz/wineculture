@@ -43,6 +43,10 @@ Route::get('/receitas', function () {
 
 Route::get('/faq', [App\Http\Controllers\MainController::class, 'faq'])->name('faq');
 
+Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
+
+Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
+
 Auth::routes();
 
 
