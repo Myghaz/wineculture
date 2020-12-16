@@ -621,14 +621,93 @@ $('#tableaprodutores').dataTable({
       targets: [0, 1, 2, 3]
   }],
 });
+
+$('#tableaprods_wp').dataTable({
+  dom: 'lBfrtip',
+  "scrollY": "350px",
+  "scrollCollapse": true,
+  "autoWidth": true,
+  "columns": [
+      null,
+      null,
+      null,
+      null,
+      null
+  ],
+  "order": [
+      [0, 'asc']
+  ],
+  "language": {
+      "emptyTable": "Não existem registos a apresentar",
+      "info": "A mostrar _START_ até _END_ de _TOTAL_ registos",
+      "infoEmpty": "",
+      "sSearch": "Procurar:",
+      "paginate": {
+          "next": "Próximo",
+          "previous": "Anterior"
+      },
+      "sLengthMenu": "Mostrar _MENU_ registos",
+      "infoFiltered": "(filtrado do total de _MAX_ registos)",
+      "zeroRecords": "Não existem resultados baseados na pesquisa",
+  },
+  "columnDefs": [{
+      type: 'portugues',
+      targets: [0, 1, 2, 3, 4]
+  }],
+  "columnDefs": [{
+      type: 'locale-compare',
+      targets: [0, 1, 2, 3, 4]
+  }],
+});
 });
 
+//////// Botão da Tabela Utilizadores //////// 
 $( "#btnusers" ).click(function() {
-  $( "#tableausers" ).hide();
-  $( "#tableausers_wrapper" ).hide();
-  $( "#tableaprodutores" ).show();
-  $("#tableaprodutores_wrapper").css("display", "inline");
-  $("#tableprodutoresthead").css("width", "100%");
+  $( "#tableaprodutores" ).hide();
+  $( "#tableaprodutores_wrapper" ).hide();
+
+  $( "#tableaprods_wp" ).hide();
+  $( "#tableaprods_wp_wrapper" ).hide();
+
+
+  $( "#tableausers" ).show();
+  $("#tableausers_wrapper").css("display", "inline");
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });
+//////// Botão da Tabela Utilizadores //////// 
+
+
+//////// Botão da Tabela Produtores //////// 
+$( "#btnprodutores" ).click(function() {
+  $( "#tableausers" ).hide();
+  $( "#tableausers_wrapper" ).hide();
+
+  $( "#tableaprods_wp" ).hide();
+  $( "#tableaprods_wp_wrapper" ).hide();
+
+
+  $( "#tableaprodutores" ).show();
+  $("#tableaprodutores_wrapper").css("display", "inline");
+  $($.fn.dataTable.tables(true)).DataTable()
+   .columns.adjust();
+});
+//////// Botão da Tabela Produtores //////// 
+
+
+
+//////// Botão da Tabela Produtos WordPress //////// 
+$( "#btnprods_wp" ).click(function() {
+  $( "#tableausers" ).hide();
+  $( "#tableausers_wrapper" ).hide();
+
+  $("#tableaprodutores").hide();
+  $("#tableaprodutores_wrapper").hide();
+
+  $("#tableaprods_wp").show();
+  $("#tableaprods_wp_wrapper").css("display", "inline");
+  $($.fn.dataTable.tables(true)).DataTable()
+   .columns.adjust();
+});
+//////// Botão da Tabela Produtos WordPress //////// 
+

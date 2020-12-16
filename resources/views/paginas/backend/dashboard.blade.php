@@ -119,14 +119,14 @@
                 <button title="Utilizadores" id="btnusers" value="Utilizadores" class="table-menu-item"> <i id="table-users" class="fa fa-users"></i> </button>
                 <button title="Produtores" id="btnprodutores" value="Produtores" class="table-menu-item"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
                 <button title="Produtos" id="btnprods" value="Produtos" class="table-menu-item"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
-                <button title="Produtos(WordPress)" id="btnprods(wp)" value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
+                <button title="Produtos(WordPress)" id="btnprods_wp" value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
                 <button title="Compras" id="btncompras" value="Loja" class="table-menu-item"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button>
               </div>
             </nav>
           </div>
           <div class="card-body pt-0 pb-5">
             <table id="tableausers" class="ui celled table" style="width:100%">
-              <thead>
+              <thead id="tableausersthead">
                 <tr>
                   <th>ID</th>
                   <th>Nome</th>
@@ -145,52 +145,75 @@
                   <td>
                     <a class="text-dark" href="">{{$user->apelido}}</a>
                   </td>
-                  <td class="d-none d-lg-table-cell">{{$user->email}}</td>
-                  <td class="d-none d-lg-table-cell">{{$user->tipouser}}</td>
+                  <td>
+                    <a class="text-dark" href="">{{$user->email}}</a>
+                  </td>
+                  <td>
+                    <a class="text-dark" href="">{{$user->tipouser}}</a>
+                  </td>
                 </tr>
                 @endforeach
               </tbody>
             </table>
-
-
-
             <table id="tableaprodutores" class="ui celled table" style="width:100%">
               <thead id="tableprodutoresthead">
                 <tr>
                   <th>ID</th>
+                  <th>Nome</th>
+                  <th class="d-none d-lg-table-cell">Apelido</th>
+                  <th class="d-none d-lg-table-cell">Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  @foreach($produtores as $key => $produtor)
+                  <td>{{$user->id}}</td>
+                  <td>
+                    <a class="text-dark" href="">{{$produtor->name}}</a>
+                  </td>
+                  <td>
+                    <a class="text-dark" href="">{{$produtor->apelido}}</a>
+                  </td>
+                  <td class="d-none d-lg-table-cell">{{$produtor->email}}</td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+            <table id="tableaprods_wp" class="ui celled table" style="width:100%">
+              <thead id="tableaprods_wpthead">
+                <tr>
+                  <th>ID</th>
                   <th>Titulo</th>
                   <th>Descrição</th>
-                  <th class="d-none d-lg-table-cell">Preço</th>
-                  <th class="d-none d-lg-table-cell">Data de Criação</th>
+                  <th>Preço</th>
+                  <th>Criação</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                 @foreach($prosdwp as $key => $prodwp)
                 
-                  <td>{{$prodwp->ID}}</td>
+                  <td target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->ID}}</td>
                   <td>
-                    <a class="text-dark" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_title}}</a>
+                    <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_title}}</a>
                   </td>
-                  <td>
-                  <a class="text-dark" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_content}}</a>
+                  <td class="tprodswp_td_desc">
+                  <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_content}}</a>
                   </td>
                   @foreach($wp_prods as $key => $wp_prod)
                   @if ($wp_prod->post_id == $prodwp->ID)
                   <td>
-                    <a class="text-dark" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$wp_prod->meta_value}}€</a>
-                    </td>
+                    <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$wp_prod->meta_value}}€</a>
+                  </td>
                   @endif
                   @endforeach 
                   <td>
-                  <a class="text-dark" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_date}}</a>
+                  <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_date}}</a>
                   </td>
                 </tr>
                 @endforeach
               </tbody>
             </table>
-
-
           </div>
         </div>
       </div>

@@ -450,10 +450,20 @@ div.dataTables_wrapper div.dataTables_length label {
 }
 ul.pagination{
    margin-top: -30px!important;
-}    
+}  
+#tableaprods_wp td.tprodswp_td_desc{
+   width:50%;
+}
+
 #tableaprodutores{
    display:none;
 }
 #tableaprodutores_wrapper{
+   display: none;
+}
+#tableaprods_wp{
+   display:none;
+}
+#tableaprods_wp_wrapper{
    display: none;
 }
