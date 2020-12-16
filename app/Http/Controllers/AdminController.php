@@ -9,6 +9,13 @@ use App\Models\WPProdsPreco;
 use App\Models\receitas;
 class AdminController extends Controller
 {
+    public function admin() {
+        return view('paginas.backend.admin');
+    }
+
+
+
+
     public function dashboard() {
 
         //Ir buscar os utilizadores organizados por mes

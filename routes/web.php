@@ -47,6 +47,8 @@ Auth::routes();
 
 
 //Admin
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
+
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
 Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq');
