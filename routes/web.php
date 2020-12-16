@@ -43,10 +43,16 @@ Route::get('/receitas', function () {
 
 Route::get('/faq', [App\Http\Controllers\MainController::class, 'faq'])->name('faq');
 
+Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
+
+Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
+
 Auth::routes();
 
 
 //Admin
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
+
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
 Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq');
