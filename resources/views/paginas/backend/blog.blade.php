@@ -115,6 +115,7 @@
                             <th class="d-none d-lg-table-cell">Titulo</th>
                             <th class="d-none d-lg-table-cell">Autor</th>
                             <th class="d-none d-lg-table-cell">Data</th>
+                            <th class="d-none d-lg-table-cell">Ver</th>
                             <th class="d-none d-lg-table-cell">Editar</th>
                             <th class="d-none d-lg-table-cell">Apagar</th>
                           </tr>
@@ -128,9 +129,12 @@
                             </td>
                             <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
                             <td class="d-none d-lg-table-cell">{{$value->data}}</td>
-                            <td class="d-none d-lg-table-cell"><button type="button" href="" class="btn btn-primary">Editar</button></td>
-                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('destroy.blog', $value) }}" class="btn btn-danger">Apagar</button></td>
-                          </tr>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('show.blog', $value) }}" class="btn btn-primary">Ver</button></td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('edit.blog', $value) }}" class="btn btn-primary">Editar</button></td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('destroy.blog', $value) }}" class="btn btn-danger" onsubmit="return confirm('Are you sure you want to delete this record?');">Apagar</button></td>
+                         @csrf
+                         @method(DELETE)
+                        </tr>
                           @endforeach
                         </tbody>
                       </table>
