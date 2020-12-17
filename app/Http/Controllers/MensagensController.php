@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contactos;
+use Illuminate\Auth\Events\Validated;
 
 class MensagensController extends Controller
 {
@@ -38,6 +39,17 @@ class MensagensController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    public function frontend_store(Request $mensagens)
+    {
+        $mensagem = new Contactos();
+        $mensagem->name = $mensagens["nome"];
+        $mensagem->email = $mensagens["email"];
+        $mensagem->assunto = $mensagens["assunto"];
+        $mensagem->mensagem = $mensagens["mensagem"];
+        $mensagem->save();
+        return redirect()->route('contactos');
     }
 
     /**

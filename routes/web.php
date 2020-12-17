@@ -21,9 +21,11 @@ Route::get('/', function () {
 })->name('index');
 
 
-Route::get('/contactos', function () {
-    return view('paginas.frontend.contactos');
-})->name('contactos');
+Route::get('/contactos', [App\Http\Controllers\MainController::class, 'contactos'])->name('contactos');
+
+
+
+
 Route::get('/sobre', function () {
     return view('paginas.frontend.sobre');
 })->name('sobre');
@@ -60,6 +62,8 @@ Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->na
 //contactos Admin
 
 Route::get('/admin/mensagens', [App\Http\Controllers\MensagensController::class, 'mensagens'])->name('admin_contactos');
+
+Route::post('/admin/contactos', [App\Http\Controllers\MensagensController::class, 'frontend_store'])->name('contactos_frontend_store');
 
 //blog Admin
 

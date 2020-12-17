@@ -29,31 +29,30 @@
                     <a class="icon" href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
                 </div>
             </div>
-            <form method="POST" id="form-registo" class="col-md-7" action="#">
+            <form method="POST" role="form" id="form-registo" class="col-md-7" action="{{route('contactos_frontend_store')}}">
                 @csrf
                 <div>
                     <div class="form-group">
                         <label for="primeiroNome">*Nome:</label>
-                        <input type="text" name="nome" class="form-control" id="campoNome" value="{{ old('nome', $mensagem->name) }}" />
+                        <input type="text" name="nome" class="form-control" id="campoNome" />
                         <span class="erro" id="msg-erro-nome">Campo nome é obrigatório</span><br />
                     </div>
 
                     <div class="form-group">
                         <label for="email">*Email:</label>
-                        <input type="text" name="email" class="form-control" id="campoEmail" placeholder="exemplo@email.com"
-                        value="{{ old('email', $mensagem->email) }}"/>
+                        <input type="text" name="email" class="form-control" id="campoEmail" placeholder="exemplo@email.com"/>
                         <span class="erro" id="msg-erro-email-invalida">Email inválido</span>
                         <span class="erro" id="msg-erro-email-obrigatoria">Campo email obrigatório!!</span><br />
                     </div>
                     <div class="form-group">
                         <label for="assunto">*Assunto:</label>
-                        <input type="text" name="assunto" class="form-control" id="campoAssunto" value="{{ old('assunto', $mensagem->assunto) }}"/>
+                        <input type="text" name="assunto" class="form-control" id="campoAssunto"/>
                         <span class="erro" id="msg-erro-assunto">Campo assunto é obrigatório</span><br />
                     </div>
 
                     <div class="form-group">
                         <label for="comment">*Mensagem:</label>
-                        <textarea class="form-control" name="mensagem" rows="5" id="campoMensagem" value="{{ old('mensagem', $mensagem->mensagem) }}"></textarea>
+                        <textarea class="form-control" name="mensagem" rows="5" id="campoMensagem"></textarea>
                         <span class="erro" id="msg-erro-mensagem">Campo mensagem é obrigatório</span><br />
                     </div>
                     <div class="wrapper">
