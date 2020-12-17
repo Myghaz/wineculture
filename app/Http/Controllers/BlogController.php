@@ -42,6 +42,8 @@ class BlogController extends Controller
         $totalpost = Blog::whereYear('data', '=', 2020)->count();
         //Ir buscar os posts organizados por mes
 
+
+
         $post = Blog::paginate(10);
 
         return view('paginas.backend.blog', compact([
@@ -79,6 +81,7 @@ class BlogController extends Controller
         $categories = Category::all();
 
         return view('paginas.backend.inser_blog', compact('categories'));
+
     }
 
     // Update
@@ -91,9 +94,9 @@ class BlogController extends Controller
     }
 
 
-    public function showblog(Request $request, Blog $blog)
+    public function showblog(Blog $previewblog)
     {
-        return view('paginas.backend.edit_blog', compact('blog'));
+        return view('paginas.backend.edit_blog', ['show_blog' => $previewblog]);
     }
     // Destroy
 

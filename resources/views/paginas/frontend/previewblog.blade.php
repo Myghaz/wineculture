@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    @section('title', 'FAQ')
+    @section('title', 'Ler Mais')
     @include('includes.frontend.head')
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/previewblog.css') }}">
     @include('includes.frontend.navbar')
