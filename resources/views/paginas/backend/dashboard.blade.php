@@ -186,7 +186,7 @@
                   <th>Titulo</th>
                   <th>Descrição</th>
                   <th>Preço</th>
-                  <th>Criação</th>
+                  <th>Stock</th>
                 </tr>
               </thead>
               <tbody>
@@ -204,12 +204,26 @@
                   @if ($wp_prod->post_id == $prodwp->ID)
                   <td>
                     <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$wp_prod->meta_value}}€</a>
+                  </td> 
+                  @foreach($wp_prodsStock as $key => $wp_prodStock)   
+                  @if ($wp_prodStock->post_id == $prodwp->ID)
+                  @if ($wp_prodStock->meta_value == "instock")
+                  <td class="prods_wp_stock_green">
+                    <div class="prods_wp_green"><a target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">Em Stock</a></div>
+                  </td>
+                  @elseif ($wp_prodStock->meta_value == "onbackorder")
+                  <td class="prods_wp_stock_yellow">
+                    <div class="prods_wp_yellow"><a target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">Por Encomenda</a></div>
+                  </td>
+                  @else
+                  <td class="prods_wp_stock_red">
+                    <div class="prods_wp_red"><a target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">Esgotado</a></div>
                   </td>
                   @endif
+                  @endif
                   @endforeach 
-                  <td>
-                  <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_date}}</a>
-                  </td>
+                  @endif
+                  @endforeach 
                 </tr>
                 @endforeach
               </tbody>

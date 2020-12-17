@@ -7,6 +7,7 @@ Use App\Models\User;
 use App\Models\WPProdutos;
 use App\Models\WPProdsPreco;
 use App\Models\receitas;
+use App\Models\WPProdutosStock;
 class AdminController extends Controller
 {
     public function admin() {
@@ -107,6 +108,7 @@ class AdminController extends Controller
 
         $users = User::all();
         $wp_prods = WPProdsPreco::all();
+        $wp_prodsStock = WPProdutosStock::all();
         $produtores = User::where('tipouser', '=', 'Produtor')->get();
         $prosdwp = WPProdutos::where('post_status', '=', 'publish')->get();
 
@@ -153,7 +155,8 @@ class AdminController extends Controller
         'users',
         'produtores',
         'prosdwp',
-        'wp_prods']));
+        'wp_prods',
+        'wp_prodsStock']));
     }
 
     public function receitas_index(){
