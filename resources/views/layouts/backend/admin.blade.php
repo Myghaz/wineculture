@@ -71,14 +71,14 @@
                 <!-- Aplication Brand -->
                 <div class="app-brand">
                     <a href="/admin" title="logo" style="width: 100px !important; ">
-<img src="{{ URL::asset('assets\img\logos\wineculture_logo_darkmode.png') }}">
+                      <img src="{{ URL::asset('assets\img\logos\wineculture_logo_darkmode.png') }}">
                     </a>
                 </div>
                 <!-- begin sidebar scrollbar -->
                 <div class="sidebar-scrollbar">
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
-                        <li class="has-sub active expand">
+                        <li @if (Route::currentRouteName()=='admin_dashboard') class="has-sub active expand" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
                                 <i class="mdi mdi-view-dashboard-outline"></i>
@@ -87,7 +87,7 @@
                             <ul class="collapse show" id="dashboard" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" @if (Route::currentRouteName()=='admin_dashboard') class="active" @endif href="/admin/dashboard">
+                                        <a href="/admin/dashboard">
                                             <span class="nav-text">Data Users</span>
                                         </a>
                                     </li>
@@ -101,7 +101,7 @@
                             </ul>
                         </li>
                         <!-- Blog Menu -->
-                        <li class="has-sub">
+                        <li  @if (Route::currentRouteName()=='admin_blog' || Route::currentRouteName()=='blog.create') class="has-sub active expand" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#app" aria-expanded="false" aria-controls="app">
                                 <i class="mdi mdi-pencil-box-multiple"></i>
@@ -127,7 +127,7 @@
                             </ul>
                         </li>
                         <!-- End of Blog Menu -->
-                        <li class="has-sub">
+                        <li @if (Route::currentRouteName()=='receitas_index') class="has-sub active expand" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#components" aria-expanded="false" aria-controls="components">
                                 <i class="mdi mdi-table"></i>
@@ -150,7 +150,7 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        <li  @if (Route::currentRouteName()=='faq_admin') class="has-sub active expand" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#icons" aria-expanded="false" aria-controls="icons">
                                 <i class="fas fa-question-circle"></i>

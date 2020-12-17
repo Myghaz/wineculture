@@ -55,7 +55,7 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->na
 
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
-Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq');
+Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq_admin');
 
 //blog Admin
 
