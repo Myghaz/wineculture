@@ -171,7 +171,7 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        <li @if (Route::currentRouteName()=='contactos_admin') class="has-sub active expand" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#contactos" aria-expanded="false" aria-controls="icons">
                                 <i class="mdi mdi-email-mark-as-unread"></i>

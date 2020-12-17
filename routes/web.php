@@ -55,7 +55,13 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->na
 
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
+//FAQ Admin
+
 Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq_admin');
+
+//FAQ Contactos
+
+Route::get('/admin/mensagens', [App\Http\Controllers\MensagensController::class, 'mensagens'])->name('contactos_admin');
 
 //blog Admin
 
