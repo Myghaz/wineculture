@@ -55,7 +55,17 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->na
 
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
+<<<<<<< Updated upstream
 Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq_admin');
+=======
+//Contactos
+
+Route::get('/admin/mensagens', [App\Http\Controllers\MensagensController::class, 'mensagens'])->name('mensagens');
+
+//FAQ
+
+Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq');
+>>>>>>> Stashed changes
 
 //blog Admin
 

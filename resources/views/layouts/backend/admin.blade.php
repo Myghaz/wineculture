@@ -173,14 +173,14 @@
                         </li>
                         <li class="has-sub">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                data-target="#forms" aria-expanded="false" aria-controls="forms">
+                                data-target="#contactos" aria-expanded="false" aria-controls="icons">
                                 <i class="mdi mdi-email-mark-as-unread"></i>
                                 <span class="nav-text">Contactos</span> <b class="caret"></b>
                             </a>
-                            <ul class="collapse" id="forms" data-parent="#sidebar-menu">
+                            <ul class="collapse" id="contactos" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="basic-input.html">
+                                        <a class="sidenav-item-link" href="/admin/mensagens">
                                             <span class="nav-text">Mensagens</span>
                                         </a>
                                     </li>
@@ -458,6 +458,7 @@
     <script src="{{ asset('assets\js\paginas\backend\receitas.js') }}"></script>
     <script src="{{ asset('assets\js\paginas\backend\blog.js') }}"></script>
     <script src="{{ asset('assets\js\paginas\backend\faq.js') }}"></script>
+    <script src="{{ asset('assets\js\paginas\backend\contactos.js') }}"></script>
 </body>
 
 </html>
