@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Perguntas;
+use App\Models\Contactos;
+
 use DB;
 class MainController extends Controller
 {
@@ -33,6 +35,11 @@ class MainController extends Controller
         //$pergunta_sconta= Perguntas::where('categoria', '=', "Conta")-get();
         return view('paginas.frontend.FAQ', ['perguntas_conta' => $perguntas_conta, 'perguntas_encomenda' => $perguntas_encomenda,
          'perguntas_pagamento' => $perguntas_pagamento, 'categorias' => $categorias]);
+    }
+    public function contactos() {
+        $mensagens = Contactos::all();
+        $totalmensagens = Contactos::all('id')->count();
+        return view('paginas.frontend.contactos', compact('mensagens', 'totalmensagens'));
     }
 }
 

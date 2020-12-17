@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Category;
 use Carbon\Carbon;
 
-class CategotySeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,21 +16,37 @@ class CategotySeeder extends Seeder
     public function run()
     {
         Category::create([
-            'nome' => 'Politica',
+            'name' => 'Ciência e tecnologia‎ ',
         ]);
         Category::create([
-            'nome' => '2',
+            'name' => 'Crime, Direito e Justiça‎ ',
         ]);
         Category::create([
-            'nome' => '1',
+            'name' => 'Cultura e entretenimento‎',
         ]);
         Category::create([
-            'nome' => '3',
+            'name' => 'Economia e negócios‎',
         ]);
         Category::create([
-            'nome' => '4',
+            'name' => 'Educação',
         ]);
-
-
+        Category::create([
+            'name' => 'Feiras e eventos‎',
+        ]);
+        Category::create([
+            'name' => 'Homem e sociedade',
+        ]);
+        Category::create([
+            'name' => 'Política e conflitos',
+        ]);
+        Category::create([
+            'name' => 'Religião‎',
+        ]);
+        Category::create([
+            'name' => 'Saúde‎',
+        ]);
+        Category::create([
+            'name' => 'Sociedade‎ ',
+        ]);
     }
 }

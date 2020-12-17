@@ -20,10 +20,8 @@ Route::get('/', function () {
     return view('paginas.frontend.index');
 })->name('index');
 
+Route::get('/contactos', [App\Http\Controllers\MainController::class, 'contactos'])->name('contactos');
 
-Route::get('/contactos', function () {
-    return view('paginas.frontend.contactos');
-})->name('contactos');
 Route::get('/sobre', function () {
     return view('paginas.frontend.sobre');
 })->name('sobre');
@@ -55,7 +53,17 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->na
 
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
-Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq');
+//Contactos FAQ
+
+Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('admin_faq');
+
+Route::get('/admin/insert_pergunta', [App\Http\Controllers\FAQController::class, 'inserir_pergunta'])->name('insert_pergunta');
+
+//Contactos Admin
+
+Route::get('/admin/mensagens', [App\Http\Controllers\MensagensController::class, 'mensagens'])->name('admin_contactos');
+
+Route::post('/admin/contactos', [App\Http\Controllers\MensagensController::class, 'frontend_store'])->name('contactos_frontend_store');
 
 //blog Admin
 
@@ -69,11 +77,11 @@ Route::put('/admin/blog/{blog}/update', [App\Http\Controllers\BlogController::cl
 
 Route::get('/admin/blog/{blog}/edit/', [App\Http\Controllers\BlogController::class, 'editBlog'])->name('editblog');
 
-Route::get('/admin/blog/{blog}/show/', [App\Http\Controllers\BlogController::class, 'showBlog'])->name('showblog');
+Route::get('/admin/blog/{blog}/show/', [App\Http\Controllers\BlogController::class, 'show_blog'])->name('showBlog');
 
 Route::delete('/admin/blog/{blog}', [App\Http\Controllers\BlogController::class, 'destroyBlog'])->name('destroy.blog');
 
 //receitas Admin
 
-Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('receitas_index');
+Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('admin_receitas');
 

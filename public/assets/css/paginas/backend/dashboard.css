@@ -467,19 +467,26 @@ ul.pagination{
 #tableaprods_wp_wrapper{
    display: none;
 }
-div.prods_wp_red, div.prods_wp_yellow, div.prods_wp_green{
-   width:70%;
-   height: 20%;
-   border-radius:10px;
-   line-height: 50px;
+div.prods_wp_red, div.prods_wp_green{
+   width: 70px;
 }
+div.prods_wp_yellow{
+   width: 130px;
+   
+}
+div.prods_wp_red, div.prods_wp_green, div.prods_wp_yellow{
+   height: 30px;
+   line-height: 30px;
+}
+div
+
 div.prods_wp_red a, div.prods_wp_yellow a, div.prods_wp_green a{
    font-size: 11pt;
-    color: inherit;
+   color: inherit;
 }
 div.prods_wp_yellow{
    background-color: yellow;
-       color: black;
+   color: black;
 }
 div.prods_wp_red{
    background-color: red;
@@ -488,7 +495,6 @@ div.prods_wp_red{
 div.prods_wp_green{
    background-color: green;
    color: white;
-
 }
 td.prods_wp_stock_red, td.prods_wp_stock_green,td.prods_wp_stock_yellow{
    text-align: center;

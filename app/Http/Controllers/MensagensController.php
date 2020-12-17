@@ -3,29 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Perguntas;
+use App\Models\Contactos;
+use Illuminate\Auth\Events\Validated;
 
-class FAQController extends Controller
+class MensagensController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function faq()
+    public function mensagens()
     {
-        $perguntas = Perguntas::all();
-        $totalperguntas = Perguntas::all('id')->count();
-        $totalcategorias = Perguntas::distinct('categoria')->count();
-        return view('paginas.backend.faq', compact('perguntas', 'totalperguntas', 'totalcategorias'));
-    }
-
-    public function inserir_pergunta()
-    {
-
-        $pergunta = Perguntas::all();
-        return view('paginas.backend.insert_pergunta', compact('pergunta'));
-
+        $mensagens = Contactos::all();
+        $totalmensagens = Contactos::all('id')->count();
+        return view('paginas.backend.mensagens', compact('mensagens', 'totalmensagens'));
     }
 
     /**
@@ -47,6 +39,17 @@ class FAQController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    public function frontend_store(Request $mensagens)
+    {
+        $mensagem = new Contactos();
+        $mensagem->name = $mensagens["nome"];
+        $mensagem->email = $mensagens["email"];
+        $mensagem->assunto = $mensagens["assunto"];
+        $mensagem->mensagem = $mensagens["mensagem"];
+        $mensagem->save();
+        return redirect()->route('contactos');
     }
 
     /**
