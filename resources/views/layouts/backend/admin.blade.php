@@ -148,11 +148,11 @@
                                 <div class="sub-menu">
                                     <li>
                                         <a class="sidenav-item-link" href="{{route('admin_faq')}}">
-                                            <span class="nav-text">Data Table</span>
+                                            <span class="nav-text">Perguntas</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="sidenav-item-link" href="flag-icon.html">
+                                        <a class="sidenav-item-link" href="{{route('insert_pergunta')}}">
                                             <span class="nav-text">Inserir Pergunta</span>
                                         </a>
                                     </li>

@@ -20,11 +20,7 @@ Route::get('/', function () {
     return view('paginas.frontend.index');
 })->name('index');
 
-
 Route::get('/contactos', [App\Http\Controllers\MainController::class, 'contactos'])->name('contactos');
-
-
-
 
 Route::get('/sobre', function () {
     return view('paginas.frontend.sobre');
@@ -57,9 +53,13 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->na
 
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
+//Contactos FAQ
+
 Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('admin_faq');
 
-//contactos Admin
+Route::get('/admin/insert_pergunta', [App\Http\Controllers\FAQController::class, 'inserir_pergunta'])->name('insert_pergunta');
+
+//Contactos Admin
 
 Route::get('/admin/mensagens', [App\Http\Controllers\MensagensController::class, 'mensagens'])->name('admin_contactos');
 

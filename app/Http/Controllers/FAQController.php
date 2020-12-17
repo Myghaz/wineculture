@@ -20,6 +20,14 @@ class FAQController extends Controller
         return view('paginas.backend.faq', compact('perguntas', 'totalperguntas', 'totalcategorias'));
     }
 
+    public function inserir_pergunta()
+    {
+
+        $pergunta = Perguntas::all();
+        return view('paginas.backend.insert_pergunta', compact('pergunta'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *
