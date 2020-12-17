@@ -33,7 +33,7 @@
         <div class="card card-mini mb-4">
           <div class="card-body">
             <h2 class="mb-1"><!-- --></h2>
-            <p>Produtores Totais(2020)</p>
+            <p>Posts por Categorias</p>
             <div class="mudargraf">
               <input type="checkbox" href="#" class="menu-open" name="menu-open" id="produtoresmenu-open" />
               <label class="menu-open-button" for="produtoresmenu-open">
@@ -130,7 +130,7 @@
                             </td>
                             <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
                             <td class="d-none d-lg-table-cell">{{$value->data}}</td>
-                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('showblog', $value) }}" class="btn btn-primary">Ver</button></td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('showBlog', $value) }}" class="btn btn-primary">Ver</button></td>
                             <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('editblog', $value) }}" class="btn btn-primary">Editar</button></td>
                             @csrf
                             @method("DELETE")
