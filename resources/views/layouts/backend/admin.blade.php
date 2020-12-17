@@ -112,6 +112,7 @@
                             </ul>
                         </li>
                         <!-- End of Blog Menu -->
+                        <!-- Receitas Menu -->
                         <li @if (Route::currentRouteName()=='admin_receitas') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#components" aria-expanded="false" aria-controls="components">
@@ -135,6 +136,8 @@
                                 </div>
                             </ul>
                         </li>
+                        <!-- End of Receitas Menu -->
+                        <!-- Receitas FAQ -->
                         <li @if (Route::currentRouteName()=='admin_faq') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#icons" aria-expanded="false" aria-controls="icons">
@@ -156,6 +159,8 @@
                                 </div>
                             </ul>
                         </li>
+                        <!-- End of FAQ Menu -->
+                        <!-- Receitas Contactos -->
                         <li @if (Route::currentRouteName()=='admin_contactos') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#contactos" aria-expanded="false" aria-controls="icons">
@@ -172,6 +177,7 @@
                                 </div>
                             </ul>
                         </li>
+                        <!-- End of Contactos Menu -->
                     </ul>
 
                 </div>
@@ -179,7 +185,7 @@
                 <div class="sidebar-footer">
                     <hr class="separator mb-0" />
                     <div class="sidebar-footer-content">
-<p>
+                    <p>
                         &copy; <span id="copy-year">2020</span> Copyright by
                         <a class="text-primary">Wineculture</a>.
                     </p>
