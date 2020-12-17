@@ -101,6 +101,7 @@
     </div>
 
     <div class="row">
+        @if (count($post))
       <div class="col-12">
         <!-- Recent Order Table -->
         <div class="card card-table-border-none" id="recent-orders">
@@ -129,11 +130,13 @@
                             </td>
                             <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
                             <td class="d-none d-lg-table-cell">{{$value->data}}</td>
-                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('show.blog', $value) }}" class="btn btn-primary">Ver</button></td>
-                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('edit.blog', $value) }}" class="btn btn-primary">Editar</button></td>
-                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('destroy.blog', $value) }}" class="btn btn-danger" onsubmit="return confirm('Are you sure you want to delete this record?');">Apagar</button></td>
-                         @csrf
-                         @method(DELETE)
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('showblog', $value) }}" class="btn btn-primary">Ver</button></td>
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('editblog', $value) }}" class="btn btn-primary">Editar</button></td>
+                            @csrf
+                            @method("DELETE")
+
+                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('destroy.blog', $value) }}" class="btn btn-danger" onsubmit="return confirm('Tem a certeza que deseja apagar este post?');">Apagar</button></td>
+
                         </tr>
                           @endforeach
                         </tbody>
@@ -144,6 +147,10 @@
           </div>
         </div>
       </div>
+      @else
+ <h6>Sem Posts Registrados</h6>
+ @endif
     </div>
+
   </div>
   @endsection

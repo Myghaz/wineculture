@@ -99,6 +99,13 @@ class BlogController extends Controller
 
     public function destroyBlog(Blog $blog)
     {
+        if ($blog->posts()->exists()){
+            return redirect()->route('paginas.backend.blog')->withErrors(
+            ['delete'=>'Category has related posts'] );
+            }
+            $blog->delete();
+            return redirect()->route('paginas.backend.blog')->with('success', 'Category successfully deleted');
+
         Blog::destroy($blog->id());
         $blog = Blog::find(1);
         $blog->delete();
