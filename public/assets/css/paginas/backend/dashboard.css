@@ -467,3 +467,32 @@ ul.pagination{
 #tableaprods_wp_wrapper{
    display: none;
 }
+div.prods_wp_red, div.prods_wp_yellow, div.prods_wp_green{
+   width:70%;
+   height: 20%;
+   border-radius:10px;
+   line-height: 50px;
+}
+div.prods_wp_red a, div.prods_wp_yellow a, div.prods_wp_green a{
+   font-size: 11pt;
+    color: inherit;
+}
+div.prods_wp_yellow{
+   background-color: yellow;
+       color: black;
+}
+div.prods_wp_red{
+   background-color: red;
+   color: white;
+}
+div.prods_wp_green{
+   background-color: green;
+   color: white;
+
+}
+td.prods_wp_stock_red, td.prods_wp_stock_green,td.prods_wp_stock_yellow{
+   text-align: center;
+   padding: 40px;
+}
+
+
