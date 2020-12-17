@@ -55,7 +55,11 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->na
 
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
-Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('faq_admin');
+Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('admin_faq');
+
+//contactos Admin
+
+Route::get('/admin/mensagens', [App\Http\Controllers\MensagensController::class, 'mensagens'])->name('admin_contactos');
 
 //blog Admin
 
@@ -75,5 +79,5 @@ Route::delete('/admin/blog/{blog}', [App\Http\Controllers\BlogController::class,
 
 //receitas Admin
 
-Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('receitas_index');
+Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('admin_receitas');
 

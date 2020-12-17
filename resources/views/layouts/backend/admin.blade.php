@@ -78,30 +78,15 @@
                 <div class="sidebar-scrollbar">
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
-                        <li @if (Route::currentRouteName()=='admin_dashboard') class="has-sub active expand" @endif>
-                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        <li @if (Route::currentRouteName()=='admin_dashboard') class="has-sub active expand" @else class="has-sub" @endif>
+                            <a class="sidenav-item-link" href="{{route('admin_dashboard')}}" data-toggle="collapse"
                                 data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
                                 <i class="mdi mdi-view-dashboard-outline"></i>
-                                <span class="nav-text">Utilizadores</span> <b class="caret"></b>
+                                <span class="nav-text">Dashboard</span>
                             </a>
-                            <ul class="collapse show" id="dashboard" data-parent="#sidebar-menu">
-                                <div class="sub-menu">
-                                    <li>
-                                        <a href="/admin/dashboard">
-                                            <span class="nav-text">Data Users</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="sidenav-item-link" href="analytics.html">
-                                            <span class="nav-text">Insert User</span>
-                                            <span class="badge badge-success">new</span>
-                                        </a>
-                                    </li>
-                                </div>
-                            </ul>
                         </li>
                         <!-- Blog Menu -->
-                        <li  @if (Route::currentRouteName()=='admin_blog' || Route::currentRouteName()=='blog.create') class="has-sub active expand" @endif>
+                        <li @if (Route::currentRouteName()=='admin_blog') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#app" aria-expanded="false" aria-controls="app">
                                 <i class="mdi mdi-pencil-box-multiple"></i>
@@ -110,14 +95,14 @@
                             <ul class="collapse" id="app" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" @if (Route::currentRouteName()=='admin_blog') class="active" @endif href="/admin/blog">
+                                        <a class="sidenav-item-link" @if (Route::currentRouteName()=='admin_blog') class="active" @endif href="{{route('admin_blog')}}">
                                             <span class="nav-text">Data Table</span>
 
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a class="sidenav-item-link" @if (Route::currentRouteName()=='blog.store') class="active" @endif href="/admin/blog/create">
+                                        <a class="sidenav-item-link" @if (Route::currentRouteName()=='blog.store') class="active" @endif href="{{route('blog.store')}}">
                                             <span class="nav-text">Insert Info</span>
 
                                         </a>
@@ -127,7 +112,7 @@
                             </ul>
                         </li>
                         <!-- End of Blog Menu -->
-                        <li @if (Route::currentRouteName()=='receitas_index') class="has-sub active expand" @endif>
+                        <li @if (Route::currentRouteName()=='admin_receitas') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#components" aria-expanded="false" aria-controls="components">
                                 <i class="mdi mdi-table"></i>
@@ -136,7 +121,7 @@
                             <ul class="collapse" id="components" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="/admin/receitas">
+                                        <a class="sidenav-item-link"href="{{route('admin_receitas')}}">
                                             <span class="nav-text">Data table</span>
 
                                         </a>
@@ -150,7 +135,7 @@
                                 </div>
                             </ul>
                         </li>
-                        <li  @if (Route::currentRouteName()=='faq_admin') class="has-sub active expand" @endif>
+                        <li @if (Route::currentRouteName()=='admin_faq') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#icons" aria-expanded="false" aria-controls="icons">
                                 <i class="fas fa-question-circle"></i>
@@ -159,7 +144,7 @@
                             <ul class="collapse" id="icons" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="/admin/faq">
+                                        <a class="sidenav-item-link" href="{{route('admin_faq')}}">
                                             <span class="nav-text">Data Table</span>
                                         </a>
                                     </li>
@@ -171,7 +156,7 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        <li @if (Route::currentRouteName()=='admin_contactos') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#contactos" aria-expanded="false" aria-controls="icons">
                                 <i class="mdi mdi-email-mark-as-unread"></i>
@@ -180,7 +165,7 @@
                             <ul class="collapse" id="contactos" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="/admin/mensagens">
+                                        <a class="sidenav-item-link" href="{{route('admin_contactos')}}">
                                             <span class="nav-text">Mensagens</span>
                                         </a>
                                     </li>
