@@ -97,7 +97,7 @@ class BlogController extends Controller
     }
     // Destroy
 
-    public function destroyBlog(Blog $blog)
+    public function destroyBlog(Request $request, Blog $blog)
     {
         if ($blog->posts()->exists()){
             return redirect()->route('paginas.backend.blog')->withErrors(
