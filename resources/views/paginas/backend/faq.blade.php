@@ -64,7 +64,7 @@
                                             <a class="text-dark" href="">{{ $pergunta->pergunta }}</a>
                                         </td>
                                         <td>
-                                            <a class="text-dark" href="">{{ $pergunta->resposta }}</a>
+                                            <a class="text-dark" href="">{!! $pergunta->resposta !!}</a>
                                         </td>
                                         <td class="d-none d-lg-table-cell">{{ $pergunta->categoria }}</td>
                                 </tr>
