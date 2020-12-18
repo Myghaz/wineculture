@@ -6,21 +6,20 @@
         <div class="content">
             <h2>Inserir Pergunta</h2>
             <br>
-            <form action="" method="POST">
+            <form action="{{route('insert_pergunta')}}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="formGroupExampleInput">Pergunta</label>
-                    <input type="text" class="form-control" name="titulo" id="formGroupExampleInput">
+                    <input type="text" class="form-control" name="pergunta" id="formGroupExampleInput">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Categoria</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="categoria">
-                    </select>
+                    <input class="form-control" id="exampleFormControlSelect1" name="categoria">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Resposta</label>
                     <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"
-                        name="descricao"></textarea>
+                        name="resposta"></textarea>
                 </div>
                 <button type="submit" name="button" class="btn btn-success display-4">Submeter</button>
             </form>

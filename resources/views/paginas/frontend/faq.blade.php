@@ -40,7 +40,7 @@
                             </a>
                             <div class="collapse resposta" id="a{{ $pergunta_conta->id }}">
                                 <div class="resposta1">
-                                    {{ $pergunta_conta->resposta }}
+                                    {!! $pergunta_conta->resposta !!}
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             </a>
                             <div class="resposta" id="b{{ $pergunta_encomenda->id }}">
                                 <div class="resposta1">
-                                    {{ $pergunta_encomenda->resposta }}
+                                    {!! $pergunta_encomenda->resposta !!}
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,21 @@
                             </a>
                             <div class="resposta" id="c{{ $pergunta_pagamento->id }}">
                                 <div class="resposta1">
-                                    {{ $pergunta_pagamento->resposta }}
+                                    {!! $pergunta_pagamento->resposta !!}
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    <h1>teste</h1>
+                    @foreach ($perguntas_teste as $key => $pergunta_teste)
+                        <div class="categoria">
+                            <a class="btn pergunta h3" data-toggle="collapse" href="#c{{ $pergunta_teste->id }}"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                {{ $pergunta_teste->pergunta }}
+                            </a>
+                            <div class="resposta" id="c{{ $pergunta_teste->id }}">
+                                <div class="resposta1">
+                                    {!! $pergunta_teste->resposta !!}
                                 </div>
                             </div>
                         </div>

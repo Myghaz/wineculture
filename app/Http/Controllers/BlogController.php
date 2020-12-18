@@ -67,7 +67,6 @@ class BlogController extends Controller
 
     public function inser_blog(Request $post)
     {
-
         Blog::create($post->all());
     }
 
@@ -77,9 +76,7 @@ class BlogController extends Controller
 
     public function inserir_blog()
     {
-
         $categories = Category::all();
-
         return view('paginas.backend.inser_blog', compact('categories'));
 
     }
@@ -89,7 +86,6 @@ class BlogController extends Controller
     public function editBlog(Blog $blog)
     {
         $categories = Category::all();
-
         return view('paginas.backend.edit_blog', compact('categories', 'blog'));
     }
 

@@ -59,6 +59,8 @@ Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->na
 
 Route::get('/admin/insert_pergunta', [App\Http\Controllers\FAQController::class, 'inserir_pergunta'])->name('insert_pergunta');
 
+Route::post('/admin/insert_pergunta', [App\Http\Controllers\FAQController::class, 'inserir'])->name('teste');
+
 //Contactos Admin
 
 Route::get('/admin/mensagens', [App\Http\Controllers\MensagensController::class, 'mensagens'])->name('admin_contactos');

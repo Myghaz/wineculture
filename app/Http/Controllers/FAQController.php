@@ -22,7 +22,6 @@ class FAQController extends Controller
 
     public function inserir_pergunta()
     {
-
         $pergunta = Perguntas::all();
         return view('paginas.backend.insert_pergunta', compact('pergunta'));
 
@@ -33,9 +32,14 @@ class FAQController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function inserir(Request $perguntas)
     {
-        //
+        $pergunta = new Perguntas();
+        $pergunta->pergunta = $perguntas["pergunta"];
+        $pergunta->categoria = $perguntas["categoria"];
+        $pergunta->resposta = $perguntas["resposta"];
+        $pergunta->save();
+        return redirect()->route('teste');
     }
 
     /**
