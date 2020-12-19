@@ -191,21 +191,21 @@
               </thead>
               <tbody>
                 <tr>
-                @foreach($prosdwp as $key => $prodwp)
-                
+                  @foreach($prosdwp as $key => $prodwp)
+
                   <td target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->ID}}</td>
                   <td>
                     <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_title}}</a>
                   </td>
                   <td class="tprodswp_td_desc">
-                  <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_content}}</a>
+                    <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_content}}</a>
                   </td>
                   @foreach($wp_prods as $key => $wp_prod)
                   @if ($wp_prod->post_id == $prodwp->ID)
                   <td>
                     <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$wp_prod->meta_value}}€</a>
-                  </td> 
-                  @foreach($wp_prodsStock as $key => $wp_prodStock)   
+                  </td>
+                  @foreach($wp_prodsStock as $key => $wp_prodStock)
                   @if ($wp_prodStock->post_id == $prodwp->ID)
                   @if ($wp_prodStock->meta_value == "instock")
                   <td class="prods_wp_stock_green">
@@ -221,9 +221,9 @@
                   </td>
                   @endif
                   @endif
-                  @endforeach 
+                  @endforeach
                   @endif
-                  @endforeach 
+                  @endforeach
                 </tr>
                 @endforeach
               </tbody>
@@ -232,8 +232,71 @@
         </div>
       </div>
     </div>
+    <div class="row-socials">
+      <div class="col-sm-6 col-lg-4">
+        <div class="card">
+          <div class="card-header bg-facebook content-center">
+            <img src="/assets/img/paginas/backend/dashboard/facebook.png" class="c-icon c-icon-3xl text-white my-4" >
+               
+          </div>
+          <div class="card-body row text-center">
+            <div class="col">
+              <div class="text-value-xl">89k</div>
+              <div class="text-uppercase text-muted small">friends</div>
+            </div>
+            <div class="c-vr"></div>
+            <div class="col">
+              <div class="text-value-xl">459</div>
+              <div class="text-uppercase text-muted small">feeds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card">
+          <div class="card-header bg-twitter content-center">
+            <svg class="c-icon c-icon-3xl text-white my-4">
+              <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-twitter"></use>
+            </svg>
+          </div>
+          <div class="card-body row text-center">
+            <div class="col">
+              <div class="text-value-xl">973k</div>
+              <div class="text-uppercase text-muted small">followers</div>
+            </div>
+            <div class="c-vr"></div>
+            <div class="col">
+              <div class="text-value-xl">1.792</div>
+              <div class="text-uppercase text-muted small">tweets</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card">
+          <div class="card-header bg-linkedin content-center">
+            <svg class="c-icon c-icon-3xl text-white my-4">
+              <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-linkedin"></use>
+            </svg>
+          </div>
+          <div class="card-body row text-center">
+            <div class="col">
+              <div class="text-value-xl">500+</div>
+              <div class="text-uppercase text-muted small">contacts</div>
+            </div>
+            <div class="c-vr"></div>
+            <div class="col">
+              <div class="text-value-xl">292</div>
+              <div class="text-uppercase text-muted small">feeds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-  
   <script>
     var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};
@@ -274,4 +337,5 @@
     var totalProdsNov = {{$totalProdsNov}};
     var totalProdsDez = {{$totalProdsDez}};
   </script>
+
   @endsection
