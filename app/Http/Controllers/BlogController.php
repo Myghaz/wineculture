@@ -90,9 +90,9 @@ class BlogController extends Controller
     }
 
 
-    public function showblog(Blog $previewblog)
+    public function showblog(Blog $post)
     {
-        return view('paginas.backend.edit_blog', ['show_blog' => $previewblog]);
+        return view('paginas.backend.edit_blog', ['showBlog' => $post]);
     }
     // Destroy
 
