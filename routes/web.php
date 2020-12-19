@@ -81,7 +81,7 @@ Route::get('/admin/blog/{blog}/edit/', [App\Http\Controllers\BlogController::cla
 
 Route::get('/admin/blog/{blog}/show/', [App\Http\Controllers\BlogController::class, 'show_blog'])->name('showBlog');
 
-Route::delete('/admin/blog/{blog}', [App\Http\Controllers\BlogController::class, 'destroyBlog'])->name('destroy.blog');
+Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController::class, 'destroyBlog'])->name('destroy.blog');
 
 //receitas Admin
 
