@@ -79,9 +79,7 @@
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
                         <li @if (Route::currentRouteName()=='admin_dashboard') class="has-sub active expand" @else class="has-sub" @endif>
-                            <a class="sidenav-item-link" href="{{route('admin_dashboard')}}" data-toggle="collapse"
-                                data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
-                                <i class="mdi mdi-view-dashboard-outline"></i>
+                            <a href="{{route('admin_dashboard')}}"  class="sidenav-item-link"> <i class="mdi mdi-view-dashboard-outline"></i>
                                 <span class="nav-text">Dashboard</span>
                             </a>
                         </li>
@@ -122,7 +120,7 @@
                             <ul class="collapse" id="components" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link"href="{{route('admin_receitas')}}">
+                                        <a class="sidenav-item-link" href="{{route('admin_receitas')}}">
                                             <span class="nav-text">Data table</span>
 
                                         </a>
