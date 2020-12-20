@@ -236,8 +236,7 @@
       <div class="col-sm-6 col-lg-4">
         <div class="card">
           <div class="card-header bg-facebook content-center">
-            <img src="/assets/img/paginas/backend/dashboard/facebook.png" class="c-icon c-icon-3xl text-white my-4" >
-               
+            <img src="/assets/img/paginas/backend/dashboard/facebook.png" class="c-icon c-icon-3xl text-white my-4">  
           </div>
           <div class="card-body row text-center">
             <div class="col">
@@ -255,20 +254,18 @@
 
       <div class="col-sm-6 col-lg-4">
         <div class="card">
-          <div class="card-header bg-twitter content-center">
-            <svg class="c-icon c-icon-3xl text-white my-4">
-              <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-twitter"></use>
-            </svg>
+          <div class="card-header bg-instagram content-center">
+          <img src="/assets/img/paginas/backend/dashboard/instagram.png" class="c-icon c-icon-3xl text-white my-4">  
           </div>
           <div class="card-body row text-center">
             <div class="col">
-              <div class="text-value-xl">973k</div>
-              <div class="text-uppercase text-muted small">followers</div>
+              <div class="text-value-xl">{{$seguidores_instagram}}</div>
+              <div class="text-uppercase text-muted small">Seguidores</div>
             </div>
             <div class="c-vr"></div>
             <div class="col">
-              <div class="text-value-xl">1.792</div>
-              <div class="text-uppercase text-muted small">tweets</div>
+              <div class="text-value-xl">{{$posts_instagram}}</div>
+              <div class="text-uppercase text-muted small">Publicações</div>
             </div>
           </div>
         </div>
@@ -277,9 +274,7 @@
       <div class="col-sm-6 col-lg-4">
         <div class="card">
           <div class="card-header bg-linkedin content-center">
-            <svg class="c-icon c-icon-3xl text-white my-4">
-              <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-linkedin"></use>
-            </svg>
+          <img src="/assets/img/paginas/backend/dashboard/linkedin.png" class="c-icon c-icon-3xl text-white my-4">  
           </div>
           <div class="card-body row text-center">
             <div class="col">
@@ -294,7 +289,7 @@
           </div>
         </div>
       </div>
-
+      
     </div>
   </div>
   <script>

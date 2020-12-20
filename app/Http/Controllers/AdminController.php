@@ -112,6 +112,17 @@ class AdminController extends Controller
         $produtores = User::where('tipouser', '=', 'Produtor')->get();
         $prosdwp = WPProdutos::where('post_status', '=', 'publish')->get();
 
+
+        $response = file_get_contents("https://www.instagram.com/wineculture.geral/?__a=1");
+        if ($response !== false) {
+            $data = json_decode($response, true);
+            if ($data !== null) {
+                $posts_instagram = $data['graphql']['user']['edge_followed_by']['count'];
+                $seguidores_instagram = $data['graphql']['user']['edge_followed_by']['count'];
+                
+            }
+        }
+
         return view('paginas.backend.dashboard', compact([
         'totalUsersJan',
         'totalUsersFev',
@@ -156,7 +167,9 @@ class AdminController extends Controller
         'produtores',
         'prosdwp',
         'wp_prods',
-        'wp_prodsStock']));
+        'wp_prodsStock',
+        'seguidores_instagram',
+        'posts_instagram']));
     }
 
     public function receitas_index(){
