@@ -90,26 +90,19 @@ class BlogController extends Controller
     }
 
 
-    public function showblog(Blog $post)
+    public function showblog(Blog $blog)
     {
-        return view('paginas.backend.edit_blog', ['showBlog' => $post]);
+        return view('paginas.backend.show_blog', ['showBlog' => $blog], compact('blog'));
     }
     // Destroy
 
     public function destroyBlog(Request $request, Blog $blog)
     {
-        if ($blog->posts()->exists()){
-            return redirect()->route('paginas.backend.blog')->withErrors(
-            ['delete'=>'Category has related posts'] );
-            }
-            $blog->delete();
-            return redirect()->route('paginas.backend.blog')->with('success', 'Category successfully deleted');
 
-        Blog::destroy($blog->id());
-        $blog = Blog::find(1);
-        $blog->delete();
+    $blog->delete($blog);
 
-        return view('paginas.backend.blog', compact('blog'));
+    return redirect()->route('admin_blog')->with('success', 'Category successfully deleted', compact('blog'));
+
     }
 
 
@@ -173,9 +166,13 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateBlog(Request $request, Blog $blog)
     {
-        //
+
+        $blog->update($request->all());
+
+        return redirect()->route('admin_blog')
+            ->with('success', 'Post was updated successfully', compact('blog'));
     }
 
     /**

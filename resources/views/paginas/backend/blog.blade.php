@@ -130,12 +130,18 @@
                             </td>
                             <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
                             <td class="d-none d-lg-table-cell">{{$value->data}}</td>
-                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('showBlog', $value) }}" class="btn btn-primary">Ver</button></td>
-                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('editblog', $value) }}" class="btn btn-primary">Editar</button></td>
+                            <td class="d-none d-lg-table-cell"><a href="{{ route('showBlog', $value) }}" class="btn btn-primary">Ver</a></td>
+                            <td class="d-none d-lg-table-cell"><a href="{{ route('editblog', $value) }}" class="btn btn-primary">Editar</a</td>
                             @csrf
                             @method("DELETE")
 
-                            <td class="d-none d-lg-table-cell"><button type="button" href="{{ route('destroy.blog', $value) }}" class="btn btn-danger" onsubmit="return confirm('Tem a certeza que deseja apagar este post?');">Apagar</button></td>
+                            <td class="d-none d-lg-table-cell">
+                                <form action="{{ route('destroy.blog', $value) }}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <input class="btn btn-danger" type="submit" value="Delete" />
+                                 </form>
+                             </td>
 
                         </tr>
                           @endforeach

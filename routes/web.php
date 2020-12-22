@@ -79,7 +79,7 @@ Route::put('/admin/blog/{blog}/update', [App\Http\Controllers\BlogController::cl
 
 Route::get('/admin/blog/{blog}/edit/', [App\Http\Controllers\BlogController::class, 'editBlog'])->name('editblog');
 
-Route::get('/admin/blog/{blog}/show/', [App\Http\Controllers\BlogController::class, 'show_blog'])->name('showBlog');
+Route::get('/admin/blog/{blog}/show/', [App\Http\Controllers\BlogController::class, 'showblog'])->name('showBlog');
 
 Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController::class, 'destroyBlog'])->name('destroy.blog');
 

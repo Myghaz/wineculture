@@ -30,6 +30,7 @@
     <div class="form-group">
       <label for="exampleFormControlSelect1">Categoria</label>
       <select class="form-control" id="exampleFormControlSelect1"  name="categoria">
+         <option value="">Selecione uma Categoria</option>
         @foreach ($categories as $category)
         <option value="{{$category->id}}" >{{$category->name}}</option>
         @endforeach
@@ -50,7 +51,9 @@
         <label for="exampleFormControlFile1">Submeter Imagem</label>
         <input type="file" class="form-control-file" id="exampleFormControlFile1"  name="img">
       </div>
+
       <button type=”submit” name=”button” class="btn btn-success display-4">Submeter</button>
+
   </form>
     </div>
 </div>

@@ -4,10 +4,11 @@
 @section('content')
 <div class="content-wrapper">
     <div class="content">
-        <h2>Inserir novo post</h2>
+        <h2>Alterar post com ID {{$blog->id}}</h2>
         <br>
-<form action="{{route('blog.update', $blog)}}" method="POST">
+<form action="{{route('blog.update', $blog->id)}}" method="POST">
     {{csrf_field()}}
+    @method('PUT')
 @if (session('status'))
 <div class=”alert alert-success”>
 <strong>{{ session('status') }}</strong>
@@ -38,19 +39,19 @@
 
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Introdução</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="preview"></textarea>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="preview">{{$blog->preview}}</textarea>
     </div>
 
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Corpo da Post</label>
-        <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"  name="descricao"></textarea>
+        <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"  name="descricao">{{$blog->descricao}}</textarea>
       </div>
 
     <div class="form-group">
         <label for="exampleFormControlFile1">Submeter Imagem</label>
         <input type="file" class="form-control-file" id="exampleFormControlFile1"  name="img">
       </div>
-      <button type=”submit” name=”button” class=”btn btn-success display-4">Submeter</button>
+      <button style="float:ritgh"; type=”submit” name=”button” class=”btn btn-success display-4">Submeter</button>
   </form>
     </div>
 </div>
