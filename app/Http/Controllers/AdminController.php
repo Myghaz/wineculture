@@ -112,16 +112,45 @@ class AdminController extends Controller
         $produtores = User::where('tipouser', '=', 'Produtor')->get();
         $prosdwp = WPProdutos::where('post_status', '=', 'publish')->get();
 
+ //Ir buscar seguidores e publicacoes da pagina do instagram
+ $response = file_get_contents("https://www.instagram.com/wineculture.geral/?__a=1");
+ if ($response !== false) {
+     $data = json_decode($response, true);
+     if ($data !== null) {
+         $posts_instagram = $data['graphql']['user']['edge_owner_to_timeline_media']['count'];
+         $seguidores_instagram = $data['graphql']['user']['edge_followed_by']['count'];     
+     }else{
+        $posts_instagram = "Erro";
+        $seguidores_instagram = "Erro";
+     }
 
-        $response = file_get_contents("https://www.instagram.com/wineculture.geral/?__a=1");
-        if ($response !== false) {
-            $data = json_decode($response, true);
-            if ($data !== null) {
-                $posts_instagram = $data['graphql']['user']['edge_followed_by']['count'];
-                $seguidores_instagram = $data['graphql']['user']['edge_followed_by']['count'];
-                
-            }
-        }
+ }
+ //Ir buscar seguidores e publicacoes da pagina do instagram
+
+
+   //Ir buscar gostos e publicacoes da pagina do facebook
+
+ $fb_gostos_url = "https://graph.facebook.com/100224601998953?access_token=EAAGNzBXtTGcBAHcXLyd4q58izjRuYVL0xae1u5Tjpb3ZBumr2s0lItxsBvkFsAyueFWsG7mwQfLF0pKx0OzpEUSMBTkzuBPROaakjHBvU2DXCZCd5F4ensuBWsM3VqIS3i8XZCVn82wwb20OqAPTOdjTZBPn8DRqYAZBZBhvAGdgo9p8iPHihjSAZCZCZAMcOrIUZD&fields=fan_count";
+ $fb_gostos_curl = curl_init($fb_gostos_url);
+ curl_setopt($fb_gostos_curl, CURLOPT_RETURNTRANSFER, 1);   
+ curl_setopt($fb_gostos_curl, CURLOPT_SSL_VERIFYPEER, false);
+ $fb_gostos_result = curl_exec($fb_gostos_curl);  
+ curl_close($fb_gostos_curl);
+ $fb_gostos_detalhes = json_decode($fb_gostos_result,true);
+$fbgostos = $fb_gostos_detalhes['fan_count'];
+
+$fb_posts_url = "https://graph.facebook.com/100224601998953?access_token=EAAGNzBXtTGcBAHcXLyd4q58izjRuYVL0xae1u5Tjpb3ZBumr2s0lItxsBvkFsAyueFWsG7mwQfLF0pKx0OzpEUSMBTkzuBPROaakjHBvU2DXCZCd5F4ensuBWsM3VqIS3i8XZCVn82wwb20OqAPTOdjTZBPn8DRqYAZBZBhvAGdgo9p8iPHihjSAZCZCZAMcOrIUZD&fields=published_posts.limit(1).summary(total_count).since(1)";
+ $fb_posts_curl = curl_init($fb_posts_url);
+ curl_setopt($fb_posts_curl, CURLOPT_RETURNTRANSFER, 1);   
+ curl_setopt($fb_posts_curl, CURLOPT_SSL_VERIFYPEER, false);
+ $fb_posts_result = curl_exec($fb_posts_curl);  
+ curl_close($fb_posts_curl);
+ $fb_posts_details = json_decode($fb_posts_result,true);
+$fbposts = $fb_posts_details['published_posts']['summary']['total_count'];
+
+   //Ir buscar gostos e publicacoes da pagina do facebook
+
+
 
         return view('paginas.backend.dashboard', compact([
         'totalUsersJan',
@@ -168,8 +197,10 @@ class AdminController extends Controller
         'prosdwp',
         'wp_prods',
         'wp_prodsStock',
+        'posts_instagram',
         'seguidores_instagram',
-        'posts_instagram']));
+        'fbgostos',
+        'fbposts']));
     }
 
     public function receitas_index(){

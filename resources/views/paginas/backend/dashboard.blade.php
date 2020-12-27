@@ -233,30 +233,37 @@
       </div>
     </div>
     <div class="row-socials">
-      <div class="col-sm-6 col-lg-4">
+      <div class="col-sm-6 col-lg-6">
         <div class="card">
+        <a target="_blank" href="https://www.facebook.com/Testedwmwc-100224601998953">
           <div class="card-header bg-facebook content-center">
             <img src="/assets/img/paginas/backend/dashboard/facebook.png" class="c-icon c-icon-3xl text-white my-4">  
           </div>
+          </a>
           <div class="card-body row text-center">
             <div class="col">
-              <div class="text-value-xl">89k</div>
-              <div class="text-uppercase text-muted small">friends</div>
+              <div class="text-value-xl">{{$fbgostos}}</div>
+              <div class="text-uppercase text-muted small">Gostos</div>
             </div>
             <div class="c-vr"></div>
             <div class="col">
-              <div class="text-value-xl">459</div>
-              <div class="text-uppercase text-muted small">feeds</div>
+              <div class="text-value-xl">{{$fbposts}}</div>
+              <div class="text-uppercase text-muted small">Publicações</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-4">
+
+      
+
+      <div class="col-sm-6 col-lg-6">
         <div class="card">
+        <a target="_blank" href="https://www.instagram.com/wineculture.geral">
           <div class="card-header bg-instagram content-center">
           <img src="/assets/img/paginas/backend/dashboard/instagram.png" class="c-icon c-icon-3xl text-white my-4">  
           </div>
+          </a>
           <div class="card-body row text-center">
             <div class="col">
               <div class="text-value-xl">{{$seguidores_instagram}}</div>
@@ -270,26 +277,6 @@
           </div>
         </div>
       </div>
-
-      <div class="col-sm-6 col-lg-4">
-        <div class="card">
-          <div class="card-header bg-linkedin content-center">
-          <img src="/assets/img/paginas/backend/dashboard/linkedin.png" class="c-icon c-icon-3xl text-white my-4">  
-          </div>
-          <div class="card-body row text-center">
-            <div class="col">
-              <div class="text-value-xl">500+</div>
-              <div class="text-uppercase text-muted small">contacts</div>
-            </div>
-            <div class="c-vr"></div>
-            <div class="col">
-              <div class="text-value-xl">292</div>
-              <div class="text-uppercase text-muted small">feeds</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
     </div>
   </div>
   <script>
@@ -333,4 +320,5 @@
     var totalProdsDez = {{$totalProdsDez}};
   </script>
 
+ 
   @endsection
