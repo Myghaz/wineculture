@@ -49749,7 +49749,47 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    messages: [],
+    newMessage: ''
+  },
+  created: function created() {
+    var _this = this;
+
+    this.fetchMessages();
+    Echo["private"]('chat').listen('MessageSentEvent', function (e) {
+      _this.messages.push({
+        message: e.message.message,
+        user: e.user
+      });
+    });
+  },
+  methods: {
+    fetchMessages: function fetchMessages() {
+      var _this2 = this;
+
+      axios.get('/messages').then(function (response) {
+        _this2.messages = response.data;
+      });
+    },
+    addMessage: function addMessage(message) {
+      var _this3 = this;
+
+      axios.post('/messages', {
+        message: message
+      }).then(function (response) {
+        _this3.messages.push({
+          message: response.data.message.message,
+          user: response.data.user
+        });
+      });
+    },
+    sendMessage: function sendMessage() {
+      this.addMessage(this.newMessage);
+      this.newMessage = '';
+    }
+  }
 });
 
 /***/ }),
@@ -49886,8 +49926,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\migas\Desktop\Projetos\Wineculture(laravel)\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\migas\Desktop\Projetos\Wineculture(laravel)\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\migas\Desktop\Projetos\wineculture\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\migas\Desktop\Projetos\wineculture\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

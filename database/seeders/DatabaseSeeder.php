@@ -9,6 +9,7 @@ use Database\Seeders\PerguntasSeeder;
 use Database\Seeders\receitasseeder;
 use Database\Seeders\CategoryWineSeeder;
 use Database\Seeders\CategorySeeder;
+use Database\Seeders\MensagensSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,5 +26,6 @@ class DatabaseSeeder extends Seeder
         $this->call(receitasseeder::class);
         $this->call(CategoryWineSeeder::class);
         $this->call(CategorySeeder::class);
+        $this->call(MensagensSeeder::class);
     }
 }

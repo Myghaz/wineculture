@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Perguntas;
 use App\Models\Contactos;
-
-use DB;
+use Illuminate\Support\Facades\DB;
 class MainController extends Controller
 {
     public function login() {

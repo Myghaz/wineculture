@@ -2,22 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mensagens;
 use Illuminate\Http\Request;
-Use App\Models\User;
+use App\Models\User;
 use App\Models\WPProdutos;
 use App\Models\WPProdsPreco;
 use App\Models\receitas;
 use App\Models\WPProdutosStock;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 class AdminController extends Controller
 {
-    public function admin() {
+    public function admin()
+    {
         return view('paginas.backend.admin');
     }
 
-
-
-
-    public function dashboard() {
+    public function dashboard()
+    {
 
         //Ir buscar os utilizadores organizados por mes
         $usersJan = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 1)->get();
@@ -89,7 +92,7 @@ class AdminController extends Controller
         $ProdsSet = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 9)->get();
         $ProdsOut = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 10)->get();
         $ProdsNov = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 11)->get();
-        $ProdsDez= WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 12)->get();
+        $ProdsDez = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 12)->get();
         $totalProdsJan = $ProdsJan->count();
         $totalProdsFev = $ProdsFev->count();
         $totalProdsMar = $ProdsMar->count();
@@ -112,100 +115,113 @@ class AdminController extends Controller
         $produtores = User::where('tipouser', '=', 'Produtor')->get();
         $prosdwp = WPProdutos::where('post_status', '=', 'publish')->get();
 
- //Ir buscar seguidores e publicacoes da pagina do instagram
- $response = file_get_contents("https://www.instagram.com/wineculture.geral/?__a=1");
- if ($response !== false) {
-     $data = json_decode($response, true);
-     if ($data !== null) {
-         $posts_instagram = $data['graphql']['user']['edge_owner_to_timeline_media']['count'];
-         $seguidores_instagram = $data['graphql']['user']['edge_followed_by']['count'];     
-     }else{
-        $posts_instagram = "Erro";
-        $seguidores_instagram = "Erro";
-     }
-
- }
- //Ir buscar seguidores e publicacoes da pagina do instagram
-
-
-   //Ir buscar gostos e publicacoes da pagina do facebook
-
- $fb_gostos_url = "https://graph.facebook.com/100224601998953?access_token=EAAGNzBXtTGcBAHcXLyd4q58izjRuYVL0xae1u5Tjpb3ZBumr2s0lItxsBvkFsAyueFWsG7mwQfLF0pKx0OzpEUSMBTkzuBPROaakjHBvU2DXCZCd5F4ensuBWsM3VqIS3i8XZCVn82wwb20OqAPTOdjTZBPn8DRqYAZBZBhvAGdgo9p8iPHihjSAZCZCZAMcOrIUZD&fields=fan_count";
- $fb_gostos_curl = curl_init($fb_gostos_url);
- curl_setopt($fb_gostos_curl, CURLOPT_RETURNTRANSFER, 1);   
- curl_setopt($fb_gostos_curl, CURLOPT_SSL_VERIFYPEER, false);
- $fb_gostos_result = curl_exec($fb_gostos_curl);  
- curl_close($fb_gostos_curl);
- $fb_gostos_detalhes = json_decode($fb_gostos_result,true);
-$fbgostos = $fb_gostos_detalhes['fan_count'];
-
-$fb_posts_url = "https://graph.facebook.com/100224601998953?access_token=EAAGNzBXtTGcBAHcXLyd4q58izjRuYVL0xae1u5Tjpb3ZBumr2s0lItxsBvkFsAyueFWsG7mwQfLF0pKx0OzpEUSMBTkzuBPROaakjHBvU2DXCZCd5F4ensuBWsM3VqIS3i8XZCVn82wwb20OqAPTOdjTZBPn8DRqYAZBZBhvAGdgo9p8iPHihjSAZCZCZAMcOrIUZD&fields=published_posts.limit(1).summary(total_count).since(1)";
- $fb_posts_curl = curl_init($fb_posts_url);
- curl_setopt($fb_posts_curl, CURLOPT_RETURNTRANSFER, 1);   
- curl_setopt($fb_posts_curl, CURLOPT_SSL_VERIFYPEER, false);
- $fb_posts_result = curl_exec($fb_posts_curl);  
- curl_close($fb_posts_curl);
- $fb_posts_details = json_decode($fb_posts_result,true);
-$fbposts = $fb_posts_details['published_posts']['summary']['total_count'];
-
-   //Ir buscar gostos e publicacoes da pagina do facebook
+        //Ir buscar seguidores e publicacoes da pagina do instagram
+        $response = file_get_contents("https://www.instagram.com/wineculture.geral/?__a=1");
+        if ($response !== false) {
+            $data = json_decode($response, true);
+            if ($data !== null) {
+                $posts_instagram = $data['graphql']['user']['edge_owner_to_timeline_media']['count'];
+                $seguidores_instagram = $data['graphql']['user']['edge_followed_by']['count'];
+            } else {
+                $posts_instagram = "Erro";
+                $seguidores_instagram = "Erro";
+            }
+        }
+        //Ir buscar seguidores e publicacoes da pagina do instagram
 
 
+        //Ir buscar gostos e publicacoes da pagina do facebook
+        $fbgostos =  "Erro";
+        $fbposts = "Erro";
 
+        //  $fb_gostos_url = "https://graph.facebook.com/100224601998953?access_token=EAAEUXTXUXlUBAMzUlqcSoTiHOCkmReEctU1ee7debOpDvVhgZCTye079jcWOYv8SgoWlF2aGXz4JBZCHLL2sCgnKISXeuAtPur5Rs6tlmRzQy4YujWXdetOx4CIH8sLO52T5k0ZAIiSrEiCeDLccxnXczInoskWMvHslaN9jmJFSDgbVgJeR2Rjoyk8IegZD&fields=fan_count";
+        //  $fb_gostos_curl = curl_init($fb_gostos_url);
+        //  curl_setopt($fb_gostos_curl, CURLOPT_RETURNTRANSFER, 1);   
+        //  curl_setopt($fb_gostos_curl, CURLOPT_SSL_VERIFYPEER, false);
+        //  $fb_gostos_result = curl_exec($fb_gostos_curl);  
+        //  curl_close($fb_gostos_curl);
+        //  $fb_gostos_detalhes = json_decode($fb_gostos_result,true);
+        // $fbgostos = $fb_gostos_detalhes['fan_count'];
+        //  $fb_posts_url = "https://graph.facebook.com/100224601998953?access_token=EAAEUXTXUXlUBAMzUlqcSoTiHOCkmReEctU1ee7debOpDvVhgZCTye079jcWOYv8SgoWlF2aGXz4JBZCHLL2sCgnKISXeuAtPur5Rs6tlmRzQy4YujWXdetOx4CIH8sLO52T5k0ZAIiSrEiCeDLccxnXczInoskWMvHslaN9jmJFSDgbVgJeR2Rjoyk8IegZD&fields=published_posts.limit(1).summary(total_count).since(1)";
+        //  $fb_posts_curl = curl_init($fb_posts_url);
+        //  curl_setopt($fb_posts_curl, CURLOPT_RETURNTRANSFER, 1);   
+        //  curl_setopt($fb_posts_curl, CURLOPT_SSL_VERIFYPEER, false);
+        //  $fb_posts_result = curl_exec($fb_posts_curl);  
+        //  curl_close($fb_posts_curl);
+        //  $fb_posts_details = json_decode($fb_posts_result,true);
+        //  $fbposts = $fb_posts_details['published_posts']['summary']['total_count'];
+
+        //Ir buscar gostos e publicacoes da pagina do facebook
+
+        $mensagens = Mensagens::select('id_envio')->distinct('id_envio')->where('id_destino', Auth::id())->get();
+        $mensagens_chat = Mensagens::where('id_destino', Auth::id())->orWhere('id_envio', Auth::id())->orderBy('created_at', 'ASC')->get();
+        $itens = DB::table('mensagens')
+            ->select('id_envio')
+            ->where('id_destino', Auth::id())
+            ->distinct('id_envio')
+            ->get();
+        $mensagens_chat_teste = Mensagens::where('id_destino', Auth::id())->orWhere('id_envio', Auth::id())->orderBy('created_at', 'ASC')->get();
+        $id_user_auth = Auth::id();
         return view('paginas.backend.dashboard', compact([
-        'totalUsersJan',
-        'totalUsersFev',
-        'totalUsersMar',
-        'totalUsersAbr',
-        'totalUsersMai',
-        'totalUsersJun',
-        'totalUsersJul',
-        'totalUsersAgo',
-        'totalUsersSet',
-        'totalUsersOut',
-        'totalUsersNov',
-        'totalUsersDez',
-        'totalUsers',
-        'totalProdutoresJan',
-        'totalProdutoresFev',
-        'totalProdutoresMar',
-        'totalProdutoresAbr',
-        'totalProdutoresMai',
-        'totalProdutoresJun',
-        'totalProdutoresJul',
-        'totalProdutoresAgo',
-        'totalProdutoresSet',
-        'totalProdutoresOut',
-        'totalProdutoresNov',
-        'totalProdutoresDez',
-        'totalProdutores',
-        'totalProdsJan',
-        'totalProdsFev',
-        'totalProdsMar',
-        'totalProdsAbr',
-        'totalProdsMai',
-        'totalProdsJun',
-        'totalProdsJul',
-        'totalProdsAgo',
-        'totalProdsSet',
-        'totalProdsOut',
-        'totalProdsNov',
-        'totalProdsDez',
-        'totalProds',
-        'users',
-        'produtores',
-        'prosdwp',
-        'wp_prods',
-        'wp_prodsStock',
-        'posts_instagram',
-        'seguidores_instagram',
-        'fbgostos',
-        'fbposts']));
+            'totalUsersJan',
+            'totalUsersFev',
+            'totalUsersMar',
+            'totalUsersAbr',
+            'totalUsersMai',
+            'totalUsersJun',
+            'totalUsersJul',
+            'totalUsersAgo',
+            'totalUsersSet',
+            'totalUsersOut',
+            'totalUsersNov',
+            'totalUsersDez',
+            'totalUsers',
+            'totalProdutoresJan',
+            'totalProdutoresFev',
+            'totalProdutoresMar',
+            'totalProdutoresAbr',
+            'totalProdutoresMai',
+            'totalProdutoresJun',
+            'totalProdutoresJul',
+            'totalProdutoresAgo',
+            'totalProdutoresSet',
+            'totalProdutoresOut',
+            'totalProdutoresNov',
+            'totalProdutoresDez',
+            'totalProdutores',
+            'totalProdsJan',
+            'totalProdsFev',
+            'totalProdsMar',
+            'totalProdsAbr',
+            'totalProdsMai',
+            'totalProdsJun',
+            'totalProdsJul',
+            'totalProdsAgo',
+            'totalProdsSet',
+            'totalProdsOut',
+            'totalProdsNov',
+            'totalProdsDez',
+            'totalProds',
+            'users',
+            'produtores',
+            'prosdwp',
+            'wp_prods',
+            'wp_prodsStock',
+            'posts_instagram',
+            'seguidores_instagram',
+            'fbgostos',
+            'fbposts',
+            'mensagens',
+            'mensagens_chat',
+            'id_user_auth',
+            'itens'
+        ]));
     }
 
-    public function receitas_index(){
+    public function receitas_index()
+    {
 
-        $receitas= receitas::all();
+        $receitas = receitas::all();
 
         return view('paginas.backend.receitas', compact('receitas'));
     }

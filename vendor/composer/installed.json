@@ -1179,6 +1179,166 @@
         ]
     },
     {
+        "name": "hautelook/phpass",
+        "version": "0.3.5",
+        "version_normalized": "0.3.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hautelook/phpass.git",
+            "reference": "b4cbd9b67ed3ef5672ec79d8e0c46d24bd844abd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hautelook/phpass/zipball/b4cbd9b67ed3ef5672ec79d8e0c46d24bd844abd",
+            "reference": "b4cbd9b67ed3ef5672ec79d8e0c46d24bd844abd",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2012-08-31T00:00:00+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Hautelook": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Public Domain"
+        ],
+        "authors": [
+            {
+                "name": "Solar Designer",
+                "email": "solar@openwall.com",
+                "homepage": "http://openwall.com/phpass/"
+            }
+        ],
+        "description": "Portable PHP password hashing framework",
+        "homepage": "http://github.com/hautelook/phpass/",
+        "keywords": [
+            "blowfish",
+            "crypt",
+            "password",
+            "security"
+        ]
+    },
+    {
+        "name": "jgrossi/corcel",
+        "version": "v5.0.0",
+        "version_normalized": "5.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/corcel/corcel.git",
+            "reference": "9b2fdf15dda9e959d8819e1b6c45077ce2a981f7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/corcel/corcel/zipball/9b2fdf15dda9e959d8819e1b6c45077ce2a981f7",
+            "reference": "9b2fdf15dda9e959d8819e1b6c45077ce2a981f7",
+            "shasum": ""
+        },
+        "require": {
+            "fzaninotto/faker": "^1.9",
+            "hautelook/phpass": "0.3.*",
+            "illuminate/database": "^8.0",
+            "illuminate/filesystem": "^8.0",
+            "illuminate/support": "^8.0",
+            "php": ">=7.3",
+            "thunderer/shortcode": "^0.7.3"
+        },
+        "replace": {
+            "juniorgrossi/corcel": "self.version"
+        },
+        "require-dev": {
+            "dms/phpunit-arraysubset-asserts": "^0.1.0",
+            "laravel/legacy-factories": "^1.0",
+            "mockery/mockery": "^1.0",
+            "orchestra/testbench": "^6.0",
+            "symfony/thanks": "^1.0"
+        },
+        "time": "2020-10-09T20:42:19+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Corcel\\Laravel\\CorcelServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Corcel\\": "src/",
+                "Corcel\\Tests\\": "tests/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Junior Grossi",
+                "email": "juniorgro@gmail.com",
+                "homepage": "http://jgrossi.com"
+            }
+        ],
+        "description": "Use WordPress backend with Laravel or any PHP framework",
+        "homepage": "http://github.com/corcel/corcel"
+    },
+    {
+        "name": "larasocket/larasocket-driver",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/larasocket/larasocket-driver.git",
+            "reference": "43f709ec2383cbc0805f82df0cc0f39e5a38573f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/larasocket/larasocket-driver/zipball/43f709ec2383cbc0805f82df0cc0f39e5a38573f",
+            "reference": "43f709ec2383cbc0805f82df0cc0f39e5a38573f",
+            "shasum": ""
+        },
+        "time": "2020-08-16T15:40:57+00:00",
+        "type": "project",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Larasocket\\LarasocketServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Larasocket\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Zach Vander Velden",
+                "email": "zachvv11@gmail.com"
+            }
+        ],
+        "description": "Pay as you go broadcast driver for Laravel.",
+        "homepage": "https://larasocket.com",
+        "keywords": [
+            "Broadcast",
+            "driver",
+            "larasocket",
+            "laravel",
+            "websocket"
+        ]
+    },
+    {
         "name": "laravel/framework",
         "version": "v8.17.1",
         "version_normalized": "8.17.1.0",
@@ -1871,17 +2031,17 @@
     },
     {
         "name": "nesbot/carbon",
-        "version": "2.42.0",
-        "version_normalized": "2.42.0.0",
+        "version": "2.43.0",
+        "version_normalized": "2.43.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "d0463779663437392fe42ff339ebc0213bd55498"
+            "reference": "d32c57d8389113742f4a88725a170236470012e2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d0463779663437392fe42ff339ebc0213bd55498",
-            "reference": "d0463779663437392fe42ff339ebc0213bd55498",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d32c57d8389113742f4a88725a170236470012e2",
+            "reference": "d32c57d8389113742f4a88725a170236470012e2",
             "shasum": ""
         },
         "require": {
@@ -1900,7 +2060,7 @@
             "phpunit/phpunit": "^7.5 || ^8.0",
             "squizlabs/php_codesniffer": "^3.4"
         },
-        "time": "2020-11-28T14:25:28+00:00",
+        "time": "2020-12-17T20:55:32+00:00",
         "bin": [
             "bin/carbon"
         ],
@@ -1948,6 +2108,16 @@
             "date",
             "datetime",
             "time"
+        ],
+        "funding": [
+            {
+                "url": "https://opencollective.com/Carbon",
+                "type": "open_collective"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/nesbot/carbon",
+                "type": "tidelift"
+            }
         ]
     },
     {
@@ -2137,6 +2307,137 @@
             "serializable",
             "serialization",
             "serialize"
+        ]
+    },
+    {
+        "name": "paragonie/random_compat",
+        "version": "v9.99.100",
+        "version_normalized": "9.99.100.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paragonie/random_compat.git",
+            "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+            "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">= 7"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*|5.*",
+            "vimeo/psalm": "^1"
+        },
+        "suggest": {
+            "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+        },
+        "time": "2020-10-15T08:29:30+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Paragon Initiative Enterprises",
+                "email": "security@paragonie.com",
+                "homepage": "https://paragonie.com"
+            }
+        ],
+        "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+        "keywords": [
+            "csprng",
+            "polyfill",
+            "pseudorandom",
+            "random"
+        ]
+    },
+    {
+        "name": "paragonie/sodium_compat",
+        "version": "v1.14.0",
+        "version_normalized": "1.14.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paragonie/sodium_compat.git",
+            "reference": "a1cfe0b21faf9c0b61ac0c6188c4af7fd6fd0db3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/paragonie/sodium_compat/zipball/a1cfe0b21faf9c0b61ac0c6188c4af7fd6fd0db3",
+            "reference": "a1cfe0b21faf9c0b61ac0c6188c4af7fd6fd0db3",
+            "shasum": ""
+        },
+        "require": {
+            "paragonie/random_compat": ">=1",
+            "php": "^5.2.4|^5.3|^5.4|^5.5|^5.6|^7|^8"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^3|^4|^5|^6|^7|^8|^9"
+        },
+        "suggest": {
+            "ext-libsodium": "PHP < 7.0: Better performance, password hashing (Argon2i), secure memory management (memzero), and better security.",
+            "ext-sodium": "PHP >= 7.0: Better performance, password hashing (Argon2i), secure memory management (memzero), and better security."
+        },
+        "time": "2020-12-03T16:26:19+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "autoload.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "ISC"
+        ],
+        "authors": [
+            {
+                "name": "Paragon Initiative Enterprises",
+                "email": "security@paragonie.com"
+            },
+            {
+                "name": "Frank Denis",
+                "email": "jedisct1@pureftpd.org"
+            }
+        ],
+        "description": "Pure PHP implementation of libsodium; uses the PHP extension if it exists",
+        "keywords": [
+            "Authentication",
+            "BLAKE2b",
+            "ChaCha20",
+            "ChaCha20-Poly1305",
+            "Chapoly",
+            "Curve25519",
+            "Ed25519",
+            "EdDSA",
+            "Edwards-curve Digital Signature Algorithm",
+            "Elliptic Curve Diffie-Hellman",
+            "Poly1305",
+            "Pure-PHP cryptography",
+            "RFC 7748",
+            "RFC 8032",
+            "Salpoly",
+            "Salsa20",
+            "X25519",
+            "XChaCha20-Poly1305",
+            "XSalsa20-Poly1305",
+            "Xchacha20",
+            "Xsalsa20",
+            "aead",
+            "cryptography",
+            "ecdh",
+            "elliptic curve",
+            "elliptic curve cryptography",
+            "encryption",
+            "libsodium",
+            "php",
+            "public-key cryptography",
+            "secret-key cryptography",
+            "side-channel resistant"
         ]
     },
     {
@@ -3262,6 +3563,62 @@
             "console",
             "interactive",
             "shell"
+        ]
+    },
+    {
+        "name": "pusher/pusher-php-server",
+        "version": "v4.1.5",
+        "version_normalized": "4.1.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pusher/pusher-http-php.git",
+            "reference": "251f22602320c1b1aff84798fe74f3f7ee0504a9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/251f22602320c1b1aff84798fe74f3f7ee0504a9",
+            "reference": "251f22602320c1b1aff84798fe74f3f7ee0504a9",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "paragonie/sodium_compat": "^1.6",
+            "php": "^7.1|^8.0",
+            "psr/log": "^1.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.2|^8.5|^9.3"
+        },
+        "time": "2020-12-09T09:38:19+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Pusher\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Library for interacting with the Pusher REST API",
+        "keywords": [
+            "events",
+            "messaging",
+            "php-pusher-server",
+            "publish",
+            "push",
+            "pusher",
+            "real time",
+            "real-time",
+            "realtime",
+            "rest",
+            "trigger"
         ]
     },
     {
@@ -5906,17 +6263,17 @@
     },
     {
         "name": "symfony/translation",
-        "version": "v5.2.0",
-        "version_normalized": "5.2.0.0",
+        "version": "v5.2.1",
+        "version_normalized": "5.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/translation.git",
-            "reference": "52f486a707510884450df461b5a6429dd7a67379"
+            "reference": "a04209ba0d1391c828e5b2373181dac63c52ee70"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/translation/zipball/52f486a707510884450df461b5a6429dd7a67379",
-            "reference": "52f486a707510884450df461b5a6429dd7a67379",
+            "url": "https://api.github.com/repos/symfony/translation/zipball/a04209ba0d1391c828e5b2373181dac63c52ee70",
+            "reference": "a04209ba0d1391c828e5b2373181dac63c52ee70",
             "shasum": ""
         },
         "require": {
@@ -5951,7 +6308,7 @@
             "symfony/config": "",
             "symfony/yaml": ""
         },
-        "time": "2020-11-28T11:24:18+00:00",
+        "time": "2020-12-08T17:03:37+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -5980,7 +6337,21 @@
             }
         ],
         "description": "Symfony Translation Component",
-        "homepage": "https://symfony.com"
+        "homepage": "https://symfony.com",
+        "funding": [
+            {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                "type": "tidelift"
+            }
+        ]
     },
     {
         "name": "symfony/translation-contracts",
@@ -6159,6 +6530,60 @@
             }
         ],
         "description": "A small library for converting tokenized PHP source code into XML and potentially other formats"
+    },
+    {
+        "name": "thunderer/shortcode",
+        "version": "v0.7.4",
+        "version_normalized": "0.7.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/thunderer/Shortcode.git",
+            "reference": "79a219febd774ba1ee66a2992fee1145b4367561"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/thunderer/Shortcode/zipball/79a219febd774ba1ee66a2992fee1145b4367561",
+            "reference": "79a219febd774ba1ee66a2992fee1145b4367561",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=4.1",
+            "symfony/yaml": ">=2.0"
+        },
+        "suggest": {
+            "ext-dom": "if you want to use XML serializer",
+            "ext-json": "if you want to use JSON serializer",
+            "symfony/yaml": "if you want to use YAML serializer"
+        },
+        "time": "2020-03-08T11:25:13+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Thunder\\Shortcode\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Tomasz Kowalczyk",
+                "email": "tomasz@kowalczyk.cc"
+            }
+        ],
+        "description": "Advanced shortcode (BBCode) parser and engine for PHP",
+        "keywords": [
+            "bbcode",
+            "engine",
+            "library",
+            "parser",
+            "shortcode"
+        ]
     },
     {
         "name": "tijsverkoyen/css-to-inline-styles",

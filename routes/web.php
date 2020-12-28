@@ -45,7 +45,10 @@ Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name(
 
 Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
 
+
+
 Auth::routes();
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 //Admin

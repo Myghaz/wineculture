@@ -1,5 +1,16 @@
 
 
+$(".media-left").css("display", "none");
+$(".media-right").css("display", "none");
+$(document).ready(function() {
+  $(".media").click(function(event) {
+    var activechat = (event.target.id);
+    $(".media-left").css("display", "none");
+$(".media-right").css("display", "none");
+    $('.' + activechat).css("display", "flex");
+  });
+});
+$('#chatbox a').click( function(e) {e.preventDefault(); /*your_code_here;*/ return false; } );
 let usersdata = [totalUsersJan, totalUsersFev, totalUsersMar, totalUsersAbr, totalUsersMai, totalUsersJun, totalUsersJul, totalUsersAgo, totalUsersSet, totalUsersOut, totalUsersNov, totalUsersDez];
 Datausers = {
     labels: [

@@ -235,10 +235,10 @@
     <div class="row-socials">
       <div class="col-sm-6 col-lg-6">
         <div class="card">
-        <a target="_blank" href="https://www.facebook.com/Testedwmwc-100224601998953">
-          <div class="card-header bg-facebook content-center">
-            <img src="/assets/img/paginas/backend/dashboard/facebook.png" class="c-icon c-icon-3xl text-white my-4">  
-          </div>
+          <a target="_blank" href="https://www.facebook.com/Testedwmwc-100224601998953">
+            <div class="card-header bg-facebook content-center">
+              <img src="/assets/img/paginas/backend/dashboard/facebook.png" class="c-icon c-icon-3xl text-white my-4">
+            </div>
           </a>
           <div class="card-body row text-center">
             <div class="col">
@@ -253,16 +253,12 @@
           </div>
         </div>
       </div>
-
-
-      
-
       <div class="col-sm-6 col-lg-6">
         <div class="card">
-        <a target="_blank" href="https://www.instagram.com/wineculture.geral">
-          <div class="card-header bg-instagram content-center">
-          <img src="/assets/img/paginas/backend/dashboard/instagram.png" class="c-icon c-icon-3xl text-white my-4">  
-          </div>
+          <a target="_blank" href="https://www.instagram.com/wineculture.geral">
+            <div class="card-header bg-instagram content-center">
+              <img src="/assets/img/paginas/backend/dashboard/instagram.png" class="c-icon c-icon-3xl text-white my-4">
+            </div>
           </a>
           <div class="card-body row text-center">
             <div class="col">
@@ -275,6 +271,135 @@
               <div class="text-uppercase text-muted small">Publicações</div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-default mb-0">
+      <div class="row bg-white no-gutters chat">
+        <div class="col-lg-4">
+          <!-- Chat Left Side -->
+          <div class="chat-left-side">
+
+            <form class="chat-search">
+              <input type="text" class="form-control" placeholder="Search...">
+            </form>
+
+            <ul class="list-unstyled border-top mb-0" id="chat-left-content">
+              @foreach($mensagens as $key => $mensagem)
+              <li>
+              @foreach($users as $key => $user)
+                    @if ($user->id == $mensagem->id_envio)
+                  <a id="chatact-{{$user->id}}"  class="media media-message" style="width: 100%; height: 100%; z-index: 5;">
+                  @endif
+                  @endforeach
+                  <div class="position-relative mr-3">
+                    <img class="rounded-circle" src="assets/img/user/u1.jpg" alt="Image">
+                    <span class="status away"></span>
+                  </div>
+                  <div class="media-body d-flex justify-content-between" style="pointer-events: none;">
+                    <div  class="message-contents" >
+                      <h4 class="title">
+                        @foreach($users as $key => $user)
+                        @if ($user->id == $mensagem->id_envio)
+                        {{$user->name}} {{$user->apelido}}
+                        @endif
+                        @endforeach
+                      </h4>
+                      <p class="last-msg">{{$mensagem->mensagem}}.</p>
+                    </div>
+                    <span class="date">{{$mensagem->created_at}}</span>
+                  </div>
+                </a>
+              </li>
+              @endforeach
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="col-lg-7 col-xl-8">
+          <!-- Chats -->
+          <div class="chat-right-side">
+            <div class="media media-chat align-items-center mb-0 media-chat-header" href="#">
+              <img class="rounded-circle mr-3" src="assets/img/user/u2.jpg" alt="Image">
+              <div class="media-body w-100">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h3 class="heading-title mb-0"><a href="#">Leon Battista</a></h3>
+                  <div class="dropdown">
+                    <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="user-profile.html">Profile</a>
+                      <a class="dropdown-item" href="index.html">Logout</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+      
+
+
+            <div class="chat-right-content" data-simplebar="init">
+              <div class="simplebar-wrapper" style="margin: -24px;">
+                <div class="simplebar-height-auto-observer-wrapper">
+                  <div class="simplebar-height-auto-observer"></div>
+                </div>
+                <div class="simplebar-mask">
+                  <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                    <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;">
+                      <div class="simplebar-content" id style="padding: 24px;">
+                      @foreach($itens as $key => $iten)
+                        @foreach($mensagens_chat as $key => $chat)
+                       
+                        @if ($chat->id_envio == $iten->id_envio || $chat->id_destino == $iten->id_envio)
+
+                        @if ($chat->id_envio == $iten->id_envio)
+                        <div class="media media-chat media-left chatact-{{$iten->id_envio}}">
+                          <img class="rounded-circle mr-3" src="assets/img/user/u2.jpg" alt="Image">
+                          <div class="media-body">
+                            <p class="message">{{$chat->mensagem}}</p>
+                            <div class="date-time">{{$chat->created_at}}</div>
+                            <script>
+                            document.write(activechat);</script>
+                          </div>
+                        </div>
+                        @endif
+                        @if ($chat->id_envio == $id_user_auth)
+                        <div class="media media-chat media-right chatact-{{$iten->id_envio}}">
+                          <div class="media-body">
+                            <p class="message">{{$chat->mensagem}}</p>
+                            <div class="date-time">{{$chat->created_at}}</div>
+                          </div>
+                          <img class="rounded-circle ml-3" src="assets/img/user/u4.jpg" alt="Image">
+                        </div>
+                        @endif
+                        @endif
+
+                        @endforeach
+                        @endforeach
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="simplebar-placeholder" style="width: auto; height: 586px;"></div>
+              </div>
+              <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+              </div>
+              <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                <div class="simplebar-scrollbar" style="height: 98px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+              </div>
+            </div>
+            
+
+            <form class="px-5 pb-3">
+              <input type="text" class="form-control mb-3" placeholder="Type your message here">
+            </form>
+          </div>
+
         </div>
       </div>
     </div>

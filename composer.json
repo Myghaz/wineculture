@@ -13,8 +13,10 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "jgrossi/corcel": "^5.0",
+        "larasocket/larasocket-driver": "^1.0",
         "laravel/framework": "^8.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "pusher/pusher-php-server": "^4.1"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
