@@ -11,7 +11,7 @@ use App\Models\receitas;
 use App\Models\WPProdutosStock;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+use Mail;
 class AdminController extends Controller
 {
     public function admin()
@@ -174,6 +174,8 @@ class AdminController extends Controller
             ->get();
         $mensagens_chat_teste = Mensagens::where('id_destino', Auth::id())->orWhere('id_envio', Auth::id())->orderBy('created_at', 'ASC')->get();
         $id_user_auth = Auth::id();
+   
+    dd("Email is Sent.");
         return view('paginas.backend.dashboard', compact([
             'totalUsersJan',
             'totalUsersFev',

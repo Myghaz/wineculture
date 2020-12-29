@@ -100,7 +100,7 @@ button{
 	padding: 5px;
 	
 }
-#signinemail, #signinpassword, #signupemail, #signuppassword, #signupcpassword{
+#signinemail, #signinpassword, #signupemail, #signupnome, #signupapelido, #signuppassword, #signupcpassword{
 	font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
@@ -213,9 +213,9 @@ h5{
 
 .signUp{
 	z-index: 1;
-	transform: perspective(100px) translate3d(100px, 0px, -30px);
+	transform: perspective(100px) translate3d(10px, -100px, -30px);
 	opacity: 0.5;
-	height: 590px;
+	height: 780px;
 }
 
 .signIn {

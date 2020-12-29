@@ -16,6 +16,7 @@
 <body>
     @include('includes.frontend.navbar')
     @yield('content')
+
     <section id="hero">
         <div class="hero-container">
             <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">

@@ -47,7 +47,7 @@ Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::c
 
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 

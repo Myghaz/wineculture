@@ -45,16 +45,21 @@
                 <button class="form-btn dx" type="submit">Log In</button>
                 <button class="form-btn sx back" type="button">Criar Conta</button>
             </form>
-            <form class="signUp" action="{{ route('register') }}">
+            <form class="signUp" method="POST" action="{{ route('register') }}">
             @csrf
                 <h3>Criar Conta</h3>
                 <p class="paragrafo">Crie a sua conta e junte-se a nós!</p>
+                <h5>Insira o seu Nome</h5>
+                <input class="w100" placeholder="&#xf007;&nbsp; Nome" id="signupnome" name="name" type="text" required autocomplete='off' />
+                <h5>Insira o seu Apelido</h5>
+                <input class="w100" placeholder="&#xf007;&nbsp; Apelido" id="signupapelido" name="apelido" type="text" required autocomplete='off' />
                 <h5>Insira o seu Email</h5>
-                <input class="w100" placeholder="&#xf007;&nbsp; Email" id="signupemail" type="email" required autocomplete='off' />
+                <input class="w100" placeholder="&#xf0e0;&nbsp; Email" id="signupemail" name="email" type="email"  required autocomplete='off' />
                 <h5>Insira a sua Password</h5>
-                <input type="password" placeholder="&#xf007;&nbsp; Password" id="signuppassword" required />
+                <input type="password" placeholder="&#xf023;&nbsp; Password" name="password" id="signuppassword" required />
                 <h5>Confirme a sua Password</h5>
-                <input type="password" placeholder="&#xf007;&nbsp; Confirmar Password" id="signupcpassword" required />
+                <input type="password" placeholder="&#xf023;&nbsp; Confirmar Password" name="password_confirmation" id="signupcpassword" required />
+                <input type="hidden"  name="tipouser" value="Utilizador"/>
                 <button class="form-btn dx" type="submit">Criar Conta</button>
                 <button class="form-btn sx log-in" type="button">Já tem Conta?</button>
             </form>

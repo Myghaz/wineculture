@@ -20,9 +20,8 @@ class User extends Authenticatable
         'tipouser',
         'email',
         'password',
-        'nome',
+        'name',
         'apelido',
-        'data_nasc',
     ];
 
     /**
