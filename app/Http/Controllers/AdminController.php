@@ -21,7 +21,19 @@ class AdminController extends Controller
 
     public function dashboard()
     {
+        //verificar se o utilizador fez login e se é um administrador
 
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }else{
+            $id_user_auth =  Auth::user()->tipouser;
+            if ($id_user_auth !== "Administrador"){
+                return redirect()->route('login');
+            }else{
+       
+        //verificar se o utilizador fez login e se é um administrador
+
+        
         //Ir buscar os utilizadores organizados por mes
         $usersJan = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 1)->get();
         $usersFev = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 2)->get();
@@ -216,8 +228,9 @@ class AdminController extends Controller
             'id_user_auth',
             'itens'
         ]));
-    }
-
+    }        
+}
+}
     public function receitas_index()
     {
 

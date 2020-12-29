@@ -45,7 +45,8 @@
                 <button class="form-btn dx" type="submit">Log In</button>
                 <button class="form-btn sx back" type="button">Criar Conta</button>
             </form>
-            <form class="signUp">
+            <form class="signUp" action="{{ route('register') }}">
+            @csrf
                 <h3>Criar Conta</h3>
                 <p class="paragrafo">Crie a sua conta e junte-se a nós!</p>
                 <h5>Insira o seu Email</h5>

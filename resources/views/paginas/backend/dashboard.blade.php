@@ -308,7 +308,7 @@
                       </h4>
                       <p class="last-msg">{{$mensagem->mensagem}}.</p>
                     </div>
-                    <span class="date">{{$mensagem->created_at}}</span>
+                    <span class="date">{{$mensagem->created_at }}</span>
                   </div>
                 </a>
               </li>

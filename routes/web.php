@@ -52,7 +52,7 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 //Admin
-Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
