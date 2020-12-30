@@ -4,6 +4,9 @@
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/login.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 
 <body>
@@ -46,27 +49,56 @@
                 <button class="form-btn sx back" type="button">Criar Conta</button>
             </form>
             <form class="signUp" method="POST" action="{{ route('register') }}">
-            @csrf
+                @csrf
                 <h3>Criar Conta</h3>
                 <p class="paragrafo">Crie a sua conta e junte-se a nós!</p>
                 <h5>Insira o seu Nome</h5>
-                <input class="w100" placeholder="&#xf007;&nbsp; Nome" id="signupnome" name="name" type="text" required autocomplete='off' />
+                <input class="form-control @error('name') is-invalid @enderror" placeholder="&#xf007;&nbsp; Nome" id="signupnome" name="name" type="text" value="{{ old('name') }}" required autocomplete='off' />
+                @error('name')
+                <script>
+                    toastr.error('Nome Inválido!');
+                    $(".signUp").addClass("active-sx");
+                    $(".signIn").addClass("inactive-dx");
+                    $(".signIn").removeClass("active-dx");
+                    $(".signUp").removeClass("inactive-sx");
+                </script>
+                @enderror
                 <h5>Insira o seu Apelido</h5>
-                <input class="w100" placeholder="&#xf007;&nbsp; Apelido" id="signupapelido" name="apelido" type="text" required autocomplete='off' />
+                <input class="form-control @error('apelido') is-invalid @enderror" placeholder="&#xf007;&nbsp; Apelido" id="signupapelido" name="apelido" value="{{ old('apelido') }}" type="text" required autocomplete='off' />
+                @error('apelido')
+                <script>
+                    toastr.error('Apelido Inválido!');
+                    $(".signUp").addClass("active-sx");
+                    $(".signIn").addClass("inactive-dx");
+                    $(".signIn").removeClass("active-dx");
+                    $(".signUp").removeClass("inactive-sx");
+                </script>
+                @enderror
                 <h5>Insira o seu Email</h5>
-                <input class="w100" placeholder="&#xf0e0;&nbsp; Email" id="signupemail" name="email" type="email"  required autocomplete='off' />
+                <input class="form-control @error('email') is-invalid @enderror" placeholder="&#xf0e0;&nbsp; Email" value="{{ old('email') }}" id="signupemail" name="email" type="email" required autocomplete='off' />
+                @error('email')
+                <script>
+                    toastr.error('O Email Já Está a Ser Utilizado!');
+                    $(".signUp").addClass("active-sx");
+                    $(".signIn").addClass("inactive-dx");
+                    $(".signIn").removeClass("active-dx");
+                    $(".signUp").removeClass("inactive-sx");
+                </script>
+                @enderror
                 <h5>Insira a sua Password</h5>
-                <input type="password" placeholder="&#xf023;&nbsp; Password" name="password" id="signuppassword" required />
+                <input class="password" type="password" minlength="8" placeholder="&#xf023;&nbsp; Password" name="password" id="signuppassword" required />
+                <div id="strong"><span></span></div>
+                <div class="small">A Password tem de ter pelo menos 8 caracteres</div>
                 <h5>Confirme a sua Password</h5>
-                <input type="password" placeholder="&#xf023;&nbsp; Confirmar Password" name="password_confirmation" id="signupcpassword" required />
-                <input type="hidden"  name="tipouser" value="Utilizador"/>
-                <button class="form-btn dx" type="submit">Criar Conta</button>
+                <input class="password" type="password" minlength="8" placeholder="&#xf023;&nbsp; Confirmar Password" name="password_confirmation" id="signupcpassword" required />
+                <div id="valid"></div>
+                <input type="hidden" name="tipouser" value="Utilizador" />
+                <button class="form-btn dx" name="registar" id="registar" type="submit">Criar Conta</button>
                 <button class="form-btn sx log-in" type="button">Já tem Conta?</button>
             </form>
         </div>
     </div>
     @include('includes.frontend.footer')
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="{{ URL::asset('assets/js/paginas/frontend/login.js') }}"></script>
 </body>

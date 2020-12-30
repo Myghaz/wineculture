@@ -63,6 +63,6 @@ trait RegistersUsers
      */
     protected function registered(Request $request, $user)
     {
-        //
+        return redirect()->route('index')->with('info', 'novo_registo');  
     }
 }

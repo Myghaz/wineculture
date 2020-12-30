@@ -36,7 +36,9 @@ class ComposerStaticInitf6f800d6f65d1ad565fe2032ad3cc8e9
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        'caf23243e9cb3afd48d0414815ebf07e' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/helper.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        '101b35f72e0ccb1b5ef72aa86bba3ef9' => __DIR__ . '/..' . '/yoeunes/toastr/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -47,6 +49,10 @@ class ComposerStaticInitf6f800d6f65d1ad565fe2032ad3cc8e9
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'Y' => 
+        array (
+            'Yoeunes\\Toastr\\' => 15,
         ),
         'X' => 
         array (
@@ -178,6 +184,7 @@ class ComposerStaticInitf6f800d6f65d1ad565fe2032ad3cc8e9
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'Brian2694\\Toastr\\' => 17,
         ),
         'A' => 
         array (
@@ -196,6 +203,10 @@ class ComposerStaticInitf6f800d6f65d1ad565fe2032ad3cc8e9
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'Yoeunes\\Toastr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yoeunes/toastr/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -518,6 +529,10 @@ class ComposerStaticInitf6f800d6f65d1ad565fe2032ad3cc8e9
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'Brian2694\\Toastr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brian2694/laravel-toastr/src',
+        ),
         'Asm89\\Stack\\' => 
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
@@ -563,7 +578,6 @@ class ComposerStaticInitf6f800d6f65d1ad565fe2032ad3cc8e9
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\MainController' => __DIR__ . '/../..' . '/app/Http/Controllers/MainController.php',
         'App\\Http\\Controllers\\MensagensController' => __DIR__ . '/../..' . '/app/Http/Controllers/MensagensController.php',
-        'App\\Http\\Controllers\\MesagensController' => __DIR__ . '/../..' . '/app/Http/Controllers/MesagensController.php',
         'App\\Http\\Controllers\\WPProdsPrecoController' => __DIR__ . '/../..' . '/app/Http/Controllers/WPProdsPrecoController.php',
         'App\\Http\\Controllers\\WPProdutosController' => __DIR__ . '/../..' . '/app/Http/Controllers/WPProdutosController.php',
         'App\\Http\\Controllers\\WPProdutosStockController' => __DIR__ . '/../..' . '/app/Http/Controllers/WPProdutosStockController.php',
@@ -596,6 +610,9 @@ class ComposerStaticInitf6f800d6f65d1ad565fe2032ad3cc8e9
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Brian2694\\Toastr\\Facades\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Facades/Toastr.php',
+        'Brian2694\\Toastr\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Toastr.php',
+        'Brian2694\\Toastr\\ToastrServiceProvider' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/ToastrServiceProvider.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -5224,6 +5241,9 @@ class ComposerStaticInitf6f800d6f65d1ad565fe2032ad3cc8e9
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'Yoeunes\\Toastr\\Facades\\Toastr' => __DIR__ . '/..' . '/yoeunes/toastr/src/Facades/Toastr.php',
+        'Yoeunes\\Toastr\\Toastr' => __DIR__ . '/..' . '/yoeunes/toastr/src/Toastr.php',
+        'Yoeunes\\Toastr\\ToastrServiceProvider' => __DIR__ . '/..' . '/yoeunes/toastr/src/ToastrServiceProvider.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

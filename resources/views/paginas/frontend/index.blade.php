@@ -11,12 +11,20 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/owl.carousel/assets/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.css') }}" />
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 
 <body>
     @include('includes.frontend.navbar')
     @yield('content')
-
+    @if (session('info') == "novo_registo")
+    <script>
+        toastr.success('Obrigado por juntar-se a nós!','Bem-Vindo');
+        toastr.warning('Verifique o seu Email para confirmar a sua conta!','Email Enviado');
+    </script>
+    @endif
     <section id="hero">
         <div class="hero-container">
             <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -459,8 +467,6 @@
 
 
         <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
         <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
         <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/jquery-sticky/jquery.sticky.js') }}"></script>

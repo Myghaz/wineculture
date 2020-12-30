@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
+    'Yoeunes\\Toastr\\' => array($vendorDir . '/yoeunes/toastr/src'),
     'XdgBaseDir\\' => array($vendorDir . '/dnoegel/php-xdg-base-dir/src'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
@@ -88,6 +89,7 @@ return array(
     'Corcel\\' => array($vendorDir . '/jgrossi/corcel/src'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
+    'Brian2694\\Toastr\\' => array($vendorDir . '/brian2694/laravel-toastr/src'),
     'Asm89\\Stack\\' => array($vendorDir . '/asm89/stack-cors/src'),
     'App\\' => array($baseDir . '/app'),
 );

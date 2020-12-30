@@ -46,9 +46,10 @@ Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name(
 Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
 
 
-
+//Autenticação
 Auth::routes(['verify' => true]);
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+//Autenticação
 
 
 //Admin
@@ -89,4 +90,3 @@ Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController
 //receitas Admin
 
 Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('admin_receitas');
-
