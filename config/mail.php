@@ -83,7 +83,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'migel.ciencia655l@gmail.com', 'name' => 'Miguel WineCulture'],
+    'from' => ['address' => 'wineculture.dwm@gmail.com', 'name' => ' WineCulture'],
     /*
     |--------------------------------------------------------------------------
     | Markdown Mail Settings
