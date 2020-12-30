@@ -8,9 +8,10 @@
 </head>
 
 <body>
-    @include('includes.frontend.navbar')
+@include('includes.frontend.navbar')
     @yield('content')
     <div class="container">
+        
         <div class="row">
             <div class="col-md-4">
                 <h3>Contacte-nos:</h3>

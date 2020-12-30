@@ -792,8 +792,8 @@
 
         </div>
     </div>
+    @include('includes.frontend.footer')
 </div>
-@include('includes.frontend.footer')
         <script src="{{ URL::asset('assets/js/paginas/frontend/sobre_vinhos.js') }}"></script>
 </body>
 

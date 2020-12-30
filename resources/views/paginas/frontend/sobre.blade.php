@@ -46,8 +46,8 @@
         </div>
         <br><br><br>
     </div>
+       @include('includes.frontend.footer')
     <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.js') }}"></script>
     <script src="{{ URL::asset('assets/js/paginas/frontend/sobre.js') }}"></script>
-    @include('includes.frontend.footer')
 </body>
 </html>

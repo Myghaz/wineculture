@@ -16,13 +16,17 @@ html {
 
 body {
     overflow-x: hidden;
+    padding: 0px;
+    margin: 0;
 }
 
 .navv {
     width: 100%;
     margin: auto;
-    position: relative;
+    position: fixed;
+    z-index: 20;
     box-shadow: var(--box-shadow);
+    top: 0;
 }
 
 
@@ -124,6 +128,8 @@ div.bb a:hover:after {
     font-size: 20pt;
     display: none;
 }
+
+  
 
 @media screen and (max-width: 1492px) {
     .navbar ul {
