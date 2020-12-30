@@ -5,6 +5,61 @@ $(".log-in").click(function () {
     $(".signIn").removeClass("inactive-dx");
 });
 
+
+$("#signinemail").focus(function () {
+    $('#signinemail').attr('placeholder', '');
+});
+$("#signinemail").blur(function () {
+    $('#signinemail').attr('placeholder', '\uf0e0  Email');
+})
+
+$("#signinpassword").focus(function () {
+    $('#signinpassword').attr('placeholder', '');
+});
+$("#signinpassword").blur(function () {
+    $('#signinpassword').attr('placeholder', '\uf023  Password');
+})
+
+$("#signupnome").focus(function () {
+    $('#signupnome').attr('placeholder', '');
+});
+$("#signupnome").blur(function () {
+    $('#signupnome').attr('placeholder', '\uf007 Nome');
+})
+
+$("#signupapelido").focus(function () {
+    $('#signupapelido').attr('placeholder', '');
+});
+$("#signupapelido").blur(function () {
+    $('#signupapelido').attr('placeholder', '\uf007  Apelido');
+})
+
+$("#signupemail").focus(function () {
+    $('#signupemail').attr('placeholder', '');
+});
+$("#signupemail").blur(function () {
+    $('#signupemail').attr('placeholder', '\uf0e0  Email');
+})
+
+
+$("#signuppassword").focus(function () {
+    $('#signuppassword').attr('placeholder', '');
+});
+$("#signuppassword").blur(function () {
+    $('#signuppassword').attr('placeholder', '\uf023  Password');
+})
+
+
+$("#signupcpassword").focus(function () {
+    $('#signupcpassword').attr('placeholder', '');
+});
+$("#signupcpassword").blur(function () {
+    $('#signupcpassword').attr('placeholder', '\uf023  Confirmar Password');
+})
+
+
+
+
 $(".back").click(function () {
     $(".signUp").addClass("active-sx");
     $(".signIn").addClass("inactive-dx");

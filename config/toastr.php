@@ -17,5 +17,6 @@ return [
         "hideEasing" => "linear",
         "showMethod" => "fadeIn",
         "hideMethod" => "fadeOut"
+        
     ],
 ];

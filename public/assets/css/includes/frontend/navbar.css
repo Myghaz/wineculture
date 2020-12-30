@@ -203,3 +203,6 @@ div.bb a:hover:after {
         width: 130px;
     }
 }
+.toast {
+    opacity: 1 !important;
+}

@@ -17,19 +17,12 @@
                 @csrf
                 <h3>Bem-vindo</br>de Volta !</h3>
                 <h5>Insira o seu Email</h5>
-                <input type="email" placeholder="&#xf007;&nbsp; Email" name="email" id="signinemail" autocomplete='off' required />
-                @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
+                <input  class="form-control @error('email') is-invalid @enderror" placeholder="&#xf0e0;&nbsp; Email" value="{{ old('email') }}" type="email" placeholder="&#xf0e0;&nbsp; Email" name="email" id="signinemail" autocomplete='off' required />
+                @if ($errors->has('email'))
+                <script>toastr.error('Credênciais Incorretas, Verifique os Campos!');</script>
+                @endif
                 <h5>Insira a sua Password</h5>
-                <input type="password" id="signinpassword" placeholder="&#xf023; &nbsp; Password" name="password" required />
-                @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
+                <input class="form-control @error('register_email') is-invalid @enderror" type="password" id="signinpassword" placeholder="&#xf023; &nbsp; Password" name="password" required />
                 <div class="lembrar">
                     <input type="checkbox" name="remember" id="cbx" class="checkb" style="display: none;" {{ old('remember') ? 'checked' : '' }}>
                     <label for="cbx" class="check">
@@ -75,8 +68,8 @@
                 </script>
                 @enderror
                 <h5>Insira o seu Email</h5>
-                <input class="form-control @error('email') is-invalid @enderror" placeholder="&#xf0e0;&nbsp; Email" value="{{ old('email') }}" id="signupemail" name="email" type="email" required autocomplete='off' />
-                @error('email')
+                <input class="form-control @error('register_email') is-invalid @enderror" placeholder="&#xf0e0;&nbsp; Email" value="{{ old('register_email') }}" id="signupemail" name="register_email" type="email" required autocomplete='off' />
+                @error('register_email')
                 <script>
                     toastr.error('O Email Já Está a Ser Utilizado!');
                     $(".signUp").addClass("active-sx");

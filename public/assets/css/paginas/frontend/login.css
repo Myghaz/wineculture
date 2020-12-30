@@ -106,12 +106,14 @@ button {
 #signupnome,
 #signupapelido,
 #signuppassword,
-#signupcpassword {
+#signupcpassword{
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
-    font-size: 13pt;
+    font-size: 14pt!important;
+    display: unset!important;
+    padding: 5px!important;
 }
 
 ::placeholder {
@@ -176,7 +178,8 @@ h5 {
 }
 
 .signUp input,
-.signIn input {
+.signIn input
+{
     border: none;
     border-bottom: var(--borderinputs);
     width: 95%;
@@ -187,6 +190,8 @@ h5 {
     font-weight: 100;
     margin-bottom: 55px;
     transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    border-radius: 0!important;
+
 }
 
 .signUp input {

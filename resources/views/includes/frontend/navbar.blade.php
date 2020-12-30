@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="navv">
-        <div class="navbar bb" id="nav">
+        <div class="navbar bb" id="navbar">
             <div class="img" id="imgnav"> </div>
             <ul>
                 <li @if (Route::currentRouteName()=='index') class="active" @endif><a href="/">Início</a></li>

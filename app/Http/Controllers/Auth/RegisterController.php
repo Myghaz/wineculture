@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 
+
 class RegisterController extends Controller
 {
     /*
@@ -41,21 +42,28 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+
     /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        $validator = Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'apelido' => ['required', 'string', 'max:255'],
             'tipouser' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'register_email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+        $validator->setAttributeNames([
+            'register_email' => 'email',
+        ]);
+
+        return $validator;
     }
 
     /**
@@ -70,7 +78,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'apelido' => $data['apelido'],
             'tipouser' => $data['tipouser'],
-            'email' => $data['email'],
+            'email' => $data['register_email'],
             'password' => Hash::make($data['password']),
         ]);
         $user->sendEmailVerificationNotification();
