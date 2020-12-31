@@ -16,17 +16,17 @@ html {
 
 body {
     overflow-x: hidden;
-    padding: 0px;
-    margin: 0;
 }
 
 .navv {
     width: 100%;
     margin: auto;
-    position: fixed;
-    z-index: 20;
     box-shadow: var(--box-shadow);
-    top: 0;
+    top: 0;   
+    z-index: 20;
+    display: inline-block;
+    position: sticky;
+    position: -webkit-sticky;
 }
 
 
@@ -129,8 +129,6 @@ div.bb a:hover:after {
     display: none;
 }
 
-  
-
 @media screen and (max-width: 1492px) {
     .navbar ul {
         margin-right: 2%;
@@ -208,7 +206,4 @@ div.bb a:hover:after {
         margin-left: 3.5%;
         width: 130px;
     }
-}
-.toast {
-    opacity: 1 !important;
 }

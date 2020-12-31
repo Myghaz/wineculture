@@ -1,7 +1,7 @@
 
 /* ------------ ☀️ / 🌒 Switch Toggle ------------ */
 span.toggle {
-    position: absolute;
+    position: fixed;
     display: inline;
     cursor: pointer;
     top: 20px;
@@ -48,6 +48,11 @@ span.wave.active {
     0%   { transform: scale(1); }
     50%  { transform: scale(0); }
     100% { transform: scale(1); }
+}
+.defs{
+    position: fixed;
+    top: 0;
+    z-index: 20;
 }
 
 .pie {

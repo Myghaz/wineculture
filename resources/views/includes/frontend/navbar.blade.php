@@ -19,9 +19,9 @@
                 <i id="navbar" class="fa fa-bars"></i>
             </div>
         </div>
-        @include('includes.frontend.settings')
+   
     </div>
-
+    @include('includes.frontend.settings')
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
 </body>
 </html>

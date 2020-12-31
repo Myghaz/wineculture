@@ -12,6 +12,7 @@
 
 
     @if (Auth::check())
+    <div class="defs">
     <div class="pie pie1" onclick="document.body.classList.remove('active')">
         <a href="/logout">
             <div class="pie-color pie-color1">
@@ -41,6 +42,7 @@
                 <path d="M 24.056276,73.999716 L 55,74.000284" />
             </g>
         </svg>
+    </div>
     </div>
     @endif
     <script src="{{ URL::asset('assets/js/layouts/frontend/settings.js') }}"></script>

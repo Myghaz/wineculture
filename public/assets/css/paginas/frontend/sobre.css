@@ -1,6 +1,4 @@
-body {
-    background-color: #f5f9fc;
-}
+
 #myBtn {
 display: none;
 position: fixed;
@@ -10,7 +8,6 @@ z-index: 99;
 font-size: 18px;
 border: none;
 outline: none;
-
 background-color: #742f37;
 color: white;
 cursor: pointer;
@@ -21,7 +18,6 @@ border-radius: 4px;
 #myBtn:hover {
 background-color: #555;
 }
-
 
 .zoom-img {
 width: 250px;
