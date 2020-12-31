@@ -74,14 +74,17 @@ span.wave.active {
   .pie1 {
     clip-path: polygon(200px 200px, 344px 450px, 0 450px);
     transition-delay: 30ms;
+    border: 3px solid #742f37;
   }
   .pie2 {
     clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
     transition-delay: 60ms;
+    border: 3px solid #742f37;
   }
   .pie3 {
     clip-path: polygon(200px 200px, 450px 0, 450px 344px);
     transition-delay: 90ms;
+    border: 3px solid #742f37;
   }
   .pie-color {
     width: 100%;
@@ -89,28 +92,28 @@ span.wave.active {
     border-radius: 50%;
   }
   .pie-color1 {
-    background: linear-gradient(135deg, #444, #b7e13f);
+    background: white;
     clip-path: polygon(200px 200px, 344px 450px, 0 450px);
   }
   .pie-color2 {
-    background: linear-gradient(135deg, #444, #7e84f9);
+    background: white;
     clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
   }
   .pie-color3 {
-    background: linear-gradient(135deg, #f12711, #f51919);
+    background: white;
     clip-path: polygon(200px 200px, 450px 0, 450px 344px);
   }
   .profile {
     left: 210px;
     position: absolute;
-    top: 310px;
-    width: 46px;
+    top: 320px;
+    width: 40px;
   }
-  .discount {
+  .chat {
     left: 288px;
     position: absolute;
-    top: 258px;
-    width: 46px;
+    top: 282px;
+    width: 40px;
   }
   .logout {
     left: 320px;
