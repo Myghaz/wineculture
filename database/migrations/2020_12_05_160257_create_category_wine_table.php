@@ -16,6 +16,7 @@ class CreateCategoryWineTable extends Migration
         Schema::create('category_wines', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
+            $table->string('img');
             $table->timestamps();
         });
     }

@@ -455,9 +455,9 @@
             <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
               <div class="image mb-3 mt-n9">
                 @if ($ultuser->img == "Sem Imagem")
-                <img style="width: 100px; height:100px;" src="/assets/img/users/sem_imagem.jpg" class="img-fluid rounded-circle" alt="Avatar Image">
+                <img style="width: 100px; height:100px;" src="/assets/img/users/sem_imagem.jpg" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @else
-                <img src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="Avatar Image">
+                <img src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @endif
               </div>
 
@@ -475,8 +475,8 @@
               </ul>
             </a>
             <div class="row justify-content-center">
-              @php $iposts = 0; @endphp
               <div class="col-4 px-1">
+                @php $iposts = 0; @endphp
                 @foreach($total_posts as $key => $post)
                 @if ($post->id_user == $ultuser->id)
                 @php ++$iposts @endphp
@@ -522,6 +522,103 @@
       </div>
 
 
+      @endforeach
+    </div>
+
+    <h2 class="titulo">Ultimas Categorias Criadas</h2>
+    <div class="row ultusers">
+      @foreach($ultimas_categorias as $key => $categoria)
+
+      <div class="col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card card-default mt-6">
+          <div class="card-body text-center p-4">
+            <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
+              <div class="image mb-3 mt-n9">
+                <img style="width: 100px; height:100px;" src="/assets/img/paginas/backend/dashboard/categorias.jpg" class="img-fluid rounded-circle" alt="{{$categoria->name}}">
+              </div>
+
+              <h5 class="card-title text-dark">{{$categoria->name}}</h5>
+
+              <ul class="list-unstyled">
+                <li class="d-flex mb-1">
+                  <i class="mdi mdi-calendar-check mr-1"></i>
+                  <span>Data de Criação: {{ date('d-m-Y', strtotime($categoria->created_at))}} </span>
+                </li>
+              </ul>
+            </a>
+            <div class="row justify-content-center">
+              <div class="col-4 px-1">
+                @php $iposts = 0; @endphp
+                @foreach($total_posts as $key => $post)
+                @if ($post->id_categoria == $categoria->id)
+                @php ++$iposts @endphp
+                @endif
+                @endforeach
+                @php $percentagemposts = ($iposts*100)/$total_posts_count @endphp
+                @php $percentagemposts = round($percentagemposts, 0) @endphp
+                <div class=" circle" data-size="60" data-value="0.<?php echo $percentagemposts; ?>" data-thickness="4" data-fill="{
+                    &quot;color&quot;: &quot;#35D00E&quot;
+													}">
+                  <div class="circle-content">
+                    <h6 class="text-uppercase">posts</h6>
+                    <h6><?php echo $percentagemposts; ?>%</h6>
+                    <strong></strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
+
+
+    <h2 class="titulo">Ultimas Categorias de Vinho Criadas</h2>
+    <div class="row ultusers">
+      @foreach($ultimas_categorias_vinhos as $key => $categoria_vinho)
+
+      <div class="col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card card-default mt-6">
+          <div class="card-body text-center p-4">
+            <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
+              <div class="image mb-3 mt-n9">
+                <img style="width: 100px; height:100px;" src="/assets/img/vinhos/{{$categoria_vinho->img}}" class="img-fluid rounded-circle" alt="{{$categoria_vinho->nome}}">
+              </div>
+
+              <h5 class="card-title text-dark">{{$categoria_vinho->nome}}</h5>
+
+              <ul class="list-unstyled">
+                <li class="d-flex mb-1">
+                  <i class="mdi mdi-calendar-check mr-1"></i>
+                  <span>Data de Criação: {{ date('d-m-Y', strtotime($categoria_vinho->created_at))}} </span>
+                </li>
+              </ul>
+            </a>
+            <div class="row justify-content-center">
+              <div class="col-4 px-1">
+                @php $ireceitas = 0; @endphp
+                @foreach($total_receitas as $key => $receita)
+                @if ($receita->id_categoria == $categoria_vinho->id)
+                @php ++$ireceitas @endphp
+                @endif
+                @endforeach
+                @php $percentagemreceitas = ($ireceitas*100)/$total_receitas_count @endphp
+                @php $percentagemreceitas = round($percentagemreceitas, 0) @endphp
+                <div class=" circle" data-size="60" data-value="0.<?php echo $percentagemreceitas; ?>" data-thickness="4" data-fill="{
+                  &quot;color&quot;: &quot;#35D00E&quot;
+													}">
+                  <div class="circle-content">
+                    <h6 class="text-uppercase">rceitas</h6>
+                    <h6><?php echo $percentagemreceitas; ?>%</h6>
+                    <strong></strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       @endforeach
     </div>
 

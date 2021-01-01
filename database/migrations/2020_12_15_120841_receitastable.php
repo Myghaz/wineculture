@@ -17,9 +17,11 @@ class Receitastable extends Migration
             $table->id();
             $table->string('nome');
             $table->string('foto');
-            $table->enum('tipovinho', array('tinto', 'branco', 'verde'));
+            $table->biginteger('id_categoria')->unsigned();
             $table->string('descricao');
             $table->timestamps();
+            $table->foreign('id_categoria')
+            ->references('id')->on('category_wines');
         });
     }
 

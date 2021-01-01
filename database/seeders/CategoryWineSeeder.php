@@ -15,18 +15,23 @@ class CategoryWineSeeder extends Seeder
     {
         category_wine::create([
             'nome' => 'Tinto',
+            'img' => '1.jpg',
         ]);
         category_wine::create([
             'nome' => 'Verde',
+            'img' => '2.jpg',
         ]);
         category_wine::create([
             'nome' => 'Rosé',
+            'img' => '3.jpg',
         ]);
         category_wine::create([
             'nome' => 'Branco',
+            'img' => '4.jpg',
         ]);
         category_wine::create([
             'nome' => 'Espumante',
+            'img' => '5.jpg',
         ]);
     }
 }

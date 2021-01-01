@@ -21,11 +21,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(UsersSeeder::class);
+        $this->call(CategorySeeder::class);
+        $this->call(CategoryWineSeeder::class);
         $this->call(BlogsSeeder::class);
         $this->call(PerguntasSeeder::class);
         $this->call(receitasseeder::class);
-        $this->call(CategoryWineSeeder::class);
-        $this->call(CategorySeeder::class);
         $this->call(MensagensSeeder::class);
     }
 }

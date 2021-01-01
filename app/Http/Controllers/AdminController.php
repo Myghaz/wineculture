@@ -12,6 +12,8 @@ use App\Models\WPProdutosStock;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\Blog;
+use App\Models\Category;
+use App\Models\category_wine;
 class AdminController extends Controller
 {
     public function admin()
@@ -179,6 +181,10 @@ class AdminController extends Controller
         $ultimos_users = DB::table('users')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get(); 
         $total_posts = Blog::all();
         $total_posts_count = $total_posts->count();
+        $ultimas_categorias = DB::table('categories')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get(); 
+        $ultimas_categorias_vinhos = DB::table('category_wines')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get(); 
+        $total_receitas = Receitas::all();
+        $total_receitas_count = $total_receitas->count();
         return view('paginas.backend.dashboard', compact([
             'totalUsersJan',
             'totalUsersFev',
@@ -234,7 +240,11 @@ class AdminController extends Controller
             'itens',
             'ultimos_users',
             'total_posts_count',
-            'total_posts'
+            'total_posts',
+            'ultimas_categorias',
+            'ultimas_categorias_vinhos',
+            'total_receitas',
+            'total_receitas_count'
         ]));
     }        
 }
