@@ -555,7 +555,6 @@ td.prods_wp_stock_red, td.prods_wp_stock_green,td.prods_wp_stock_yellow{
   margin-left: -15px;
 }
 
-
 .row-socials .c-icon {
   display: inline-block;
   color: inherit;
@@ -634,7 +633,14 @@ td.prods_wp_stock_red, td.prods_wp_stock_green,td.prods_wp_stock_yellow{
 .text-value-xl {
   font-size: 1.53125rem;
 }
-
-
-
+h2.titulo{
+   margin-top: 20px;
+   color: black;
+}
+div.ultusers, div.socials, div.chat, div.tabelas{
+   margin-top: 20px;
+}
+div.chat{
+   margin-bottom: 50px!important;
+}
 

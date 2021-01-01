@@ -11,6 +11,7 @@ use App\Models\receitas;
 use App\Models\WPProdutosStock;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\Blog;
 class AdminController extends Controller
 {
     public function admin()
@@ -173,7 +174,12 @@ class AdminController extends Controller
             ->get();
         $mensagens_chat_teste = Mensagens::where('id_destino', Auth::id())->orWhere('id_envio', Auth::id())->orderBy('created_at', 'ASC')->get();
         $id_user_auth = Auth::id();
-   
+
+
+
+        $ultimos_users = DB::table('users')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get(); 
+        $total_posts = Blog::all();
+        $total_posts_count = $total_posts->count();
         return view('paginas.backend.dashboard', compact([
             'totalUsersJan',
             'totalUsersFev',
@@ -226,7 +232,10 @@ class AdminController extends Controller
             'mensagens',
             'mensagens_chat',
             'id_user_auth',
-            'itens'
+            'itens',
+            'ultimos_users',
+            'total_posts_count',
+            'total_posts'
         ]));
     }        
 }

@@ -1,7 +1,12 @@
 @extends ('layouts.backend.admin')
 @section('title', 'Dashboard')
-
 @section('content')
+<nav aria-label="breadcrumb bread">
+  <ol class="breadcrumb breadcrumb-inverse">
+    <li class="breadcrumb-item"><a href="{{ route('admin_dashboard')}}">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+  </ol>
+</nav>
 <div class="content-wrapper">
   <div class="content">
     <!-- Top Statistics -->
@@ -29,8 +34,6 @@
           </div>
         </div>
       </div>
-
-
 
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
@@ -102,7 +105,8 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <h2 class="titulo">Tabelas</h2>
+    <div class="row tabelas">
       <div class="col-12">
         <!-- Recent Order Table -->
         <div class="card card-table-border-none" id="users">
@@ -232,7 +236,8 @@
         </div>
       </div>
     </div>
-    <div class="row-socials">
+    <h2 class="titulo">Redes Sociais</h2>
+    <div class="row-socials socials">
       <div class="col-sm-6 col-lg-6">
         <div class="card">
           <a target="_blank" href="https://www.facebook.com/Testedwmwc-100224601998953">
@@ -275,7 +280,8 @@
       </div>
     </div>
 
-    <div class="card card-default mb-0">
+    <h2 class="titulo">Chat</h2>
+    <div class="card card-default mb-0 chat">
       <div class="row bg-white no-gutters chat">
         <div class="col-lg-4">
           <!-- Chat Left Side -->
@@ -288,17 +294,24 @@
             <ul class="list-unstyled border-top mb-0" id="chat-left-content">
               @foreach($mensagens as $key => $mensagem)
               <li>
-              @foreach($users as $key => $user)
-                    @if ($user->id == $mensagem->id_envio)
-                  <a id="chatact-{{$user->id}}"  class="media media-message" style="width: 100%; height: 100%; z-index: 5;">
+                @foreach($users as $key => $user)
+                @if ($user->id == $mensagem->id_envio)
+                <a id="chatact-{{$user->id}}" class="media media-message" style="width: 100%; height: 100%; z-index: 5;">
                   @endif
                   @endforeach
                   <div class="position-relative mr-3">
-                    <img class="rounded-circle" src="assets/img/user/u1.jpg" alt="Image">
-                    <span class="status away"></span>
+                    @foreach($users as $key => $user)
+                    @if ($user->id == $mensagem->id_envio)
+                    @if ($user->img == "Sem Imagem")
+                    <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle" alt="Avatar Image">
+                    @else
+                    <img src="/assets/img/users/{{$user->img}}" class="rounded-circle" alt="Avatar Image">
+                    @endif
+                    @endif
+                    @endforeach
                   </div>
                   <div class="media-body d-flex justify-content-between" style="pointer-events: none;">
-                    <div  class="message-contents" >
+                    <div class="message-contents">
                       <h4 class="title">
                         @foreach($users as $key => $user)
                         @if ($user->id == $mensagem->id_envio)
@@ -306,26 +319,51 @@
                         @endif
                         @endforeach
                       </h4>
-                      <p class="last-msg">{{$mensagem->mensagem}}.</p>
                     </div>
-                    <span class="date">{{$mensagem->created_at }}</span>
+                    <span class="date">Clique para abrir</span>
                   </div>
                 </a>
               </li>
               @endforeach
             </ul>
           </div>
-
         </div>
-
         <div class="col-lg-7 col-xl-8">
           <!-- Chats -->
           <div class="chat-right-side">
             <div class="media media-chat align-items-center mb-0 media-chat-header" href="#">
-              <img class="rounded-circle mr-3" src="assets/img/user/u2.jpg" alt="Image">
+              @foreach($users as $key => $user)
+              @if ($user->id == $mensagem->id_envio)
+              @if ($user->img == "Sem Imagem")
+              <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
+              @else
+              <img src="/assets/img/users/{{$user->img}}" class="rounded-circle mr-3" alt="Avatar Image">
+              @endif
+              @endif
+              @endforeach
               <div class="media-body w-100">
                 <div class="d-flex justify-content-between align-items-center">
-                  <h3 class="heading-title mb-0"><a href="#">Leon Battista</a></h3>
+                @foreach($itens as $key => $iten)
+                    @foreach($mensagens_chat as $key => $chat)
+
+                        @if ($chat->id_envio == $iten->id_envio || $chat->id_destino == $iten->id_envio)
+
+                        @if ($chat->id_envio == $iten->id_envio)
+                          @foreach($users as $key => $user)
+                            @if ($user->id == $iten->id_envio)
+                              <h3 class="heading-title mb-0"><a href="#">{{$user->name}}</a></h3>
+                              @if ($user->img == "Sem Imagem")
+                                <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
+                              @else
+                                <img src="/assets/img/users/{{$user->img}}" class="rounded-circle mr-3" alt="Avatar Image">
+                              @endif
+                            @endif
+                          @endforeach
+                        @endif
+                        @endif
+                    @endforeach
+                  @endforeach
+                  
                   <div class="dropdown">
                     <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                     </a>
@@ -337,11 +375,6 @@
                 </div>
               </div>
             </div>
-
-
-      
-
-
             <div class="chat-right-content" data-simplebar="init">
               <div class="simplebar-wrapper" style="margin: -24px;">
                 <div class="simplebar-height-auto-observer-wrapper">
@@ -351,19 +384,25 @@
                   <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
                     <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;">
                       <div class="simplebar-content" id style="padding: 24px;">
-                      @foreach($itens as $key => $iten)
+                        @foreach($itens as $key => $iten)
                         @foreach($mensagens_chat as $key => $chat)
-                       
+
                         @if ($chat->id_envio == $iten->id_envio || $chat->id_destino == $iten->id_envio)
 
                         @if ($chat->id_envio == $iten->id_envio)
                         <div class="media media-chat media-left chatact-{{$iten->id_envio}}">
-                          <img class="rounded-circle mr-3" src="assets/img/user/u2.jpg" alt="Image">
+                          @foreach($users as $key => $user)
+                          @if ($user->id == $iten->id_envio)
+                          @if ($user->img == "Sem Imagem")
+                          <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
+                          @else
+                          <img src="/assets/img/users/{{$user->img}}" class="rounded-circle mr-3" alt="Avatar Image">
+                          @endif
+                          @endif
+                          @endforeach
                           <div class="media-body">
                             <p class="message">{{$chat->mensagem}}</p>
                             <div class="date-time">{{$chat->created_at}}</div>
-                            <script>
-                            document.write(activechat);</script>
                           </div>
                         </div>
                         @endif
@@ -393,7 +432,7 @@
                 <div class="simplebar-scrollbar" style="height: 98px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
               </div>
             </div>
-            
+
 
             <form class="px-5 pb-3">
               <input type="text" class="form-control mb-3" placeholder="Type your message here">
@@ -403,6 +442,87 @@
         </div>
       </div>
     </div>
+
+    <h2 class="titulo">Ultimos Registos</h2>
+    <div class="row ultusers">
+      @foreach($ultimos_users as $key => $ultuser)
+
+      <div class="col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card card-default mt-6">
+          <div class="card-body text-center p-4">
+            <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
+              <div class="image mb-3 mt-n9">
+                @if ($ultuser->img == "Sem Imagem")
+                <img style="width: 100px; height:100px;" src="/assets/img/users/sem_imagem.jpg" class="img-fluid rounded-circle" alt="Avatar Image">
+                @else
+                <img src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="Avatar Image">
+                @endif
+              </div>
+
+              <h5 class="card-title text-dark">{{$ultuser->name}} {{$ultuser->apelido}}</h5>
+
+              <ul class="list-unstyled">
+                <li class="d-flex mb-1">
+                  <i class="mdi mdi-calendar-check mr-1"></i>
+                  <span>Data de Registo: {{ date('d-m-Y', strtotime($ultuser->created_at))}} </span>
+                </li>
+                <li class="d-flex">
+                  <i class="mdi mdi-email mr-1"></i>
+                  <span>{{$ultuser->email}}</span>
+                </li>
+              </ul>
+            </a>
+            <div class="row justify-content-center">
+              @php $iposts = 0; @endphp
+              <div class="col-4 px-1">
+                @foreach($total_posts as $key => $post)
+                @if ($post->id_user == $ultuser->id)
+                @php ++$iposts @endphp
+                @endif
+                @endforeach
+                @php $percentagemposts = ($iposts*100)/$total_posts_count @endphp
+                @php $percentagemposts = round($percentagemposts, 0) @endphp
+                <div class=" circle" data-size="60" data-value="0.<?php echo $percentagemposts; ?>" data-thickness="4" data-fill="{
+														&quot;color&quot;: &quot;#35D00E&quot;
+													}">
+                  <div class="circle-content">
+                    <h6 class="text-uppercase">posts</h6>
+                    <h6><?php echo $percentagemposts; ?>%</h6>
+                    <strong></strong>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 px-1">
+                <div class=" circle" data-size="60" data-value="0.95" data-thickness="4" data-fill="{
+														&quot;color&quot;: &quot;#fec400&quot;
+													}">
+                  <div class="circle-content">
+                    <h6 class="text-uppercase">rceitas</h6>
+                    <h6>65%</h6>
+                    <strong></strong>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 px-1">
+                <div class=" circle" data-size="60" data-value="0.90" data-thickness="4" data-fill="{
+														&quot;color&quot;: &quot;#fe5461&quot;
+													}">
+                  <div class="circle-content">
+                    <h6 class="text-uppercase">class</h6>
+                    <h6>25%</h6>
+                    <strong></strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      @endforeach
+    </div>
+
   </div>
   <script>
     var totalUsersJan = {{$totalUsersJan}};
@@ -444,6 +564,4 @@
     var totalProdsNov = {{$totalProdsNov}};
     var totalProdsDez = {{$totalProdsDez}};
   </script>
-
- 
   @endsection

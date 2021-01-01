@@ -5169,6 +5169,9 @@ input[type="button"].btn-block {
     list-style: none;
     background-color: transparent;
     border-radius: 0.25rem;
+    width: 92%;
+    margin: 20px  auto;
+    margin-top: 50px;
 }
 
 .breadcrumb-item+.breadcrumb-item {
@@ -12860,9 +12863,6 @@ label {
     border-left: 4px solid transparent;
 }
 
-.chat {
-    border-radius: 50px;
-}
 
 .chat .chat-left-side .chat-search {
     padding-left: 1rem;
