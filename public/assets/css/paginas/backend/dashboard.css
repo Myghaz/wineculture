@@ -643,4 +643,16 @@ div.ultusers, div.socials, div.chat, div.tabelas{
 div.chat{
    margin-bottom: 50px!important;
 }
+div.chatheader{
+   height: 90px;
+   color: black;
+   text-align: center;
+}
+div.chatheader h2{
+   line-height: 85px;
+}
+.spacechat {
+   height: 100px!important;
+}
+
 

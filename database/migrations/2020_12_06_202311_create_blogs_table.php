@@ -17,12 +17,14 @@ class CreateBlogsTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->date('data');
-            $table->string('autor');
+            $table->biginteger('id_user')->unsigned();
             $table->string('categoria');
             $table->string('preview');
             $table->longText('descricao');
             $table->string('img');
             $table->timestamps();
+            $table->foreign('id_user')
+            ->references('id')->on('users');
         });
     }
 

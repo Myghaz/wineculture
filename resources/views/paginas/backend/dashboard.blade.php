@@ -287,9 +287,9 @@
           <!-- Chat Left Side -->
           <div class="chat-left-side">
 
-            <form class="chat-search">
-              <input type="text" class="form-control" placeholder="Search...">
-            </form>
+            <div class="chatheader">
+              <h2>WINECHAT</h2>
+            </div>
 
             <ul class="list-unstyled border-top mb-0" id="chat-left-content">
               @foreach($mensagens as $key => $mensagem)
@@ -331,47 +331,33 @@
         <div class="col-lg-7 col-xl-8">
           <!-- Chats -->
           <div class="chat-right-side">
-            <div class="media media-chat align-items-center mb-0 media-chat-header" href="#">
-              @foreach($users as $key => $user)
-              @if ($user->id == $mensagem->id_envio)
-              @if ($user->img == "Sem Imagem")
-              <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
-              @else
-              <img src="/assets/img/users/{{$user->img}}" class="rounded-circle mr-3" alt="Avatar Image">
-              @endif
-              @endif
-              @endforeach
+            <div style=" height: 91px;" class="media media-chat align-items-center mb-0 media-chat-header" href="#">
               <div class="media-body w-100">
                 <div class="d-flex justify-content-between align-items-center">
-                @foreach($itens as $key => $iten)
-                    @foreach($mensagens_chat as $key => $chat)
+                  @foreach($itens as $key => $iten)
+                  @foreach($users as $key => $user)
 
-                        @if ($chat->id_envio == $iten->id_envio || $chat->id_destino == $iten->id_envio)
+                  @if ($user->id == $iten->id_envio || $user->id == $iten->id_envio)
 
-                        @if ($chat->id_envio == $iten->id_envio)
-                          @foreach($users as $key => $user)
-                            @if ($user->id == $iten->id_envio)
-                              <h3 class="heading-title mb-0"><a href="#">{{$user->name}}</a></h3>
-                              @if ($user->img == "Sem Imagem")
-                                <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
-                              @else
-                                <img src="/assets/img/users/{{$user->img}}" class="rounded-circle mr-3" alt="Avatar Image">
-                              @endif
-                            @endif
-                          @endforeach
-                        @endif
-                        @endif
-                    @endforeach
-                  @endforeach
-                  
-                  <div class="dropdown">
-                    <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="user-profile.html">Profile</a>
-                      <a class="dropdown-item" href="index.html">Logout</a>
-                    </div>
+                  @if ($user->id == $iten->id_envio)
+                  <div style="align-items: center; " class="media media-chat media-left mb-0 chatact-{{$iten->id_envio}}">
+
+                    @if ($user->id == $iten->id_envio)
+                    @if ($user->img == "Sem Imagem")
+
+                    <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
+
+                    @else
+                    <img src="/assets/img/users/{{$user->img}}" class="rounded-circle mr-3" alt="Avatar Image">
+                    @endif
+                    @endif
+
+                    <h3 class="heading-title mb-0"><a href="#">{{$user->name}} {{$user->apelido}}</a></h3>
                   </div>
+                  @endif
+                  @endif
+                  @endforeach
+                  @endforeach
                 </div>
               </div>
             </div>
@@ -435,7 +421,32 @@
 
 
             <form class="px-5 pb-3">
-              <input type="text" class="form-control mb-3" placeholder="Type your message here">
+
+
+
+
+              @foreach($itens as $key => $iten)
+              @foreach($users as $key => $user)
+
+              @if ($user->id == $iten->id_envio || $user->id == $iten->id_envio)
+
+              @if ($user->id == $iten->id_envio)
+              <div style="align-items: center; " class="media  media-left chatact-{{$iten->id_envio}}">
+                <input type="hidden" value="{{$user->id}}">
+                <input type="text" class="form-control mb-3" placeholder="Escreva a sua resposta....">
+              </div>
+              @endif
+              @endif
+              @endforeach
+              @endforeach
+
+
+
+
+
+
+
+
             </form>
           </div>
 

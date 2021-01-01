@@ -172,7 +172,6 @@ class AdminController extends Controller
             ->where('id_destino', Auth::id())
             ->distinct('id_envio')
             ->get();
-        $mensagens_chat_teste = Mensagens::where('id_destino', Auth::id())->orWhere('id_envio', Auth::id())->orderBy('created_at', 'ASC')->get();
         $id_user_auth = Auth::id();
 
 

@@ -56,6 +56,7 @@ class UsersSeeder extends Seeder
             'password' => bcrypt('123456'),
             'name' => 'Produtor',
             'apelido' => 'Tres',
+            'img' => '29.jpg',
             'data_nasc' => Carbon::parse('1983-03-22'),
             'created_at' => Carbon::parse('2020-03-22'),
         ]);
@@ -65,6 +66,7 @@ class UsersSeeder extends Seeder
             'password' => bcrypt('123456'),
             'name' => 'Utilizador',
             'apelido' => 'Um',
+            'img' => '26.jpg',
             'data_nasc' => Carbon::parse('2000-02-12'),
             'created_at' => Carbon::parse('2020-02-12'),
         ]);
@@ -254,6 +256,7 @@ class UsersSeeder extends Seeder
             'password' => bcrypt('123456'),
             'name' => 'Produtor',
             'apelido' => 'Treze',
+            'img' => '26.jpg',
             'data_nasc' => Carbon::parse('1993-03-26'),
             'created_at' => Carbon::parse('2020-12-26'),
         ]);
@@ -281,6 +284,7 @@ class UsersSeeder extends Seeder
             'password' => bcrypt('123456'),
             'name' => 'Produtor',
             'apelido' => 'Dezasseis',
+            'img' => '29.jpg',
             'data_nasc' => Carbon::parse('1993-03-26'),
             'created_at' => Carbon::parse('2020-12-26'),
         ]);
