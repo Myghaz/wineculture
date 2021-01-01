@@ -12,7 +12,6 @@ $(".media-right").css("display", "none");
   });
 });
 
-element.scrollTop = element.scrollHeight;
 $('#chatbox a').click( function(e) {e.preventDefault(); return false; } );
 let usersdata = [totalUsersJan, totalUsersFev, totalUsersMar, totalUsersAbr, totalUsersMai, totalUsersJun, totalUsersJul, totalUsersAgo, totalUsersSet, totalUsersOut, totalUsersNov, totalUsersDez];
 Datausers = {
