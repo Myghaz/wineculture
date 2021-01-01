@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Mensagens extends Model
 {
     protected $fillable = [
-        'mensagem'
+        'mensagem',
+        'id_envio',
+        'id_destino'
     ];
 }

@@ -5,9 +5,11 @@ $(document).ready(function() {
   $(".media-message").click(function(event) {
     var activechat = (event.target.id);
     $(".media-left").css("display", "none");
-$(".media-right").css("display", "none");
+    $(".media-right").css("display", "none");
     $('.' + activechat).css("display", "flex");
-    $("#chatdiv").scrollTop(1000);
+
+
+
     $("#chat-right-content").animate({ scrollTop: $('#chat-right-content').prop("scrollHeight")}, 1000);
   });
 });

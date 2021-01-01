@@ -90,3 +90,6 @@ Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController
 //receitas Admin
 
 Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('admin_receitas');
+
+//mensagen
+Route::post('/admin/dashboard', [App\Http\Controllers\ChatController::class, 'frontend_store'])->name('mensagens_backend_store');

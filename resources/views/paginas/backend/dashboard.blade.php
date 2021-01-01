@@ -370,7 +370,7 @@
                   <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
                     <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;">
                       <div class="simplebar-content" style="padding: 24px;">
-                      @foreach($itens as $key => $iten)
+                        @foreach($itens as $key => $iten)
                         @foreach($mensagens_chat as $key => $chat)
 
                         @if ($chat->id_envio == $iten->id_envio || $chat->id_destino == $iten->id_envio)
@@ -422,23 +422,22 @@
                 <div class="simplebar-scrollbar" style="height: 50px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
               </div>
             </div>
-            <form action="none" class="px-5 pb-3">
-              @foreach($itens as $key => $iten)
-              @foreach($users as $key => $user)
+            @foreach($itens as $key => $iten)
+            @foreach($users as $key => $user)
 
-              @if ($user->id == $iten->id_envio || $user->id == $iten->id_envio)
+            @if ($user->id == $iten->id_envio || $user->id == $iten->id_envio)
 
-              @if ($user->id == $iten->id_envio)
-              <div class="media media-left chatact-{{$iten->id_envio}}">
-                <form style="width: 95%; margin: auto auto;" action="">
-                <input type="hidden" name="id_envio" value="{{$user->id}}">
-                <input type="text" name="mensagem" class="form-control mb-3" placeholder="Escreva a sua resposta....">
-                </form>
-              </div>
-              @endif
-              @endif
-              @endforeach
-              @endforeach
+            @if ($user->id == $iten->id_envio)
+            <form method="POST" class="media media-left px-5 pb-3 chatact-{{$iten->id_envio}}" action="{{route('mensagens_backend_store')}}">
+              {{ csrf_field() }}
+              <input type="hidden" name="id_destino" value="{{$user->id}}">
+              <input type="text" name="mensagem" class="form-control mb-3" placeholder="Escreva a sua resposta....">
+
+            </form>
+            @endif
+            @endif
+            @endforeach
+            @endforeach
             </form>
           </div>
 
@@ -528,7 +527,7 @@
 
   </div>
   <script>
-  var totalUsersJan = {{$totalUsersJan}};
+ var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};
     var totalUsersMar = {{$totalUsersMar}};
     var totalUsersAbr = {{$totalUsersAbr}};
