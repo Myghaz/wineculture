@@ -288,5 +288,15 @@ class UsersSeeder extends Seeder
             'data_nasc' => Carbon::parse('1993-03-26'),
             'created_at' => Carbon::parse('2020-12-26'),
         ]);
+        User::create([
+            'tipouser' => 'Utilizador',
+            'email' => 'miguel.ciencia655@gmail.com',
+            'password' => bcrypt('123123123'),
+            'name' => 'Miguel',
+            'apelido' => 'Pereira',
+            'img' => '142.jpg',
+            'data_nasc' => Carbon::parse('1993-03-26'),
+            'created_at' => Carbon::parse('2020-12-26'),
+        ]);
     }
 }

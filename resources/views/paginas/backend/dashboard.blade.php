@@ -361,16 +361,16 @@
                 </div>
               </div>
             </div>
-            <div class="chat-right-content" data-simplebar="init">
+            <div class="chat-right-content" id="chat-right-content" data-simplebar="init">
               <div class="simplebar-wrapper" style="margin: -24px;">
                 <div class="simplebar-height-auto-observer-wrapper">
                   <div class="simplebar-height-auto-observer"></div>
                 </div>
-                <div class="simplebar-mask">
+                <div style="margin-bottom: 50px;" class="simplebar-mask">
                   <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
                     <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;">
-                      <div class="simplebar-content" id style="padding: 24px;">
-                        @foreach($itens as $key => $iten)
+                      <div class="simplebar-content" style="padding: 24px;">
+                      @foreach($itens as $key => $iten)
                         @foreach($mensagens_chat as $key => $chat)
 
                         @if ($chat->id_envio == $iten->id_envio || $chat->id_destino == $iten->id_envio)
@@ -398,7 +398,11 @@
                             <p class="message">{{$chat->mensagem}}</p>
                             <div class="date-time">{{$chat->created_at}}</div>
                           </div>
-                          <img class="rounded-circle ml-3" src="assets/img/user/u4.jpg" alt="Image">
+                          @if (Auth::user()->img == "Sem Imagem")
+                          <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
+                          @else
+                          <img class="rounded-circle ml-3" src="/assets/img/users/{{Auth::user()->img}}" alt="Image">
+                          @endif
                         </div>
                         @endif
                         @endif
@@ -409,29 +413,23 @@
                     </div>
                   </div>
                 </div>
-                <div class="simplebar-placeholder" style="width: auto; height: 586px;"></div>
+                <div class="simplebar-placeholder" style="width: auto;"></div>
               </div>
               <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
                 <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
               </div>
               <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
-                <div class="simplebar-scrollbar" style="height: 98px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+                <div class="simplebar-scrollbar" style="height: 50px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
               </div>
             </div>
-
-
-            <form class="px-5 pb-3">
-
-
-
-
+            <form action="none" class="px-5 pb-3">
               @foreach($itens as $key => $iten)
               @foreach($users as $key => $user)
 
               @if ($user->id == $iten->id_envio || $user->id == $iten->id_envio)
 
               @if ($user->id == $iten->id_envio)
-              <div style="align-items: center; " class="media  media-left chatact-{{$iten->id_envio}}">
+              <div class="media media-left chatact-{{$iten->id_envio}}">
                 <input type="hidden" value="{{$user->id}}">
                 <input type="text" class="form-control mb-3" placeholder="Escreva a sua resposta....">
               </div>
@@ -439,14 +437,6 @@
               @endif
               @endforeach
               @endforeach
-
-
-
-
-
-
-
-
             </form>
           </div>
 
@@ -536,7 +526,7 @@
 
   </div>
   <script>
-    var totalUsersJan = {{$totalUsersJan}};
+  var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};
     var totalUsersMar = {{$totalUsersMar}};
     var totalUsersAbr = {{$totalUsersAbr}};

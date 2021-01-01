@@ -44,5 +44,55 @@ class MensagensSeeder extends Seeder
             'id_destino' => 7,
             'mensagem' => 'Ola, esta mensagem é um teste, não responder',
         ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
+        Mensagens::create([
+            'id_envio' => 6,
+            'id_destino' => 7,
+            'mensagem' => 'Ola, esta mensagem é um teste, não responder',
+        ]);
     }
 }
