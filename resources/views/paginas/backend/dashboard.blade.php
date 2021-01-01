@@ -430,8 +430,10 @@
 
               @if ($user->id == $iten->id_envio)
               <div class="media media-left chatact-{{$iten->id_envio}}">
-                <input type="hidden" value="{{$user->id}}">
-                <input type="text" class="form-control mb-3" placeholder="Escreva a sua resposta....">
+                <form style="width: 95%; margin: auto auto;" action="">
+                <input type="hidden" name="id_envio" value="{{$user->id}}">
+                <input type="text" name="mensagem" class="form-control mb-3" placeholder="Escreva a sua resposta....">
+                </form>
               </div>
               @endif
               @endif
