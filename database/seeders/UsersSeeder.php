@@ -80,7 +80,7 @@ class UsersSeeder extends Seeder
             'created_at' => Carbon::parse('2020-06-05'),
         ]);
         User::create([
-            'tipouser' => 'Utilizador',
+            'tipouser' => 'Administrador',
             'email' => 'utilizador3@gmail.com',
             'password' => bcrypt('123456'),
             'name' => 'Utilizador',
