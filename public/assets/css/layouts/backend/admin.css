@@ -15212,7 +15212,7 @@ div.copied {
 .app-brand {
     position: relative;
     display: block;
-    border-bottom: 1px solid #742f37;
+    border-bottom: 1px solid rgba(229, 233, 242, 0.2);
 }
 
 .app-brand a {
@@ -15223,6 +15223,7 @@ div.copied {
     line-height: 75px;
     width: 100%;
     transition: width 0.3s ease-in-out;
+    padding: 20px auto;
     padding-right: 1.56rem;
 }
 
@@ -15239,7 +15240,7 @@ div.copied {
 }
 
 .app-brand a img {
-    height: 100%;
+    height: 90%;
     margin: auto auto;
 }
 
