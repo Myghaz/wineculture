@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+
 class WPProdutos extends Model
 {
-  protected $connection = 'wordpress_db';   
+  protected $connection = 'wordpress_db';
   protected $table = 'posts';
   protected $primaryKey = 'ID';
   // adding a global scoope in yoour post model
@@ -14,8 +16,7 @@ class WPProdutos extends Model
     parent::boot();
 
     static::addGlobalScope('post_type', function (Builder $builder) {
-      $builder->where('post_type','product');
-       
+      $builder->where('post_type', 'product');
     });
   }
-} 
+}

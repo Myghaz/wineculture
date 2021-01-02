@@ -606,7 +606,7 @@
                 @php $percentagemreceitas = ($ireceitas*100)/$total_receitas_count @endphp
                 @php $percentagemreceitas = round($percentagemreceitas, 0) @endphp
                 <div class=" circle" data-size="60" data-value="0.<?php echo $percentagemreceitas; ?>" data-thickness="4" data-fill="{
-                  &quot;color&quot;: &quot;#35D00E&quot;
+                  &quot;color&quot;: &quot;#fec400&quot;
 													}">
                   <div class="circle-content">
                     <h6 class="text-uppercase">rceitas</h6>
@@ -622,9 +622,58 @@
       @endforeach
     </div>
 
+
+    <h2 class="titulo">Ultimas Categorias de Vinho Criadas</h2>
+    <div class="row ultusers">
+      @foreach($total_produtoswp as $key => $produtoswp)
+
+      <div class="col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card card-default mt-6">
+          <div style="height: 305px;" class="card-body text-center p-4">
+            <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
+              <div class="image mb-3 mt-n9">
+                <img style="width: 100px; height:100px;" src="/assets/img/paginas/backend/dashboard/categorias.jpg" class="img-fluid rounded-circle" alt="{{$produtoswp->post_title}}">
+              </div>
+              <h6 style="width: 100%;" class="card-title text-dark">{{$produtoswp->post_title}}</h6>
+              <ul class="list-unstyled">
+                <li class="d-flex mb-1">
+                  <i class="mdi mdi-calendar-check mr-1"></i>
+                  <span>Data de Criação: {{ date('d-m-Y', strtotime($produtoswp->post_date))}}</span>
+                </li>
+              </ul>
+            </a>
+            <p class="card-text text-center mb-3">{{$produtoswp->post_content}}</p>
+            <div class="row justify-content-center">
+              <div class="col-4 px-1">
+                @php $ireceitas = 0; @endphp
+
+                <div class=" circle" data-size="60" data-value="0.<?php echo $percentagemreceitas; ?>" data-thickness="4" data-fill="{
+                  &quot;color&quot;: &quot;#1E90FF&quot;
+													}">
+                  <div class="circle-content">
+                    <h6 class="text-uppercase">rceitas</h6>
+                    <h6><?php echo $percentagemreceitas; ?>%</h6>
+                    <strong></strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
+
+
+
+
+
+
+
+
   </div>
   <script>
- var totalUsersJan = {{$totalUsersJan}};
+    var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};
     var totalUsersMar = {{$totalUsersMar}};
     var totalUsersAbr = {{$totalUsersAbr}};
@@ -663,4 +712,4 @@
     var totalProdsNov = {{$totalProdsNov}};
     var totalProdsDez = {{$totalProdsDez}};
   </script>
-  @endsection
+    @endsection
