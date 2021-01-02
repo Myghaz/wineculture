@@ -18,10 +18,13 @@ class Receitastable extends Migration
             $table->string('nome');
             $table->string('foto');
             $table->biginteger('id_categoria')->unsigned();
+            $table->biginteger('id_user')->unsigned();
             $table->string('descricao');
             $table->timestamps();
             $table->foreign('id_categoria')
             ->references('id')->on('category_wines');
+            $table->foreign('id_user')
+            ->references('id')->on('users');
         });
     }
 

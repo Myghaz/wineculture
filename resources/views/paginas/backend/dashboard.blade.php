@@ -495,12 +495,20 @@
                 </div>
               </div>
               <div class="col-4 px-1">
-                <div class=" circle" data-size="60" data-value="0.95" data-thickness="4" data-fill="{
-														&quot;color&quot;: &quot;#fec400&quot;
+                @php $ireceitas = 0; @endphp
+                @foreach($total_receitas as $key => $receita)
+                @if ($receita->id_user == $ultuser->id)
+                @php ++$ireceitas @endphp
+                @endif
+                @endforeach
+                @php $percentagemreceitas = ($ireceitas*100)/$total_receitas_count @endphp
+                @php $percentagemreceitas = round($percentagemreceitas, 0) @endphp
+                <div class=" circle" data-size="60" data-value="0.<?php echo $percentagemreceitas; ?>" data-thickness="4" data-fill="{
+                  &quot;color&quot;: &quot;#fec400&quot;
 													}">
                   <div class="circle-content">
                     <h6 class="text-uppercase">rceitas</h6>
-                    <h6>65%</h6>
+                    <h6><?php echo $percentagemreceitas; ?>%</h6>
                     <strong></strong>
                   </div>
                 </div>

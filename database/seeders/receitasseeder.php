@@ -17,42 +17,49 @@ class receitasseeder extends Seeder
             'nome' => 'carne',
             'foto' => 'fotom',
             'id_categoria' => 2,
+            'id_user' => 26,
             'descricao' => 'é bom',
         ]);
         receitas::create([
             'nome' => 'carne',
             'foto' => 'fotom',
             'id_categoria' => 3,
+            'id_user' => 26,
             'descricao' => 'é bom',
         ]);
         receitas::create([
             'nome' => 'carne',
             'foto' => 'fotom',
             'id_categoria' => 1,
+            'id_user' => 15,
             'descricao' => 'é bom',
         ]);
         receitas::create([
             'nome' => 'carne',
             'foto' => 'fotom',
             'id_categoria' => 5,
+            'id_user' => 10,
             'descricao' => 'é bom',
         ]);
         receitas::create([
             'nome' => 'carne',
             'foto' => 'fotom',
             'id_categoria' => 5,
+            'id_user' => 26,
             'descricao' => 'é bom',
         ]);
         receitas::create([
             'nome' => 'carne',
             'foto' => 'fotom',
             'id_categoria' => 3,
+            'id_user' => 29,
             'descricao' => 'é bom',
         ]);
         receitas::create([
             'nome' => 'carne',
             'foto' => 'fotom',
             'id_categoria' => 2,
+            'id_user' => 30,
             'descricao' => 'é bom',
         ]);
     }
