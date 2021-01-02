@@ -13753,7 +13753,7 @@ code {
     padding-right: 1rem;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-    cursor: pointer;
+    cursor: .app-brand;
 }
 
 .media-message img {
@@ -15212,7 +15212,7 @@ div.copied {
 .app-brand {
     position: relative;
     display: block;
-    background-color: #4c84ff;
+    border-bottom: 1px solid #742f37;
 }
 
 .app-brand a {
@@ -15221,9 +15221,9 @@ div.copied {
     align-items: center;
     height: 75px;
     line-height: 75px;
-    width: 250px;
+    width: 100%;
     transition: width 0.3s ease-in-out;
-    padding-left: 1.56rem;
+    padding-right: 1.56rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15239,8 +15239,8 @@ div.copied {
 }
 
 .app-brand a img {
-    max-width: 80px;
-    vertical-align: middle;
+    height: 100%;
+    margin: auto auto;
 }
 
 .app-brand .brand-name {

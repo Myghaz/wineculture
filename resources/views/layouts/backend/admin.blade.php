@@ -52,7 +52,7 @@
             <div id="sidebar" class="sidebar sidebar-with-footer">
                 <!-- Aplication Brand -->
                 <div class="app-brand">
-                    <a href="/admin" title="logo" style="width: 100px !important; ">
+                    <a href="/admin" title="logo">
                         <img src="{{ URL::asset('assets\img\logos\wineculture_logo_darkmode.png') }}">
                     </a>
                 </div>
