@@ -5,13 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Models\User;
 use App\Models\Category;
 
 class BlogController extends Controller
 {
-
-
-
     public function blog()
     {
         //Ir buscar os posts organizados por mes
@@ -45,6 +43,7 @@ class BlogController extends Controller
 
 
         $post = Blog::paginate(10);
+        $users = User::all();
 
         return view('paginas.backend.blog', compact([
             'totalpostJan',
@@ -60,7 +59,8 @@ class BlogController extends Controller
             'totalpostNov',
             'totalpostDez',
             'totalpost',
-            'post'
+            'post',
+            'users'
         ]));
     }
     //backoffice blog
@@ -86,13 +86,16 @@ class BlogController extends Controller
     public function editBlog(Blog $blog)
     {
         $categories = Category::all();
-        return view('paginas.backend.edit_blog', compact('categories', 'blog'));
+        $users = User::all();
+        return view('paginas.backend.edit_blog', compact('categories', 'blog','users'));
     }
 
 
     public function showblog(Blog $blog)
     {
-        return view('paginas.backend.show_blog', ['showBlog' => $blog], compact('blog'));
+        $categories = Category::all();
+        $users = User::all();
+        return view('paginas.backend.show_blog', ['showBlog' => $blog], compact('blog','users','categories'));
     }
     // Destroy
 

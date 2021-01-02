@@ -21,7 +21,7 @@ class CreateBlogsTable extends Migration
             $table->biginteger('id_categoria')->unsigned();
             $table->string('preview');
             $table->longText('descricao');
-            $table->string('img');
+            $table->string('img')->nullable();
             $table->timestamps();
             $table->foreign('id_categoria')
             ->references('id')->on('categories');

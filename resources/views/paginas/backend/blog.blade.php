@@ -128,7 +128,11 @@
                             <td>
                               <a class="text-dark" href="">{{$value->titulo}}</a>
                             </td>
-                            <td class="d-none d-lg-table-cell">{{$value->autor}}</td>
+                            @foreach($users as $user)
+                            @if ($user->id == $value->id_user)
+                            <td class="d-none d-lg-table-cell">{{$user->name}} {{$user->apelido}}</td>
+                            @endif
+                            @endforeach
                             <td class="d-none d-lg-table-cell">{{$value->data}}</td>
                             <td class="d-none d-lg-table-cell"><a href="{{ route('showBlog', $value) }}" class="btn btn-primary">Ver</a></td>
                             <td class="d-none d-lg-table-cell"><a href="{{ route('editblog', $value) }}" class="btn btn-primary">Editar</a</td>
