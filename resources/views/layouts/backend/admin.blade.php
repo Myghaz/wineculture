@@ -155,7 +155,6 @@
                         </li>
                         <!-- End of Contactos Menu -->
                     </ul>
-
                 </div>
             </div>
         </aside>
@@ -209,6 +208,16 @@
                                     <li>
                                         <a href="user-profile.html">
                                             <i class="mdi mdi-account"></i> Perfil
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <i class="mdi mdi-monitor"></i> WebSite
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <i class="mdi mdi-message"></i> Chat
                                         </a>
                                     </li>
                                     <li class="dropdown-footer">

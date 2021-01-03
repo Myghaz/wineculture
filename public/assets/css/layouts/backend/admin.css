@@ -8835,6 +8835,7 @@ button.bg-dark:focus {
 .mt-auto,
 .my-auto {
     margin-top: auto !important;
+
 }
 
 .mr-auto,
@@ -12036,6 +12037,7 @@ label {
 
 .breadcrumb.breadcrumb-inverse {
     border-color: #873740;
+    border: 1px solid #873740;
     background-color: rgba(228, 237, 255, 0.6);
 }
 
