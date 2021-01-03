@@ -110,7 +110,6 @@
     <h2 class="titulo">Tabelas</h2>
     <div class="row tabelas">
       <div class="col-12">
-        <!-- Recent Order Table -->
         <div class="card card-table-border-none" id="users">
           <div class="card-header justify-content-between">
             <h2 id="titulotable">Tabela de Utilizadores</h2>
