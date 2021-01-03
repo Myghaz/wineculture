@@ -165,10 +165,7 @@
             <!-- Header -->
             <header class="main-header " id="header">
                 <nav class="navbar navbar-static-top navbar-expand-lg">
-                    <!-- Sidebar toggle button -->
-                    <button id="sidebar-toggler" class="sidebar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                    </button>
+
                     <!-- search form -->
                     <div class="search-form d-none d-lg-inline-block">
                         <div class="input-group">
@@ -195,7 +192,7 @@
                                     @else
                                     <img src="/assets/img/users/{{Auth::user()->img}}" class="user-image" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
                                     @endif
-                                    <span class="d-none d-lg-inline-block">{{Auth::user()->name}}</span>
+                                    <span class="d-none d-lg-inline-block">{{Auth::user()->name}} </span>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <!-- User image -->
@@ -206,7 +203,7 @@
                                         <img src="/assets/img/users/{{Auth::user()->img}}" class="img-circle" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
                                         @endif
                                         <div class="d-inline-block">
-                                            {{Auth::user()->name}} <small class="pt-1">{{Auth::user()->email}}</small>
+                                            {{Auth::user()->name}} {{Auth::user()->apelido}}<small class="pt-1">{{Auth::user()->email}}</small>
                                         </div>
                                     </li>
                                     <li>

@@ -9797,7 +9797,7 @@
                     
                 ],
                 searchResultTemplate: '<li><div class="link"><a href="{link}" target="_blank">{label}</a></div><div class="location">{location}</div><\/li>',
-                noResultsText: '<li>No results found</li>',
+                noResultsText: '<li>Sem resultados encontrados</li>',
                 limit: 10,
                 fuzzy: true,
             });
