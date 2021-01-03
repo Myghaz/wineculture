@@ -51,14 +51,14 @@
         <aside class="left-sidebar bg-sidebar">
             <div id="sidebar" class="sidebar sidebar-with-footer">
                 <!-- Aplication Brand -->
-        
+
 
                 <div class="app-brand">
-              <a href="/admin" title="Sleek Dashboard">
-                <img class="brand-icon"  height="10px;" src="{{ URL::asset('assets\img\logos\logo_min.png') }}">
-                <span class="brand-name text-truncate">WineCulture</span>
-              </a>
-            </div>
+                    <a href="/admin" title="Sleek Dashboard">
+                        <img class="brand-icon" height="10px;" src="{{ URL::asset('assets\img\logos\logo_min.png') }}">
+                        <span class="brand-name text-truncate">WineCulture</span>
+                    </a>
+                </div>
                 <!-- begin sidebar scrollbar -->
                 <div class="sidebar-scrollbar">
                     <!-- sidebar menu -->
@@ -66,6 +66,11 @@
                         <li @if (Route::currentRouteName()=='admin_dashboard' ) class="has-sub active expand" @else class="has-sub" @endif>
                             <a href="{{route('admin_dashboard')}}" class="sidenav-item-link"> <i class="mdi mdi-view-dashboard-outline"></i>
                                 <span class="nav-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li @if (Route::currentRouteName()=='admin_users' ) class="has-sub active expand" @else class="has-sub" @endif>
+                            <a href="{{route('admin_users')}}" class="sidenav-item-link"> <i class="mdi mdi-account-multiple-outline"></i>
+                                <span class="nav-text">Utilizadores</span>
                             </a>
                         </li>
                         <!-- Blog Menu -->
@@ -167,9 +172,9 @@
             <!-- Header -->
             <header class="main-header " id="header">
                 <nav class="navbar navbar-static-top navbar-expand-lg">
-                <button id="sidebar-toggler" class="sidebar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-              </button>
+                    <button id="sidebar-toggler" class="sidebar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
                     <!-- search form -->
                     <div class="search-form d-none d-lg-inline-block">
                         <div class="input-group">
@@ -234,6 +239,47 @@
                     </div>
                 </nav>
             </header>
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js" integrity="sha512-cJMgI2OtiquRH4L9u+WQW+mz828vmdp9ljOcm/vKTQ7+ydQUktrPVewlykMgozPP+NUBbHdeifE6iJ6UVjNw5Q==" crossorigin="anonymous"></script>
+            <script src="{{ asset('assets\plugins\backend\jekyll-search.min.js') }}"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+            <script src="{{ asset('assets\plugins\backend\jvectormap\jquery-jvectormap-2.0.3.min.js') }}"></script>
+            <script src="{{ asset('assets\plugins\backend\jvectormap\jquery-jvectormap-world-mill.js') }}"></script>
+            <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+            <script src="{{ asset('assets\plugins\backend\daterangepicker\moment.min.js') }}"></script>
+            <script src="{{ asset('assets\plugins\backend\daterangepicker\daterangepicker.js') }}"></script>
+            <script src="https://cdn.rawgit.com/kottenator/jquery-circle-progress/1.2.0/dist/circle-progress.js"></script>
+
+            <script>
+                jQuery(document).ready(function() {
+                    jQuery('input[name="dateRange"]').daterangepicker({
+                        autoUpdateInput: false,
+                        singleDatePicker: true,
+                        locale: {
+                            cancelLabel: 'Clear'
+                        }
+                    });
+                    jQuery('input[name="dateRange"]').on('apply.daterangepicker', function(ev, picker) {
+                        jQuery(this).val(picker.startDate.format('MM/DD/YYYY'));
+                    });
+                    jQuery('input[name="dateRange"]').on('cancel.daterangepicker', function(ev, picker) {
+                        jQuery(this).val('');
+                    });
+                });
+            </script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('.ckeditor').ckeditor();
+                });
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous"></script>
+            <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+            <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+            <script src="{{ asset('assets\js\layouts\backend\admin.js') }}"></script>
+
+
             @yield ('content')
             <div class="right-sidebar-2">
                 <div class="right-sidebar-container-2">
@@ -304,55 +350,8 @@
                 document.getElementById("copy-year").innerHTML = year;
             </script>
             </footer>
-
         </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js" integrity="sha512-cJMgI2OtiquRH4L9u+WQW+mz828vmdp9ljOcm/vKTQ7+ydQUktrPVewlykMgozPP+NUBbHdeifE6iJ6UVjNw5Q==" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets\plugins\backend\jekyll-search.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-    <script src="{{ asset('assets\plugins\backend\jvectormap\jquery-jvectormap-2.0.3.min.js') }}"></script>
-    <script src="{{ asset('assets\plugins\backend\jvectormap\jquery-jvectormap-world-mill.js') }}"></script>
-    <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
-    <script src="{{ asset('assets\plugins\backend\daterangepicker\moment.min.js') }}"></script>
-    <script src="{{ asset('assets\plugins\backend\daterangepicker\daterangepicker.js') }}"></script>
-    <script src="https://cdn.rawgit.com/kottenator/jquery-circle-progress/1.2.0/dist/circle-progress.js"></script>
-
-    <script>
-        jQuery(document).ready(function() {
-            jQuery('input[name="dateRange"]').daterangepicker({
-                autoUpdateInput: false,
-                singleDatePicker: true,
-                locale: {
-                    cancelLabel: 'Clear'
-                }
-            });
-            jQuery('input[name="dateRange"]').on('apply.daterangepicker', function(ev, picker) {
-                jQuery(this).val(picker.startDate.format('MM/DD/YYYY'));
-            });
-            jQuery('input[name="dateRange"]').on('cancel.daterangepicker', function(ev, picker) {
-                jQuery(this).val('');
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.ckeditor').ckeditor();
-        });
-    </script>
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
-    <script src="{{ asset('assets\js\layouts\backend\admin.js') }}"></script>
-    <script src="{{ asset('assets\js\paginas\backend\dashboard.js') }}"></script>
-    <script src="{{ asset('assets\js\paginas\backend\receitas.js') }}"></script>
-    <script src="{{ asset('assets\js\paginas\backend\blog.js') }}"></script>
-    <script src="{{ asset('assets\js\paginas\backend\faq.js') }}"></script>
-    <script src="{{ asset('assets\js\paginas\backend\contactos.js') }}"></script>
 </body>
 
 </html>

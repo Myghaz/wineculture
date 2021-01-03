@@ -39,30 +39,18 @@ class AdminController extends Controller
 
         
         //Ir buscar os utilizadores organizados por mes
-        $usersJan = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 1)->get();
-        $usersFev = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 2)->get();
-        $usersMar = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 3)->get();
-        $usersAbr = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 4)->get();
-        $usersMai = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 5)->get();
-        $usersJun = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 6)->get();
-        $usersJul = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 7)->get();
-        $usersAgo = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 8)->get();
-        $usersSet = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 9)->get();
-        $usersOut = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 10)->get();
-        $usersNov = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 11)->get();
-        $usersDez = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 12)->get();
-        $totalUsersJan = $usersJan->count();
-        $totalUsersFev = $usersFev->count();
-        $totalUsersMar = $usersMar->count();
-        $totalUsersAbr = $usersAbr->count();
-        $totalUsersMai = $usersMai->count();
-        $totalUsersJun = $usersJun->count();
-        $totalUsersJul = $usersJul->count();
-        $totalUsersAgo = $usersAgo->count();
-        $totalUsersSet = $usersSet->count();
-        $totalUsersOut = $usersOut->count();
-        $totalUsersNov = $usersNov->count();
-        $totalUsersDez = $usersDez->count();
+        $totalUsersJan = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 1)->count();
+        $totalUsersFev = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 2)->count();
+        $totalUsersMar = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 3)->count();
+        $totalUsersAbr = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 4)->count();
+        $totalUsersMai = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 5)->count();
+        $totalUsersJun = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 6)->count();
+        $totalUsersJul = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 7)->count();
+        $totalUsersAgo = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 8)->count();
+        $totalUsersSet = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 9)->count();
+        $totalUsersOut = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 10)->count();
+        $totalUsersNov = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 11)->count();
+        $totalUsersDez = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 12)->count();
         $totalUsers = User::whereYear('created_at', '=', 2020)->count();
         //Ir buscar os utilizadores organizados por mes
 
@@ -97,30 +85,18 @@ class AdminController extends Controller
 
 
         //Ir buscar os produtos da loja(worpress) organizados por mes
-        $ProdsJan = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 1)->get();
-        $ProdsFev = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 2)->get();
-        $ProdsMar = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 3)->get();
-        $ProdsAbr = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 4)->get();
-        $ProdsMai = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 5)->get();
-        $ProdsJun = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 6)->get();
-        $ProdsJul = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 7)->get();
-        $ProdsAgo = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 8)->get();
-        $ProdsSet = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 9)->get();
-        $ProdsOut = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 10)->get();
-        $ProdsNov = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 11)->get();
-        $ProdsDez = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 12)->get();
-        $totalProdsJan = $ProdsJan->count();
-        $totalProdsFev = $ProdsFev->count();
-        $totalProdsMar = $ProdsMar->count();
-        $totalProdsAbr = $ProdsAbr->count();
-        $totalProdsMai = $ProdsMai->count();
-        $totalProdsJun = $ProdsJun->count();
-        $totalProdsJul = $ProdsJul->count();
-        $totalProdsAgo = $ProdsAgo->count();
-        $totalProdsSet = $ProdsSet->count();
-        $totalProdsOut = $ProdsOut->count();
-        $totalProdsNov = $ProdsNov->count();
-        $totalProdsDez = $ProdsDez->count();
+        $totalProdsJan = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 1)->count();
+        $totalProdsFev = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 2)->count();
+        $totalProdsMar = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 3)->count();
+        $totalProdsAbr = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 4)->count();
+        $totalProdsMai = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 5)->count();
+        $totalProdsJun = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 6)->count();
+        $totalProdsJul = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 7)->count();
+        $totalProdsAgo = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 8)->count();
+        $totalProdsSet = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 9)->count();
+        $totalProdsOut = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 10)->count();
+        $totalProdsNov = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 11)->count();
+        $totalProdsDez = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->whereMonth('post_date', '=', 12)->count();
         $totalProds = WPProdutos::where('post_status', 'publish')->whereYear('post_date', '=', 2020)->count();
         //Ir buscar os produtos da loja(worpress) organizados por mes
 

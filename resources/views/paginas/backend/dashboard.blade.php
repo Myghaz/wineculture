@@ -680,13 +680,6 @@
       @endforeach
     </div>
 
-
-
-
-
-
-
-
   </div>
   <script>
     var totalUsersJan = {{$totalUsersJan}};
@@ -728,4 +721,6 @@
     var totalProdsNov = {{$totalProdsNov}};
     var totalProdsDez = {{$totalProdsDez}};
   </script>
+  <script src="{{ asset('assets\js\paginas\backend\dashboard.js') }}"></script>
   @endsection
+  
