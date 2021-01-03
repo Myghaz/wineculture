@@ -9700,8 +9700,103 @@
             SimpleJekyllSearch.init({
                 searchInput: document.getElementById('search-input'),
                 resultsContainer: document.getElementById('search-results'),
-                dataSource: '/assets/data/search.json',
-                searchResultTemplate: '<li><div class="link"><a href="{link}">{label}</a></div><div class="location">{location}</div><\/li>',
+                dataSource:  [
+      
+                    {
+                      "label": "Dashboard",
+                      "link": "/admin/dashboard",
+                      "location": "Administração (Backend)"
+                    },
+                    
+                  
+                    
+                    {
+                        "label": "Blogs",
+                        "link": "/admin/blog",
+                        "location": "Administração (Backend)"
+                    },
+
+                    {
+                        "label": "Inserir Blog",
+                        "link": "/admin/blog/create",
+                        "location": "Administração (Backend)"
+                    },
+
+                    {
+                        "label": "Receitas",
+                        "link": "/admin/receitas",
+                        "location": "Administração (Backend)"
+                    },
+
+                    {
+                        "label": "Inserir Receita",
+                        "link": "/admin/receitas/create",
+                        "location": "Administração (Backend)"
+                    },
+
+                    {
+                        "label": "Faq",
+                        "link": "/admin/faq",
+                        "location": "Administração (Backend)"
+                    },
+
+                    {
+                        "label": "Inserir Faq",
+                        "link": "/admin/insert_pergunta",
+                        "location": "Administração (Backend)"
+                    },
+
+                    {
+                        "label": "Mensagens",
+                        "link": "/admin/mensagens",
+                        "location": "Administração (Backend)"
+                    },
+
+                    {
+                        "label": "Utilizadores",
+                        "link": "/admin/users",
+                        "location": "Administração (Backend)"
+                    },
+
+                    {
+                        "label": "Vinhos",
+                        "link": "/admin/vinhos",
+                        "location": "Administração (Backend)"
+                    },
+
+                    {
+                        "label": "ProdutosWP",
+                        "link": "/admin/produtoswp",
+                        "location": "Administração (Backend)"
+                    },
+                    {
+                        "label": "Página Inicial",
+                        "link": "/",
+                        "location": "Público (Frontend)"
+                    },
+                    {
+                        "label": "Página Inicial",
+                        "link": "/",
+                        "location": "Público (Frontend)"
+                    },
+                    {
+                        "label": "Sobre Vinhos",
+                        "link": "/sobre_vinhos",
+                        "location": "Público (Frontend)"
+                    },
+                    {
+                        "label": "Sobre",
+                        "link": "/sobre",
+                        "location": "Público (Frontend)"
+                    },
+                    {
+                        "label": "Contactos",
+                        "link": "/contactos",
+                        "location": "Público (Frontend)"
+                    },
+                    
+                ],
+                searchResultTemplate: '<li><div class="link"><a href="{link}" target="_blank">{label}</a></div><div class="location">{location}</div><\/li>',
                 noResultsText: '<li>No results found</li>',
                 limit: 10,
                 fuzzy: true,

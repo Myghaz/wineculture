@@ -423,6 +423,39 @@ a {
 .table-item-menu .table-menu-open:checked ~ .table-real-menu .table-menu-item:after {
    display: block;
 }
+.table-real-menu-rep {
+   display:none;
+}
+.table-real-menu-rep .table-menu-item-repos{
+   padding: 10px;
+   border-radius: 10%;
+}
+.table-real-menu-rep .table-menu-item-repos:nth-child(1){
+   background-color: #669AE1;
+}
+.table-real-menu-rep .table-menu-item-repos:nth-child(2){
+   background-color: #70CC72;
+}
+.table-real-menu-rep .table-menu-item-repos:nth-child(3){
+   background-color: #FE4365;
+}
+.table-real-menu-rep .table-menu-item-repos:nth-child(4){
+   background-color:#C49CDE;
+}
+.table-real-menu-rep .table-menu-item-repos:nth-child(5){
+    background-color: #12cc66;
+}
+.table-real-menu-rep .table-menu-item-repos i{
+   font-size: 20pt!important;
+ }
+ @media screen and (max-width:  1187px) {
+   .table-real-menu-rep {
+      display:inline;
+   }
+   .table-item-menu{
+      display:none;
+   }
+}
 .card-table-border-none .card-header h2{
    font-size: 20pt;
 }
@@ -448,9 +481,19 @@ div.dataTables_wrapper div.dataTables_length label {
    padding-top: -30px;
    float: right;
 }
-ul.pagination{
-   margin-top: -30px!important;
-}  
+@media screen and (max-width: 767px) {
+   li.paginate_button.previous {
+       display: inline;
+   }
+
+   li.paginate_button.next {
+       display: inline;
+   }
+
+   li.paginate_button {
+       display: none;
+   }
+}
 #tableaprods_wp td.tprodswp_td_desc{
    width:50%;
 }

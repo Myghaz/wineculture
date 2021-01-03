@@ -9,7 +9,6 @@
 </nav>
 <div class="content-wrapper">
   <div class="content">
-    <!-- Top Statistics -->
     <div class="row">
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
@@ -105,6 +104,9 @@
         </div>
       </div>
     </div>
+
+
+      
     <h2 class="titulo">Tabelas</h2>
     <div class="row tabelas">
       <div class="col-12">
@@ -112,6 +114,13 @@
         <div class="card card-table-border-none" id="users">
           <div class="card-header justify-content-between">
             <h2 id="titulotable">Tabela de Utilizadores</h2>
+            <div class="table-real-menu-rep">
+        <button title="Utilizadores" id="btnusers" value="Utilizadores" class="table-menu-item-repos"> <i id="table-users" class="fa fa-users"></i> </button>
+        <button title="Produtores" id="btnprodutores" value="Produtores" class="table-menu-item-repos"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
+        <button title="Produtos" id="btnprods" value="Produtos" class="table-menu-item-repos"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
+        <button title="Produtos(WordPress)" id="btnprods_wp" value="Loja" class="table-menu-item-repos"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
+        <button title="Compras" id="btncompras" value="Loja" class="table-menu-item-repos"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button>
+      </div>
             <nav class="table-item-menu">
               <input type="checkbox" href="#" class="table-menu-open" name="table-menu-open" id="table-menu-open" />
               <label id="table-menu-open-handler" class="table-menu-open-button" for="table-menu-open">
@@ -720,4 +729,4 @@
     var totalProdsNov = {{$totalProdsNov}};
     var totalProdsDez = {{$totalProdsDez}};
   </script>
-    @endsection
+  @endsection

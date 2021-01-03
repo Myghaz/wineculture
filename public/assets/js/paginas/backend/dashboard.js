@@ -34,9 +34,9 @@ Datausers = {
     datasets: [{
         label: "Registos",
         backgroundColor: "white",
-        data: usersdata,
+        data: usersdata, 
         lineTension: 0,
-        fill: true,
+        fill: 'white',
         backgroundColor: ["#955251","#B565A7","#009B77","#DD4124","#45B8AC","#D65076","#5B5EA6", "#9B2335","black","#DFCFBE","#55B4B0","#EFC050"],
     }]
 };
@@ -62,7 +62,7 @@ Dataprodutores = {
         backgroundColor: "white",
         data: produtoresdata,
         lineTension: 0,
-        fill: true,
+        fill: 'white',
         backgroundColor: ["#955251","#B565A7","#009B77","#DD4124","#45B8AC","#D65076","#5B5EA6", "#9B2335","black","#DFCFBE","#55B4B0","#EFC050"],
     }]
 };
@@ -89,7 +89,7 @@ Datacompras = {
         backgroundColor: "white",
         data: comprasdata,
         lineTension: 0,
-        fill: true,
+        fill: 'white',
         backgroundColor: ["#955251","#B565A7","#009B77","#DD4124","#45B8AC","#D65076","#5B5EA6", "#9B2335","black","#DFCFBE","#55B4B0","#EFC050"],
     }]
 };
@@ -116,7 +116,7 @@ Dataprods = {
         backgroundColor: "white",
         data: prodsdata,
         lineTension: 0,
-        fill: true,
+        fill: 'white',
         backgroundColor: ["#955251","#B565A7","#009B77","#DD4124","#45B8AC","#D65076","#5B5EA6", "#9B2335","black","#DFCFBE","#55B4B0","#EFC050"],
     }]
 };

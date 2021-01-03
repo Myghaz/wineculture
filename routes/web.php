@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,8 +52,9 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 //Admin
-Route::get('/admin', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
-
+Route::get('/admin', function () {
+    return Redirect::to('/admin/dashboard');
+});
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
 //Contactos FAQ

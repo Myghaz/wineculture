@@ -157,16 +157,6 @@
                     </ul>
 
                 </div>
-
-                <div class="sidebar-footer">
-                    <hr class="separator mb-0" />
-                    <div class="sidebar-footer-content">
-                        <p>
-                            &copy; <span id="copy-year">2020</span> Copyright by
-                            <a class="text-primary">Wineculture</a>.
-                        </p>
-                    </div>
-                </div>
             </div>
         </aside>
 
@@ -185,7 +175,7 @@
                             <button type="button" name="search" id="search-btn" class="btn btn-flat">
                                 <i class="mdi mdi-magnify"></i>
                             </button>
-                            <input type="text" name="query" id="search-input" class="form-control" placeholder="'button', 'chart' etc." autofocus autocomplete="off" />
+                            <input type="text" name="query" id="search-input" class="form-control" placeholder="Pesquisar..." autofocus="" autocomplete="off">
                         </div>
                         <div id="search-results-container">
                             <ul id="search-results"></ul>
@@ -210,13 +200,13 @@
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <!-- User image -->
                                     <li class="dropdown-header">
-                                    @if (Auth::user()->img == "Sem Imagem")
-                                    <img src="/assets/img/users/sem_imagem.jpg" class="img-circle"alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
-                                    @else
-                                    <img src="/assets/img/users/{{Auth::user()->img}}" class="img-circle" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
-                                    @endif
+                                        @if (Auth::user()->img == "Sem Imagem")
+                                        <img src="/assets/img/users/sem_imagem.jpg" class="img-circle" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
+                                        @else
+                                        <img src="/assets/img/users/{{Auth::user()->img}}" class="img-circle" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
+                                        @endif
                                         <div class="d-inline-block">
-                                        {{Auth::user()->name}} <small class="pt-1">{{Auth::user()->email}}</small>
+                                            {{Auth::user()->name}} <small class="pt-1">{{Auth::user()->email}}</small>
                                         </div>
                                     </li>
                                     <li>
@@ -234,7 +224,6 @@
                 </nav>
             </header>
             @yield ('content')
-            @yield ('content1')
             <div class="right-sidebar-2">
                 <div class="right-sidebar-container-2">
                     <div class="slim-scroll-right-sidebar-2">
@@ -293,8 +282,19 @@
 
                     </div>
                 </div>
-
             </div>
+            <footer class="footer mt-auto">
+            <div class="copyright bg-white">
+              <p>
+                © <span id="copy-year">2021</span> Copyright WineCulture Dashboard
+              </p>
+            </div>
+            <script>
+                var d = new Date();
+                var year = d.getFullYear();
+                document.getElementById("copy-year").innerHTML = year;
+            </script>
+          </footer>
 
             <script>
                 var d = new Date();
