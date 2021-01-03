@@ -71,6 +71,11 @@ Route::get('/admin/mensagens', [App\Http\Controllers\MensagensController::class,
 
 Route::post('/admin/contactos', [App\Http\Controllers\MensagensController::class, 'frontend_store'])->name('contactos_frontend_store');
 
+//Users Admin
+
+Route::get('/admin/users', [App\Http\Controllers\UsersController::class, 'index'])->name('admin_users');
+
+
 //blog Admin
 
 Route::get('/admin/blog', [App\Http\Controllers\BlogController::class, 'blog'])->name('admin_blog');

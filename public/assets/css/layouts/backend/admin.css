@@ -15223,10 +15223,10 @@ div.copied {
     align-items: center;
     height: 75px;
     line-height: 75px;
-    width: 100%;
+    width: 250px;
     transition: width 0.3s ease-in-out;
-    padding: 20px auto;
-    padding-right: 1.56rem;
+    padding-left: 1.56rem;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15242,8 +15242,7 @@ div.copied {
 }
 
 .app-brand a img {
-    height: 90%;
-    margin: auto auto;
+    height: 50%;
 }
 
 .app-brand .brand-name {

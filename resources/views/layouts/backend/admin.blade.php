@@ -51,11 +51,14 @@
         <aside class="left-sidebar bg-sidebar">
             <div id="sidebar" class="sidebar sidebar-with-footer">
                 <!-- Aplication Brand -->
+        
+
                 <div class="app-brand">
-                    <a href="/admin" title="logo">
-                        <img src="{{ URL::asset('assets\img\logos\wineculture_logo_darkmode.png') }}">
-                    </a>
-                </div>
+              <a href="/admin" title="Sleek Dashboard">
+                <img class="brand-icon"  height="10px;" src="{{ URL::asset('assets\img\logos\logo_min.png') }}">
+                <span class="brand-name text-truncate">WineCulture</span>
+              </a>
+            </div>
                 <!-- begin sidebar scrollbar -->
                 <div class="sidebar-scrollbar">
                     <!-- sidebar menu -->
@@ -164,7 +167,9 @@
             <!-- Header -->
             <header class="main-header " id="header">
                 <nav class="navbar navbar-static-top navbar-expand-lg">
-
+                <button id="sidebar-toggler" class="sidebar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
                     <!-- search form -->
                     <div class="search-form d-none d-lg-inline-block">
                         <div class="input-group">
