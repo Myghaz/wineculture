@@ -465,7 +465,7 @@
                 @if ($ultuser->img == "Sem Imagem")
                 <img style="width: 100px; height:100px;" src="/assets/img/users/sem_imagem.jpg" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @else
-                <img src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
+                <img style="object-fit: cover; " src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @endif
               </div>
 
@@ -550,7 +550,7 @@
           <div class="card-body text-center p-4">
             <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
               <div class="image mb-3 mt-n9">
-                <img style="width: 100px; height:100px;" src="/assets/img/paginas/backend/dashboard/categorias.jpg" class="img-fluid rounded-circle" alt="{{$categoria->name}}">
+                <img style="object-fit: cover; width: 100px; height:100px;" src="/assets/img/categorias/{{$categoria->img}}" class="img-fluid rounded-circle" alt="{{$categoria->name}}">
               </div>
 
               <h5 class="card-title text-dark">{{$categoria->name}}</h5>
@@ -599,7 +599,7 @@
           <div class="card-body text-center p-4">
             <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
               <div class="image mb-3 mt-n9">
-                <img style="width: 100px; height:100px;" src="/assets/img/vinhos/{{$categoria_vinho->img}}" class="img-fluid rounded-circle" alt="{{$categoria_vinho->nome}}">
+                <img style="object-fit: cover; width: 100px; height:100px;" src="/assets/img/vinhos/{{$categoria_vinho->img}}" class="img-fluid rounded-circle" alt="{{$categoria_vinho->nome}}">
               </div>
 
               <h5 class="card-title text-dark">{{$categoria_vinho->nome}}</h5>
@@ -648,7 +648,7 @@
           <div style="height: 305px;" class="card-body text-center p-4">
             <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
               <div class="image mb-3 mt-n9">
-                <img style="width: 100px; height:100px;" src="/assets/img/paginas/backend/dashboard/categorias.jpg" class="img-fluid rounded-circle" alt="{{$produtoswp->post_title}}">
+                <img style="width: 100px; height:100px;" src="/assets/img/paginas/backend/dashboard/wordpress.jpg" class="img-fluid rounded-circle" alt="{{$produtoswp->post_title}}">
               </div>
               <h6 style="width: 100%;" class="card-title text-dark">{{$produtoswp->post_title}}</h6>
               <ul class="list-unstyled">

@@ -226,72 +226,63 @@
                     <div class="slim-scroll-right-sidebar-2">
 
                         <div class="right-sidebar-2-header">
-                            <h2>Layout Settings</h2>
-                            <p>User Interface Settings</p>
+                            <h2>Definições de Layout</h2>
+                            <p>Definições da Interface do Administrador</p>
                             <div class="btn-close-right-sidebar-2">
                                 <i class="mdi mdi-window-close"></i>
                             </div>
                         </div>
 
                         <div class="right-sidebar-2-body">
-                            <span class="right-sidebar-2-subtitle">Header Layout</span>
+                            <span class="right-sidebar-2-subtitle">Layout do Header</span>
                             <div class="no-col-space">
-                                <a href="javascript:void(0);" class="btn-right-sidebar-2 header-fixed-to btn-right-sidebar-2-active">Fixed</a>
-                                <a href="javascript:void(0);" class="btn-right-sidebar-2 header-static-to">Static</a>
+                                <a href="javascript:void(0);" class="btn-right-sidebar-2 header-fixed-to btn-right-sidebar-2-active">Fixo</a>
+                                <a href="javascript:void(0);" class="btn-right-sidebar-2 header-static-to">Estático</a>
                             </div>
 
-                            <span class="right-sidebar-2-subtitle">Sidebar Layout</span>
+                            <span class="right-sidebar-2-subtitle">Layout da Sidebar</span>
                             <div class="no-col-space">
                                 <select class="right-sidebar-2-select" id="sidebar-option-select">
-                                    <option value="sidebar-fixed">Fixed Default</option>
-                                    <option value="sidebar-fixed-minified">Fixed Minified</option>
-                                    <option value="sidebar-fixed-offcanvas">Fixed Offcanvas</option>
-                                    <option value="sidebar-static">Static Default</option>
-                                    <option value="sidebar-static-minified">Static Minified</option>
-                                    <option value="sidebar-static-offcanvas">Static Offcanvas</option>
+                                    <option value="sidebar-fixed">Fixo (Padrão)</option>
+                                    <option value="sidebar-fixed-minified">Fixo Minimizado</option>
+                                    <option value="sidebar-fixed-offcanvas">Fixo Fora da Tela</option>
+                                    <option value="sidebar-static">Estático Padrão</option>
+                                    <option value="sidebar-static-minified">Estático Minimizado</option>
+                                    <option value="sidebar-static-offcanvas">Estático Fora da Tela</option>
                                 </select>
                             </div>
 
-                            <span class="right-sidebar-2-subtitle">Header Background</span>
+                            <span class="right-sidebar-2-subtitle">Fundo do Header</span>
                             <div class="no-col-space">
-                                <a href="javascript:void(0);" class="btn-right-sidebar-2 btn-right-sidebar-2-active header-light-to">Light</a>
-                                <a href="javascript:void(0);" class="btn-right-sidebar-2 header-dark-to">Dark</a>
+                                <a href="javascript:void(0);" class="btn-right-sidebar-2 btn-right-sidebar-2-active header-light-to">Branco</a>
+                                <a href="javascript:void(0);" class="btn-right-sidebar-2 header-dark-to">Preto</a>
                             </div>
 
-                            <span class="right-sidebar-2-subtitle">Navigation Background</span>
+                            <span class="right-sidebar-2-subtitle">Fundo da Navegação</span>
                             <div class="no-col-space">
-                                <a href="javascript:void(0);" class="btn-right-sidebar-2 btn-right-sidebar-2-active sidebar-dark-to">Dark</a>
-                                <a href="javascript:void(0);" class="btn-right-sidebar-2 sidebar-light-to">Light</a>
+                                <a href="javascript:void(0);" class="btn-right-sidebar-2 btn-right-sidebar-2-active sidebar-dark-to">Preto</a>
+                                <a href="javascript:void(0);" class="btn-right-sidebar-2 sidebar-light-to">Branco</a>
                             </div>
-
-                            <span class="right-sidebar-2-subtitle">Direction</span>
-                            <div class="no-col-space">
-                                <a href="javascript:void(0);" class="btn-right-sidebar-2 btn-right-sidebar-2-active ltr-to">LTR</a>
-                                <a href="javascript:void(0);" class="btn-right-sidebar-2 rtl-to">RTL</a>
-                            </div>
-
                             <div class="d-flex justify-content-center" style="padding-top: 30px">
-                                <div id="reset-options" style="width: auto; cursor: pointer" class="btn-right-sidebar-2 btn-reset">Reset
-                                    Settings</div>
+                                <div id="reset-options" style="width: auto; cursor: pointer" class="btn-right-sidebar-2 btn-reset">Repor Definições</div>
                             </div>
-
                         </div>
 
                     </div>
                 </div>
             </div>
             <footer class="footer mt-auto">
-            <div class="copyright bg-white">
-              <p>
-                © <span id="copy-year">2021</span> Copyright WineCulture Dashboard
-              </p>
-            </div>
-            <script>
-                var d = new Date();
-                var year = d.getFullYear();
-                document.getElementById("copy-year").innerHTML = year;
-            </script>
-          </footer>
+                <div class="copyright bg-white">
+                    <p>
+                        © <span id="copy-year">2021</span> Copyright WineCulture Dashboard
+                    </p>
+                </div>
+                <script>
+                    var d = new Date();
+                    var year = d.getFullYear();
+                    document.getElementById("copy-year").innerHTML = year;
+                </script>
+            </footer>
 
             <script>
                 var d = new Date();
