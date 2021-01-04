@@ -94,7 +94,8 @@ Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController
 
 //receitas Admin
 
-Route::get('/admin/receitas', [App\Http\Controllers\AdminController::class, 'receitas_index'])->name('admin_receitas');
+Route::get('/admin/receitas', [App\Http\Controllers\ReceitasController::class, 'index'])->name('admin_receitas');
+Route::get('/admin/receitas/{receita}/show/', [App\Http\Controllers\ReceitasController::class, 'showreceita'])->name('showReceita');
 
 //mensagens
 Route::post('/admin/dashboard', [App\Http\Controllers\ChatController::class, 'frontend_store'])->name('mensagens_backend_store');

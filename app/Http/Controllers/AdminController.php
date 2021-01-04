@@ -34,10 +34,10 @@ class AdminController extends Controller
             if ($id_user_auth !== "Administrador"){
                 return redirect()->route('login');
             }else{
-       
+
         //verificar se o utilizador fez login e se é um administrador
 
-        
+
         //Ir buscar os utilizadores organizados por mes
         $totalUsersJan = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 1)->count();
         $totalUsersFev = User::whereYear('created_at', '=', 2020)->whereMonth('created_at', '=', 2)->count();
@@ -128,17 +128,17 @@ class AdminController extends Controller
 
         //  $fb_gostos_url = "https://graph.facebook.com/100224601998953?access_token=EAAEUXTXUXlUBAMzUlqcSoTiHOCkmReEctU1ee7debOpDvVhgZCTye079jcWOYv8SgoWlF2aGXz4JBZCHLL2sCgnKISXeuAtPur5Rs6tlmRzQy4YujWXdetOx4CIH8sLO52T5k0ZAIiSrEiCeDLccxnXczInoskWMvHslaN9jmJFSDgbVgJeR2Rjoyk8IegZD&fields=fan_count";
         //  $fb_gostos_curl = curl_init($fb_gostos_url);
-        //  curl_setopt($fb_gostos_curl, CURLOPT_RETURNTRANSFER, 1);   
+        //  curl_setopt($fb_gostos_curl, CURLOPT_RETURNTRANSFER, 1);
         //  curl_setopt($fb_gostos_curl, CURLOPT_SSL_VERIFYPEER, false);
-        //  $fb_gostos_result = curl_exec($fb_gostos_curl);  
+        //  $fb_gostos_result = curl_exec($fb_gostos_curl);
         //  curl_close($fb_gostos_curl);
         //  $fb_gostos_detalhes = json_decode($fb_gostos_result,true);
         // $fbgostos = $fb_gostos_detalhes['fan_count'];
         //  $fb_posts_url = "https://graph.facebook.com/100224601998953?access_token=EAAEUXTXUXlUBAMzUlqcSoTiHOCkmReEctU1ee7debOpDvVhgZCTye079jcWOYv8SgoWlF2aGXz4JBZCHLL2sCgnKISXeuAtPur5Rs6tlmRzQy4YujWXdetOx4CIH8sLO52T5k0ZAIiSrEiCeDLccxnXczInoskWMvHslaN9jmJFSDgbVgJeR2Rjoyk8IegZD&fields=published_posts.limit(1).summary(total_count).since(1)";
         //  $fb_posts_curl = curl_init($fb_posts_url);
-        //  curl_setopt($fb_posts_curl, CURLOPT_RETURNTRANSFER, 1);   
+        //  curl_setopt($fb_posts_curl, CURLOPT_RETURNTRANSFER, 1);
         //  curl_setopt($fb_posts_curl, CURLOPT_SSL_VERIFYPEER, false);
-        //  $fb_posts_result = curl_exec($fb_posts_curl);  
+        //  $fb_posts_result = curl_exec($fb_posts_curl);
         //  curl_close($fb_posts_curl);
         //  $fb_posts_details = json_decode($fb_posts_result,true);
         //  $fbposts = $fb_posts_details['published_posts']['summary']['total_count'];
@@ -156,11 +156,11 @@ class AdminController extends Controller
 
 
 
-        $ultimos_users = DB::table('users')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get(); 
+        $ultimos_users = DB::table('users')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get();
         $total_posts = Blog::all();
         $total_posts_count = $total_posts->count();
-        $ultimas_categorias = DB::table('categories')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get(); 
-        $ultimas_categorias_vinhos = DB::table('category_wines')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get(); 
+        $ultimas_categorias = DB::table('categories')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get();
+        $ultimas_categorias_vinhos = DB::table('category_wines')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get();
         $total_receitas = Receitas::all();
         $total_receitas_count = $total_receitas->count();
 
@@ -168,7 +168,7 @@ class AdminController extends Controller
         $total_produtoswp_count = $total_produtoswp->count();
         $total_produtoswp_stock = WPProdutosStock::all();
         $total_produtoswp_preco = WPProdsPreco::all();
-        
+
         return view('paginas.backend.dashboard', compact([
             'totalUsersJan',
             'totalUsersFev',
@@ -234,14 +234,8 @@ class AdminController extends Controller
             'total_produtoswp_stock',
             'total_produtoswp_preco'
         ]));
-    }        
-}
-}
-    public function receitas_index()
-    {
-
-        $receitas = receitas::all();
-
-        return view('paginas.backend.receitas', compact('receitas'));
     }
+}
+}
+
 }

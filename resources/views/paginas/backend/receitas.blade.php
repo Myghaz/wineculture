@@ -14,9 +14,13 @@
             <tr>
               <th>ID</th>
               <th class="d-none d-lg-table-cell">Nome</th>
+              <th class="d-none d-lg-table-cell">Categoria</th>
+              <th class="d-none d-lg-table-cell">Utilizador</th>
               <th class="d-none d-lg-table-cell">Descrição</th>
-              <th class="d-none d-lg-table-cell">Tipo de Vinhos</th>
               <th class="d-none d-lg-table-cell">Foto</th>
+              <th class="d-none d-lg-table-cell">Ver</th>
+            <th class="d-none d-lg-table-cell">Editar</th>
+            <th class="d-none d-lg-table-cell">Apagar</th>
             </tr>
           </thead>
           <tbody>
@@ -26,12 +30,29 @@
               <td>
                 <a class="text-dark" href="">{{$receita->nome}}</a>
               </td>
+              @foreach($category_wines as $key => $category_wine)
+              @if ($receita->id_categoria == $category_wine->id)
+              <td class="d-none d-lg-table-cell">{{$category_wine->nome}}</td>
+              @endif
+              @endforeach
+              @foreach($Users as $key => $User)
+              @if ($receita->id_user == $User->id)
+              <td class="d-none d-lg-table-cell">{{$User->name}} {{$User->apelido}}</td>
+              @endif
+              @endforeach
               <td>
                 <a class="text-dark" href="">{{$receita->descricao}}</a>
               </td>
-              <td class="d-none d-lg-table-cell">{{$receita->tipovinho}}</td>
+
               <td class="d-none d-lg-table-cell">{{$receita->foto}}</td>
-            </tr>
+              <td class="d-none d-lg-table-cell"><a href="{{ route('showReceita', $receita) }}" class="btn btn-primary">Ver</a></td>
+                  <td class="d-none d-lg-table-cell"><a href="{{ route('editblog', $receita) }}" class="btn btn-primary">Editar</a</td> @csrf @method("DELETE") <td class="d-none d-lg-table-cell">
+                      <form action="{{ route('destroy.blog', $receita) }}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <input class="btn btn-danger" type="submit" value="Delete" />
+                      </form>
+                  </td>
             </tr>
             @endforeach
           </tbody>
