@@ -4,7 +4,8 @@
 @section('content')
 <div class="content-wrapper">
   <div class="content">
-    <h2>Ver post com ID {{$receita->id}}</h2>
+    @foreach($receitas as $key => $receita)
+    <h2>Ver ID {{$receita->id}}</h2>
     <br>
     <form action="{{route('showReceita', $receita)}}" method="POST">
       {{csrf_field()}}
@@ -38,7 +39,7 @@
         <input class="form-control" readonly id="exampleFormControlTextarea1" rows="3" name="categoria" value="{{$category_wine->nome}}"></input>
         @endif
         @endforeach
-
+@endforeach
       </div>
 
       <div class="form-group">
@@ -48,19 +49,6 @@
 
     </form>
 
-
-    <a style="float:left; margin-right:10px" href="{{ route('editblog', $blog) }}" class="btn btn-primary">Editar</a>
-
-
-
-    @csrf
-    @method("DELETE")
-
-    <form action="{{ route('destroy.blog', $blog) }}" method="post">
-      @method('DELETE')
-      @csrf
-      <input class="btn btn-danger" type="submit" value="Delete" />
-    </form>
 
 
 

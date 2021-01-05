@@ -49,7 +49,7 @@ class ReceitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function showreceita(Receita $Receita)
+    public function showreceita(Receitas $Receita)
     {
         $receitas = receitas::all();
         $category_wines = category_wine::all();
@@ -57,6 +57,16 @@ class ReceitasController extends Controller
         return view('paginas.backend.show_receita', ['showReceita' => $Receita], compact('receitas','Users','category_wines'));
     }
 
+    public function insert_receitas(Request $receitas)
+    {
+        Receitas::create($receitas->all());
+    }
+    public function inserir_receita()
+    {
+        $categories = Category::all();
+        return view('paginas.backend.inser_blog', compact('categories'));
+
+    }
     /**
      * Show the form for editing the specified resource.
      *
