@@ -108,14 +108,14 @@
                             <ul class="collapse" id="components" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin_receitas')}}">
-                                            <span class="nav-text">Data table</span>
+                                        <a class="sidenav-item-link" href="{{ route('receitas.index') }}">
+                                            <span class="nav-text">Ver todas</span>
 
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="sidenav-item-link" href="badge.html">
-                                            <span class="nav-text">Inserte Info</span>
+                                        <a class="sidenav-item-link" href="{{route('receitas.create')}}">
+                                            <span class="nav-text">Inserir Receita</span>
 
                                         </a>
                                     </li>

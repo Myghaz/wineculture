@@ -10,4 +10,8 @@ class category_wine extends Model
     protected $fillable = [
         'nome'
     ];
+
+    public function receitas() {
+        return $this->hasMany(Receitas::class, 'id_categoria');
+    }
 }

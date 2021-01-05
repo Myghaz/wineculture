@@ -15,4 +15,12 @@ class receitas extends Model
         'tipovinho',
         'descricao',
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class, 'id_user');
+    }
+
+    public function categoria() {
+        return $this->belongsTo(category_wine::class, 'id_categoria');
+    }
 }

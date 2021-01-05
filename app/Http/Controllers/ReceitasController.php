@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\receitas;
-use App\Models\category_wine;
+use Auth;
 use App\Models\User;
+use App\Models\receitas;
+use Illuminate\Http\Request;
+use App\Models\category_wine;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
+
+
 class ReceitasController extends Controller
 {
     /**
@@ -19,7 +23,7 @@ class ReceitasController extends Controller
             $receitas = receitas::all();
             $category_wines = category_wine::all();
             $Users = User::all();
-            return view('paginas.backend.receitas', compact('receitas', 'category_wines', 'Users'));
+            return view('paginas.backend.receitas.index', compact('receitas', 'category_wines', 'Users'));
     }
 
     /**
@@ -29,7 +33,8 @@ class ReceitasController extends Controller
      */
     public function create()
     {
-        //
+        $categories_wines = category_wine::all();
+        return view('paginas.backend.receitas.create', compact('categories_wines'));
     }
 
     /**
@@ -40,7 +45,17 @@ class ReceitasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $receita = new Receitas();
+        $receita->fill($request->all());
+        $receita->id_categoria = $request->id_categoria;
+        $receita->id_user = Auth::user()->id;
+
+        $path= Storage::putFileAs('public/receitas', $request->file('img'), 'receitas_' . time() . '.' . $request->file('img')->extension());
+
+        $receita->foto = $path;
+        $receita->save();
+
+        return redirect()->route('receitas.index');
     }
 
     /**
@@ -49,24 +64,14 @@ class ReceitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function showreceita(Receitas $Receita)
+    public function show(Receitas $receita)
     {
-        $receitas = receitas::all();
-        $category_wines = category_wine::all();
-        $Users = User::all();
-        return view('paginas.backend.show_receita', ['showReceita' => $Receita], compact('receitas','Users','category_wines'));
+        //$categoria = category_wine::findOrFail(3);
+        //dd($categoria->receitas);
+
+        return view('paginas.backend.receitas.show', compact('receita'));
     }
 
-    public function insert_receitas(Request $receitas)
-    {
-        Receitas::create($receitas->all());
-    }
-    public function inserir_receita()
-    {
-        $categories = Category::all();
-        return view('paginas.backend.inser_blog', compact('categories'));
-
-    }
     /**
      * Show the form for editing the specified resource.
      *
