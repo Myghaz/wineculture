@@ -14,7 +14,16 @@
     <section>
         <div class="container">
 
-        
+            <div class="row">
+				<div class="col-md-3">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<img src="" class="img-fluid" alt="" />
+						</div>
+						<h2>Vegetable Name..</h2>
+						<a class="hvr-radial-in" href="#">$ 18.00</a>
+					</div>
+                </div><!-- end col -->
         </div>
     </section>
     <br>
