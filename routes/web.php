@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
+use App\Http\Controllers\ReceitasController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -94,12 +96,12 @@ Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController
 
 //receitas Admin
 
-Route::get('/admin/receitas', [App\Http\Controllers\ReceitasController::class, 'index'])->name('receitas.index');
+//Route::get('/admin/receitas', [App\Http\Controllers\ReceitasController::class, 'index'])->name('receitas.index');
+//Route::get('/admin/receitas/{receita}/show', [App\Http\Controllers\ReceitasController::class, 'show'])->name('receitas.show');
+//Route::get('/admin/receitas/create', [App\Http\Controllers\ReceitasController::class, 'create'])->name('receitas.create');
+//Route::post('/admin/receitas', [App\Http\Controllers\ReceitasController::class, 'store'])->name('receitas.store');
 
-Route::get('/admin/receitas/{receita}/show', [App\Http\Controllers\ReceitasController::class, 'show'])->name('receitas.show');
-
-Route::get('/admin/receitas/create', [App\Http\Controllers\ReceitasController::class, 'create'])->name('receitas.create');
-Route::post('/admin/receitas', [App\Http\Controllers\ReceitasController::class, 'store'])->name('receitas.store');
+Route::resource('/admin/receitas', ReceitasController::class);
 
 //mensagens
 Route::post('/admin/dashboard', [App\Http\Controllers\ChatController::class, 'frontend_store'])->name('mensagens_backend_store');

@@ -44,11 +44,11 @@
                                 <a class="text-dark" href="">{{$receita->descricao}}</a>
                             </td>
 
-                            <td class="d-none d-lg-table-cell"><img src="{{ asset('storage/'.$receita->foto) }}" height="50px"></td>
+                            <td class="d-none d-lg-table-cell"><img src="{{ Storage::url($receita->foto) }}" height="50px"></td>
 
                             <td class="d-none d-lg-table-cell"><a href="{{ route('receitas.show', $receita) }}" class="btn btn-primary">Ver</a></td>
-                            <td class="d-none d-lg-table-cell"><a href="{{-- route('edit.receita', $receita) --}}" class="btn btn-primary">Editar</a</td> @csrf @method("DELETE") <td class="d-none d-lg-table-cell">
-                                <form action="{{-- route('destroy.receita', $receita) --}}" method="post">
+                            <td class="d-none d-lg-table-cell"><a href="{{ route('receitas.edit', $receita) }}" class="btn btn-primary">Editar</a</td> @csrf @method("DELETE") <td class="d-none d-lg-table-cell">
+                                <form action="{{route('receitas.destroy', $receita)}}" method="post">
                                     @method('DELETE')
                                     @csrf
                                     <input class="btn btn-danger" type="submit" value="Delete" />

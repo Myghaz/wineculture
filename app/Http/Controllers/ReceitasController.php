@@ -78,9 +78,10 @@ class ReceitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Receitas $receita)
     {
-        //
+        $category_wines = category_wine::all();
+        return view('paginas.backend.receitas.edit', compact('receita' , 'category_wines'));
     }
 
     /**
@@ -90,9 +91,12 @@ class ReceitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, receitas $receita)
     {
-        //
+        $receita->update($request->all());
+        $receita->save();
+        return redirect()->route('receitas.index')
+        ->with('success', 'Receita foi editada com sucesso', compact('receita'));
     }
 
     /**
@@ -101,8 +105,9 @@ class ReceitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, receitas $receita)
     {
-        //
+        $receita->delete($receita);
+        return redirect()->route('receitas.index')->with('success', 'Receita removida com sucesso', compact('receita'));
     }
 }
