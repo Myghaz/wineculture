@@ -36,7 +36,6 @@
             </div>
             <div class="col-md-3 m-3 mt-5" data-aos="fade-up" data-aos-delay="150">
                 <h2><b>A Nossa Instituição</b></h1>
-				<!--<h2><b>A NOSSA INSTITUIÇÃO</b></h1>-->
                     <br><br>
                     <p style="color: grey;font-size: 13px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis, neque et consectetur viverra, metus nulla tempus lacus, in tempus quam ipsum at nisl.</p>
                     <p style="color: grey;font-size: 13px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat eros ac velit consequat finibus. Vestibulum semper, justo quis tempus imperdiet, massa metus aliquam augue, ut ornare quam felis nec nunc. Nulla fermentum magna nisl, quis congue enim fermentum quis. Nullam varius urna odio, et bibendum nulla tempor congue.</p>

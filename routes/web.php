@@ -27,6 +27,9 @@ Route::get('/sobre', function () {
     return view('paginas.frontend.sobre');
 })->name('sobre');
 
+Route::get('/vinhos', function () {
+    return view('paginas.frontend.tipo_de_vinho');
+})->name('vinhos');
 
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
