@@ -13,17 +13,20 @@
     @include('includes.frontend.navbar')
     <section>
         <div class="container">
-
+            @foreach($receitas as $value)
             <div class="row">
 				<div class="col-md-3">
                     <div class="services-inner-box">
 						<div class="ser-icon">
-							<img src="" class="img-fluid" alt="" />
+							<img src="{{ Storage::url($value->foto) }}" class="img-fluid" alt="" />
 						</div>
-						<h2>Vegetable Name..</h2>
+						<h2>{{$value->nome}}</h2>
 						<a class="hvr-radial-in" href="#">$ 18.00</a>
-					</div>
-                </div><!-- end col -->
+					</div> 
+                </div>
+            </div>
+            @endforeach
+<!-- end col -->
         </div>
     </section>
     <br>

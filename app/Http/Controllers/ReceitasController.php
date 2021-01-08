@@ -25,6 +25,13 @@ class ReceitasController extends Controller
             $Users = User::all();
             return view('paginas.backend.receitas.index', compact('receitas', 'category_wines', 'Users'));
     }
+    public function indexFrontend()
+    {
+            $receitas = receitas::all();
+            $category_wines = category_wine::all();
+            $Users = User::all();
+            return view('paginas.frontend.receitas', compact('receitas', 'category_wines', 'Users'));
+    }
 
     /**
      * Show the form for creating a new resource.
