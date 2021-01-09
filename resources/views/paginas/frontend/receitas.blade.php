@@ -13,7 +13,9 @@
 <body>
     @include('includes.frontend.navbar')
     <section>
+        <img src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
 <div class="container">
+<br>
     <div class="row">
         @foreach($receitas as $value)
         <div class="col-md-3 col-sm-6">
