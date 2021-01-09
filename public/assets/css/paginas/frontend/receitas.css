@@ -135,7 +135,7 @@
     color: #414141
 }
 
-.product-grid3 .price {
+.product-grid3 .desc {
     color: #000;
     font-size: 16px;
     letter-spacing: 1px;
@@ -144,7 +144,7 @@
     display: inline-block
 }
 
-.product-grid3 .price span {
+.product-grid3 .desc span {
     color: #909090;
     font-size: 14px;
     font-weight: 500;

@@ -30,7 +30,7 @@
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="#">{{$value->nome}} </a></h3>
-                    <div class="price">
+                    <div class="desc">
                         {{$value->descricao}}
                     </div>
                 </div>
