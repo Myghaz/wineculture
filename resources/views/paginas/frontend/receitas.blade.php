@@ -24,10 +24,10 @@
                         <img class="pic-2" src="{{ Storage::url($value->foto) }}">
                     </a>
                     <ul class="social">
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li><a href="{{ Storage::url($value->foto) }}" target="_blank"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
                     </ul>
-                    <span class="product-new-label">New</span>
+                    <span class="product-new-label">Novo</span>
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="#">{{$value->nome}} </a></h3>

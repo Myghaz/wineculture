@@ -88,7 +88,7 @@
 }
 
 .product-grid3 .social li a {
-    color: #e67e22;
+    color: #f15a5a;
     background: #fff;
     font-size: 18px;
     line-height: 50px;
@@ -102,7 +102,7 @@
 }
 
 .product-grid3 .social li a:hover {
-    background: #e67e22;
+    background: #f15a5a;
     color: #fff
 }
 
@@ -164,7 +164,7 @@
 }
 
 .product-grid3 .rating li {
-    color: #ffd200;
+    color: #f15a5a;
     font-size: 13px;
     display: inline-block
 }
