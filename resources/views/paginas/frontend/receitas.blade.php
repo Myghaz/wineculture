@@ -24,8 +24,7 @@
                         <img class="pic-2" src="{{ Storage::url($value->foto) }}">
                     </a>
                     <ul class="social">
-                        <li><a href="{{ Storage::url($value->foto) }}" target="_blank"><i class="fa fa-search"></i></a></li>
-                        <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="{{ Storage::url($value->foto) }}" target="_blank"><i class="fa fa-eye"></i></a></li>
                     </ul>
                     <span class="product-new-label">Novo</span>
                 </div>
