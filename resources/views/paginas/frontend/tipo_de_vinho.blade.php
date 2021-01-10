@@ -34,11 +34,6 @@
 	
 	<div class="container">
 		<div class="row m-3 mt-5">
-			
-			@if (Auth::user()->img == "Sem Imagem")
-                <img src="/assets/img/users/sem_imagem.jpg" class="user-image" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
-            @endif
-			
 			<div class="col-md-3 mb-2" data-aos="fade-up">
 				<div class="zoom-img">
 					<img src="assets\img\vinhos\wine_test.png" alt="produto_vinho" style="width:250px">
