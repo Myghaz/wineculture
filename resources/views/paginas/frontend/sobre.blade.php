@@ -37,10 +37,11 @@
             <div class="col-md-3 m-3 mt-5" data-aos="fade-up" data-aos-delay="150">
                 <h2><b>A Nossa Instituição</b></h1>
                     <br><br>
-                    <p style="color: grey;font-size: 13px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis, neque et consectetur viverra, metus nulla tempus lacus, in tempus quam ipsum at nisl.</p>
-                    <p style="color: grey;font-size: 13px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat eros ac velit consequat finibus. Vestibulum semper, justo quis tempus imperdiet, massa metus aliquam augue, ut ornare quam felis nec nunc. Nulla fermentum magna nisl, quis congue enim fermentum quis. Nullam varius urna odio, et bibendum nulla tempor congue.</p>
-                    <p style="color: grey;font-size: 13px">Pellentesque viverra sem eu purus pulvinar condimentum. Aliquam sodales ante vitae fringilla molestie. Morbi sed mauris ex. Vivamus rutrum pulvinar purus sed pulvinar. Ut accumsan rhoncus sollicitudin. Integer ut enim enim. Phasellus mattis lobortis orci, ut gravida nisl porta vel.</p>
-                    <p style="color: grey;font-size: 13px">Ut molestie pellentesque dui, sed dignissim nunc tincidunt ut. Nulla efficitur est et maximus pellentesque. Pellentesque nec fringilla ligula, ac tempus nisl. Ut sed venenatis libero. Nam in est et odio porta aliquet feugiat convallis risus.</p>
+                    <p style="color: grey;font-size: 13px">A WineCulture é uma instituição sem fins lucrativos, com o objetivo de promover a vinicultura nacional.<br><br>
+Com o nosso website nós listamos todos os nossos vinhos, com toda a sua informação e com o seu acompanhamento perfeito.<br><br>
+A nossa instituição é excelente para os produtores de vinho de Portugal, se for um produtor Português pode contactar-nos para publicar os seus vinhos, promovendo assim a vinicultura nacional.<br><br>
+Temos também uma parte comercial onde vendemos mercadoria como acessórios pessoais, de escritório, vestuário e produtos para se proteger durante a pandemia.<br><br>
+Conte conosco para descobrir a vinicultura nacional!</p>
             </div>
         </div>
         <br><br><br>

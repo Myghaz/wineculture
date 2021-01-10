@@ -31,6 +31,10 @@ Route::get('/vinhos', function () {
     return view('paginas.frontend.tipo_de_vinho');
 })->name('vinhos');
 
+Route::get('/vinho_produto', function () {
+    return view('paginas.frontend.vinho_produto');
+})->name('vinho_produto');
+
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
 })->name('sobre_vinhos');

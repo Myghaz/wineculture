@@ -30,18 +30,8 @@
 				</div>
 				
 				<div class="form-group">
-					<label for="customRange3">Ano</label>
-					<input type="number" class="form-control" name="vinho_ano" step=1 value=2000 id="formGroupExample">
-				</div>
-				
-				<div class="form-group">
-					<label for="customRange3">QNT CL</label>
+					<label for="customRange3">Quantidade CL</label>
 					<input type="number" class="form-control" name="vinho_cl" step=1 id="formGroup">
-				</div>
-				
-				<div class="form-group">
-					<label for="customRange3">Reserva</label>
-					<input type="text" class="form-control" name="vinho_reserva" id="formGroupExampleInput">
 				</div>
 				
                 <div class="form-group">
