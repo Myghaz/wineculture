@@ -30,6 +30,8 @@ class UsersSeeder extends Seeder
             'name' => 'Admin',
             'apelido' => 'Um',
             'data_nasc' => Carbon::parse('2000-06-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-06-26'),
         ]);
         User::create([
@@ -39,6 +41,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Um',
             'data_nasc' => Carbon::parse('2001-05-15'),
+            'genero' => 'Feminino',
+            'pais' => 'Espanha',
             'created_at' => Carbon::parse('2020-05-15'),
         ]);
         User::create([
@@ -48,6 +52,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Dois',
             'data_nasc' => Carbon::parse('1994-06-20'),
+            'genero' => 'Feminino',
+            'pais' => 'Espanha',
             'created_at' => Carbon::parse('2020-10-20'),
         ]);
         User::create([
@@ -58,6 +64,8 @@ class UsersSeeder extends Seeder
             'apelido' => 'Tres',
             'img' => '29.jpg',
             'data_nasc' => Carbon::parse('1983-03-22'),
+            'genero' => 'Feminino',
+            'pais' => 'Alemanha',
             'created_at' => Carbon::parse('2020-03-22'),
         ]);
         User::create([
@@ -68,6 +76,8 @@ class UsersSeeder extends Seeder
             'apelido' => 'Um',
             'img' => '26.jpg',
             'data_nasc' => Carbon::parse('2000-02-12'),
+            'genero' => 'Feminino',
+            'pais' => 'França',
             'created_at' => Carbon::parse('2020-02-12'),
         ]);
         User::create([
@@ -77,6 +87,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Dois',
             'data_nasc' => Carbon::parse('2001-06-05'),
+            'genero' => 'Masculino',
+            'pais' => 'Espanha',
             'created_at' => Carbon::parse('2020-06-05'),
         ]);
         User::create([
@@ -86,6 +98,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Tres',
             'data_nasc' => Carbon::parse('2004-11-25'),
+            'genero' => 'Nao Revelar',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-11-25'),
         ]);
         User::create([
@@ -95,6 +109,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador4',
             'apelido' => 'Quatro',
             'data_nasc' => Carbon::parse('1997-02-26'),
+            'genero' => 'Nao Revelar',
+            'pais' => 'Espanha',
             'created_at' => Carbon::parse('2020-02-26'),
         ]);
         User::create([
@@ -104,6 +120,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Cinco',
             'data_nasc' => Carbon::parse('1974-09-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-09-26'),
         ]);
         User::create([
@@ -113,6 +131,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Seis',
             'data_nasc' => Carbon::parse('1980-12-15'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-12-15'),
         ]);
         User::create([
@@ -122,6 +142,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Sete',
             'data_nasc' => Carbon::parse('1998-01-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-01-26'),
         ]);
         User::create([
@@ -131,6 +153,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Oito',
             'data_nasc' => Carbon::parse('1993-02-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-10-26'),
         ]);
         User::create([
@@ -140,6 +164,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Nove',
             'data_nasc' => Carbon::parse('1993-09-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-08-26'),
         ]);
         User::create([
@@ -149,6 +175,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Dez',
             'data_nasc' => Carbon::parse('1993-09-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-04-26'),
         ]);
         User::create([
@@ -158,6 +186,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Onze',
             'data_nasc' => Carbon::parse('1993-11-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-11-26'),
         ]);
         User::create([
@@ -167,6 +197,8 @@ class UsersSeeder extends Seeder
             'name' => 'Utilizador',
             'apelido' => 'Doze',
             'data_nasc' => Carbon::parse('1993-03-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-07-26'),
         ]);
         User::create([
@@ -176,6 +208,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Quatro',
             'data_nasc' => Carbon::parse('1974-09-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-06-26'),
         ]);
         User::create([
@@ -185,6 +219,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'cinco',
             'data_nasc' => Carbon::parse('1974-09-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-04-26'),
         ]);
         User::create([
@@ -194,6 +230,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Seis',
             'data_nasc' => Carbon::parse('1980-12-15'),
+            'genero' => 'Masculino',
+            'pais' => 'Espanha',
             'created_at' => Carbon::parse('2020-01-15'),
         ]);
         User::create([
@@ -203,6 +241,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Sete',
             'data_nasc' => Carbon::parse('1998-01-26'),
+            'genero' => 'Masculino',
+            'pais' => 'França',
             'created_at' => Carbon::parse('2020-07-26'),
         ]);
         User::create([
@@ -212,6 +252,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Oito',
             'data_nasc' => Carbon::parse('1993-02-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-08-26'),
         ]);
         User::create([
@@ -221,6 +263,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Nove',
             'data_nasc' => Carbon::parse('1993-09-26'),
+            'genero' => 'Nao Revelar',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-09-26'),
         ]);
         User::create([
@@ -230,6 +274,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Dez',
             'data_nasc' => Carbon::parse('1993-09-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-02-26'),
         ]);
         User::create([
@@ -239,6 +285,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Onze',
             'data_nasc' => Carbon::parse('1993-11-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-11-26'),
         ]);
         User::create([
@@ -248,6 +296,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Doze',
             'data_nasc' => Carbon::parse('1993-03-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-06-26'),
         ]);
         User::create([
@@ -258,6 +308,8 @@ class UsersSeeder extends Seeder
             'apelido' => 'Treze',
             'img' => '26.jpg',
             'data_nasc' => Carbon::parse('1993-03-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-12-26'),
         ]);
         User::create([
@@ -267,6 +319,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Quatorze',
             'data_nasc' => Carbon::parse('1993-03-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-02-26'),
         ]);
         User::create([
@@ -276,6 +330,8 @@ class UsersSeeder extends Seeder
             'name' => 'Produtor',
             'apelido' => 'Quinze',
             'data_nasc' => Carbon::parse('1993-03-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
             'created_at' => Carbon::parse('2020-06-26'),
         ]);
         User::create([
@@ -286,6 +342,8 @@ class UsersSeeder extends Seeder
             'apelido' => 'Dezasseis',
             'img' => '29.jpg',
             'data_nasc' => Carbon::parse('1993-03-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Irlanda',
             'created_at' => Carbon::parse('2020-12-26'),
         ]);
         User::create([
@@ -296,6 +354,8 @@ class UsersSeeder extends Seeder
             'apelido' => 'Pereira',
             'img' => '142.jpg',
             'data_nasc' => Carbon::parse('1993-03-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Espanha',
             'created_at' => Carbon::parse('2020-12-26'),
         ]);
     }
