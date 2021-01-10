@@ -6,8 +6,13 @@
         <div class="content">
             <h2>Inserir Pergunta</h2>
             <br>
-            <form action="{{route('insert_pergunta')}}" method="POST">
-                @csrf
+            <form action="{{route('faq.store')}}" method="POST" enctype="multipart/form-data">
+                {{csrf_field()}}
+                @if (session('status'))
+                <div class="alert alert-success">
+                    <strong>{{ session('status') }}</strong>
+                </div>
+                @endif
                 <div class="form-group">
                     <label for="formGroupExampleInput">Pergunta</label>
                     <input type="text" class="form-control" name="pergunta" id="formGroupExampleInput">

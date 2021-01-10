@@ -132,12 +132,12 @@
                             <ul class="collapse" id="icons" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin_faq')}}">
+                                        <a class="sidenav-item-link" href="{{route('faq.index')}}">
                                             <span class="nav-text">Perguntas</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('insert_pergunta')}}">
+                                        <a class="sidenav-item-link" href="{{route('faq.create')}}">
                                             <span class="nav-text">Inserir Pergunta</span>
                                         </a>
                                     </li>
@@ -194,7 +194,7 @@
                             </ul>
                         </li>
 						<!-- End of Vinhos Menu -->
-						
+
                     </ul>
                 </div>
             </div>
