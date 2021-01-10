@@ -14,7 +14,6 @@
 <body>
     @include('includes.frontend.navbar')
     <section>
-<<<<<<< HEAD
         <img src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
       <div class="filtro">
         <article class="card-group-item">
@@ -54,10 +53,6 @@
         </article> <!-- card-group-item.// -->
     </div>
         <div class="container">
-=======
-        <img src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" class="imghead" alt="">
-<div class="container">
->>>>>>> eff28871cee4a0620808d04f401a5769a9f6c232
 <br>
     <div class="row">
         @foreach($receitas as $value)
