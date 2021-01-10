@@ -106,7 +106,7 @@
     </div>
 
 
-      
+
     <h2 class="titulo">Tabelas</h2>
     <div class="row tabelas">
       <div class="col-12">
@@ -114,12 +114,12 @@
           <div class="card-header justify-content-between">
             <h2 id="titulotable">Tabela de Utilizadores</h2>
             <div class="table-real-menu-rep">
-        <button title="Utilizadores" id="btnusers" value="Utilizadores" class="table-menu-item-repos"> <i id="table-users" class="fa fa-users"></i> </button>
-        <button title="Produtores" id="btnprodutores" value="Produtores" class="table-menu-item-repos"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
-        <button title="Produtos" id="btnprods" value="Produtos" class="table-menu-item-repos"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
-        <button title="Produtos(WordPress)" id="btnprods_wp" value="Loja" class="table-menu-item-repos"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
-        <button title="Compras" id="btncompras" value="Loja" class="table-menu-item-repos"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button>
-      </div>
+              <button title="Utilizadores" id="btnusers-rep"" value=" Utilizadores" class="table-menu-item-repos"> <i id="table-users" class="fa fa-users"></i> </button>
+              <button title="Produtores" id="btnprodutores-rep" value="Produtores" class="table-menu-item-repos"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
+              <button title="Produtos" id="btnprods-rep"" value=" Produtos" class="table-menu-item-repos"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
+              <button title="Produtos(WordPress)" id="btnprods_wp-rep" value="Loja" class="table-menu-item-repos"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
+              <!--  <button title="Compras" id="btncompras-rep"" value="Loja" class="table-menu-item-repos"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button> -->
+            </div>
             <nav class="table-item-menu">
               <input type="checkbox" href="#" class="table-menu-open" name="table-menu-open" id="table-menu-open" />
               <label id="table-menu-open-handler" class="table-menu-open-button" for="table-menu-open">
@@ -132,7 +132,7 @@
                 <button title="Produtores" id="btnprodutores" value="Produtores" class="table-menu-item"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
                 <button title="Produtos" id="btnprods" value="Produtos" class="table-menu-item"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
                 <button title="Produtos(WordPress)" id="btnprods_wp" value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
-                <button title="Compras" id="btncompras" value="Loja" class="table-menu-item"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button>
+                <!-- <button title="Compras" id="btncompras" value="Loja" class="table-menu-item"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button> -->
               </div>
             </nav>
           </div>
@@ -141,6 +141,7 @@
               <thead id="tableausersthead">
                 <tr>
                   <th>ID</th>
+                  <th class="d-none d-lg-table-cell">Imagem</th>
                   <th>Nome</th>
                   <th class="d-none d-lg-table-cell">Apelido</th>
                   <th class="d-none d-lg-table-cell">Email</th>
@@ -151,6 +152,13 @@
                 <tr>
                   @foreach($users as $key => $user)
                   <td>{{$user->id}}</td>
+                  <td>
+                    @if ($user->img == "Sem Imagem")
+                    <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
+                    @else
+                    <img src="/assets/img/users/{{$user->img}}" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
+                    @endif
+                  </td>
                   <td>
                     <a class="text-dark" href="">{{$user->name}}</a>
                   </td>
@@ -170,8 +178,9 @@
             <table id="tableaprodutores" class="ui celled table" style="width:100%">
               <thead id="tableprodutoresthead">
                 <tr>
-                  <th>ID</th>
-                  <th>Nome</th>
+                <th class="d-none d-lg-table-cell">ID</th>
+                  <th class="d-none d-lg-table-cell">Imagem</th>
+                  <th class="d-none d-lg-table-cell">Nome</th>
                   <th class="d-none d-lg-table-cell">Apelido</th>
                   <th class="d-none d-lg-table-cell">Email</th>
                 </tr>
@@ -179,7 +188,14 @@
               <tbody>
                 <tr>
                   @foreach($produtores as $key => $produtor)
-                  <td>{{$user->id}}</td>
+                  <td>{{$produtor->id}}</td>
+                  <td>
+                    @if ($produtor->img == "Sem Imagem")
+                    <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle w-45" alt=">{{$produtor->name}} {{$produtor->apelido}}">
+                    @else
+                    <img src="/assets/img/users/{{$produtor->img}}" class="rounded-circle w-45" alt=">{{$produtor->name}} {{$produtor->apelido}}">
+                    @endif
+                  </td>
                   <td>
                     <a class="text-dark" href="">{{$produtor->name}}</a>
                   </td>
@@ -195,6 +211,7 @@
               <thead id="tableaprods_wpthead">
                 <tr>
                   <th>ID</th>
+                  <th>Imagem</th>
                   <th>Titulo</th>
                   <th>Descrição</th>
                   <th>Preço</th>
@@ -204,32 +221,38 @@
               <tbody>
                 <tr>
                   @foreach($prosdwp as $key => $prodwp)
-
-                  <td target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->ID}}</td>
+                  <td target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->ID}}</td>
                   <td>
-                    <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_title}}</a>
+                    @foreach($prodsimg as $key => $prodimg)
+                      @if ($prodwp->ID == $prodimg->post_parent)
+                        <img style="width: 50px; height: 50px; object-fit: cover;" src="{{$prodimg->guid}}" class="rounded-circle w-45" alt="{{$prodwp->post_title}}">
+                      @endif
+                    @endforeach
+                </td>
+                  <td>
+                    <a class="text-dark" target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_title}}</a>
                   </td>
                   <td class="tprodswp_td_desc">
-                    <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_content}}</a>
+                    <a class="text-dark" target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_content}}</a>
                   </td>
                   @foreach($wp_prods as $key => $wp_prod)
                   @if ($wp_prod->post_id == $prodwp->ID)
                   <td>
-                    <a class="text-dark" target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$wp_prod->meta_value}}€</a>
+                    <a class="text-dark" target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$wp_prod->meta_value}}€</a>
                   </td>
                   @foreach($wp_prodsStock as $key => $wp_prodStock)
                   @if ($wp_prodStock->post_id == $prodwp->ID)
                   @if ($wp_prodStock->meta_value == "instock")
                   <td class="prods_wp_stock_green">
-                    <div class="prods_wp_green"><a target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">Em Stock</a></div>
+                    <div class="prods_wp_green"><a target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$prodwp->ID}}">Em Stock</a></div>
                   </td>
                   @elseif ($wp_prodStock->meta_value == "onbackorder")
                   <td class="prods_wp_stock_yellow">
-                    <div class="prods_wp_yellow"><a target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">Por Encomenda</a></div>
+                    <div class="prods_wp_yellow"><a target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$prodwp->ID}}">Por Encomenda</a></div>
                   </td>
                   @else
                   <td class="prods_wp_stock_red">
-                    <div class="prods_wp_red"><a target="_blank" href="http://wineculturewp.test/?post_type=product&#038;p={{$prodwp->ID}}">Esgotado</a></div>
+                    <div class="prods_wp_red"><a target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$prodwp->ID}}">Esgotado</a></div>
                   </td>
                   @endif
                   @endif
@@ -465,7 +488,7 @@
                 @if ($ultuser->img == "Sem Imagem")
                 <img style="width: 100px; height:100px;" src="/assets/img/users/sem_imagem.jpg" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @else
-                <img style="object-fit: cover; " src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
+                <img style="object-fit: cover;" src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @endif
               </div>
 
@@ -639,16 +662,20 @@
     </div>
 
 
-    <h2 class="titulo">Ultimas Categorias de Vinho Criadas</h2>
+    <h2 class="titulo">Ultimos Produtos Adicionados</h2>
     <div class="row ultusers">
       @foreach($total_produtoswp as $key => $produtoswp)
 
       <div class="col-lg-6 col-xl-4 col-xxl-3">
         <div class="card card-default mt-6">
           <div style="height: 305px;" class="card-body text-center p-4">
-            <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
+            <a  target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$produtoswp->ID}}" class="text-secondary d-inline-block mb-3">
               <div class="image mb-3 mt-n9">
-                <img style="width: 100px; height:100px;" src="/assets/img/paginas/backend/dashboard/wordpress.jpg" class="img-fluid rounded-circle" alt="{{$produtoswp->post_title}}">
+              @foreach($prodsimg as $key => $prodimg)
+              @if ($produtoswp->ID == $prodimg->post_parent)
+                <img style="width: 100px; height:100px; object-fit: cover;" src="{{$prodimg->guid}}" class="img-fluid rounded-circle" alt="{{$produtoswp->post_title}}">
+                @endif
+                @endforeach
               </div>
               <h6 style="width: 100%;" class="card-title text-dark">{{$produtoswp->post_title}}</h6>
               <ul class="list-unstyled">
@@ -682,7 +709,7 @@
 
   </div>
   <script>
-    var totalUsersJan = {{$totalUsersJan}};
+ var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};
     var totalUsersMar = {{$totalUsersMar}};
     var totalUsersAbr = {{$totalUsersAbr}};
@@ -723,4 +750,3 @@
   </script>
   <script src="{{ asset('assets\js\paginas\backend\dashboard.js') }}"></script>
   @endsection
-  

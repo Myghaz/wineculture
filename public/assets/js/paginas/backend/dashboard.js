@@ -141,7 +141,7 @@ var usersChart = new Chart(usersbarX, {
                 display: false
               },
               ticks: {
-                display: false, // hide main x-axis line
+                display: false, 
                 beginAtZero: true
               },
               barPercentage: 3,
@@ -151,7 +151,7 @@ var usersChart = new Chart(usersbarX, {
           yAxes: [
             {
               gridLines: {
-                drawBorder: false, // hide main y-axis line
+                drawBorder: false, 
                 display: false
               },
               ticks: {
@@ -181,7 +181,7 @@ var produtoresChart = new Chart(produtoresbarX, {
                 display: false
               },
               ticks: {
-                display: false, // hide main x-axis line
+                display: false,
                 beginAtZero: true
               },
               barPercentage: 3,
@@ -191,7 +191,7 @@ var produtoresChart = new Chart(produtoresbarX, {
           yAxes: [
             {
               gridLines: {
-                drawBorder: false, // hide main y-axis line
+                drawBorder: false, 
                 display: false
               },
               ticks: {
@@ -221,7 +221,7 @@ var comprasChart = new Chart(comprasbarX, {
                 display: false
               },
               ticks: {
-                display: false, // hide main x-axis line
+                display: false, 
                 beginAtZero: true
               },
               barPercentage: 3,
@@ -231,7 +231,7 @@ var comprasChart = new Chart(comprasbarX, {
           yAxes: [
             {
               gridLines: {
-                drawBorder: false, // hide main y-axis line
+                drawBorder: false, 
                 display: false
               },
               ticks: {
@@ -261,7 +261,7 @@ var prodsChart = new Chart(prodsbarX, {
                 display: false
               },
               ticks: {
-                display: false, // hide main x-axis line
+                display: false,
                 beginAtZero: true
               },
               barPercentage: 3,
@@ -271,7 +271,7 @@ var prodsChart = new Chart(prodsbarX, {
           yAxes: [
             {
               gridLines: {
-                drawBorder: false, // hide main y-axis line
+                drawBorder: false, 
                 display: false
               },
               ticks: {
@@ -307,7 +307,7 @@ function updateusersChartType() {
                     display: false
                   },
                   ticks: {
-                    display: false, // hide main x-axis line
+                    display: false, 
                     beginAtZero: true
                   },
                   barPercentage:3,
@@ -317,7 +317,7 @@ function updateusersChartType() {
               yAxes: [
                 {  
                   gridLines: {
-                    drawBorder: false, // hide main y-axis line
+                    drawBorder: false,
                     display: false
                   },
                   ticks: {
@@ -353,7 +353,7 @@ function updateprodutoresChartType() {
                     display: false
                   },
                   ticks: {
-                    display: false, // hide main x-axis line
+                    display: false, 
                     beginAtZero: true
                   },
                   barPercentage:3,
@@ -363,7 +363,7 @@ function updateprodutoresChartType() {
               yAxes: [
                 {  
                   gridLines: {
-                    drawBorder: false, // hide main y-axis line
+                    drawBorder: false, 
                     display: false
                   },
                   ticks: {
@@ -398,7 +398,7 @@ function updatecomprasChartType() {
                     display: false
                   },
                   ticks: {
-                    display: false, // hide main x-axis line
+                    display: false, 
                     beginAtZero: true
                   },
                   barPercentage:3,
@@ -408,7 +408,7 @@ function updatecomprasChartType() {
               yAxes: [
                 {  
                   gridLines: {
-                    drawBorder: false, // hide main y-axis line
+                    drawBorder: false, 
                     display: false
                   },
                   ticks: {
@@ -444,7 +444,7 @@ function updateprodsChartType() {
                     display: false
                   },
                   ticks: {
-                    display: false, // hide main x-axis line
+                    display: false, 
                     beginAtZero: true
                   },
                   barPercentage:3,
@@ -454,7 +454,7 @@ function updateprodsChartType() {
               yAxes: [
                 {  
                   gridLines: {
-                    drawBorder: false, // hide main y-axis line
+                    drawBorder: false,
                     display: false
                   },
                   ticks: {
@@ -572,10 +572,11 @@ $('#tableausers').dataTable({
         null,
         null,
         null,
+        null,
         null
     ],
     "order": [
-        [1, 'asc']
+        [2, 'asc']
     ],
     "language": {
         "emptyTable": "Não existem registos a apresentar",
@@ -592,11 +593,11 @@ $('#tableausers').dataTable({
     },
     "columnDefs": [{
         type: 'portugues',
-        targets: [0, 1, 2, 3, 4]
+        targets: [0, 1, 2, 3, 4,5]
     }],
     "columnDefs": [{
         type: 'locale-compare',
-        targets: [0, 1, 2, 3, 4]
+        targets: [0, 1, 2, 3, 4,5]
     }],
 });
 
@@ -609,10 +610,11 @@ $('#tableaprodutores').dataTable({
       { "type": "num" },
       null,
       null,
+      null,
       null
   ],
   "order": [
-      [1, 'asc']
+      [2, 'asc']
   ],
   "language": {
       "emptyTable": "Não existem registos a apresentar",
@@ -629,11 +631,11 @@ $('#tableaprodutores').dataTable({
   },
   "columnDefs": [{
       type: 'portugues',
-      targets: [0, 1, 2, 3]
+      targets: [0, 1, 2, 3, 4]
   }],
   "columnDefs": [{
       type: 'locale-compare',
-      targets: [0, 1, 2, 3]
+      targets: [0, 1, 2, 3, 4]
   }],
 });
 
@@ -644,6 +646,7 @@ $('#tableaprods_wp').dataTable({
   "autoWidth": true,
   "columns": [
       { "type": "num" },
+      null,
       null,
       null,
       null,
@@ -667,11 +670,11 @@ $('#tableaprods_wp').dataTable({
   },
   "columnDefs": [{
       type: 'portugues',
-      targets: [0, 1, 2, 3, 4]
+      targets: [0, 1, 2, 3, 4, 5]
   }],
   "columnDefs": [{
       type: 'locale-compare',
-      targets: [0, 1, 2, 3, 4]
+      targets: [0, 1, 2, 3, 4, 5]
   }],
 });
 });
@@ -712,9 +715,67 @@ $( "#btnprodutores" ).click(function() {
 //////// Botão da Tabela Produtores //////// 
 
 
-
 //////// Botão da Tabela Produtos WordPress //////// 
 $( "#btnprods_wp" ).click(function() {
+  $( "#tableausers" ).hide();
+  $( "#tableausers_wrapper" ).hide();
+
+  $("#tableaprodutores").hide();
+  $("#tableaprodutores_wrapper").hide();
+
+  $("#tableaprods_wp").show();
+  $("#tableaprods_wp_wrapper").css("display", "inline");
+  document.getElementById("titulotable").innerHTML = "Tabela de Produtos (WordPress)";
+  $($.fn.dataTable.tables(true)).DataTable()
+   .columns.adjust();
+});
+//////// Botão da Tabela Produtos WordPress //////// 
+
+
+
+
+
+
+//////////Responsive
+//////// Botão da Tabela Utilizadores //////// 
+$( "#btnusers-rep" ).click(function() {
+  $( "#tableaprodutores" ).hide();
+  $( "#tableaprodutores_wrapper" ).hide();
+
+  $( "#tableaprods_wp" ).hide();
+  $( "#tableaprods_wp_wrapper" ).hide();
+
+
+  $( "#tableausers" ).show();
+  $("#tableausers_wrapper").css("display", "inline");
+  document.getElementById("titulotable").innerHTML = "Tabela de Utilizadores";
+  $($.fn.dataTable.tables(true)).DataTable()
+   .columns.adjust();
+});
+//////// Botão da Tabela Utilizadores //////// 
+
+
+//////// Botão da Tabela Produtores //////// 
+$( "#btnprodutores-rep" ).click(function() {
+  $( "#tableausers" ).hide();
+  $( "#tableausers_wrapper" ).hide();
+
+  $( "#tableaprods_wp" ).hide();
+  $( "#tableaprods_wp_wrapper" ).hide();
+
+
+  $( "#tableaprodutores" ).show();
+  $("#tableaprodutores_wrapper").css("display", "inline");
+  document.getElementById("titulotable").innerHTML = "Tabela de Produtores";
+  $($.fn.dataTable.tables(true)).DataTable()
+   .columns.adjust();
+});
+//////// Botão da Tabela Produtores //////// 
+
+
+
+//////// Botão da Tabela Produtos WordPress //////// 
+$( "#btnprods_wp-rep" ).click(function() {
   $( "#tableausers" ).hide();
   $( "#tableausers_wrapper" ).hide();
 

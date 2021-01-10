@@ -347,22 +347,22 @@ a {
 }
 .table-item-menu .table-menu-item:nth-child(1) {
    transition-duration: 70ms;
-   transform: translate3d(90px, 0, 0) scale(0.5);
+   transform: translate3d(70px, 0, 0) scale(0.5);
    background-color: #669AE1;
 }
 .table-item-menu .table-menu-item:nth-child(2) {
    transition-duration: 130ms;
-   transform: translate3d(45px, 0, 0) scale(0.5);
+   transform: translate3d(25px, 0, 0) scale(0.5);
    background-color: #70CC72;
 }
 .table-item-menu .table-menu-item:nth-child(3) {
    transition-duration: 190ms;
-   transform: translate3d(0, 0, 0) scale(0.5);
+   transform: translate3d(-20px, 0, 0) scale(0.5);
    background-color: #FE4365;
 }
 .table-item-menu .table-menu-item:nth-child(4) {
    transition-duration: 130ms;
-   transform: translate3d(-45px, 0, -20px) scale(0.5);
+   transform: translate3d(-65px, 0, -20px) scale(0.5);
    background-color: #C49CDE;
 }
 .table-item-menu .table-menu-item:nth-child(5) {
