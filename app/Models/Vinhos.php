@@ -10,6 +10,7 @@ class Vinhos extends Model
     protected $fillable = [
         'nome',
         'id_categoria',
+        'img',
         'id_produtor',
         'descricao',
         'preco',

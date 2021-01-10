@@ -1,5 +1,5 @@
 @extends ('layouts.backend.admin')
-@section('title', 'Blog')
+@section('title', 'Vinhos')
 
 @section('content')
 <div class="row">
@@ -28,13 +28,7 @@
                 @foreach($vinhos as $key => $vinho)
                 <td>{{$vinho->id}}</td>
                 <td>
-                  @foreach($vinhosimg as $key => $vinhoimg)
-                  @if ($vinho->id == $vinhoimg->id_vinho)
-                  <img src="/storage/vinhos/{{$vinhoimg->img}}" class="rounded-circle w-45" alt=">{{$vinho->nome}}">
-                  @else
-               
-                  @endif
-                  @endforeach
+                  <img src="/storage/vinhos/{{$vinho->img}}" style="width:65px; height:65px; object-fit: cover;  object-position: 0% 90%;" class="rounded-circle w-45" alt=">{{$vinho->nome}}">
                 </td>
                 <td>
                   <a class="text-dark" href="">{{$vinho->nome}}</a>
@@ -49,13 +43,10 @@
                 @foreach($users as $key => $user)
                 @if ($vinho->id_produtor == $user->id)
                 <td>
-                  <a class="text-dark" href="">{{$user->nome}}</a>
+                  <a class="text-dark" href="">{{$user->name}}</a>
                 </td>
                 @endif
                 @endforeach
-                <td>
-                  <a class="text-dark" href="">{{$vinho->preco}}</a>
-                </td>
                 <td>
                   <a class="text-dark" href="">{{$vinho->preco}}</a>
                 </td>
@@ -74,4 +65,5 @@
     </div>
   </div>
 </div>
+<script src="{{ asset('assets\js\paginas\backend\vinhos.js') }}"></script>
 @endsection
