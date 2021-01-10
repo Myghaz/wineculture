@@ -44,7 +44,7 @@
                                 <a class="text-dark" href="">{{$receita->descricao}}</a>
                             </td>
 
-                            <td class="d-none d-lg-table-cell"><img src="{{ Storage::url($receita->foto) }}" height="50px"></td>
+                            <td class="d-none d-lg-table-cell"><img src="{{ Storage::url($receita->foto) }}" class="rounded-circle w-45"  style="width: 60px; height: 60px; object-fit: cover;"></td>
 
                             <td class="d-none d-lg-table-cell"><a href="{{ route('receitas.show', $receita) }}" class="btn btn-primary">Ver</a></td>
                             <td class="d-none d-lg-table-cell"><a href="{{ route('receitas.edit', $receita) }}" class="btn btn-primary">Editar</a</td> @csrf @method("DELETE") <td class="d-none d-lg-table-cell">
