@@ -13,7 +13,7 @@
 <body>
     @include('includes.frontend.navbar')
     <section>
-        <img src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
+        <img src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" class="imghead" alt="">
 <div class="container">
 <br>
     <div class="row">

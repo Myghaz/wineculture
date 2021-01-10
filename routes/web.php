@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Controllers\ReceitasController;
-
+use App\Http\Controllers\FAQController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,13 +60,10 @@ Route::get('/admin', function () {
 });
 Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
-//Contactos FAQ
+//FAQ
 
-Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('admin_faq');
+Route::resource('/admin/faq', FAQController::class);
 
-Route::get('/admin/insert_pergunta', [App\Http\Controllers\FAQController::class, 'inserir_pergunta'])->name('insert_pergunta');
-
-Route::post('/admin/insert_pergunta', [App\Http\Controllers\FAQController::class, 'inserir'])->name('teste');
 
 //Contactos Admin
 

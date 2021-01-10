@@ -1,5 +1,4 @@
 <html>
-
 <head>
     @extends ('includes.frontend.head')
     <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/navbar.css') }}">
