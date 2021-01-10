@@ -27,6 +27,9 @@ Route::get('/sobre', function () {
     return view('paginas.frontend.sobre');
 })->name('sobre');
 
+Route::get('/vinhos', function () {
+    return view('paginas.frontend.tipo_de_vinho');
+})->name('vinhos');
 
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
@@ -36,9 +39,7 @@ Route::get('/login', function () {
     return view('paginas.frontend.login');
 })->name('login');
 
-Route::get('/receitas', function () {
-    return view('paginas.frontend.receitas');
-})->name('receitas');
+Route::get('/receitas', [App\Http\Controllers\ReceitasController::class, 'indexFrontend'])->name('receitas');
 
 Route::get('/faq', [App\Http\Controllers\MainController::class, 'faq'])->name('faq');
 
