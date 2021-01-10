@@ -95,6 +95,25 @@ Route::get('/admin/blog/{blog}/show/', [App\Http\Controllers\BlogController::cla
 
 Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController::class, 'destroyBlog'])->name('destroy.blog');
 
+
+//vinhos Admin
+
+Route::get('/admin/vinhos', function () {
+    return view('paginas.backend.vinhos');
+})->name('admin_vinhos');
+
+Route::get('/admin/insert_vinho', function () {
+    return view('paginas.backend.insert_vinho');
+})->name('admin_insert_vinho');
+
+Route::get('/admin/insert_categoria_vinho', function () {
+	return view('paginas.backend.insert_categoria_vinho');
+})->name('admin_insert_categoria_vinho');
+
+Route::get('/admin/categoria_vinho', function () {
+    return view('paginas.backend.categoria_vinhos');
+})->name('admin_categoria_vinho');
+
 //receitas Admin
 
 //Route::get('/admin/receitas', [App\Http\Controllers\ReceitasController::class, 'index'])->name('receitas.index');

@@ -162,6 +162,39 @@
                             </ul>
                         </li>
                         <!-- End of Contactos Menu -->
+						<!-- Vinhos -->
+						<li @if (Route::currentRouteName()=='admin_vinhos' ) class="has-sub active expand" @else class="has-sub" @endif>
+                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#vinhos" aria-expanded="false" aria-controls="icons">
+                                <i class="mdi mdi-glass-tulip"></i>
+                                <span class="nav-text">Vinhos</span> <b class="caret"></b>
+                            </a>
+                            <ul class="collapse" id="vinhos" data-parent="#sidebar-menu">
+                                <div class="sub-menu">
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{route('admin_vinhos')}}">
+                                            <span class="nav-text">Ver todos</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="sidenav-item-link" href="{{route('admin_insert_vinho')}}">
+                                            <span class="nav-text">Inserir Vinho</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="sidenav-item-link" href="{{route('admin_categoria_vinho')}}">
+                                            <span class="nav-text">Ver Categorias</span>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a class="sidenav-item-link" href="{{route('admin_insert_categoria_vinho')}}">
+                                            <span class="nav-text">Inserir Categoria</span>
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+						<!-- End of Vinhos Menu -->
+						
                     </ul>
                 </div>
             </div>
