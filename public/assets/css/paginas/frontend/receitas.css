@@ -194,7 +194,8 @@
     }
 }
 
-.img {
+.imghead {
     height: 500px;
     width: 2000px;
+    margin-top: -19px;
 }
