@@ -12,19 +12,12 @@ class FAQController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function faq()
+    public function index()
     {
         $perguntas = Perguntas::all();
         $totalperguntas = Perguntas::all('id')->count();
         $totalcategorias = Perguntas::distinct('categoria')->count();
-        return view('paginas.backend.faq', compact('perguntas', 'totalperguntas', 'totalcategorias'));
-    }
-
-    public function inserir_pergunta()
-    {
-        $pergunta = Perguntas::all();
-        return view('paginas.backend.insert_pergunta', compact('pergunta'));
-
+        return view('paginas.backend.faq.index', compact('perguntas', 'totalperguntas', 'totalcategorias'));
     }
 
     /**
@@ -32,14 +25,10 @@ class FAQController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function inserir(Request $perguntas)
+    public function create(Request $request)
     {
-        $pergunta = new Perguntas();
-        $pergunta->pergunta = $perguntas["pergunta"];
-        $pergunta->categoria = $perguntas["categoria"];
-        $pergunta->resposta = $perguntas["resposta"];
-        $pergunta->save();
-        return redirect()->route('teste');
+        $pergunta = Perguntas::all();
+        return view('paginas.backend.faq.create', compact('pergunta'));
     }
 
     /**
@@ -50,7 +39,10 @@ class FAQController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pergunta = new Perguntas();
+        $pergunta->fill($request->all());
+        $pergunta->save();
+        return redirect()->route('faq.index');
     }
 
     /**
@@ -59,9 +51,9 @@ class FAQController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Perguntas $pergunta)
     {
-        //
+        return view('paginas.backend.faq.show', compact('pergunta'));
     }
 
     /**
@@ -70,9 +62,10 @@ class FAQController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Perguntas $pergunta)
     {
-        //
+        $pergunta = Perguntas::all();
+        return view('paginas.backend.faq.edit', compact('pergunta'));
     }
 
     /**
@@ -82,9 +75,12 @@ class FAQController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Perguntas $pergunta)
     {
-        //
+        $pergunta->update($request->all());
+        $pergunta->save();
+        return redirect()->route('faq.index')
+        ->with('success', 'Pergunta foi editada com sucesso', compact('pergunta'));
     }
 
     /**
@@ -93,8 +89,9 @@ class FAQController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Perguntas $pergunta)
     {
-        //
+        $pergunta->delete($pergunta);
+        return redirect()->route('faq.index')->with('success', 'Pergunta removida com sucesso', compact('pergunta'));
     }
 }

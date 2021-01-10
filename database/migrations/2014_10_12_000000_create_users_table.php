@@ -21,7 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('apelido');
             $table->date('data_nasc')->nullable();
+            $table->enum('genero', array('Masculino', 'Feminino', 'Nao Revelar', 'Nao Definido'))->default('Nao Definido');
             $table->string('img')->default('Sem Imagem');
+            $table->string('pais');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

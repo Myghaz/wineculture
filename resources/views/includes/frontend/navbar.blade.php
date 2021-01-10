@@ -1,5 +1,4 @@
 <html>
-
 <head>
     @extends ('includes.frontend.head')
     <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/navbar.css') }}">
@@ -10,6 +9,7 @@
             <div class="img" id="imgnav"> </div>
             <ul>
                 <li @if (Route::currentRouteName()=='index') class="active" @endif><a href="/">Início</a></li>
+                <li @if (Route::currentRouteName()=='vinhos') class="active" @endif><a href="/vinhos">Vinhos</a></li>
                 <li @if (Route::currentRouteName()=='sobre_vinhos') class="active" @endif><a href="/sobre_vinhos">Sobre Vinhos</a></li>
                 <li @if (Route::currentRouteName()=='sobre') class="active" @endif><a href="/sobre">Sobre</a></li>
                 <li @if (Route::currentRouteName()=='contactos') class="active" @endif><a href="/contactos">Contactos</a></li>
