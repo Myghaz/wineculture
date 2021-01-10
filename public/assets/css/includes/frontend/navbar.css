@@ -129,11 +129,6 @@ div.bb a:hover:after {
     display: none;
 }
 
-.vinhos_dropdown {
-	border-radius: 0px;
-	background-color:white;
-}
-
 @media screen and (max-width: 1492px) {
     .navbar ul {
         margin-right: 2%;
