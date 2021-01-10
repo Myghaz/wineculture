@@ -14,53 +14,46 @@ class receitasseeder extends Seeder
     public function run()
     {
         receitas::create([
-            'nome' => 'carne',
-            'foto' => 'fotom',
-            'id_categoria' => 2,
-            'id_user' => 26,
-            'descricao' => 'é bom',
-        ]);
-        receitas::create([
-            'nome' => 'carne',
-            'foto' => 'fotom',
-            'id_categoria' => 3,
-            'id_user' => 26,
-            'descricao' => 'é bom',
-        ]);
-        receitas::create([
-            'nome' => 'carne',
-            'foto' => 'fotom',
+            'nome' => 'Frango com vinho Tinto',
+            'foto' => 'public/receitas/receitas_1610294619.jpg',
             'id_categoria' => 1,
-            'id_user' => 15,
-            'descricao' => 'é bom',
+            'id_user' => 1,
+            'descricao' => 'Frango com vinho tinto é a melhor opção para acompanhar com vinho tinto.',
         ]);
         receitas::create([
-            'nome' => 'carne',
-            'foto' => 'fotom',
-            'id_categoria' => 5,
-            'id_user' => 10,
-            'descricao' => 'é bom',
-        ]);
-        receitas::create([
-            'nome' => 'carne',
-            'foto' => 'fotom',
-            'id_categoria' => 5,
-            'id_user' => 26,
-            'descricao' => 'é bom',
-        ]);
-        receitas::create([
-            'nome' => 'carne',
-            'foto' => 'fotom',
-            'id_categoria' => 3,
-            'id_user' => 29,
-            'descricao' => 'é bom',
-        ]);
-        receitas::create([
-            'nome' => 'carne',
-            'foto' => 'fotom',
+            'nome' => 'Salmão e ervas',
+            'foto' => 'public/receitas/receitas_1610295031.jpg',
             'id_categoria' => 2,
-            'id_user' => 30,
-            'descricao' => 'é bom',
+            'id_user' => 1,
+            'descricao' => 'Aconselhamos um vinho verde com Salmão.',
+        ]);
+        receitas::create([
+            'nome' => 'Camarão à Paulista',
+            'foto' => 'public/receitas/receitas_1610295087.jpg',
+            'id_categoria' => 5,
+            'id_user' => 1,
+            'descricao' => 'Camarão à Paulista é uma boa combinação com um bom espumante',
+        ]);
+        receitas::create([
+            'nome' => 'Risoto de Polvo',
+            'foto' => 'public/receitas/receitas_1610295247.jpg',
+            'id_categoria' => 4,
+            'id_user' => 1,
+            'descricao' => 'Risoto de polvo é a melhor combinação com um bom vinho branco.',
+        ]);
+        receitas::create([
+            'nome' => 'Bife de Chouriço',
+            'foto' => 'public/receitas/receitas_1610295325.jpg',
+            'id_categoria' => 1,
+            'id_user' => 1,
+            'descricao' => 'Bife de Chouriço é a melhor opção para acompanhar com vinho tinto.',
+        ]);
+        receitas::create([
+            'nome' => 'Castanha Assada',
+            'foto' => 'public/receitas/receitas_1610295391.jpg',
+            'id_categoria' => 1,
+            'id_user' => 1,
+            'descricao' => 'A castanha assada não pode faltar com um bom vinho tinto.',
         ]);
     }
 }
