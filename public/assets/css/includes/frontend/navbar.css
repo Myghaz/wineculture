@@ -79,6 +79,10 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
+.navbar button {
+	color: var(--color);
+}
+
 .navbar ul li.active a {
     border-bottom: var(--border-bottom);
     content: '';
@@ -123,6 +127,11 @@ div.bb a:hover:after {
     margin-right: 20px;
     font-size: 20pt;
     display: none;
+}
+
+.vinhos_dropdown {
+	border-radius: 0px;
+	background-color:white;
 }
 
 @media screen and (max-width: 1492px) {
