@@ -64,9 +64,6 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'da
 
 Route::resource('/admin/faq', FAQController::class);
 
-//Route::get('/admin/faq', [App\Http\Controllers\FAQController::class, 'faq'])->name('admin_faq');
-//Route::get('/admin/insert_pergunta', [App\Http\Controllers\FAQController::class, 'inserir_pergunta'])->name('insert_pergunta');
-//Route::post('/admin/insert_pergunta', [App\Http\Controllers\FAQController::class, 'inserir'])->name('teste');
 
 //Contactos Admin
 
