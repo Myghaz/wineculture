@@ -51,9 +51,9 @@ class FAQController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Perguntas $pergunta)
     {
-        //
+        return view('paginas.backend.faq.show', compact('pergunta'));
     }
 
     /**
@@ -62,9 +62,10 @@ class FAQController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Perguntas $pergunta)
     {
-        //
+        $pergunta = Perguntas::all();
+        return view('paginas.backend.faq.edit', compact('pergunta'));
     }
 
     /**
@@ -74,9 +75,12 @@ class FAQController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Perguntas $pergunta)
     {
-        //
+        $pergunta->update($request->all());
+        $pergunta->save();
+        return redirect()->route('faq.index')
+        ->with('success', 'Pergunta foi editada com sucesso', compact('pergunta'));
     }
 
     /**
@@ -85,8 +89,9 @@ class FAQController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Perguntas $pergunta)
     {
-        //
+        $pergunta->delete($pergunta);
+        return redirect()->route('faq.index')->with('success', 'Pergunta removida com sucesso', compact('pergunta'));
     }
 }

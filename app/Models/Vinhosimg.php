@@ -5,16 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Vinhos extends Model
+class Vinhosimg extends Model
 {
     protected $fillable = [
-        'nome',
-        'id_categoria',
+        'id_vinho',
         'img',
-        'id_produtor',
-        'descricao',
-        'preco',
-        'stock',
-        'regiao',
     ];
 }

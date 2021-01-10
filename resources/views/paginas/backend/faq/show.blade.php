@@ -15,18 +15,19 @@
                 @endif
                 <div class="form-group">
                     <label for="formGroupExampleInput">Pergunta</label>
-                    <input type="text" class="form-control" name="pergunta" id="formGroupExampleInput">
+                    <input readonly class="form-control" type="text" class="form-control" name="pergunta"
+                        id="formGroupExampleInput" value="{{ $pergunta->pergunta }}">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Categoria</label>
-                    <input class="form-control" id="exampleFormControlSelect1" name="categoria">
+                    <input readonly class="form-control" class="form-control" id="exampleFormControlSelect1"
+                        name="categoria" value="{{ $pergunta->categoria }}">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Resposta</label>
-                    <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"
-                        name="resposta"></textarea>
+                    <textarea readonly class="form-control" class="ckeditor form-control" id="exampleFormControlTextarea1"
+                        rows="3" value="{{ $pergunta->resposta }}" name="resposta"></textarea>
                 </div>
-                <button type="submit" name="button" class="btn btn-success display-4">Submeter</button>
             </form>
         </div>
     </div>

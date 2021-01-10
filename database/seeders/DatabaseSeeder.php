@@ -10,6 +10,8 @@ use Database\Seeders\receitasseeder;
 use Database\Seeders\CategoryWineSeeder;
 use Database\Seeders\CategorySeeder;
 use Database\Seeders\MensagensSeeder;
+use Database\Seeders\VinhosSeeder;
+use Database\Seeders\VinhosimgSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,5 +29,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PerguntasSeeder::class);
         $this->call(receitasseeder::class);
         $this->call(MensagensSeeder::class);
+        $this->call(VinhosSeeder::class);
+        $this->call(VinhosimgSeeder::class);
     }
 }

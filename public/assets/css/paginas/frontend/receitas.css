@@ -197,5 +197,22 @@
 .imghead {
     height: 500px;
     width: 2000px;
+<<<<<<< HEAD
+}
+
+.filtro {
+    position: relative;
+    height: 175px;
+    width: 205px;
+    padding: 16px;
+    background-color: #f3f3f3;
+    border-radius: 129px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 25px;
+    float: left;
+    display: block;
+    font-size: medium;
+=======
     margin-top: -19px;
+>>>>>>> eff28871cee4a0620808d04f401a5769a9f6c232
 }

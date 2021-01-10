@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Vinhos;
+use App\Models\Vinhosimg;
+use App\Models\category_wine;
+use App\Models\User;
 
 class VinhosController extends Controller
 {
@@ -14,7 +18,16 @@ class VinhosController extends Controller
      */
     public function index()
     {
-        //
+        $vinhos = Vinhos::all(); 
+        $vinhosimg = Vinhosimg::all();
+        $categorias = category_wine::all();
+        $users = User::all();
+        return view('paginas.backend.vinhos', compact([
+            'vinhos',
+            'vinhosimg',
+            'categorias',
+            'users'
+        ]));
     }
 
     /**
