@@ -4,8 +4,8 @@ var d = new Date();
 d.setDate(1);
 var tt = new Array();
 for (i = 0; i <= 11; i++) {
-  tt[i] = (monthName[d.getMonth()] + ' ' + d.getFullYear());
-  d.setMonth(d.getMonth() - 1);
+    tt[i] = (monthName[d.getMonth()] + ' ' + d.getFullYear());
+    d.setMonth(d.getMonth() - 1);
 }
 tt = tt.reverse();
 Datausers = {
@@ -28,93 +28,43 @@ var usersChart = new Chart(usersbarX, {
         responsive: true,
         maintainAspectRatio: false,
         legend: {
-          display: false
+            display: false
         },
+
         scales: {
-          xAxes: [
-            {
-              gridLines: {
-                drawBorder: false,
-                display: false
-              },
-              ticks: {
-                display: false, // hide main x-axis line
-                beginAtZero: true
-              },
-              barPercentage: 3,
-              categoryPercentage: 0.2
-            }
-          ],
-          yAxes: [
-            {
-              gridLines: {
-                drawBorder: false, // hide main y-axis line
-                display: false
-              },
-              ticks: {
-                display: false,
-                beginAtZero: true
-              }
-            }
-          ]
+            xAxes: [{
+                gridLines: {
+                    drawBorder: false,
+                    display: false
+                },
+                ticks: {
+                    display: true, // hide main x-axis line
+                    beginAtZero: false
+                },
+                barPercentage: 4,
+                categoryPercentage: 0.2
+            }],
+            yAxes: [{
+                gridLines: {
+                    drawBorder: false, // hide main y-axis line
+                    display: false
+                },
+                ticks: {
+                    display: false,
+                    beginAtZero: true
+                }
+            }]
         },
     }
 });
-function updateusersChartType() {
-  // here we destroy/delete the old or previous chart and redraw it again
- 
-
-  usersChart.destroy();
-  usersChart = new Chart(usersbarX, {
-      type: $(event.target).val(),
-      data: Datausers,
-      options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          },
-          scales: {
-            xAxes: [
-              {
-                 
-                gridLines: {
-                  drawBorder: false,
-                  display: false
-                },
-                ticks: {
-                  display: false, // hide main x-axis line
-                  beginAtZero: true
-                },
-                barPercentage:3,
-                categoryPercentage: 0.2
-              }
-            ],
-            yAxes: [
-              {  
-                gridLines: {
-                  drawBorder: false, // hide main y-axis line
-                  display: false
-                },
-                ticks: {
-                  display: false,
-                  beginAtZero: true,
-                }
-              }
-            ]
-          },
-      }
-  });
-};
-
 
 let generosdata = [users_masculino_total, users_feminino_total, users_nao_revelar_total, users_genero_null_total];
 Datausers = {
     labels: [
-      "Masculino",
-      "Feminino",
-      "Não Revelar",
-      "Não Definido"
+        "Masculino",
+        "Feminino",
+        "Não Revelar",
+        "Não Definido"
     ],
     datasets: [{
         label: "Género",
@@ -122,98 +72,48 @@ Datausers = {
         data: generosdata,
         lineTension: 0,
         fill: 'white',
-        backgroundColor: ["#955251", "#B565A7", "#009B77", "#DD4124", "#45B8AC", "#D65076", "#5B5EA6", "#9B2335", "black", "#DFCFBE", "#55B4B0", "#EFC050"],
+        backgroundColor: ["#009063", "#ff6f9c", "#191970", "#b7b7b7"],
     }]
 };
 
-var usersbarX = document.getElementById("generosgrafico").getContext("2d");
+var usersbarX = document.getElementById("generosgradfico").getContext("2d");
 var usersChart = new Chart(usersbarX, {
-    type: "polarArea",
+    type: "pie",
     data: Datausers,
-    options: {
-      legend: {
-        display: true,
-        position: 'top',
-        labels: {
-          fontColor: "#000080",
-        }
-      },
-      scales: {
-        xAxes: [
-          {  
-            gridLines: {
-              drawBorder: false,
-              display: false
-            },
-            ticks: {
-              display: false, // hide main x-axis line
-              beginAtZero: true
-            },
-            barPercentage:3,
-            categoryPercentage: 0.2
-          }
-        ],
-        yAxes: [
-          {  
-            gridLines: {
-              drawBorder: false, // hide main y-axis line
-              display: false
-            },
-            ticks: {
-              display: false,
-              beginAtZero: true,
-            }
-          }
-        ]
-      },
-    }
-  });
-function updategenenrosChartType() {
-  // here we destroy/delete the old or previous chart and redraw it again
- 
 
-  generosChart.destroy();
-  generosChart = new Chart(generosbarX, {
-      type: $(event.target).val(),
-      data: Datausers,
-      options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          legend: {
-            display: true,
-            position: 'top',
-            labels: {
-              fontColor: "#000080",
-            }
-          },
-          scales: {
-            xAxes: [
-              { 
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+            display: false
+        },
+        legend: {
+            position: "bottom",
+            align: "start"
+        },
+        scales: {
+            xAxes: [{
                 gridLines: {
-                  drawBorder: false,
-                  display: false
+                    drawBorder: false,
+                    display: false
                 },
                 ticks: {
-                  display: false, // hide main x-axis line
-                  beginAtZero: true
+                    display: false, // hide main x-axis line
+                    beginAtZero: true
                 },
-                barPercentage:3,
+                barPercentage: 3,
                 categoryPercentage: 0.2
-              }
-            ],
-            yAxes: [
-              {  
+            }],
+            yAxes: [{
                 gridLines: {
-                  drawBorder: false, // hide main y-axis line
-                  display: false
+                    drawBorder: false, // hide main y-axis line
+                    display: false
                 },
                 ticks: {
-                  display: false,
-                  beginAtZero: true,
+                    display: false,
+                    beginAtZero: true
                 }
-              }
-            ]
-          },
-      }
-  });
-};
+            }]
+        },
+    }
+});
