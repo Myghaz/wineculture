@@ -14,13 +14,6 @@
                 </ul>
             </div>
 
-            <select
-                class="form-control form-control-lg d-block d-sm-none d-none d-sm-block d-md-none d-none d-md-block d-lg-none dropdown">
-                @foreach ($categorias as $key => $categoria)
-                    <option>{{ $categoria->categoria }}</option>
-                @endforeach
-            </select>
-
             <div class="col-md-10 perguntas main">
                 <a id="Conta">
                     <h1>Conta</h1>
@@ -108,7 +101,8 @@
             //Fire it when the page first loads:
             alterClass();
         });
+
     </script>
 @endsection
-@section("javascript")
+@section('javascript')
 @endsection

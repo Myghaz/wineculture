@@ -22,22 +22,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="card card-mini mb-4">
-                        <div class="card-body cartao">
-                            <h2 class="mb-1">71,503</h2>
-                            <p>Nadinha</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="card card-mini mb-4">
-                        <div class="card-body cartao">
-                            <h2 class="mb-1">NAda</h2>
-                            <p>Produtos Totais (2020)</p>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="row">
                 <div class="col-12">

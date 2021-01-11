@@ -34,7 +34,7 @@ Datausers = {
     datasets: [{
         label: "Registos",
         backgroundColor: "white",
-        data: usersdata, 
+        data: usersdata,
         lineTension: 0,
         fill: 'white',
         backgroundColor: ["#955251","#B565A7","#009B77","#DD4124","#45B8AC","#D65076","#5B5EA6", "#9B2335","black","#DFCFBE","#55B4B0","#EFC050"],
@@ -141,7 +141,7 @@ var usersChart = new Chart(usersbarX, {
                 display: false
               },
               ticks: {
-                display: false, 
+                display: false,
                 beginAtZero: true
               },
               barPercentage: 3,
@@ -151,7 +151,7 @@ var usersChart = new Chart(usersbarX, {
           yAxes: [
             {
               gridLines: {
-                drawBorder: false, 
+                drawBorder: false,
                 display: false
               },
               ticks: {
@@ -191,7 +191,7 @@ var produtoresChart = new Chart(produtoresbarX, {
           yAxes: [
             {
               gridLines: {
-                drawBorder: false, 
+                drawBorder: false,
                 display: false
               },
               ticks: {
@@ -221,7 +221,7 @@ var comprasChart = new Chart(comprasbarX, {
                 display: false
               },
               ticks: {
-                display: false, 
+                display: false,
                 beginAtZero: true
               },
               barPercentage: 3,
@@ -231,7 +231,7 @@ var comprasChart = new Chart(comprasbarX, {
           yAxes: [
             {
               gridLines: {
-                drawBorder: false, 
+                drawBorder: false,
                 display: false
               },
               ticks: {
@@ -271,7 +271,7 @@ var prodsChart = new Chart(prodsbarX, {
           yAxes: [
             {
               gridLines: {
-                drawBorder: false, 
+                drawBorder: false,
                 display: false
               },
               ticks: {
@@ -286,8 +286,8 @@ var prodsChart = new Chart(prodsbarX, {
 // Function runs on chart type select update
 function updateusersChartType() {
     // here we destroy/delete the old or previous chart and redraw it again
-   
-  
+
+
     usersChart.destroy();
     usersChart = new Chart(usersbarX, {
         type: $(event.target).val(),
@@ -301,13 +301,13 @@ function updateusersChartType() {
             scales: {
               xAxes: [
                 {
-                   
+
                   gridLines: {
                     drawBorder: false,
                     display: false
                   },
                   ticks: {
-                    display: false, 
+                    display: false,
                     beginAtZero: true
                   },
                   barPercentage:3,
@@ -315,7 +315,7 @@ function updateusersChartType() {
                 }
               ],
               yAxes: [
-                {  
+                {
                   gridLines: {
                     drawBorder: false,
                     display: false
@@ -332,8 +332,8 @@ function updateusersChartType() {
 };
 function updateprodutoresChartType() {
     // here we destroy/delete the old or previous chart and redraw it again
-   
-  
+
+
     produtoresChart.destroy();
     produtoresChart = new Chart(produtoresbarX, {
         type: $(event.target).val(),
@@ -347,13 +347,13 @@ function updateprodutoresChartType() {
             scales: {
               xAxes: [
                 {
-                   
+
                   gridLines: {
                     drawBorder: false,
                     display: false
                   },
                   ticks: {
-                    display: false, 
+                    display: false,
                     beginAtZero: true
                   },
                   barPercentage:3,
@@ -361,9 +361,9 @@ function updateprodutoresChartType() {
                 }
               ],
               yAxes: [
-                {  
+                {
                   gridLines: {
-                    drawBorder: false, 
+                    drawBorder: false,
                     display: false
                   },
                   ticks: {
@@ -378,8 +378,8 @@ function updateprodutoresChartType() {
 };
 function updatecomprasChartType() {
     // here we destroy/delete the old or previous chart and redraw it again
-   
-  
+
+
     comprasChart.destroy();
     comprasChart = new Chart(comprasbarX, {
         type: $(event.target).val(),
@@ -398,7 +398,7 @@ function updatecomprasChartType() {
                     display: false
                   },
                   ticks: {
-                    display: false, 
+                    display: false,
                     beginAtZero: true
                   },
                   barPercentage:3,
@@ -406,9 +406,9 @@ function updatecomprasChartType() {
                 }
               ],
               yAxes: [
-                {  
+                {
                   gridLines: {
-                    drawBorder: false, 
+                    drawBorder: false,
                     display: false
                   },
                   ticks: {
@@ -423,8 +423,8 @@ function updatecomprasChartType() {
 };
 function updateprodsChartType() {
     // here we destroy/delete the old or previous chart and redraw it again
-   
-  
+
+
     prodsChart.destroy();
     prodsChart = new Chart(prodsbarX, {
         type: $(event.target).val(),
@@ -438,13 +438,13 @@ function updateprodsChartType() {
             scales: {
               xAxes: [
                 {
-                   
+
                   gridLines: {
                     drawBorder: false,
                     display: false
                   },
                   ticks: {
-                    display: false, 
+                    display: false,
                     beginAtZero: true
                   },
                   barPercentage:3,
@@ -452,7 +452,7 @@ function updateprodsChartType() {
                 }
               ],
               yAxes: [
-                {  
+                {
                   gridLines: {
                     drawBorder: false,
                     display: false
@@ -679,7 +679,7 @@ $('#tableaprods_wp').dataTable({
 });
 });
 
-//////// Botão da Tabela Utilizadores //////// 
+//////// Botão da Tabela Utilizadores ////////
 $( "#btnusers" ).click(function() {
   $( "#tableaprodutores" ).hide();
   $( "#tableaprodutores_wrapper" ).hide();
@@ -694,10 +694,10 @@ $( "#btnusers" ).click(function() {
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });
-//////// Botão da Tabela Utilizadores //////// 
+//////// Botão da Tabela Utilizadores ////////
 
 
-//////// Botão da Tabela Produtores //////// 
+//////// Botão da Tabela Produtores ////////
 $( "#btnprodutores" ).click(function() {
   $( "#tableausers" ).hide();
   $( "#tableausers_wrapper" ).hide();
@@ -712,10 +712,10 @@ $( "#btnprodutores" ).click(function() {
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });
-//////// Botão da Tabela Produtores //////// 
+//////// Botão da Tabela Produtores ////////
 
 
-//////// Botão da Tabela Produtos WordPress //////// 
+//////// Botão da Tabela Produtos WordPress ////////
 $( "#btnprods_wp" ).click(function() {
   $( "#tableausers" ).hide();
   $( "#tableausers_wrapper" ).hide();
@@ -729,7 +729,7 @@ $( "#btnprods_wp" ).click(function() {
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });
-//////// Botão da Tabela Produtos WordPress //////// 
+//////// Botão da Tabela Produtos WordPress ////////
 
 
 
@@ -737,7 +737,7 @@ $( "#btnprods_wp" ).click(function() {
 
 
 //////////Responsive
-//////// Botão da Tabela Utilizadores //////// 
+//////// Botão da Tabela Utilizadores ////////
 $( "#btnusers-rep" ).click(function() {
   $( "#tableaprodutores" ).hide();
   $( "#tableaprodutores_wrapper" ).hide();
@@ -752,10 +752,10 @@ $( "#btnusers-rep" ).click(function() {
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });
-//////// Botão da Tabela Utilizadores //////// 
+//////// Botão da Tabela Utilizadores ////////
 
 
-//////// Botão da Tabela Produtores //////// 
+//////// Botão da Tabela Produtores ////////
 $( "#btnprodutores-rep" ).click(function() {
   $( "#tableausers" ).hide();
   $( "#tableausers_wrapper" ).hide();
@@ -770,11 +770,11 @@ $( "#btnprodutores-rep" ).click(function() {
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });
-//////// Botão da Tabela Produtores //////// 
+//////// Botão da Tabela Produtores ////////
 
 
 
-//////// Botão da Tabela Produtos WordPress //////// 
+//////// Botão da Tabela Produtos WordPress ////////
 $( "#btnprods_wp-rep" ).click(function() {
   $( "#tableausers" ).hide();
   $( "#tableausers_wrapper" ).hide();
@@ -788,5 +788,5 @@ $( "#btnprods_wp-rep" ).click(function() {
   $($.fn.dataTable.tables(true)).DataTable()
    .columns.adjust();
 });
-//////// Botão da Tabela Produtos WordPress //////// 
+//////// Botão da Tabela Produtos WordPress ////////
 

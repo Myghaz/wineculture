@@ -24,10 +24,6 @@ a:link, a:visited, a:hover, a:active {
     color: #34141c;
 }
 
-.form-control {
-    height: 200px;
-}
-
 h1 {
     margin: 10px 0px;
     padding-top: 75px;
@@ -54,7 +50,7 @@ h1 {
     }
 
     .pergunta {
-        font-size: 6pt;
+        font-size: 7pt;
         margin-left: -34px;
     }
 
