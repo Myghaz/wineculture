@@ -11,6 +11,27 @@ use App\Models\User;
 
 class VinhosController extends Controller
 {
+
+	public function vinhos(VinhosController $addd)
+    {
+        $vinhos = Vinhos::all(); 
+        $vinhosimg = Vinhosimg::all();
+        $categorias = category_wine::all();
+        $users = User::all();
+		
+		$vinho_select = $vinhos->where('id',1);
+		$vinho_select->all();
+		
+        return view('paginas.frontend.vinho_produto', compact([
+            'vinhos',
+            'vinhosimg',
+            'categorias',
+            'users',
+			'vinho_select',
+			'teste' => $addd,
+        ]));
+    }
+	
     /**
      * Display a listing of the resource.
      *
