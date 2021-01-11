@@ -12,7 +12,7 @@ use App\Models\User;
 class VinhosController extends Controller
 {
 
-	public function vinhos(VinhosController $addd)
+	public function vinhos()
     {
         $vinhos = Vinhos::all(); 
         $vinhosimg = Vinhosimg::all();
@@ -28,9 +28,11 @@ class VinhosController extends Controller
             'categorias',
             'users',
 			'vinho_select',
-			'teste' => $addd,
         ]));
     }
+
+	
+
 	
     /**
      * Display a listing of the resource.
@@ -69,7 +71,8 @@ class VinhosController extends Controller
      */
     public function create()
     {
-        //
+		$vinho = Vinhos::all();
+        return view('paginas.backend.vinhos.create', compact('vinho'));
     }
 
     /**

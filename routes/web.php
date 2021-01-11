@@ -31,9 +31,7 @@ Route::get('/perfil', [App\Http\Controllers\MainController::class, 'perfil'])->n
 
 Route::get('/vinhos', [App\Http\Controllers\MainController::class, 'vinhos'])->name('vinhos');
 
-Route::get('/vinho_produto', function () {
-    return view('paginas.frontend.vinho_produto');
-})->name('vinho_produto');
+Route::get('/vinhos/{vinho}', [App\Http\Controllers\VinhosController::class, 'vinhos_detalhes'])->name('vinho');
 
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
@@ -109,6 +107,8 @@ Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController
 //vinhos Admin
 
 Route::get('/admin/vinhos', [App\Http\Controllers\VinhosController::class, 'index'])->name('admin_vinhos');
+
+Route::get('/admin/vinhos/create', [App\Http\Controllers\VinhosController::class, 'create'])->name('admin_vinhos_create');
 
 Route::get('/admin/insert_vinho', function () {
     return view('paginas.backend.insert_vinho');
