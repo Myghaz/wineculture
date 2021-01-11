@@ -18,7 +18,7 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="/assets/img/paginas/frontend/sobre/banner_sobre.png" alt="First slide">
+                <img class="d-block w-100" src="assets\img\paginas\frontend\sobre/banner_sobra.png" alt="First slide">
             </div>
         </div>
     </div>

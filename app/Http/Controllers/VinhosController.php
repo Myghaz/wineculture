@@ -11,7 +11,8 @@ use App\Models\User;
 
 class VinhosController extends Controller
 {
-
+	
+	
 	public function vinhos()
     {
         $vinhos = Vinhos::all(); 
@@ -31,7 +32,17 @@ class VinhosController extends Controller
         ]));
     }
 
-	
+	/**public function store(Request $request)
+    {
+        $vinho = new Vinhos();
+        $vinho->fill($request->all());
+
+        $path= Storage::putFileAs('public\assets\img\vinhos', $request->file('img'), 'vinhos_' . time() . '.' . $request->file('img')->extension());
+
+        $vinho->foto = $path;
+        $vinho->save();
+        return redirect()->route('receitas.index');
+    }*/
 
 	
     /**
@@ -45,7 +56,7 @@ class VinhosController extends Controller
         $vinhosimg = Vinhosimg::all();
         $categorias = category_wine::all();
         $users = User::all();
-        return view('paginas.backend.vinhos', compact([
+        return view('paginas.backend.vinhos.index', compact([
             'vinhos',
             'vinhosimg',
             'categorias',
@@ -83,7 +94,14 @@ class VinhosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vinho = new Vinhos();
+        $vinho->fill($request->all());
+
+        $path= Storage::putFileAs('public\assets\img\vinhos', $request->file('img'), 'vinhos_' . time() . '.' . $request->file('img')->extension());
+
+        $vinho->foto = $path;
+        $vinho->save();
+        return redirect()->route('vinhos.index');
     }
 
     /**
@@ -92,9 +110,9 @@ class VinhosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Vinhos $vinhos)
     {
-        //
+        return view('paginas.backend.vinhos.show', compact('vinhos'));
     }
 
     /**
@@ -103,9 +121,9 @@ class VinhosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Vinhos $vinhos)
     {
-        //
+        return view('paginas.backend.vinhos.edit', compact('vinhos'));
     }
 
     /**

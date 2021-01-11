@@ -171,23 +171,13 @@
                             <ul class="collapse" id="vinhos" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
-                                        <a class="sidenav-item-link" href="{{route('admin_vinhos')}}">
+                                        <a class="sidenav-item-link" href="/admin/vinhos">
                                             <span class="nav-text">Ver todos</span>
                                         </a>
                                     </li>
 									<li>
                                         <a class="sidenav-item-link" href="{{route('admin_insert_vinho')}}">
                                             <span class="nav-text">Inserir Vinho</span>
-                                        </a>
-                                    </li>
-									<li>
-                                        <a class="sidenav-item-link" href="{{route('admin_categoria_vinho')}}">
-                                            <span class="nav-text">Ver Categorias</span>
-                                        </a>
-                                    </li>
-									<li>
-                                        <a class="sidenav-item-link" href="{{route('admin_insert_categoria_vinho')}}">
-                                            <span class="nav-text">Inserir Categoria</span>
                                         </a>
                                     </li>
                                 </div>
