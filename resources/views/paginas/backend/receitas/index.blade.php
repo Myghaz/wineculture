@@ -18,7 +18,7 @@
                                 <th class="d-none d-lg-table-cell">Utilizador</th>
                                 <th class="d-none d-lg-table-cell">Descrição</th>
                                 <th class="d-none d-lg-table-cell">Foto</th>
-                                <th class="d-none d-lg-table-cell">gay</th>
+                                <th class="d-none d-lg-table-cell">Options</th>
                             </tr>
                         </thead>
                         <tbody>
