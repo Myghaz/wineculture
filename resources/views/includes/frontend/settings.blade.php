@@ -14,7 +14,7 @@
     @if (Auth::check())
     <div class="defs">
         <div class="pie pie1" onclick="document.body.classList.remove('active')">
-            <a href="/pefil">
+            <a href="/perfil">
                 <div class="pie-color pie-color1">
                     <img src="/assets/img/paginas/frontend/profile.png" class="profile" title="Perfil"></img>
                 </div>

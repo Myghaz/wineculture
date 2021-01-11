@@ -59,6 +59,11 @@ class UsersController extends Controller
             'users_genero_null_total'
         ]));
     }
+    public function frontend_store(Request $request, User $user)
+    {
+        $user->update($request->all());
+        return redirect()->route('perfil');
+    }
 
     /**
      * Show the form for creating a new resource.
