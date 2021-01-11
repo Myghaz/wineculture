@@ -8,32 +8,6 @@
 	<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/tipo_de_vinhos.css') }}">
 	
 	<style>
-	body{margin-top:20px;
-background:#eee;
-}
-
-/*panel*/
-.panel {
-    border: none;
-    box-shadow: none;
-}
-
-.panel-heading {
-    border-color:#eff2f7 ;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.panel-title {
-    color: #2A3542;
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 0;
-    margin-top: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-
-/*product list*/
 
 .prod-cat li a{
     border-bottom: 1px dashed #d9d9d9;
@@ -60,43 +34,8 @@ background:#eee;
     font-weight: normal;
 }
 
-.pro-sort {
-    padding-right: 20px;
-    float: left;
-}
-
 .pro-page-list {
     margin: 5px 0 0 0;
-}
-
-.product-list img{
-    width: 100%;
-    border-radius: 4px 4px 0 0;
-    -webkit-border-radius: 4px 4px 0 0;
-}
-
-.product-list .pro-img-box {
-    position: relative;
-}
-.adtocart {
-    background: #fc5959;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    color: #fff;
-    display: inline-block;
-    text-align: center;
-    border: 3px solid #fff;
-    left: 45%;
-    bottom: -25px;
-    position: absolute;
-}
-
-.adtocart i{
-    color: #fff;
-    font-size: 25px;
-    line-height: 42px;
 }
 
 .pro-title {
@@ -106,13 +45,9 @@ background:#eee;
     font-size: 16px;
 }
 
-.product-list .price {
-    color:#fc5959 ;
-    font-size: 15px;
-}
 
 .pro-img-details {
-    margin-left: -15px;
+    width:250px
 }
 
 .pro-img-details img {
@@ -120,8 +55,9 @@ background:#eee;
 }
 
 .pro-d-title {
-    font-size: 16px;
-    margin-top: 0;
+	width: 50%;
+    font-size: 40px;
+    font-weight: normal;
 }
 
 .product_meta {
@@ -129,6 +65,17 @@ background:#eee;
     border-bottom: 1px solid #eee;
     padding: 10px 0;
     margin: 15px 0;
+}
+
+.product_meta2 {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+.product_meta2 span {
+    display: block;
+    margin-bottom: 10px;
 }
 
 .product_meta span {
@@ -142,10 +89,6 @@ background:#eee;
 .pro-price, .amount-old {
     font-size: 18px;
     padding: 0 10px;
-}
-
-.amount-old {
-    text-decoration: line-through;
 }
 
 .quantity {
@@ -163,58 +106,64 @@ background:#eee;
     margin-right: 10px;
     margin-bottom: 10px;
 }
-
-.pro-d-head {
-    font-size: 18px;
-    font-weight: 300;
-}
 	
 	</style>
 </head>
 
 <body>
-<div class="container">
-              <div class="pro-img-details">
-                  <img src="assets\img\vinhos\wine_test.png" alt="">
-              </div>
-              <div class="pro-img-list">
-                  <a href="#">
-                      <img src="https://via.placeholder.com/115x100/87CEFA/000000" alt="">
-                  </a>
-                  <a href="#">
-                      <img src="https://via.placeholder.com/115x100/FF7F50/000000" alt="">
-                  </a>
-                  <a href="#">
-                      <img src="https://via.placeholder.com/115x100/20B2AA/000000" alt="">
-                  </a>
-                  <a href="#">
-                      <img src="https://via.placeholder.com/120x100/20B2AA/000000" alt="">
-                  </a>
-              </div>
+	@include('includes.frontend.navbar')
+	@yield('content')
+	
+	<div class="container mt-5 mb-5">
+          <div class="pro-img-details">
+			<img src="assets\img\vinhos\wine_test.png" alt="">
+          </div>
           
-          <div class="">
-              <h4 class="pro-d-title">
-                  <a href="#" class="">
-                      Leopard Shirt Dress
-                  </a>
-              </h4>
+          <div class="mt-2">
+              <h1 class="pro-d-title mb-4">
+			  @foreach($vinho_select as $key => $vinho)
+			  {{$vinho->nome}}
+			  @endforeach
+              </h1>
               <p>
-                  Praesent ac condimentum felis. Nulla at nisl orci, at dignissim dolor, The best product descriptions address your ideal buyer directly and personally. The best product descriptions address your ideal buyer directly and personally.
+                @foreach($vinho_select as $key => $vinho)
+					{{$vinho->descricao}}
+				@endforeach
               </p>
               <div class="product_meta">
-                  <span class="posted_in"> <strong>Categories:</strong> <a rel="tag" href="#">Jackets</a>, <a rel="tag" href="#">Men</a>, <a rel="tag" href="#">Shirts</a>, <a rel="tag" href="#">T-shirt</a>.</span>
-                  <span class="tagged_as"><strong>Tags:</strong> <a rel="tag" href="#">mens</a>, <a rel="tag" href="#">womens</a>.</span>
+                  <span class="posted_in"><strong>Categoria:</strong> <a rel="tag" href="#">
+				  @foreach($categorias as $key => $categoria)
+                  {{$categoria->nome}}
+				@endforeach
+				  </a></span>
+                  <span class="tagged_as"><strong>Região:</strong> <a rel="tag" href="#">
+				  @foreach($vinho_select as $key => $vinho)
+			  {{$vinho->regiao}}
+			  @endforeach
+				  </a></span>
+				  <span class="tagged_as"><strong>Produtor:</strong> <a rel="tag" href="#">
+				  @foreach($vinho_select as $key => $vinho)
+			  {{$vinho->id_produtor}}
+			  @endforeach
+				  </a></span>
               </div>
-              <div class="m-bot15"> <strong>Price : </strong> <span class="amount-old">$544</span>  <span class="pro-price"> $300.00</span></div>
-              <div class="form-group">
-                  <label>Quantity</label>
-                  <input type="quantiy" placeholder="1" class="form-control quantity">
+			  <div class="product_meta2">
+                  <span class="posted_in"><strong>Percentagem Álcool: </strong>23%</span>
+				  <span class="posted_in"><strong>Quantidade CL: </strong>75CL</span>
               </div>
-              <p>
-                  <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-              </p>
+              <div class="m-bot15">
+				<strong>Preço :</strong>
+				<span class="pro-price">@foreach($vinho_select as $key => $vinho)
+			  {{$vinho->preco}}
+			  @endforeach
+			  €</span>
+			  </div>	
+				<span class="posted_in"><strong>Stock : </strong>@foreach($vinho_select as $key => $vinho)
+			  {{$vinho->stock}}
+			  @endforeach</span>
           </div>
-		  </div>
-  </div>
+	</div>
+	
+  @include('includes.frontend.footer')	
 </body>
 </html>
