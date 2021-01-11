@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Resposta</label>
                     <textarea readonly class="form-control" class="ckeditor form-control" id="exampleFormControlTextarea1"
-                        rows="3" value="" name="resposta">{{ $pergunta->resposta }}</textarea>
+                        rows="3" value="" name="resposta">{!! $pergunta->resposta !!}</textarea>
                 </div>
             </form>
         </div>
