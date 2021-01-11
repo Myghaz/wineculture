@@ -9,7 +9,7 @@ img {
     height: fit-content;
     text-align: center;
     line-height: 60px;
-    padding-top: 30px;
+    padding-top: 90px;
     margin-top: 70px;
 }
 
@@ -20,6 +20,7 @@ img {
 
 h1 {
     margin: 10px 0px;
+    padding-top: 75px;
 }
 
 .btn {
