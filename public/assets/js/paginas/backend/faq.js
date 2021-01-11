@@ -93,7 +93,7 @@ $(document).ready(function() {
 
     $("#tablefaq").dataTable({
         dom: "lBfrtip",
-        scrollY: "100",
+        scrollY: "500",
         scrollCollapse: true,
         autoWidth: true,
         columns: [{ type: "num" }, null, null, null, { orderable: false }],
