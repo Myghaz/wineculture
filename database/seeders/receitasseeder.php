@@ -55,6 +55,13 @@ class receitasseeder extends Seeder
             'id_user' => 1,
             'descricao' => 'A castanha assada não pode faltar com um bom vinho tinto.',
         ]);
+        receitas::create([
+            'nome' => 'Sushi',
+            'foto' => 'public/receitas/receitas_1610396357.jpg',
+            'id_categoria' => 3,
+            'id_user' => 1,
+            'descricao' => 'Sushi é a melhor combinação para o Rosé.',
+        ]);
     }
 }
 

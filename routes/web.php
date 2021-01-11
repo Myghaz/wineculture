@@ -29,16 +29,19 @@ Route::get('/sobre', function () {
 
 Route::get('/perfil', [App\Http\Controllers\MainController::class, 'perfil'])->name('perfil');
 
-Route::get('/vinhos', function () {
-    return view('paginas.frontend.tipo_de_vinho');
-})->name('vinhos');
+Route::get('/vinhos', [App\Http\Controllers\MainController::class, 'vinhos'])->name('vinhos');
 
-
-Route::get('/vinho_produto', [App\Http\Controllers\VinhosController::class, 'vinhos'])->name('vinho_produto');
+Route::get('/vinho_produto', function () {
+    return view('paginas.frontend.vinho_produto');
+})->name('vinho_produto');
 
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
 })->name('sobre_vinhos');
+
+
+
+Route::get('/vinhos/{vinho}', [App\Http\Controllers\VinhosController::class, 'vinhos_detalhes'])->name('vinho');
 
 Route::get('/login', function () {
     return view('paginas.frontend.login');
@@ -70,13 +73,8 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'da
 
 //FAQ
 
+Route::resource('/admin/faq', FAQController::class);
 
-
-Route::group(['prefix' => 'admin'], function () {
-    Route::resource('faq', FAQController::class)->parameters([
-        'faq' => 'pergunta'
-    ]);
-});
 
 //Contactos Admin
 
@@ -115,7 +113,7 @@ Route::get('/admin/insert_vinho', function () {
 })->name('admin_insert_vinho');
 
 Route::get('/admin/insert_categoria_vinho', function () {
-	return view('paginas.backend.insert_categoria_vinho');
+    return view('paginas.backend.insert_categoria_vinho');
 })->name('admin_insert_categoria_vinho');
 
 Route::get('/admin/categoria_vinho', function () {

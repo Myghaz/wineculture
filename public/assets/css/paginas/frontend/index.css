@@ -86,7 +86,8 @@ h6,
     width: 100%;
     height: calc(100vh - 114px);
     padding: 0;
-    overflow: hidden;
+    margin-top: -20px;
+   
 }
 
 #hero .carousel-item {
@@ -96,6 +97,8 @@ h6,
     background-position: top right;
     background-repeat: no-repeat;
     overflow: hidden;
+    overflow: hidden;
+   
 }
 
 #hero .carousel-item::before {

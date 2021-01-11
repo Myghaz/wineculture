@@ -116,35 +116,25 @@
 	
 	<div class="container mt-5 mb-5">
           <div class="pro-img-details">
-			<img src="assets\img\vinhos\wine_test.png" alt="">
+			<img src="\storage\vinhos\{{$vinho_det->img}}" style="background-size: cover; width: 300px; height:300px" alt="{{$vinho_det->nome}}">
           </div>
           
           <div class="mt-2">
               <h1 class="pro-d-title mb-4">
-			  @foreach($vinho_select as $key => $vinho)
-			  {{$vinho->nome}}
-			  @endforeach
+			  {{$vinho_det->nome}}
               </h1>
               <p>
-                @foreach($vinho_select as $key => $vinho)
-					{{$vinho->descricao}}
-				@endforeach
+              {{$vinho_det->descricao}}
               </p>
               <div class="product_meta">
                   <span class="posted_in"><strong>Categoria:</strong> <a rel="tag" href="#">
-				  @foreach($categorias as $key => $categoria)
-                  {{$categoria->nome}}
-				@endforeach
+                  {{$vinho_det->id_categoria}}
 				  </a></span>
                   <span class="tagged_as"><strong>Região:</strong> <a rel="tag" href="#">
-				  @foreach($vinho_select as $key => $vinho)
-			  {{$vinho->regiao}}
-			  @endforeach
+                  {{$vinho_det->regiao}}
 				  </a></span>
 				  <span class="tagged_as"><strong>Produtor:</strong> <a rel="tag" href="#">
-				  @foreach($vinho_select as $key => $vinho)
-			  {{$vinho->id_produtor}}
-			  @endforeach
+                  {{$vinho_det->id_produtor}}
 				  </a></span>
               </div>
 			  <div class="product_meta2">
@@ -153,14 +143,11 @@
               </div>
               <div class="m-bot15">
 				<strong>Preço :</strong>
-				<span class="pro-price">@foreach($vinho_select as $key => $vinho)
-			  {{$vinho->preco}}
-			  @endforeach
+				<span class="pro-price"> {{$vinho_det->preco}}
 			  €</span>
 			  </div>	
-				<span class="posted_in"><strong>Stock : </strong>@foreach($vinho_select as $key => $vinho)
-			  {{$vinho->stock}}
-			  @endforeach</span>
+				<span class="posted_in"><strong>Stock : </strong>
+                {{$vinho_det->stock}}</span>
           </div>
 	</div>
 	

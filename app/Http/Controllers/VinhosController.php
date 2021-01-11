@@ -51,6 +51,17 @@ class VinhosController extends Controller
         ]));
     }
 
+    public function vinhos_detalhes($vinho)
+    {
+        $vinho_det = Vinhos::find($vinho);
+
+        return view('paginas.frontend.vinho_produto', compact([
+            'vinho_det'
+        ]));
+    }
+
+    
+
     /**
      * Show the form for creating a new resource.
      *
