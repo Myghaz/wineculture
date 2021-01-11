@@ -31,7 +31,7 @@
                             <h2>Perguntas Frequentes</h2>
                         </div>
                         <div class="card-body pt-0 pb-5">
-                            <table id="tablefaq" class="ui celled table" style="height:500px; width:100%">
+                            <table id="tablefaq" class="ui celled table tamanho">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
