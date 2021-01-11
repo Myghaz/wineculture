@@ -42,6 +42,8 @@ Route::get('/sobre_vinhos', function () {
 
 Route::get('/vinhos/{vinho}', [App\Http\Controllers\VinhosController::class, 'vinhos_detalhes'])->name('vinho');
 
+Route::delete('/destroy/{user}', [App\Http\Controllers\UsersController::class, 'user_destroy'])->name('users.destroy');
+
 Route::get('/login', function () {
     return view('paginas.frontend.login');
 })->name('login');
@@ -72,7 +74,11 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'da
 
 //FAQ
 
-Route::resource('/admin/faq', FAQController::class);
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('faq', FAQController::class)->parameters([
+        'faq' => 'pergunta'
+    ]);
+});
 
 
 //Contactos Admin

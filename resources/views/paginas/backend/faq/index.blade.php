@@ -22,22 +22,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="card card-mini mb-4">
-                        <div class="card-body cartao">
-                            <h2 class="mb-1">71,503</h2>
-                            <p>Nadinha</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="card card-mini mb-4">
-                        <div class="card-body cartao">
-                            <h2 class="mb-1">NAda</h2>
-                            <p>Produtos Totais (2020)</p>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -47,7 +31,7 @@
                             <h2>Perguntas Frequentes</h2>
                         </div>
                         <div class="card-body pt-0 pb-5">
-                            <table id="tablefaq" class="ui celled table" style="width:100%">
+                            <table id="tablefaq" class="ui celled table tamanho">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -76,15 +60,15 @@
                                                 <a href="{{ route('faq.edit', $pergunta) }}"
                                                     class="btn btn-xs btn-warning btn-p"><i
                                                         class="fas fa-pen fa-xs"></i></a>
-                                                <form action="{{ route('faq.destroy', $pergunta) }}" method="post">
-                                                    @method('DELETE')
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-xs btn-danger btn-p"><i
-                                                            class="fas fa-trash fa-xs"></i></button>
-                                                </form>
+
+                                                <button type="button" class="btn btn-xs btn-danger btn-p"
+                                                    data-toggle="modal" data-target="#deleteConfirmModal"
+                                                    data-route="{{ route('faq.destroy', $pergunta) }}"><i
+                                                        class="fas fa-trash fa-xs" data-toggle="tooltip"
+                                                        data-placement="top" title="Eliminar"></i></button>
+
                                             </td>
                                         </tr>
-
                                     @endforeach
                                 </tbody>
                             </table>
@@ -94,4 +78,42 @@
             </div>
         </div>
         <script src="{{ asset('assets\js\paginas\backend\faq.js') }}"></script>
+
+
+        <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog"
+            aria-labelledby="deleteConfirmModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar registo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Tem a certeza que deseja eliminar este registo?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <form method="POST" action="#" role="form" class="inline" id="formDelete">
+                            @csrf
+                            @method("DELETE")
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            //triggered when modal is about to be shown
+            $('#deleteConfirmModal').on('show.bs.modal', function(e) {
+
+                //get data-route attribute of the clicked element
+                var route = $(e.relatedTarget).data('route');
+
+                //populate the textbox
+                $('#formDelete').attr("action", route);
+            });
+
+        </script>
     @endsection
