@@ -27,6 +27,8 @@ Route::get('/sobre', function () {
     return view('paginas.frontend.sobre');
 })->name('sobre');
 
+Route::get('/perfil', [App\Http\Controllers\MainController::class, 'perfil'])->name('perfil');
+
 Route::get('/vinhos', function () {
     return view('paginas.frontend.tipo_de_vinho');
 })->name('vinhos');
@@ -56,6 +58,9 @@ Auth::routes(['verify' => true]);
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 //Autenticação
 
+
+//
+Route::post('/perfil', [App\Http\Controllers\UsersController::class, 'frontend_store'])->name('perfil_frontend_store');
 
 //Admin
 Route::get('/admin', function () {
