@@ -19,10 +19,10 @@
 
       <div class="form-group">
         <label for="exampleFormControlSelect1">Categoria</label>
-        <select class="form-control" id="exampleFormControlSelect1"  name="categoria">
+        <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
             <option value="">Selecione uma Categoria</option>
             @foreach ($category_wines as $category_wine)
-            <option value="{{$category_wine->id}}"> {{$category_wine->nome}}</option>
+            <option @if ($receita->id_categoria==$category_wine->id) selected @endif value="{{$category_wine->id}}"> {{$category_wine->nome}}</option>
             @endforeach
         </select>
     </div>
