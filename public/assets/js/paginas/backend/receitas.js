@@ -102,6 +102,8 @@ $(document).ready(function() {
             null,
             null,
             null,
+            null,
+            null,
             null
         ],
         "order": [
@@ -122,11 +124,11 @@ $(document).ready(function() {
         },
         "columnDefs": [{
             type: 'portugues',
-            targets: [0, 1, 2, 3, 4]
+            targets: [0, 1, 2, 3, 4, 5]
         }],
         "columnDefs": [{
             type: 'locale-compare',
-            targets: [0, 1, 2, 3, 4]
+            targets: [0, 1, 2, 3, 4, 5]
         }],
     });
 });

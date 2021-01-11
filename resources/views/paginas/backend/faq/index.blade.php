@@ -57,8 +57,9 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($perguntas as $pergunta)
                                 <tr>
-                                    @foreach ($perguntas as $pergunta)
+
                                     <td>{{ $pergunta->id }}</td>
                                     <td>
                                         <a class="text-dark" href="">{{ $pergunta->pergunta }}</a>
@@ -67,7 +68,17 @@
                                         <a class="text-dark" href="">{!! $pergunta->resposta !!}</a>
                                     </td>
                                     <td class="d-none d-lg-table-cell">{{ $pergunta->categoria }}</td>
+                                    <td>
+                                        <a href="{{ route('faq.show', $pergunta) }}" class="btn btn-primary w-100">Ver</a>
+                                        <a href="{{ route('faq.edit', $pergunta) }}" class="btn btn-primary w-100">Editar</a>
+                                        <form action="{{route('faq.destroy', $pergunta)}}" method="post">
+                                            @method('DELETE')
+                                            @csrf
+                                            <input class="btn btn-danger w-100" type="submit" value="Delete" />
+                                        </form>
+                                    </td>
                                 </tr>
+
                                 @endforeach
                             </tbody>
                         </table>
