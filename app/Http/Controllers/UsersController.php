@@ -61,9 +61,12 @@ class UsersController extends Controller
     }
     public function frontend_store(Request $request)
     {
-        $user = Auth::user();
-        $user->update($request->all());
-        return redirect()->route('perfil');
+       
+    }
+    public function user_destroy(user $user)
+    {
+        $user->delete();
+        return redirect()->route('admin_users');
     }
 
     /**

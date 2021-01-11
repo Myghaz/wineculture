@@ -222,6 +222,7 @@ $('#tableausers').dataTable({
         null,
         null,
         null,
+        null,
         null
     ],
     "order": [

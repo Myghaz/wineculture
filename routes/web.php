@@ -43,6 +43,8 @@ Route::get('/sobre_vinhos', function () {
 
 Route::get('/vinhos/{vinho}', [App\Http\Controllers\VinhosController::class, 'vinhos_detalhes'])->name('vinho');
 
+Route::delete('/destroy/{user}', [App\Http\Controllers\UsersController::class, 'user_destroy'])->name('users.destroy');
+
 Route::get('/login', function () {
     return view('paginas.frontend.login');
 })->name('login');

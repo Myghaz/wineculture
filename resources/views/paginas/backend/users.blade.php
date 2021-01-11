@@ -62,7 +62,7 @@
                     </div>
                     <div class="card-body pt-0 pb-5">
                         <table id="tableausers" class="ui celled table" style="width:100%">
-                            <thead id="tableausersthead">
+                            <thead>
                                 <tr>
                                     <th>ID</th>
                                     <th class="d-none d-lg-table-cell">Imagem</th>
@@ -70,6 +70,7 @@
                                     <th class="d-none d-lg-table-cell">Apelido</th>
                                     <th class="d-none d-lg-table-cell">Email</th>
                                     <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
+                                    <th class="d-none d-lg-table-cell">Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -94,6 +95,14 @@
                                     </td>
                                     <td>
                                         <a class="text-dark" href="">{{$user->tipouser}}</a>
+                                    </td>
+                                    <td class="acoes">
+
+                                        <form action="{{ route('users.destroy', $user) }}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-xs btn-danger btn-p"><i class="fas fa-trash fa-xs"></i></button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
