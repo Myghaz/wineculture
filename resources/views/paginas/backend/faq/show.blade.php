@@ -4,7 +4,7 @@
 @section('content')
     <div class="content-wrapper">
         <div class="content">
-            <h2>Inserir Pergunta</h2>
+            <h2>Pergunta</h2>
             <br>
             <form action="{{ route('faq.store') }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Resposta</label>
                     <textarea readonly class="form-control" class="ckeditor form-control" id="exampleFormControlTextarea1"
-                        rows="3" value="{{ $pergunta->resposta }}" name="resposta"></textarea>
+                        rows="3" value="" name="resposta">{{ $pergunta->resposta }}</textarea>
                 </div>
             </form>
         </div>

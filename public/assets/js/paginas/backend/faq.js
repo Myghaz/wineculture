@@ -96,7 +96,7 @@ $(document).ready(function() {
         scrollY: "350px",
         scrollCollapse: true,
         autoWidth: true,
-        columns: [{ type: "num" }, null, null, null],
+        columns: [{ type: "num" }, null, null, null, { orderable: false }],
         order: [[0, "asc"]],
         language: {
             emptyTable: "Não existem registos a apresentar",
