@@ -84,6 +84,9 @@ hr {
     overflow: visible;
 }
 
+
+
+
 h1,
 h2,
 h3,
@@ -19193,5 +19196,7 @@ html[dir="rtl"] .github-link svg {
     transform: rotateY(180deg);
 }
 
-
+.acoes {
+    display: flex;
+}
 /*# sourceMappingURL=sleek.css.map */

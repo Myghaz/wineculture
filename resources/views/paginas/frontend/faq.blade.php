@@ -18,7 +18,8 @@
                 <div class="col-md-2 d-none d-lg-block d-xl-none xld-none d-xl-block categorias sticky-top">
                     <ul class="list-unstyled">
                         @foreach ($categorias as $key => $categoria)
-                            <li>{{ $categoria->categoria }}</li>
+                            <li><a href="#{{ $categoria->categoria }}">{{ $categoria->categoria }}</a></li>
+
                         @endforeach
                     </ul>
                 </div>
@@ -31,7 +32,7 @@
                 </select>
 
                 <div class="col-md-10 perguntas main">
-                    <h1>Conta</h1>
+                    <a id="Conta"><h1>Conta</h1></a>
                     @foreach ($perguntas_conta as $key => $pergunta_conta)
                         <div class="categoria">
                             <a class="btn pergunta h3" data-toggle="collapse" href="#a{{ $pergunta_conta->id }}"
@@ -45,7 +46,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <h1>Encomenda</h1>
+                    <a id="Encomenda"><h1>Encomenda</h1></a>
                     @foreach ($perguntas_encomenda as $key => $pergunta_encomenda)
                         <div class="categoria">
                             <a class="btn pergunta h3" data-toggle="collapse" href="#b{{ $pergunta_encomenda->id }}"
@@ -59,7 +60,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <h1>Pagamento</h1>
+                    <a id="Pagamento"><h1>Pagamento</h1></a>
                     @foreach ($perguntas_pagamento as $key => $pergunta_pagamento)
                         <div class="categoria">
                             <a class="btn pergunta h3" data-toggle="collapse" href="#c{{ $pergunta_pagamento->id }}"
@@ -69,20 +70,6 @@
                             <div class="resposta" id="c{{ $pergunta_pagamento->id }}">
                                 <div class="resposta1">
                                     {!! $pergunta_pagamento->resposta !!}
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                    <h1>teste</h1>
-                    @foreach ($perguntas_teste as $key => $pergunta_teste)
-                        <div class="categoria">
-                            <a class="btn pergunta h3" data-toggle="collapse" href="#c{{ $pergunta_teste->id }}"
-                                role="button" aria-expanded="false" aria-controls="collapseExample">
-                                {{ $pergunta_teste->pergunta }}
-                            </a>
-                            <div class="resposta" id="c{{ $pergunta_teste->id }}">
-                                <div class="resposta1">
-                                    {!! $pergunta_teste->resposta !!}
                                 </div>
                             </div>
                         </div>
