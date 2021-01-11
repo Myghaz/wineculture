@@ -1,24 +1,7 @@
-<!doctype html>
-<html>
+@extends("paginas.frontend.layout")
+@section('title', 'Início')
 
-<head>
-    @section('title', 'Início')
-    @extends ('includes.frontend.head')
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/icofont/icofont.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/boxicons/css/boxicons.min.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/venobox/venobox.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/owl.carousel/assets/owl.carousel.min.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/index.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-</head>
-
-<body>
-    @include('includes.frontend.navbar')
-    @yield('content')
+@section("content")
     @if (session('info') == "novo_registo")
     <script>
         toastr.success('Obrigado por juntar-se a nós!','Bem-Vindo');
@@ -463,20 +446,5 @@
             </div>
         </section>
         <!-- End Our Team Section -->
+@endsection
 
-
-
-        <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
-        <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/venobox/venobox.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/counterup/counterup.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-        <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.js') }}"></script>
-        <script src="{{ URL::asset('assets/js/paginas/frontend/index.js') }}"></script>
-
-</body>
-@include('includes.frontend.footer')
