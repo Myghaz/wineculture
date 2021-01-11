@@ -31,9 +31,7 @@ Route::get('/perfil', [App\Http\Controllers\MainController::class, 'perfil'])->n
 
 Route::get('/vinhos', [App\Http\Controllers\MainController::class, 'vinhos'])->name('vinhos');
 
-Route::get('/vinho_produto', function () {
-    return view('paginas.frontend.vinho_produto');
-})->name('vinho_produto');
+Route::get('/vinhos/{vinho}', [App\Http\Controllers\VinhosController::class, 'vinhos_detalhes'])->name('vinho');
 
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');

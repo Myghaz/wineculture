@@ -31,17 +31,7 @@ class VinhosController extends Controller
         ]));
     }
 
-	public function store(Request $request)
-    {
-        $vinho = new Vinhos();
-        $vinho->fill($request->all());
-
-        $path= Storage::putFileAs('public\assets\img\vinhos', $request->file('img'), 'vinhos_' . time() . '.' . $request->file('img')->extension());
-
-        $vinho->foto = $path;
-        $vinho->save();
-        return redirect()->route('receitas.index');
-    }
+	
 
 	
     /**
