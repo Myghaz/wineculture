@@ -54,6 +54,7 @@
                                     <th class="d-none d-lg-table-cell">Pergunta</th>
                                     <th class="d-none d-lg-table-cell">Resposta</th>
                                     <th class="d-none d-lg-table-cell">Categoria</th>
+                                    <th class="d-none d-lg-table-cell">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -69,7 +70,7 @@
                                     </td>
                                     <td class="d-none d-lg-table-cell">{{ $pergunta->categoria }}</td>
                                     <td>
-                                        <a href="{{ route('faq.show', $pergunta) }}" class="btn btn-primary w-100">Ver</a>
+                                        <a href="{{ route("faq.show", ['pergunta' => $pergunta]) }}" class="btn btn-primary w-100">Ver</a>
                                         <a href="{{ route('faq.edit', $pergunta) }}" class="btn btn-primary w-100">Editar</a>
                                         <form action="{{route('faq.destroy', $pergunta)}}" method="post">
                                             @method('DELETE')
