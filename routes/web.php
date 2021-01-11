@@ -73,7 +73,11 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'da
 
 //FAQ
 
-Route::resource('/admin/faq', FAQController::class);
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('faq', FAQController::class)->parameters([
+        'faq' => 'pergunta'
+    ]);
+});
 
 
 //Contactos Admin
