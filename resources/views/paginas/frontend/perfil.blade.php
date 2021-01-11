@@ -84,9 +84,8 @@
                             </div>
                         </div>
                         <div style="background-color: white;" class="card-body">
-                            <form action="{{route('perfil_frontend_store', $user->id)}}" method="POST">
+                            <form action="{{route('perfil_frontend_store')}}" method="POST">
                                 {{csrf_field()}}
-                                @method('PUT')
                                 <h6 class="heading-small text-muted mb-4">Informação do Utilizador</h6>
                                 <div class="pl-lg-4">
                                     <div class="row">

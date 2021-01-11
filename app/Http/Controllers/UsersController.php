@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Carbon;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -59,8 +59,9 @@ class UsersController extends Controller
             'users_genero_null_total'
         ]));
     }
-    public function frontend_store(Request $request, User $user)
+    public function frontend_store(Request $request)
     {
+        $user = Auth::user();
         $user->update($request->all());
         return redirect()->route('perfil');
     }
