@@ -11,7 +11,7 @@
 <div class="content-wrapper">
     <div class="content">
         <div class="row">
-        <div class="col-xl-4 col-md-12">
+            <div class="col-xl-4 col-md-12">
                 <!-- Doughnut Chart -->
                 <div class="card card-default">
                     <div class="card-header justify-content-center">
@@ -47,31 +47,11 @@
                         </div>
                         <canvas id="generosgradfico" class="chartjs-render-monitor" style="display: block; width: 389px; height: 275px;"></canvas>
                     </div>
-               
-               
+
+
                 </div>
             </div>
-            <div class="col-xl-4 col-md-12">
-                <!-- Doughnut Chart -->
-                <div class="card card-default">
-                    <div class="card-header justify-content-center">
-                        <h2>Idade dos Utilizadores</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                            <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                            </div>
-                            <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                            </div>
-                        </div>
-                        <canvas id="generosgradfico" class="chartjs-render-monitor" style="display: block; width: 389px; height: 275px;"></canvas>
-                    </div>
-               
-               
-                </div>
-            </div>
+
 
         </div>
         <div class="row tabelas">
@@ -82,19 +62,28 @@
                     </div>
                     <div class="card-body pt-0 pb-5">
                         <table id="tableausers" class="ui celled table" style="width:100%">
-                            <thead id="tableausersthead">
+                            <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th class="d-none d-lg-table-cell">Imagem</th>
                                     <th>Nome</th>
                                     <th class="d-none d-lg-table-cell">Apelido</th>
                                     <th class="d-none d-lg-table-cell">Email</th>
                                     <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
+                                    <th class="d-none d-lg-table-cell">Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     @foreach($users as $key => $user)
                                     <td>{{$user->id}}</td>
+                                    <td>
+                                        @if ($user->img == "Sem Imagem")
+                                        <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
+                                        @else
+                                        <img src="/assets/img/users/{{$user->img}}" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
+                                        @endif
+                                    </td>
                                     <td>
                                         <a class="text-dark" href="">{{$user->name}}</a>
                                     </td>
@@ -107,30 +96,14 @@
                                     <td>
                                         <a class="text-dark" href="">{{$user->tipouser}}</a>
                                     </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <table id="tableaprodutores" class="ui celled table" style="width:100%">
-                            <thead id="tableprodutoresthead">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Nome</th>
-                                    <th class="d-none d-lg-table-cell">Apelido</th>
-                                    <th class="d-none d-lg-table-cell">Email</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    @foreach($users as $key => $produtor)
-                                    <td>{{$user->id}}</td>
-                                    <td>
-                                        <a class="text-dark" href="">{{$produtor->name}}</a>
+                                    <td class="acoes">
+
+                                        <form action="{{ route('users.destroy', $user) }}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-xs btn-danger btn-p"><i class="fas fa-trash fa-xs"></i></button>
+                                        </form>
                                     </td>
-                                    <td>
-                                        <a class="text-dark" href="">{{$produtor->apelido}}</a>
-                                    </td>
-                                    <td class="d-none d-lg-table-cell">{{$produtor->email}}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -142,7 +115,7 @@
     </div>
 
     <script>
-        var user_utl_12_total = {{$user_utl_12_total}};
+ var user_utl_12_total = {{$user_utl_12_total}};
         var user_utl_11_total = {{$user_utl_11_total}};
         var user_utl_10_total = {{$user_utl_10_total}};
         var user_utl_9_total = {{$user_utl_9_total}};
@@ -159,6 +132,6 @@
         var users_nao_revelar_total = {{$users_nao_revelar_total}};
         var users_genero_null_total = {{$users_genero_null_total}};
     </script>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
     <script src="{{ asset('assets\js\paginas\backend\users.js') }}"></script>
     @endsection
