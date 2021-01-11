@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Perguntas;
 use App\Models\receitas;
+use App\Models\Vinhos;
 use App\Models\Contactos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +19,12 @@ class MainController extends Controller
     public function blog() {
         $blogs = Blog::all();
         return view('paginas.frontend.blog', ['blogs' => $blogs]);
+    }
+    public function vinhos() {
+        $vinhos = Vinhos::all();
+        return view('paginas.frontend.tipo_de_vinho', compact([
+            'vinhos'
+        ]));
     }
 
     public function previewblog(Blog $previewblog) {

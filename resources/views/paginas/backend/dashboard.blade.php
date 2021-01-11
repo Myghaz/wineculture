@@ -267,49 +267,6 @@
         </div>
       </div>
     </div>
-    <h2 class="titulo">Redes Sociais</h2>
-    <div class="row-socials socials">
-      <div class="col-sm-6 col-lg-6">
-        <div class="card">
-          <a target="_blank" href="https://www.facebook.com/Testedwmwc-100224601998953">
-            <div class="card-header bg-facebook content-center">
-              <img src="/assets/img/paginas/backend/dashboard/facebook.png" class="c-icon c-icon-3xl text-white my-4">
-            </div>
-          </a>
-          <div class="card-body row text-center">
-            <div class="col">
-              <div class="text-value-xl">{{$fbgostos}}</div>
-              <div class="text-uppercase text-muted small">Gostos</div>
-            </div>
-            <div class="c-vr"></div>
-            <div class="col">
-              <div class="text-value-xl">{{$fbposts}}</div>
-              <div class="text-uppercase text-muted small">Publicações</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-6">
-        <div class="card">
-          <a target="_blank" href="https://www.instagram.com/wineculture.geral">
-            <div class="card-header bg-instagram content-center">
-              <img src="/assets/img/paginas/backend/dashboard/instagram.png" class="c-icon c-icon-3xl text-white my-4">
-            </div>
-          </a>
-          <div class="card-body row text-center">
-            <div class="col">
-              <div class="text-value-xl">{{$seguidores_instagram}}</div>
-              <div class="text-uppercase text-muted small">Seguidores</div>
-            </div>
-            <div class="c-vr"></div>
-            <div class="col">
-              <div class="text-value-xl">{{$posts_instagram}}</div>
-              <div class="text-uppercase text-muted small">Publicações</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <h2 class="titulo">Chat</h2>
     <div class="card card-default mb-0 chat">

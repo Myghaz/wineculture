@@ -6,7 +6,7 @@
 <body>
     <div class="navv">
         <div class="navbar bb" id="navbar">
-            <div onclick="window.location.href='/con';" class="img" id="imgnav"> </div>
+            <div onclick="window.location.href='/';" class="img" id="imgnav"> </div>
             <ul>
                 <li @if (Route::currentRouteName()=='index') class="active" @endif><a href="/">Início</a></li>
                 <li @if (Route::currentRouteName()=='vinhos') class="active" @endif><a href="/vinhos">Vinhos</a></li>

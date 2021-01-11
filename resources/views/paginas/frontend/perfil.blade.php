@@ -1,11 +1,8 @@
-<head>
-    @section('title', 'Perfil')
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/perfil.css') }}">
-</head>
-
+@extends("paginas.frontend.layout")
+@section('title', 'Perfil')
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/perfil.css') }}">
 <body>
-    @include('includes.frontend.navbar')
-    @yield('content')
+    @section('content')
     <div class="main-content" style="margin-bottom: 100px;">
         <!-- Top navbar -->
 
@@ -165,4 +162,4 @@
         </div>
     </div>
 </body>
-@include('includes.frontend.footer')
+@endsection
