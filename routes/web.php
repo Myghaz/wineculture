@@ -33,9 +33,8 @@ Route::get('/vinhos', function () {
     return view('paginas.frontend.tipo_de_vinho');
 })->name('vinhos');
 
-Route::get('/vinho_produto', function () {
-    return view('paginas.frontend.vinho_produto');
-})->name('vinho_produto');
+
+Route::get('/vinho_produto', [App\Http\Controllers\VinhosController::class, 'vinhos'])->name('vinho_produto');
 
 Route::get('/sobre_vinhos', function () {
     return view('paginas.frontend.sobre_vinhos');
@@ -71,8 +70,13 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'da
 
 //FAQ
 
-Route::resource('/admin/faq', FAQController::class);
 
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('faq', FAQController::class)->parameters([
+        'faq' => 'pergunta'
+    ]);
+});
 
 //Contactos Admin
 

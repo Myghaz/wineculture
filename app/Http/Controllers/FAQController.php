@@ -64,7 +64,6 @@ class FAQController extends Controller
      */
     public function edit(Perguntas $pergunta)
     {
-        $pergunta = Perguntas::all();
         return view('paginas.backend.faq.edit', compact('pergunta'));
     }
 

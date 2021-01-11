@@ -15,7 +15,7 @@
                 <li @if (Route::currentRouteName()=='contactos') class="active" @endif><a href="/contactos">Contactos</a></li>
                 @if (!Auth::check()) <li @if (Route::currentRouteName()=='login') class="active" @endif><a href="{{route('login')}}">Login</a></li
                 >@elseif (Auth::user()->tipouser == "Administrador") <li><a href="{{route('admin_dashboard')}}">Admin</a></li>@endif
-               
+
             </ul>
             <div class="menu">
                 <i id="navbar" class="fa fa-bars"></i>

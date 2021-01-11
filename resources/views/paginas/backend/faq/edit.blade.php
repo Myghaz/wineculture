@@ -6,8 +6,8 @@
         <div class="content">
             <h2>Inserir Pergunta</h2>
             <br>
-            <form action="{{ route('faq.store') }}" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
+            <form action="{{ route('faq.update', $pergunta) }}" method="POST" enctype="multipart/form-data">
+                @csrf
                 @method('PUT')
                 @if (session('status'))
                     <div class="alert alert-success">
