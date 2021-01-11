@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Perguntas;
+use App\Models\receitas;
 use App\Models\Contactos;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class MainController extends Controller
 {
@@ -41,6 +43,15 @@ class MainController extends Controller
         $mensagens = Contactos::all();
         $totalmensagens = Contactos::all('id')->count();
         return view('paginas.frontend.contactos', compact('mensagens', 'totalmensagens'));
+    }
+    public function perfil() {
+        $blogs = Blog::where('id_user', '=', Auth::user()->id)->count();
+        $receitas = receitas::where('id_user', '=', Auth::user()->id)->count();
+
+        return view('paginas.frontend.perfil', compact([
+            'blogs',
+            'receitas'
+        ]));
     }
 }
 

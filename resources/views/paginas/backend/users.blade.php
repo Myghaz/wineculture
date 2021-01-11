@@ -15,7 +15,7 @@
                 <!-- Doughnut Chart -->
                 <div class="card card-default">
                     <div class="card-header justify-content-center">
-                        <h2>{{$total_users_utls_12meses}} Novos Registos</h2>
+                        <h2>{{$total_users_utls_12meses}} Novos Registos (Ultimos 12 Meses)</h2>
                     </div>
                     <div class="card-body">
                         <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
@@ -138,46 +138,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
-
-        <div class="col-xl-4 col-lg-6 col-12">
-
-            <!-- Polar and Radar Chart -->
-            <div class="card card-default">
-                <div class="card-header justify-content-center">
-                    <h2>Géneros dos Utilizadores</h2>
-                </div>
-                <div class="card-body pt-0">
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                            <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                    <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                                </div>
-                                <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                    <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                                </div>
-                            </div>
-                            <canvas id="polar" width="389" height="270" class="chartjs-render-monitor" style="display: block; width: 389px; height: 270px;"></canvas>
-                        </div>
-                        <div class="tab-pane fade active show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                            <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                    <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                                </div>
-                                <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                    <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                                </div>
-                            </div>
-                            <canvas id="generosgrafico" style="display: block; width: 205px; height: 270px;" height="270" class="chartjs-render-monitor" width="205"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
