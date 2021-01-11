@@ -108,6 +108,8 @@ Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController
 
 Route::get('/admin/vinhos', [App\Http\Controllers\VinhosController::class, 'index'])->name('admin_vinhos');
 
+Route::get('/admin/vinhos/create', [App\Http\Controllers\VinhosController::class, 'create'])->name('admin_vinhos_create');
+
 Route::get('/admin/insert_vinho', function () {
     return view('paginas.backend.insert_vinho');
 })->name('admin_insert_vinho');

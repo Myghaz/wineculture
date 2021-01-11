@@ -12,7 +12,7 @@ use App\Models\User;
 class VinhosController extends Controller
 {
 
-	public function vinhos(VinhosController $addd)
+	public function vinhos()
     {
         $vinhos = Vinhos::all(); 
         $vinhosimg = Vinhosimg::all();
@@ -28,9 +28,21 @@ class VinhosController extends Controller
             'categorias',
             'users',
 			'vinho_select',
-			'teste' => $addd,
         ]));
     }
+
+	public function store(Request $request)
+    {
+        $vinho = new Vinhos();
+        $vinho->fill($request->all());
+
+        $path= Storage::putFileAs('public\assets\img\vinhos', $request->file('img'), 'vinhos_' . time() . '.' . $request->file('img')->extension());
+
+        $vinho->foto = $path;
+        $vinho->save();
+        return redirect()->route('receitas.index');
+    }
+
 	
     /**
      * Display a listing of the resource.
@@ -69,7 +81,8 @@ class VinhosController extends Controller
      */
     public function create()
     {
-        //
+		$vinho = Vinhos::all();
+        return view('paginas.backend.vinhos.create', compact('vinho'));
     }
 
     /**
