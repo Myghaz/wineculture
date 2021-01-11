@@ -114,13 +114,13 @@ $(document).ready(function() {
         columnDefs: [
             {
                 type: "portugues",
-                targets: [0, 1, 2, 3]
+                targets: [0, 1, 2, 3, 4]
             }
         ],
         columnDefs: [
             {
                 type: "locale-compare",
-                targets: [0, 1, 2, 3]
+                targets: [0, 1, 2, 3, 4]
             }
         ]
     });
