@@ -92,7 +92,7 @@
 
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon"><i class="bx bx-gift"></i></div>
-                            <h4 class="title"><a href="">Loja</a></h4>
+                            <h4 class="title"><a href="http://wineculture.test/loja/" target="_blank">Loja</a></h4>
                             <p class="description">Procure mais informações na nossa loja e o que ela o pode dispôr!</p>
                         </div>
 
@@ -185,7 +185,7 @@
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
                         <div class="icon"><i class="icofont-shopify"></i></div>
                         <h4 class="title">
-                            <a href="">Loja</a>
+                            <a href="http://wineculture.test/loja/" target="_blank">Loja</a>
                         </h4>
                         <p class="description">Obtemos de uma loja para que possam comprar acessórios de moda, de escritório, pessoais, de vinho e de covid-19.</p>
                     </div>

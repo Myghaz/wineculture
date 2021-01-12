@@ -394,13 +394,6 @@
                                     class="btn-right-sidebar-2 btn-right-sidebar-2-active header-light-to">Branco</a>
                                 <a href="javascript:void(0);" class="btn-right-sidebar-2 header-dark-to">Preto</a>
                             </div>
-
-                            <span class="right-sidebar-2-subtitle">Fundo da Navegação</span>
-                            <div class="no-col-space">
-                                <a href="javascript:void(0);"
-                                    class="btn-right-sidebar-2 btn-right-sidebar-2-active sidebar-dark-to">Preto</a>
-                                <a href="javascript:void(0);" class="btn-right-sidebar-2 sidebar-light-to">Branco</a>
-                            </div>
                             <div class="d-flex justify-content-center" style="padding-top: 30px">
                                 <div id="reset-options" style="width: auto; cursor: pointer"
                                     class="btn-right-sidebar-2 btn-reset">Repor Definições</div>

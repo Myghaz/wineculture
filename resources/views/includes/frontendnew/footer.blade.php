@@ -20,6 +20,8 @@
 
             <a href="/sobre">Sobre Nós</a>
 
+            <a href="/receitas">Receitas</a>
+
             <a href="#">Loja</a>
 
             <a href="/faq">FaQ</a>

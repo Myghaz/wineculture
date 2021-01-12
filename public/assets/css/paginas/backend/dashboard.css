@@ -347,17 +347,17 @@ a {
 }
 .table-item-menu .table-menu-item:nth-child(1) {
    transition-duration: 70ms;
-   transform: translate3d(70px, 0, 0) scale(0.5);
+   transform: translate3d(50px, 0, 0) scale(0.5);
    background-color: #669AE1;
 }
 .table-item-menu .table-menu-item:nth-child(2) {
    transition-duration: 130ms;
-   transform: translate3d(25px, 0, 0) scale(0.5);
+   transform: translate3d(-5px, 0, 0) scale(0.5);
    background-color: #70CC72;
 }
 .table-item-menu .table-menu-item:nth-child(3) {
    transition-duration: 190ms;
-   transform: translate3d(-20px, 0, 0) scale(0.5);
+   transform: translate3d(-40px, 0, 0) scale(0.5);
    background-color: #FE4365;
 }
 .table-item-menu .table-menu-item:nth-child(4) {

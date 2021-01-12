@@ -116,7 +116,6 @@
             <div class="table-real-menu-rep">
               <button title="Utilizadores" id="btnusers-rep"" value=" Utilizadores" class="table-menu-item-repos"> <i id="table-users" class="fa fa-users"></i> </button>
               <button title="Produtores" id="btnprodutores-rep" value="Produtores" class="table-menu-item-repos"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
-              <button title="Produtos" id="btnprods-rep"" value=" Produtos" class="table-menu-item-repos"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
               <button title="Produtos(WordPress)" id="btnprods_wp-rep" value="Loja" class="table-menu-item-repos"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
               <!--  <button title="Compras" id="btncompras-rep"" value="Loja" class="table-menu-item-repos"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button> -->
             </div>
@@ -130,7 +129,6 @@
               <div class="table-real-menu">
                 <button title="Utilizadores" id="btnusers" value="Utilizadores" class="table-menu-item"> <i id="table-users" class="fa fa-users"></i> </button>
                 <button title="Produtores" id="btnprodutores" value="Produtores" class="table-menu-item"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
-                <button title="Produtos" id="btnprods" value="Produtos" class="table-menu-item"> <i id="table-produtos" class="fas fa-shipping-fast"></i> </button>
                 <button title="Produtos(WordPress)" id="btnprods_wp" value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
                 <!-- <button title="Compras" id="btncompras" value="Loja" class="table-menu-item"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button> -->
               </div>
@@ -501,17 +499,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4 px-1">
-                <div class=" circle" data-size="60" data-value="0.90" data-thickness="4" data-fill="{
-														&quot;color&quot;: &quot;#fe5461&quot;
-													}">
-                  <div class="circle-content">
-                    <h6 class="text-uppercase">class</h6>
-                    <h6>25%</h6>
-                    <strong></strong>
-                  </div>
-                </div>
-              </div>
+       
             </div>
           </div>
         </div>
@@ -644,19 +632,7 @@
             </a>
             <p class="card-text text-center mb-3">{{$produtoswp->post_content}}</p>
             <div class="row justify-content-center">
-              <div class="col-4 px-1">
-                @php $ireceitas = 0; @endphp
 
-                <div class=" circle" data-size="60" data-value="0.<?php echo $percentagemreceitas; ?>" data-thickness="4" data-fill="{
-                  &quot;color&quot;: &quot;#1E90FF&quot;
-													}">
-                  <div class="circle-content">
-                    <h6 class="text-uppercase">rceitas</h6>
-                    <h6><?php echo $percentagemreceitas; ?>%</h6>
-                    <strong></strong>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
