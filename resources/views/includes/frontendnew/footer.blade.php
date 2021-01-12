@@ -27,6 +27,8 @@
             <a href="/faq">FaQ</a>
 
             <a href="/contactos">Contactos</a>
+
+            <a href="/politica_de_privacidade">Politica de Privacidade</a>
         </p>
 
         <p>WineCulture &copy; 2021</p>
