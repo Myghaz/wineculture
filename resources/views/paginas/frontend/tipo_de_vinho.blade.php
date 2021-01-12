@@ -27,12 +27,12 @@
 	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block w-100" src="assets\img\paginas\frontend\tipo_de_vinhos\banner_vinho_tinto.png" alt="Banner">
+				<img class="d-block w-100" src="assets\img\paginas\frontend\tipo_de_vinhos\banner_vinho.png" alt="Banner">
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container mt-5 mb-5">
 		<div class="row m-3 mt-5">
 
 			@foreach($vinhos as $key => $vinho)

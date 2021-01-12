@@ -14,11 +14,11 @@
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th class="d-none d-lg-table-cell">Nome</th>
-                  <th class="d-none d-lg-table-cell">Imagem</th>
-                  <th class="d-none d-lg-table-cell">Ver</th>
-                  <th class="d-none d-lg-table-cell">Editar</th>
-                  <th class="d-none d-lg-table-cell">Apagar</th>
+				  @foreach($categorias as $key => $categoria)
+				  @if ($vinho->id_categoria == $categoria->id)
+                  <th class="d-none d-lg-table-cell">{{$categoria->nome}}</th>
+				  @endif
+				  @endforeach
                 </tr>
               </thead>
               <tbody>
@@ -26,24 +26,15 @@
                   
                   <td>1</td>
                   <td>
-                    <a class="text-dark" href="">nome</a>
+                    <a class="text-dark">nome</a>
                   </td>
-                  
-                  <td class="d-none d-lg-table-cell">imagem</td>
-                  
-                  
-                  <td class="d-none d-lg-table-cell"><a href="#" class="btn btn-primary">Ver</a></td>
-                  <td class="d-none d-lg-table-cell"><a href="#" class="btn btn-primary">Editar</a</td>  <td class="d-none d-lg-table-cell">
-                  <input class="btn btn-danger" type="submit" value="Delete" />    
                   </td>
 
                 </tr>
                 
               </tbody>
             </table>
-            <div class="paginator">
-              a
-            </div>
+            
           </div>
         </div>
       </div>

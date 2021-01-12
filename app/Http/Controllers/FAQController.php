@@ -39,10 +39,22 @@ class FAQController extends Controller
      */
     public function store(Request $request)
     {
+        $fields = $request->validate(
+            [
+                'pergunta' => 'required',
+                'categoria' => 'required',
+                'resposta' => 'required'
+            ],
+            [
+                'pergunta' => 'Campo pergunta não ficou preenchido',
+                'categoria' => 'Campo categoria não ficou preenchido',
+                'resposta' => 'Campo resposta não ficou preenchido'
+            ]
+        );
         $pergunta = new Perguntas();
-        $pergunta->fill($request->all());
+        $pergunta->fill($fields);
         $pergunta->save();
-        return redirect()->route('faq.index');
+        return redirect()->route('faq.index')->with('success', 'Pergunta adicionada com sucesso', compact('pergunta'));;
     }
 
     /**
@@ -76,10 +88,22 @@ class FAQController extends Controller
      */
     public function update(Request $request, Perguntas $pergunta)
     {
-        $pergunta->update($request->all());
+        $fields = $request->validate(
+            [
+                'pergunta' => 'required',
+                'categoria' => 'required',
+                'resposta' => 'required'
+            ],
+            [
+                'pergunta' => 'Campo pergunta não ficou preenchido',
+                'categoria' => 'Campo categoria não ficou preenchido',
+                'resposta' => 'Campo resposta não ficou preenchido'
+            ]
+        );
+        $pergunta->update($fields);
         $pergunta->save();
         return redirect()->route('faq.index')
-        ->with('success', 'Pergunta foi editada com sucesso', compact('pergunta'));
+            ->with('success', 'Pergunta foi editada com sucesso', compact('pergunta'));
     }
 
     /**

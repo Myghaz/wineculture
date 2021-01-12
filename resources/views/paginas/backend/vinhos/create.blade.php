@@ -15,7 +15,7 @@
             @endif
             <div class="form-group">
                 <label for="formGroupExampleInput">Nome do vinho</label>
-                <input type="text" class="form-control" name="nome" id="formGroupExampleInput" placeholder="Nome da Receita" >
+                <input type="text" class="form-control" name="nome" id="formGroupExampleInput" placeholder="Nome do vinho" >
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Categoria</label>

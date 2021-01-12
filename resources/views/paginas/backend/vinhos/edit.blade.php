@@ -1,5 +1,5 @@
 @extends ('layouts.backend.admin')
-@section('title', 'Receita')
+@section('title', 'Vinho')
 
 @section('content')
 <div class="content-wrapper">
@@ -14,7 +14,7 @@
       @endif
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Nome do vinho</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="nome">{{$receita->nome}}</textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="nome">{{$vinho->nome}}</textarea>
       </div>
 
       <div class="form-group">
@@ -22,7 +22,7 @@
         <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
             <option value="">Selecione uma Categoria</option>
             @foreach ($category_wines as $category_wine)
-            <option @if ($receita->id_categoria==$category_wine->id) selected @endif value="{{$category_wine->id}}"> {{$category_wine->nome}}</option>
+            <option @if ($vinho->id_categoria==$category_wine->id) selected @endif value="{{$category_wine->id}}"> {{$category_wine->nome}}</option>
             @endforeach
         </select>
     </div>
@@ -34,7 +34,7 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Descrição</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descricao">{{$receita->descricao}}</textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descricao">{{$vinho->descricao}}</textarea>
       </div>
       <div class="form-group">
         <label for="exampleFormControlFile1">Submeter Imagem</label>

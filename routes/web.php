@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Controllers\ReceitasController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\VinhosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -110,9 +111,12 @@ Route::delete('/admin/blog/{blog}/destroy', [App\Http\Controllers\BlogController
 
 //vinhos Admin
 
-Route::get('/admin/vinhos', [App\Http\Controllers\VinhosController::class, 'index'])->name('admin_vinhos');
+//Route::get('/admin/vinhos', [App\Http\Controllers\VinhosController::class, 'index'])->name('admin_vinhos');
 
-Route::get('/admin/vinhos/create', [App\Http\Controllers\VinhosController::class, 'create'])->name('admin_vinhos_create');
+//Route::get('/admin/vinhos/create', [App\Http\Controllers\VinhosController::class, 'create'])->name('admin_vinhos_create');
+//Route::get('/admin/vinhos/edit', [App\Http\Controllers\VinhosController::class, 'edit'])->name('admin_vinhos_edit');
+
+Route::resource('/admin/vinhos', VinhosController::class);
 
 Route::get('/admin/insert_vinho', function () {
     return view('paginas.backend.insert_vinho');
@@ -122,9 +126,7 @@ Route::get('/admin/insert_categoria_vinho', function () {
     return view('paginas.backend.insert_categoria_vinho');
 })->name('admin_insert_categoria_vinho');
 
-Route::get('/admin/categoria_vinho', function () {
-    return view('paginas.backend.categoria_vinhos');
-})->name('admin_categoria_vinho');
+Route::resource('/admin/categoria_vinho', VinhosController::class);
 
 //receitas Admin
 

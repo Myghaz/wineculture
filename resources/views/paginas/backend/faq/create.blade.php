@@ -15,15 +15,15 @@
                 @endif
                 <div class="form-group">
                     <label for="formGroupExampleInput">Pergunta</label>
-                    <input type="text" class="form-control" name="pergunta" id="formGroupExampleInput">
+                    <input type="text" class="form-control" name="pergunta" value="{{ old('pergunta') }}" id="formGroupExampleInput">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Categoria</label>
-                    <input class="form-control" id="exampleFormControlSelect1" name="categoria">
+                    <input class="form-control" id="exampleFormControlSelect1" value="{{ old('categoria') }}" name="categoria">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Resposta</label>
-                    <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"
+                    <textarea class="ckeditor form-control" value="{{ old('resposta') }}" id="exampleFormControlTextarea1" rows="3"
                         name="resposta"></textarea>
                 </div>
                 <button type="submit" name="button" class="btn btn-success display-4">Submeter</button>
