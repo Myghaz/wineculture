@@ -172,23 +172,7 @@
                         </li>
                         <!-- End of FAQ Menu -->
                         <!-- Receitas Contactos -->
-                        <li @if (Route::currentRouteName() == 'admin_contactos')
-                        class="has-sub active expand" @else class="has-sub" @endif>
-                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                data-target="#contactos" aria-expanded="false" aria-controls="icons">
-                                <i class="mdi mdi-email-mark-as-unread"></i>
-                                <span class="nav-text">Contactos</span> <b class="caret"></b>
-                            </a>
-                            <ul class="collapse" id="contactos" data-parent="#sidebar-menu">
-                                <div class="sub-menu">
-                                    <li>
-                                        <a class="sidenav-item-link" href="{{ route('admin_contactos') }}">
-                                            <span class="nav-text">Mensagens</span>
-                                        </a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </li>
+                        
                         <!-- End of Contactos Menu -->
                         <!-- Vinhos -->
                         <li @if (Route::currentRouteName() == 'admin_vinhos')
@@ -275,7 +259,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <a href="user-profile.html">
+                                        <a href="/perfil">
                                             <i class="mdi mdi-account"></i> Perfil
                                         </a>
                                     </li>

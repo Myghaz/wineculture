@@ -348,7 +348,7 @@ class UsersSeeder extends Seeder
         ]);
         User::create([
             'tipouser' => 'Utilizador',
-            'email' => 'miguel.ciencia655@gmail.com',
+            'email' => 'miguel.ciencia6355@gmail.com',
             'password' => bcrypt('123123123'),
             'name' => 'Miguel',
             'apelido' => 'Pereira',

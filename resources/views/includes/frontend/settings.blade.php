@@ -6,8 +6,7 @@
 </head>
 
 <body>
-    <span onclick="switchTheme()" id="toggle" class="toggle"></span>
-    <span class="wave"></span>
+  
 
 
 

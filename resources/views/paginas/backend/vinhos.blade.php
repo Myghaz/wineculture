@@ -9,7 +9,7 @@
         <div class="card-header justify-content-between">
           <h2 id="titulotable">Tabela de Vinhos</h2>
         </div>
-        <div class="card-body pt-0 pb-5">
+        <div class="card-body pt-0 pb-5" >
           <table id="tablevinhos" class="ui celled table" style="width:100%">
             <thead id="tablevinhosthead">
               <tr>
@@ -65,5 +65,4 @@
     </div>
   </div>
 </div>
-<script src="{{ asset('assets\js\paginas\backend\vinhos.js') }}"></script>
 @endsection

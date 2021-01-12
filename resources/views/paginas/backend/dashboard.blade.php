@@ -60,8 +60,8 @@
       <div class="col-xl-3 col-sm-6">
         <div class="card card-mini mb-4">
           <div class="card-body">
-            <h2 class="mb-1">71,503</h2>
-            <p>Nadinha</p>
+            <h2 class="mb-1">52</h2>
+            <p>Vinhos Totais (2020)</p>
             <div class="mudargraf">
               <input type="checkbox" href="#" class="menu-open" name="menu-open" id="comprasmenu-open" />
               <label class="menu-open-button" for="comprasmenu-open">

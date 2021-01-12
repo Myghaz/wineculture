@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="row">
-  <div class="row tabelas">
+  <div class="row tabelas" style="width:100%">
     <div class="col-12">
       <div class="card card-table-border-none" id="vinhos">
         <div class="card-header justify-content-between">
@@ -21,7 +21,7 @@
                 <th class="d-none d-lg-table-cell">Preco</th>
                 <th class="d-none d-lg-table-cell">Stock</th>
                 <th class="d-none d-lg-table-cell">Pais</th>
-				<th class="d-none d-lg-table-cell">Options</th>
+                <th class="d-none d-lg-table-cell">Options</th>
               </tr>
             </thead>
             <tbody>
@@ -57,15 +57,21 @@
                 <td>
                   <a class="text-dark" href="">{{$vinho->pais}}</a>
                 </td>
-				<td class="acoes">
-                    <a href="{{ route('vinhos.show', $vinho) }}"class="btn btn-xs btn-primary btn-p"><iclass="fas fa-eye fa-xs"></i></a>
-					<a href="{{ route('vinhos.edit', $vinho) }}"class="btn btn-xs btn-warning btn-p"><iclass="fas fa-pen fa-xs"></i></a>
-					<form action="{{ route('vinhos.destroy', $vinho) }}" method="post">
+                <td class="acoes">
+                  <a href="{{ route('vinhos.show', $vinho) }}" class="btn btn-xs btn-primary btn-p">
+                    <iclass="fas fa-eye fa-xs"></i>
+                  </a>
+                  <a href="{{ route('vinhos.edit', $vinho) }}" class="btn btn-xs btn-warning btn-p">
+                    <iclass="fas fa-pen fa-xs"></i>
+                  </a>
+                  <form action="{{ route('vinhos.destroy', $vinho) }}" method="post">
                     @method('DELETE')
                     @csrf
-                    <button type="submit" class="btn btn-xs btn-danger btn-p"><iclass="fas fa-trash fa-xs"></i></button>
-                    </form>
-                    </td>
+                    <button type="submit" class="btn btn-xs btn-danger btn-p">
+                      <iclass="fas fa-trash fa-xs"></i>
+                    </button>
+                  </form>
+                </td>
               </tr>
               @endforeach
             </tbody>

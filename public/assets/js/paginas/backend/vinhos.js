@@ -1,3 +1,4 @@
+
 jQuery.extend(jQuery.fn.dataTableExt.oSort, {
     'locale-compare-asc': function (a, b) {
         return a.localeCompare(b, 'cs', {
@@ -84,6 +85,7 @@ jQuery.extend(jQuery.fn.dataTableExt.oSort, {
     }
 });
 
+
 $(document).ready(function () {
     jQuery('#datatable-table_filter input').keyup(function () {
         table
@@ -103,6 +105,7 @@ $(document).ready(function () {
         "columns": [{
                 "type": "num"
             },
+            null,
             null,
             null,
             null,
@@ -133,11 +136,11 @@ $(document).ready(function () {
         },
         "columnDefs": [{
             type: 'portugues',
-            targets: [0, 1, 2, 3, 4, 5, 6, 7]
+            targets: [0, 1, 2, 3, 4, 5, 6, 7, 8]
         }],
         "columnDefs": [{
             type: 'locale-compare',
-            targets: [0, 1, 2, 3, 4, 5, 6, 7]
+            targets: [0, 1, 2, 3, 4, 5, 6, 7, 8]
         }],
     });
 });

@@ -59,7 +59,7 @@ var usersChart = new Chart(usersbarX, {
 });
 
 let generosdata = [users_masculino_total, users_feminino_total, users_nao_revelar_total, users_genero_null_total];
-Datausers = {
+Datageneros = {
     labels: [
         "Masculino",
         "Feminino",
@@ -79,7 +79,7 @@ Datausers = {
 var usersbarX = document.getElementById("generosgradfico").getContext("2d");
 var usersChart = new Chart(usersbarX, {
     type: "pie",
-    data: Datausers,
+    data: Datageneros,
 
     options: {
         responsive: true,
@@ -107,6 +107,60 @@ var usersChart = new Chart(usersbarX, {
             yAxes: [{
                 gridLines: {
                     drawBorder: false, // hide main y-axis line
+                    display: false
+                },
+                ticks: {
+                    display: false,
+                    beginAtZero: true
+                }
+            }]
+        },
+    }
+});
+let paisdata = [8,15,25];
+Datapais = {
+    labels: [
+        "França",
+        "Espanha",
+        "Portugal"
+    ],
+    datasets: [{
+        label: "País",
+        backgroundColor: "white",
+        data: paisdata,
+        lineTension: 0,
+        fill: 'white',
+        backgroundColor: ["#009063", "#ff6f9c", "#191970"],
+    }]
+};
+
+var usersbarX = document.getElementById("paisgrafico").getContext("2d");
+var usersChart = new Chart(usersbarX, {
+    type: "horizontalBar",
+    data: Datapais,
+
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+            display: false
+        },
+        scales: {
+            xAxes: [{
+                gridLines: {
+                    drawBorder: false,
+                    display: true
+                },
+                ticks: {
+                    display: true, // hide main x-axis line
+                    beginAtZero: true
+                },
+                barPercentage: 2,
+                categoryPercentage: 0.2
+            }],
+            yAxes: [{
+                gridLines: {
+                    drawBorder: true, // hide main y-axis line
                     display: false
                 },
                 ticks: {
