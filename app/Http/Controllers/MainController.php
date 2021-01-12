@@ -60,9 +60,8 @@ class MainController extends Controller
             'receitas'
         ]));
     }
-
     public function pdp() {
-        return view('paginasssss.frontend.pdp');
+        return view('paginas.frontend.pdp');
     }
 }
 

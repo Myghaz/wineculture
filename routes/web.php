@@ -40,6 +40,7 @@ Route::get('/sobre_vinhos', function () {
 
 
 
+
 Route::get('/vinhos/{vinho}', [App\Http\Controllers\VinhosController::class, 'vinhos_detalhes'])->name('vinho');
 
 Route::delete('/destroy/{user}', [App\Http\Controllers\UsersController::class, 'user_destroy'])->name('users.destroy');
@@ -56,7 +57,7 @@ Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name(
 
 Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
 
-
+Route::get('/politica_de_privacidade', [App\Http\Controllers\MainController::class, 'pdp'])->name('pdp');
 //Autenticação
 Auth::routes(['verify' => true]);
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

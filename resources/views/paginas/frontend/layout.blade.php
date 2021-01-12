@@ -27,6 +27,7 @@
 
 
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/receitas.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/pdp.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/faq.css') }}">
     <link rel="shortcut icon" href="public\favicon.ico" type="image/x-icon">
     <link rel="icon" href="public\favicon.ico" type="image/x-icon">
