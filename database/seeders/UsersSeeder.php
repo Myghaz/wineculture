@@ -93,10 +93,10 @@ class UsersSeeder extends Seeder
         ]);
         User::create([
             'tipouser' => 'Administrador',
-            'email' => 'utilizador3@gmail.com',
+            'email' => 'Admin@gmail.com',
             'password' => bcrypt('123456'),
-            'name' => 'Utilizador',
-            'apelido' => 'Tres',
+            'name' => 'Admin',
+            'apelido' => 'WIneculture',
             'data_nasc' => Carbon::parse('2004-11-25'),
             'genero' => 'Nao Revelar',
             'pais' => 'Portugal',
