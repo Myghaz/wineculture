@@ -3,7 +3,7 @@
 
 @section("content")
 
-    <div class="container">
+    <div class="container-pdp">
         <div class="centered">
             <h1>Politica de Privacidade</h1>
         </div>

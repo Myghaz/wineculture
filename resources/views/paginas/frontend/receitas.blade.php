@@ -1,7 +1,9 @@
 @extends("paginas.frontend.layout")
+
 @section('title', 'Receitas')
 
 @section("content")
+
 <img src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
 
 <div class="container">
@@ -40,9 +42,5 @@
         </div>
         @endforeach
     </div>
-
 </div>
-@endsection
-
-@section("javascript")
 @endsection

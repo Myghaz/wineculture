@@ -15,11 +15,7 @@ html{
     --inputs: #2e2e2e;
     --placeholder: #fff;
 }
-body {
-    overflow-x: hidden;
-	background-image: url("/assets/img/paginas/frontend/back.jpg");
-}
-  
+
 .container{
     margin-top: 160px;
 }
@@ -38,7 +34,7 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 .row{
-    color:  var(--color)!important;
+    color:  var(--color);
     transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 span {
@@ -46,23 +42,25 @@ span {
     color: red;
 }
 input.form-control, textarea.form-control{
-    background-color: var(--inputs)!important;
-    color: var(--color)!important;
+    background-color: var(--inputs);
+    color: var(--color);
     transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 ::placeholder { 
-	color: var(--placeholder)!important;
+	color: var(--placeholder);
 	transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
   }
-.btn{
+.wrapper .btn{
     border-radius: 0 0 5px 0;
     background-color:  var(--btn-background);
     color:  var(--btn-color);
-    border-radius: 40px!important;
+    border-radius: 40px;
     width: 90%;
     height: 40px;
-    font-size: 20px!important;
-    line-height: 20px!important;
+    font-size: 20px;
+    line-height: 20px;
+    margin:0 auto;
+    display:block;
     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 .btn:hover{

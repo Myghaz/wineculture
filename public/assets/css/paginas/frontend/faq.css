@@ -1,4 +1,4 @@
-img {
+img.banner {
     width: 100%;
     object-fit: cover;
 }
@@ -15,7 +15,7 @@ img {
     font-weight: 700;
 }
 
-a:link, a:visited, a:hover, a:active {
+.container-fluid a:link, .container-fluid a:visited, .container-fluid a:hover, .container-fluid a:active {
     color: #34141c;
 }
 .categoria {
@@ -24,7 +24,7 @@ a:link, a:visited, a:hover, a:active {
     color: #34141c;
 }
 
-h1 {
+#Conta h1, #Encomenda h1, #Pagamento h1{
     margin: 10px 0px;
     padding-top: 75px;
 }
@@ -58,7 +58,7 @@ h1 {
         margin-left: -23px;
     }
 
-    h1 {
+    #Conta h1, #Encomenda h1, #Pagamento h1{
         margin-left: -3px;
         padding-top: 5px;
     }

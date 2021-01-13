@@ -22,7 +22,7 @@ class MainController extends Controller
     }
     public function vinhos() {
         $vinhos = Vinhos::all();
-        return view('paginas.frontend.tipo_de_vinho', compact([
+        return view('paginas.frontend.vinhos', compact([
             'vinhos'
         ]));
     }
