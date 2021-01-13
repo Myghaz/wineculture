@@ -14,7 +14,6 @@ html {
     --buttonborderhover: none;
     --secbuttonborder: 2px solid #27000A;
     --secbuttonborderhover: 2px solid #990227;
-
 }
 
 .theme-dark {
@@ -37,11 +36,12 @@ html {
 }
 
 .backimg {
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 0px);
-    background: url("/assets/img/paginas/frontend/login_background.jpg");
-
+    position: relative;
+    width: auto;
+    height:850px;
+    background: url(/assets/img/paginas/frontend/login_background.jpg);
+    border: 1px solid;
+    margin-bottom: -100px;
 }
 
 .forms {
@@ -106,14 +106,14 @@ button {
 #signupnome,
 #signupapelido,
 #signuppassword,
-#signupcpassword{
+#signupcpassword {
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
-    font-size: 14pt!important;
-    display: unset!important;
-    padding: 5px!important;
+    font-size: 14pt !important;
+    display: unset !important;
+    padding: 5px !important;
 }
 
 ::placeholder {
@@ -178,8 +178,7 @@ h5 {
 }
 
 .signUp input,
-.signIn input
-{
+.signIn input {
     border: none;
     border-bottom: var(--borderinputs);
     width: 95%;
@@ -190,7 +189,7 @@ h5 {
     font-weight: 100;
     margin-bottom: 55px;
     transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    border-radius: 0!important;
+    border-radius: 0 !important;
 
 }
 
@@ -233,7 +232,7 @@ h5 {
 
 .signUp {
     z-index: 1;
-    transform: perspective(100px) translate3d(10px, -100px, -30px);
+    transform: perspective(100px) translate3d(10px, -100px, -63px);
     opacity: 0.5;
     height: 790px;
     margin-top: -20px;
@@ -242,6 +241,7 @@ h5 {
 .signIn {
     z-index: 2;
     height: 600px;
+    margin-top: 55px;
 }
 
 .active-dx {

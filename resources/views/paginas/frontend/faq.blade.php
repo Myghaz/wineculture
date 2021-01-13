@@ -1,5 +1,11 @@
 @extends("paginas.frontend.layout")
+
 @section('title', 'FAQ')
+
+@section("links")
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/faq.css') }}">
+@endsection
+
 @section('content')
     <div>
         <img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/faq-banner.jpg') }}" alt="banner">

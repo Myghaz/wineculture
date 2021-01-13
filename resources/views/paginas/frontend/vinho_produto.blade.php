@@ -1,5 +1,11 @@
 @extends("paginas.frontend.layout")
-@section('title', ' {{$vinho_det->nome}}')
+
+
+@section('title', $vinho_det->nome)
+
+@section("links")
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vinho_produto.css') }}">
+@endsection
 
 @section("content")
 

@@ -1,5 +1,10 @@
 @extends("paginas.frontend.layout")
+
 @section('title', 'Politica de Privacidade')
+
+@section("links")
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/pdp.css') }}">
+@endsection
 
 @section("content")
 

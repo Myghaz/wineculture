@@ -2,6 +2,10 @@
 
 @section('title', 'Sobre')
 
+@section("links")
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/sobre.css') }}">
+@endsection
+
 @section("content")
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -38,4 +42,3 @@
 <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.js') }}"></script>
 <script src="{{ URL::asset('assets/js/paginas/frontend/sobre.js') }}"></script>
 @endsection
-

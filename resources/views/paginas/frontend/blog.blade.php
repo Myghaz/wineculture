@@ -2,6 +2,10 @@
 
 @section('title', 'Blog')
 
+@section("links")
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/blog.css') }}">
+@endsection
+
 @section("content")
 
 <section>

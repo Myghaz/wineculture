@@ -2,6 +2,16 @@
 
 @section('title', 'Início')
 
+@section("links")
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/icofont/icofont.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/boxicons/css/boxicons.min.css') }}" />
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/venobox/venobox.css') }}" />
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/owl.carousel/assets/owl.carousel.min.css') }}" />
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.css') }}" />
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/index.css') }}">
+@endsection
+
 @section("content")
 
 @if (session('info') == "novo_registo")

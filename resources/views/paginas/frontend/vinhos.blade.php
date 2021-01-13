@@ -2,6 +2,11 @@
 
 @section('title', 'Vinhos')
 
+@section("links")
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vinhos.css') }}">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+@endsection
+
 @section("content")
 
 <script src="assets\js\paginas\frontend\sobre.js"></script>

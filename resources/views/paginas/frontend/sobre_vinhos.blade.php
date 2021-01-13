@@ -2,6 +2,10 @@
 
 @section('title', 'Sobre Vinhos')
 
+@section("links")
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/sobre_vinhos.css') }}">
+@endsection
+
 @section("content")
 
 <div id="body">
