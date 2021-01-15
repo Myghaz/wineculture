@@ -16,11 +16,11 @@
             </div>
             <div id="visit">
                 <p id="txt2">Visit</p>
-                <p class="text" href="/vinhos">Vinho</p>
-                <p class="text" href="/sobre_vinhos">Sobre Vinhos</p>
-                <p class="text" href="#">Loja</p>
-                <p class="text" href="/faq">FaQ</p>
-                <p class="text" href="/contactos">Contactos</p>
+                <p class="footer_text" href="/vinhos">Vinho</p>
+                <p class="footer_text" href="/sobre_vinhos">Sobre Vinhos</p>
+                <p class="footer_text" href="#">Loja</p>
+                <p class="footer_text" href="/faq">FaQ</p>
+                <p class="footer_text" href="/contactos">Contactos</p>
 
             </div>
             <div id="legal">
