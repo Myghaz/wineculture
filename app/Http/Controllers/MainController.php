@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Models\category_wine;
 use App\Models\Perguntas;
 use App\Models\receitas;
 use App\Models\Vinhos;
 use App\Models\Contactos;
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +21,13 @@ class MainController extends Controller
     }
     public function blog() {
         $blogs = Blog::all();
-        return view('paginas.frontend.blog', ['blogs' => $blogs]);
+        $categorias = Category::all();
+        $users = User::all();
+        return view('paginas.frontend.blog', compact([
+            'blogs',
+            'categorias',
+            'users'
+        ]));
     }
     public function vinhos() {
         $vinhos = Vinhos::all();
