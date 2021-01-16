@@ -264,15 +264,16 @@ $(document).ready(function() {
     $(document).ready(function() {
 
     });
-
+    
 $('#tableausers').dataTable({
     dom: 'lBfrtip',
     "scrollY": "350px",
     "scrollCollapse": true,
+    "orderCellsTop": true,
     "autoWidth": true,
+    "searchHighlight": true,
+    "mark": true,
     "columns": [
-        { "type": "num" },
-        null,
         null,
         null,
         null,
@@ -280,7 +281,7 @@ $('#tableausers').dataTable({
         null
     ],
     "order": [
-        [2, 'asc']
+        [1, 'asc']
     ],
     "language": {
         "emptyTable": "Não existem registos a apresentar",
@@ -297,11 +298,30 @@ $('#tableausers').dataTable({
     },
     "columnDefs": [{
         type: 'portugues',
-        targets: [0, 1, 2, 3, 4,5]
+        targets: [0, 1, 2, 3, 4],
+        "targets": [0,4], "orderable": false
+        
     }],
     "columnDefs": [{
         type: 'locale-compare',
-        targets: [0, 1, 2, 3, 4,5]
+        targets: [0, 1, 2, 3, 4],
+        "targets": [0,4], "orderable": false
     }],
 });
 });
+
+$('#tableausers thead tr').clone(true).appendTo( '#tableausers thead' );
+$('#tableausers thead tr:eq(1) th').each( function (i) {
+    var title = $(this).text();
+    $(this).html( '<input type="text" class="form-control form-control-sm thead'+title+'" placeholder="Pesquisar '+title+'" />' );
+
+    $( 'input', this ).on( 'keyup change', function () {
+        if ( $('#tableausers').DataTable().column(i).search() !== this.value ) {
+            $('#tableausers').DataTable()
+                .column(i)
+                .search( this.value )
+                .draw();
+        }
+    } );
+} );
+

@@ -16,10 +16,9 @@
             <h2>Tabela de Posts</h2>
           </div>
           <div class="card-body pt-0 pb-5">
-            <table id="tabelausers" class="ui celled table" style="width:100%">
+            <table id="tabelablog" class="ui celled table" style="width:100%">
               <thead>
                 <tr>
-                  <th>ID</th>
                   <th class="d-none d-lg-table-cell">Titulo</th>
                   <th class="d-none d-lg-table-cell">Autor</th>
                   <th class="d-none d-lg-table-cell">Data</th>
@@ -31,7 +30,6 @@
               <tbody>
                 <tr>
                   @foreach($post as $value)
-                  <td>{{$value->id}}</td>
                   <td>
                     <a class="text-dark" href="">{{$value->titulo}}</a>
                   </td>

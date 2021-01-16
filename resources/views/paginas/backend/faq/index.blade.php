@@ -34,7 +34,6 @@
                             <table id="tablefaq" class="ui celled table tamanho">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
                                         <th class="d-none d-lg-table-cell">Pergunta</th>
                                         <th class="d-none d-lg-table-cell">Resposta</th>
                                         <th class="w-2">Categoria</th>
@@ -44,8 +43,6 @@
                                 <tbody>
                                     @foreach ($perguntas as $pergunta)
                                         <tr>
-
-                                            <td>{{ $pergunta->id }}</td>
                                             <td>
                                                 <a class="text-dark" href="">{{ $pergunta->pergunta }}</a>
                                             </td>

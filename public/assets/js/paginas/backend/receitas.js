@@ -1,39 +1,43 @@
 jQuery.extend(jQuery.fn.dataTableExt.oSort, {
-    "locale-compare-asc": function(a, b) {
-        return a.localeCompare(b, "cs", { sensitivity: "case" });
+    "locale-compare-asc": function (a, b) {
+        return a.localeCompare(b, "cs", {
+            sensitivity: "case"
+        });
     },
-    "locale-compare-desc": function(a, b) {
-        return b.localeCompare(a, "cs", { sensitivity: "case" });
+    "locale-compare-desc": function (a, b) {
+        return b.localeCompare(a, "cs", {
+            sensitivity: "case"
+        });
     }
 });
 
-jQuery.fn.dataTable.ext.type.search["locale-compare"] = function(data) {
+jQuery.fn.dataTable.ext.type.search["locale-compare"] = function (data) {
     return NeutralizeAccent(data);
 };
 
 function NeutralizeAccent(data) {
-    return !data
-        ? ""
-        : typeof data === "string"
-        ? data
-              .replace(/\n/g, " ")
-              .replace(/[éÉěĚèêëÈÊË]/g, "e")
-              .replace(/[šŠ]/g, "s")
-              .replace(/[čČçÇ]/g, "c")
-              .replace(/[řŘ]/g, "r")
-              .replace(/[žŽ]/g, "z")
-              .replace(/[ýÝ]/g, "y")
-              .replace(/[áÁâàÂÀ]/g, "a")
-              .replace(/[íÍîïÎÏ]/g, "i")
-              .replace(/[ťŤ]/g, "t")
-              .replace(/[ďĎ]/g, "d")
-              .replace(/[ňŇ]/g, "n")
-              .replace(/[óÓ]/g, "o")
-              .replace(/[úÚůŮ]/g, "u")
-        : data;
+    return !data ?
+        "" :
+        typeof data === "string" ?
+        data
+        .replace(/\n/g, " ")
+        .replace(/[éÉěĚèêëÈÊË]/g, "e")
+        .replace(/[šŠ]/g, "s")
+        .replace(/[čČçÇ]/g, "c")
+        .replace(/[řŘ]/g, "r")
+        .replace(/[žŽ]/g, "z")
+        .replace(/[ýÝ]/g, "y")
+        .replace(/[áÁâàÂÀ]/g, "a")
+        .replace(/[íÍîïÎÏ]/g, "i")
+        .replace(/[ťŤ]/g, "t")
+        .replace(/[ďĎ]/g, "d")
+        .replace(/[ňŇ]/g, "n")
+        .replace(/[óÓ]/g, "o")
+        .replace(/[úÚůŮ]/g, "u") :
+        data;
 }
 jQuery.extend(jQuery.fn.dataTableExt.oSort, {
-    "portugues-pre": function(data) {
+    "portugues-pre": function (data) {
         var a = "a";
         var e = "e";
         var i = "i";
@@ -70,34 +74,41 @@ jQuery.extend(jQuery.fn.dataTableExt.oSort, {
         };
         for (var val in special_letters)
             data = data
-                .split(val)
-                .join(special_letters[val])
-                .toLowerCase();
+            .split(val)
+            .join(special_letters[val])
+            .toLowerCase();
         return data;
     },
-    "portugues-asc": function(a, b) {
+    "portugues-asc": function (a, b) {
         return a < b ? -1 : a > b ? 1 : 0;
     },
-    "portugues-desc": function(a, b) {
+    "portugues-desc": function (a, b) {
         return a < b ? 1 : a > b ? -1 : 0;
     }
 });
 
-$(document).ready(function() {
-    jQuery("#datatable-table_filter input").keyup(function() {
+$(document).ready(function () {
+    jQuery("#datatable-table_filter input").keyup(function () {
         table
             .search(jQuery.fn.DataTable.ext.type.search.string(this.value))
             .draw();
     });
-    $(document).ready(function() {});
+    $(document).ready(function () {});
 
     $("#tablereceitas").dataTable({
         dom: "lBfrtip",
         scrollY: "350px",
+        orderCellsTop: true,
         scrollCollapse: true,
+        "searchHighlight": true,
+        "mark": true,
         autoWidth: true,
-        columns: [{ type: "num" }, null, null, null, null, null, { orderable: false }],
-        order: [[0, "asc"]],
+        columns: [null, null, null, null, null, {
+            orderable: false
+        }],
+        order: [
+            [1, "asc"]
+        ],
         language: {
             emptyTable: "Não existem registos a apresentar",
             info: "A mostrar _START_ até _END_ de _TOTAL_ registos",
@@ -111,17 +122,31 @@ $(document).ready(function() {
             infoFiltered: "(filtrado do total de _MAX_ registos)",
             zeroRecords: "Não existem resultados baseados na pesquisa"
         },
-        columnDefs: [
-            {
-                type: "portugues",
-                targets: [0, 1, 2, 3, 4, 5, 6]
-            }
-        ],
-        columnDefs: [
-            {
-                type: "locale-compare",
-                targets: [0, 1, 2, 3, 4, 5, 6]
-            }
-        ]
+        columnDefs: [{
+            type: "portugues",
+            targets: [0, 1, 2, 3, 4, 5],
+            "targets": [0, 5],
+            "orderable": false
+        }],
+        columnDefs: [{
+            type: "locale-compare",
+            targets: [0, 1, 2, 3, 4, 5],
+            "targets": [0, 5],
+            "orderable": false
+        }]
+    });
+});
+$('#tablereceitas thead tr').clone(true).appendTo('#tablereceitas thead');
+$('#tablereceitas thead tr:eq(1) th').each(function (i) {
+    var title = $(this).text();
+    $(this).html('<input type="text" class="form-control form-control-sm thead' + title + '" placeholder="Pesquisar ' + title + '" />');
+
+    $('input', this).on('keyup change', function () {
+        if ($('#tablereceitas').DataTable().column(i).search() !== this.value) {
+            $('#tablereceitas').DataTable()
+                .column(i)
+                .search(this.value)
+                .draw();
+        }
     });
 });

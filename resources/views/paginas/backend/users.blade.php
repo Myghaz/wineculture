@@ -85,11 +85,9 @@
                         <table id="tableausers" class="ui celled table" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th class="d-none d-lg-table-cell">Imagem</th>
                                     <th>Nome</th>
                                     <th class="d-none d-lg-table-cell">Apelido</th>
-                                    <th class="d-none d-lg-table-cell">Email</th>
                                     <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
                                     <th class="d-none d-lg-table-cell">Eliminar</th>
                                 </tr>
@@ -97,7 +95,6 @@
                             <tbody>
                                 <tr>
                                     @foreach($users as $key => $user)
-                                    <td>{{$user->id}}</td>
                                     <td>
                                         @if ($user->img == "Sem Imagem")
                                         <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
@@ -110,9 +107,6 @@
                                     </td>
                                     <td>
                                         <a class="text-dark" href="">{{$user->apelido}}</a>
-                                    </td>
-                                    <td>
-                                        <a class="text-dark" href="">{{$user->email}}</a>
                                     </td>
                                     <td>
                                         <a class="text-dark" href="">{{$user->tipouser}}</a>

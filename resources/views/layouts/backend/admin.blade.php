@@ -35,7 +35,7 @@
     <link src="{{ asset('public\assets\css\paginas\backend\blog.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" />
-
+   
 
     <link rel="stylesheet" href="{{ URL::asset('assets/css/layouts/backend/admin.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/backend/dashboard.css') }}">
@@ -331,6 +331,9 @@
                 crossorigin="anonymous"></script>
             <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
             <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/mark.js/8.6.0/jquery.mark.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/datatables.mark.js/2.0.0/datatables.mark.min.js"></script>
+            
             <script src="{{ asset('assets\js\layouts\backend\admin.js') }}"></script>
 
             @if ($errors->any())
