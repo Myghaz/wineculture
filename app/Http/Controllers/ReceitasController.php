@@ -52,8 +52,22 @@ class ReceitasController extends Controller
      */
     public function store(Request $request)
     {
+        $fields = $request->validate(
+            [
+                'nome' => 'required',
+                'foto' => 'required',
+                'descricao' => 'required',
+                'id_categoria' => 'required|exists:categoria,id'
+            ],
+            [
+                'nome' => 'Campo nome não ficou preenchido',
+                'foto' => 'Campo foto não ficou preenchido',
+                'descricao' => 'Campo descrição não ficou preenchido',
+                'id_categoria' => 'Campo categoria não ficou preenchido'
+            ]
+            );
         $receita = new Receitas();
-        $receita->fill($request->all());
+        $receita->fill($fields);
         $receita->id_categoria = $request->id_categoria;
         $receita->id_user = Auth::user()->id;
 
@@ -100,7 +114,19 @@ class ReceitasController extends Controller
      */
     public function update(Request $request, receitas $receita)
     {
-        $receita->update($request->all());
+        $fields = $request->validate(
+            [
+                'nome' => 'required',
+                'foto' => 'required',
+                'descricao' => 'required',
+            ],
+            [
+                'nome' => 'Campo nome não ficou preenchido',
+                'foto' => 'Campo foto não ficou preenchido',
+                'descricao' => 'Campo descrição não ficou preenchido',
+            ]
+            );
+        $receita->update($fields);
         $receita->save();
         return redirect()->route('receitas.index')
         ->with('success', 'Receita foi editada com sucesso', compact('receita'));
