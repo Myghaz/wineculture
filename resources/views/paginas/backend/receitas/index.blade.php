@@ -49,12 +49,14 @@
                                     <td class="acoes">
                                         <a href="{{ route('receitas.show', $receita) }}" class="btn btn-xs btn-primary btn-p"><i class="fas fa-eye fa-xs"></i></a>
                                         <a href="{{ route('receitas.edit', $receita) }}" class="btn btn-xs btn-warning btn-p"><i class="fas fa-pen fa-xs"></i></a>
-                                        <form action="{{ route('receitas.destroy', $receita) }}" method="post">
-                                            @method('DELETE')
-                                            @csrf
-                                            <button type="submit" class="btn btn-xs btn-danger btn-p"><i class="fas fa-trash fa-xs"></i></button>
-                                        </form>
+                                         <button type="button" class="btn btn-xs btn-danger btn-p"
+                                    data-toggle="modal" data-target="#deleteConfirmModal"
+                                    data-route="{{ route('receitas.destroy', $receita) }}"><i
+                                        class="fas fa-trash fa-xs" data-toggle="tooltip"
+                                        data-placement="top" title="Eliminar"></i></button>
                                     </td>
+
+
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -66,4 +68,41 @@
     </div>
 </div>
 <script src="{{ asset('assets\js\paginas\backend\receitas.js') }}"></script>
+
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog"
+aria-labelledby="deleteConfirmModalTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Eliminar registo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Tem a certeza que deseja eliminar este registo?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <form method="POST" action="#" role="form" class="inline" id="formDelete">
+                @csrf
+                @method("DELETE")
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+//triggered when modal is about to be shown
+$('#deleteConfirmModal').on('show.bs.modal', function(e) {
+
+    //get data-route attribute of the clicked element
+    var route = $(e.relatedTarget).data('route');
+
+    //populate the textbox
+    $('#formDelete').attr("action", route);
+});
+
+</script>
 @endsection
