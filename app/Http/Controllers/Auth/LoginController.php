@@ -33,6 +33,9 @@ class LoginController extends Controller
      *
      * @return void
      */
+    public function indexFrontend() {
+        return view('paginas.frontend.auth.login');
+    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');

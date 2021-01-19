@@ -5,6 +5,8 @@ use App\Models\User;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Blog;
+use App\Models\Receitas;
 
 class UsersController extends Controller
 {
@@ -13,6 +15,21 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function indexFrontend() {
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        } else {
+        $blogs = Blog::where('id_user', '=', Auth::user()->id)->count();
+        $receitas = receitas::where('id_user', '=', Auth::user()->id)->count();
+
+        return view('paginas.frontend.perfil', compact([
+            'blogs',
+            'receitas'
+        ]));
+        }
+    }
+
     public function index()
     {
         $dd = Carbon::now()->format('Y m');

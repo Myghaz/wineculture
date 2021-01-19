@@ -13,6 +13,12 @@ class MensagensController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function indexFrontend() {
+        $mensagens = Contactos::all();
+        $totalmensagens = Contactos::all('id')->count();
+        return view('paginas.frontend.contactos', compact('mensagens', 'totalmensagens'));
+    }
     public function mensagens()
     {
         $mensagens = Contactos::all();

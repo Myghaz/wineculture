@@ -11,7 +11,20 @@ use App\Models\User;
 
 class VinhosController extends Controller
 {
-	
+    public function indexFrontend() {
+        $vinhos = Vinhos::all();
+        return view('paginas.frontend.vinhos', compact([
+            'vinhos'
+        ]));
+    }
+    public function vinhos_detalhes($vinho)
+    {
+        $vinho_det = Vinhos::find($vinho);
+
+        return view('paginas.frontend.vinho_produto', compact([
+            'vinho_det'
+        ]));
+    }
 	
 	public function vinhos()
     {
@@ -64,14 +77,7 @@ class VinhosController extends Controller
         ]));
     }
 
-    public function vinhos_detalhes($vinho)
-    {
-        $vinho_det = Vinhos::find($vinho);
-
-        return view('paginas.frontend.vinho_produto', compact([
-            'vinho_det'
-        ]));
-    }
+    
 
     
 

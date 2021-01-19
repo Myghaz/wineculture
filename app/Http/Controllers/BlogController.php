@@ -10,7 +10,19 @@ use App\Models\Category;
 
 class BlogController extends Controller
 {
-    public function blog()
+    public function indexFrontend()
+    {
+        $blogs = Blog::all();
+        $categorias = Category::all();
+        $users = User::all();
+        return view('paginas.frontend.blog', compact([
+            'blogs',
+            'categorias',
+            'users'
+        ]));
+    }
+
+    public function blogindexback()
     {
         //Ir buscar os posts organizados por mes
         $postJan = Blog::whereYear('data', '=', 2020)->whereMonth('data', '=', 1)->get();

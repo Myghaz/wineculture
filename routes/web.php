@@ -3,83 +3,80 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-
 use App\Http\Controllers\ReceitasController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\VinhosController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('paginas.frontend.index');
-})->name('index');
-
-Route::get('/contactos', [App\Http\Controllers\MainController::class, 'contactos'])->name('contactos');
-
-Route::get('/sobre', function () {
-    return view('paginas.frontend.sobre');
-})->name('sobre');
-
-Route::get('/perfil', [App\Http\Controllers\MainController::class, 'perfil'])->name('perfil');
-
-Route::get('/vinhos', [App\Http\Controllers\MainController::class, 'vinhos'])->name('vinhos');
-
-Route::get('/vinhos/{vinho}', [App\Http\Controllers\VinhosController::class, 'vinhos_detalhes'])->name('vinho');
-
-Route::get('/sobre_vinhos', function () {
-    return view('paginas.frontend.sobre_vinhos');
-})->name('sobre_vinhos');
 
 
+/////         Páginas Frontend       /////
 
+//BlogController
+Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('index');
 
-Route::get('/vinhos/{vinho}', [App\Http\Controllers\VinhosController::class, 'vinhos_detalhes'])->name('vinho');
+Route::get('/sobre', [App\Http\Controllers\MainController::class, 'sobre'])->name('sobre_vinhos');
 
-Route::delete('/destroy/{user}', [App\Http\Controllers\UsersController::class, 'user_destroy'])->name('users.destroy');
-
-Route::get('/login', function () {
-    return view('paginas.frontend.login');
-})->name('login');
-
-Route::get('/receitas', [App\Http\Controllers\ReceitasController::class, 'indexFrontend'])->name('receitas');
+Route::get('/sobre_vinhos', [App\Http\Controllers\MainController::class, 'sobre_vinhos'])->name('sobre');
 
 Route::get('/faq', [App\Http\Controllers\MainController::class, 'faq'])->name('faq');
 
-Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
-
-Route::get('/previewblog/{previewblog}', [App\Http\Controllers\MainController::class, 'previewblog'])->name('previewblog');
-
 Route::get('/politica_de_privacidade', [App\Http\Controllers\MainController::class, 'pdp'])->name('pdp');
-//Autenticação
+
+
+
+//BlogController
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'indexFrontend'])->name('index_blog_frontend');
+
+
+
+//ReceitasController
+Route::get('/receitas', [App\Http\Controllers\ReceitasController::class, 'indexFrontend'])->name('receitas');
+
+
+
+//MensagensController
+Route::get('/contactos', [App\Http\Controllers\MensagensController::class, 'indexFrontend'])->name('index_contactos_frontend');
+
+
+
+
+
+//UsersController
+Route::get('/perfil', [App\Http\Controllers\UsersController::class, 'indexFrontend'])->name('perfil');
+
+Route::delete('/destroy/{user}', [App\Http\Controllers\UsersController::class, 'user_destroy'])->name('users.destroy');
+
+
+
+//VinhosController
+Route::get('/vinhos', [App\Http\Controllers\VinhosController::class, 'indexFrontend'])->name('vinhos');
+
+Route::get('/vinhos/{vinho}', [App\Http\Controllers\VinhosController::class, 'vinhos_detalhes'])->name('vinho');
+
+
+
+
+
+/////         Autenticação      /////
+
+//LoginController
 Auth::routes(['verify' => true]);
-Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
-//Autenticação
+
+//LoginController
+Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'indexFrontend'])->name('login');
+
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
 
-//
-Route::post('/perfil', [App\Http\Controllers\UsersController::class, 'frontend_store'])->name('perfil_frontend_store');
 
-//Admin
-Route::get('/admin', function () {
-    return Redirect::to('/admin/dashboard');
+
+
+/////         Páginas Backend      /////
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 });
-Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin_dashboard');
 
-//FAQ
 
-Route::group(['prefix' => 'admin'], function () {
-    Route::resource('faq', FAQController::class)->parameters([
-        'faq' => 'pergunta'
-    ]);
-});
 
 
 //Contactos Admin
@@ -137,6 +134,8 @@ Route::resource('/admin/categoria_vinho', VinhosController::class);
 //Route::post('/admin/receitas', [App\Http\Controllers\ReceitasController::class, 'store'])->name('receitas.store');
 
 Route::resource('/admin/receitas', ReceitasController::class);
+
+Route::resource('/admin/faq', FAQController::class);
 
 //mensagens
 Route::post('/admin/dashboard', [App\Http\Controllers\ChatController::class, 'frontend_store'])->name('mensagens_backend_store');
