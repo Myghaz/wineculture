@@ -31,10 +31,10 @@
             <p id="txt4">Subscribe to US</p>
             <form> <input id="email" type="email" placeholder="Email"> </form> <a class="waves-effect waves-light btn">Subscribe</a>
             <p id="txt5">Connect With US</p>
-            <a href="https://www.facebook.com/WineCulture.pt/"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/wineculture.geral/"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="https://www.facebook.com/WineCulture.pt/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/wineculture.geral/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-linkedin" ></i></a>
+            <a href="#" target="_blank"><i class="fa fa-github"></i></a>
         </div>
     </div>
     <div id="part2">
