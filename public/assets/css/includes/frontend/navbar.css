@@ -43,7 +43,7 @@ body {
     padding: 0 300px;
     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
     z-index: 20;
-    margin-bottom: -20px!important;
+    margin-bottom: -20px !important;
 }
 
 .img {
@@ -131,16 +131,6 @@ div.bb a:hover:after {
 }
 
 
-/* Style The Dropdown Button */
-
-.dropbtn {
-    background-color: white;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
 
 
 /* The container <div> - needed to position the dropdown content */
@@ -154,12 +144,81 @@ div.bb a:hover:after {
 /* Dropdown Content (Hidden by Default) */
 
 .dropdown-content {
-    display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 188px;
+    margin-left: -45px;
     z-index: 1;
+    display: none;
+}
+
+.stage {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 26px 0;
+}
+
+.p1, .p2, .p3, .p4 {
+    font-size: 28px;
+    text-align: center;
+    margin-top: -7px;
+    cursor: pointer;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    font-family: Century Gothic;
+    letter-spacing: 5px;
+   
+}
+.p1, .p3{
+    animation-name: rotdireita;
+    animation-duration: 0.7s;
+}
+.p2, .p4{
+    animation-name: rotesquerda;
+    animation-duration: 0.7s;
+}
+
+@keyframes rotdireita {
+    from {margin-top: 0px; transform: rotateY(90deg)}
+    to {transform: rotateY(360deg); margin-top: -7px;}
+  }
+  @keyframes rotesquerda {
+    from {margin-top: 0px; transform: rotateY(-90deg) }
+    to {transform: rotateY(-360deg); margin-top: -7px;}
+  }
+
+
+.div {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    margin-top: 4%;
+    transition-duration: 0.2s;
+
+}
+
+.p:hover {
+    background: white;
+    color: black;
+}
+
+.div:nth-child(odd) {
+    transform: perspective(400px) rotateY(25deg);
+}
+
+.div:nth-child(even) {
+    transform: perspective(400px) rotateY(-25deg);
+}
+
+.div:hover {
+    transform: rotateY(0);
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 0px;
 }
 
 
@@ -197,11 +256,13 @@ div.bb a:hover:after {
     .navbar ul {
         margin-right: 2%;
     }
+
     .navbar .img {
         margin-left: 2%;
         /*margin-top: 5px;*/
         width: 100px;
     }
+
     .navbar {
         border-radius: 0;
     }
@@ -213,9 +274,11 @@ div.bb a:hover:after {
         position: absolute;
         float: right;
     }
+
     .navbar ul li {
         display: none;
     }
+
     .navbarmin {
         display: flex;
         position: relative;
@@ -225,6 +288,7 @@ div.bb a:hover:after {
         width: 100%;
         background-color: var(--background);
     }
+
     .navbarmin ul {
         left: 0;
         border-top: 1px solid black;
@@ -237,6 +301,7 @@ div.bb a:hover:after {
         z-index: 20;
         list-style: none;
     }
+
     .navbarmin li {
         float: left;
         width: 100%;
@@ -245,6 +310,7 @@ div.bb a:hover:after {
         text-align: center;
         font-size: 16pt;
     }
+
     .navbarmin ul li a {
         font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         text-decoration: none;
@@ -252,10 +318,12 @@ div.bb a:hover:after {
         padding: 10px 10px;
         position: relative;
     }
+
     .navbarmin div.bb a:before,
     div.bb a:after {
         background: none;
     }
+
     .navbarmin .img {
         margin-left: 3.5%;
         width: 130px;

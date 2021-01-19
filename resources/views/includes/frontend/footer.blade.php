@@ -10,23 +10,23 @@
             <div id="explore">
                 <p id="txt1">Explore</p>
                 <a class="link" href="/">Página Principal</a>
-                  <a class="link" href="/sobre">Sobre Nós</a>
-                   <a class="link" href="/receitas">Receitas</a>
-                   <a class="link" href="/blog">Notícias</a>
+                <a class="link" href="/sobre">Sobre Nós</a>
+                <a class="link" href="/receitas">Receitas</a>
+                <a class="link" href="/blog">Notícias</a>
             </div>
             <div id="visit">
                 <p id="txt2">Visit</p>
-                <p class="footer_text" href="/vinhos">Vinho</p>
-                <p class="footer_text" href="/sobre_vinhos">Sobre Vinhos</p>
-                <p class="footer_text" href="#">Loja</p>
-                <p class="footer_text" href="/faq">FaQ</p>
-                <p class="footer_text" href="/contactos">Contactos</p>
+                <p class="footer_text"><a href="/vinhos">Vinhos</a></p>
+                <p class="footer_text"><a href="/sobre_vinhos">Sobre Vinhos</a></p>
+                <p class="footer_text"><a href="/">Loja</a></p>
+                <p class="footer_text"><a href="/faq">FAQ</a></p>
+                <p class="footer_text"><a href="/contactos">Contactos</a></p>
 
             </div>
             <div id="legal">
                 <p id="txt3">Legal</p>
-                 <a class="link1" href="#">Termos e Condições</a>
-                 <a class="link1" href="/politica_de_privacidade">Politica de Privacidade</a>
+                <a class="link1" href="#">Termos e Condições</a>
+                <a class="link1" href="/politica_de_privacidade">Politica de Privacidade</a>
             </div>
             <div id="subscribe">
                 <p id="txt4">Subscribe to US</p>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div id="part2">
-            <p id="txt6"><i > WineCulture &copy; 2021 - All right reserved</p>
+            <p id="txt6"><i> WineCulture &copy; 2021 - All right reserved</p>
         </div>
     </div>
 </footer>

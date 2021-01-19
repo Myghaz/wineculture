@@ -17,7 +17,18 @@ html{
 }
 
 .container{
-    margin-top: 160px;
+    margin-top: 110px;
+    margin-bottom: 100px;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 .formulario {
     background-color: var(--background);

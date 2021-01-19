@@ -24,12 +24,12 @@ hr {
     margin-bottom: 1rem;
   }
 
-  ul {
+  .main-content ul {
     margin-top: 0;
     margin-bottom: 1rem;
   }
 
-  ul ul {
+  .main-content ul ul {
     margin-bottom: 0;
   }
 
@@ -854,7 +854,7 @@ hr {
     text-decoration: none;
   }
 
-  .navbar {
+  .main-content .navbar {
     position: relative;
     display: flex;
     padding: 1rem 1rem;
@@ -863,15 +863,15 @@ hr {
     justify-content: space-between;
   }
 
-  .navbar>.container,
-  .navbar>.container-fluid {
+  .main-content .navbar>.container,
+  .main-content .navbar>.container-fluid {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
   }
 
-  .navbar-nav {
+  .main-content .navbar-nav {
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
@@ -879,56 +879,56 @@ hr {
     list-style: none;
   }
 
-  .navbar-nav .nav-link {
+  .main-content .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 0;
   }
 
-  .navbar-nav .dropdown-menu {
+  .main-content .navbar-nav .dropdown-menu {
     position: static;
     float: none;
   }
 
   @media (max-width: 767.98px) {
 
-    .navbar-expand-md>.container,
-    .navbar-expand-md>.container-fluid {
+    .main-content .navbar-expand-md>.container,
+    .main-content .navbar-expand-md>.container-fluid {
       padding-right: 0;
       padding-left: 0;
     }
   }
 
   @media (min-width: 768px) {
-    .navbar-expand-md {
+    .main-content .navbar-expand-md {
       flex-flow: row nowrap;
       justify-content: flex-start;
     }
 
-    .navbar-expand-md .navbar-nav {
+    .main-content .navbar-expand-md .main-content .navbar-nav {
       flex-direction: row;
     }
 
-    .navbar-expand-md .navbar-nav .dropdown-menu {
+    .main-content .navbar-expand-md .main-content .navbar-nav .dropdown-menu {
       position: absolute;
     }
 
-    .navbar-expand-md .navbar-nav .nav-link {
+    .main-content .navbar-expand-md .main-content .navbar-nav .nav-link {
       padding-right: 1rem;
       padding-left: 1rem;
     }
 
-    .navbar-expand-md>.container,
-    .navbar-expand-md>.container-fluid {
+    .main-content .navbar-expand-md>.container,
+    .main-content .navbar-expand-md>.container-fluid {
       flex-wrap: nowrap;
     }
   }
 
-  .navbar-dark .navbar-nav .nav-link {
+  .main-content .navbar-dark .main-content .navbar-nav .nav-link {
     color: rgba(255, 255, 255, .95);
   }
 
-  .navbar-dark .navbar-nav .nav-link:hover,
-  .navbar-dark .navbar-nav .nav-link:focus {
+  .main-content .navbar-dark .main-content .navbar-nav .nav-link:hover,
+  .main-content .navbar-dark .main-content .navbar-nav .nav-link:focus {
     color: rgba(255, 255, 255, .65);
   }
 
@@ -1083,6 +1083,9 @@ hr {
       justify-content: space-between !important;
     }
   }
+  .container-fluid{
+    margin-top: -60px;
+  }
 
   .float-right {
     float: right !important;
@@ -1136,7 +1139,7 @@ hr {
   }
 
   .mt--7 {
-    margin-top: -6rem !important;
+    margin-top: -7rem !important;
   }
 
   .pt-0 {
@@ -1280,7 +1283,7 @@ hr {
       min-width: 992px !important;
     }
 
-    .navbar {
+    .main-content .navbar {
       display: none;
     }
   }
@@ -1497,7 +1500,7 @@ hr {
     position: relative;
   }
 
-  .main-content .navbar-top {
+  .main-content .main-content .navbar-top {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -1679,6 +1682,7 @@ hr {
 
   .header {
     position: relative;
+    min-height: 300px;
   }
 
   .input-group {
@@ -1767,58 +1771,58 @@ hr {
     top: 2px;
   }
 
-  .navbar-search .input-group {
+  .main-content .navbar-search .input-group {
     border: 2px solid;
     border-radius: 2rem;
     background-color: transparent;
   }
 
-  .navbar-search .input-group .input-group-text {
+  .main-content .navbar-search .input-group .input-group-text {
     padding-left: 1rem;
     background-color: transparent;
   }
 
-  .navbar-search .form-control {
+  .main-content .navbar-search .form-control {
     width: 270px;
     background-color: transparent;
   }
 
-  .navbar-search-dark .input-group {
+  .main-content .navbar-search-dark .input-group {
     border-color: rgba(255, 255, 255, .6);
   }
 
-  .navbar-search-dark .input-group-text {
+  .main-content .navbar-search-dark .input-group-text {
     color: rgba(255, 255, 255, .6);
   }
 
-  .navbar-search-dark .form-control {
+  .main-content .navbar-search-dark .form-control {
     color: rgba(255, 255, 255, .9);
   }
 
-  .navbar-search-dark .form-control:-ms-input-placeholder {
+  .main-content .navbar-search-dark .form-control:-ms-input-placeholder {
     color: rgba(255, 255, 255, .6);
   }
 
-  .navbar-search-dark .form-control::-ms-input-placeholder {
+  .main-content .navbar-search-dark .form-control::-ms-input-placeholder {
     color: rgba(255, 255, 255, .6);
   }
 
-  .navbar-search-dark .form-control::placeholder {
+  .main-content .navbar-search-dark .form-control::placeholder {
     color: rgba(255, 255, 255, .6);
   }
 
-  .navbar-search-dark .focused .input-group {
+  .main-content .navbar-search-dark .focused .input-group {
     border-color: rgba(255, 255, 255, .9);
   }
 
   @media (min-width: 768px) {
-    .navbar .dropdown-menu {
+    .main-content .navbar .dropdown-menu {
       margin: 0;
       pointer-events: none;
       opacity: 0;
     }
 
-    .navbar .dropdown-menu-arrow:before {
+    .main-content .navbar .dropdown-menu-arrow:before {
       position: absolute;
       z-index: -5;
       bottom: 100%;
@@ -1833,7 +1837,7 @@ hr {
       box-shadow: none;
     }
 
-    .navbar .dropdown-menu-right:before {
+    .main-content .navbar .dropdown-menu-right:before {
       right: 20px;
       left: auto;
     }
@@ -1864,12 +1868,12 @@ hr {
   }
 
   @media (max-width: 767.98px) {
-    .navbar-nav .nav-link {
+    .main-content .navbar-nav .nav-link {
       padding: .625rem 0;
       color: #172b4d !important;
     }
 
-    .navbar-nav .dropdown-menu {
+    .main-content .navbar-nav .dropdown-menu {
       min-width: auto;
       box-shadow: none;
     }
@@ -1946,6 +1950,6 @@ hr {
     }
   }
 
-  #navbar .navbar {
+  #navbar .main-content .navbar {
     margin-bottom: 20px;
   }

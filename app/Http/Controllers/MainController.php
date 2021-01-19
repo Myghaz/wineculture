@@ -61,6 +61,9 @@ class MainController extends Controller
         return view('paginas.frontend.contactos', compact('mensagens', 'totalmensagens'));
     }
     public function perfil() {
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        } else {
         $blogs = Blog::where('id_user', '=', Auth::user()->id)->count();
         $receitas = receitas::where('id_user', '=', Auth::user()->id)->count();
 
@@ -68,6 +71,7 @@ class MainController extends Controller
             'blogs',
             'receitas'
         ]));
+        }
     }
     public function pdp() {
         return view('paginas.frontend.pdp');
