@@ -842,10 +842,19 @@ section {
 
 
 .team {
+    height: fit-content;
+    width: 90%;
     margin: auto auto;
+}
+.teamcontainer{
     width: 100%;
 }
 
+.team .row{
+    display: grid;
+    grid-template-columns: repeat(5, 0.5fr);
+    grid-gap: 10px;
+}
 
 .team .member {
     text-align: center;
@@ -921,8 +930,30 @@ section {
     margin: 0 2px;
 }
 
+
+@media (max-width: 1680px) {
+    .team .row{
+        grid-template-columns: repeat(4, 0.5fr);
+    }
+}
+@media (max-width: 1350px) {
+    .team .row{
+        grid-template-columns: repeat(3, 0.5fr);
+    }
+}
 @media (max-width: 992px) {
     .team .member {
         margin-bottom: 100px;
     }
+    .team .row{
+        grid-template-columns: repeat(2, 0.5fr);
+    }
+}
+@media (max-width: 852px) {
+    .team .row{ 
+        grid-template-columns: repeat(1, 0.5fr);
+        justify-content: center;
+  align-items: center;
+    }
+    
 }

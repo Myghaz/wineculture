@@ -54,13 +54,9 @@
     left: 29%
 }
 
-#txt1,
-#txt2,
-#txt3,
-#txt4,
-#txt5 {
+p.header, p.header, p.header, p.header{
     color: white;
-    font-size: 20px
+    font-size: 20pt
 }
 
 .link {
@@ -119,6 +115,9 @@
     left: 78%;
     width: 14%;
     height: 280px
+}
+#subscribe i{
+    font-size: 16pt;
 }
 
 #email {
@@ -198,12 +197,8 @@
         position: relative;
         left: 3%
     }
-    #txt1,
-    #txt2,
-    #txt3,
-    #txt4,
-    #txt5 {
-        font-size: 15px
+    p.header, p.header, p.header, p.header{
+        font-size: 11pt
     }
     #explore {
         position: relative;
@@ -239,7 +234,7 @@
         width: 20%
     }
     #txt5,
-    .social {
+    footer.social {
         position: relative;
         left: -110%;
         top: px

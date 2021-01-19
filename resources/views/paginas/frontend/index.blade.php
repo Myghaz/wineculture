@@ -362,7 +362,7 @@
 
     <!-- ======= Our Team Section ======= -->
     <section id="team" class="team">
-        <div class="container">
+        <div class="teamcontainer">
 
             <div class="section-title">
                 <h2>Nossa Equipa</h2>
@@ -371,7 +371,7 @@
 
             <div class="row">
 
-                <div class="col-xl-3 col-lg-4 col-md-6 " data-aos="fade-up">
+                <div data-aos="fade-up">
                     <div class="member">
                         <div class="pic"><img src="/assets/img/paginas/frontend/index/team/team-1.jpg" width="300" height="300" alt=""></div>
                         <div class="member-info">
@@ -387,8 +387,8 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 " data-aos="fade-up" data-aos-delay="100 ">
-                    <div class="member ">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
                         <div class="pic "><img src="/assets/img/paginas/frontend/index/team/team-2.jpg " width="300" height="300" alt=" "></div>
                         <div class="member-info ">
                             <h4>Guilherme Meireles</h4>
@@ -403,8 +403,8 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 " data-aos="fade-up " data-aos-delay="200 ">
-                    <div class="member ">
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="member">
                         <div class="pic ">
                             <img src="/assets/img/paginas/frontend/index/team/team-3.jpg " width="300" height="300" alt=" ">
                         </div>
@@ -421,8 +421,8 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 " data-aos="fade-up " data-aos-delay="300 ">
-                    <div class="member ">
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="member">
                         <div class="pic "><img src="/assets/img/paginas/frontend/index/team/team-4.jpg " width="300" height="300" alt=" "></div>
                         <div class="member-info ">
                             <h4>Miguel Pereira</h4>
@@ -437,8 +437,8 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 " data-aos="fade-up " data-aos-delay="300 ">
-                    <div class="member ">
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="member">
                         <div class="pic "><img src="/assets/img/paginas/frontend/index/team/team-5.jpg " width="300" height="300" alt=" "></div>
                         <div class="member-info ">
                             <h4>Pedro Monteiro</h4>
