@@ -41,4 +41,5 @@
 @section("javascript")
 <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.js') }}"></script>
 <script src="{{ URL::asset('assets/js/paginas/frontend/sobre.js') }}"></script>
+
 @endsection
