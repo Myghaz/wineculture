@@ -9,3 +9,10 @@ $( "#navbar" ).click(function() {
   $( "#imgnav" ).click(function() {
     window.location.href = "/";
   });
+
+  function test(){
+    window.location="/";
+  }
+  function test2(){
+    window.location="/contactos";
+  }

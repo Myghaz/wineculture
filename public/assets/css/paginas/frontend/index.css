@@ -1,16 +1,17 @@
-html{
+html {
     --background: #FFF;
     --color: #666;
-    --acolor:#343a40;
+    --acolor: #343a40;
     --services-a-color: #444;
     --h2color: #742f37;
 
-	
+
 }
-.theme-dark  {
-	--background: #212121;
+
+.theme-dark {
+    --background: #212121;
     --color: #fff;
-    --acolor:#fff;
+    --acolor: #fff;
     --services-a-color: #fff;
     --h2color: #fff;
 }
@@ -21,9 +22,9 @@ body {
     color: #444;
     overflow-x: hidden;
     background-image: url("/assets/img/paginas/frontend/back.jpg");
-    background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 a {
@@ -82,12 +83,23 @@ h6,
 # Hero Section
 --------------------------------------------------------------*/
 
+
 #hero {
     width: 100%;
     height: calc(100vh - 114px);
     padding: 0;
     margin-top: -20px;
-   
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 #hero .carousel-item {
@@ -98,7 +110,7 @@ h6,
     background-repeat: no-repeat;
     overflow: hidden;
     overflow: hidden;
-   
+
 }
 
 #hero .carousel-item::before {
@@ -131,10 +143,12 @@ h6,
 }
 
 @media (max-width: 992px) {
+
     #hero,
     #hero .carousel-item {
         height: calc(100vh - 70px);
     }
+
     #hero .carousel-content.container {
         padding: 0 50px;
     }
@@ -230,6 +244,7 @@ h6,
     #hero p {
         width: 60%;
     }
+
     #hero .carousel-control-prev,
     #hero .carousel-control-next {
         width: 5%;
@@ -249,7 +264,7 @@ section {
 .section-title {
     text-align: center;
     padding-bottom: 30px;
-    color: var(--h2color)!important;
+    color: var(--h2color) !important;
 }
 
 .section-title h2.serviços {
@@ -257,13 +272,13 @@ section {
     font-weight: 600;
     margin-bottom: 20px;
     padding-bottom: 0;
-    color: var(--h2color)!important;
+    color: var(--h2color) !important;
     transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .section-title p {
     margin-bottom: 0;
-    color: var(--h2color)!important;
+    color: var(--h2color) !important;
     transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
     z-index: 20;
 }
@@ -308,9 +323,11 @@ section {
     .breadcrumbs .d-flex {
         display: block !important;
     }
+
     .breadcrumbs ol {
         display: block;
     }
+
     .breadcrumbs ol li {
         display: inline-block;
     }
@@ -481,6 +498,7 @@ section {
         transform: scale(0.6, 0.6);
         opacity: 1;
     }
+
     100% {
         transform: scale(1, 1);
         opacity: 0;
@@ -492,6 +510,7 @@ section {
         transform: scale(0.6, 0.6);
         opacity: 1;
     }
+
     100% {
         transform: scale(1, 1);
         opacity: 0;
@@ -852,6 +871,7 @@ section {
     .portfolio-details .portfolio-description h2 {
         width: 100%;
     }
+
     .portfolio-details .portfolio-info {
         position: static;
         margin-top: 30px;

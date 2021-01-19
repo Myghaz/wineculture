@@ -1,3 +1,4 @@
+
 $(".log-in").click(function () {
     $(".signIn").addClass("active-dx");
     $(".signUp").addClass("inactive-sx");
