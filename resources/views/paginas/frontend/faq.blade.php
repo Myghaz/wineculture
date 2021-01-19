@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div>
+    <div class="bannerrrr">
         <img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/faq-banner.jpg') }}" alt="banner">
     </div>
     <div class="container-fluid">
