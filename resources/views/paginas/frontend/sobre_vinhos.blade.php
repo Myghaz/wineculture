@@ -32,7 +32,7 @@
                             <div class="oneTxt">
                                 <div class="hero-image1">
                                     <div class="hero-text">
-                                        <h1 style="font-size:50px">História do vinho</h1>
+                                        <h1>História do vinho</h1>
                                     </div>
                                 </div>
                                 <br>
