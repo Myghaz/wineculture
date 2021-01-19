@@ -11,7 +11,7 @@
 
 <div class="container mt-5 mb-5">
   <div class="pro-img-details">
-    <img src="\storage\vinhos\{{$vinho_det->img}}" style="background-size: cover; width: 300px; height:300px" alt="{{$vinho_det->nome}}">
+    <img src="\storage\vinhos\{{$vinho_det->img}}" class="vinhoproduto_img" alt="{{$vinho_det->nome}}">
   </div>
 
   <div class="mt-2">
@@ -33,8 +33,9 @@
         </a></span>
     </div>
     <div class="product_meta2">
-      <span class="posted_in"><strong>Percentagem Álcool: </strong>23%</span>
-      <span class="posted_in"><strong>Quantidade CL: </strong>75CL</span>
+      <span class="posted_in"><strong>Percentagem Álcool: </strong>{{$vinho_det->perct_alco}}%</span>
+      <span class="posted_in"><strong>Quantidade CL: </strong>{{$vinho_det->qnt_cl}}
+	   CL</span>
     </div>
     <div class="m-bot15">
       <strong>Preço :</strong>

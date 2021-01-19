@@ -24,6 +24,8 @@ class CreateVinhosTable extends Migration
             $table->integer('stock');
             $table->string('pais');
             $table->string('regiao');
+			$table->integer('qnt_cl');
+			$table->integer('perct_alco');
             $table->foreign('id_categoria')
             ->references('id')->on('category_wines');
             $table->foreign('id_produtor')
