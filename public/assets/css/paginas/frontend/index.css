@@ -4,8 +4,6 @@ html {
     --acolor: #343a40;
     --services-a-color: #444;
     --h2color: #742f37;
-
-
 }
 
 .theme-dark {
@@ -15,7 +13,6 @@ html {
     --services-a-color: #fff;
     --h2color: #fff;
 }
-
 
 body {
     font-family: "Open Sans", sans-serif;
@@ -46,6 +43,43 @@ h6,
     font-family: "Raleway", sans-serif;
 }
 
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    right: 15px;
+    bottom: 15px;
+    background: #742f37;
+    color: #fff;
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
+}
+
+.back-to-top i {
+    font-size: 24px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.back-to-top:hover {
+    color: #fff;
+    background: #b30000;
+    transition: background 0.2s ease-in-out;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
 #hero {
     width: 100%;
     height: calc(100vh - 114px);
@@ -58,7 +92,6 @@ h6,
     0% {
         transform: translateX(-100%);
     }
-
     100% {
         transform: translateX(0);
     }
@@ -72,7 +105,6 @@ h6,
     background-repeat: no-repeat;
     overflow: hidden;
     overflow: hidden;
-
 }
 
 #hero .carousel-item::before {
@@ -105,12 +137,10 @@ h6,
 }
 
 @media (max-width: 992px) {
-
     #hero,
     #hero .carousel-item {
         height: calc(100vh - 70px);
     }
-
     #hero .carousel-content.container {
         padding: 0 50px;
     }
@@ -206,7 +236,6 @@ h6,
     #hero p {
         width: 60%;
     }
-
     #hero .carousel-control-prev,
     #hero .carousel-control-next {
         width: 5%;
@@ -221,7 +250,6 @@ h6,
 section {
     padding: 60px 0;
 }
-
 
 .section-title {
     text-align: center;
@@ -285,11 +313,9 @@ section {
     .breadcrumbs .d-flex {
         display: block !important;
     }
-
     .breadcrumbs ol {
         display: block;
     }
-
     .breadcrumbs ol li {
         display: inline-block;
     }
@@ -460,7 +486,6 @@ section {
         transform: scale(0.6, 0.6);
         opacity: 1;
     }
-
     100% {
         transform: scale(1, 1);
         opacity: 0;
@@ -472,7 +497,6 @@ section {
         transform: scale(0.6, 0.6);
         opacity: 1;
     }
-
     100% {
         transform: scale(1, 1);
         opacity: 0;
@@ -833,13 +857,11 @@ section {
     .portfolio-details .portfolio-description h2 {
         width: 100%;
     }
-
     .portfolio-details .portfolio-info {
         position: static;
         margin-top: 30px;
     }
 }
-
 
 .team {
     height: fit-content;
