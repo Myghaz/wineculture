@@ -3,6 +3,7 @@
 @section('title', 'Receitas')
 
 @section("links")
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/icofont/icofont.min.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/index.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/receitas.css') }}">
 @endsection
