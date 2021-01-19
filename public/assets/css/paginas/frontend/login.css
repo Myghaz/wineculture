@@ -55,7 +55,7 @@ html {
     margin-bottom: 150px;
 }
 
-form {
+.forms form {
     position: absolute;
     text-align: center;
     background: var(--background);
