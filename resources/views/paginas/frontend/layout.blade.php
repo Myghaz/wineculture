@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <title>@yield("title")</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -9,8 +10,8 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/settings.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     @yield("links")
-    
-   
+
+
 
     <link rel="shortcut icon" href="{{ URL::to('/') }}/favicon.ico" type="image/x-icon">
     <link rel="icon" href="{{ URL::to('/') }}/favicon.ico" type="image/x-icon">
@@ -24,11 +25,12 @@
     @include('includes.frontend.settings')
 
     @yield("content")
-
-    @include('includes.frontend.footer')
-
+    <footer>
+        @include('includes.frontend.footer')
+    </footer>
     <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
     @yield("javascript")
 </body>
+
 </html>

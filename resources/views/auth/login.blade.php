@@ -11,7 +11,6 @@
 @endsection
 
 @section("content")
-
 <div class="backimg">
     <div class="forms">
         <form class="signIn" method="POST" action="{{ route('login') }}">
