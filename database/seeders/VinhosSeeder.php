@@ -24,6 +24,8 @@ class VinhosSeeder extends Seeder
             'stock'  => 5,
             'pais'  => "Portugal",
             'regiao'  => "Alentejo",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
         ]);
         Vinhos::create([
             'nome' => '1984 Mouchão tinto',
@@ -35,6 +37,8 @@ class VinhosSeeder extends Seeder
             'stock'  => 5,
             'pais'  => "Portugal",
             'regiao'  => "Alentejo",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
         ]);
         Vinhos::create([
             'nome' => '2003 Mouchão Colheitas Antigas tinto 1,5L',
@@ -46,6 +50,8 @@ class VinhosSeeder extends Seeder
             'stock'  => 5,
             'pais'  => "Portugal",
             'regiao'  => "Alentejo",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
         ]);
         Vinhos::create([
             'nome' => '2019 Herdade dos Grous Moon Harvest tinto',
@@ -57,6 +63,86 @@ class VinhosSeeder extends Seeder
             'stock'  => 5,
             'pais'  => "Portugal",
             'regiao'  => "Alentejo",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
+        ]);
+		Vinhos::create([
+            'nome' => '2019 Quinta da Alorna Touriga Nacional rosé',//done
+            'id_categoria' => 3,
+            'id_produtor' => 18,
+            'img' => '1.jpg',
+            'descricao'  => "A Quinta da Alorna nasceu em 1723, mais tarde D. Pedro de Almeida, o I Marquês de Alorna, após ter liderado a conquista da praça-forte de Alorna na Índia, conferiu à propriedade o nome que hoje tem. Na margem do Rio Tejo e com a entrada marcada por uma árvore magnífica e rara no mundo, conhecida por bela sombra, a Quinta da Alorna destaca-se não só pela qualidade dos vinhos que produz como também pelos seus espaços naturais. Os vinhos da Quinta da Alorna são feitos a partir de uma seleção das melhores castas e produzidos com recurso às novas tecnologias de vinificação.",
+            'preco' => 5.60,
+            'stock'  => 5,
+            'pais'  => "Portugal",
+            'regiao'  => "Tejo",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
+        ]);
+		Vinhos::create([
+            'nome' => '2019 Lavradores de Feitoria rosé	',
+            'id_categoria' => 3,
+            'id_produtor' => 18,
+            'img' => '4.jpg',
+            'descricao'  => "Todos os vinhos da Lavradores de Feitoria – desde o grande consumo até à grande guarda – são equilibrados, elegantes e orientados para a boa gastronomia, mas sempre com um cunho do carácter do Douro. Deve esperar-se, e exigir-se, a personalidade forte de cada marca enquanto expressão de terroir, de conceito, ou mesmo de fantasia.",
+            'preco' => 3.95,
+            'stock'  => 5,
+            'pais'  => "Portugal",
+            'regiao'  => "Douro",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
+        ]);
+		Vinhos::create([
+            'nome' => '2019 Herdade dos Grous Moon Harvest tinto',
+            'id_categoria' => 3,
+            'id_produtor' => 18,
+            'img' => '4.jpg',
+            'descricao'  => "Criada de raiz na paisagem Alentejana encontra-se a Herdade dos Grous. Em Albernoa, a 17 quilómetros de Beja, a Herdade dos Grous reúne a produção de vinho, agro-pecuária, turismo rural e enoturismo. O Alentejo, a maior província em Portugal, guarda consigo o charme tradicional português e a herança Moura, evidente em toda a sua arquitetura. O clima Continental de influências mediterrânicas oferece condições ideias para a produção de grandes vinhos e de produtos regionais de altíssima qualidade.",
+            'preco' => 26.00,
+            'stock'  => 5,
+            'pais'  => "Portugal",
+            'regiao'  => "Alentejo",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
+        ]);
+		Vinhos::create([
+            'nome' => '2019 Herdade dos Grous Moon Harvest tinto',
+            'id_categoria' => 1,
+            'id_produtor' => 18,
+            'img' => '4.jpg',
+            'descricao'  => "Criada de raiz na paisagem Alentejana encontra-se a Herdade dos Grous. Em Albernoa, a 17 quilómetros de Beja, a Herdade dos Grous reúne a produção de vinho, agro-pecuária, turismo rural e enoturismo. O Alentejo, a maior província em Portugal, guarda consigo o charme tradicional português e a herança Moura, evidente em toda a sua arquitetura. O clima Continental de influências mediterrânicas oferece condições ideias para a produção de grandes vinhos e de produtos regionais de altíssima qualidade.",
+            'preco' => 26.00,
+            'stock'  => 5,
+            'pais'  => "Portugal",
+            'regiao'  => "Alentejo",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
+        ]);
+		Vinhos::create([
+            'nome' => '2019 Herdade dos Grous Moon Harvest tinto',
+            'id_categoria' => 1,
+            'id_produtor' => 18,
+            'img' => '4.jpg',
+            'descricao'  => "Criada de raiz na paisagem Alentejana encontra-se a Herdade dos Grous. Em Albernoa, a 17 quilómetros de Beja, a Herdade dos Grous reúne a produção de vinho, agro-pecuária, turismo rural e enoturismo. O Alentejo, a maior província em Portugal, guarda consigo o charme tradicional português e a herança Moura, evidente em toda a sua arquitetura. O clima Continental de influências mediterrânicas oferece condições ideias para a produção de grandes vinhos e de produtos regionais de altíssima qualidade.",
+            'preco' => 26.00,
+            'stock'  => 5,
+            'pais'  => "Portugal",
+            'regiao'  => "Alentejo",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
+        ]);
+		Vinhos::create([
+            'nome' => '2019 Herdade dos Grous Moon Harvest tinto',
+            'id_categoria' => 1,
+            'id_produtor' => 18,
+            'img' => '4.jpg',
+            'descricao'  => "Criada de raiz na paisagem Alentejana encontra-se a Herdade dos Grous. Em Albernoa, a 17 quilómetros de Beja, a Herdade dos Grous reúne a produção de vinho, agro-pecuária, turismo rural e enoturismo. O Alentejo, a maior província em Portugal, guarda consigo o charme tradicional português e a herança Moura, evidente em toda a sua arquitetura. O clima Continental de influências mediterrânicas oferece condições ideias para a produção de grandes vinhos e de produtos regionais de altíssima qualidade.",
+            'preco' => 26.00,
+            'stock'  => 5,
+            'pais'  => "Portugal",
+            'regiao'  => "Alentejo",
+			'qnt_cl'  => 75,
+			'perct_alco'  => 23,
         ]);
     }
 }
