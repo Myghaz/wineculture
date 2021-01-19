@@ -4,6 +4,7 @@
 <head>
     <title>@yield("title")</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/icofont/icofont.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/footer.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/navbar.css') }}">
@@ -32,5 +33,20 @@
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
     @yield("javascript")
 </body>
+<script>
+    $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.back-to-top').fadeIn('slow');
+    } else {
+      $('.back-to-top').fadeOut('slow');
+    }
+  });
 
+  $('.back-to-top').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500, 'easeInOutExpo');
+    return false;
+  });
+</script>
 </html>
