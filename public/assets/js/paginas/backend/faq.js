@@ -126,13 +126,21 @@ $(document).ready(function () {
             type: "portugues",
             targets: [0, 1, 2, 3],
             "targets": [3],
-            "orderable": false
+            "orderable": false,
+            targets:  [0, 1],
+            render: function (data, type) {
+                return type === 'display' && data.length > 50 ? data.substr(0,50) + '…' : data;
+            }
         }],
         columnDefs: [{
             type: "locale-compare",
             targets: [0, 1, 2, 3],
             "targets": [3],
-            "orderable": false
+            "orderable": false,
+            targets:  [0, 1],
+        render: function (data, type) {
+            return type === 'display' && data.length > 50 ? data.substr(0,50) + '…' : data;
+        }
         }]
     });
 });

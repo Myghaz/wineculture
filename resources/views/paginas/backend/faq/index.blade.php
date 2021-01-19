@@ -42,30 +42,16 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($perguntas as $pergunta)
-                                        <tr>
-                                            <td>
-                                                <a class="text-dark" href="">{{ $pergunta->pergunta }}</a>
-                                            </td>
-                                            <td>
-                                                <a class="text-dark" href="">{!! $pergunta->resposta !!}</a>
-                                            </td>
-                                            <td class="d-none d-lg-table-cell">{{ $pergunta->categoria }}</td>
-                                            <td class="acoes">
-                                                <a href="{{ route('faq.show', ['pergunta' => $pergunta]) }}"
-                                                    class="btn btn-xs btn-primary btn-p"><i
-                                                        class="fas fa-eye fa-xs"></i></a>
-                                                <a href="{{ route('faq.edit', $pergunta) }}"
-                                                    class="btn btn-xs btn-warning btn-p"><i
-                                                        class="fas fa-pen fa-xs"></i></a>
-
-                                                <button type="button" class="btn btn-xs btn-danger btn-p"
-                                                    data-toggle="modal" data-target="#deleteConfirmModal"
-                                                    data-route="{{ route('faq.destroy', $pergunta) }}"><i
-                                                        class="fas fa-trash fa-xs" data-toggle="tooltip"
-                                                        data-placement="top" title="Eliminar"></i></button>
-
-                                            </td>
-                                        </tr>
+                                    <tr  id="trv" onclick="window.location.href = '{{ route('faq.show', ['pergunta' => $pergunta])}}';">
+                                    <td>{{$pergunta->pergunta }}</td>
+                                    <td>{{$pergunta->resposta }}</td>
+                                    <td>{{$pergunta->categoria }}</a></td>
+                                    <td class="acoes">
+                                        <a href="{{ route('faq.show', ['pergunta' => $pergunta]) }}" class="btn btn-xs btn-success btn-p"><i class="fas fa-eye fa-xs"></i></a>
+                                        <a href="{{ route('faq.edit', $pergunta) }}" class="btn btn-xs btn-warning btn-p"><i class="fas fa-pen fa-xs"></i></a>
+                                        <button type="button" class="btn btn-xs btn-danger btn-p" data-toggle="modal" data-target="#deleteConfirmModal" data-route="{{ route('faq.destroy', $pergunta) }}"><i class="fas fa-trash fa-xs" data-toggle="tooltip" data-placement="top" title="Eliminar"></i></button>
+                                    </td>
+                                </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -75,8 +61,6 @@
             </div>
         </div>
         <script src="{{ asset('assets\js\paginas\backend\faq.js') }}"></script>
-
-
         <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog"
             aria-labelledby="deleteConfirmModalTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">

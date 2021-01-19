@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-
+use App\Models\User;
 
 class Blog extends Model
 {
@@ -18,13 +18,16 @@ class Blog extends Model
      */
     protected $fillable = [
         'titulo',
-        'autor',
+        'id_user',
         'categoria',
         'data',
         'preview',
         'descricao',
         'img',
     ];
+    public function user(){
+        return $this->belongsTo(User::class, 'id_user');
+    }
     /**
      * The attributes that should be cast to native types.
      *

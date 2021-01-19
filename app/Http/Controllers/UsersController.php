@@ -83,7 +83,7 @@ class UsersController extends Controller
     public function user_destroy(user $user)
     {
         $user->delete();
-        return redirect()->route('admin_users');
+        return redirect()->route('users.index');
     }
 
     /**

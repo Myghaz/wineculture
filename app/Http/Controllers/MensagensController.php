@@ -19,7 +19,7 @@ class MensagensController extends Controller
         $totalmensagens = Contactos::all('id')->count();
         return view('paginas.frontend.contactos', compact('mensagens', 'totalmensagens'));
     }
-    public function mensagens()
+    public function index()
     {
         $mensagens = Contactos::all();
         $totalmensagens = Contactos::all('id')->count();
