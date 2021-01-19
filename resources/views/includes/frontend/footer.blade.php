@@ -8,11 +8,11 @@
                 <p id="detail">We create awesome code snippets that will help you in creating your own beautiful site. </p>
             </div>
             <div id="explore">
-                <p id="txt1">Explore</p>
-                <a class="link" href="/">Página Principal</a>
-                <a class="link" href="/sobre">Sobre Nós</a>
-                <a class="link" href="/receitas">Receitas</a>
-                <a class="link" href="/blog">Notícias</a>
+                <p id="txt2">Visit</p>
+                <p class="footer_text"><a href="/">Página Principal</a></p>
+                <p class="footer_text"><a href="/sobre">Sobre Nós</a></p>
+                <p class="footer_text"><a href="/receitas">Loja</a></p>
+                <p class="footer_text"><a href="/blog">Receitas</a></p>
             </div>
             <div id="visit">
                 <p id="txt2">Visit</p>
@@ -25,8 +25,8 @@
             </div>
             <div id="legal">
                 <p id="txt3">Legal</p>
-                <a class="link1" href="#">Termos e Condições</a>
-                <a class="link1" href="/politica_de_privacidade">Politica de Privacidade</a>
+                <p class="footer_text"><a href="#">Termos e Condições</a></p>
+                <p class="footer_text"><a href="/politica_de_privacidade">Politica de Privacidade</a></p>
             </div>
             <div id="subscribe">
                 <p id="txt4">Subscribe to US</p>
