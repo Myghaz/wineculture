@@ -5,10 +5,10 @@ html{
     --btn-color: #fff;
 	--inputs: #fff;
     --placeholder: rgb(107, 107, 107);
-  
+
 }
 .theme-dark  {
-    --background: #212121;  
+    --background: #212121;
     --color: #FFF;
     --btn-background:black;
     --btn-color: #fff;
@@ -17,8 +17,8 @@ html{
 }
 
 .container{
-    margin-top: 110px;
-    margin-bottom: 100px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     animation: 0.5s ease-out 0s 1 slideInFromLeft;
 }
 @keyframes slideInFromLeft {
@@ -48,16 +48,13 @@ html{
     color:  var(--color);
     transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
-span {
-    display: none;
-    color: red;
-}
+
 input.form-control, textarea.form-control{
     background-color: var(--inputs);
     color: var(--color);
     transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
-::placeholder { 
+::placeholder {
 	color: var(--placeholder);
 	transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
   }

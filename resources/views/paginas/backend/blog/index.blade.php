@@ -8,7 +8,7 @@
 
 
     <div class="row">
-      @if (count($post))
+      @if (count($blogs))
       <div class="col-12">
         <!-- Recent Order Table -->
         <div class="card card-table-border-none" id="recent-orders">
@@ -29,19 +29,15 @@
               </thead>
               <tbody>
                 <tr>
-                  @foreach($post as $value)
+                  @foreach($blogs as $blog)
                   <td>
-                    <a class="text-dark" href="">{{$value->titulo}}</a>
+                    <a class="text-dark" href="">{{$blog->titulo}}</a>
                   </td>
-                  @foreach($users as $user)
-                  @if ($user->id == $value->id_user)
-                  <td class="d-none d-lg-table-cell">{{$user->name}} {{$user->apelido}}</td>
-                  @endif
-                  @endforeach
-                  <td class="d-none d-lg-table-cell">{{$value->data}}</td>
-                  <td class="d-none d-lg-table-cell"><a href="{{ route('showBlog', $value) }}" class="btn btn-primary">Ver</a></td>
-                  <td class="d-none d-lg-table-cell"><a href="{{ route('editblog', $value) }}" class="btn btn-primary">Editar</a</td> @csrf @method("DELETE") <td class="d-none d-lg-table-cell">
-                      <form action="{{ route('destroy.blog', $value) }}" method="post">
+                  <td class="d-none d-lg-table-cell">{{$blog->user->name}} {{$blog->user->apelido}}</td>
+                  <td class="d-none d-lg-table-cell">{{$blog->data}}</td>
+                  <td class="d-none d-lg-table-cell"><a href="{{ route('blog.show', $blog) }}" class="btn btn-primary">Ver</a></td>
+                  <td class="d-none d-lg-table-cell"><a href="{{ route('blog.edit', $blog) }}" class="btn btn-primary">Editar</a</td> @csrf @method("DELETE") <td class="d-none d-lg-table-cell">
+                      <form action="{{ route('blog.destroy', $blog) }}" method="post">
                         @method('DELETE')
                         @csrf
                         <input class="btn btn-danger" type="submit" value="Delete" />
@@ -52,9 +48,6 @@
                 @endforeach
               </tbody>
             </table>
-            <div class="paginator">
-              {{$post->links()}}
-            </div>
           </div>
         </div>
       </div>

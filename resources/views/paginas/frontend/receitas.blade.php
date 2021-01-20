@@ -9,14 +9,15 @@
 @endsection
 
 @section("content")
-<img src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
-
+<div class="imgbanner_div">
+<img class="imgbanner" src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
+</div>
 <div class="container">
     <br>
     <div class="row portfolio">
         <div class="col-lg-12">
             <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">Todos</li>
+                <li data-filter="" class="filter-active">Todos</li>
                 @foreach ($category_wines as $category_wine)
                 <li data-filter=".receitas-{{$category_wine->id}}">{{$category_wine->nome}}</li>
                 @endforeach
@@ -52,9 +53,9 @@
 @endsection
 
 @section("javascript")
-<script src="{{ URL::asset('assets/css/paginas/frontend/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
-<script src="{{ URL::asset('assets/css/paginas/frontend/vendor/venobox/venobox.min.js') }}"></script>
-<script src="{{ URL::asset('assets/css/paginas/frontend/vendor/counterup/counterup.min.js') }}"></script>
-<script src="{{ URL::asset('assets/css/paginas/frontend/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-<script src="{{ URL::asset('assets/js/paginas/frontend/index.js') }}"></script>
+<script src="{{asset('assets/css/paginas/frontend/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
+<script src="{{asset('assets/css/paginas/frontend/vendor/venobox/venobox.min.js') }}"></script>
+<script src="{{asset('assets/css/paginas/frontend/vendor/counterup/counterup.min.js') }}"></script>
+<script src="{{asset('assets/css/paginas/frontend/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{asset('assets/js/paginas/frontend/index.js') }}"></script>
 @endsection

@@ -6,7 +6,7 @@
   <div class="content">
     <h2>Ver post com ID {{$blog->id}}</h2>
     <br>
-    <form action="{{route('showBlog', $blog)}}" method="POST">
+    <form action="{{route('blog.index', $blog)}}" method="POST">
       {{csrf_field()}}
       @if (session('status'))
       <div class=”alert alert-success”>
@@ -59,14 +59,14 @@
     </form>
 
 
-    <a style="float:left; margin-right:10px" href="{{ route('editblog', $blog) }}" class="btn btn-primary">Editar</a>
+    <a style="float:left; margin-right:10px" href="{{ route('blog.edit', $blog) }}" class="btn btn-primary">Editar</a>
 
 
 
     @csrf
     @method("DELETE")
 
-    <form action="{{ route('destroy.blog', $blog) }}" method="post">
+    <form action="{{ route('blog.destroy', $blog) }}" method="post">
       @method('DELETE')
       @csrf
       <input class="btn btn-danger" type="submit" value="Delete" />

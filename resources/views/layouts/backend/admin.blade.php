@@ -35,7 +35,7 @@
     <link src="{{ asset('public\assets\css\paginas\backend\blog.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" />
-   
+
 
     <link rel="stylesheet" href="{{ URL::asset('assets/css/layouts/backend/admin.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/backend/dashboard.css') }}">
@@ -77,53 +77,27 @@
                 <div class="sidebar-scrollbar">
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
-                        <li @if (Route::currentRouteName() == 'admin_dashboard')
-                        class="has-sub active expand" @else class="has-sub" @endif>
+                        <li @if (Route::currentRouteName() == 'admin_dashboard') class="has-sub active expand" @else class="has-sub" @endif>
                             <a href="{{ route('admin_dashboard') }}" class="sidenav-item-link"> <i
                                     class="mdi mdi-view-dashboard-outline"></i>
                                 <span class="nav-text">Dashboard</span>
                             </a>
                         </li>
-                        <li @if (Route::currentRouteName() == 'admin_users')
-                        class="has-sub active expand" @else class="has-sub" @endif>
-                            <a href="{{ route('admin_users') }}" class="sidenav-item-link"> <i
+                        <li @if (Route::currentRouteName() == 'users.index') class="has-sub active expand" @else class="has-sub" @endif>
+                            <a href="{{ route('users.index') }}" class="sidenav-item-link"> <i
                                     class="mdi mdi-account-multiple-outline"></i>
                                 <span class="nav-text">Utilizadores</span>
                             </a>
                         </li>
                         <!-- Blog Menu -->
-                        <li @if (Route::currentRouteName() == 'admin_blog')
-                        class="has-sub active expand" @else class="has-sub" @endif>
-                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                data-target="#app" aria-expanded="false" aria-controls="app">
-                                <i class="mdi mdi-pencil-box-multiple"></i>
-                                <span class="nav-text">Blog</span> <b class="caret"></b>
+                        <li @if (Route::currentRouteName() == 'blog.index') class="has-sub active expand" @else class="has-sub" @endif>
+                            <a class="sidenav-item-link"><i class="mdi mdi-pencil-box-multiple"></i><span
+                                    class="nav-text">Blog</span>
                             </a>
-                            <ul class="collapse" id="app" data-parent="#sidebar-menu">
-                                <div class="sub-menu">
-                                    <li>
-                                        <a class="sidenav-item-link" @if (Route::currentRouteName() == 'admin_blog') class="active"
-                                            @endif href="{{ route('admin_blog') }}">
-                                            <span class="nav-text">Data Table</span>
-
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a class="sidenav-item-link" @if (Route::currentRouteName() == 'blog.store') class="active"
-                                            @endif href="{{ route('blog.store') }}">
-                                            <span class="nav-text">Insert Info</span>
-
-                                        </a>
-                                    </li>
-
-                                </div>
-                            </ul>
                         </li>
                         <!-- End of Blog Menu -->
                         <!-- Receitas Menu -->
-                        <li @if (Route::currentRouteName() == 'admin_receitas')
-                        class="has-sub active expand" @else class="has-sub" @endif>
+                        <li @if (Route::currentRouteName() == 'admin_receitas') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#components" aria-expanded="false" aria-controls="components">
                                 <i class="mdi mdi-table"></i>
@@ -148,8 +122,7 @@
                         </li>
                         <!-- End of Receitas Menu -->
                         <!-- Receitas FAQ -->
-                        <li @if (Route::currentRouteName() == 'admin_faq')
-                        class="has-sub active expand" @else class="has-sub" @endif>
+                        <li @if (Route::currentRouteName() == 'admin_faq') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#icons" aria-expanded="false" aria-controls="icons">
                                 <i class="fas fa-question-circle"></i>
@@ -171,12 +144,26 @@
                             </ul>
                         </li>
                         <!-- End of FAQ Menu -->
-                        <!-- Receitas Contactos -->
-                        
+                        <!-- Contactos -->
+                        <li @if (Route::currentRouteName() == 'admin_contactos') class="has-sub active expand" @else class="has-sub" @endif>
+                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                                data-target="#contacto" aria-expanded="false" aria-controls="icons">
+                                <i class="fas fa-envelope"></i>
+                                <span class="nav-text">Contactos</span> <b class="caret"></b>
+                            </a>
+                            <ul class="collapse" id="contacto" data-parent="#sidebar-menu">
+                                <div class="sub-menu">
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('contactos.index') }}">
+                                            <span class="nav-text">Mensagens</span>
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
                         <!-- End of Contactos Menu -->
                         <!-- Vinhos -->
-                        <li @if (Route::currentRouteName() == 'admin_vinhos')
-                        class="has-sub active expand" @else class="has-sub" @endif>
+                        <li @if (Route::currentRouteName() == 'admin_vinhos') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#vinhos" aria-expanded="false" aria-controls="icons">
                                 <i class="mdi mdi-glass-tulip"></i>
@@ -190,7 +177,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="sidenav-item-link" href="{{ route('admin_insert_vinho') }}">
+                                        <a class="sidenav-item-link" href="{{ route('vinhos.create') }}">
                                             <span class="nav-text">Inserir Vinho</span>
                                         </a>
                                     </li>
@@ -333,7 +320,7 @@
             <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
             <script src="https://cdn.jsdelivr.net/mark.js/8.6.0/jquery.mark.min.js"></script>
             <script src="https://cdn.jsdelivr.net/datatables.mark.js/2.0.0/datatables.mark.min.js"></script>
-            
+
             <script src="{{ asset('assets\js\layouts\backend\admin.js') }}"></script>
 
             @if ($errors->any())

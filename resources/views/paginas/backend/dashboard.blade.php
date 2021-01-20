@@ -418,7 +418,7 @@
               {{ csrf_field() }}
               <input type="hidden" name="id_destino" value="{{$user->id}}">
               <input type="text" name="mensagem" class="form-control mb-3" placeholder="Escreva a sua resposta....">
-
+              <button id="btnenvio" class="btn btn-success btn-submit">Enviar</button>
             </form>
             @endif
             @endif

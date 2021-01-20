@@ -117,12 +117,12 @@ class ReceitasController extends Controller
         $fields = $request->validate(
             [
                 'nome' => 'required',
-                'foto' => 'required',
+               
                 'descricao' => 'required',
             ],
             [
                 'nome' => 'Campo nome não ficou preenchido',
-                'foto' => 'Campo foto não ficou preenchido',
+              
                 'descricao' => 'Campo descrição não ficou preenchido',
             ]
             );

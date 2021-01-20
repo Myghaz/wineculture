@@ -54,7 +54,7 @@ class FAQController extends Controller
         $pergunta = new Perguntas();
         $pergunta->fill($fields);
         $pergunta->save();
-        return redirect()->route('faq.index')->with('success', 'Pergunta adicionada com sucesso', compact('pergunta'));;
+        return redirect()->route('faq.index')->with('success', 'Pergunta adicionada com sucesso', compact('pergunta'));
     }
 
     /**
@@ -114,6 +114,7 @@ class FAQController extends Controller
      */
     public function destroy(Request $request, Perguntas $pergunta)
     {
+        @dd($pergunta);
         $pergunta->delete($pergunta);
         return redirect()->route('faq.index')->with('success', 'Pergunta removida com sucesso', compact('pergunta'));
     }
