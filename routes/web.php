@@ -42,13 +42,7 @@ Route::get('/receitas', [ReceitasController::class, 'indexFrontend'])->name('rec
 
 
 //MensagensController
-<<<<<<< Updated upstream
 Route::get('/contactos', [MensagensController::class, 'indexFrontend'])->name('contactos');
-=======
-Route::get('/contactos', [MensagensController::class, 'indexFrontend'])->name('contactos_frontend_store');
-
-Route::post('/contactos', [MensagensController::class, 'frontend_store'])->name('index_contactos_frontend');
->>>>>>> Stashed changes
 
 Route::post('/contactos', [MensagensController::class, 'frontend_store'])->name('contactos_frontend_store');
 
