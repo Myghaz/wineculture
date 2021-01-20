@@ -19,9 +19,9 @@ use App\Http\Controllers\ChatController;
 //BlogController
 Route::get('/', [MainController::class, 'index'])->name('index');
 
-Route::get('/sobre', [MainController::class, 'sobre'])->name('sobre_vinhos');
+Route::get('/sobre', [MainController::class, 'sobre'])->name('sobre');
 
-Route::get('/sobre_vinhos', [MainController::class, 'sobre_vinhos'])->name('sobre');
+Route::get('/sobre_vinhos', [MainController::class, 'sobre_vinhos'])->name('sobre_vinhos');
 
 Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 
@@ -42,9 +42,15 @@ Route::get('/receitas', [ReceitasController::class, 'indexFrontend'])->name('rec
 
 
 //MensagensController
-Route::get('/contactos', [MensagensController::class, 'indexFrontend'])->name('index_contactos_frontend');
+<<<<<<< Updated upstream
+Route::get('/contactos', [MensagensController::class, 'indexFrontend'])->name('contactos');
+=======
+Route::get('/contactos', [MensagensController::class, 'indexFrontend'])->name('contactos_frontend_store');
 
+Route::post('/contactos', [MensagensController::class, 'frontend_store'])->name('index_contactos_frontend');
+>>>>>>> Stashed changes
 
+Route::post('/contactos', [MensagensController::class, 'frontend_store'])->name('contactos_frontend_store');
 
 
 
@@ -94,8 +100,7 @@ Route::middleware('auth', 'verified')->prefix('admin')->group(function () {
 
         Route::resource('users', UsersController::class);
 
-
-        //FAZER Route::resource('contactos', MensagensController::class);
+        Route::resource('contactos', MensagensController::class);
 });
 
 

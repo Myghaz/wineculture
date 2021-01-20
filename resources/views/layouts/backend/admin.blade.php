@@ -125,8 +125,22 @@
                             </ul>
                         </li>
                         <!-- End of FAQ Menu -->
-                        <!-- Receitas Contactos -->
-
+                        <!-- Contactos -->
+                        <li @if (Route::currentRouteName()=='admin_contactos' ) class="has-sub active expand" @else class="has-sub" @endif>
+                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#contacto" aria-expanded="false" aria-controls="icons">
+                                <i class="fas fa-envelope"></i>
+                                <span class="nav-text">Contactos</span> <b class="caret"></b>
+                            </a>
+                            <ul class="collapse" id="contacto" data-parent="#sidebar-menu">
+                                <div class="sub-menu">
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('contactos.index') }}">
+                                            <span class="nav-text">Mensagens</span>
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
                         <!-- End of Contactos Menu -->
                         <!-- Vinhos -->
                         <li @if (Route::currentRouteName()=='admin_vinhos' ) class="has-sub active expand" @else class="has-sub" @endif>
