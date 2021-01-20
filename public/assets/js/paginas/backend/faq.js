@@ -103,8 +103,7 @@ $(document).ready(function() {
         mark: true,
         scrollCollapse: true,
         autoWidth: true,
-        columns: [            null,            null,            null,            {                orderable: false            }
-        ],
+        columns: [null, null, null, { orderable: false }],
         order: [[0, "asc"]],
         language: {
             emptyTable: "Não existem registos a apresentar",
@@ -127,8 +126,8 @@ $(document).ready(function() {
                 orderable: false,
                 targets: [0, 1],
                 render: function(data, type) {
-                    return type === "display" && data.length > 50
-                        ? data.substr(0, 50) + "…"
+                    return type === "display" && data.length > 10
+                        ? data.substr(0, 40) + "…"
                         : data;
                 }
             }
@@ -141,8 +140,8 @@ $(document).ready(function() {
                 orderable: false,
                 targets: [0, 1],
                 render: function(data, type) {
-                    return type === "display" && data.length > 50
-                        ? data.substr(0, 50) + "…"
+                    return type === "display" && data.length > 10
+                        ? data.substr(0, 40) + "…"
                         : data;
                 }
             }
