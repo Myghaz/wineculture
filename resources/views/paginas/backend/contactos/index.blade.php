@@ -35,16 +35,16 @@
                                 <tbody>
                                     @foreach ($mensagens as $mensagem)
                                         <tr id="trv">
-                                            <td class="d-none d-lg-table-cell">
+                                            <td class="tdhover">
                                                 {{ $mensagem->name }}
                                             </td>
-                                            <td class="d-none d-lg-table-cell">
+                                            <td class="tdhover">
                                                 {{ $mensagem->assunto }}
                                             </td>
-                                            <td class="d-none d-lg-table-cell">
+                                            <td class="tdhover">
                                                 {{ $mensagem->mensagem }}
                                             </td>
-                                            <td class="acoes">
+                                            <td class="tdhover">
                                                 <a href="" class="btn btn-xs btn-success btn-p"><i
                                                         class="fas fa-eye fa-xs"></i></a>
                                                 <button type="button" class="btn btn-xs btn-danger btn-p"
