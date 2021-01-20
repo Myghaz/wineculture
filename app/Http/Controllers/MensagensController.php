@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Contactos;
+use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Validated;
 
 class MensagensController extends Controller
@@ -19,6 +19,7 @@ class MensagensController extends Controller
         $totalmensagens = Contactos::all('id')->count();
         return view('paginas.frontend.contactos', compact('mensagens', 'totalmensagens'));
     }
+
     public function index()
     {
         $mensagens = Contactos::all();
@@ -47,15 +48,26 @@ class MensagensController extends Controller
         //
     }
 
-    public function frontend_store(Request $mensagens)
+    public function frontend_store(Request $request)
     {
+        $fields = $request->validate(
+            [
+                'name' => 'required',
+                'email' => 'required|email',
+                'assunto' => 'required',
+                'mensagem' => 'required'
+            ],
+            [
+                'pergunta' => 'Campo pergunta não ficou preenchido',
+                'categoria' => 'Campo categoria não ficou preenchido',
+                'assunto' => 'Campo resposta não ficou preenchido',
+                'mensagem' => 'Campo categoria não ficou preenchido'
+            ]
+        );
         $mensagem = new Contactos();
-        $mensagem->name = $mensagens["nome"];
-        $mensagem->email = $mensagens["email"];
-        $mensagem->assunto = $mensagens["assunto"];
-        $mensagem->mensagem = $mensagens["mensagem"];
+        $mensagem->fill($fields);
         $mensagem->save();
-        return redirect()->route('contactos');
+        return redirect()->route('contactos')->with('success', 'Dúvida enviada com sucesso', compact('mensagem'));
     }
 
     /**
@@ -98,8 +110,9 @@ class MensagensController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Contactos $mensagem)
     {
-        //
+        $mensagem->delete($mensagem);
+        return redirect()->route('contactos.index')->with('success', 'Mensagem removida com sucesso', compact('mensagem'));
     }
 }

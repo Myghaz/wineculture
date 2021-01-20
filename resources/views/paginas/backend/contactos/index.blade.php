@@ -27,20 +27,16 @@
                                 <thead>
                                     <tr>
                                         <th class="d-none d-lg-table-cell">Nome</th>
-                                        <th class="d-none d-lg-table-cell">Email</th>
                                         <th class="d-none d-lg-table-cell">Assunto</th>
                                         <th class="d-none d-lg-table-cell">Mensagem</th>
                                         <th class="d-none d-lg-table-cell">Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        @foreach ($mensagens as $mensagem)
+                                    @foreach ($mensagens as $mensagem)
+                                        <tr id="trv">
                                             <td class="d-none d-lg-table-cell">
                                                 {{ $mensagem->name }}
-                                            </td>
-                                            <td class="d-none d-lg-table-cell">
-                                                {{ $mensagem->email }}
                                             </td>
                                             <td class="d-none d-lg-table-cell">
                                                 {{ $mensagem->assunto }}
@@ -53,11 +49,11 @@
                                                         class="fas fa-eye fa-xs"></i></a>
                                                 <button type="button" class="btn btn-xs btn-danger btn-p"
                                                     data-toggle="modal" data-target="#deleteConfirmModal"
-                                                    data-route="{{ route('faq.destroy', $pergunta) }}"><i
+                                                    data-route="{{ route('contactos.destroy', $mensagem) }}"><i
                                                         class="fas fa-trash fa-xs" data-toggle="tooltip"
                                                         data-placement="top" title="Eliminar"></i></button>
                                             </td>
-                                    </tr>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -65,4 +61,43 @@
                     </div>
                 </div>
             </div>
-        @endsection
+        </div>
+    </div>
+    <script src="{{ asset('assets\js\paginas\backend\contactos.js') }}"></script>
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Eliminar registo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Tem a certeza que deseja eliminar este registo?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <form method="POST" action="#" role="form" class="inline" id="formDelete">
+                        @csrf
+                        @method("DELETE")
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //triggered when modal is about to be shown
+        $('#deleteConfirmModal').on('show.bs.modal', function(e) {
+
+            //get data-route attribute of the clicked element
+            var route = $(e.relatedTarget).data('route');
+
+            //populate the textbox
+            $('#formDelete').attr("action", route);
+        });
+
+    </script>
+@endsection

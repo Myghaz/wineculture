@@ -5,11 +5,13 @@
 div.dataTables_scrollBody {
     max-height: 4500px;
 }
-table #trv:hover {
+table #trv td.tdhover:hover {
     background: #873740;
     cursor: pointer;
 }
 
-table tbody>tr:hover td{
+table tbody>tr:hover td.tdhover{
     color: white!important;
+    background: #873740;
 }
+
