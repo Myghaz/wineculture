@@ -1,4 +1,9 @@
 let usersdata = [user_utl_12_total, user_utl_11_total, user_utl_10_total, user_utl_9_total, user_utl_8_total, user_utl_7_total, user_utl_6_total, user_utl_5_total, user_utl_4_total, user_utl_3_total, user_utl_2_total, user_utl_1_total];
+var canvas = document.getElementById("usersgrafico");
+var ctx = canvas.getContext("2d");
+var gradient = ctx.createLinearGradient(0, 0, 0, 100);
+gradient.addColorStop(0, 'red');
+gradient.addColorStop(1, '#873740');
 var monthName = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
 var d = new Date();
 d.setDate(1);
@@ -12,11 +17,12 @@ Datausers = {
     labels: tt,
     datasets: [{
         label: "Registos",
-        backgroundColor: "white",
         data: usersdata,
         lineTension: 0,
-        fill: 'white',
-        backgroundColor: ["#955251", "#B565A7", "#009B77", "#DD4124", "#45B8AC", "#D65076", "#5B5EA6", "#9B2335", "black", "#DFCFBE", "#55B4B0", "#EFC050"],
+        backgroundColor: gradient,
+        hoverBackgroundColor: gradient,
+        hoverBorderWidth: 2,
+        hoverBorderColor: 'black'
     }]
 };
 

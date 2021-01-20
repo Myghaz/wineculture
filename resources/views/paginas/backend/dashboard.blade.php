@@ -414,19 +414,16 @@
             @if ($user->id == $iten->id_envio || $user->id == $iten->id_envio)
 
             @if ($user->id == $iten->id_envio)
-            <form method="POST" class="media media-left px-5 pb-3 chatact-{{$iten->id_envio}}" action="{{route('mensagens_backend_store')}}">
-              {{ csrf_field() }}
+            <form class="media media-left px-5 pb-3 chatact-{{$iten->id_envio}}">
               <input type="hidden" name="id_destino" value="{{$user->id}}">
-              <input type="text" name="mensagem" class="form-control mb-3" placeholder="Escreva a sua resposta....">
-
-            </form>
+              <input id="mensagem-box" type="text" name="mensagem" class="form-control mb-3" placeholder="Escreva a sua resposta....">
+              </form>
             @endif
             @endif
             @endforeach
             @endforeach
-            </form>
+            <button id="btnenvio" class="btn btn-success btn-submit">Enviar</button>
           </div>
-
         </div>
       </div>
     </div>
