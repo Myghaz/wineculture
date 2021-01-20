@@ -10,7 +10,8 @@ class ChatController extends Controller
 {
     public function frontend_store(Request $request)
     {
-
+       
+            
         Mensagens::create([
             'id_envio' =>  Auth::user()->id,
             'id_destino' => $request->id_destino,

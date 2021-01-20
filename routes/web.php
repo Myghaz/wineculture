@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ReceitasController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\MainController;
@@ -11,6 +11,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\VinhosController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MensagensController;
+use App\Http\Controllers\ChatController;
 
 
 /////         Páginas Frontend       /////
