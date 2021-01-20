@@ -19,9 +19,9 @@ use App\Http\Controllers\ChatController;
 //BlogController
 Route::get('/', [MainController::class, 'index'])->name('index');
 
-Route::get('/sobre', [MainController::class, 'sobre'])->name('sobre_vinhos');
+Route::get('/sobre', [MainController::class, 'sobre'])->name('sobre');
 
-Route::get('/sobre_vinhos', [MainController::class, 'sobre_vinhos'])->name('sobre');
+Route::get('/sobre_vinhos', [MainController::class, 'sobre_vinhos'])->name('sobre_vinhos');
 
 Route::get('/faq', [MainController::class, 'faq'])->name('faq');
 

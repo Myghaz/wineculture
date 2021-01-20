@@ -46,7 +46,7 @@
                             role="button" aria-expanded="false" aria-controls="collapseExample">
                             {{ $pergunta_encomenda->pergunta }}
                         </a>
-                        <div class="resposta" id="b{{ $pergunta_encomenda->id }}">
+                        <div class="collapse resposta" id="b{{ $pergunta_encomenda->id }}">
                             <div class="resposta1">
                                 {!! $pergunta_encomenda->resposta !!}
                             </div>
@@ -62,7 +62,7 @@
                             role="button" aria-expanded="false" aria-controls="collapseExample">
                             {{ $pergunta_pagamento->pergunta }}
                         </a>
-                        <div class="resposta" id="c{{ $pergunta_pagamento->id }}">
+                        <div class="collapse resposta" id="c{{ $pergunta_pagamento->id }}">
                             <div class="resposta1">
                                 {!! $pergunta_pagamento->resposta !!}
                             </div>
@@ -72,7 +72,6 @@
             </div>
         </div>
     </div>
-    <div class="red"></div>
     <br>
     <br>
     <!--SCRIPTS-->
@@ -87,28 +86,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 
-    <script>
-        $(document).ready(function() {
-            var alterClass = function() {
-                var ww = document.body.clientWidth;
-                if (ww > 767) {
-                    $('.resposta').removeClass('collapse');
-                    $('.resposta1').removeClass('card card-body');
-                    $('.pergunta').addClass('disabled');
-                } else if (ww <= 768) {
-                    $('.resposta').addClass('collapse');
-                    $('.resposta1').addClass('card card-body');
-                    $('.pergunta').removeClass('disabled');
-                };
-            };
-            $(window).resize(function() {
-                alterClass();
-            });
-            //Fire it when the page first loads:
-            alterClass();
-        });
-
-    </script>
 @endsection
 @section('javascript')
 @endsection
