@@ -9,8 +9,9 @@
 @endsection
 
 @section("content")
-<img src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
-
+<div class="imgbanner_div">
+<img class="imgbanner" src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
+</div>
 <div class="container">
     <br>
     <div class="row portfolio">
