@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\ReceitasController;
-use App\Http\Controllers\UsersController;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\VinhosController;
