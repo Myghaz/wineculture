@@ -185,6 +185,7 @@
             
             .imgbanner_div {
                 height: calc(100% - 60px);
+                margin-top: 20px;
             }
             
             @media only screen and (max-width: 1200px) {
