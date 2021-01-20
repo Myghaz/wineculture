@@ -42,9 +42,9 @@ Route::get('/receitas', [ReceitasController::class, 'indexFrontend'])->name('rec
 
 
 //MensagensController
-Route::get('/contactos', [MensagensController::class, 'indexFrontend'])->name('index_contactos_frontend');
+Route::get('/contactos', [MensagensController::class, 'indexFrontend'])->name('contactos');
 
-
+Route::post('/contactos', [MensagensController::class, 'frontend_store'])->name('contactos_frontend_store');
 
 
 

@@ -777,21 +777,3 @@ $("#btnprods_wp-rep").click(function () {
 
 //////// Operações Chat ////////
 
-$(document).ready(function() {
-    $("#btnenvio").click(function(e){
-        e.preventDefault();
-
-        var _token = $("input[name='_token']").val();
-        var id_destino = $("input[name='id_destino']").val();
-        var mensagem = $("input[name='mensagem']").val();
-
-        $.ajax({
-            url: "{{ route('mensagens_backend_store') }}",
-            type:'POST',
-            data: {_token:_token, id_destino:id_destino, mensagem:mensagem},
-            success: function(data) {
-              printMsg(data);
-            }
-        });
-    }); 
-});
