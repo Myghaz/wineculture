@@ -128,7 +128,16 @@ animation: none;
 border-radius: 0;
 }
 
+.sobre_banner_div {
+	margin-top: 20px;
+}
+
+.sobre_banner {	
+	width:100%;
+	height: calc(400px - 60px);
+	object-fit: cover;
+}
 
 .sobre_info {
-	width=1000px;
+	width=100%;
 }

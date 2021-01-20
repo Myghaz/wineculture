@@ -4,41 +4,53 @@
 
 @section("links")
 <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/sobre.css') }}">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 @endsection
 
 @section("content")
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="assets\img\paginas\frontend\sobre/banner_sobra.png" alt="First slide">
-        </div>
-    </div>
+<div class="sobre_banner_div">
+	<img class="sobre_banner" src="assets\img\paginas\frontend\sobre/banner_sobra.png" alt="banner">
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-7 m-3 mt-5 sobre_info" ,data-aos="fade-up">
-            <div class="text-left">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/jRVUhtd_O1M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <!--<div class="video-box about">
-                            <img src="/assets/img/paginas/frontend/sobre/about.jpg" class="img-fluid" alt="">
-                            <a href="" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-                        </div>-->
-            </div>
-        </div>
-        <div class="col-md-3 m-3 mt-5" data-aos="fade-up" data-aos-delay="150">
-            <h2><b>A Nossa Instituição</b></h1>
+
+        <div class="mt-5 ml-3 mr-3 pb-4 pl-3 pr-3" data-aos="fade-up" data-aos-delay="150">
+            <h2><b>A Nossa Instituição</b></h2>
                 <br><br>
-                <p>A WineCulture é uma instituição sem fins lucrativos, com o objetivo de promover a vinicultura nacional.<br><br>
-                    Com o nosso website nós listamos todos os nossos vinhos, com toda a sua informação e com o seu acompanhamento perfeito.<br><br>
-                    A nossa instituição é excelente para os produtores de vinho de Portugal, se for um produtor Português pode contactar-nos para publicar os seus vinhos, promovendo assim a vinicultura nacional.<br><br>
-                    Temos também uma parte comercial onde vendemos mercadoria como acessórios pessoais, de escritório, vestuário e produtos para se proteger durante a pandemia.<br><br>
-                    Conte conosco para descobrir a vinicultura nacional!</p>
+                <p>
+				A WineCulture é uma instituição sem fins lucrativos, com o objetivo de promover a vinicultura nacional.<br><br>
+                Com o nosso website nós listamos todos os nossos vinhos, com toda a sua informação e com o seu acompanhamento perfeito.<br><br>
+			
+				A nossa instituição é excelente para os produtores de vinho de Portugal, se for um produtor Português pode contactar-nos para publicar os seus vinhos, promovendo assim a vinicultura nacional.<br><br>
+				Temos também uma parte comercial onde vendemos mercadoria como acessórios pessoais, de escritório, vestuário e produtos para se proteger durante a pandemia.<br><br>
+				Conte conosco para descobrir a vinicultura nacional!
+				</p>
+		</div>
+				
+		<div class="p-3 m-3 mb-5" data-aos="fade-up" data-aos-delay="50">
+            <div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/35Q00Tz6NnQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
         </div>
-    </div>
+		
+	
 </div>
 @endsection
 @section("javascript")
+<script>
+function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('player', {
+    videoId: 'M7lc1UVf-VE',
+    playerVars: { 'autoplay': 1, 'controls': 0 },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange,
+      'onError': onPlayerError
+    }
+  });
+}
+</script>
 <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.js') }}"></script>
 <script src="{{ URL::asset('assets/js/paginas/frontend/sobre.js') }}"></script>
 
