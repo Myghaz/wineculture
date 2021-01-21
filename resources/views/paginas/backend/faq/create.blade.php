@@ -15,16 +15,21 @@
                 @endif
                 <div class="form-group">
                     <label for="formGroupExampleInput">Pergunta</label>
-                    <input type="text" class="form-control" name="pergunta" value="{{ old('pergunta') }}" id="formGroupExampleInput">
+                    <input type="text" class="form-control" name="pergunta" value="{{ old('pergunta') }}"
+                        id="formGroupExampleInput">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Categoria</label>
-                    <input class="form-control" id="exampleFormControlSelect1" value="{{ old('categoria') }}" name="categoria">
+                    <label for="inputCategory">Categoria</label>
+                    <select name="categoria" id="inputCategory" class="form-control">
+                        @foreach ($categorias as $categoria)
+                            <option value="{{ $categoria->id }}">{{ $categoria->categoria }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Resposta</label>
-                    <textarea class="ckeditor form-control" value="{{ old('resposta') }}" id="exampleFormControlTextarea1" rows="3"
-                        name="resposta"></textarea>
+                    <textarea class="ckeditor form-control" value="{{ old('resposta') }}" id="exampleFormControlTextarea1"
+                        rows="3" name="resposta"></textarea>
                 </div>
                 <button type="submit" name="button" class="btn btn-success display-4">Submeter</button>
             </form>

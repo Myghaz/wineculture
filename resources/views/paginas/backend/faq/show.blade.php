@@ -23,8 +23,8 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Resposta</label>
-                <textarea readonly class="form-control" style="height:200px" id="exampleFormControlTextarea1" rows="3"
-                    value="" name="resposta">{!!  $pergunta->resposta !!}</textarea>
+                <label readonly class="form-control" style="height:200px" id="exampleFormControlTextarea1"
+                    value="" name="resposta">{!!  $pergunta->resposta !!}</label>
             </div>
             <a href="{{ route('faq.edit', $pergunta) }}" class="btn btn-xs btn-warning btn-p">Editar Pergunta</a>
         </div>

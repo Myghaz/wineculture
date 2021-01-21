@@ -55,17 +55,14 @@ class ReceitasController extends Controller
         $fields = $request->validate(
             [
                 'nome' => 'required',
-                'foto' => 'required',
                 'descricao' => 'required',
-                'id_categoria' => 'required|exists:categoria,id'
             ],
             [
                 'nome' => 'Campo nome não ficou preenchido',
-                'foto' => 'Campo foto não ficou preenchido',
                 'descricao' => 'Campo descrição não ficou preenchido',
-                'id_categoria' => 'Campo categoria não ficou preenchido'
             ]
             );
+
         $receita = new Receitas();
         $receita->fill($fields);
         $receita->id_categoria = $request->id_categoria;
@@ -74,6 +71,7 @@ class ReceitasController extends Controller
         $path= Storage::putFileAs('public/receitas', $request->file('img'), 'receitas_' . time() . '.' . $request->file('img')->extension());
 
         $receita->foto = $path;
+
         $receita->save();
 
         return redirect()->route('receitas.index');
@@ -114,19 +112,7 @@ class ReceitasController extends Controller
      */
     public function update(Request $request, receitas $receita)
     {
-        $fields = $request->validate(
-            [
-                'nome' => 'required',
-               
-                'descricao' => 'required',
-            ],
-            [
-                'nome' => 'Campo nome não ficou preenchido',
-              
-                'descricao' => 'Campo descrição não ficou preenchido',
-            ]
-            );
-        $receita->update($fields);
+        $receita->update($request->all());
         $receita->save();
         return redirect()->route('receitas.index')
         ->with('success', 'Receita foi editada com sucesso', compact('receita'));

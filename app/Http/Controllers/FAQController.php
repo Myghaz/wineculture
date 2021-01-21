@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoriaPergunta;
 use Illuminate\Http\Request;
 use App\Models\Perguntas;
 
@@ -26,8 +27,9 @@ class FAQController extends Controller
      */
     public function create(Request $request)
     {
+        $categorias = CategoriaPergunta::all();
         $pergunta = Perguntas::all();
-        return view('paginas.backend.faq.create', compact('pergunta'));
+        return view('paginas.backend.faq.create', compact('pergunta', 'categorias'));
     }
 
     /**
@@ -41,12 +43,12 @@ class FAQController extends Controller
         $fields = $request->validate(
             [
                 'pergunta' => 'required',
-                'categoria' => 'required',
                 'resposta' => 'required'
             ]
         );
         $pergunta = new Perguntas();
         $pergunta->fill($fields);
+        $pergunta->categoria_id = $request->categoria;
         $pergunta->save();
         return redirect()->route('faq.index')->with('success', 'Pergunta adicionada com sucesso', compact('pergunta'));
     }
@@ -70,7 +72,8 @@ class FAQController extends Controller
      */
     public function edit(Perguntas $pergunta)
     {
-        return view('paginas.backend.faq.edit', compact('pergunta'));
+        $categorias = CategoriaPergunta::all();
+        return view('paginas.backend.faq.edit', compact('pergunta', 'categorias'));
     }
 
     /**
@@ -82,14 +85,7 @@ class FAQController extends Controller
      */
     public function update(Request $request, Perguntas $pergunta)
     {
-        $fields = $request->validate(
-            [
-                'pergunta' => 'required',
-                'categoria' => 'required',
-                'resposta' => 'required'
-            ]
-        );
-        $pergunta->update($fields);
+        $pergunta->update($request->all());
         $pergunta->save();
         return redirect()->route('faq.index')
             ->with('success', 'Pergunta foi editada com sucesso', compact('pergunta'));

@@ -46,7 +46,7 @@
                                             <td onclick="window.location.href = '{{ route('faq.show', ['pergunta' => $pergunta]) }}';"
                                                 class="tdhover">{{ $pergunta->pergunta }}</td>
                                             <td onclick="window.location.href = '{{ route('faq.show', ['pergunta' => $pergunta]) }}';"
-                                                class="tdhover">{{ $pergunta->resposta }}</td>
+                                                class="tdhover">{!! $pergunta->resposta !!}</td>
                                             <td onclick="window.location.href = '{{ route('faq.show', ['pergunta' => $pergunta]) }}';"
                                                 class="tdhover">{{ $pergunta->categoria->categoria }}</a></td>
                                             <td class="tdhover">
