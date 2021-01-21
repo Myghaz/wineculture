@@ -16,6 +16,10 @@ class MainController extends Controller
         return view('paginas.frontend.sobre');
     }
 
+    public function sobre_vinhos() {
+        return view('paginas.frontend.sobre_vinhos');
+    }
+
     public function faq() {
         $perguntas_conta = Perguntas::where('categoria', '=', "Conta")->get();
         $perguntas_encomenda = Perguntas::where('categoria', '=', "Encomenda")->get();
