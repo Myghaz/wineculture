@@ -296,3 +296,7 @@ button {
     font-family: cursive;
     box-sizing: border-box;
 }
+
+a:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}

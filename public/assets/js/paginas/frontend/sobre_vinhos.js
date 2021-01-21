@@ -4,6 +4,12 @@ function toggle(val) {
     holder.setAttribute('dir', val);
     element.classList.add("active1");
 }
+$(".sidenav1 a").on('click', function(event) {
+
+    $target = $(event.target);
+    $(".tab").removeClass("active1");
+    $target.addClass('active1');
+});
 
 $(document).ready(function() {
     $("#toggle").click(function() {

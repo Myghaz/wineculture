@@ -14,15 +14,15 @@
             <div class="all2">
 
                 <div class="sidenav1">
-                    <a onclick="toggle('one')">História do Vinho</a>
-                    <a onclick="toggle('two')">Classificação dos Vinhos</a>
-                    <a onclick="toggle('three')">O processo de produção e fermentação</a>
-                    <a onclick="toggle('four')">Degustação</a>
-                    <a onclick="toggle('five')">Armazenamento</a>
-                    <a onclick="toggle('six')">Produção</a>
-                    <a onclick="toggle('seven')">Consumo</a>
-                    <a onclick="toggle('eight')">Copos e garrafas</a>
-                    <a onclick="toggle('nine')">Culinária</a>
+                    <a class="tab" onclick="toggle('one')">História do Vinho</a>
+                    <a class="tab" onclick="toggle('two')">Classificação dos Vinhos</a>
+                    <a class="tab"  onclick="toggle('three')">O processo de produção e fermentação</a>
+                    <a class="tab" onclick="toggle('four')">Degustação</a>
+                    <a class="tab" onclick="toggle('five')">Armazenamento</a>
+                    <a class="tab" onclick="toggle('six')">Produção</a>
+                    <a class="tab" onclick="toggle('seven')">Consumo</a>
+                    <a class="tab" onclick="toggle('eight')">Copos e garrafas</a>
+                    <a class="tab" onclick="toggle('nine')">Culinária</a>
                 </div>
 
                 <!-- Page content -->
