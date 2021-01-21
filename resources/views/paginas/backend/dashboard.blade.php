@@ -176,7 +176,7 @@
             <table id="tableaprodutores" class="ui celled table" style="width:100%">
               <thead id="tableprodutoresthead">
                 <tr>
-                <th class="d-none d-lg-table-cell">ID</th>
+                  <th class="d-none d-lg-table-cell">ID</th>
                   <th class="d-none d-lg-table-cell">Imagem</th>
                   <th class="d-none d-lg-table-cell">Nome</th>
                   <th class="d-none d-lg-table-cell">Apelido</th>
@@ -222,11 +222,11 @@
                   <td target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->ID}}</td>
                   <td>
                     @foreach($prodsimg as $key => $prodimg)
-                      @if ($prodwp->ID == $prodimg->post_parent)
-                        <img style="width: 50px; height: 50px; object-fit: cover;" src="{{$prodimg->guid}}" class="rounded-circle w-45" alt="{{$prodwp->post_title}}">
-                      @endif
+                    @if ($prodwp->ID == $prodimg->post_parent)
+                    <img style="width: 50px; height: 50px; object-fit: cover;" src="{{$prodimg->guid}}" class="rounded-circle w-45" alt="{{$prodwp->post_title}}">
+                    @endif
                     @endforeach
-                </td>
+                  </td>
                   <td>
                     <a class="text-dark" target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$prodwp->ID}}">{{$prodwp->post_title}}</a>
                   </td>
@@ -280,30 +280,18 @@
             <ul class="list-unstyled border-top mb-0" id="chat-left-content">
               @foreach($mensagens as $key => $mensagem)
               <li>
-                @foreach($users as $key => $user)
-                @if ($user->id == $mensagem->id_envio)
-                <a id="chatact-{{$user->id}}" class="media media-message" style="width: 100%; height: 100%; z-index: 5;">
-                  @endif
-                  @endforeach
+                <a id="chatact-{{$mensagem->idenvio->id}}" class="media media-message" style="width: 100%; height: 100%; z-index: 5;">
                   <div class="position-relative mr-3">
-                    @foreach($users as $key => $user)
-                    @if ($user->id == $mensagem->id_envio)
-                    @if ($user->img == "Sem Imagem")
+                    @if ($mensagem->idenvio->img == "Sem Imagem")
                     <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle" alt="Avatar Image">
                     @else
-                    <img src="/assets/img/users/{{$user->img}}" class="rounded-circle" alt="Avatar Image">
+                    <img src="/assets/img/users/{{$mensagem->idenvio->img}}" class="rounded-circle" alt="Avatar Image">
                     @endif
-                    @endif
-                    @endforeach
                   </div>
                   <div class="media-body d-flex justify-content-between" style="pointer-events: none;">
                     <div class="message-contents">
                       <h4 class="title">
-                        @foreach($users as $key => $user)
-                        @if ($user->id == $mensagem->id_envio)
-                        {{$user->name}} {{$user->apelido}}
-                        @endif
-                        @endforeach
+                        {{$mensagem->idenvio->name}} {{$mensagem->idenvio->apelido}}
                       </h4>
                     </div>
                     <span class="date">Clique para abrir</span>
@@ -320,29 +308,16 @@
             <div style=" height: 91px;" class="media media-chat align-items-center mb-0 media-chat-header" href="#">
               <div class="media-body w-100">
                 <div class="d-flex justify-content-between align-items-center">
-                  @foreach($itens as $key => $iten)
-                  @foreach($users as $key => $user)
+                  @foreach($mensagens as $key => $mensagem)
 
-                  @if ($user->id == $iten->id_envio || $user->id == $iten->id_envio)
-
-                  @if ($user->id == $iten->id_envio)
-                  <div style="align-items: center; " class="media media-chat media-left mb-0 chatact-{{$iten->id_envio}}">
-
-                    @if ($user->id == $iten->id_envio)
-                    @if ($user->img == "Sem Imagem")
-
+                  <div style="align-items: center; " class="media media-chat media-left mb-0 chatact-{{$mensagem->idenvio->id}}">
+                    @if ($mensagem->idenvio->img == "Sem Imagem")
                     <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
-
                     @else
-                    <img src="/assets/img/users/{{$user->img}}" class="rounded-circle mr-3" alt="Avatar Image">
+                    <img src="/assets/img/users/{{$mensagem->idenvio->img}}" class="rounded-circle mr-3" alt="Avatar Image">
                     @endif
-                    @endif
-
-                    <h3 class="heading-title mb-0"><a href="#">{{$user->name}} {{$user->apelido}}</a></h3>
+                    <h3 class="heading-title mb-0"><a href="#">{{$mensagem->idenvio->name}} {{$mensagem->idenvio->apelido}}</a></h3>
                   </div>
-                  @endif
-                  @endif
-                  @endforeach
                   @endforeach
                 </div>
               </div>
@@ -356,22 +331,18 @@
                   <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
                     <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;">
                       <div class="simplebar-content" style="padding: 24px;">
-                        @foreach($itens as $key => $iten)
+                        @foreach($mensagens as $key => $mensagem)
                         @foreach($mensagens_chat as $key => $chat)
 
-                        @if ($chat->id_envio == $iten->id_envio || $chat->id_destino == $iten->id_envio)
+                        @if ($chat->id_envio == $mensagem->id_envio || $chat->id_destino == $mensagem->id_envio)
 
-                        @if ($chat->id_envio == $iten->id_envio)
-                        <div class="media media-chat media-left chatact-{{$iten->id_envio}}">
-                          @foreach($users as $key => $user)
-                          @if ($user->id == $iten->id_envio)
-                          @if ($user->img == "Sem Imagem")
+                        @if ($chat->id_envio == $mensagem->id_envio)
+                        <div class="media media-chat media-left chatact-{{$mensagem->id_envio}}">
+                          @if ($mensagem->idenvio->img == "Sem Imagem")
                           <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
                           @else
-                          <img src="/assets/img/users/{{$user->img}}" class="rounded-circle mr-3" alt="Avatar Image">
+                          <img src="/assets/img/users/{{$mensagem->idenvio->img}}" class="rounded-circle mr-3" alt="Avatar Image">
                           @endif
-                          @endif
-                          @endforeach
                           <div class="media-body">
                             <p class="message">{{$chat->mensagem}}</p>
                             <div class="date-time">{{$chat->created_at}}</div>
@@ -379,11 +350,12 @@
                         </div>
                         @endif
                         @if ($chat->id_envio == $id_user_auth)
-                        <div class="media media-chat media-right chatact-{{$iten->id_envio}}">
+                        <div class="media media-chat media-right chatact-{{$mensagem->id_envio}}">
                           <div class="media-body">
                             <p class="message">{{$chat->mensagem}}</p>
-                            <div class="date-time">{{$chat->created_at}}</div>
+                            <div class="date-time">{{ date('d-m-Y h:m', strtotime($chat->created_at))}}</div>
                           </div>
+
                           @if (Auth::user()->img == "Sem Imagem")
                           <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
                           @else
@@ -392,7 +364,6 @@
                         </div>
                         @endif
                         @endif
-
                         @endforeach
                         @endforeach
                       </div>
@@ -408,25 +379,15 @@
                 <div class="simplebar-scrollbar" style="height: 50px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
               </div>
             </div>
-            @foreach($itens as $key => $iten)
-            @foreach($users as $key => $user)
-
-            @if ($user->id == $iten->id_envio || $user->id == $iten->id_envio)
-
-            @if ($user->id == $iten->id_envio)
-            <form method="POST" class="media media-left px-5 pb-3 chatact-{{$iten->id_envio}}" action="{{route('mensagens_backend_store')}}">
+            @foreach($mensagens as $key => $mensagem)
+            <form id="{{$mensagem->id_envio}}" class="media media-left px-5 pb-3 chatact-{{$mensagem->id_envio}}">
               {{ csrf_field() }}
-              <input type="hidden" name="id_destino" value="{{$user->id}}">
-              <input type="text" name="mensagem" class="form-control mb-3" placeholder="Escreva a sua resposta....">
-              <button id="btnenvio" class="btn btn-success btn-submit">Enviar</button>
+              <input type="hidden" name="id_destino{{$mensagem->idenvio->id}}" value="{{$mensagem->idenvio->id}}">
+              <input type="text" name="mensagem{{$mensagem->idenvio->id}}" class="form-control mb-3" placeholder="Escreva a sua resposta....">
+              <button id="{{$mensagem->idenvio->id}}" class="btn btn-success btn-submit">Enviar</button>
             </form>
-            @endif
-            @endif
             @endforeach
-            @endforeach
-            </form>
           </div>
-
         </div>
       </div>
     </div>
@@ -452,7 +413,7 @@
               <ul class="list-unstyled">
                 <li class="d-flex mb-1">
                   <i class="mdi mdi-calendar-check mr-1"></i>
-                  <span>Data de Registo: {{ date('d-m-Y', strtotime($ultuser->created_at))}} </span>
+                  <span>Data de Registo: {{ date('d/m/Y', strtotime($ultuser->created_at))}}</span>
                 </li>
                 <li class="d-flex">
                   <i class="mdi mdi-email mr-1"></i>
@@ -499,7 +460,7 @@
                   </div>
                 </div>
               </div>
-       
+
             </div>
           </div>
         </div>
@@ -614,10 +575,10 @@
       <div class="col-lg-6 col-xl-4 col-xxl-3">
         <div class="card card-default mt-6">
           <div style="height: 305px;" class="card-body text-center p-4">
-            <a  target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$produtoswp->ID}}" class="text-secondary d-inline-block mb-3">
+            <a target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$produtoswp->ID}}" class="text-secondary d-inline-block mb-3">
               <div class="image mb-3 mt-n9">
-              @foreach($prodsimg as $key => $prodimg)
-              @if ($produtoswp->ID == $prodimg->post_parent)
+                @foreach($prodsimg as $key => $prodimg)
+                @if ($produtoswp->ID == $prodimg->post_parent)
                 <img style="width: 100px; height:100px; object-fit: cover;" src="{{$prodimg->guid}}" class="img-fluid rounded-circle" alt="{{$produtoswp->post_title}}">
                 @endif
                 @endforeach
@@ -642,7 +603,45 @@
 
   </div>
   <script>
- var totalUsersJan = {{$totalUsersJan}};
+    
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+
+    $(".btn-submit").click(function(e) {
+      var id = $(this).attr("id");
+      e.preventDefault();
+
+      mensagem = $("input[name=mensagem" + id + "]").val();
+      id_destino = $("input[name=id_destino" + id + "]").val();
+      $.ajax({
+        type: 'POST',
+        url: "{{ route('dashboard.post') }}",
+        data: {
+          mensagem: mensagem,
+          id_destino: id_destino
+        },
+        success: function(response) {
+          const d = new Date()
+          var test1= new Date(d.getTime() - d.getTimezoneOffset() * 60 * 1000).toISOString().split('T')[0]
+          var datam =Object(response.msg)[Object(response.msg).length-1].created_at;
+          var mensagem =Object(response.msg)[Object(response.msg).length-1].mensagem;
+          datam = new Date(datam);
+          var data = moment(datam).format('DD-MM-YYYY hh:mm');
+          if (response) {
+
+            $( ".simplebar-content" ).append('<div class="media media-chat media-right chatact-' +id+'"><div class="media-body"><p class="message">'+mensagem+'</p> <div class="date-time">'+data+'</div> </div>@if (Auth::user()->img == "Sem Imagem")<img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">@else<img class="rounded-circle ml-3" src="/assets/img/users/{{Auth::user()->img}}" alt="Image">@endif</div>');
+
+            $("#" + id)[0].reset();
+          }
+        },
+      });
+    })
+  </script>
+   <script> 
+    var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};
     var totalUsersMar = {{$totalUsersMar}};
     var totalUsersAbr = {{$totalUsersAbr}};

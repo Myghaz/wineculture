@@ -801,7 +801,6 @@
     </div>
 </div>
 @section("javascript")
-<script src="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.js') }}"></script>
 <script src="{{ URL::asset('assets/js/paginas/frontend/sobre_vinhos.js') }}"></script>
 @endsection
 @endsection

@@ -5,10 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description"
-        content="Sleek Dashboard - Free Bootstrap 4 Admin Dashboard Template and UI Kit. It is very powerful bootstrap admin dashboard, which allows you to build products like admin panels, content management systems and CRMs etc.">
-
-
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>WineCulture Dashboard</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
         rel="stylesheet" />
@@ -20,7 +17,7 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="  <link rel=" stylesheet"
+    <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"
         integrity="sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ=="
@@ -281,7 +278,6 @@
                 </nav>
             </header>
 
-
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
                 integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
                 crossorigin="anonymous"></script>
@@ -294,7 +290,6 @@
                 crossorigin="anonymous"></script>
             <script src="{{ asset('assets\plugins\backend\jvectormap\jquery-jvectormap-2.0.3.min.js') }}"></script>
             <script src="{{ asset('assets\plugins\backend\jvectormap\jquery-jvectormap-world-mill.js') }}"></script>
-            <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
             <script src="{{ asset('assets\plugins\backend\daterangepicker\moment.min.js') }}"></script>
             <script src="{{ asset('assets\plugins\backend\daterangepicker\daterangepicker.js') }}"></script>
             <script src="https://cdn.rawgit.com/kottenator/jquery-circle-progress/1.2.0/dist/circle-progress.js">
@@ -318,12 +313,6 @@
                 });
 
             </script>
-            <script type="text/javascript">
-                $(document).ready(function() {
-                    $('.ckeditor').ckeditor();
-                });
-
-            </script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"
                 integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ=="
                 crossorigin="anonymous"></script>
@@ -333,6 +322,7 @@
             <script src="https://cdn.jsdelivr.net/datatables.mark.js/2.0.0/datatables.mark.min.js"></script>
 
             <script src="{{ asset('assets\js\layouts\backend\admin.js') }}"></script>
+            
 
             @if ($errors->any())
                 @include ('partials.errors')

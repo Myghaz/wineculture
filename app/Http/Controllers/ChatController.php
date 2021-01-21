@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
-    public function frontend_store(Request $request)
+    public function backend_store(Request $request)
     {
         request()->validate([
             'id_destino' => 'required',
@@ -22,9 +22,9 @@ class ChatController extends Controller
         Mensagens::create([
             'id_envio' =>  Auth::user()->id,
             'id_destino' => $request->id_destino,
-            'mensagem' => $request->mensagem,
+            'mensagem' => $request->mensagem
         ]);
-
-        return redirect()->route('admin_dashboard');
+        $chat =  Mensagens::all();
+        return response()->json(array('msg'=> $chat), 200);
     }
 }
