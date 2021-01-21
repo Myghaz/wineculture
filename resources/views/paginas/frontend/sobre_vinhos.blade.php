@@ -43,6 +43,7 @@
                                         o Velho, descrevem como os antigos gregos utilizavam gesso parcialmente desidratado antes da fermentação e um tipo de cal após aquela com o propósito de diminuir a acidez. O escritor grego Teofrasto é a mais antiga fonte
                                         conhecida a descrever esta prática de vinificação entre os antigos gregos. Antigo Egito, o vinho tornou-se parte da história registada, desempenhando um papel importante na vida cerimonial. O vinho teria sido introduzido
                                         no Egipto pelos gregos. São também conhecidos vestígios de vinho na China, datados do segundo e primeiro milénios a.C..</p>
+                                        <span id="dots">...</span><span id="more">
                                     <p>O vinho era comum na Grécia e Roma clássicas. Os antigos gregos introduziram o cultivo de videiras, como a Vitis vinifera, nas suas numerosas colónias na Itália, Sicília, França meridional, Península Ibérica. Dioniso era o
                                         deus grego do vinho e da diversão, e o vinho era frequentemente mencionado nos escritos de Homero e Esopo. Muitas das principais regiões vinhateiras da Europa Ocidental actual foram estabelecidas pelos romanos. A tecnologia
                                         de fabricação do vinho melhorou consideravelmente durante o tempo do Império Romano. Eram, já então, conhecidas muitas variedades de uvas e de técnicas de cultivo e foram criados os barris para a armazenagem e transporte
@@ -62,6 +63,8 @@
                                         adegas, na sua grande maioria, permaneceram ativas até à adesão de Portugal à CEE e transformavam as uvas de milhares de pequenos agricultores, a maioria dos quais em explorações polivalentes. Para muitos desses agricultores,
                                         a receita proveniente das uvas que entregavam à adega constituía a verba mais avultada que entrava na exploração (e, na maioria dos casos, no agregado familiar) ao longo de todo o ano, sendo essa a verba que permitia fazer
                                         alguns investimentos de melhoria da exploração ou aquisição de património.</p>
+                                    </span>
+                                    <button onclick="myFunction()" id="myBtn1">Read more</button>
                                 </div>
 
                             </div>
@@ -87,7 +90,7 @@
                                     <p>
                                         Os vinhos fortificados são aqueles cuja fermentação alcoólica é interrompida pela adição de aguardente (~70% vol). De acordo com o momento da interrupção, e da uva que está sendo utilizada, ficará mais ou menos doce. O grau alcoólico final dos vinhos
                                         fortificados fica entre 19-22% vol. Os mais famosos são o Vinho do Porto (Portugal), o Vinho da Madeira (Portugal), o Xerez (Espanha) e o Marsala (Sicília).
-                                    </p>
+                                    </p><span id="dots">...</span><span id="more">
                                     <p>
                                         Por conta de obras cinematográficas de parca pesquisa histórica, a maioria das pessoas julga que o consumo do vinho era comum no Egipto e há quem diga que é de lá sua obscura origem. Entretanto o vinho era mercadoria importada pelo Egipto, cuja bebida
                                         nacional era a cerveja, normalmente feita de restos de pães.
@@ -285,7 +288,7 @@
                                     <p>
                                         Os vinhos não <i>vintage</i> podem ser produzidos a partir da mistura de mais de uma safra, num processo que visa a manter a confiança do mercado e manter uma certa qualidade mesmo em anos de safras ruins.
                                     </p>
-
+</span><button onclick="myFunction()" id="myBtn1">Read more</button>
                                 </div>
                             </div>
                             <div class="threeTxt">
@@ -315,7 +318,7 @@
                                     <p>É a parte mais complexa e importante do processo de fabricação do vinho. Nesta etapa, é necessário um controle rigoroso da temperatura, bem como a presença correcta de microrganismos responsáveis pela >fermentação. Dentre eles,
                                         o mais comum é uma levedura, a Saccharomyces cerevisae, e o controle da temperatura é fundamental, não devendo exceder os 25 a 30&nbsp;°C.</p>
                                     <p>Existem várias etapas na fermentação:</p>
-                                    <h4>Fermentação tumultuosa</h4>
+                                    <h4>Fermentação tumultuosa</h4><span id="dots">...</span><span id="more">
                                     <p>Ela dura poucos dias, quando ocorrem um grande desprendimento do gás carbônico e o aumento da temperatura.</p>
                                     <h4>Fermentação lenta </h4>
                                     <p>Com o passar dos dias, a fermentação começa a diminuir de intensidade devido à diminuição da presença do açúcar. Nesta etapa, o líquido separa-se da parte sólida (bagaço, cascas, etc) e são eliminados os últimos traços de glicose,
@@ -518,7 +521,7 @@
 
 
 
-
+</span><button onclick="myFunction()" id="myBtn1">Read more</button>
                                 </div>
                             </div>
                             <div class="fourTxt">
@@ -534,7 +537,7 @@
                                     <p>É possível identificar sabores e aromas individuais graças ao complexo mix de moléculas que a uva e seu suco podem conter. A degustação frequentemente pode identificar as características de uma uva específica como também os
                                         sabores que resultaram da fabricação e maturação do vinho, seja intencional ou não. Os mais típicos elementos de sabor que são intencionalmente introduzidos no vinho são aqueles presentes nos barris de carvalho: chocolate,
                                         baunilha, café, além de mato ou couro. Outras variedades de minerais também são absorvidas pelo vinho.
-                                    </p>
+                                    </p><span id="dots">...</span><span id="more">
                                     <h3>Serviço do vinho</h3>
 
                                     <p>Abrir um vinho não é apenas o ato de remover a rolha. Alguns rótulos dos vinhos alertam para que ele seja aberto algumas horas antes para que ele possa "respirar" enquanto outros exigem ser bebidos imediatamente. No caso dos
@@ -580,7 +583,7 @@
                                         <li>A audição: representada pelo som do toque das taças já que não há a possibilidade de "ouvi-lo"
                                         </li>
                                     </ul>
-
+</span><button onclick="myFunction()" id="myBtn1">Read more</button>
                                 </div>
                             </div>
                             <div class="fiveTxt">
@@ -594,10 +597,10 @@
                                     <p>
                                         A maioria dos vinhos é vendida em garrafas de vidro e seladas com rolhas de cortiça. Recentemente alguns produtores de vinho vem buscando alternativas como tampas atarrachantes ou rolhas sintéticas, não muito bem vistas pela maioria. É consenso entre
                                         os grandes produtores, leia-se "os melhores vinhos", o uso das rolhas de cortiça, especialmente as produzidas em Portugal, pois ainda é tido como o produto mais adequado.
-                                    </p>
+                                    </p><span id="dots">...</span><span id="more">
                                     <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu
                                         when clicked.
-                                    </p>
+                                    </p></span><button onclick="myFunction()" id="myBtn1">Read more</button>
                                 </div>
                             </div>
                             <div class="sixTxt">
@@ -626,7 +629,7 @@
                                         maioria. É consenso entre os grandes produtores, leia-se "os melhores vinhos", o uso das rolhas de cortiça, especialmente as produzidas em Portugal, pois ainda é tido como o produto mais adequado.</p>
                                     <p>As adegas são os lugares designados especialmente para a guarda e a maturação do vinho. Numa adega climatizada, vários factores como temperatura e humidade são controlados por sistemas eletrônicos. Em contraste, as melhores
                                         adegas ainda são aquelas sob a terra, sem sistemas controladores, implantadas em locais cuidadosamente estudados. Estima-se que a Casa Moët & Chandon, de Champagne - França, tenha cerca de 28&nbsp;km de túneis onde descansam
-                                        seus vinhos antes de ser comercializados.</p>
+                                        seus vinhos antes de ser comercializados.</p> <span id="dots">...</span><span id="more">
                                     <p>O vinho é um alimento natural e perecível. Se deixado exposto ao calor, luz, vibrações ou flutuações de temperatura e umidade, para todos os tipos de vinho, ele certamente irá estragar. Quando devidamente armazenado o vinho
                                         não apenas mantém sua qualidade, mas também melhora e cresce em aroma, sabores e complexidade. Os experts aconselham a manter os vinhos entre 14 e 17&nbsp;°C, em locais frescos com umidade de entre 60 e 70% e sem luz. Os
                                         vinhos devem estar deitados, para que a rolha não resseque.
@@ -663,7 +666,7 @@
                                     </div>
                                     <p>Os consumidores europeus têm se mostrado mais exigentes ao longo dos anos, mais seletivos e preocupados com a qualidade. Há também grande curiosidade quanto aos vinhos de outras regiões do mundo. Na América do Sul, Chile e
                                         Argentina são os grandes países produtores de vinhos de qualidade, o que levou todo o mercado do continente a também ser mais exigente.
-                                    </p>
+                                    </p></span><button onclick="myFunction()" id="myBtn1">Read more</button>
                                 </div>
                             </div>
                             <div class="eightTxt">
@@ -688,7 +691,8 @@
                                     <p>O único meio de produzir um copo específico para determinado vinho é experimentando-o. Utilizam-se vários tipos diferentes de taças - mais ou menos arredondadas, mais abertas, mais fechadas, mais estreitas, etc. - e faz-se
                                         a degustação com grande número de enólogos que irão determinar em qual tipo de copo o vinho ganha em qualidade. O formato escolhido passa a ser utilizado para aquele tipo de uva, vinho ou região específica. A Riedel costuma
                                         fazer esse tipo de degustação regularmente.
-                                    </p>
+                                    </p> <span id="dots">...</span><span id="more">
+
                                     <p>Um fato curioso é a presença de concavidade no fundo de várias garrafas de vinho, anedotalmente associada à sua qualidade. Embora seja comum ouvir a informação de que quanto maior a concavidade, melhor o vinho, não há fontes
                                         confiáveis que confirmem essa relação e pode-se ver facilmente vinhos bons e caros com concavidade menor que alguns de qualidade inferior ou, mesmo, sem concavidade alguma. Não há uma explicação consensual para o real propósito
                                         da concavidade, apesar de haver algumas mais comuns, como:</p>
@@ -764,7 +768,7 @@
                                         ainda hoje como medida nos meios comerciais - um galão imperial corresponde a aproximadamente 4,5 l, ou seja, cerca de 6 garrafas. Uma compra de 12 garrafas de um bom vinho de Bordeaux corresponde a dois galões imperiais
                                         enquanto um barril de Bordeaux de 225 litros corresponde a 50 galões imperiais do mesmo vinho.
                                     </p>
-
+</span><button onclick="myFunction()" id="myBtn1">Read more</button>
                                 </div>
                             </div>
                             <div class="nineTxt">

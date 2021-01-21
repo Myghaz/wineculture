@@ -96,8 +96,7 @@ Route::middleware('auth', 'verified')->prefix('admin')->group(function () {
 
         Route::resource('users', UsersController::class);
 
-
-        //FAZER Route::resource('contactos', MensagensController::class);
+        Route::resource('contactos', MensagensController::class)->parameters(['contactos' => 'mensagem']);
 });
 
 
