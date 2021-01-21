@@ -111,11 +111,6 @@ class AdminController extends Controller
 
                 $mensagens = Mensagens::select('id_envio')->distinct('id_envio')->where('id_destino', Auth::id())->get();
                 $mensagens_chat = Mensagens::where('id_destino', Auth::id())->orWhere('id_envio', Auth::id())->orderBy('created_at', 'ASC')->get();
-                $itens = DB::table('mensagens')
-                    ->select('id_envio')
-                    ->where('id_destino', Auth::id())
-                    ->distinct('id_envio')
-                    ->get();
                 $id_user_auth = Auth::id();
 
 
@@ -179,7 +174,6 @@ class AdminController extends Controller
                     'mensagens',
                     'mensagens_chat',
                     'id_user_auth',
-                    'itens',
                     'ultimos_users',
                     'total_posts_count',
                     'total_posts',
