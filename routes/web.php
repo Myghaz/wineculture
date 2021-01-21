@@ -84,6 +84,8 @@ Route::middleware('auth', 'verified')->prefix('admin')->group(function () {
 
         Route::get('dashboard', [AdminController::class, 'dashboard'])->name('admin_dashboard');
 
+        Route::post('dashboard', [ChatController::class, 'backend_store'])->name('dashboard.post');
+
         Route::resource('faq', FAQController::class)->parameters(['faq' => 'pergunta']);
 
         Route::resource('receitas', ReceitasController::class);
@@ -118,4 +120,4 @@ Route::resource('/admin/vinhos', VinhosController::class);
 Route::resource('/admin/categoria_vinho', VinhosController::class);
 
 //mensagens
-Route::post('/admin/dashboard', [ChatController::class, 'frontend_store'])->name('mensagens_backend_store');
+
