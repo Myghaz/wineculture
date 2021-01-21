@@ -2,14 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\CategoriaPergunta;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Perguntas extends Model
 {
     protected $fillable = [
         'pergunta',
-        'categoria',
         'resposta',
+        'categoria_id'
     ];
+
+    public function categoria(){
+        return $this->belongsTo(CategoriaPergunta::class, 'categoria_id');
+    }
 }

@@ -43,7 +43,7 @@
                                         o Velho, descrevem como os antigos gregos utilizavam gesso parcialmente desidratado antes da fermentação e um tipo de cal após aquela com o propósito de diminuir a acidez. O escritor grego Teofrasto é a mais antiga fonte
                                         conhecida a descrever esta prática de vinificação entre os antigos gregos. Antigo Egito, o vinho tornou-se parte da história registada, desempenhando um papel importante na vida cerimonial. O vinho teria sido introduzido
                                         no Egipto pelos gregos. São também conhecidos vestígios de vinho na China, datados do segundo e primeiro milénios a.C..</p>
-                                        <span id="dots">...</span><span id="more">
+                                        <span id="text">
                                     <p>O vinho era comum na Grécia e Roma clássicas. Os antigos gregos introduziram o cultivo de videiras, como a Vitis vinifera, nas suas numerosas colónias na Itália, Sicília, França meridional, Península Ibérica. Dioniso era o
                                         deus grego do vinho e da diversão, e o vinho era frequentemente mencionado nos escritos de Homero e Esopo. Muitas das principais regiões vinhateiras da Europa Ocidental actual foram estabelecidas pelos romanos. A tecnologia
                                         de fabricação do vinho melhorou consideravelmente durante o tempo do Império Romano. Eram, já então, conhecidas muitas variedades de uvas e de técnicas de cultivo e foram criados os barris para a armazenagem e transporte
@@ -63,8 +63,10 @@
                                         adegas, na sua grande maioria, permaneceram ativas até à adesão de Portugal à CEE e transformavam as uvas de milhares de pequenos agricultores, a maioria dos quais em explorações polivalentes. Para muitos desses agricultores,
                                         a receita proveniente das uvas que entregavam à adega constituía a verba mais avultada que entrava na exploração (e, na maioria dos casos, no agregado familiar) ao longo de todo o ano, sendo essa a verba que permitia fazer
                                         alguns investimentos de melhoria da exploração ou aquisição de património.</p>
-                                    </span>
-                                    <button onclick="myFunction()" id="myBtn1">Read more</button>
+                                        </span>
+                                        <div class="btn-container">
+                                            <button id="toggle">Read More</button>
+                                            </div>
                                 </div>
 
                             </div>
@@ -90,7 +92,8 @@
                                     <p>
                                         Os vinhos fortificados são aqueles cuja fermentação alcoólica é interrompida pela adição de aguardente (~70% vol). De acordo com o momento da interrupção, e da uva que está sendo utilizada, ficará mais ou menos doce. O grau alcoólico final dos vinhos
                                         fortificados fica entre 19-22% vol. Os mais famosos são o Vinho do Porto (Portugal), o Vinho da Madeira (Portugal), o Xerez (Espanha) e o Marsala (Sicília).
-                                    </p><span id="dots">...</span><span id="more">
+                                    </p>
+                                    <span id="text">
                                     <p>
                                         Por conta de obras cinematográficas de parca pesquisa histórica, a maioria das pessoas julga que o consumo do vinho era comum no Egipto e há quem diga que é de lá sua obscura origem. Entretanto o vinho era mercadoria importada pelo Egipto, cuja bebida
                                         nacional era a cerveja, normalmente feita de restos de pães.
@@ -288,7 +291,10 @@
                                     <p>
                                         Os vinhos não <i>vintage</i> podem ser produzidos a partir da mistura de mais de uma safra, num processo que visa a manter a confiança do mercado e manter uma certa qualidade mesmo em anos de safras ruins.
                                     </p>
-</span><button onclick="myFunction()" id="myBtn1">Read more</button>
+                                </span>
+                                <div class="btn-container">
+                                    <button id="toggle">Read More</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="threeTxt">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoriaPergunta;
 use Illuminate\Http\Request;
 use App\Models\Perguntas;
 
@@ -16,8 +17,7 @@ class FAQController extends Controller
     {
         $perguntas = Perguntas::all();
         $totalperguntas = Perguntas::all('id')->count();
-        $totalcategorias = Perguntas::distinct('categoria')->count();
-        return view('paginas.backend.faq.index', compact('perguntas', 'totalperguntas', 'totalcategorias'));
+        return view('paginas.backend.faq.index', compact('perguntas', 'totalperguntas'));
     }
 
     /**
@@ -27,8 +27,9 @@ class FAQController extends Controller
      */
     public function create(Request $request)
     {
+        $categorias = CategoriaPergunta::all();
         $pergunta = Perguntas::all();
-        return view('paginas.backend.faq.create', compact('pergunta'));
+        return view('paginas.backend.faq.create', compact('pergunta', 'categorias'));
     }
 
     /**
@@ -42,17 +43,12 @@ class FAQController extends Controller
         $fields = $request->validate(
             [
                 'pergunta' => 'required',
-                'categoria' => 'required',
                 'resposta' => 'required'
-            ],
-            [
-                'pergunta' => 'Campo pergunta não ficou preenchido',
-                'categoria' => 'Campo categoria não ficou preenchido',
-                'resposta' => 'Campo resposta não ficou preenchido'
             ]
         );
         $pergunta = new Perguntas();
         $pergunta->fill($fields);
+        $pergunta->categoria_id = $request->categoria;
         $pergunta->save();
         return redirect()->route('faq.index')->with('success', 'Pergunta adicionada com sucesso', compact('pergunta'));
     }
@@ -76,7 +72,8 @@ class FAQController extends Controller
      */
     public function edit(Perguntas $pergunta)
     {
-        return view('paginas.backend.faq.edit', compact('pergunta'));
+        $categorias = CategoriaPergunta::all();
+        return view('paginas.backend.faq.edit', compact('pergunta', 'categorias'));
     }
 
     /**
@@ -91,13 +88,7 @@ class FAQController extends Controller
         $fields = $request->validate(
             [
                 'pergunta' => 'required',
-                'categoria' => 'required',
                 'resposta' => 'required'
-            ],
-            [
-                'pergunta' => 'Campo pergunta não ficou preenchido',
-                'categoria' => 'Campo categoria não ficou preenchido',
-                'resposta' => 'Campo resposta não ficou preenchido'
             ]
         );
         $pergunta->update($fields);
@@ -114,7 +105,6 @@ class FAQController extends Controller
      */
     public function destroy(Request $request, Perguntas $pergunta)
     {
-        @dd($pergunta);
         $pergunta->delete($pergunta);
         return redirect()->route('faq.index')->with('success', 'Pergunta removida com sucesso', compact('pergunta'));
     }
