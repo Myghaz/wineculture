@@ -137,17 +137,11 @@
 
 .sidenav1 {
     height: auto;
-    /* Full-height: remove this if you want "auto" height */
     width: 200px;
-    /* Set the width of the sidebar */
     position: fixed;
-    /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1;
-    /* Black */
     overflow-x: hidden;
-    /* Disable horizontal scroll */
-    margin-top: 155px;
-    /*round egeds */
+    padding-top: 92.5px;
     border-radius: 30px;
 }
 
@@ -279,10 +273,12 @@
 }
 
 .active1 {
-    background-color: black;
+    color: white!important;
+    background-color: #742f37;
+    border-radius: 30px;
 }
 
-#text {
+.ttext {
     display: none;
 }
 
