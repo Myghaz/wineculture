@@ -22,7 +22,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Categoria</label>
                     <input class="form-control" id="exampleFormControlSelect1" name="categoria"
-                        value="{{ old('categoria', $pergunta->categoria) }}">
+                        value="{{ old('categoria', $pergunta->categoria->categoria) }}">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Resposta</label>

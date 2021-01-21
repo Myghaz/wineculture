@@ -17,7 +17,7 @@
                 <div class="col-xl-3 col-sm-6">
                     <div class="card card-mini mb-4">
                         <div class="card-body cartao">
-                            <h2 class="mb-1">{{ $totalcategorias }}</h2>
+                            <h2 class="mb-1"></h2>
                             <p>Categorias</p>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                                             <td onclick="window.location.href = '{{ route('faq.show', ['pergunta' => $pergunta]) }}';"
                                                 class="tdhover">{{ $pergunta->resposta }}</td>
                                             <td onclick="window.location.href = '{{ route('faq.show', ['pergunta' => $pergunta]) }}';"
-                                                class="tdhover">{{ $pergunta->categoria }}</a></td>
+                                                class="tdhover">{{ $pergunta->categoria->categoria }}</a></td>
                                             <td class="tdhover">
                                                 <a href="{{ route('faq.show', ['pergunta' => $pergunta]) }}"
                                                     class="btn btn-xs btn-success btn-p"><i

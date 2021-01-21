@@ -1,55 +1,45 @@
 @extends ('layouts.backend.admin')
-@section('title', 'Contactos')
+@section('title', 'Categorias FAQ')
 
 @section('content')
     <div class="content-wrapper">
         <div class="content">
-            <!-- Top Statistics -->
-            <div class="row">
-                <div class="col-xl-3 col-sm-6">
-                    <div class="card card-mini mb-4">
-                        <div class="card-body cartao">
-                            <h2 class="mb-1">{{ $totalmensagens }}</h2>
-                            <p>Total de Perguntas</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-12">
                     <!-- Recent Order Table -->
                     <div class="card card-table-border-none" id="users">
                         <div class="card-header justify-content-between">
-                            <h2>Mensagens</h2>
+                            <h2>Categorias de Perguntas</h2>
                         </div>
                         <div class="card-body pt-0 pb-5">
-                            <table id="tablecontactos" class="ui celled table" style="width:100%">
+                            <table id="tablecategoriaFAQ" class="ui celled table" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th class="d-none d-lg-table-cell">Nome</th>
-                                        <th class="d-none d-lg-table-cell">Assunto</th>
-                                        <th class="d-none d-lg-table-cell">Mensagem</th>
+                                        <th class="d-none d-lg-table-cell">Categoria</th>
+                                        <th class="d-none d-lg-table-cell">Descrição</th>
                                         <th class="d-none d-lg-table-cell">Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($mensagens as $mensagem)
+                                    @foreach ($categorias as $categoria)
                                         <tr id="trv">
-                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';" class="tdhover">
-                                                {{ $mensagem->name }}
+                                            <td onclick="window.location.href = '{{ route('categoriasFAQ.show', ['categoria' => $categoria]) }}';" class="tdhover">
+                                                {{ $categoria->categoria }}
                                             </td>
-                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';" class="tdhover">
-                                                {{ $mensagem->assunto }}
+                                            <td onclick="window.location.href = '{{ route('categoriasFAQ.show', ['categoria' => $categoria]) }}';" class="tdhover">
+                                                {{ $categoria->descricao }}
                                             </td>
-                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';" class="tdhover">
-                                                {{ $mensagem->mensagem }}
-                                            </td>
+
                                             <td class="tdhover">
-                                                <a href="{{ route('contactos.show', $mensagem) }}" class="btn btn-xs btn-success btn-p"><i
+                                                <a href="{{ route('categoriasFAQ.show', $categoria) }}"
+                                                    class="btn btn-xs btn-success btn-p"><i
                                                         class="fas fa-eye fa-xs"></i></a>
+                                                <a href="{{ route('categoriasFAQ.edit', $categoria) }}"
+                                                    class="btn btn-xs btn-warning btn-p"><i
+                                                        class="fas fa-pen fa-xs"></i></a>
                                                 <button type="button" class="btn btn-xs btn-danger btn-p"
                                                     data-toggle="modal" data-target="#deleteConfirmModal"
-                                                    data-route="{{ route('contactos.destroy', $mensagem) }}"><i
+                                                    data-route="{{ route('categoriasFAQ.destroy', $categoria) }}"><i
                                                         class="fas fa-trash fa-xs" data-toggle="tooltip"
                                                         data-placement="top" title="Eliminar"></i></button>
                                             </td>
@@ -63,7 +53,7 @@
             </div>
         </div>
     </div>
-    <script src="{{ asset('assets\js\paginas\backend\contactos.js') }}"></script>
+    <script src="{{ asset('assets\js\paginas\backend\categoriaFAQ.js') }}"></script>
     <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">

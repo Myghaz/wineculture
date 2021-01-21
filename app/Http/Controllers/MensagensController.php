@@ -76,9 +76,9 @@ class MensagensController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Contactos $mensagem)
     {
-        //
+        return view('paginas.backend.contactos.show', compact('mensagem'));
     }
 
     /**

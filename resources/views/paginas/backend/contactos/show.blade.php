@@ -1,5 +1,5 @@
 @extends ('layouts.backend.admin')
-@section('title', 'FAQ')
+@section('title', 'Contactos')
 
 @section('content')
     <div class="content-wrapper">
@@ -14,19 +14,19 @@
             <div class="form-group">
                 <label for="formGroupExampleInput">Pergunta</label>
                 <input readonly class="form-control" type="text" class="form-control" name="pergunta"
-                    id="formGroupExampleInput" value="{{ $pergunta->pergunta }}">
+                    id="formGroupExampleInput" value="{{ $mensagem->name }}">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Categoria</label>
+                <label for="exampleFormControlSelect1">Assunto</label>
                 <input readonly class="form-control" class="form-control" id="exampleFormControlSelect1" name="categoria"
-                    value="{{ $pergunta->categoria->categoria }}">
+                    value="{{ $mensagem->assunto }}">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Resposta</label>
-                <textarea readonly class="form-control" style="height:200px" id="exampleFormControlTextarea1" rows="3"
-                    value="" name="resposta">{!!  $pergunta->resposta !!}</textarea>
+                <label for="exampleFormControlTextarea1">Mensagem</label>
+                <textarea readonly class="form-control" style="height:140px" id="exampleFormControlTextarea1" rows="3"
+                    value="" name="resposta">{{ $mensagem->mensagem }}</textarea>
             </div>
-            <a href="{{ route('faq.edit', $pergunta) }}" class="btn btn-xs btn-warning btn-p">Editar Pergunta</a>
+            <a href="" class="btn btn-xs btn-warning btn-p">Responder a Mensagem</a>
         </div>
     </div>
 @endsection

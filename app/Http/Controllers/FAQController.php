@@ -16,8 +16,7 @@ class FAQController extends Controller
     {
         $perguntas = Perguntas::all();
         $totalperguntas = Perguntas::all('id')->count();
-        $totalcategorias = Perguntas::distinct('categoria')->count();
-        return view('paginas.backend.faq.index', compact('perguntas', 'totalperguntas', 'totalcategorias'));
+        return view('paginas.backend.faq.index', compact('perguntas', 'totalperguntas'));
     }
 
     /**
@@ -44,11 +43,6 @@ class FAQController extends Controller
                 'pergunta' => 'required',
                 'categoria' => 'required',
                 'resposta' => 'required'
-            ],
-            [
-                'pergunta' => 'Campo pergunta não ficou preenchido',
-                'categoria' => 'Campo categoria não ficou preenchido',
-                'resposta' => 'Campo resposta não ficou preenchido'
             ]
         );
         $pergunta = new Perguntas();
@@ -93,11 +87,6 @@ class FAQController extends Controller
                 'pergunta' => 'required',
                 'categoria' => 'required',
                 'resposta' => 'required'
-            ],
-            [
-                'pergunta' => 'Campo pergunta não ficou preenchido',
-                'categoria' => 'Campo categoria não ficou preenchido',
-                'resposta' => 'Campo resposta não ficou preenchido'
             ]
         );
         $pergunta->update($fields);
@@ -114,7 +103,6 @@ class FAQController extends Controller
      */
     public function destroy(Request $request, Perguntas $pergunta)
     {
-        @dd($pergunta);
         $pergunta->delete($pergunta);
         return redirect()->route('faq.index')->with('success', 'Pergunta removida com sucesso', compact('pergunta'));
     }

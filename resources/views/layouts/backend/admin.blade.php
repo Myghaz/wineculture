@@ -140,6 +140,17 @@
                                             <span class="nav-text">Inserir Pergunta</span>
                                         </a>
                                     </li>
+                                    <hr style="border-top: 1px solid rgba(255,255,255,0.3); width:70%; margin-right:25px; ">
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('categoriasFAQ.index') }}">
+                                            <span class="nav-text">Categorias</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('categoriasFAQ.create') }}">
+                                            <span class="nav-text">Inserir Categoria</span>
+                                        </a>
+                                    </li>
                                 </div>
                             </ul>
                         </li>

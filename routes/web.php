@@ -12,6 +12,7 @@ use App\Http\Controllers\VinhosController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MensagensController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\CategoriaFAQController;
 
 
 /////         Páginas Frontend       /////
@@ -95,6 +96,8 @@ Route::middleware('auth', 'verified')->prefix('admin')->group(function () {
         Route::resource('users', UsersController::class);
 
         Route::resource('contactos', MensagensController::class)->parameters(['contactos' => 'mensagem']);
+
+        Route::resource('categoriasFAQ', CategoriaFAQController::class)->parameters(['categoriasFAQ' => 'categoria']);
 });
 
 
