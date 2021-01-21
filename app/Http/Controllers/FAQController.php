@@ -85,7 +85,13 @@ class FAQController extends Controller
      */
     public function update(Request $request, Perguntas $pergunta)
     {
-        $pergunta->update($request->all());
+        $fields = $request->validate(
+            [
+                'pergunta' => 'required',
+                'resposta' => 'required'
+            ]
+        );
+        $pergunta->update($fields);
         $pergunta->save();
         return redirect()->route('faq.index')
             ->with('success', 'Pergunta foi editada com sucesso', compact('pergunta'));
