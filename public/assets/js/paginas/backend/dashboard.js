@@ -1,3 +1,4 @@
+
 $(".media-left").css("display", "none");
 $(".media-right").css("display", "none");
 $(document).ready(function () {
@@ -773,7 +774,3 @@ $("#btnprods_wp-rep").click(function () {
     $($.fn.dataTable.tables(true)).DataTable()
         .columns.adjust();
 });
-
-
-//////// Operações Chat ////////
-

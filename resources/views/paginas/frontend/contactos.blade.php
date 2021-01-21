@@ -68,7 +68,4 @@
             </form>
         </div>
     </div>
-@section('javascript')
-    <script src="{{ URL::asset('assets/js/paginas/frontend/contactos.js') }}"></script>
-@endsection
 @endsection

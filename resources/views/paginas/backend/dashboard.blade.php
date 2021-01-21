@@ -603,17 +603,14 @@
 
   </div>
   <script>
-    
     $.ajaxSetup({
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       }
     });
-
     $(".btn-submit").click(function(e) {
       var id = $(this).attr("id");
       e.preventDefault();
-
       mensagem = $("input[name=mensagem" + id + "]").val();
       id_destino = $("input[name=id_destino" + id + "]").val();
       $.ajax({
@@ -625,22 +622,20 @@
         },
         success: function(response) {
           const d = new Date()
-          var test1= new Date(d.getTime() - d.getTimezoneOffset() * 60 * 1000).toISOString().split('T')[0]
-          var datam =Object(response.msg)[Object(response.msg).length-1].created_at;
-          var mensagem =Object(response.msg)[Object(response.msg).length-1].mensagem;
+          var test1 = new Date(d.getTime() - d.getTimezoneOffset() * 60 * 1000).toISOString().split('T')[0]
+          var datam = Object(response.msg)[Object(response.msg).length - 1].created_at;
+          var mensagem = Object(response.msg)[Object(response.msg).length - 1].mensagem;
           datam = new Date(datam);
           var data = moment(datam).format('DD-MM-YYYY hh:mm');
           if (response) {
-
-            $( ".simplebar-content" ).append('<div class="media media-chat media-right chatact-' +id+'"><div class="media-body"><p class="message">'+mensagem+'</p> <div class="date-time">'+data+'</div> </div>@if (Auth::user()->img == "Sem Imagem")<img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">@else<img class="rounded-circle ml-3" src="/assets/img/users/{{Auth::user()->img}}" alt="Image">@endif</div>');
-
+            $(".simplebar-content").append('<div class="media media-chat media-right chatact-' + id + '"><div class="media-body"><p class="message">' + mensagem + '</p> <div class="date-time">' + data + '</div> </div>@if (Auth::user()->img == "Sem Imagem")<img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">@else<img class="rounded-circle ml-3" src="/assets/img/users/{{Auth::user()->img}}" alt="Image">@endif</div>');
             $("#" + id)[0].reset();
           }
         },
       });
     })
   </script>
-   <script> 
+  <script>
     var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};
     var totalUsersMar = {{$totalUsersMar}};
