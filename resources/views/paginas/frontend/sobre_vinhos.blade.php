@@ -14,9 +14,9 @@
             <div class="all2">
 
                 <div class="sidenav1">
-                    <a class="tab" onclick="toggle('one')">História do Vinho</a>
+                    <a class="tab active1" onclick="toggle('one')">História do Vinho</a>
                     <a class="tab" onclick="toggle('two')">Classificação dos Vinhos</a>
-                    <a class="tab"  onclick="toggle('three')">O processo de produção e fermentação</a>
+                    <a class="tab" onclick="toggle('three')">O processo de produção e fermentação</a>
                     <a class="tab" onclick="toggle('four')">Degustação</a>
                     <a class="tab" onclick="toggle('five')">Armazenamento</a>
                     <a class="tab" onclick="toggle('six')">Produção</a>

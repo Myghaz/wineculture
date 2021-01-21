@@ -1,4 +1,5 @@
 var holder = document.querySelector(".holder");
+holder.setAttribute('dir', 'one');
 
 function toggle(val) {
     holder.setAttribute('dir', val);
