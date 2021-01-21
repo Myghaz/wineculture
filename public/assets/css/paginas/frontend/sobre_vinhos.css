@@ -244,9 +244,11 @@
     margin-left: 25px;
     min-height: 782px;
 }
-.holder div{
+
+.holder div {
     animation: 0.5s ease-out 0s 1 slideInFromLeft;
 }
+
 @keyframes slideInFromLeft {
     0% {
         transform: translateY(10%);
@@ -255,6 +257,7 @@
         transform: translateY(0);
     }
 }
+
 .mainTXT {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -303,6 +306,12 @@ button {
     box-sizing: border-box;
 }
 
+a:hover {
+    background-color: rgba(116, 47, 55, 0.3);
+    border-radius: 30px;
+}
+
 a:active {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(116, 47, 55, 0.7);
+    border-radius: 30px;
 }
