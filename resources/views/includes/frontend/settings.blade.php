@@ -1,5 +1,5 @@
 
-<span onclick="switchTheme()" id="toggle" class="toggle"></span>
+<span onclick="switchTheme()" id="toggledark" class="toggledark"></span>
 <span class="wave"></span>
 @if (Auth::check())
 <div class="defs">
