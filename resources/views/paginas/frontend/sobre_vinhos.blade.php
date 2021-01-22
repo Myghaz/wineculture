@@ -14,15 +14,15 @@
             <div class="all2" >
 
                 <div class="sidenav1 sticky-top" >
-                    <a class="tab active1" onclick="toggle('one')">História do Vinho</a>
-                    <a class="tab" onclick="toggle('two')">Classificação dos Vinhos</a>
-                    <a class="tab" onclick="toggle('three')">O processo de produção e fermentação</a>
-                    <a class="tab" onclick="toggle('four')">Degustação</a>
-                    <a class="tab" onclick="toggle('five')">Armazenamento</a>
-                    <a class="tab" onclick="toggle('six')">Produção</a>
-                    <a class="tab" onclick="toggle('seven')">Consumo</a>
-                    <a class="tab" onclick="toggle('eight')">Copos e garrafas</a>
-                    <a class="tab" onclick="toggle('nine')">Culinária</a>
+                    <a class="tab active1" onclick="togglereadread('one')">História do Vinho</a>
+                    <a class="tab" onclick="toggleread('two')">Classificação dos Vinhos</a>
+                    <a class="tab" onclick="toggleread('three')">O processo de produção e fermentação</a>
+                    <a class="tab" onclick="toggleread('four')">Degustação</a>
+                    <a class="tab" onclick="toggleread('five')">Armazenamento</a>
+                    <a class="tab" onclick="toggleread('six')">Produção</a>
+                    <a class="tab" onclick="toggleread('seven')">Consumo</a>
+                    <a class="tab" onclick="toggleread('eight')">Copos e garrafas</a>
+                    <a class="tab" onclick="toggleread('nine')">Culinária</a>
                 </div>
 
                 <!-- Page content -->
@@ -65,7 +65,7 @@
                                             alguns investimentos de melhoria da exploração ou aquisição de património.</p>
                                     </span>
                                     <div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggleread">Read More</button>
                                     </div>
                                 </div>
 
@@ -293,7 +293,7 @@
                                         </p>
                                     </span>
                                     <div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggleread">Read More</button>
                                     </div>
                                 </div>
                             </div>
@@ -604,7 +604,7 @@
                                         A maioria dos vinhos é vendida em garrafas de vidro e seladas com rolhas de cortiça. Recentemente alguns produtores de vinho vem buscando alternativas como tampas atarrachantes ou rolhas sintéticas, não muito bem vistas pela maioria. É consenso entre
                                         os grandes produtores, leia-se "os melhores vinhos", o uso das rolhas de cortiça, especialmente as produzidas em Portugal, pois ainda é tido como o produto mais adequado.
                                     </p><span id="dots">...</span><span id="more">
-                                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu
+                                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggleread</code> ID which will toggleread the menu
                                             when clicked.
                                         </p>
                                     </span><button onclick="myFunction()" id="myBtn1">Read more</button>

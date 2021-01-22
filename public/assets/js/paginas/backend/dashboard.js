@@ -552,7 +552,7 @@ $(document).ready(function () {
 
     $('#tableausers').dataTable({
         dom: 'lBfrtip',
-        "scrollY": "350px",
+        "scrollY": "850px",
         "scrollCollapse": true,
         "autoWidth": true,
         "columns": [{
@@ -592,7 +592,7 @@ $(document).ready(function () {
 
     $('#tableaprodutores').dataTable({
         dom: 'lBfrtip',
-        "scrollY": "350px",
+        "scrollY": "850px",
         "scrollCollapse": true,
         "autoWidth": true,
         "columns": [{

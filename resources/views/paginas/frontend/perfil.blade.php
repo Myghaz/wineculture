@@ -85,7 +85,7 @@
                         </div>
                     </div>
                     <div style="background-color: white;" class="card-body">
-                        <form action="{{route('perfil_frontend_store')}}" method="POST">
+                        <form action="" method="POST">
                             {{csrf_field()}}
                             <h6 class="heading-small text-muted mb-4">Informação do Utilizador</h6>
                             <div class="pl-lg-4">
@@ -114,7 +114,6 @@
                                 </div>
                             </div>
                             <hr class="my-4">
-                            <!-- Address -->
                             <h6 class="heading-small text-muted mb-4">Outros Dados</h6>
                             <div class="pl-lg-4">
                                 <div class="row">

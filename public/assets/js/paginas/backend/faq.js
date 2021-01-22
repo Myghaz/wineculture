@@ -139,6 +139,7 @@ $(document).ready(function() {
                 targets: [3],
                 orderable: false,
                 targets: [0, 1],
+                
                 render: function(data, type) {
                     return type === "display" && data.length > 10
                         ? data.substr(0, 40) + "…"
