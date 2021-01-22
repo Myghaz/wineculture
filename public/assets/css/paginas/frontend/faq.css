@@ -16,22 +16,38 @@ img.banner {
     line-height: 60px;
     padding-top: 90px;
     margin-top: 70px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
 }
 
-.container-fluid a:link, .container-fluid a:visited, .container-fluid a:hover, .container-fluid a:active {
+.container-fluid a:link,
+.container-fluid a:visited,
+.container-fluid a:hover,
+.container-fluid a:active {
     color: #34141c;
 }
 .categoria {
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
     line-height: 30px;
     color: #34141c;
+    margin-left: -6px;
+    font-weight: bolder;
 }
 
-#Conta h1, #Encomenda h1, #Pagamento h1{
+.pergunta {
+    margin-left: -15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #34141c;
+    font-weight: 500;
+}
+
+#Conta h1,
+#Encomenda h1,
+#Pagamento h1 {
     margin: 10px 0px;
-    padding-top: 75px;
 }
 
 .btn {
@@ -48,23 +64,33 @@ img.banner {
     margin: 25px 40px 25px 40px;
 }
 
+.resposta {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 991px) {
     .categoria {
-        margin-top: 0px;
-        margin-left: 20px;
-    }
-
-    .pergunta {
-        font-size: 7pt;
-        margin-left: -34px;
+        padding: 10px 0px 0px 0px;
+        font-size: 27px;
     }
 
     .resposta {
-        margin-left: -23px;
+        margin-bottom: 9px;
     }
 
-    #Conta h1, #Encomenda h1, #Pagamento h1{
-        margin-left: -3px;
-        padding-top: 5px;
+    .resposta1 {
+        font-size: 15px;
+    }
+
+    .pergunta {
+        font-size: 10px;
+        margin-left: -15px;
+    }
+
+    #Conta h1,
+    #Encomenda h1,
+    #Pagamento h1 {
+        margin: 10px 0px;
     }
 }

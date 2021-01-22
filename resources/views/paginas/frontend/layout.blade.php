@@ -4,6 +4,7 @@
 <head>
     <title>WineCulture - @yield('title')</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/icofont/icofont.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/footer.css') }}">
@@ -31,6 +32,7 @@
     </footer>
     <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/layouts/frontend/settings.js') }}"></script>
     @yield("javascript")
 </body>
 <script>

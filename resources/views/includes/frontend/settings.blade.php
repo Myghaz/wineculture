@@ -1,6 +1,7 @@
-@if (Auth::check())
+
 <span onclick="switchTheme()" id="toggle" class="toggle"></span>
 <span class="wave"></span>
+@if (Auth::check())
 <div class="defs">
     <div class="pie pie1" onclick="document.body.classList.remove('active')">
         <a href="/perfil">

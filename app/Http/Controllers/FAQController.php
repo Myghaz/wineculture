@@ -20,6 +20,13 @@ class FAQController extends Controller
         return view('paginas.backend.faq.index', compact('perguntas', 'totalperguntas'));
     }
 
+    public function indexFrontend()
+    {
+        $perguntas = Perguntas::all();
+        $categorias = CategoriaPergunta::all();
+        return view('paginas.frontend.faq', compact('perguntas', 'categorias'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
