@@ -44,8 +44,6 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
     <!--SCRIPTS-->
     <script>
         var shiftWindow = function() {
