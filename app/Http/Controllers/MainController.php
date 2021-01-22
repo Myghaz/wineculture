@@ -97,4 +97,8 @@ class MainController extends Controller
         );
         return view('paginas.frontend.perfil_publico', compact(['array']));
     }
+
+    public function termos_condicoes(){
+        return view('paginas.frontend.termos_condicoes');
+    }
 }

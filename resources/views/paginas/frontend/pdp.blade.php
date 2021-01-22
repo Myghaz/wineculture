@@ -7,14 +7,7 @@
 @endsection
 
 @section("content")
-
-    <div class="container-pdp">
-        <div class="centered">
-            <h1>Politica de Privacidade</h1>
-        </div>
-    </div>
-
-
+<div class="principal_pdp">
     <h2>Política Privacidade</h2>
     <p>
         A sua privacidade é importante para nós. É política do WineCulture respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href=https://www.wineculture.pt/>WineCulture</a>, e outros sites que possuímos
@@ -137,6 +130,7 @@
         Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.
     </p>
     <p>
-        Esta política é efetiva a partir de <strong>October</strong>/<strong>2020</strong>.
+        Esta política é efetiva a partir de <strong>Outubro</strong> de <strong>2020</strong>.
     </p>
+</div>
 @endsection
