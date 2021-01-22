@@ -29,12 +29,12 @@ function switchTheme() {
 }
 
 if (getCookie('theme') == "dark") {
-  document.getElementById("toggle").classList.add('animate');
-  document.getElementById("toggle").classList.add("active");
+  document.getElementById("toggledark").classList.add('animate');
+  document.getElementById("toggledark").classList.add("active");
   document.querySelector('.wave').classList.toggle('active');
   document.documentElement.classList.toggle('theme-dark');
 }
-document.querySelector('.toggle').addEventListener('click', function () {
+document.querySelector('.toggledark').addEventListener('click', function () {
   this.classList.add('animate');
   setTimeout(() => {
     this.classList.toggle('active');

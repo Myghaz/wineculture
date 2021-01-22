@@ -1,7 +1,7 @@
 var holder = document.querySelector(".holder");
 holder.setAttribute('dir', 'one');
 
-function toggleread(val) {
+function toggle(val) {
     holder.setAttribute('dir', val);
 }
 $(".sidenav1 a").on('click', function (event) {
@@ -12,7 +12,7 @@ $(".sidenav1 a").on('click', function (event) {
 });
 
 
-$(".toggleread").on('click', function (e) {
+$(".toggle").on('click', function (e) {
     var elem = $(this).text();
     if (elem == "Read More") {
         //Stuff to do when btn is in the read more state
