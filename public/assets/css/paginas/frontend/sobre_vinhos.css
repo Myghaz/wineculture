@@ -291,7 +291,7 @@
     width: 166.23px;
 }
 
-button {
+.toggle {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -300,18 +300,33 @@ button {
     border: none;
     padding: 8px;
     font-size: 20px;
-    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    background: rgba(116, 47, 55);
     color: white;
     font-family: cursive;
     box-sizing: border-box;
 }
 
-a:hover {
+.toggle:hover {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    font-size: 20px;
+    background: rgba(116, 47, 55, 0.7);
+    color: white;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+
+.sidenav1 a:hover {
     background-color: rgba(116, 47, 55, 0.3);
     border-radius: 30px;
 }
 
-a:active {
+.sidenav1 a:active {
     background-color: rgba(116, 47, 55, 0.7);
     border-radius: 30px;
 }
