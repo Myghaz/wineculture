@@ -68,9 +68,10 @@ class ReceitasController extends Controller
         $receita->id_categoria = $request->id_categoria;
         $receita->id_user = Auth::user()->id;
 
-        $path = Storage::putFileAs('public/receitas', $request->file('img'), 'receitas_' . time() . '.' . $request->file('img')->extension());
-
-        $receita->foto = $path;
+        if ($request->hasFile('img')) {
+            $photo_path = $request->file('img')->store('public/receitas');
+            $receita->foto = basename($photo_path);
+        }
 
         $receita->save();
 
@@ -113,6 +114,14 @@ class ReceitasController extends Controller
     public function update(Request $request, receitas $receita)
     {
         $receita->update($request->all());
+        if ($request->hasFile('img')) {
+            if (!empty($receita->foto)) {
+                Storage::disk('public')->delete('receitas/' . $receita->foto);
+            }
+            $photo_path = $request->file('img')->store('public/receitas');
+            $receita->foto = basename($photo_path);
+        }
+        
         $receita->save();
         return redirect()->route('receitas.index')
             ->with('success', 'Receita foi editada com sucesso', compact('receita'));

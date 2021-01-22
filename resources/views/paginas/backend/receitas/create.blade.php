@@ -40,7 +40,7 @@
 
             <div class="form-group">
                 <label for="exampleFormControlFile1">Submeter Imagem</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1"  name="img">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
             </div>
 
             <button type="submit" class="btn btn-success display-4">Submeter</button>

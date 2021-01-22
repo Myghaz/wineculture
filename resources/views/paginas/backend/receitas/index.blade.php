@@ -25,7 +25,7 @@
                             <tbody>
                                 @foreach ($receitas as $receita)
                                 <tr>
-                                <td class="d-none d-lg-table-cell"><img src="{{ Storage::url($receita->foto) }}" class="rounded-circle w-45" style="width: 60px; height: 60px; object-fit: cover;"></td>
+                                <td class="d-none d-lg-table-cell"><img src="{{asset('storage/receitas/'.$receita->foto) }}" class="rounded-circle w-45" style="width: 60px; height: 60px; object-fit: cover;"></td>
                                     <td>
                                         <a class="text-dark" href="">{{ $receita->nome }}</a>
                                     </td>

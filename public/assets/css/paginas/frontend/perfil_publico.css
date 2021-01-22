@@ -46,7 +46,7 @@ header.header-pp p {
 
 .timeline::before {
     content: '';
-    background: #742f379c;
+    background: #742f3770;
     width: 5px;
     height: 95%;
     position: absolute;
@@ -146,6 +146,9 @@ header.header-pp p {
 
 .timeline-card p {
     padding: 0 20px;
+    line-height: 30px;
+    height: auto;
+    padding-bottom: 5px;
 }
 
 .timeline-card a {
