@@ -20,17 +20,17 @@ class ReceitasController extends Controller
      */
     public function index()
     {
-            $receitas = receitas::all();
-            $category_wines = category_wine::all();
-            $Users = User::all();
-            return view('paginas.backend.receitas.index', compact('receitas', 'category_wines', 'Users'));
+        $receitas = receitas::all();
+        $category_wines = category_wine::all();
+        $Users = User::all();
+        return view('paginas.backend.receitas.index', compact('receitas', 'category_wines', 'Users'));
     }
     public function indexFrontend()
     {
-            $receitas = receitas::all();
-            $category_wines = category_wine::all();
-            $Users = User::all();
-            return view('paginas.frontend.receitas', compact('receitas', 'category_wines', 'Users'));
+        $receitas = receitas::all();
+        $category_wines = category_wine::all();
+        $Users = User::all();
+        return view('paginas.frontend.receitas', compact('receitas', 'category_wines', 'Users'));
     }
 
     /**
@@ -61,14 +61,14 @@ class ReceitasController extends Controller
                 'nome' => 'Campo nome não ficou preenchido',
                 'descricao' => 'Campo descrição não ficou preenchido',
             ]
-            );
+        );
 
         $receita = new Receitas();
         $receita->fill($fields);
         $receita->id_categoria = $request->id_categoria;
         $receita->id_user = Auth::user()->id;
 
-        $path= Storage::putFileAs('public/receitas', $request->file('img'), 'receitas_' . time() . '.' . $request->file('img')->extension());
+        $path = Storage::putFileAs('public/receitas', $request->file('img'), 'receitas_' . time() . '.' . $request->file('img')->extension());
 
         $receita->foto = $path;
 
@@ -100,7 +100,7 @@ class ReceitasController extends Controller
     public function edit(Receitas $receita)
     {
         $category_wines = category_wine::all();
-        return view('paginas.backend.receitas.edit', compact('receita' , 'category_wines'));
+        return view('paginas.backend.receitas.edit', compact('receita', 'category_wines'));
     }
 
     /**
@@ -115,7 +115,7 @@ class ReceitasController extends Controller
         $receita->update($request->all());
         $receita->save();
         return redirect()->route('receitas.index')
-        ->with('success', 'Receita foi editada com sucesso', compact('receita'));
+            ->with('success', 'Receita foi editada com sucesso', compact('receita'));
     }
 
     /**

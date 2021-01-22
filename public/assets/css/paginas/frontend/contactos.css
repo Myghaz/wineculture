@@ -1,22 +1,45 @@
-html{
-    --background: #FFF;
+html {
+    --background: #fff;
     --color: black;
-    --btn-background: #27000A;
+    --btn-background: #27000a;
     --btn-color: #fff;
-	--inputs: #fff;
+    --inputs: #fff;
     --placeholder: rgb(107, 107, 107);
-
 }
-.theme-dark  {
+.theme-dark {
     --background: #212121;
-    --color: #FFF;
-    --btn-background:black;
+    --color: #fff;
+    --btn-background: black;
     --btn-color: #fff;
     --inputs: #2e2e2e;
     --placeholder: #fff;
 }
 
-.container{
+.cenas input {
+    border: none;
+    border-bottom: 1px solid black !important;
+    width: 95%;
+    color: #27000a;
+    text-align: left;
+    font-size: 21px;
+    background-color: var(--inputs);
+    font-weight: 100;
+    margin-bottom: 55px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0 !important;
+}
+
+.caralho {
+    border: none;
+    width: 694px;
+    border-bottom: 1px solid black;
+}
+
+.caralho::placeholder {
+    font-size: 20px;
+}
+
+.container {
     margin-top: 70px;
     margin-bottom: 70px;
     animation: 0.5s ease-out 0s 1 slideInFromLeft;
@@ -32,7 +55,7 @@ html{
 }
 .formulario {
     background-color: var(--background);
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contactos {
@@ -42,35 +65,60 @@ html{
 .icon {
     font-size: 35px;
     color: var(--color);
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.row{
-    color:  var(--color);
-    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+.row {
+    color: var(--color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-input.form-control, textarea.form-control{
+input.form-control,
+textarea.form-control {
     background-color: var(--inputs);
     color: var(--color);
-    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 ::placeholder {
-	color: var(--placeholder);
-	transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
-  }
-.wrapper .btn{
-    border-radius: 0 0 5px 0;
-    background-color:  var(--btn-background);
-    color:  var(--btn-color);
-    border-radius: 40px;
-    width: 90%;
-    height: 40px;
-    font-size: 20px;
-    line-height: 20px;
-    margin:0 auto;
-    display:block;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    color: var(--placeholder);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn:hover{
+
+.cenas button.form-btn.dx {
+    right: 0;
+    background-color: #27000a;
+    color: #fff;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cenas button.form-btn.dx:hover {
     opacity: 0.7;
+}
+
+.cenas button.form-btn {
+    position: relative;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    border: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 40px !important;
+    margin: auto;
+    display: block;
+}
+
+#campoAssunto,
+#campoNome,
+#campoEmail,
+#campoMensagem {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 14pt !important;
+    display: unset !important;
+    padding: 5px !important;
 }

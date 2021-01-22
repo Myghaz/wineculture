@@ -24,7 +24,7 @@ Route::get('/sobre', [MainController::class, 'sobre'])->name('sobre');
 
 Route::get('/sobre_vinhos', [MainController::class, 'sobre_vinhos'])->name('sobre_vinhos');
 
-Route::get('/faq', [MainController::class, 'faq'])->name('faq');
+Route::get('/faq', [FAQController::class, 'indexFrontend'])->name('faq');
 
 Route::get('/politica_de_privacidade', [MainController::class, 'pdp'])->name('pdp');
 

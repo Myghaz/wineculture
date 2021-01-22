@@ -36,36 +36,37 @@
                     <a class="icon" href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
                 </div>
             </div>
-            <form method="POST" role="form" id="form-registo" class="col-md-8"
+            <form method="POST" role="form" id="form-registo" class="col-md-8 cenas"
                 action="{{ route('contactos_frontend_store') }}">
                 @csrf
                 <div>
                     <div class="form-group">
-                        <label for="primeiroNome">*Nome:</label>
-                        <input type="text" name="name" class="form-control" value="{{ old('name') }}" id="campoNome" />
+                        <input type="text" name="name" class="form-control" value="{{ old('name') }}" id="campoNome"
+                            placeholder="&#xf007;&nbsp; Nome" />
                     </div>
 
                     <div class="form-group">
-                        <label for="email">*Email:</label>
-                        <input type="text" name="email" class="form-control" value="{{ old('email') }}" id=" campoEmail"
-                            placeholder="exemplo@email.com" />
+                        <input type="text" name="email" class="form-control" value="{{ old('email') }}" id="campoEmail"
+                            placeholder="&#xf1fa; Email" />
                     </div>
                     <div class="form-group">
-                        <label for="assunto">*Assunto:</label>
                         <input type="text" name="assunto" class="form-control" value="{{ old('assunto') }}"
-                            id="campoAssunto" />
+                            id="campoAssunto" placeholder="&#xf02d; Assunto" />
                     </div>
 
-                    <div class="form-group">
-                        <label for="comment">*Mensagem:</label>
-                        <textarea class="form-control" name="mensagem" rows="5"
-                            id="campoMensagem">{{ Request::old('mensagem') }}</textarea>
+                    <div class="form-group mequie">
+                        <textarea type="text" class="form-control caralho" name="mensagem" rows="5" id="campoMensagem"
+                            placeholder="&#xf0e0; Mensagem">{{ Request::old('mensagem') }}</textarea>
                     </div>
-                    <div class="wrapper">
-                        <input class="btn" type="submit" value="Submit" id="submit" />
+                    <div>
+                        <button class="form-btn dx merda" type="submit">Submeter</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+
+@section('javascript')
+    <script src="{{ URL::asset('assets/js/paginas/frontend/contactos.js') }}"></script>
+@endsection
 @endsection
