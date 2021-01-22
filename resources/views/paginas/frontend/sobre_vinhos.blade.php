@@ -65,7 +65,7 @@
                                             alguns investimentos de melhoria da exploração ou aquisição de património.</p>
                                     </span>
                                     <div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
 
@@ -293,7 +293,7 @@
                                         </p>
                                     </span>
                                     <div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -529,7 +529,7 @@
 
 
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -593,7 +593,7 @@
                                             </li>
                                         </ul>
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -613,7 +613,7 @@
                                             when clicked.
                                         </p>
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -682,7 +682,7 @@
                                             Argentina são os grandes países produtores de vinhos de qualidade, o que levou todo o mercado do continente a também ser mais exigente.
                                         </p>
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -786,7 +786,7 @@
                                             enquanto um barril de Bordeaux de 225 litros corresponde a 50 galões imperiais do mesmo vinho.
                                         </p>
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>

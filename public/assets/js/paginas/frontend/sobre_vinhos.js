@@ -14,14 +14,14 @@ $(".sidenav1 a").on('click', function (event) {
 
 $(".toggle").on('click', function (e) {
     var elem = $(this).text();
-    if (elem == "Read More") {
+    if (elem == "Ver Mais") {
         //Stuff to do when btn is in the read more state
-        $(this).text("Read Less");
+        $(this).text("Ver Menos");
        $(this).parent().parent().find(".ttext").slideDown();
    
     } else {
         //Stuff to do when btn is in the read less state
-        $(this).text("Read More");
+        $(this).text("Ver Mais");
         $(this).parent().parent().find(".ttext").slideUp();
     }
 });
