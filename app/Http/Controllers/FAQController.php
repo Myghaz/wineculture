@@ -50,12 +50,12 @@ class FAQController extends Controller
         $fields = $request->validate(
             [
                 'pergunta' => 'required',
-                'resposta' => 'required'
+                'resposta' => 'required',
+                'categoria_id' => 'required|exists:categoria_perguntas,id'
             ]
         );
         $pergunta = new Perguntas();
         $pergunta->fill($fields);
-        $pergunta->categoria_id = $request->categoria;
         $pergunta->save();
         return redirect()->route('faq.index')->with('success', 'Pergunta adicionada com sucesso', compact('pergunta'));
     }
@@ -95,7 +95,8 @@ class FAQController extends Controller
         $fields = $request->validate(
             [
                 'pergunta' => 'required',
-                'resposta' => 'required'
+                'resposta' => 'required',
+                'categoria_id' => 'required|exists:categoria_perguntas,id'
             ]
         );
         $pergunta->update($fields);
