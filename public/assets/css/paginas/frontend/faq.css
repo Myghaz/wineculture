@@ -19,7 +19,9 @@ img.banner {
     font-size: 25px;
     font-weight: 700;
 }
-
+.container-fluid{
+    background: url(/assets/img/paginas/frontend/back.jpg);
+}
 .container-fluid a:link,
 .container-fluid a:visited,
 .container-fluid a:hover,
