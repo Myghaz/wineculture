@@ -1,41 +1,52 @@
-<link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/footer.css') }}">
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div  href="{{ URL::asset('assets\img\layouts\wineculture_logo_lightmode.png') }}"></div>
+        </div>
 
-<div id="container">
-    <div id="part1">
-        <div id="companyinfo"> <a id="sitelink" href="/">WineCulture</a>
-            <p id="title">Cool and Perfect Snippet code</p>
-            <p id="detail">We create awesome code snippets that will help you in creating your own beautiful site. </p>
+        <div class="col-xs-6 col-md-3">
+          <h6>Páginas Principais</h6>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Loja</a></li>
+            <li><a href="/receitas">Receitas</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/sobre_vinhos">Sobre Vinhos</a></li>
+            <li><a href="/vinhos">Tipos de Vinhos</a></li>
+          </ul>
         </div>
-        <div id="explore">
-            <p class="header">Visit</p>
-            <p class="footer_text"><a href="/">Página Principal</a></p>
-            <p class="footer_text"><a href="/sobre">Sobre Nós</a></p>
-            <p class="footer_text"><a href="/receitas">Loja</a></p>
-            <p class="footer_text"><a href="/blog">Receitas</a></p>
-        </div>
-        <div id="visit">
-            <p class="header">Visit</p>
-            <p class="footer_text"><a href="/vinhos">Vinhos</a></p>
-            <p class="footer_text"><a href="/sobre_vinhos">Sobre Vinhos</a></p>
-            <p class="footer_text"><a href="/">Loja</a></p>
-            <p class="footer_text"><a href="/faq">FAQ</a></p>
-            <p class="footer_text"><a href="/contactos">Contactos</a></p>
 
+        <div class="col-xs-6 col-md-3">
+          <h6>Acesso Rápido</h6>
+          <ul class="footer-links">
+            <li><a href="/sobre">Sobre Nós</a></li>
+            <li><a href="/contactos">Contacte-nos</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/politica_de_privacidade">Politica de Privacidade</a></li>
+            <li><a href="/termos_condicoes">Termos e Condições</a></li>
+          </ul>
         </div>
-        <div id="legal">
-            <p class="header">Legal</p>
-            <p class="footer_text"><a href="#">Termos e Condições</a></p>
-            <p class="footer_text"><a href="/politica_de_privacidade">Politica de Privacidade</a></p>
-        </div>
-        <div id="subscribe">
-            <p class="header">Cotacte-nos</p>
-            <a href="https://www.facebook.com/WineCulture.pt/" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/wineculture.geral/" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-linkedin" ></i></a>
-            <a href="#" target="_blank"><i class="fa fa-github"></i></a>
-        </div>
+      </div>
+      <hr>
     </div>
-    <div id="part2">
-        <p id="txt6"><i> WineCulture &copy; 2021 - All right reserved</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+       <a href="#">WineCulture</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" target="_blank" href="https://www.facebook.com/WineCulture.pt/"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="instagram" target="_blank" href="https://www.instagram.com/wineculture.geral/"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="dribbble" target="_blank" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-</div>
+</footer>
