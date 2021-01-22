@@ -38,5 +38,9 @@ class MainController extends Controller
     public function perfil_publico() {
         return view('paginas.frontend.perfil_publico');
     }
+
+    public function termos_condicoes(){
+        return view('paginas.frontend.termos_condicoes');
+    }
 }
 

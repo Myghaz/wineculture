@@ -14,15 +14,15 @@
             <div class="all2" >
 
                 <div class="sidenav1 sticky-top" >
-                    <a class="tab active1" onclick="togglereadread('one')">História do Vinho</a>
-                    <a class="tab" onclick="toggleread('two')">Classificação dos Vinhos</a>
-                    <a class="tab" onclick="toggleread('three')">O processo de produção e fermentação</a>
-                    <a class="tab" onclick="toggleread('four')">Degustação</a>
-                    <a class="tab" onclick="toggleread('five')">Armazenamento</a>
-                    <a class="tab" onclick="toggleread('six')">Produção</a>
-                    <a class="tab" onclick="toggleread('seven')">Consumo</a>
-                    <a class="tab" onclick="toggleread('eight')">Copos e garrafas</a>
-                    <a class="tab" onclick="toggleread('nine')">Culinária</a>
+                    <a class="tab active1" onclick="toggle('one')">História do Vinho</a>
+                    <a class="tab" onclick="toggle('two')">Classificação dos Vinhos</a>
+                    <a class="tab" onclick="toggle('three')">O processo de produção e fermentação</a>
+                    <a class="tab" onclick="toggle('four')">Degustação</a>
+                    <a class="tab" onclick="toggle('five')">Armazenamento</a>
+                    <a class="tab" onclick="toggle('six')">Produção</a>
+                    <a class="tab" onclick="toggle('seven')">Consumo</a>
+                    <a class="tab" onclick="toggle('eight')">Copos e garrafas</a>
+                    <a class="tab" onclick="toggle('nine')">Culinária</a>
                 </div>
 
                 <!-- Page content -->
@@ -65,7 +65,7 @@
                                             alguns investimentos de melhoria da exploração ou aquisição de património.</p>
                                     </span>
                                     <div class="btn-container">
-                                        <button class="toggleread">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
 
@@ -293,7 +293,7 @@
                                         </p>
                                     </span>
                                     <div class="btn-container">
-                                        <button class="toggleread">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -529,7 +529,7 @@
 
 
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -593,7 +593,7 @@
                                             </li>
                                         </ul>
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -613,7 +613,7 @@
                                             when clicked.
                                         </p>
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -682,7 +682,7 @@
                                             Argentina são os grandes países produtores de vinhos de qualidade, o que levou todo o mercado do continente a também ser mais exigente.
                                         </p>
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
@@ -786,7 +786,7 @@
                                             enquanto um barril de Bordeaux de 225 litros corresponde a 50 galões imperiais do mesmo vinho.
                                         </p>
                                     </span><div class="btn-container">
-                                        <button class="toggle">Read More</button>
+                                        <button class="toggle">Ver Mais</button>
                                     </div>
                                 </div>
                             </div>
