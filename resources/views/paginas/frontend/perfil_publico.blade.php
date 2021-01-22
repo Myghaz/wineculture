@@ -8,7 +8,7 @@
 
 @section("content")
 
-<div class="container">
+
   <header class="header-left">
   </header>
   <main>
@@ -156,7 +156,7 @@
       
           </div>
       </section>
-      </div>
+  
   </main>
 </div>
 @endsection
