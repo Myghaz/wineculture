@@ -17,9 +17,9 @@
     <div class="row portfolio">
         <div class="col-lg-12">
             <ul id="portfolio-flters">
-                <li data-filter="" class="filter-active">Todos</li>
+                <li data-filter="*" class="filter-active filter-tudo filter-button">Todos</li>
                 @foreach ($category_wines as $category_wine)
-                <li data-filter=".receitas-{{$category_wine->id}}">{{$category_wine->nome}}</li>
+                <li class="filter-button" data-filter=".receitas-{{$category_wine->id}}">{{$category_wine->nome}}</li>
                 @endforeach
             </ul>
         </div>
@@ -53,9 +53,49 @@
 @endsection
 
 @section("javascript")
-<script src="{{asset('assets/css/paginas/frontend/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
+
 <script src="{{asset('assets/css/paginas/frontend/vendor/venobox/venobox.min.js') }}"></script>
 <script src="{{asset('assets/css/paginas/frontend/vendor/counterup/counterup.min.js') }}"></script>
 <script src="{{asset('assets/css/paginas/frontend/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 <script src="{{asset('assets/js/paginas/frontend/index.js') }}"></script>
+
+<script>
+    $(document).ready(function() {
+        var targets = $('.portfolio-item'),
+            buttons = $('.filter-button').click(function() {
+                var value = $(this).data('filter');
+                if (value == "*"){
+                    buttons.removeClass('filter-active');
+                }else
+                    $('.filter-tudo').removeClass('filter-active');
+
+                $(this).toggleClass('filter-active');
+
+                var checkedClasses = buttons.filter('.filter-active').toArray().map(function(btn) {
+                    return $(btn).data('filter');
+                }); //create array of filters
+
+                if (checkedClasses.length === 0) {
+                    $('.filter-tudo').addClass('filter-active');
+                    targets.show('1000');
+                } else {
+                    if (value == "*") {
+                        classes = "*";
+                    } else {
+                        var classes = checkedClasses[0];
+                        for (i = 1; i < checkedClasses.length; i++) {
+                            classes += "," + checkedClasses[i];
+                        }
+                    }
+
+                    var selector = classes, //create selector of the combined classes
+
+                        show = targets.filter(selector);
+                    targets.hide().removeClass('aumentar');
+                    show.show().addClass('aumentar');
+                }
+            });
+    });
+</script>
+
 @endsection
