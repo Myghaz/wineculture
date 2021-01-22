@@ -3,7 +3,7 @@ html {
     --color: black;
     --btn-background: #27000a;
     --btn-color: #fff;
-    --inputs: #fff;
+    --inputs: transparent
     --placeholder: rgb(107, 107, 107);
 }
 .theme-dark {
@@ -40,8 +40,6 @@ html {
 }
 
 .container {
-    margin-top: 70px;
-    margin-bottom: 70px;
     animation: 0.5s ease-out 0s 1 slideInFromLeft;
 }
 @keyframes slideInFromLeft {
@@ -69,6 +67,7 @@ html {
 }
 .row {
     color: var(--color);
+    padding-top: 100px!important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

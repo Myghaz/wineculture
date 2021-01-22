@@ -7,9 +7,6 @@ img.banner {
 .bannerrrr {
     margin-top: 20px;
 }
-.main{
-    margin-bottom: 150px;
-}
 .categorias {
     width: 100%;
     line-height: 55px;
@@ -20,12 +17,6 @@ img.banner {
     margin-top: 70px;
     font-size: 25px;
     font-weight: 700;
-}
-.container-fluid{
-    background: url(/assets/img/paginas/frontend/back.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .container-fluid a:link,
 .container-fluid a:visited,

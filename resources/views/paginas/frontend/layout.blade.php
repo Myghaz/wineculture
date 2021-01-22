@@ -25,8 +25,12 @@
     @include('includes.frontend.navbar')
 
     @include('includes.frontend.settings')
-
+<div class="mainnn" style="	background: url(/assets/img/paginas/frontend/back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover; padding-bottom:130px">
     @yield("content")
+    </div>
     <footer>
         @include('includes.frontend.footer')
     </footer>
