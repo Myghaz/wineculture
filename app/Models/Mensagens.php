@@ -16,5 +16,4 @@ class Mensagens extends Model
     public function idenvio() {
         return $this->belongsTo(User::class, 'id_envio');
     }
-    
 }

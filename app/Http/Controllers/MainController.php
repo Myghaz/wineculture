@@ -35,5 +35,8 @@ class MainController extends Controller
     public function pdp() {
         return view('paginas.frontend.pdp');
     }
+    public function perfil_publico() {
+        return view('paginas.frontend.perfil_publico');
+    }
 }
 

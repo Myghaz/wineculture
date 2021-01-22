@@ -29,7 +29,7 @@ Route::get('/faq', [FAQController::class, 'indexFrontend'])->name('faq');
 Route::get('/politica_de_privacidade', [MainController::class, 'pdp'])->name('pdp');
 
 
-
+Route::get('/perfil-publico', [MainController::class, 'perfil_publico'])->name('perfil_publico');
 
 
 //BlogController

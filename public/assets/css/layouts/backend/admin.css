@@ -12682,7 +12682,7 @@ label {
         padding-right: 3.125rem;
     }
 }
-.theadImagem, .theadEliminar, .theadOpções{
+.theadImagem, .theadEliminar, .theadOpções, .theadAções{
     display: none;
 }
 mark {
@@ -12695,6 +12695,7 @@ mark {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
 }
+
 .table tbody img {
     display: block;
     margin-left: auto;

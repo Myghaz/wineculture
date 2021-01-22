@@ -306,12 +306,12 @@ button {
     box-sizing: border-box;
 }
 
-a:hover {
+.sidenav1 a:hover {
     background-color: rgba(116, 47, 55, 0.3);
     border-radius: 30px;
 }
 
-a:active {
+.sidenav1 a:active {
     background-color: rgba(116, 47, 55, 0.7);
     border-radius: 30px;
 }

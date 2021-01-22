@@ -634,6 +634,7 @@
         },
       });
     })
+
   </script>
   <script>
     var totalUsersJan = {{$totalUsersJan}};
