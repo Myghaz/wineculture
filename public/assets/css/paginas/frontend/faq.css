@@ -78,6 +78,13 @@ img.banner {
 
 @media only screen and (max-width: 991px) {
     .categoria {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        line-height: 30px;
+        color: #34141c;
+        margin-left: -10px;
+        font-weight: bolder;
         font-size: 27px;
     }
 
@@ -90,7 +97,10 @@ img.banner {
     }
 
     .pergunta {
+        margin-left: 0px;
+        margin-top: 0px;
         font-size: 10px;
+        margin-bottom: 0px;
         margin-left: -15px;
     }
 
