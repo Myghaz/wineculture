@@ -89,11 +89,11 @@
                         <!-- Blog Menu -->
                         <li @if (Route::currentRouteName() == 'blog.index') class="has-sub active expand" @else class="has-sub" @endif>
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                data-target="#components" aria-expanded="false" aria-controls="components">
+                                data-target="#something" aria-expanded="false" aria-controls="something">
                                 <i class="mdi mdi-pencil-box-multiple"></i>
                                 <span class="nav-text">Blog</span> <b class="caret"></b>
                             </a>
-                            <ul class="collapse" id="components" data-parent="#sidebar-menu">
+                            <ul class="collapse" id="something" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
                                         <a class="sidenav-item-link" href="{{ route('blog.index') }}">
