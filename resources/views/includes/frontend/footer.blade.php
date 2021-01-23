@@ -3,7 +3,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6">
-          <div  href="{{ URL::asset('assets\img\layouts\wineculture_logo_lightmode.png') }}"></div>
+
+            <div class="imgfooter" > </div>
         </div>
 
         <div class="col-xs-6 col-md-3">
