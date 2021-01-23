@@ -20,9 +20,13 @@ class VinhosController extends Controller
     public function vinhos_detalhes($vinho)
     {
         $vinho_det = Vinhos::find($vinho);
+        $vinho_cat = category_wine::find($vinho_det->id_categoria);
+        $vinho_produtor = User::find($vinho_det->id_produtor);
 
         return view('paginas.frontend.vinho_produto', compact([
-            'vinho_det'
+            'vinho_det',
+            'vinho_cat',
+            'vinho_produtor'
         ]));
     }
 	
