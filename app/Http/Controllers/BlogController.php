@@ -101,4 +101,9 @@ class BlogController extends Controller
 
         return redirect()->route('blog.index')->with('success', 'Category successfully deleted', compact('blog'));
     }
+
+    public function create(Blog $blog)
+    {
+        Blog::create($blog->all());
+    }
 }
