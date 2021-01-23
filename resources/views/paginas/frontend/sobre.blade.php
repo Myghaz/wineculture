@@ -3,6 +3,7 @@
 @section('title', 'Sobre')
 
 @section("links")
+
 <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/sobre.css') }}">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 @endsection

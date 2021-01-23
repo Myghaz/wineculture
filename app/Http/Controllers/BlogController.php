@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\User;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
@@ -99,6 +100,40 @@ class BlogController extends Controller
     {
         $blog->delete($blog);
 
-        return redirect()->route('blog.index')->with('success', 'Category successfully deleted', compact('blog'));
+        return redirect()->route('blog.index')->with('success', 'Post successfully deleted', compact('blog'));
+    }
+
+    public function create(Blog $blog)
+    {
+        $categories = Category::all();
+        $id_user_auth = Auth::id();
+        return view('paginas.backend.blog.create', compact('categories', 'id_user_auth'));
+    }
+
+    public function store(Request $request)
+    {
+        $fields = $request->validate(
+            [
+                'id_categoria' => 'required',
+                'titulo'=> 'required',
+        'data' => 'required',
+        'preview' => 'required',
+        'descricao' => 'required',
+        'img' => 'required',
+        'id_user' => 'required',
+
+            ],
+        );
+        $blog = new Blog();
+        $blog->fill($fields);
+
+        if ($request->hasFile('img')) {
+            $photo_path = $request->file('img')->store('public/blog');
+            $blog->img = basename($photo_path);
+        }
+
+        $blog->save();
+
+        return redirect()->route('blog.index')->with('success', 'Post adicionada com sucesso');
     }
 }

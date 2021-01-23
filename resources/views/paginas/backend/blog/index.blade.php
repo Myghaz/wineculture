@@ -19,6 +19,7 @@
             <table id="tabelablog" class="ui celled table" style="width:100%">
               <thead>
                 <tr>
+                  <th class="d-none d-lg-table-cell">Imagem</th>
                   <th class="d-none d-lg-table-cell">Titulo</th>
                   <th class="d-none d-lg-table-cell">Autor</th>
                   <th class="d-none d-lg-table-cell">Data</th>
@@ -30,6 +31,9 @@
               <tbody>
                 <tr>
                   @foreach($blogs as $blog)
+                  <td>
+                    <img src="/storage/blog/{{$blog->img}}" style="width:65px; height:65px; object-fit: cover;  object-position: 0% 90%;" class="rounded-circle w-45" alt=">{{$blog->nome}}">
+                  </td>
                   <td>
                     <a class="text-dark" href="">{{$blog->titulo}}</a>
                   </td>
