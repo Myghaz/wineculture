@@ -54,7 +54,6 @@
 
 .texto {
     height: 55%;
-    z-index: 20;
     position: absolute;
     bottom: 0;
     width: 100%;

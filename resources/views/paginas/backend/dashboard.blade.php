@@ -621,8 +621,6 @@
           id_destino: id_destino
         },
         success: function(response) {
-          const d = new Date()
-          var test1 = new Date(d.getTime() - d.getTimezoneOffset() * 60 * 1000).toISOString().split('T')[0]
           var datam = Object(response.msg)[Object(response.msg).length - 1].created_at;
           var mensagem = Object(response.msg)[Object(response.msg).length - 1].mensagem;
           datam = new Date(datam);
@@ -634,8 +632,13 @@
         },
       });
     })
-
   </script>
+<script>
+   setInterval(function(){ 
+   console.log("dsds")
+       
+}, 1000);
+</script>
   <script>
     var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};
