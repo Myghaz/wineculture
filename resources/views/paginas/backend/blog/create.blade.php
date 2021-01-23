@@ -6,7 +6,7 @@
     <div class="content">
         <h2>Inserir novo post</h2>
         <br>
-<form action="{{route('blog.store')}}" method="POST">
+<form action="{{route('blog.store')}}" method="POST" enctype="multipart/form-data">
     {{csrf_field()}}
 @if (session('status'))
 <div class=”alert alert-success”>

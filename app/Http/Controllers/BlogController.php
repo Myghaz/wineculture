@@ -58,7 +58,7 @@ class BlogController extends Controller
     {
         $categories = Category::all();
         $users = User::all();
-        return view('paginas.backend.blog.show', ['showBlog' => $blog], compact('blog','users','categories'));
+        return view('paginas.backend.blog.show', ['showBlog' => $blog], compact('blog', 'users', 'categories'));
     }
 
     /**
@@ -71,7 +71,7 @@ class BlogController extends Controller
     {
         $categories = Category::all();
         $users = User::all();
-        return view('paginas.backend.blog.edit', compact('categories', 'blog','users'));
+        return view('paginas.backend.blog.edit', compact('categories', 'blog', 'users'));
     }
 
     /**
@@ -115,12 +115,12 @@ class BlogController extends Controller
         $fields = $request->validate(
             [
                 'id_categoria' => 'required',
-                'titulo'=> 'required',
-        'data' => 'required',
-        'preview' => 'required',
-        'descricao' => 'required',
-        'img' => 'required',
-        'id_user' => 'required',
+                'titulo' => 'required',
+                'data' => 'required',
+                'preview' => 'required',
+                'descricao' => 'required',
+                'img' => 'required',
+                'id_user' => 'required',
 
             ],
         );
