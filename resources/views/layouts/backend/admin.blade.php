@@ -88,9 +88,27 @@
                         </li>
                         <!-- Blog Menu -->
                         <li @if (Route::currentRouteName() == 'blog.index') class="has-sub active expand" @else class="has-sub" @endif>
-                            <a class="sidenav-item-link"><i class="mdi mdi-pencil-box-multiple"></i><span
-                                    class="nav-text">Blog</span>
+                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                                data-target="#components" aria-expanded="false" aria-controls="components">
+                                <i class="mdi mdi-pencil-box-multiple"></i>
+                                <span class="nav-text">Blog</span> <b class="caret"></b>
                             </a>
+                            <ul class="collapse" id="components" data-parent="#sidebar-menu">
+                                <div class="sub-menu">
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('blog.index') }}">
+                                            <span class="nav-text">Ver Posts</span>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('blog.create') }}">
+                                            <span class="nav-text">Inserir Post</span>
+
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
                         </li>
                         <!-- End of Blog Menu -->
                         <!-- Receitas Menu -->
@@ -322,7 +340,7 @@
             <script src="https://cdn.jsdelivr.net/datatables.mark.js/2.0.0/datatables.mark.min.js"></script>
 
             <script src="{{ asset('assets\js\layouts\backend\admin.js') }}"></script>
-            
+
 
             @if ($errors->any())
                 @include ('partials.errors')
