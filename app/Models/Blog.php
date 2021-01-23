@@ -19,7 +19,7 @@ class Blog extends Model
     protected $fillable = [
         'titulo',
         'id_user',
-        'categoria',
+        'id_categoria',
         'data',
         'preview',
         'descricao',

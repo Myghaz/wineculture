@@ -13,6 +13,7 @@
 <strong>{{ session('status') }}</strong>
 </div>
 @endif
+<input type="hidden" value="{{$id_user_auth}}" name="id_user">
     <div class="form-group">
         <label for="formGroupExampleInput">Nome do Post</label>
         <input type="text" class="form-control" name="titulo" id="formGroupExampleInput" placeholder="Nome do Post" >
@@ -29,7 +30,7 @@
       </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">Categoria</label>
-      <select class="form-control" id="exampleFormControlSelect1"  name="categoria">
+      <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
          <option value="">Selecione uma Categoria</option>
         @foreach ($categories as $category)
         <option value="{{$category->id}}" >{{$category->name}}</option>
@@ -60,3 +61,11 @@
 
 
 @endsection
+<script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.ckeditor').ckeditor();
+    });
+
+</script>
