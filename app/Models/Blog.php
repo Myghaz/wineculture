@@ -28,6 +28,9 @@ class Blog extends Model
     public function user(){
         return $this->belongsTo(User::class, 'id_user');
     }
+    public function categoria(){
+        return $this->belongsTo(Category::class, 'id_categoria');
+    }
     /**
      * The attributes that should be cast to native types.
      *

@@ -107,6 +107,17 @@
 
                                         </a>
                                     </li>
+                                    <hr style="border-top: 1px solid rgba(255,255,255,0.3); width:70%; margin-right:25px; ">
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('categoriasblog.index') }}">
+                                            <span class="nav-text">Categorias</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('categoriasblog.create') }}">
+                                            <span class="nav-text">Inserir Categoria</span>
+                                        </a>
+                                    </li>
                                 </div>
                             </ul>
                         </li>
