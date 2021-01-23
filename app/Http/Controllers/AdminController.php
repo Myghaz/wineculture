@@ -126,8 +126,7 @@ class AdminController extends Controller
                 $total_produtoswp_count = $total_produtoswp->count();
                 $prodsimg = WPPosts::where('post_type', 'attachment')->get();
 
-                $chat =  Mensagens::all();
-                return response()->json(array('msg'=> $chat), 200);
+            
                 return view('paginas.backend.dashboard', compact([
                     'totalUsersJan',
                     'totalUsersFev',
