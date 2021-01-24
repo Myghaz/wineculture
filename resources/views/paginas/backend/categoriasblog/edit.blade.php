@@ -19,6 +19,11 @@
                     <input class="form-control" id="exampleFormControlSelect1" name="name"
                         value="{{('name') }}">
                 </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Submeter Imagem</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1"  name="img">
+                  </div>
                 <button type="submit" name="button" class="btn btn-success display-4">Submeter</button>
             </form>
         </div>
