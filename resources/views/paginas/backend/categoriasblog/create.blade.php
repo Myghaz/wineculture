@@ -15,7 +15,7 @@
                 @endif
                 <div class="form-group">
                     <label for="formGroupExampleInput">Categoria</label>
-                    <input type="text" class="form-control" name="name" value="{{('name')}}" id="formGroupExampleInput">
+                    <input type="text" class="form-control" name="name" id="formGroupExampleInput">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Submeter Imagem</label>

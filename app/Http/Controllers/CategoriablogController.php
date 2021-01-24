@@ -36,6 +36,7 @@ class CategoriablogController extends Controller
      */
     public function store(Request $request)
     {
+
         $fields = $request->validate(
             [
                 'name' => 'required',
@@ -44,6 +45,12 @@ class CategoriablogController extends Controller
         );
         $categories = new Category();
         $categories->fill($fields);
+
+        if ($request->hasFile('img')) {
+            $photo_path = $request->file('img')->store('storage/categorias');
+            $categories->img = basename($photo_path);
+        }
+
         $categories->save();
         return redirect()->route('categoriasblog.index')->with('success', 'Categoria adicionada com sucesso', compact('categories'));
     }

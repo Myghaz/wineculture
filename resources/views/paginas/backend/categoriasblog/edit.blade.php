@@ -17,7 +17,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Categoria</label>
                     <input class="form-control" id="exampleFormControlSelect1" name="name"
-                        value="{{('name') }}">
+                        value="{{$categories->name}}">
                 </div>
 
                 <div class="form-group">

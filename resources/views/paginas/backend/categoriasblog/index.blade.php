@@ -5,6 +5,7 @@
     <div class="content-wrapper">
         <div class="content">
             <div class="row">
+                @if (count($categories))
                 <div class="col-12">
                     <!-- Recent Order Table -->
                     <div class="card card-table-border-none" id="posts">
@@ -46,14 +47,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalTitle"
+                            <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -77,6 +71,17 @@
             </div>
         </div>
     </div>
+                        </div>
+                    </div>
+                </div>
+                @else
+      <h6>Sem categorias de posts Registrados</h6>
+      @endif
+            </div>
+        </div>
+    </div>
+
+
     <script>
         //triggered when modal is about to be shown
         $('#deleteConfirmModal').on('show.bs.modal', function(e) {
