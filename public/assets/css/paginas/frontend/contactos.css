@@ -29,13 +29,13 @@ html {
     border-radius: 0 !important;
 }
 
-.caralho {
+.bruv {
     border: none;
     width: 694px;
     border-bottom: 1px solid black;
 }
 
-.caralho::placeholder {
+.bruv::placeholder {
     font-size: 20px;
 }
 

@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="form-group mequie">
-                        <textarea type="text" class="form-control caralho" name="mensagem" rows="5" id="campoMensagem"
+                        <textarea type="text" class="form-control bruv" name="mensagem" rows="5" id="campoMensagem"
                             placeholder="&#xf0e0; Mensagem">{{ Request::old('mensagem') }}</textarea>
                     </div>
                     <div>
