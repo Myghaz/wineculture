@@ -1,183 +1,291 @@
-.site-footer {
-   
-    background-color: #26272b;
-    padding: 45px 0 20px;
-    font-size: 15px;
-    line-height: 24px;
-    color: #737373;
-    box-shadow: var(--box-shadow-footer);
+#container {
+    width: 100%;
+    height: 330px;
+    z-index: 0;
 }
 
-.site-footer hr {
-    border-top-color: #bbb;
-    opacity: 0.5
+#part1 {
+    width: 100%;
+    height: 280px;
+    background-color: #292929
 }
 
-.site-footer hr.small {
-    margin: 20px 0
+#part2 {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: relative;
 }
 
-.site-footer h6 {
-    color: #fff;
+#companyinfo {
+    width: 14%;
+    height: 280px;
+    position: relative;
+    left: 8%;
+    top: 30px
+}
+
+#sitelink {
+    font-size: 35px;
+    color: #f44336
+}
+
+#sitelink:hover {
+    color: #e65100
+}
+
+#title {
+    color: gray;
+    position: relative;
+    top: 0px;
+    font-size: 14.1px
+}
+
+#detail {
+    color: #aaa7a7;
+    font-size: 16px
+}
+
+#explore {
+    width: 14%;
+    height: 280px;
+    position: relative;
+    top: -235px;
+    left: 29%
+}
+
+p.header, p.header, p.header, p.header{
+    color: white;
+    font-size: 20pt
+}
+
+.link {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    color: #aaa7a7;
+    background-color: transparent;
+    position: relative;
+    top: -10px
+}
+
+.link:hover,
+.link1:hover {
+    color: #e65100
+}
+
+#visit {
+    width: 14%;
+    height: 280px;
+    position: relative;
+    top: -515px;
+    left: 42%
+}
+
+.footer_text, .footer_text a{
+    color: #aaa7a7!important;
     font-size: 16px;
-    text-transform: uppercase;
-    margin-top: 5px;
-    letter-spacing: 2px
+    margin-top: -10px
+}
+ .footer_text a:hover{
+    color: #e65100!important
+}
+#legal {
+    width: 14%;
+    height: 280px;
+    position: relative;
+    top: -800px;
+    left: 59.5%
 }
 
-.site-footer a {
-    color: #737373;
+.link1 {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    color: #aaa7a7;
+    background-color: transparent;
+    position: relative;
+    top: -10px;
+    margin-top: 7px
 }
 
-.site-footer a:hover {
-    color: #3366cc;
-    text-decoration: none;
+#subscribe {
+    position: relative;
+    top: -1080px;
+    left: 78%;
+    width: 14%;
+    height: 280px
+}
+#subscribe i{
+    font-size: 16pt;
 }
 
-.footer-links {
-    padding-left: 0;
-    list-style: none
+#email {
+    color: white;
+    position: relative;
+    top: -20px
 }
 
-.footer-links li {
-    display: block
+.btn {
+    position: relative;
+    top: -10px
 }
 
-.footer-links a {
-    color: #737373
+#txt5 {
+    position: relative;
+    top: 0px
 }
 
-.footer-links a:active,
-.footer-links a:focus,
-.footer-links a:hover {
-    color: #3366cc;
-    text-decoration: none;
+.social {
+    position: relative;
+    top: -5px;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer
 }
 
-.footer-links.inline li {
-    display: inline-block
+.fa-facebook-square:hover {
+    color: #3B579D
 }
 
-.site-footer .social-icons {
-    text-align: right
+.fa-linkedin:hover {
+    color: #007BB6
 }
 
-.site-footer .social-icons a {
+.fa-twitter-square:hover {
+    color: #2CAAE1
+}
+
+#txt6 {
+    color: white;
+    position: relative;
+    top: 13px;
+    left: 8%;
+    width: 80%;
+    color: #aaa7a7
+}
+
+.material-icons {
+    position: relative;
+    top: 3px
+}
+
+@media only screen and (max-width:1000px) {
+    #companyinfo {
+        width: 20%
+    }
+    #sitelink {
+        font-size: 30px
+    }
+    #txt5,
+    #txt4 {
+        font-size: 17px
+    }
+    #txt5,
+    .social {
+        position: relative;
+        top: -5px
+    }
+}
+
+@media only screen and (max-width:850px) {
+    #companyinfo {
+        position: relative;
+        left: 3%
+    }
+    #txt6 {
+        position: relative;
+        left: 3%
+    }
+    p.header, p.header, p.header, p.header{
+        font-size: 11pt
+    }
+    #explore {
+        position: relative;
+        top: -240px;
+        left: 26%
+    }
+    #sitelink {
+        font-size: 25px
+    }
+    #detail {
+        font-size: 13px
+    }
+    .link {
+        width: 60px
+    }
+    #visit {
+        position: relative;
+        top: -520px;
+        left: 37%
+    }
+    .text {
+        font-size: 13px
+    }
+    #legal {
+        position: relative;
+        top: -800px;
+        left: 54%
+    }
+    #subscribe {
+        position: relative;
+        top: -1080px;
+        left: 76%;
+        width: 20%
+    }
+    #txt5,
+    footer.social {
+        position: relative;
+        left: -110%;
+        top: px
+    }
+    #email,
+    .btn {
+        position: relative;
+        top: 0px
+    }
+    #part1 {
+        height: 250px
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
     width: 40px;
     height: 40px;
-    line-height: 40px;
-    margin-left: 6px;
-    margin-right: 0;
-    border-radius: 100%;
-    background-color: #33353d
-}
-
-.copyright-text {
-    margin: 0
-}
-
-@media (max-width:991px) {
-    .site-footer [class^=col-] {
-        margin-bottom: 30px
-    }
-}
-
-@media (max-width:767px) {
-    .site-footer {
-        padding-bottom: 0
-    }
-    .site-footer .copyright-text,
-    .site-footer .social-icons {
-        text-align: center
-    }
-}
-
-.social-icons {
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none
-}
-
-.social-icons li {
-    display: inline-block;
-    margin-bottom: 4px
-}
-
-.social-icons li.title {
-    margin-right: 15px;
-    text-transform: uppercase;
-    color: #96a2b2;
-    font-weight: 700;
-    font-size: 13px
-}
-
-.social-icons a {
-    background-color: #eceeef;
-    color: #818a91;
-    font-size: 16px;
-    display: inline-block;
-    line-height: 44px;
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    margin-right: 8px;
-    border-radius: 100%;
-    -webkit-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear
-}
-
-.social-icons a:active,
-.social-icons a:focus,
-.social-icons a:hover {
+    border-radius: 3px;
+    right: 15px;
+    bottom: 15px;
+    background: #742f37;
     color: #fff;
-    background-color: #29aafe
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
 }
 
-.social-icons.size-sm a {
-    line-height: 34px;
-    height: 34px;
-    width: 34px;
-    font-size: 14px
+.back-to-top i {
+    font-size: 24px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
 }
 
-.social-icons a.facebook:hover {
-    background-color: #3b5998
+.back-to-top:hover {
+    color: #fff;
+    background: #b30000;
+    transition: background 0.2s ease-in-out;
 }
 
-.social-icons a.twitter:hover {
-    background-color: #00aced
-}
-
-.social-icons a.linkedin:hover {
-    background-color: #007bb6
-}
-
-.social-icons a.dribbble:hover {
-    background-color: #ea4c89
-}
-
-@media (max-width:767px) {
-    .social-icons li.title {
-        display: block;
-        margin-right: 0;
-        font-weight: 600
+@media (max-width: 600px) {
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-right {
+        text-align: center;
     }
-}
-
-.imgfooter {
-    width: 100%;
-    height: 100%;
-    background-image: var(--background-image);
-    cursor: pointer;
-    background-image: var(--background-image);
-    background-size: cover;
-    background-position: 40% 40%;
-    top: -19px;
-    left: 3px;
-}
-
-.col-sm-12 {
-    top: -19px;
-    left: 3px;
+    .footer-distributed .footer-right {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .footer-distributed .footer-left p.footer-links {
+        line-height: 1.8;
+    }
 }
