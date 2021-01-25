@@ -331,21 +331,28 @@
                   <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
                     <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;">
                       <div class="simplebar-content" style="padding: 24px;">
+                        @php $i = 0;@endphp
                         @foreach($mensagens as $key => $mensagem)
-                        @foreach($mensagens_chat as $key => $chat)
+                        @foreach($mensagens_chat as $keyy => $chat)
 
                         @if ($chat->id_envio == $mensagem->id_envio || $chat->id_destino == $mensagem->id_envio)
 
                         @if ($chat->id_envio == $mensagem->id_envio)
-                        <div class="media media-chat media-left chatact-{{$mensagem->id_envio}}">
+                        <div id="{{$chat->id}}" class="media media-chat mensagenschatact-{{$mensagem->id_envio}}  media-left chatact-{{$mensagem->id_envio}}">
+                          @php $i++;@endphp
+                          @php $loop->last @endphp
                           @if ($mensagem->idenvio->img == "Sem Imagem")
                           <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">
                           @else
                           <img src="/assets/img/users/{{$mensagem->idenvio->img}}" class="rounded-circle mr-3" alt="Avatar Image">
                           @endif
-                          <div class="media-body">
+                          <div class="media-body " id="{{$chat->id}}">
                             <p class="message">{{$chat->mensagem}}</p>
                             <div class="date-time">{{$chat->created_at}}</div>
+                            @if($loop->last)
+                            <input type="hidden" id="idmediachat" value=""></input>
+                            <input type="hidden" id="id_chat" value="{{$chat->id}}"></input>
+                          @endif
                           </div>
                         </div>
                         @endif
@@ -383,7 +390,7 @@
             <form id="{{$mensagem->id_envio}}" class="media media-left px-5 pb-3 chatact-{{$mensagem->id_envio}}">
               {{ csrf_field() }}
               <input type="hidden" name="id_destino{{$mensagem->idenvio->id}}" value="{{$mensagem->idenvio->id}}">
-              <input type="text" name="mensagem{{$mensagem->idenvio->id}}" class="form-control mb-3" placeholder="Escreva a sua resposta....">
+              <input type="text" id="enviarmsg" name="mensagem{{$mensagem->idenvio->id}}" class="form-control mb-3" placeholder="Escreva a sua resposta...">
               <button id="{{$mensagem->idenvio->id}}" class="btn btn-success btn-submit">Enviar</button>
             </form>
             @endforeach
@@ -600,7 +607,7 @@
       </div>
       @endforeach
     </div>
-
+    <p id="test"></p>
   </div>
   <script>
     $.ajaxSetup({
@@ -627,19 +634,47 @@
           var data = moment(datam).format('DD-MM-YYYY hh:mm');
           if (response) {
             $(".simplebar-content").append('<div class="media media-chat media-right chatact-' + id + '"><div class="media-body"><p class="message">' + mensagem + '</p> <div class="date-time">' + data + '</div> </div>@if (Auth::user()->img == "Sem Imagem")<img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle mr-3" alt="Avatar Image">@else<img class="rounded-circle ml-3" src="/assets/img/users/{{Auth::user()->img}}" alt="Image">@endif</div>');
-            $("#" + id)[0].reset();
+            $("#enviarmsg").val(" ");
+            $("#enviarmsg").attr("placeholder", "Escreva a sua resposta....");
           }
         },
       });
     })
   </script>
-<script>
-   setInterval(function(){ 
-   console.log("dsds")
-       
-}, 1000);
-</script>
   <script>
+    setInterval(function() {
+      $.ajax({
+        type: "GET",
+        url: "{{ route('dashboard.refresh') }}",
+        success: function(response) {
+          var id_chat = $( "#id_envio" ).val();
+          var mediachat = $( "#idmediachat" ).last().val();
+
+          var lastidmsg =  $( ".mensagens" + mediachat).last().attr("id");
+          var id_auth = (response.id_user_auth);
+          console.log(lastidmsg)
+          console.log(mediachat)  
+          console.log((Object(response.msg)[Object(response.msg).length - 1].id))
+          if ((Object(response.msg)[Object(response.msg).length - 1].id_envio) != id_auth) {
+            if((Object(response.msg)[Object(response.msg).length - 1].id) != lastidmsg){
+            var id_envio = Object(response.msg)[Object(response.msg).length - 1].id_envio;
+            var id_ultchat = Object(response.msg)[Object(response.msg).length - 1].id;
+            var datam = Object(response.msg)[Object(response.msg).length - 1].created_at;
+            var mensagem = Object(response.msg)[Object(response.msg).length - 1].mensagem;
+            datam = new Date(datam);
+            var data = moment(datam).format('DD-MM-YYYY hh:mm');
+            if((Object(response.msg)[Object(response.msg).length - 1].id_destino) == id_auth){
+            $("#simplechatact-" + id_envio).append('<div id="'+id_ultchat +'" class="media media-chat mensagenschatact-'+id_envio +'  media-left chatact-'+id_envio +'" style="display: flex;"><img src="/assets/img/users/sem_imgem.jpg" class="rounded-circle mr-3" alt="Avatar Image"> <div class="media-body " id="'+id_ultchat +'"><p class="message">'+mensagem +'</p><div class="date-time">'+data +'</div><input type="hidden" id="idmediachat" value="chatact-'+id_envio +'"><input type="hidden" id="id_chat" value="'+id_ultchat +'"></div></div>');
+          }
+                
+          }
+          }
+        }
+      });
+
+    }, 5000);
+  </script>
+ <script>
     var totalUsersJan = {{$totalUsersJan}};
     var totalUsersFev = {{$totalUsersFev}};
     var totalUsersMar = {{$totalUsersMar}};

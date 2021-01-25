@@ -12,7 +12,7 @@
 <div class="imgbanner_div">
 <img class="imgbanner" src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
 </div>
-<div class="container">
+<div id="containerreceitas" class="container">
     <br>
     <div class="row portfolio">
         <div class="col-lg-12">

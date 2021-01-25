@@ -125,8 +125,8 @@ class AdminController extends Controller
                 $total_produtoswp = WPPosts::where('post_status', '=', 'publish')->latest('post_date')->take(4)->orderBy('post_date', 'ASC')->get();
                 $total_produtoswp_count = $total_produtoswp->count();
                 $prodsimg = WPPosts::where('post_type', 'attachment')->get();
-
-            
+                
+              
                 return view('paginas.backend.dashboard', compact([
                     'totalUsersJan',
                     'totalUsersFev',

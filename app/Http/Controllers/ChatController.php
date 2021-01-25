@@ -27,4 +27,10 @@ class ChatController extends Controller
         $chat =  Mensagens::all();
         return response()->json(array('msg'=> $chat), 200);
     }
+    public function refresh()
+    {
+        $chat =  Mensagens::all();
+        $id_user_auth = Auth::id();
+        return response()->json(array('msg'=> $chat, 'id_user_auth'=> $id_user_auth), 200);
+    }
 }
