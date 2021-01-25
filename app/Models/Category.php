@@ -15,7 +15,8 @@ class Category extends Model
      * @var array
      */
     protected $fillable = [
-    'nome',
+    'name',
+    'img',
     ];
     /**
      * The attributes that should be cast to native types.

@@ -13,6 +13,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MensagensController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\CategoriaFAQController;
+use App\Http\Controllers\CategoriablogController;
 
 
 /////         Páginas Frontend       /////
@@ -104,9 +105,9 @@ Route::middleware('auth', 'verified')->prefix('admin')->group(function () {
         Route::resource('contactos', MensagensController::class)->parameters(['contactos' => 'mensagem']);
 
         Route::resource('categoriasFAQ', CategoriaFAQController::class)->parameters(['categoriasFAQ' => 'categoria']);
+
+        Route::resource('categoriasblog', CategoriablogController::class)->parameters(['categoriasblog' => 'categories']);
 });
-
-
 
 
 

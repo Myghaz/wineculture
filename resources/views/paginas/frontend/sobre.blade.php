@@ -3,9 +3,8 @@
 @section('title', 'Sobre')
 
 @section("links")
-
 <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/sobre.css') }}">
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
 @endsection
 
 @section("content")
@@ -37,24 +36,6 @@
 </div>
 @endsection
 @section("javascript")
-<script>
-  function onYouTubeIframeAPIReady() {
-    var player;
-    player = new YT.Player('player', {
-      videoId: 'M7lc1UVf-VE',
-      playerVars: {
-        'autoplay': 1,
-        'controls': 0
-      },
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange,
-        'onError': onPlayerError
-      }
-    });
-  }
-</script>
 <script src="{{ URL::asset('assets/css/paginas/frontend/vendor/aos/aos.js') }}"></script>
 <script src="{{ URL::asset('assets/js/paginas/frontend/sobre.js') }}"></script>
-
 @endsection

@@ -132,3 +132,30 @@
     animation: none;
     border-radius: 0;
 }
+
+.sobre_banner_div {
+	margin-top: 20px;
+}
+
+.sobre_banner {	
+	width:100%;
+	height: 400px;
+	object-fit: cover;
+}
+
+.wine_img {
+    background-color: white!important;
+    object-fit: contain!important;
+    width:200pt!important;
+    height:250pt!important;
+}
+
+.wine_desc {
+    text-decoration: none;
+    color:var(--color);
+}
+
+.wine_desc:hover {
+    text-decoration: none;
+    color:#b31f30;
+}
