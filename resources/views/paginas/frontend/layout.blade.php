@@ -2,45 +2,47 @@
 <html>
 
 <head>
-    <title>WineCulture - @yield('title')</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/icofont/icofont.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/footer.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/navbar.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/settings.css') }}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    @yield("links")
+  <title>WineCulture - @yield('title')</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vendor/icofont/icofont.min.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/footer.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/navbar.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/settings.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  @yield("links")
 
 
 
-    <link rel="shortcut icon" href="{{ URL::to('/') }}/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="{{ URL::to('/') }}/favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="{{ URL::to('/') }}/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="{{ URL::to('/') }}/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
 <body>
-    @include('includes.frontend.navbar')
+  @include('includes.frontend.navbar')
 
-    @include('includes.frontend.settings')
-<div class="mainnn" style="	background: url(/assets/img/paginas/frontend/back.jpg);
+  @include('includes.frontend.settings')
+  <div class="mainnn" style="	background: url(/assets/img/paginas/frontend/back.jpg);
     background-position: center;
     background-repeat: no-repeat;
 	background-size: cover; padding-bottom:130px">
     @yield("content")
-    </div>
-    <footer>
-        @include('includes.frontend.footer')
-    </footer>
+
     <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
+
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
     <script src="{{ URL::asset('assets/js/layouts/frontend/settings.js') }}"></script>
-    @yield("javascript")
+  </div>
+
+  @yield("javascript")
+@include('includes.frontend.footer')
 </body>
+
 <script>
-    $(window).scroll(function() {
+  $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
@@ -55,4 +57,5 @@
     return false;
   });
 </script>
+
 </html>

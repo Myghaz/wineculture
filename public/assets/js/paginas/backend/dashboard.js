@@ -1,13 +1,17 @@
+var activechat;
 
 $(".media-left").css("display", "none");
 $(".media-right").css("display", "none");
 $(document).ready(function () {
     $(".media-message").click(function (event) {
-        var activechat = (event.target.id);
+        activechat = (event.target.id);
+       
+        $("#idmediachat").val(activechat);
+        $( ".simplebar-content" ).attr("id","simple" + activechat);
+      
         $(".media-left").css("display", "none");
         $(".media-right").css("display", "none");
         $('.' + activechat).css("display", "flex");
-
 
 
         $("#chat-right-content").animate({

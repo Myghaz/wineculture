@@ -39,9 +39,6 @@ html {
     font-size: 20px;
 }
 
-.container {
-    animation: 0.5s ease-out 0s 1 slideInFromLeft;
-}
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(100%);
@@ -65,7 +62,7 @@ html {
     color: var(--color);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.row {
+#rowcontactos {
     color: var(--color);
     padding-top: 100px!important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

@@ -89,6 +89,8 @@ Route::middleware('auth', 'verified')->prefix('admin')->group(function () {
 
         Route::post('dashboard', [ChatController::class, 'backend_store'])->name('dashboard.post');
 
+        Route::get('dashboard/refresh', [ChatController::class, 'refresh'])->name('dashboard.refresh');
+
         Route::resource('faq', FAQController::class)->parameters(['faq' => 'pergunta']);
 
         Route::resource('receitas', ReceitasController::class);

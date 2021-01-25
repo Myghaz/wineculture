@@ -11,14 +11,14 @@
 
 @section('content')
 
-    <div class="container">
+    <div  class="container">
         @if ($errors->any())
             @include ('partials.errors')
         @endif
         @if (!empty(session('success')))
             @include ('partials.success')
         @endif
-        <div class="row">
+        <div id="rowcontactos" class="row">
             <div class="col-md-3">
                 <h3>Contacte-nos:</h3>
                 <h5>Telefone:</h5>
