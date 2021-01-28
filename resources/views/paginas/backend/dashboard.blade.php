@@ -649,12 +649,8 @@
         success: function(response) {
           var id_chat = $( "#id_envio" ).val();
           var mediachat = $( "#idmediachat" ).last().val();
-
           var lastidmsg =  $( ".mensagens" + mediachat).last().attr("id");
           var id_auth = (response.id_user_auth);
-          console.log(lastidmsg)
-          console.log(mediachat)  
-          console.log((Object(response.msg)[Object(response.msg).length - 1].id))
           if ((Object(response.msg)[Object(response.msg).length - 1].id_envio) != id_auth) {
             if((Object(response.msg)[Object(response.msg).length - 1].id) != lastidmsg){
             var id_envio = Object(response.msg)[Object(response.msg).length - 1].id_envio;
@@ -664,15 +660,13 @@
             datam = new Date(datam);
             var data = moment(datam).format('DD-MM-YYYY hh:mm');
             if((Object(response.msg)[Object(response.msg).length - 1].id_destino) == id_auth){
-            $("#simplechatact-" + id_envio).append('<div id="'+id_ultchat +'" class="media media-chat mensagenschatact-'+id_envio +'  media-left chatact-'+id_envio +'" style="display: flex;"><img src="/assets/img/users/sem_imgem.jpg" class="rounded-circle mr-3" alt="Avatar Image"> <div class="media-body " id="'+id_ultchat +'"><p class="message">'+mensagem +'</p><div class="date-time">'+data +'</div><input type="hidden" id="idmediachat" value="chatact-'+id_envio +'"><input type="hidden" id="id_chat" value="'+id_ultchat +'"></div></div>');
-          }
-                
+            $("#simplechatact-" + id_envio).append('<div id="'+id_ultchat +'" class="media media-chat mensagenschatact-'+id_envio +'  media-left chatact-'+id_envio +'" style="display: flex;"><img src="/assets/img/users/'+id_envio +'.jpg" class="rounded-circle mr-3" alt="Avatar Image"> <div class="media-body " id="'+id_ultchat +'"><p class="message">'+mensagem +'</p><div class="date-time">'+data +'</div><input type="hidden" id="idmediachat" value="chatact-'+id_envio +'"><input type="hidden" id="id_chat" value="'+id_ultchat +'"></div></div>');
+          } 
           }
           }
         }
       });
-
-    }, 5000);
+    }, 3000);
   </script>
  <script>
     var totalUsersJan = {{$totalUsersJan}};

@@ -358,5 +358,65 @@ class UsersSeeder extends Seeder
             'pais' => 'Espanha',
             'created_at' => Carbon::parse('2020-12-26'),
         ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'isabel_ferreira@gmail.com',
+            'password' => bcrypt('gatinho'),
+            'name' => 'Isabel',
+            'apelido' => 'Ferreira',
+            'img' => '142.jpg',
+            'data_nasc' => Carbon::parse('1979-03-26'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
+            'created_at' => Carbon::parse('2020-12-27'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'rob_costa@gmail.com',
+            'password' => bcrypt('costa123'),
+            'name' => 'Roberto',
+            'apelido' => 'Costa',
+            'img' => '142.jpg',
+            'data_nasc' => Carbon::parse('1977-07-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
+            'created_at' => Carbon::parse('2020-12-27'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'glauciateixeira@gmail.com',
+            'password' => bcrypt('123456789'),
+            'name' => 'Gláucia',
+            'apelido' => 'Teixeira',
+            'img' => '142.jpg',
+            'data_nasc' => Carbon::parse('1978-05-10'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
+            'created_at' => Carbon::parse('2020-10-27'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'michaelsilva@gmail.com',
+            'password' => bcrypt('heyheyheyhey'),
+            'name' => 'Micaela',
+            'apelido' => 'Silveira',
+            'img' => '142.jpg',
+            'data_nasc' => Carbon::parse('1980-01-01'),
+            'genero' => 'Feminino',
+            'pais' => 'Portugal',
+            'created_at' => Carbon::parse('2020-12-27'),
+        ]);
+        User::create([
+            'tipouser' => 'Produtor',
+            'email' => 'velentimmarco@gmail.com',
+            'password' => bcrypt('marquinhos123'),
+            'name' => 'Valentim',
+            'apelido' => 'Santiago',
+            'img' => '142.jpg',
+            'data_nasc' => Carbon::parse('1979-03-26'),
+            'genero' => 'Masculino',
+            'pais' => 'Portugal',
+            'created_at' => Carbon::parse('2020-12-27'),
+        ]);
     }
 }
