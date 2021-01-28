@@ -105,16 +105,17 @@ class MensagensController extends Controller
         $request->validate([
             'resposta' => 'required'
         ]);
+            
         $mensagem->update($request->all());
-        //  Send mail to admin
-        Mail::send('paginas.frontend.index', array(
-            'resposta' => $mensagem['resposta'],
-            'email' => $mensagem['email'],
-            'assunto' => $mensagem['assunto'],
-            'pergunta' => $mensagem['pergunta'],
-        ), function ($message) use ($request) {
-            $message->from($request->email);
-            $message->to('zclparreira@gmail.com')->subject($request->get('cona'));
+        Mail::send('paginas.frontend.contactosresposta', array(
+            'resposta' => $request->input('resposta'),
+            'email' => $mensagem->email,
+            'nome' => $mensagem->name,
+            'assunto' => $mensagem->assunto,
+            'pergunta' => $mensagem->mensagem,
+        ), function ($message) use ($mensagem) {
+            $message->from('zclparreira@gmail.com');
+            $message->to($mensagem->email)->subject('[WineCulture] '. $mensagem->assunto);
         });
 
         return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);
