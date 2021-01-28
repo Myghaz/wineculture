@@ -32,7 +32,13 @@ class ReceitasController extends Controller
         $Users = User::all();
         return view('paginas.frontend.receitas', compact('receitas', 'category_wines', 'Users'));
     }
-
+    public function indexReceitain()
+    {
+        $receitas = receitas::all();
+        $category_wines = category_wine::all();
+        $Users = User::all();
+        return view('paginas.frontend.receitasin', compact('receitas', 'category_wines', 'Users'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -121,7 +127,7 @@ class ReceitasController extends Controller
             $photo_path = $request->file('img')->store('public/receitas');
             $receita->foto = basename($photo_path);
         }
-        
+
         $receita->save();
         return redirect()->route('receitas.index')
             ->with('success', 'Receita foi editada com sucesso', compact('receita'));
