@@ -36,10 +36,11 @@ html {
     --secbuttonborderhover: 2px solid #fff;
 }
 
+
 .backimg {
     position: relative;
     width: auto;
-    height:850px;
+    height: 850px;
     background: url(/assets/img/paginas/frontend/login_background.jpg);
     border: 1px solid;
     margin-bottom: -130px;
