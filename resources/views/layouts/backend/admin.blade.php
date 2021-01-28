@@ -429,7 +429,7 @@
             </script>
             </footer>
         </div>
-    </div>
+    </div  class="second">
 </body>
 
 </html>
