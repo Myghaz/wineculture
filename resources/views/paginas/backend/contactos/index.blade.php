@@ -29,23 +29,37 @@
                                         <th class="d-none d-lg-table-cell">Nome</th>
                                         <th class="d-none d-lg-table-cell">Assunto</th>
                                         <th class="d-none d-lg-table-cell">Mensagem</th>
+                                        <th class="d-none d-lg-table-cell">Resposta</th>
+                                        <th class="d-none d-lg-table-cell">Estado</th>
                                         <th class="d-none d-lg-table-cell">Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($mensagens as $mensagem)
                                         <tr id="trv">
-                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';" class="tdhover">
+                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';"
+                                                class="tdhover">
                                                 {{ $mensagem->name }}
                                             </td>
-                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';" class="tdhover">
+                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';"
+                                                class="tdhover">
                                                 {{ $mensagem->assunto }}
                                             </td>
-                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';" class="tdhover">
+                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';"
+                                                class="tdhover">
                                                 {{ $mensagem->mensagem }}
                                             </td>
+                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';"
+                                                class="tdhover">
+                                                {{ $mensagem->resposta }}
+                                            </td>
+                                            <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';"
+                                                class="tdhover">
+                                                {{ $mensagem->estado }}
+                                            </td>
                                             <td class="tdhover">
-                                                <a href="{{ route('contactos.show', $mensagem) }}" class="btn btn-xs btn-success btn-p"><i
+                                                <a href="{{ route('contactos.show', $mensagem) }}"
+                                                    class="btn btn-xs btn-success btn-p"><i
                                                         class="fas fa-eye fa-xs"></i></a>
                                                 <button type="button" class="btn btn-xs btn-danger btn-p"
                                                     data-toggle="modal" data-target="#deleteConfirmModal"

@@ -23,13 +23,14 @@
                                 <tbody>
                                     @foreach ($categorias as $categoria)
                                         <tr id="trv">
-                                            <td onclick="window.location.href = '{{ route('categoriasFAQ.show', ['categoria' => $categoria]) }}';" class="tdhover">
+                                            <td onclick="window.location.href = '{{ route('categoriasFAQ.show', ['categoria' => $categoria]) }}';"
+                                                class="tdhover">
                                                 {{ $categoria->categoria }}
                                             </td>
-                                            <td onclick="window.location.href = '{{ route('categoriasFAQ.show', ['categoria' => $categoria]) }}';" class="tdhover">
+                                            <td onclick="window.location.href = '{{ route('categoriasFAQ.show', ['categoria' => $categoria]) }}';"
+                                                class="tdhover">
                                                 {{ $categoria->descricao }}
                                             </td>
-
                                             <td class="tdhover">
                                                 <a href="{{ route('categoriasFAQ.show', $categoria) }}"
                                                     class="btn btn-xs btn-success btn-p"><i

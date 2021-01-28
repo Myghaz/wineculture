@@ -18,7 +18,9 @@ class CreateContactosTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('assunto');
-            $table->string('mensagem');
+            $table->longText('mensagem');
+            $table->longText('resposta')->nullable();
+            $table->enum('estado', ['Por Responder', 'Respondida'])->default('Por Responder');
             $table->timestamps();
         });
     }

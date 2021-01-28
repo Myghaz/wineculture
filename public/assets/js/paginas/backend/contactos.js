@@ -96,7 +96,7 @@ $(document).ready(function() {
         scrollY: "1000",
         scrollCollapse: true,
         autoWidth: true,
-        columns: [{ type: "num" }, null, null, { orderable: false }],
+        columns: [{ type: "num" }, null, null, null, { orderable: false }],
         order: [[0, "asc"]],
         language: {
             emptyTable: "Não existem registos a apresentar",
@@ -114,13 +114,13 @@ $(document).ready(function() {
         columnDefs: [
             {
                 type: "portugues",
-                targets: [0, 1, 2, 3]
+                targets: [0, 1, 2, 3, 4]
             }
         ],
         columnDefs: [
             {
                 type: "locale-compare",
-                targets: [0, 1, 2, 3]
+                targets: [0, 1, 2, 3, 4]
             }
         ]
     });
