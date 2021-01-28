@@ -20,12 +20,17 @@
 		<div class="col-md-3 mb-2" data-aos="fade-up">
 			<a href="/vinhos/{{$vinho->id}}" class="wine_desc">
 				<div class="zoom-img">
-					<img src="\storage\vinhos\{{$vinho->img}}" class="wine_img" alt="produto_vinho">
+					@foreach($vinhos_img as $key_img => $vinho_img)
+					@if($vinho_img->id == $vinho->img)
+					<img src="\storage\vinhos\{{$vinho_img->img}}" class="wine_img" alt="produto_vinho">
+					@endif
+					@endforeach
 				</div>
 				{{$vinho->nome}}<br>
 			</a>
 		</div>
 		@endforeach
+		
 	</div>
 
 </div>
