@@ -13,8 +13,10 @@ class VinhosController extends Controller
 {
     public function indexFrontend() {
         $vinhos = Vinhos::all();
+        $vinhos_img = Vinhosimg::all();
         return view('paginas.frontend.vinhos', compact([
-            'vinhos'
+            'vinhos',
+            'vinhos_img'
         ]));
     }
     public function vinhos_detalhes($vinho)

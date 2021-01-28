@@ -2,39 +2,42 @@
 
 @section('title', 'Vinhos')
 
-@section("links")
-<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vinhos.css') }}">
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+@section('links')
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/semantic.min.css') }}">
+<script src="{{ asset('js/semantic.min.js') }}"></script>
+
 @endsection
 
-@section("content")
-<div class="sobre_banner_div">
-  <img class="sobre_banner" src="assets\img\paginas\frontend\tipo_de_vinhos\banner_vin.png" alt="banner">
-</div>
+@section('content')
 
-<div class="container mb-5">
-	<div class="row m-3">
-
-		@foreach($vinhos as $key => $vinho)
-
-		<div class="col-md-3 mb-2" data-aos="fade-up">
-			<a href="/vinhos/{{$vinho->id}}" class="wine_desc">
-				<div class="zoom-img">
-					<img src="\storage\vinhos\{{$vinho->img}}" class="wine_img" alt="produto_vinho">
-				</div>
-				{{$vinho->nome}}<br>
-			</a>
-		</div>
-		@endforeach
-	</div>
-
-</div>
-
-@section("javascript")
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="assets\js\paginas\frontend\sobre.js"></script>
+<div class="ui styled accordion">
+  <div class="title">
+    <i class="dropdown icon"></i>
+    What is a dog?
+  </div>
+  <div class="content">
+    <p class="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+  </div>
+  <div class="title active">
+    <i class="dropdown icon"></i>
+    What kinds of dogs are there?
+  </div>
+  <div class="content active">
+    <p class="transition visible">There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    How do you acquire a dog?
+  </div>
+  <div class="content">
+    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+  </div>
 <script>
-	AOS.init();
+
+$('.ui.accordion')
+  .accordion()
+;
 </script>
-@endsection
 @endsection

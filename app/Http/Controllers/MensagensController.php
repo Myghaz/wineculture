@@ -16,8 +16,7 @@ class MensagensController extends Controller
 
     public function indexFrontend() {
         $mensagens = Contactos::all();
-        $totalmensagens = Contactos::all('id')->count();
-        return view('paginas.frontend.contactos', compact('mensagens', 'totalmensagens'));
+        return view('paginas.frontend.contactos', compact('mensagens'));
     }
 
     public function index()
