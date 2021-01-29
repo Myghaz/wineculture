@@ -105,7 +105,7 @@ class MensagensController extends Controller
         $request->validate([
             'resposta' => 'required'
         ]);
-            
+
         $mensagem->update($request->all());
         Mail::send('paginas.frontend.contactosresposta', array(
             'resposta' => $request->input('resposta'),
@@ -114,7 +114,6 @@ class MensagensController extends Controller
             'assunto' => $mensagem->assunto,
             'pergunta' => $mensagem->mensagem,
         ), function ($message) use ($mensagem) {
-            $message->from('zclparreira@gmail.com');
             $message->to($mensagem->email)->subject('[WineCulture] '. $mensagem->assunto);
         });
 
