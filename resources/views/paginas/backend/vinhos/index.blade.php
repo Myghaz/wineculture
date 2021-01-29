@@ -3,9 +3,9 @@
 
 @section('content')
 <div class="row">
-  <div class="row tabelas" style="width:100%">
+  <div class="row tabelass" style="width:100%">
     <div class="col-12">
-      <div class="card card-table-border-none" id="vinhos">
+      <div class="card card-table-border-none" id="vinhosa">
         <div class="card-header justify-content-between">
           <h2 id="titulotable">Tabela de Vinhos</h2>
         </div>
@@ -29,7 +29,12 @@
                 @foreach($vinhos as $key => $vinho)
                 <td>{{$vinho->id}}</td>
                 <td>
-                  <img src="/storage/vinhos/{{$vinho->img}}" style="width:65px; height:65px; object-fit: cover;  object-position: 0% 90%;" class="rounded-circle w-45" alt=">{{$vinho->nome}}">
+                  
+                  @foreach($vinho_img as $key_img => $vinhos_img)
+						        @if($vinhos_img->id == $vinho->img)
+                      <img src="\storage\vinhos\{{$vinhos_img->img}}" style="width:65px; height:65px; object-fit: cover; object-position: 0% 90%;" class="rounded-circle w-45" alt=">{{$vinho->nome}}">
+						        @endif
+					        @endforeach
                 </td>
                 <td>
                   <a class="text-dark" href="">{{$vinho->nome}}</a>
@@ -44,12 +49,12 @@
                 @foreach($users as $key => $user)
                 @if ($vinho->id_produtor == $user->id)
                 <td>
-                  <a class="text-dark" href="">{{$user->name}}</a>
+                  <a class="text-dark" href="">{{$user->name}} {{$user->apelido}}</a>
                 </td>
                 @endif
                 @endforeach
                 <td>
-                  <a class="text-dark" href="">{{$vinho->preco}}</a>
+                  <a class="text-dark" href="">{{number_format((float)$vinho->preco, 2, '.', '')}}€</a>
                 </td>
                 <td>
                   <a class="text-dark" href="">{{$vinho->stock}}</a>
@@ -58,18 +63,12 @@
                   <a class="text-dark" href="">{{$vinho->pais}}</a>
                 </td>
                 <td class="acoes">
-                  <a href="{{ route('vinhos.show', $vinho) }}" class="btn btn-xs btn-primary btn-p">
-                    <iclass="fas fa-eye fa-xs"></i>
-                  </a>
-                  <a href="{{ route('vinhos.edit', $vinho) }}" class="btn btn-xs btn-warning btn-p">
-                    <iclass="fas fa-pen fa-xs"></i>
-                  </a>
+                  <a href="{{ route('vinhos.show', $vinho) }}" class="btn btn-xs btn-primary btn-p"><i class="fas fa-eye fa-xs"></i></a>
+                  <a href="{{ route('vinhos.edit', $vinho) }}" class="btn btn-xs btn-warning btn-p"><i class="fas fa-pen fa-xs"></i></a>
                   <form action="{{ route('vinhos.destroy', $vinho) }}" method="post">
                     @method('DELETE')
                     @csrf
-                    <button type="submit" class="btn btn-xs btn-danger btn-p">
-                      <iclass="fas fa-trash fa-xs"></i>
-                    </button>
+                    <button type="submit" class="btn btn-xs btn-danger btn-p"><i class="fas fa-trash fa-xs"></i></button>
                   </form>
                 </td>
               </tr>
@@ -81,5 +80,8 @@
     </div>
   </div>
 </div>
+@endsection
+
+@section("javascript")
 <script src="{{ asset('assets\js\paginas\backend\vinhos.js') }}"></script>
 @endsection
