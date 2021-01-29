@@ -11,6 +11,8 @@ class Contactos extends Model
         'name',
         'email',
         'assunto',
+        'estado',
+        'resposta',
         'mensagem'
     ];
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contactos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Auth\Events\Validated;
 
 class MensagensController extends Controller
@@ -14,7 +15,8 @@ class MensagensController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function indexFrontend() {
+    public function indexFrontend()
+    {
         $mensagens = Contactos::all();
         return view('paginas.frontend.contactos', compact('mensagens'));
     }
@@ -58,9 +60,9 @@ class MensagensController extends Controller
             ],
             [
                 'pergunta' => 'Campo pergunta não ficou preenchido',
-                'categoria' => 'Campo categoria não ficou preenchido',
-                'assunto' => 'Campo resposta não ficou preenchido',
-                'mensagem' => 'Campo categoria não ficou preenchido'
+                'email' => 'Campo email não ficou preenchido',
+                'assunto' => 'Campo assunto não ficou preenchido',
+                'mensagem' => 'Campo mensagem não ficou preenchido'
             ]
         );
         $mensagem = new Contactos();
@@ -98,9 +100,24 @@ class MensagensController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Contactos $mensagem)
     {
-        //
+        $request->validate([
+            'resposta' => 'required'
+        ]);
+
+        $mensagem->update($request->all());
+        Mail::send('paginas.frontend.contactosresposta', array(
+            'resposta' => $request->input('resposta'),
+            'email' => $mensagem->email,
+            'nome' => $mensagem->name,
+            'assunto' => $mensagem->assunto,
+            'pergunta' => $mensagem->mensagem,
+        ), function ($message) use ($mensagem) {
+            $message->to($mensagem->email)->subject('[WineCulture] '. $mensagem->assunto);
+        });
+
+        return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);
     }
 
     /**
