@@ -1,4 +1,3 @@
-
 jQuery.extend(jQuery.fn.dataTableExt.oSort, {
     'locale-compare-asc': function (a, b) {
         return a.localeCompare(b, 'cs', {
@@ -99,23 +98,17 @@ $(document).ready(function () {
     });
     $('#tablevinhos').dataTable({
         dom: 'lBfrtip',
-        "scrollY": "350px",
+        "scrollY": "500",
         "scrollCollapse": true,
+        "searchHighlight": true,
+        "mark": true,
         "autoWidth": true,
-        "columns": [{
-                "type": "num"
-            },
+        "columns": [
             null,
             null,
             null,
             null,
             null,
-            {
-                "type": "num"
-            },
-            {
-                "type": "num"
-            },
             null
         ],
         "order": [
@@ -136,11 +129,11 @@ $(document).ready(function () {
         },
         "columnDefs": [{
             type: 'portugues',
-            targets: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+            targets: [0, 1, 2, 3, 4, 5]
         }],
         "columnDefs": [{
             type: 'locale-compare',
-            targets: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+            targets: [0, 1, 2, 3, 4, 5]
         }],
     });
 });

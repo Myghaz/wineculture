@@ -12,22 +12,10 @@
         <strong>{{ session('status') }}</strong>
       </div>
       @endif
+
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Nome do vinho</label>
         <input type="text" class="form-control" name="nome" value="{{$vinho->nome}}">
-      </div>
-      
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Produtor</label>
-        
-        <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
-          <option value="">Selecione um Produtor</option>
-          @foreach($users as $key_user => $user)
-					  @if($user->tipouser == 'Produtor')
-              <option @if($vinho_produtor->id == $user->id) selected @endif value="{{$user->id}}"> {{$user->name}} {{$user->apelido}}</option>
-					  @endif
-				  @endforeach
-        </select>
       </div>
 
       <div class="form-group">
@@ -38,7 +26,19 @@
             <option @if ($vinho->id_categoria==$categorias->id) selected @endif value="{{$categorias->id}}"> {{$categorias->nome}}</option>
             @endforeach
         </select>
-    </div>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Produtor</label>  
+        <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
+          <option value="">Selecione um Produtor</option>
+          @foreach($users as $key_user => $user)
+					  @if($user->tipouser == 'Produtor')
+              <option style="background-image:url('\storage\vinhos\1.jpg')" @if($vinho_produtor->id == $user->id) selected @endif value="{{$user->id}}">{{$user->name}} {{$user->apelido}}</option>
+					  @endif
+				  @endforeach
+        </select>
+      </div>
 
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Descrição</label>

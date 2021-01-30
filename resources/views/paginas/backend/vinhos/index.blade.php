@@ -2,6 +2,8 @@
 @section('title', 'Vinhos')
 
 @section('content')
+<div class="content-wrapper">
+<div class="content">
 <div class="row">
   <div class="row tabelass" style="width:100%">
     <div class="col-12">
@@ -13,21 +15,19 @@
           <table id="tablevinhos" class="ui celled table" style="width:100%">
             <thead id="tablevinhosthead">
               <tr>
-                <th>ID</th>
+                
                 <th class="d-none d-lg-table-cell">Imagem</th>
-                <th>Nome</th>
+                <th class="d-none d-lg-table-cell">Nome</th>
                 <th class="d-none d-lg-table-cell">Categoria</th>
                 <th class="d-none d-lg-table-cell">Produtor</th>
                 <th class="d-none d-lg-table-cell">Preco</th>
-                <th class="d-none d-lg-table-cell">Stock</th>
-                <th class="d-none d-lg-table-cell">Pais</th>
                 <th class="d-none d-lg-table-cell">Options</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 @foreach($vinhos as $key => $vinho)
-                <td>{{$vinho->id}}</td>
+                
                 <td>
                   
                   @foreach($vinho_img as $key_img => $vinhos_img)
@@ -56,20 +56,10 @@
                 <td>
                   <a class="text-dark" href="">{{number_format((float)$vinho->preco, 2, '.', '')}}€</a>
                 </td>
-                <td>
-                  <a class="text-dark" href="">{{$vinho->stock}}</a>
-                </td>
-                <td>
-                  <a class="text-dark" href="">{{$vinho->pais}}</a>
-                </td>
                 <td class="acoes">
                   <a href="{{ route('vinhos.show', $vinho) }}" class="btn btn-xs btn-primary btn-p"><i class="fas fa-eye fa-xs"></i></a>
                   <a href="{{ route('vinhos.edit', $vinho) }}" class="btn btn-xs btn-warning btn-p"><i class="fas fa-pen fa-xs"></i></a>
-                  <form action="{{ route('vinhos.destroy', $vinho) }}" method="post">
-                    @method('DELETE')
-                    @csrf
-                    <button type="submit" class="btn btn-xs btn-danger btn-p"><i class="fas fa-trash fa-xs"></i></button>
-                  </form>
+                  <button type="button" class="btn btn-xs btn-danger btn-p" data-toggle="modal" data-target="#deleteConfirmModal" data-route="{{ route('vinhos.destroy', $vinho) }}"><i class="fas fa-trash fa-xs"></i></button>
                 </td>
               </tr>
               @endforeach
@@ -80,8 +70,32 @@
     </div>
   </div>
 </div>
-@endsection
+</div>
+<script src="{{ URL::asset('assets\js\paginas\backend\vinhos.js') }}"></script>
 
-@section("javascript")
-<script src="{{ asset('assets\js\paginas\backend\vinhos.js') }}"></script>
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar registo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+        <div class="modal-body">
+          Tem a certeza que deseja eliminar este registo?
+        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <form method="POST" action="#" role="form" class="inline" id="formDelete">
+                @csrf
+                @method("DELETE")
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+              </form>
+          </div>
+        </div>
+      </div>
+</div>
+
+
 @endsection
