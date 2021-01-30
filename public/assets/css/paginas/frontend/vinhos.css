@@ -1,3 +1,48 @@
+.zoom-img {
+    width: 250px;
+    overflow: hidden;
+}
+.zoom-img img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+.zoom-img img:hover {
+	
+  -moz-transform: scale(1.3) rotate(0deg);
+  -webkit-transform: scale(1.3) rotate(0deg);
+  -o-transform: scale(1.3) rotate(0deg);
+  -ms-transform: scale(1.3) rotate(0deg);
+  transform: scale(1.3) rotate(0deg);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wine_img {
+    background-color: white!important;
+    object-fit: contain!important;
+    width:200pt!important;
+    height:250pt!important;
+}
+
+.wine_desc {
+    text-decoration: none;
+    color:var(--color);
+}
+
+.wine_desc:hover {
+    text-decoration: none;
+    color:#b31f30;
+}
+
 img.banner {
     width: 100%;
     height: 350px;
@@ -80,7 +125,7 @@ img.banner {
 
 .ui.toggle.checkbox input:checked~label:after {
 
-    background: #331518;
+    background: #b33440;
 }
 
 .vinhosheader {

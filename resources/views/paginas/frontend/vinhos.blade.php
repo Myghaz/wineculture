@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="banner">
-	<img class="img-fluid banner" src="http://wineculture_laravel.test/assets/img/paginas/frontend/faq-banner.jpg" alt="banner">
+	<img class="img-fluid banner" src="/assets/img/paginas/frontend/tipo_de_vinhos/banner_vin.png" alt="banner">
 </div>
 <div class="ui grid">
 	<div class="ui large breadcrumb">
@@ -139,10 +139,42 @@
 					</div>
 				</div>
 			</div>
+			<div class="ui grid">
+					<div class="four column row">
+						@foreach($vinhos as $key => $vinho)
+						<div class="column">
+							<a href="/vinhos/{{$vinho->id}}" class="wine_desc">
+							<div class="zoom-img">
+								@foreach($vinhos_img as $key_img => $vinho_img)
+									@if($vinho_img->id == $vinho->img)
+										<img src="\storage\vinhos\{{$vinho_img->img}}" class="wine_img" alt="produto_vinho">
+									@endif
+								@endforeach
+							</div>
+
+							{{$vinho->nome}}<br>
+							
+							</a>
+    					</div>
+    					@endforeach
+  					</div>
+  				</div>
 		</div>
 	</div>
 </div>
 @endsection
+@section('javascript')
+<script>
+var vinhos = [];
+</script>
+@foreach ($vinhos as $key=>$vinho)
+<script>
+vinhos.push(@json($vinho->nome));
+</script>
+@endforeach
+
+<script>
+var vinhos_categorias = [];
 </script>
 @foreach ($categorias as $key=>$categoria)
 <script>
@@ -160,5 +192,6 @@ nome2= @json($vinhos_produtor->produtor->apelido);
 var nomeapelido = nome1.concat(" ", nome2);
 vinhos_produtores.push(nomeapelido);
 </script>
+@endforeach
 <script src="{{ URL::asset('assets/js/paginas/frontend/vinhos.js') }}"></script>
 @endsection
