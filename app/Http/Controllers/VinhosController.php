@@ -84,12 +84,12 @@ class VinhosController extends Controller
     public function index()
     {
         $vinhos = Vinhos::all(); 
-        $vinhosimg = Vinhosimg::all();
+        $vinho_img = Vinhosimg::all();
         $categorias = category_wine::all();
         $users = User::all();
         return view('paginas.backend.vinhos.index', compact([
             'vinhos',
-            'vinhosimg',
+            'vinho_img',
             'categorias',
             'users'
         ]));
@@ -136,7 +136,8 @@ class VinhosController extends Controller
      */
     public function show(Vinhos $vinhos)
     {
-        return view('paginas.backend.vinhos.show', compact('vinhos'));
+        $vinho = Vinhos::all();
+        return view('paginas.backend.vinhos.show', compact('vinho'));
     }
 
     /**
@@ -145,9 +146,21 @@ class VinhosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Vinhos $vinhos)
+    public function edit($vinhos)
     {
-        return view('paginas.backend.vinhos.edit', compact('vinhos'));
+        $vinho = Vinhos::find($vinhos);
+        $vinho_img = Vinhosimg::all();
+        $categorias = category_wine::all();
+        $users = User::all();
+        $vinho_produtor = User::find($vinho->id_produtor);
+        
+        return view('paginas.backend.vinhos.edit', compact([
+            'vinho',
+            'vinho_img',
+            'categorias',
+            'users',
+            'vinho_produtor'
+        ]));
     }
 
     /**
@@ -159,7 +172,10 @@ class VinhosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $vinho = Vinhos::all();
+        $vinho_img = Vinhosimg::all();
+        $categorias = category_wine::all();
+        $users = User::all();
     }
 
     /**

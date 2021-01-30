@@ -25,6 +25,123 @@ class BlogsSeeder extends Seeder
             'img' => 'garrafas-garrafeira-alta.jpg',
         ]);
         Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
+            'titulo' => 'PORTUGAL GANHA QUOTA EM VOLUME E VALOR',
+            'data' => Carbon::parse('2020-11-05'),
+            'id_user' => 30,
+            'id_categoria' => 1,
+            'preview' => 'Números relativos às exportações de vinho português.',
+            'descricao' => 'Texto 1',
+            'img' => 'garrafas-garrafeira-alta.jpg',
+        ]);
+        Blog::create([
             'titulo' => 'BAGOS D OURO E FIRMO CRIAM CADERNO SOLIDÁRIO',
             'data' => Carbon::parse('2020-11-05'),
             'id_user' => 30,
