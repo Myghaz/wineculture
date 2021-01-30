@@ -26,6 +26,27 @@
   transition: 0.5s;
 }
 
+.vinho_grid {
+    margin-top:15px !important;
+}
+
+.vinho_divider {
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+}
+
+.vinho_item {
+    border: 1px solid rgb(211, 211, 211);
+    margin-bottom: 15px;
+    height:300pt !important;
+}
+
+.vinho_titulo {
+    text-align: center;
+    padding:10pt;
+    font-weight: bold;
+}
+
 .wine_img {
     background-color: white!important;
     object-fit: contain!important;

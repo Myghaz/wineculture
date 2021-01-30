@@ -139,10 +139,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="ui grid">
+			<div class="ui grid vinho_grid">
 					<div class="four column row">
 						@foreach($vinhos as $key => $vinho)
 						<div class="column">
+							<div class="vinho_item">
 							<a href="/vinhos/{{$vinho->id}}" class="wine_desc">
 							<div class="zoom-img">
 								@foreach($vinhos_img as $key_img => $vinho_img)
@@ -151,10 +152,15 @@
 									@endif
 								@endforeach
 							</div>
-
-							{{$vinho->nome}}<br>
 							
+							<div class="ui clearing divider vinho_divider"></div>
+							
+							<div style="vertical-align: text-top;">
+								<p class="vinho_titulo">{{$vinho->nome}}</p>
+							</div>
+
 							</a>
+							</div>
     					</div>
     					@endforeach
   					</div>
