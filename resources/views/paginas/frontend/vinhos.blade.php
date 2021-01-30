@@ -40,7 +40,7 @@
 @section("javascript")
 <script src="{{ asset('js/semantic.min.js') }}"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="assets\js\paginas\frontend\sobre.js"></script>
+<script src="{{ URL::asset('assets/js/paginas/frontend/sobre.js') }}"></script>
 <script>
     AOS.init();
 </script>
