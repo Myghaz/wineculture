@@ -9,24 +9,22 @@
 @section("content")
 <div class="row">
   <div class="column1">
-    <div class="sidenavvv">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#contact">Contact</a>
-        <button class="dropdown-btnnn">Dropdown
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-containerrrrr">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+    <div class="sideside">
+        <button class="dropdrop-downdown">Data<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-conta">
+            @foreach ($blogs as $value)
+            <a data-filter=".blog-{{$value->id}}">{{$value->created_at}}</a>
+            @endforeach
         </div>
-        <a href="#contact">Search</a>
+        <button class="dropdrop-downdown">Categorias<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-conta">
+            @foreach($categorias as $categoria)
+            <a data-filter=".blog-{{$categoria->id}}">{{$categoria->name}}</a>@endforeach
+        </div>
       </div>
   </div>
   <div class="column2">
-<section>
+<section class="grelha">
     <div class="containerr">
         <div class="card-column column-0">
             @foreach($blogs as $value)
