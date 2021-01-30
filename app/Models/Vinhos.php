@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,4 +18,7 @@ class Vinhos extends Model
         'stock',
         'regiao',
     ];
+    public function produtor(){
+        return $this->belongsTo(User::class, 'id_produtor');
+    }
 }

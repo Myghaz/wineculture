@@ -13,10 +13,22 @@ class VinhosController extends Controller
 {
     public function indexFrontend() {
         $vinhos = Vinhos::all();
+        $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
+        $categorias = category_wine::all();
+        $produtores_vinho = Vinhos::select('id_produtor')->distinct()->get();
+        $vinhos_nome = Vinhos::select('nome')->get();
+        $vinhos_categorias = category_wine::select('nome')->get();
+        $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
         return view('paginas.frontend.vinhos', compact([
             'vinhos',
-            'vinhos_img'
+            'vinhos_img',
+            'categorias',
+            'produtores_vinho',
+            'vinhostotal',
+            'vinhos_nome',
+            'vinhos_categorias',
+            'vinhos_produtores'
         ]));
     }
     public function vinhos_detalhes($vinho)
