@@ -57,12 +57,6 @@ class MensagensController extends Controller
                 'email' => 'required|email',
                 'assunto' => 'required',
                 'mensagem' => 'required'
-            ],
-            [
-                'pergunta' => 'Campo pergunta não ficou preenchido',
-                'email' => 'Campo email não ficou preenchido',
-                'assunto' => 'Campo assunto não ficou preenchido',
-                'mensagem' => 'Campo mensagem não ficou preenchido'
             ]
         );
         $mensagem = new Contactos();

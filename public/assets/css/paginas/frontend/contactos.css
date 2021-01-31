@@ -17,14 +17,13 @@ html {
 
 .cenas input {
     border: none;
-    border-bottom: 1px solid black !important;
+    border-bottom: 1px solid black;
     width: 95%;
     color: #27000a;
     text-align: left;
     font-size: 21px;
     background-color: var(--inputs);
     font-weight: 100;
-    margin-bottom: 55px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 0 !important;
 }
@@ -37,6 +36,10 @@ html {
 
 .bruv::placeholder {
     font-size: 20px;
+}
+
+.campo {
+    margin-bottom: 50px;
 }
 
 @keyframes slideInFromLeft {
@@ -53,6 +56,24 @@ html {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.breadcrumb {
+    background-color: white;
+    margin-top: 30px !important;
+}
+
+.ui.breadcrumb a {
+    color: #742f37 !important;
+}
+
+.breadcrumb .active {
+    color: #742f37 !important;
+}
+
+.grid {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
+
 .contactos {
     background-color: green;
 }
@@ -64,7 +85,8 @@ html {
 }
 #rowcontactos {
     color: var(--color);
-    padding-top: 100px!important;
+    padding-top: 50px!important;
+    padding-bottom: 50px!important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

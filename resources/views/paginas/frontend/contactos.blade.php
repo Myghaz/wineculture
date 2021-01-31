@@ -4,20 +4,22 @@
 
 @section('links')
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
     <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/contactos.css') }}">
 @endsection
 
 @section('content')
-
-    <div  class="container">
-        @if ($errors->any())
-            @include ('partials.errors')
-        @endif
-        @if (!empty(session('success')))
-            @include ('partials.success')
-        @endif
+    <div class="ui grid">
+        <div class="ui large breadcrumb">
+            <a class="section">Home</a>
+            <i class="right chevron icon divider"></i>
+            <a class="section">Registration</a>
+            <i class="right chevron icon divider"></i>
+            <div class="active section">Personal Information</div>
+        </div>
+    </div>
+    <div class="container">
         <div id="rowcontactos" class="row">
             <div class="col-md-3">
                 <h3>Contacte-nos:</h3>
@@ -40,23 +42,35 @@
                 action="{{ route('contactos_frontend_store') }}">
                 @csrf
                 <div>
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control" value="{{ old('name') }}" id="campoNome"
+                    <div class="form-group campo">
+                        <input type="text" name="name" class="form-control @error('name') border-bottom border-danger @enderror" value="{{ old('name') }}" id="campoNome"
                             placeholder="&#xf007;&nbsp; Nome" />
+                            @error('name')
+                                <div class="text-danger">{{$message}}</div>
+                            @enderror
                     </div>
 
-                    <div class="form-group">
-                        <input type="text" name="email" class="form-control" value="{{ old('email') }}" id="campoEmail"
+                    <div class="form-group campo">
+                        <input type="text" name="email" class="form-control @error('email') border-bottom border-danger @enderror" value="{{ old('email') }}" id="campoEmail"
                             placeholder="&#xf1fa; Email" />
+                            @error('email')
+                                <div class="text-danger">{{$message}}</div>
+                            @enderror
                     </div>
-                    <div class="form-group">
-                        <input type="text" name="assunto" class="form-control" value="{{ old('assunto') }}"
+                    <div class="form-group campo">
+                        <input type="text" name="assunto" class="form-control @error('assunto') border-bottom border-danger @enderror" value="{{ old('assunto') }}"
                             id="campoAssunto" placeholder="&#xf02d; Assunto" />
+                            @error('assunto')
+                                <div class="text-danger">{{$message}}</div>
+                            @enderror
                     </div>
 
                     <div class="form-group mequie">
-                        <textarea type="text" class="form-control bruv" name="mensagem" rows="5" id="campoMensagem"
+                        <textarea type="text" class="form-control bruv @error('mensagem') border-bottom border-danger @enderror" name="mensagem" rows="5" id="campoMensagem"
                             placeholder="&#xf0e0; Mensagem">{{ Request::old('mensagem') }}</textarea>
+                            @error('mensagem')
+                                <div class="text-danger">{{$message}}</div>
+                            @enderror
                     </div>
                     <div>
                         <button class="form-btn dx merda" type="submit">Submeter</button>
