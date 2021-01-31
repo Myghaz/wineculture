@@ -65,7 +65,7 @@
 
 
                 <div class="app-brand">
-                    <a href="/admin" title="Sleek Dashboard">
+                    <a href="/admin/dashboard" title="Sleek Dashboard">
                         <img class="brand-icon" height="10px;" src="{{ URL::asset('assets\img\logos\logo_min.png') }}">
                         <span class="brand-name text-truncate">WineCulture</span>
                     </a>
