@@ -36,7 +36,7 @@
                                     {{ $pergunta->pergunta }}
                                 </div>
                                 <div class="content">
-                                    <p class="transition hidden resposta">{!! $pergunta->resposta !!}</p>
+                                    <p class="transition resposta">{!! $pergunta->resposta !!}</p>
                                 </div>
                             </div>
                         @endif
@@ -49,18 +49,8 @@
 
     <!--SCRIPTS-->
     <script>
-        var shiftWindow = function() {
-            scrollBy(0, -70)
-        };
-        if (location.hash) shiftWindow();
-        window.addEventListener("hashchange", shiftWindow);
-
-    </script>
-
-    <script>
         $('.ui.accordion')
             .accordion();
-
     </script>
 
 @endsection
