@@ -95,6 +95,10 @@ class VinhosController extends Controller
         ]));
     }
 
+    
+
+    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -130,18 +134,10 @@ class VinhosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($vinhos)
+    public function show(Vinhos $vinhos)
     {
-        $vinho = Vinhos::find($vinhos);
-        $categorias = category_wine::all();
-        $users = User::all();
-        $vinho_produtor = User::find($vinho->id_produtor);
-        return view('paginas.backend.vinhos.show', compact([
-            'vinho',
-            'categorias',
-            'users',
-            'vinho_produtor'
-        ]));
+        $vinho = Vinhos::all();
+        return view('paginas.backend.vinhos.show', compact('vinho'));
     }
 
     /**
@@ -188,9 +184,8 @@ class VinhosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, Vinhos $vinho)
+    public function destroy($id)
     {
-        $vinho->delete($vinho);
-        return redirect()->route('vinhos.index')->with('success', 'Vinho removido com sucesso', compact('vinho'));
+        //
     }
 }

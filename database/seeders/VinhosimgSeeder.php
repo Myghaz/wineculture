@@ -16,10 +16,6 @@ class VinhosimgSeeder extends Seeder
     {
         Vinhosimg::create([
             'id_vinho' => 1,
-            'img' => '1.jpg',
-        ]);
-        Vinhosimg::create([
-            'id_vinho' => 1,
             'img' => '1-1.jpg',
         ]);
         Vinhosimg::create([
@@ -28,15 +24,7 @@ class VinhosimgSeeder extends Seeder
         ]);
         Vinhosimg::create([
             'id_vinho' => 2,
-            'img' => '2.jpg',
-        ]);
-        Vinhosimg::create([
-            'id_vinho' => 2,
             'img' => '2-1.jpg',
-        ]);
-        Vinhosimg::create([
-            'id_vinho' => 3,
-            'img' => '3.jpg',
         ]);
         Vinhosimg::create([
             'id_vinho' => 3,
@@ -45,10 +33,6 @@ class VinhosimgSeeder extends Seeder
         Vinhosimg::create([
             'id_vinho' => 3,
             'img' => '3-2.jpg',
-        ]);
-        Vinhosimg::create([
-            'id_vinho' => 4,
-            'img' => '4.jpg',
         ]);
         Vinhosimg::create([
             'id_vinho' => 4,

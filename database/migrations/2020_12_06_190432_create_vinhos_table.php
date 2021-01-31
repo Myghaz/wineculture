@@ -18,7 +18,7 @@ class CreateVinhosTable extends Migration
             $table->string('nome');
             $table->biginteger('id_categoria')->unsigned();
             $table->biginteger('id_produtor')->unsigned();
-            $table->biginteger('img')->unsigned();
+            $table->string('img')->nullable();
             $table->longText('descricao');
             $table->double('preco');
             $table->integer('stock');

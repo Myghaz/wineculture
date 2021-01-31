@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="banner">
-	<img class="img-fluid banner" src="/assets/img/paginas/frontend/tipo_de_vinhos/banner_vin.png" alt="banner">
+	<img class="img-fluid banner" src="http://wineculture_laravel.test/assets/img/paginas/frontend/faq-banner.jpg" alt="banner">
 </div>
 <div class="ui grid">
 	<div class="ui large breadcrumb">
@@ -30,6 +30,9 @@
 				<div class="ui container headercontainer">
 					<a class="item">
 						{{$vinhostotal}} vinhos encontrados
+					</a>
+					<a class="item refresh">
+						<i id="refreshvinhos" class="sync icon"></i>
 					</a>
 					<div class="right item ordenacao">
 						<div class="ui labeled icon dropdown">
@@ -73,7 +76,7 @@
 									@foreach ($categorias as $key => $categoria)
 									<div class="field">
 										<div class="ui toggle checkbox">
-											<input type="checkbox" class="{{$categoria->nome}}" name="categoria_vinho" value="{{$categoria->nome}}">
+											<input type="checkbox" class="categoriacheckb" id="{{$categoria->nome}}" name="categoria_vinho" value="{{$categoria->nome}}">
 											<label>{{$categoria->nome}}</label>
 										</div>
 									</div>
@@ -93,7 +96,7 @@
 									@foreach ($produtores_vinho as $key => $produtor_vinho)
 									<div class="field">
 										<div class="ui toggle checkbox">
-											<input type="checkbox" class="{{$produtor_vinho->produtor->name}}" name="produtores_vinhos" value="{{$produtor_vinho->produtor->id}}">
+											<input type="checkbox" class="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}} categoriacheckb"  id="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}}" name="produtores_vinhos" value="{{$produtor_vinho->produtor->id}}">
 											<label>{{$produtor_vinho->produtor->name}} {{$produtor_vinho->produtor->apelido}}</label>
 										</div>
 									</div>
@@ -109,25 +112,11 @@
 			<div class="ui attached stackable menu headervinhos">
 				<div class="ui container headervinhoscontainer">
 					<div class="item itemfiltros">
-						<a class="ui image label selectfiltros">
-							Tinto
-							<i class="delete icon"></i>
-						</a>
-						<a class="ui image label selectfiltros">
-							Rosé
-							<i class="delete icon"></i>
-						</a>
-						<a class="ui image label selectfiltros">
-							Espumante
-							<i class="delete icon"></i>
-						</a>
 					</div>
-					<div class="item itemfiltros">
 						<a class="ui image label reporfiltros">
-							Repor Filtros
-							<i class="delete icon"></i>
+						<i class="trash alternate icon apagarfiltros"></i>
 						</a>
-					</div>
+				
 					<div class="right item headervinhospesquisa">
 						<div class="ui search">
 							<div class="ui icon input">
@@ -139,64 +128,90 @@
 					</div>
 				</div>
 			</div>
-			<div class="ui grid vinho_grid">
-					<div class="four column row">
-						@foreach($vinhos as $key => $vinho)
-						<div class="column">
-							<div class="vinho_item">
-							<a href="/vinhos/{{$vinho->id}}" class="wine_desc">
-							<div class="zoom-img">
-								@foreach($vinhos_img as $key_img => $vinho_img)
-									@if($vinho_img->id == $vinho->img)
-										<img src="\storage\vinhos\{{$vinho_img->img}}" class="wine_img" alt="produto_vinho">
-									@endif
-								@endforeach
+			<div class="ui four column grid vinhoscontainer">
+				@foreach ($vinhos as $key=>$vinho)
+				<div class="column columnvinho">
+					<div class="ui cube shape shapevinho shapeimgs{{$vinho->id}}">
+						<input type="hidden" id="id_vinho" value="{{$vinho->id}}">
+						<div class="sides ">
+							<div class="side active shapevinho">
+								<img class="img-fluid imgvinho" src="{{asset('storage/vinhos/'.$vinho->img) }}" alt="{{$vinho->nome}}">
 							</div>
-							
-							<div class="ui clearing divider vinho_divider"></div>
-							
-							<div style="vertical-align: text-top;">
-								<p class="vinho_titulo">{{$vinho->nome}}</p>
+							@foreach ($vinhos_img as $key=>$vinho_img)
+							@if ($vinho_img->id_vinho == $vinho->id)
+							<div class="side sideimg">
+								<img class="img-fluid imgvinho" src="{{asset('storage/vinhos/'.$vinho_img->img) }}" alt="{{$vinho->nome}}">
 							</div>
+							@endif
+							@endforeach
+						</div>
+					</div>
+					<div class="ui ignored icon direction buttons imgbtndown">
+						<div class="ui icon button baixo" data-animation="flip" data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
+					</div>
+					<div class="ui ignored icon direction buttons imgbtnright">
+						<div class="ui icon button direita" data-animation="flip" data-direction="right" title="Flip Right"><i class="right long arrow icon"></i></div>
+					</div>
+					<div class="dividervinho"></div>
 
-							</a>
+					<div class="ui cube shape shapedetalhes shapedetalhes{{$vinho->id}}">
+						<input type="hidden" id="id_vinho" value="{{$vinho->id}}">
+						<div class="sides sidesdetalhes">
+							<div class="side active">
+								<div class="nomevinho">
+									{{$vinho->nome}}
+								</div>
 							</div>
-    					</div>
-    					@endforeach
-  					</div>
-  				</div>
+							<div class="side categoriavinhoside">
+						
+									{{$vinho->categoria->nome}}
+							
+							</div>
+							<div class="side produtorvinhoside">
+						
+									{{$vinho->produtor->name}} {{$vinho->produtor->apelido}}
+							
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+				@endforeach
+			</div>
 		</div>
 	</div>
 </div>
 @endsection
 @section('javascript')
 <script>
-var vinhos = [];
+	var vinhos = [];
 </script>
 @foreach ($vinhos as $key=>$vinho)
 <script>
-vinhos.push(@json($vinho->nome));
+	vinhos.push(@json($vinho->nome));
 </script>
 @endforeach
 
 <script>
-var vinhos_categorias = [];
+	var vinhos_categorias = [];
 </script>
 @foreach ($categorias as $key=>$categoria)
 <script>
-vinhos_categorias.push(@json($categoria->nome));
+	vinhos_categorias.push(@json($categoria->nome));
 </script>
 @endforeach
 
 <script>
-var vinhos_produtores = [];
+	var vinhos_produtores = [];
 </script>
 @foreach ($vinhos_produtores as $key=>$vinhos_produtor)
 <script>
-nome1= @json($vinhos_produtor->produtor->name);
-nome2= @json($vinhos_produtor->produtor->apelido);
-var nomeapelido = nome1.concat(" ", nome2);
-vinhos_produtores.push(nomeapelido);
+	nome1 = @json($vinhos_produtor-> produtor->name);
+	nome2 = @json($vinhos_produtor->produtor->apelido);
+	var nomeapelido = nome1.concat(" ", nome2);
+	vinhos_produtores.push(nomeapelido);
 </script>
 @endforeach
 <script src="{{ URL::asset('assets/js/paginas/frontend/vinhos.js') }}"></script>
