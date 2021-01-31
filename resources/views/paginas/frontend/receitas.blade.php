@@ -30,12 +30,12 @@
             <div class="product-grid3">
                 <div class="product-image3">
                     <a href="#">
-                   
+
                         <img class="pic-1" src=" {{asset('storage/receitas/'.$value->foto) }}">
                         <img class="pic-2" src=" {{asset('storage/receitas/'.$value->foto) }}">
                     </a>
                     <ul class="social">
-                        <li><a href=" {{asset('storage/receitas/'.$value->foto) }}"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="{{ route('receitasin',$value) }}"><i class="fa fa-eye"></i></a></li>
                     </ul>
                     <span class="product-new-label">Novo</span>
                 </div>
