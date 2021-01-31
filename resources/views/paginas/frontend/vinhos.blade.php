@@ -75,8 +75,8 @@
 								<div class="grouped fields">
 									@foreach ($categorias as $key => $categoria)
 									<div class="field">
-										<div class="ui toggle checkbox">
-											<input type="checkbox" class="categoriacheckb" id="{{$categoria->nome}}" name="categoria_vinho" value="{{$categoria->nome}}">
+										<div class="ui toggle checkbox filtroschecks">
+											<input type="checkbox" class="categoriacheckb" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}" value="{{$categoria->nome}}">
 											<label>{{$categoria->nome}}</label>
 										</div>
 									</div>
@@ -95,8 +95,8 @@
 								<div class="grouped fields">
 									@foreach ($produtores_vinho as $key => $produtor_vinho)
 									<div class="field">
-										<div class="ui toggle checkbox">
-											<input type="checkbox" class="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}} categoriacheckb"  id="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}}" name="produtores_vinhos" value="{{$produtor_vinho->produtor->id}}">
+										<div class="ui toggle checkbox filtroschecks">
+											<input type="checkbox"  class="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}} categoriacheckb" id="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}}" name="produtor{{$produtor_vinho->id_produtor}}" value="{{$produtor_vinho->produtor->id}}">
 											<label>{{$produtor_vinho->produtor->name}} {{$produtor_vinho->produtor->apelido}}</label>
 										</div>
 									</div>
@@ -120,7 +120,7 @@
 					<div class="right item headervinhospesquisa">
 						<div class="ui search">
 							<div class="ui icon input">
-								<input class="prompt" type="text" placeholder="Pesquisar">
+								<input class="prompt" id="intpesquisa" type="text" placeholder="Pesquisar">
 								<i class="search icon pesquisaricon"></i>
 							</div>
 							<div class="results"></div>
@@ -130,10 +130,10 @@
 			</div>
 			<div class="ui four column grid vinhoscontainer">
 				@foreach ($vinhos as $key=>$vinho)
-				<div class="column columnvinho">
+				<div class="column columnvinho categoria{{$vinho->categoria->nome}} produtor{{$vinho->id_produtor}}">
 					<div class="ui cube shape shapevinho shapeimgs{{$vinho->id}}">
 						<input type="hidden" id="id_vinho" value="{{$vinho->id}}">
-						<div class="sides ">
+						<div class="sides">
 							<div class="side active shapevinho">
 								<img class="img-fluid imgvinho" src="{{asset('storage/vinhos/'.$vinho->img) }}" alt="{{$vinho->nome}}">
 							</div>
