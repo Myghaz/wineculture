@@ -130,7 +130,7 @@
 			</div>
 			<div class="ui four column grid vinhoscontainer">
 				@foreach ($vinhos as $key=>$vinho)
-				<div class="column columnvinho categoria{{$vinho->categoria->nome}} produtor{{$vinho->id_produtor}}">
+				<div name="vinhocol" class="column columnvinho categoria{{$vinho->categoria->nome}} produtor{{$vinho->id_produtor}}">
 					<div class="ui cube shape shapevinho shapeimgs{{$vinho->id}}">
 						<input type="hidden" id="id_vinho" value="{{$vinho->id}}">
 						<div class="sides">

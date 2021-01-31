@@ -67,15 +67,20 @@ $(".reporfiltros").on("click", function () {
     $(".categoriacheckb").prop("checked", false);
 });;
 var sections = $('.columnvinho');
+var countfil = 0;
 $('.categoriacheckb').on("change", function () {
     var checked = $(".filtroschecks :checkbox:checked");
     if (checked.length) {
         sections.hide();
+       
         checked.each(function () {
+         
             $("." + $(this).attr("name")).first().show( "fast", function showNext() {
               $( this ).next( "div" ).show( "fast", showNext );
+           
             });
         });
+  
     } else {
         sections.show();
     }
@@ -88,6 +93,14 @@ $('.categoriacheckb').on("change", function () {
         var delacategoriasfiltro = classcat.concat(dacategoriasfiltro);
         $(delacategoriasfiltro).detach();
     }
+    var allElems = document.getElementsByName('vinhocol');
+      var count = 0;
+      for (var i = 0; i < allElems.length; i++)
+      {
+          var thisElem = allElems[i];
+          if (thisElem.style.display == 'none') count++;
+      }
+   
 });
 $("#intpesquisa").on("change paste keyup", function() {
   alert($(this).val()); 
