@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="banner">
-	<img class="img-fluid banner" src="http://wineculture_laravel.test/assets/img/paginas/frontend/faq-banner.jpg" alt="banner">
+	<img class="img-fluid banner" src="http://wineculture_laravel.test/assets/img/paginas/frontend/vinhos/vinhosback.jpg" alt="banner">
 </div>
 <div class="ui grid">
 	<div class="ui large breadcrumb">
