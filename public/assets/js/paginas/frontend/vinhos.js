@@ -1,3 +1,4 @@
+$(".reporfiltros").hide();
 $('.ui.accordion')
     .accordion({
         exclusive: false
@@ -73,12 +74,14 @@ $(document).on('click', '.deletefiltro', function () {
     } else {
         sections.show("slow", function showPrevious() {
             $(this).next("div").show("slow", showPrevious);
+            $(".reporfiltros").hide();
         });
     }
 });
 $(".reporfiltros").on("click", function () {
     $('.columnvinho').show("slow", function showPrevious() {
         $(this).next("div").show("slow", showPrevious);
+        $(".reporfiltros").hide();
     });
     $(".selectfiltros").detach();
     $(".categoriacheckb").prop("checked", false);
@@ -89,7 +92,7 @@ $('.categoriacheckb').on("change", function () {
     var checked = $(".filtroschecks :checkbox:checked");
     if (checked.length) {
         sections.hide();
-
+        $(".reporfiltros").show();
         checked.each(function () {
 
             $("." + $(this).attr("name")).show("fast", function showNext() {
@@ -100,6 +103,7 @@ $('.categoriacheckb').on("change", function () {
     } else {
         sections.show("slow", function showPrevious() {
             $(this).next("div").show("slow", showPrevious);
+            $(".reporfiltros").hide();
         });
     }
     if ($(this).is(":checked")) {
