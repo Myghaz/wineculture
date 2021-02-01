@@ -7,129 +7,432 @@
 @endsection
 
 @section("content")
-
 <div class="principal_tc">
-<h2><strong>Termos e Condições</strong></h2>
+    <h2><strong>
 
-<p>Bem Vindo á WineCulture!</p>
+            Termos e Condições
 
-<p>These terms and conditions outline the rules and regulations for the use of WineCulture's Website, located at www.wineculture.pt.</p>
+        </strong></h2>
 
-<p>By accessing this website we assume you accept these terms and conditions. Do not continue to use WineCulture if you do not agree to take all of the terms and conditions stated on this page.</p>
+    <p>
 
-<p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+        Bem Vindo á WineCulture!
 
-<h3><strong>Cookies</strong></h3>
+    </p>
 
-<p>We employ the use of cookies. By accessing WineCulture, you agreed to use cookies in agreement with the WineCulture's Privacy Policy. </p>
+    <p>
 
-<p>Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+        Estes termos e condições definem as regras e regulamentos de utilização do Website da WineCulture, localizado em www.wineculture.pt.
 
-<h3><strong>License</strong></h3>
+    </p>
 
-<p>Unless otherwise stated, WineCulture and/or its licensors own the intellectual property rights for all material on WineCulture. All intellectual property rights are reserved. You may access this from WineCulture for your own personal use subjected to restrictions set in these terms and conditions.</p>
+    <p>
 
-<p>You must not:</p>
-<ul>
-    <li>Republish material from WineCulture</li>
-    <li>Sell, rent or sub-license material from WineCulture</li>
-    <li>Reproduce, duplicate or copy material from WineCulture</li>
-    <li>Redistribute content from WineCulture</li>
-</ul>
+        Ao acessar este site, presumimos que você aceita estes termos e condições.
+        Não continue a usar WineCulture se você não concordar com todos os termos e condições declarados nesta página.
+
+    </p>
+
+    <p>
+
+        A terminologia a seguir se aplica a estes Termos e Condições, Declaração de Privacidade e Aviso de Isenção de Responsabilidade e todos os Contratos: "Cliente", "Você" e "Seu" referem-se a você, a pessoa que faz login neste site e está em conformidade com os termos e condições da Empresa.
+        "A Empresa", "Nós", "Nós", "Nosso" e "Nós" referem-se à nossa Empresa.
+        "Parte", "Partes" ou "Nós" referem-se ao Cliente e a nós mesmos.
+        Todos os termos se referem à oferta, aceitação e consideração do pagamento necessário para realizar o processo de nossa assistência ao Cliente da maneira mais adequada para o propósito expresso de atender às necessidades do Cliente no que diz respeito à prestação dos serviços declarados da Empresa, de acordo com e sujeito à legislação vigente da Holanda.
+
+    </p>
+
+    <h3><strong>
+
+            Biscoitos
+
+        </strong></h3>
+
+    <p>
+
+        Empregamos o uso de cookies.
+        Ao acessar a WineCulture, você concorda em usar cookies de acordo com a Política de Privacidade da WineCulture.
+
+    </p>
+
+    <p>
+
+        A maioria dos sites interativos usa cookies para nos permitir recuperar os detalhes do usuário em cada visita.
+        Os cookies são usados ​​pelo nosso site para habilitar a funcionalidade de certas áreas para tornar mais fácil para as pessoas que visitam nosso site.
+        Alguns de nossos afiliados / parceiros de publicidade também podem usar cookies.
+
+    </p>
+
+    <h3><strong>
+
+            Licença
+
+        </strong></h3>
+
+    <p>
+
+        Salvo indicação em contrário, WineCulture e / ou seus licenciados detêm os direitos de propriedade intelectual de todo o material da WineCulture.
+        Todos os direitos de propriedade intelectual são reservados.
+        Você pode acessar este de WineCulture para seu uso pessoal sujeito às restrições estabelecidas nestes termos e condições.
+
+    </p>
+
+    <p>
+
+        Você não deve:
+
+    </p>
+    <ul>
+        <li>
+
+            Publique novamente o material da WineCulture
+
+        </li>
+        <li>
+
+            Vender, alugar ou sublicenciar material da WineCulture
+
+        </li>
+        <li>
+
+            Reproduza, duplique ou copie o material da WineCulture
+
+        </li>
+        <li>
+
+            Redistribua o conteúdo da WineCulture
+
+        </li>
+    </ul>
 
 
-<p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. WineCulture does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of WineCulture,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, WineCulture shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+    <p>
 
-<p>WineCulture reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
+        Partes deste site oferecem uma oportunidade para os usuários postarem e trocarem opiniões e informações em certas áreas do site.
+        WineCulture não filtra, edita, publica ou revisa os comentários antes de sua presença no site.
+        Os comentários não refletem os pontos de vista e opiniões da WineCulture, seus agentes e / ou afiliados.
+        Os comentários refletem os pontos de vista e as opiniões da pessoa que postou seus pontos de vista e opiniões.
+        Na medida do permitido pelas leis aplicáveis, WineCulture não será responsável pelos Comentários ou por qualquer responsabilidade, danos ou despesas causados ​​e / ou sofridos como resultado de qualquer uso e / ou publicação e / ou aparência dos Comentários neste local na rede Internet.
 
-<p>You warrant and represent that:</p>
+    </p>
 
-<ul>
-    <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
-    <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;</li>
-    <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy</li>
-    <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
-</ul>
+    <p>
 
-<p>You hereby grant WineCulture a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
+        WineCulture reserva-se o direito de monitorar todos os Comentários e remover quaisquer Comentários que possam ser considerados inadequados, ofensivos ou que causem violação destes Termos e Condições.
 
-<h3><strong>Hyperlinking to our Content</strong></h3>
+    </p>
 
-<p>The following organizations may link to our Website without prior written approval:</p>
+    <p>
 
-<ul>
-    <li>Government agencies;</li>
-    <li>Search engines;</li>
-    <li>News organizations;</li>
-    <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
-    <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
-</ul>
+        Você garante e representa que:
 
-<p>These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.</p>
+    </p>
 
-<p>We may consider and approve other link requests from the following types of organizations:</p>
+    <ul>
+        <li>
 
-<ul>
-    <li>commonly-known consumer and/or business information sources;</li>
-    <li>dot.com community sites;</li>
-    <li>associations or other groups representing charities;</li>
-    <li>online directory distributors;</li>
-    <li>internet portals;</li>
-    <li>accounting, law and consulting firms; and</li>
-    <li>educational institutions and trade associations.</li>
-</ul>
+            Você tem o direito de publicar os Comentários em nosso site e tem todas as licenças e consentimentos necessários para fazê-lo;
 
-<p>We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of WineCulture; and (d) the link is in the context of general resource information.</p>
+        </li>
+        <li>
 
-<p>These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.</p>
+            Os Comentários não invadem nenhum direito de propriedade intelectual, incluindo, sem limitação, direitos autorais, patentes ou marcas comerciais de terceiros;
 
-<p>If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to WineCulture. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.</p>
+        </li>
+        <li>
 
-<p>Approved organizations may hyperlink to our Website as follows:</p>
+            Os comentários não contêm qualquer material difamatório, calunioso, ofensivo, indecente ou de outra forma ilegal que seja uma invasão de privacidade
 
-<ul>
-    <li>By use of our corporate name; or</li>
-    <li>By use of the uniform resource locator being linked to; or</li>
-    <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party’s site.</li>
-</ul>
+        </li>
+        <li>
 
-<p>No use of WineCulture's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
+            Os Comentários não serão usados ​​para solicitar ou promover negócios ou customizar ou apresentar atividades comerciais ou atividades ilegais.
 
-<h3><strong>iFrames</strong></h3>
+        </li>
+    </ul>
 
-<p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
+    <p>
 
-<h3><strong>Content Liability</strong></h3>
+        Você, por meio deste, concede à WineCulture uma licença não exclusiva para usar, reproduzir, editar e autorizar terceiros a usar, reproduzir e editar qualquer um de seus Comentários em todas e quaisquer formas, formatos ou mídia.
 
-<p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
+    </p>
 
-<h3><strong>A Sua Privacidade</strong></h3>
+    <h3><strong>
 
-<p>Leia a <a href="/politica_de_privacidade">Politica de Privacidade</a></p>
+            Hiperlink para nosso conteúdo
 
-<h3><strong>Reservation of Rights</strong></h3>
+        </strong></h3>
 
-<p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
+    <p>
 
-<h3><strong>Removal of links from our website</strong></h3>
+        As seguintes organizações podem se conectar ao nosso site sem aprovação prévia por escrito:
 
-<p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
+    </p>
 
-<p>We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
+    <ul>
+        <li>
 
-<h3><strong>Disclaimer</strong></h3>
+            Agências governamentais;
 
-<p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
+        </li>
+        <li>
 
-<ul>
-    <li>limit or exclude our or your liability for death or personal injury;</li>
-    <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
-    <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
-    <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
-</ul>
+            Motores de busca;
 
-<p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
+        </li>
+        <li>
 
-<p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
+            Organizações de notícias;
+
+        </li>
+        <li>
+
+            Os distribuidores de diretórios online podem ter links para nosso site da mesma maneira que fazem um hiperlink para sites de outras empresas listadas;
+            e
+
+        </li>
+        <li>
+
+            Negócios credenciados em todo o sistema, exceto a solicitação de organizações sem fins lucrativos, shopping centers de caridade e grupos de arrecadação de fundos de caridade que não podem ter um link para nosso site.
+
+        </li>
+    </ul>
+
+    <p>
+
+        Essas organizações podem ter links para nossa página inicial, publicações ou outras informações do site, desde que o link: (a) não seja enganoso de forma alguma;
+        (b) não implique falsamente em patrocínio, endosso ou aprovação da parte vinculante e de seus produtos e / ou serviços;
+        e (c) se enquadra no contexto do site da parte vinculante.
+
+    </p>
+
+    <p>
+
+        Podemos considerar e aprovar outras solicitações de link dos seguintes tipos de organizações:
+
+    </p>
+
+    <ul>
+        <li>
+
+            fontes de informações de consumidores e / ou negócios comumente conhecidas;
+
+        </li>
+        <li>
+
+            sites da comunidade dot.com;
+
+        </li>
+        <li>
+
+            associações ou outros grupos que representam instituições de caridade;
+
+        </li>
+        <li>
+
+            distribuidores de diretórios online;
+
+        </li>
+        <li>
+
+            portais de internet;
+
+        </li>
+        <li>
+
+            escritórios de contabilidade, advocacia e consultoria;
+            e
+
+        </li>
+        <li>
+
+            instituições educacionais e associações comerciais.
+
+        </li>
+    </ul>
+
+    <p>
+
+        Aprovaremos as solicitações de link dessas organizações se decidirmos que: (a) o link não nos faria parecer desfavoravelmente para nós mesmos ou para nossos negócios credenciados;
+        (b) a organização não possui registros negativos conosco;
+        (c) o benefício para nós da visibilidade da hiperligação compensa a ausência da WineCulture;
+        e (d) o link está no contexto de informações gerais de recursos.
+
+    </p>
+
+    <p>
+
+        Essas organizações podem ter um link para nossa página inicial, desde que o link: (a) não seja de forma alguma enganoso;
+        (b) não implique falsamente em patrocínio, endosso ou aprovação da parte vinculante e de seus produtos ou serviços;
+        e (c) se enquadra no contexto do site da parte vinculante.
+
+    </p>
+
+    <p>
+
+        Se você é uma das organizações listadas no parágrafo 2 acima e está interessado em fazer um link para o nosso site, você deve nos informar enviando um e-mail para WineCulture.
+        Por favor, inclua o seu nome, o nome da sua organização, informações de contato, bem como o URL do seu site, uma lista de quaisquer URLs a partir dos quais você pretende criar um link para o nosso site e uma lista dos URLs em nosso site para os quais você gostaria de ligação.
+        Espere 2 a 3 semanas por uma resposta.
+
+    </p>
+
+    <p>
+
+        As organizações aprovadas podem fazer um hiperlink para nosso site da seguinte forma:
+
+    </p>
+
+    <ul>
+        <li>
+
+            Usando nosso nome corporativo;
+            ou
+
+        </li>
+        <li>
+
+            Pelo uso do localizador uniforme de recursos ao qual está vinculado;
+            ou
+
+        </li>
+        <li>
+
+            Pelo uso de qualquer outra descrição do nosso site vinculado que faça sentido dentro do contexto e formato do conteúdo do site da parte vinculante.
+
+        </li>
+    </ul>
+
+    <p>
+
+        Nenhum uso do logotipo da WineCulture ou outra arte será permitido para vinculação na ausência de um contrato de licença de marca registrada.
+
+    </p>
+
+    <h3><strong>
+
+            iFrames
+
+        </strong></h3>
+
+    <p>
+
+        Sem aprovação prévia e permissão por escrito, você não pode criar quadros em torno de nossas páginas da Web que alterem de qualquer forma a apresentação visual ou aparência de nosso site.
+
+    </p>
+
+    <h3><strong>
+
+            Responsabilidade de Conteúdo
+
+        </strong></h3>
+
+    <p>
+
+        Não seremos responsáveis ​​por qualquer conteúdo que apareça em seu site.
+        Você concorda em nos proteger e nos defender contra todas as reclamações que estão aumentando em seu site.
+        Nenhum link (s) deve aparecer em qualquer site que possa ser interpretado como difamatório, obsceno ou criminoso, ou que infrinja, de outra forma viole ou defenda a violação ou outra violação de quaisquer direitos de terceiros.
+
+    </p>
+
+    <h3><strong>
+
+            A Sua Privacidade
+
+        </strong></h3>
+
+    <p>
+
+        Leia a
+        <a href="/politica_de_privacidade">
+
+            Politica de Privacidade
+
+        </a>
+    </p>
+
+    <h3><strong>
+
+            Reserva de direitos
+
+        </strong></h3>
+
+    <p>
+
+        Nós nos reservamos o direito de solicitar que você remova todos os links ou qualquer link específico para o nosso site.
+        Você aprova a remoção imediata de todos os links para nosso site, mediante solicitação.
+        Também nos reservamos o direito de amenizar estes termos e condições e sua política de vinculação a qualquer momento.
+        Ao conectar-se continuamente ao nosso site, você concorda em se comprometer e seguir estes termos e condições de vinculação.
+
+    </p>
+
+    <h3><strong>
+
+            Remoção de links do nosso site
+
+        </strong></h3>
+
+    <p>
+
+        Se você encontrar algum link em nosso site que seja ofensivo por qualquer motivo, você está à vontade para entrar em contato e nos informar a qualquer momento.
+        Consideraremos as solicitações de remoção de links, mas não somos obrigados a fazê-lo ou responder diretamente a você.
+
+    </p>
+
+    <p>
+
+        Não garantimos que as informações neste site sejam corretas, não garantimos sua integridade ou precisão;
+        nem prometemos garantir que o site permaneça disponível ou que o material no site seja mantido atualizado.
+
+    </p>
+
+    <h3><strong>
+
+            aviso Legal
+
+        </strong></h3>
+
+    <p>
+
+        Na extensão máxima permitida pela lei aplicável, excluímos todas as representações, garantias e condições relacionadas ao nosso site e ao uso deste site.
+        Nada neste aviso:
+
+    </p>
+
+    <ul>
+        <li>
+
+            limitar ou excluir nossa responsabilidade ou sua responsabilidade por morte ou danos pessoais;
+
+        </li>
+        <li>
+
+            limitar ou excluir nossa responsabilidade ou sua responsabilidade por fraude ou deturpação fraudulenta;
+
+        </li>
+        <li>
+
+            limitar qualquer uma de nossas responsabilidades de qualquer forma que não seja permitida pela lei aplicável;
+            ou
+
+        </li>
+        <li>
+
+            excluir qualquer uma das nossas responsabilidades ou responsabilidades que não possam ser excluídas pela legislação aplicável.
+
+        </li>
+    </ul>
+
+    <p>
+
+        As limitações e proibições de responsabilidade estabelecidas nesta Seção e em outras partes desta isenção de responsabilidade: (a) estão sujeitas ao parágrafo anterior;
+        e (b) regem todas as responsabilidades decorrentes da isenção de responsabilidade, incluindo responsabilidades decorrentes de contratos, atos ilícitos e violação de dever estatutário.
+
+    </p>
+
+    <p>
+
+        Desde que o site e as informações e serviços nele fornecidos sejam gratuitos, não seremos responsáveis ​​por perdas ou danos de qualquer natureza.
+
+    </p>
 </div>
 @endsection

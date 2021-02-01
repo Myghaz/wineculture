@@ -318,4 +318,5 @@ a.refresh i.animacao {
     width: 100% !important;
     height: 350px;
     object-fit: cover;
+    transition: transform .4s;
 }
