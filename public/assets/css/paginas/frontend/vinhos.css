@@ -80,7 +80,7 @@ img.banner {
 
 .ui.toggle.checkbox input:checked~label:after {
 
-    background: #331518;
+    background: white;
 }
 
 .vinhosheader {
