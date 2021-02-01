@@ -110,7 +110,7 @@
                     <div class="content">
                         <p>
                         <ul>
-                            <h3>Cookies relacionados à conta</h3>
+                            <h2 class="header_li">Cookies relacionados à conta</h2>
                             <li class="mb-4">
                                 Se você criar uma conta connosco, usaremos cookies para o gerenciamento do processo de
                                 inscrição e
@@ -120,7 +120,7 @@
                                 casos, eles poderão permanecer
                                 posteriormente para lembrar as preferências do seu site ao sair.
                             </li>
-                            <h3>Cookies relacionados ao login</h3>
+                            <h2 class="header_li">Cookies relacionados ao login</h2>
                             <li class="mb-4">
                                 Utilizamos cookies quando você está logado, para que possamos lembrar dessa ação. Isso
                                 evita
@@ -131,7 +131,7 @@
                                 para garantir que você possa acessar apenas a recursos e áreas restritas ao efetuar
                                 login.
                             </li>
-                            <h3>Cookies relacionados a boletins por e-mail</h3>
+                            <h2 class="header_li">Cookies relacionados a boletins por e-mail</h2>
                             <li class="mb-4">
                                 Este site oferece serviços de assinatura de boletim informativo ou e-mail e os cookies
                                 podem
@@ -141,14 +141,14 @@
                                 usuários inscritos / não
                                 inscritos.
                             </li>
-                            <h3>Pedidos processando cookies relacionados</h3>
+                            <h2 class="header_li">Pedidos processando cookies relacionados</h2>
                             <li class="mb-4">
                                 Este site oferece facilidades de comércio eletrônico ou pagamento e alguns cookies são
                                 essenciais para
                                 garantir que seu pedido seja lembrado entre as páginas, para que possamos processá-lo
                                 adequadamente.
                             </li>
-                            <h3>Cookies relacionados a pesquisas</h3>
+                            <h2 class="header_li">Cookies relacionados a pesquisas</h2>
                             <li class="mb-4">
                                 Periodicamente, oferecemos pesquisas e questionários para fornecer informações
                                 interessantes, ferramentas
@@ -158,7 +158,7 @@
                                 lembrar quem já participou
                                 numa pesquisa ou para fornecer resultados precisos após a alteração das páginas.
                             </li>
-                            <h3>Cookies relacionados a formulários</h3>
+                            <h2 class="header_li">Cookies relacionados a formulários</h2>
                             <li class="mb-4">
                                 Quando você envia dados por meio de um formulário como os encontrados nas páginas de
                                 contacto ou nos
@@ -167,7 +167,7 @@
                                 usuário para
                                 correspondência futura.
                             </li>
-                            <h3>Cookies de preferências do site</h3>
+                            <h2 class="header_li">Cookies de preferências do site</h2>
                             <li>
                                 Para proporcionar uma ótima experiência neste site, fornecemos a funcionalidade para
                                 definir
@@ -238,7 +238,7 @@
                                 para garantir o melhor preço possível.
                             </li>
                         </ul>
-                        <h3>Mais informações</h3>
+                        <h2 class="header_li">Mais informações</h2>
                         <p>
                             Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você
                             não
