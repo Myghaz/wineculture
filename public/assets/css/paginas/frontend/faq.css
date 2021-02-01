@@ -37,11 +37,22 @@ div.col-md-10.perguntas.main {
 }
 
 .resposta {
-    font-size: 23px !important;
+    font-size: 19px !important;
 }
 
 .title:hover {
     color: #34141c !important;
+}
+
+
+.ui.styled.accordion .active.title {
+    background: 0 0;
+    color: #4b1825 !important;
+}
+
+i.styled.accordion .accordion .active.title, .ui.styled.accordion .accordion .title:hover {
+    background: 0 0;
+    color: #4b1825 !important;
 }
 
 .container-fluid a:visited,

@@ -36,3 +36,11 @@
         </div>
     </div>
 @endsection
+<script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.ckeditor').ckeditor();
+    });
+
+</script>

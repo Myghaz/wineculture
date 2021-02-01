@@ -42,7 +42,7 @@
                 @method('PATCH')
                 <div class="collapse" id="collapseExample">
                     <div class="form-group">
-                        <textarea id="" class="form-control" id="exampleFormControlTextarea1" rows="5" value=""
+                        <textarea id="" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="5" value=""
                             name="resposta"></textarea>
                     </div>
                     <div class="form-group">
@@ -54,12 +54,21 @@
     </div>
 
 
-    <script>
-        $("#btncollapse").click(function() {
-            $("html, body").animate({
-                scrollTop: $(document).height()
-            }, 1000);
-        });
 
-    </script>
 @endsection
+<script>
+    $("#btncollapse").click(function() {
+        $("html, body").animate({
+            scrollTop: $(document).height()
+        }, 1000);
+    });
+
+</script>
+<script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.ckeditor').ckeditor();
+    });
+
+</script>
