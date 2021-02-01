@@ -16,12 +16,12 @@
                 <div class="wrapper row">
                         <div class="preview col-md-6">
                             <div class="preview-pic tab-content">
-                                <div class="tab-pane active" id="pic-1"><img src=""></div>
+                                <div class="tab-pane active" id="pic-1"><img src="{{asset('storage/receitas/'.$receita->foto) }}"></div>
                             </div>
                         </div>
                         <div class="details col-md-6">
-                            <h3 class="product-title">{{ $receitas->nome }}</h3>
-                            <p class="product-description">{{ $receitas->descricao }}</p>
+                            <h3 class="product-title">{{ $receita->nome }}</h3>
+                            <p class="product-description">{{ $receita->descricao }}</p>
                             <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong>
                             </p>
                             <div class="action">

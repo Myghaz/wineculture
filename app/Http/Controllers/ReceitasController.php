@@ -32,12 +32,12 @@ class ReceitasController extends Controller
         $Users = User::all();
         return view('paginas.frontend.receitas', compact('receitas', 'category_wines', 'Users'));
     }
-    public function indexReceitain()
+    public function indexReceitain(receitas $receita)
     {
-        $receitas = receitas::all();
+        //$receitas = receitas::all();
         $category_wines = category_wine::all();
         $Users = User::all();
-        return view('paginas.frontend.receitasin', compact('receitas', 'category_wines', 'Users'));
+        return view('paginas.frontend.receitasin', compact('receita', 'category_wines', 'Users'));
     }
     /**
      * Show the form for creating a new resource.
@@ -76,7 +76,7 @@ class ReceitasController extends Controller
 
         if ($request->hasFile('img')) {
             $photo_path = $request->file('img')->store('public/receitas');
-            $receita->foto = basename($photo_path);
+            $receita->foto = $request->file('img')->hashName();
         }
 
         $receita->save();

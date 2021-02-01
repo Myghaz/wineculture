@@ -43,7 +43,7 @@ Route::get('/blog', [BlogController::class, 'indexFrontend'])->name('index_blog_
 //ReceitasController
 Route::get('/receitas', [ReceitasController::class, 'indexFrontend'])->name('receitas');
 
-Route::get('/receitasin', [ReceitasController::class, 'indexReceitain'])->name('receitasin');
+Route::get('/receitasin/{receita}', [ReceitasController::class, 'indexReceitain'])->name('receitasin');
 
 
 
