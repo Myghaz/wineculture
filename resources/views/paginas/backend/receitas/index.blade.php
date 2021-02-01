@@ -44,8 +44,6 @@
                                     <td>
                                         <a class="text-dark" href="">{{ $receita->descricao }}</a>
                                     </td>
-
-
                                     <td class="acoes">
                                         <a href="{{ route('receitas.show', $receita) }}" class="btn btn-xs btn-primary btn-p"><i class="fas fa-eye fa-xs"></i></a>
                                         <a href="{{ route('receitas.edit', $receita) }}" class="btn btn-xs btn-warning btn-p"><i class="fas fa-pen fa-xs"></i></a>
