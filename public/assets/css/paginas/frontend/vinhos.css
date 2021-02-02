@@ -211,6 +211,7 @@ img.banner {
 
 .pesquisaricon {
     opacity: 1 !important;
+    cursor: pointer;
 }
 
 .listavinhos {
