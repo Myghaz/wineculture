@@ -83,7 +83,7 @@
 					<div class="item categorias">
 						<a class="active title">
 							<i class="dropdown icon"></i>
-							Categorias
+							Categoria
 						</a>
 						<div class="active content">
 							<div class="ui form">
@@ -91,7 +91,7 @@
 									@foreach ($categorias as $key => $categoria)
 									<div class="field">
 										<div class="ui toggle checkbox filtroschecks">
-											<input type="checkbox" class="categoriacheckb" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}">
+											<input type="checkbox" class="categoriacheckb" value="{{$categoria->nome}}" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}">
 											<label class="catenome">{{$categoria->nome}}</label>
 										</div>
 									</div>
@@ -103,7 +103,7 @@
 					<div class="item produtores">
 						<a class="active title">
 							<i class="dropdown icon"></i>
-							Produtores
+							Produtor
 						</a>
 						<div class="active content">
 							<div class="ui form">
@@ -111,8 +111,28 @@
 									@foreach ($produtores_vinho as $key => $produtor_vinho)
 									<div class="field">
 										<div class="ui toggle checkbox filtroschecks">
-											<input type="checkbox" class="categoriacheckb" value="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}}" id="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}}" name="produtor{{$produtor_vinho->id_produtor}}">
+											<input type="checkbox" class="categoriacheckb" value="{{$produtor_vinho->produtor->name}}&nbsp;{{$produtor_vinho->produtor->apelido}}" id="{{$produtor_vinho->produtor->name}}&nbsp;{{$produtor_vinho->produtor->apelido}}" name="produtor{{$produtor_vinho->id_produtor}}">
 											<label class="catenome">{{$produtor_vinho->produtor->name}} {{$produtor_vinho->produtor->apelido}}</label>
+										</div>
+									</div>
+									@endforeach
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item classificacoes">
+						<a class="active title">
+							<i class="dropdown icon"></i>
+							Classificação
+						</a>
+						<div class="active content">
+							<div class="ui form">
+								<div class="grouped fields">
+									@foreach ($classificacoes as $key => $classificaccao)
+									<div class="field">
+										<div class="ui slider checkbox filtroschecks">
+											<input type="checkbox" class="categoriacheckb" value="{{$classificaccao->classificacao}}&nbsp;Estrelas" id="{{$classificaccao->classificacao}}&nbsp;Estrelas" name="class{{$classificaccao->classificacao}}">
+											<label class="catenome"><div class="ui disabled rating vinhosclass" data-rating="{{$classificaccao->classificacao}}" data-max-rating="5"></div></label>
 										</div>
 									</div>
 									@endforeach
@@ -183,6 +203,8 @@
 						$('html, body').animate({
 							scrollTop: $(".breadcrumb").offset().top
 						}, 500);
+						$('.ui.rating.vinhosclass')
+    					.rating();
 						setTimeout(function() {
 							$('body')
 								.toast({
@@ -223,6 +245,8 @@
 					$('html, body').animate({
 						scrollTop: $(".breadcrumb").offset().top
 					}, 500);
+					$('.ui.rating.vinhosclass')
+    				.rating();
 				}
 
 			});
@@ -272,6 +296,8 @@
 						$('html, body').animate({
 							scrollTop: $(".breadcrumb").offset().top
 						}, 500);
+						$('.ui.rating.vinhosclass')
+    					.rating();
 					}
 				});
 			}
@@ -294,7 +320,16 @@
 	vinhos_categorias.push(@json($categoria->nome));
 </script>
 @endforeach
+<script>
+	var vinhos_classificacoes = [];
+</script>
+@foreach ($classificacoes as $key=>$classificaccao)
+<script>
+	var classificacaovinho = @json($classificaccao->classificacao);
 
+	vinhos_classificacoes.push(classificacaovinho + " Estrelas");
+</script>
+@endforeach
 <script>
 	var vinhos_produtores = [];
 </script>

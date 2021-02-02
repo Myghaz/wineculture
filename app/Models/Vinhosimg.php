@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vinhosimg extends Model
 {
+    use HasFactory;
     protected $fillable = [
         'id_vinho',
         'img',

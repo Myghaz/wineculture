@@ -1,6 +1,8 @@
-
 @foreach ($vinhos as $key=>$vinho)
-<div name="vinhocol" class="column columnvinho categoria{{$vinho->categoria->nome}} produtor{{$vinho->id_produtor}}">
+<div onload="rate();" name="paginate" class="column columnvinho categoria{{$vinho->categoria->nome}} produtor{{$vinho->id_produtor}} @foreach ($vinhosclass as $key=>$vinhoclass)
+@if($vinhoclass->id_vinho == $vinho->id) class{{$vinhoclass->classificacao}} @endif
+@endforeach">
+
     <div class="ui cube shape shapevinho shapeimgs{{$vinho->id}}">
         <input type="hidden" id="id_vinho" value="{{$vinho->id}}">
         <div class="sides">
@@ -33,14 +35,20 @@
                 </div>
             </div>
             <div class="side categoriavinhoside">
-
                 {{$vinho->categoria->nome}}
-
             </div>
             <div class="side produtorvinhoside">
-
                 {{$vinho->produtor->name}} {{$vinho->produtor->apelido}}
-
+            </div>
+            <div class="side classvinhoside">
+                @foreach ($vinhosclass as $key=>$vinhoclass)
+                @if($vinhoclass->id_vinho == $vinho->id)
+                <div class="ui disabled rating vinhosclass" data-rating="{{$vinhoclass->classificacao}}" data-max-rating="5"></div>
+                @endif
+                @endforeach
+            </div>
+            <div class="side datavinhoside">
+                {{ date('d-m-Y', strtotime($vinho->created_at))}}
             </div>
         </div>
     </div>
