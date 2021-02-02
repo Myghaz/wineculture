@@ -22,7 +22,7 @@
                         <div class="details col-md-6">
                             <h3 class="product-title">{{ $receita->nome }}</h3>
                             <p class="product-description">{{ $receita->descricao }}</p>
-                            <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong>
+                            <p class="product-description">{{ $receita->preparo }}</p>
                             </p>
                             <div class="action">
                                 <a href="{{ route('receitas') }}"><button class="add-to-cart btn btn-default"
