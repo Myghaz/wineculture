@@ -4,26 +4,64 @@
 
 @section("links")
 <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/blog.css') }}">
+
 @endsection
 
 @section("content")
 <div class="row">
-  <div class="column1">
-    <div class="sideside">
-        <button class="dropdrop-downdown">Data<i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-conta">
-            @foreach ($blogs as $value)
-            <a data-filter=".blog-{{$value->id}}">{{$value->created_at}}</a>
-            @endforeach
+    <div class="ui grid">
+        <div class="ui large breadcrumb">
+            <a class="section">Home</a>
+            <i class="right chevron icon divider"></i>
+            <a class="section">Registration</a>
+            <i class="right chevron icon divider"></i>
+            <div class="active section">Personal Information</div>
         </div>
-        <button class="dropdrop-downdown">Categorias<i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-conta">
-            @foreach($categorias as $categoria)
-            <a data-filter=".blog-{{$categoria->id}}">{{$categoria->name}}</a>@endforeach
+    </div>
+    <div class="ui basic modal acarregar">
+        <div class="ui icon header">
+            <div style="width: 250px;" class="ui active slow green double loader"><br><br>
+                A Carregar Lista de Posts</div>
         </div>
-      </div>
-  </div>
-  <div class="column2">
+    </div>
+    <div class="ui grid maincontainer">
+        <div class="row">
+            <div class="three wide column semifiltros"></div>
+            <div class="twelve wide column vinhosheader">
+                <div class="ui attached stackable menu semiheader">
+                    <div class="ui container headercontainer">
+                        <a class="item">
+                            {{$blogtotal}} Posts encontrados
+                        </a>
+                        <a class="item refresh">
+                            <i id="refreshvinhos" class="sync icon"></i>
+                        </a>
+                        <div title="Filtrar Lista" class="right item ordenacao">
+                            <div class="ui labeled icon dropdown">
+                                <i class="filter icon iconfiltro"></i>
+                                <span class="text">Filtrar Lista</span>
+                                <div class="menu">
+                                    <div class="header">
+                                        <i class="tags icon tagsicon"></i>
+                                        Ordenar por:
+                                    </div>
+                                    <div class="item">
+                                        Alfabética
+                                    </div>
+                                    <div class="item">
+                                        Classificação
+                                    </div>
+                                    <div class="item">
+                                        Data de Postagem
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <section class="grelha">
     <div class="containerr">
         <div class="card-column column-0">
@@ -72,7 +110,6 @@
         <div class="text" id="open-content-text"></div>
     </div>
 </section>
-</div>
 </div>
 @section("javascript")
 <script src="{{ URL::asset('assets/js/paginas/frontend/blog.js') }}"></script>
