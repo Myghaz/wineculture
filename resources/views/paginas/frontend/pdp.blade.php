@@ -13,7 +13,7 @@
         <div class="ui styled fluid accordion pdp">
             <div class="title active pdp">
                 <i class="dropdown icon"></i>
-                Política Privacidade
+                Política de Privacidade
             </div>
             <div class="content active pdp">
                 <p>A sua privacidade é importante para nós. É política do WineCulture respeitar a sua privacidade em relação
