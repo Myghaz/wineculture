@@ -22,7 +22,13 @@
 		<div class="active section">Personal Information</div>
 	</div>
 </div>
-<div class="ui grid maincontainer" >
+<div class="ui basic modal acarregar">
+	<div class="ui icon header">
+		<div style="width: 250px;" class="ui active slow green double loader"><br><br>
+			A Carregar Lista Vinhos</div>
+	</div>
+</div>
+<div class="ui grid maincontainer">
 	<div class="row">
 		<div class="three wide column semifiltros"></div>
 		<div class="twelve wide column vinhosheader">
@@ -127,102 +133,57 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 			<div class="ui four column grid vinhoscontainer">
-				@foreach ($vinhos as $key=>$vinho)
-				<div name="vinhocol" class="column columnvinho categoria{{$vinho->categoria->nome}} produtor{{$vinho->id_produtor}}">
-					<div class="ui cube shape shapevinho shapeimgs{{$vinho->id}}">
-						<input type="hidden" id="id_vinho" value="{{$vinho->id}}">
-						<div class="sides">
-							<div class="side active shapevinho">
-								<img class="img-fluid imgvinho" src="{{asset('storage/vinhos/'.$vinho->img) }}" alt="{{$vinho->nome}}">
-							</div>
-							@foreach ($vinhos_img as $key=>$vinho_img)
-							@if ($vinho_img->id_vinho == $vinho->id)
-							<div class="side sideimg">
-								<img class="img-fluid imgvinho" src="{{asset('storage/vinhos/'.$vinho_img->img) }}" alt="{{$vinho->nome}}">
-							</div>
-							@endif
-							@endforeach
-						</div>
-					</div>
-					<div class="ui ignored icon direction buttons imgbtndown">
-						<div class="ui icon button baixo" data-animation="flip" title="Próximo Detalhe" data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
-					</div>
-					<div class="ui ignored icon direction buttons imgbtnright">
-						<div class="ui icon button direita" title="Próxima Imagem" data-animation="flip" data-direction="right" title="Flip Right"><i class="right long arrow icon"></i></div>
-					</div>
-					<div class="dividervinho"></div>
-
-					<div class="ui cube shape shapedetalhes shapedetalhes{{$vinho->id}}">
-						<input type="hidden" id="id_vinho" value="{{$vinho->id}}">
-						<div class="sides sidesdetalhes">
-							<div class="side active">
-								<div class="nomevinho">
-									{{$vinho->nome}}
-								</div>
-							</div>
-							<div class="side categoriavinhoside">
-
-								{{$vinho->categoria->nome}}
-
-							</div>
-							<div class="side produtorvinhoside">
-
-								{{$vinho->produtor->name}} {{$vinho->produtor->apelido}}
-
-							</div>
-						</div>
-					</div>
-
-
-
-				</div>
-				@endforeach
+				@include('includes.frontend.listavinhos')
 			</div>
-			<div class="pagination">
-			{!! $vinhos->links() !!}
-			</div>
-			
 		</div>
 	</div>
 </div>
+
 @endsection
 @section('javascript')
 <script>
-	$(document).on('click', '.pagination a', function(event) {
-		event.preventDefault();
-		var page = $(this).attr('href').split('page=')[1];
-		fetch_data(page);
+	$.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
 	});
+	$(document).ready(function() {
 
-	function fetch_data(page) {
-		var l = window.location;
-		$.ajax({
-			url: l.origin + l.pathname + "?page=" + page,
-			success: function(vinhoss) {
-			
-				$('body').html(vinhoss);
-				
-			}
+		$(document).on('click', '.pagination a', function(event) {
+			event.preventDefault();
+			$('.ui.basic.modal.acarregar')
+				.modal('show')
+				.delay(800)
+				.queue(function() {
+					$(this).modal('hide').dequeue();
+				});;
+			var page = $(this).attr('href').split('page=')[1];
+			fetch_data(page);
 		});
-		
-	}
 
+		function fetch_data(page) {
+			var _token = $('meta[name="csrf-token"]').attr('content');
+			$.ajax({
+				url: "{{ route('vinhos') }}",
+				method: "POST",
+				data: {
+					_token: _token,
+					page: page
+				},
+				success: function(data) {
+					$('.vinhoscontainer').html(data);
+					$('html, body').animate({
+       			 		scrollTop: $(".breadcrumb").offset().top
+    				}, 500);
+				}
 
-
-
-
-	$( document ).ajaxStop(function() {
-		$('html,body').animate({
-        			scrollTop: $(".breadcrumb").offset().top
-    			}, 'slow').delay('800');
-});
-
+			});
+		}
+	});
 </script>
-<script>
-	var vinhos = [];
+<script>var vinhos = [];
 </script>
 @foreach ($vinhos as $key=>$vinho)
 <script>

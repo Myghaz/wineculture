@@ -65,7 +65,7 @@ Route::delete('/destroy/{user}', [UsersController::class, 'user_destroy'])->name
 //VinhosController
 Route::get('/vinhos', [VinhosController::class, 'indexFrontend'])->name('vinhos');
 
-Route::get('/vinhos/page', [VinhosController::class, 'refresh'])->name('vinhos_refresh');
+Route::post('/vinhos', [VinhosController::class, 'indexFrontend'])->name('vinhos');
 
 Route::get('/vinhos/{vinho}', [VinhosController::class, 'vinhos_detalhes'])->name('vinho');
 

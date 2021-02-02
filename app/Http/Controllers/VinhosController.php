@@ -11,7 +11,7 @@ use App\Models\User;
 
 class VinhosController extends Controller
 {
-    public function indexFrontend()
+    public function indexFrontend(Request $request)
     {
         $vinhos = Vinhos::paginate(12);
         $vinhostotal = $vinhos->count();
@@ -21,6 +21,21 @@ class VinhosController extends Controller
         $vinhos_nome = Vinhos::select('nome')->get();
         $vinhos_categorias = category_wine::select('nome')->get();
         $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
+
+        if ($request->ajax()) {
+
+            return view('includes.frontend.listavinhos', compact([
+                'vinhos',
+                'vinhos_img',
+                'categorias',
+                'produtores_vinho',
+                'vinhostotal',
+                'vinhos_nome',
+                'vinhos_categorias',
+                'vinhos_produtores'
+            ]))->render();
+        }
+
         return view('paginas.frontend.vinhos', compact([
             'vinhos',
             'vinhos_img',
@@ -31,13 +46,6 @@ class VinhosController extends Controller
             'vinhos_categorias',
             'vinhos_produtores'
         ]))->render();
-    }
-    public function refresh(Request $request)
-    {
-        if ($request->ajax()) {
-            $vinhos = Vinhos::paginate(12);
-            return response()->json(array('vinhoss'=> $vinhos), 200);
-        }
     }
 
     public function vinhos_detalhes($vinho)
