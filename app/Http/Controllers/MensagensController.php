@@ -108,7 +108,8 @@ class MensagensController extends Controller
             'assunto' => $mensagem->assunto,
             'pergunta' => $mensagem->mensagem,
         ), function ($message) use ($mensagem) {
-            $message->to($mensagem->email)->subject('[WineCulture] '. $mensagem->assunto);
+            $message->to($mensagem->email)
+            ->subject('[WineCulture] '. $mensagem->assunto);
         });
 
         return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);

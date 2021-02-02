@@ -17,19 +17,19 @@
                     value="{{ $mensagem->name }}">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Assunto</label>
-                <input readonly class="form-control" class="form-control" id="exampleFormControlSelect1" name="assunto"
+                <label for="exampleFormControlSelect">Assunto</label>
+                <input readonly class="form-control" class="form-control" id="exampleFormControlSelect" name="assunto"
                     value="{{ $mensagem->assunto }}">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Estado</label>
-                <input readonly class="form-control" class="form-control" id="exampleFormControlSelect1" name="estado"
+                <label for="exampleFormControlSelect2">Estado</label>
+                <input readonly class="form-control" class="form-control" id="exampleFormControlSelect2" name="estado"
                     value="{{ $mensagem->estado }}">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Mensagem</label>
                 <textarea readonly class="form-control" style="height:140px" id="exampleFormControlTextarea1" rows="3"
-                    value="" name="resposta">{{ $mensagem->mensagem }}</textarea>
+                    value="" name="resposta1">{{ $mensagem->mensagem }}</textarea>
             </div>
 
             <div class="form-group">
@@ -42,7 +42,7 @@
                 @method('PATCH')
                 <div class="collapse" id="collapseExample">
                     <div class="form-group">
-                        <textarea id="" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="5" value=""
+                        <textarea id="" class="ckeditor form-control" id="exampleFormControlTextarea2" rows="5" value=""
                             name="resposta"></textarea>
                     </div>
                     <div class="form-group">
@@ -52,18 +52,17 @@
             </form>
         </div>
     </div>
+    <script>
+        $("#btncollapse").click(function() {
+            $("html, body").animate({
+                scrollTop: $(document).height()
+            }, 1000);
+        });
+
+    </script>
 
 
 
-@endsection
-<script>
-    $("#btncollapse").click(function() {
-        $("html, body").animate({
-            scrollTop: $(document).height()
-        }, 1000);
-    });
-
-</script>
 <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
 <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
 <script type="text/javascript">
@@ -72,3 +71,5 @@
     });
 
 </script>
+
+@endsection
