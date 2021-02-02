@@ -164,15 +164,7 @@
 			setTimeout(function() {
 				$("#refreshvinhos").removeClass("animacao")
 			}, 1000);
-			setTimeout(function() {
-			$('body')
-  				.toast({
-    				title: 'Lista Actualizada!',
-    				message: 'A Lista de Vinhos Foi Actualizada Com Sucesso',
-    				showProgress: 'bottom',
-    				classProgress: 'green'
-  				})}, 1000);
-			;
+
 			event.preventDefault();
 			var page = window.location.href;
 			fetch_refresh(page);
@@ -191,6 +183,15 @@
 						$('html, body').animate({
 							scrollTop: $(".breadcrumb").offset().top
 						}, 500);
+						setTimeout(function() {
+							$('body')
+								.toast({
+									title: 'Lista Actualizada!',
+									message: 'A Lista de Vinhos Foi Actualizada Com Sucesso',
+									showProgress: 'bottom',
+									classProgress: 'green'
+								})
+						}, 850);;
 					}
 				});
 			}
