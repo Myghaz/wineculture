@@ -11,11 +11,11 @@
 @section('content')
     <div class="ui container" id="rowtd">
         <div class="ui styled fluid accordion">
-            <div class="title">
+            <div class="title tc active">
                 <i class="dropdown icon"></i>
                 Termos e Condições
             </div>
-            <div class="content">
+            <div class="content active tc">
                 <p class="transition">
                     Bem Vindo à WineCulture!
                 </p>
@@ -47,11 +47,11 @@
                     vigente da Holanda.
                 </p>
             </div>
-            <div class="title">
+            <div class="title tc active">
                 <i class="dropdown icon"></i>
                 Biscoitos
             </div>
-            <div class="content">
+            <div class="content active tc">
                 <p class="transition mb-4">
                     Empregamos o uso de cookies.
                     Ao acessar a WineCulture, você concorda em usar cookies de acordo com a Política de Privacidade da
@@ -66,11 +66,11 @@
                     Alguns de nossos afiliados / parceiros de publicidade também podem usar cookies.
                 </p>
             </div>
-            <div class="title">
+            <div class="title tc active">
                 <i class="dropdown icon"></i>
                 Licença
             </div>
-            <div class="content">
+            <div class="content active tc">
                 <p>
                     Salvo indicação em contrário, WineCulture e / ou seus licenciados detêm os direitos de propriedade
                     intelectual
@@ -84,16 +84,16 @@
                     Você não deve:
                 </p>
                 <ul>
-                    <li>
+                    <li class="mb-4">
                         Publique novamente o material da WineCulture
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Vender, alugar ou sublicenciar material da WineCulture
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Reproduza, duplique ou copie o material da WineCulture
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Redistribua o conteúdo da WineCulture
                     </li>
                 </ul>
@@ -120,21 +120,21 @@
                     Você garante e representa que:
                 </p>
                 <ul>
-                    <li>
+                    <li class="mb-4">
                         Você tem o direito de publicar os Comentários em nosso site e tem todas as licenças e consentimentos
                         necessários para fazê-lo;
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Os Comentários não invadem nenhum direito de propriedade intelectual, incluindo, sem limitação,
                         direitos
                         autorais, patentes ou marcas comerciais de terceiros;
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Os comentários não contêm qualquer material difamatório, calunioso, ofensivo, indecente ou de outra
                         forma
                         ilegal que seja uma invasão de privacidade
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Os Comentários não serão usados ​​para solicitar ou promover negócios ou customizar ou apresentar
                         atividades
                         comerciais ou atividades ilegais.
@@ -147,27 +147,27 @@
                     formatos ou
                     mídia.
                 </p>
-                <h3><strong>
-                        Hiperlink para nosso conteúdo
-                    </strong></h3>
+                <h3 class="header_li" >
+                    Hiperlink para nosso conteúdo
+                </h3>
                 <p>
                     As seguintes organizações podem se conectar ao nosso site sem aprovação prévia por escrito:
                 </p>
                 <ul>
-                    <li>
+                    <li class="mb-4">
                         Agências governamentais;
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Motores de busca;
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Organizações de notícias;
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Os distribuidores de diretórios online podem ter links para nosso site da mesma maneira que fazem um
                         hiperlink para sites de outras empresas listadas;
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Negócios credenciados em todo o sistema, exceto a solicitação de organizações sem fins lucrativos,
                         shopping
                         centers de caridade e grupos de arrecadação de fundos de caridade que não podem ter um link para
@@ -187,27 +187,26 @@
                     Podemos considerar e aprovar outras solicitações de link dos seguintes tipos de organizações:
                 </p>
                 <ul>
-                    <li>
-                        fontes de informações de consumidores e / ou negócios comumente conhecidas;
+                    <li class="mb-4">
+                        Fontes de informações de consumidores e / ou negócios comumente conhecidas;
                     </li>
-                    <li>
-                        sites da comunidade dot.com;
+                    <li class="mb-4">
+                        Sites da comunidade dot.com;
                     </li>
-                    <li>
-                        associações ou outros grupos que representam instituições de caridade;
-
+                    <li class="mb-4">
+                        Associações ou outros grupos que representam instituições de caridade;
                     </li>
-                    <li>
-                        distribuidores de diretórios online;
+                    <li class="mb-4">
+                        Distribuidores de diretórios online;
                     </li>
-                    <li>
-                        portais de internet;
+                    <li class="mb-4">
+                        Portais de internet;
                     </li>
-                    <li>
-                        escritórios de contabilidade, advocacia e consultoria;
+                    <li class="mb-4">
+                        Escritórios de contabilidade, advocacia e consultoria;
                     </li>
-                    <li>
-                        instituições educacionais e associações comerciais.
+                    <li class="mb-4">
+                        Instituições educacionais e associações comerciais.
                     </li>
                 </ul>
                 <p>
@@ -242,15 +241,15 @@
                     As organizações aprovadas podem fazer um hiperlink para nosso site da seguinte forma:
                 </p>
                 <ul>
-                    <li>
+                    <li class="mb-4">
                         Usando nosso nome corporativo;
                         ou
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Pelo uso do localizador uniforme de recursos ao qual está vinculado;
                         ou
                     </li>
-                    <li>
+                    <li class="mb-4">
                         Pelo uso de qualquer outra descrição do nosso site vinculado que faça sentido dentro do contexto e
                         formato
                         do conteúdo do site da parte vinculante.
@@ -262,11 +261,11 @@
                     licença de marca registrada.
                 </p>
             </div>
-            <div class="title">
+            <div class="title tc active">
                 <i class="dropdown icon"></i>
                 iFrames
             </div>
-            <div class="content">
+            <div class="content active tc">
                 <p class="transition mb-4">
                     Sem aprovação prévia e permissão por escrito, você não pode criar quadros em torno de nossas páginas da
                     Web
@@ -274,11 +273,11 @@
                     alterem de qualquer forma a apresentação visual ou aparência de nosso site.
                 </p>
             </div>
-            <div class="title">
+            <div class="title tc active">
                 <i class="dropdown icon"></i>
                 Responsabilidade de Conteúdo
             </div>
-            <div class="content">
+            <div class="content active tc">
                 <p class="transition">
                     Não seremos responsáveis ​​por qualquer conteúdo que apareça em seu site.
                     Você concorda em nos proteger e nos defender contra todas as reclamações que estão aumentando em seu
@@ -289,11 +288,11 @@
                     de terceiros.
                 </p>
             </div>
-            <div class="title">
+            <div class="title tc active">
                 <i class="dropdown icon"></i>
                 A Sua Privacidade?
             </div>
-            <div class="content">
+            <div class="content active tc">
                 <p>
                     Leia a
                     <a href="/politica_de_privacidade">
@@ -301,11 +300,11 @@
                     </a>
                 </p>
             </div>
-            <div class="title">
+            <div class="title tc active">
                 <i class="dropdown icon"></i>
                 Reserva de direitos
             </div>
-            <div class="content">
+            <div class="content active tc">
                 <p class="transition">
                     Nós nos reservamos o direito de solicitar que você remova todos os links ou qualquer link específico
                     para o
@@ -319,11 +318,11 @@
                     vinculação.
                 </p>
             </div>
-            <div class="title">
+            <div class="title tc active">
                 <i class="dropdown icon"></i>
                 Remoção de links do nosso site
             </div>
-            <div class="content">
+            <div class="content active tc">
                 <p class="transition mb-4">
                     Se você encontrar algum link em nosso site que seja ofensivo por qualquer motivo, você está à vontade
                     para
@@ -338,11 +337,11 @@
                     atualizado.
                 </p>
             </div>
-            <div class="title">
+            <div class="title tc active">
                 <i class="dropdown icon"></i>
                 Aviso Legal
             </div>
-            <div class="content">
+            <div class="content active tc">
                 <p>
                     Na extensão máxima permitida pela lei aplicável, excluímos todas as representações, garantias e
                     condições
@@ -350,22 +349,19 @@
                     Nada neste aviso:
                 </p>
                 <ul>
-                    <li>
-                        limitar ou excluir nossa responsabilidade ou sua responsabilidade por morte ou danos pessoais;
+                    <li class="mb-4">
+                        Limitar ou excluir nossa responsabilidade ou sua responsabilidade por morte ou danos pessoais;
                     </li>
-                    <li>
-                        limitar ou excluir nossa responsabilidade ou sua responsabilidade por fraude ou deturpação
+                    <li class="mb-4">
+                        Limitar ou excluir nossa responsabilidade ou sua responsabilidade por fraude ou deturpação
                         fraudulenta;
-
                     </li>
-                    <li>
-                        limitar qualquer uma de nossas responsabilidades de qualquer forma que não seja permitida pela lei
+                    <li class="mb-4">
+                        Limitar qualquer uma de nossas responsabilidades de qualquer forma que não seja permitida pela lei
                         aplicável;
-                        ou
-
                     </li>
-                    <li>
-                        excluir qualquer uma das nossas responsabilidades ou responsabilidades que não possam ser excluídas
+                    <li class="mb-4">
+                        Excluir qualquer uma das nossas responsabilidades ou responsabilidades que não possam ser excluídas
                         pela
                         legislação aplicável.
                     </li>

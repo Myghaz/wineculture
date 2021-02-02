@@ -3,7 +3,7 @@
     padding-bottom: 50px!important;
 }
 
-.title.pdp {
+.title.tc {
     font-size: 25px !important;
 }
 
@@ -21,10 +21,20 @@ i.styled.accordion .accordion .active.title, .ui.styled.accordion .accordion .ti
     color: #4b1825 !important;
 }
 
-.title.segundo.pdp {
-    font-size: 22px !important;
+.content {
+    font-size: 18px !important;
 }
 
-.content {
-    font-size: 19px !important;
+@media only screen and (max-width: 991px) {
+    .title.tc {
+        font-size: 21px !important;
+    }
+
+    .title.segundo.tc {
+        font-size: 18px !important;
+    }
+
+    .content.tc {
+        font-size: 16px !important;
+    }
 }
