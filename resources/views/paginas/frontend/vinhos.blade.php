@@ -121,8 +121,8 @@
 						<div class="ui search">
 							<div class="ui icon input">
 								<input class="prompt" id="intpesquisa" type="search" placeholder="Pesquisar">
+								<i class="search icon pesquisaricon"></i>
 							</div> 	
-							<i class="search icon pesquisaricon"></i>
 							<div class="results"></div>
 						</div>
 					</div>
