@@ -48,6 +48,112 @@ class VinhosController extends Controller
         ]))->render();
     }
 
+    public function ordemalfabetica(Request $request)
+    {
+        $vinhos = Vinhos::orderBy('nome', 'ASC')->paginate(12);
+        $vinhostotal = $vinhos->count();
+        $vinhos_img = Vinhosimg::all();
+        $categorias = category_wine::all();
+        $produtores_vinho = Vinhos::select('id_produtor')->distinct()->get();
+        $vinhos_nome = Vinhos::select('nome')->get();
+        $vinhos_categorias = category_wine::select('nome')->get();
+        $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
+
+        if ($request->ajax()) {
+
+            return view('includes.frontend.listavinhos', compact([
+                'vinhos',
+                'vinhos_img',
+                'categorias',
+                'produtores_vinho',
+                'vinhostotal',
+                'vinhos_nome',
+                'vinhos_categorias',
+                'vinhos_produtores'
+            ]))->render();
+        }
+        return view('paginas.frontend.vinhos', compact([
+            'vinhos',
+            'vinhos_img',
+            'categorias',
+            'produtores_vinho',
+            'vinhostotal',
+            'vinhos_nome',
+            'vinhos_categorias',
+            'vinhos_produtores'
+        ]))->render();
+    }
+    public function ordemclassificacao(Request $request)
+    {
+        $vinhos = Vinhos::orderBy('created_at', 'DESC')->paginate(12);
+        $vinhostotal = $vinhos->count();
+        $vinhos_img = Vinhosimg::all();
+        $categorias = category_wine::all();
+        $produtores_vinho = Vinhos::select('id_produtor')->distinct()->get();
+        $vinhos_nome = Vinhos::select('nome')->get();
+        $vinhos_categorias = category_wine::select('nome')->get();
+        $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
+
+       
+        if ($request->ajax()) {
+
+            return view('includes.frontend.listavinhos', compact([
+                'vinhos',
+                'vinhos_img',
+                'categorias',
+                'produtores_vinho',
+                'vinhostotal',
+                'vinhos_nome',
+                'vinhos_categorias',
+                'vinhos_produtores'
+            ]))->render();
+        }
+        return view('paginas.frontend.vinhos', compact([
+            'vinhos',
+            'vinhos_img',
+            'categorias',
+            'produtores_vinho',
+            'vinhostotal',
+            'vinhos_nome',
+            'vinhos_categorias',
+            'vinhos_produtores'
+        ]))->render();
+    }
+    public function ordemdata(Request $request)
+    {
+        $vinhos = Vinhos::all()->orderBy('created_at', 'DESC')->paginate(12);
+        $vinhostotal = $vinhos->count();
+        $vinhos_img = Vinhosimg::all();
+        $categorias = category_wine::all();
+        $produtores_vinho = Vinhos::select('id_produtor')->distinct()->get();
+        $vinhos_nome = Vinhos::select('nome')->get();
+        $vinhos_categorias = category_wine::select('nome')->get();
+        $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
+
+        if ($request->ajax()) {
+
+            return view('includes.frontend.listavinhos', compact([
+                'vinhos',
+                'vinhos_img',
+                'categorias',
+                'produtores_vinho',
+                'vinhostotal',
+                'vinhos_nome',
+                'vinhos_categorias',
+                'vinhos_produtores'
+            ]))->render();
+        }
+        return view('paginas.frontend.vinhos', compact([
+            'vinhos',
+            'vinhos_img',
+            'categorias',
+            'produtores_vinho',
+            'vinhostotal',
+            'vinhos_nome',
+            'vinhos_categorias',
+            'vinhos_produtores'
+        ]))->render();
+    }
     public function vinhos_detalhes($vinho)
     {
         $vinho_det = Vinhos::find($vinho);

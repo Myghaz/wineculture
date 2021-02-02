@@ -1,29 +1,4 @@
-$('.baixo')
-    .popup({});
-$('.direita')
-    .popup({});
-$('.ordenacao')
-    .popup({});
-$('.pesquisaricon')
-    .popup({});
-$(".reporfiltros").hide();
-$('.ui.accordion')
-    .accordion({
-        exclusive: false
-    });
-$('.ui.dropdown')
-    .dropdown();
-$('.ui.checkbox')
-    .checkbox();
 
-$(".direita").on("click", function () {
-    var id_vinho = $(this).parent().parent().find("#id_vinho").val();
-    $('.shapeimgs' + id_vinho).shape('flip right');
-})
-$(".baixo").on("click", function () {
-    var id_vinho = $(this).parent().parent().find("#id_vinho").val();
-    $('.shapedetalhes' + id_vinho).shape('flip down');
-})
 var categoryContent = [];
 for (var i = 0; i < vinhos.length; i++) {
     categoryContent.push({
@@ -56,6 +31,33 @@ $('.ui.search')
             noResults: 'Sem Resultados'
         }
     })
+    
+$('.baixo')
+.popup({});
+$('.direita')
+.popup({});
+$('.ordenacao')
+.popup({});
+$('.pesquisaricon')
+.popup({});
+$(".reporfiltros").hide();
+$('.ui.accordion')
+.accordion({
+    exclusive: false
+});
+$('.ui.dropdown')
+.dropdown();
+$('.ui.checkbox')
+.checkbox();
+
+$(".direita").on("click", function () {
+var id_vinho = $(this).parent().parent().find("#id_vinho").val();
+$('.shapeimgs' + id_vinho).shape('flip right');
+})
+$(".baixo").on("click", function () {
+var id_vinho = $(this).parent().parent().find("#id_vinho").val();
+$('.shapedetalhes' + id_vinho).shape('flip down');
+})
 $("#refreshvinhos").on("click", function () {
     $(this).addClass("animacao");
     setTimeout(function () {

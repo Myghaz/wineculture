@@ -67,7 +67,13 @@ Route::get('/vinhos', [VinhosController::class, 'indexFrontend'])->name('vinhos'
 
 Route::post('/vinhos', [VinhosController::class, 'indexFrontend'])->name('vinhos');
 
-Route::get('/vinhos/{vinho}', [VinhosController::class, 'vinhos_detalhes'])->name('vinho');
+Route::get('/vinhos/alfabetica', [VinhosController::class, 'ordemalfabetica'])->name('vinhos.alfabetica');
+
+Route::get('/vinhos/classificacao', [VinhosController::class, 'ordemclassificacao'])->name('vinhos.classificacao');
+
+Route::get('/vinhos/data', [VinhosController::class, 'ordemdata'])->name('vinhos.data');
+
+
 
 
 
