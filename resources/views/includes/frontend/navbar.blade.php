@@ -5,22 +5,12 @@
             <li @if (Route::currentRouteName()=='index' ) class="active" @endif><a href="/">Início</a></li>
             <li @if (Route::currentRouteName()=='sobre' ) class="active" @endif><a href="/sobre">Sobre</a></li>
 
-            <li class="dropdown">Vinho
+            <li class="dropdown">Vinho <i class="fa fa-sort-down"></i>
                 <div class="dropdown-content">
-                    <section class="stage">
-                        <div id="home" class="div">
-                            <p id="homep" class="p">Home</p>
-                        </div>
-                        <div class="div" id="about">
-                            <p class="p">About</p>
-                        </div>
-                        <div class="div" id="contact">
-                            <p class="p">Gallery</p>
-                        </div>
-                        <div class="div" id="gallery">
-                            <p class="p">Contact</p>
-                        </div>
-                    </section>
+                    <ul>
+                        <li><a href="/sobre_vinhos">Sobre Vinhos</a></li>
+                        <li><a href="/vinhos">Tipos de Vinhos</a></li>
+                    </ul>
                 </div>
             </li>
 
