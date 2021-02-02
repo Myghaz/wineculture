@@ -34,7 +34,7 @@
 					<a class="item refresh">
 						<i id="refreshvinhos" class="sync icon"></i>
 					</a>
-					<div class="right item ordenacao">
+					<div title="Filtrar Lista" class="right item ordenacao">
 						<div class="ui labeled icon dropdown">
 							<i class="filter icon iconfiltro"></i>
 							<span class="text">Filtrar Lista</span>
@@ -122,7 +122,7 @@
 							<div class="ui icon input">
 								<input class="prompt" id="intpesquisa" type="search" placeholder="Pesquisar">
 							</div> 	
-							<i class="search icon pesquisaricon"></i>
+							<i class="search icon pesquisaricon" title="Pesquisar"></i>
 							<div class="results"></div>
 						</div>
 					</div>
@@ -147,10 +147,10 @@
 						</div>
 					</div>
 					<div class="ui ignored icon direction buttons imgbtndown">
-						<div class="ui icon button baixo" data-animation="flip" data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
+						<div class="ui icon button baixo" data-animation="flip" title="Próximo Detalhe" data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
 					</div>
 					<div class="ui ignored icon direction buttons imgbtnright">
-						<div class="ui icon button direita" data-animation="flip" data-direction="right" title="Flip Right"><i class="right long arrow icon"></i></div>
+						<div class="ui icon button direita" title="Próxima Imagem" data-animation="flip" data-direction="right" title="Flip Right"><i class="right long arrow icon"></i></div>
 					</div>
 					<div class="dividervinho"></div>
 

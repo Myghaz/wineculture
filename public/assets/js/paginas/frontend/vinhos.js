@@ -1,3 +1,19 @@
+$('.baixo')
+  .popup({
+  })
+;
+$('.direita')
+  .popup({
+  })
+;
+$('.ordenacao')
+  .popup({
+  })
+;
+$('.pesquisaricon')
+  .popup({
+  })
+;
 $(".reporfiltros").hide();
 $('.ui.accordion')
     .accordion({
@@ -132,8 +148,8 @@ $("#intpesquisa").on("change paste keyup", function () {
     }
 });
 $(".pesquisaricon").on("click", function () {
-  var input = document.getElementById("intpesquisa");
-  input = input.value.toLowerCase();
+    var input = document.getElementById("intpesquisa");
+    input = input.value.toLowerCase();
     var divs = document.getElementsByClassName('columnvinho');
 
     for (i = 0; i < divs.length; i++) {
