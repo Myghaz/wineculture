@@ -85,7 +85,7 @@
 									@foreach ($categorias as $key => $categoria)
 									<div class="field">
 										<div class="ui toggle checkbox filtroschecks">
-											<input type="checkbox" class="categoriacheckb" value="My Checkbox value" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}">
+											<input type="checkbox" class="categoriacheckb" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}">
 											<label class="catenome">{{$categoria->nome}}</label>
 										</div>
 									</div>
@@ -105,7 +105,7 @@
 									@foreach ($produtores_vinho as $key => $produtor_vinho)
 									<div class="field">
 										<div class="ui toggle checkbox filtroschecks">
-											<input type="checkbox" class="categoriacheckb" value="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}}" id="produtor{{$produtor_vinho->id_produtor}}" name="produtor{{$produtor_vinho->id_produtor}}">
+											<input type="checkbox" class="categoriacheckb" value="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}}" id="{{$produtor_vinho->produtor->name}}&nbsp;&nbsp;{{$produtor_vinho->produtor->apelido}}" name="produtor{{$produtor_vinho->id_produtor}}">
 											<label class="catenome">{{$produtor_vinho->produtor->name}} {{$produtor_vinho->produtor->apelido}}</label>
 										</div>
 									</div>

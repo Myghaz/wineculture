@@ -1,4 +1,3 @@
-
 var categoryContent = [];
 for (var i = 0; i < vinhos.length; i++) {
     categoryContent.push({
@@ -19,7 +18,6 @@ for (var i = 0; i < vinhos_produtores.length; i++) {
     })
 }
 $('.ui.search')
-
     .search({
 
         type: 'category',
@@ -31,42 +29,41 @@ $('.ui.search')
             noResults: 'Sem Resultados'
         }
     })
-    
 $('.baixo')
-.popup({});
+    .popup({});
 $('.direita')
-.popup({});
+    .popup({});
 $('.ordenacao')
-.popup({});
+    .popup({});
 $('.pesquisaricon')
-.popup({});
+    .popup({});
 $(".reporfiltros").hide();
 $('.ui.accordion')
-.accordion({
-    exclusive: false
-});
+    .accordion({
+        exclusive: false
+    });
 $('.ui.dropdown')
-.dropdown();
+    .dropdown();
 $('.ui.checkbox')
-.checkbox();
-
-$(".direita").on("click", function () {
-var id_vinho = $(this).parent().parent().find("#id_vinho").val();
-$('.shapeimgs' + id_vinho).shape('flip right');
+    .checkbox();
+$(document).on("click", ".direita", function () {
+    var id_vinho = $(this).parent().parent().find("#id_vinho").val();
+    $('.shapeimgs' + id_vinho).shape('flip right');
 })
-$(".baixo").on("click", function () {
-var id_vinho = $(this).parent().parent().find("#id_vinho").val();
-$('.shapedetalhes' + id_vinho).shape('flip down');
+$(document).on("click", ".baixo", function () {
+    var id_vinho = $(this).parent().parent().find("#id_vinho").val();
+    $('.shapedetalhes' + id_vinho).shape('flip down');
 })
-$("#refreshvinhos").on("click", function () {
+$(document).on("click", "#refreshvinhos", function () {
     $(this).addClass("animacao");
     setTimeout(function () {
         $("#refreshvinhos").removeClass("animacao")
     }, 1000);
-});;
-$('.categoriacheckb').val($(this).is(':checked'));
-var checked = $(".filtroschecks :checkbox:checked");
+});
 $(document).on('click', '.deletefiltro', function () {
+    var sections = $('.columnvinho');
+    $('.categoriacheckb').val($(this).is(':checked'));
+    var checked = $(".filtroschecks :checkbox:checked");
     var classcat = "#categoria";
     var eliminarcat = $(this).attr("id");
     var eliminarcategorias = classcat.concat(eliminarcat);
@@ -89,21 +86,21 @@ $(document).on('click', '.deletefiltro', function () {
         });
     }
 });
-$(".reporfiltros").on("click", function () {
+$(document).on("click", ".reporfiltros", function () {
     $('.columnvinho').show("slow", function showPrevious() {
         $(this).next("div").show("slow", showPrevious);
         $(".reporfiltros").hide();
     });
     $(".selectfiltros").detach();
     $(".categoriacheckb").prop("checked", false);
-});;
-var sections = $('.columnvinho');
-var countfil = 0;
-$('.categoriacheckb').on("change", function () {
+});
+$(document).on("change", ".categoriacheckb", function () {
     var checked = $(".filtroschecks :checkbox:checked");
+    var sections = $('.columnvinho');
     if (checked.length) {
         sections.hide();
         $(".reporfiltros").show();
+
         checked.each(function () {
 
             $("." + $(this).attr("name")).show("fast", function showNext() {
@@ -128,11 +125,13 @@ $('.categoriacheckb').on("change", function () {
         $(delacategoriasfiltro).detach();
     }
 });
+
+
 $("#intpesquisa").on("change paste keyup", function () {
     var input = document.getElementById("intpesquisa");
     input = input.value.toLowerCase();
     var divs = document.getElementsByClassName('columnvinho');
-
+    var checks = $(".categoriacheckb");
     for (i = 0; i < divs.length; i++) {
         if (divs[i].innerText.toLowerCase().includes(input)) {
             divs[i].style.display = "inline-block";
@@ -140,8 +139,21 @@ $("#intpesquisa").on("change paste keyup", function () {
             divs[i].style.display = "none";
         }
     }
+    var valThis = $(this).val().toLowerCase();
+    $('input[type=checkbox]').each(function(){
+        var text = $(this).attr('id').toLowerCase();
+        (text.indexOf(valThis) == 0) ? $(this).prop( "checked", true ) : $(this).prop( "checked", false );
+        if (valThis == ""){
+            $('input[type=checkbox]').prop( "checked", false )
+        }
+   });
+   $('input[type=search]').on('search', function () {
+    $('input[type=checkbox]').prop( "checked", false )
 });
-$(".pesquisaricon").on("click", function () {
+});
+// Search clear button
+
+$(document).on("click", ".pesquisaricon", function () {
     var input = document.getElementById("intpesquisa");
     input = input.value.toLowerCase();
     var divs = document.getElementsByClassName('columnvinho');
