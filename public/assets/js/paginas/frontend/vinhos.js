@@ -5,15 +5,22 @@ for (var i = 0; i < vinhos.length; i++) {
         title: vinhos[i]
     })
 }
+
+for (var i = 0; i < vinhos_classificacoes.length; i++) {
+    categoryContent.push({
+        category: 'Classificação',
+        title: vinhos_classificacoes[i]
+    })
+}
 for (var i = 0; i < vinhos_categorias.length; i++) {
     categoryContent.push({
-        category: 'Categorias',
+        category: 'Categoria',
         title: vinhos_categorias[i]
     })
 }
 for (var i = 0; i < vinhos_produtores.length; i++) {
     categoryContent.push({
-        category: 'Produtores',
+        category: 'Produtor',
         title: vinhos_produtores[i]
     })
 }
@@ -48,6 +55,8 @@ $('.ui.dropdown')
     .dropdown();
 $('.ui.checkbox')
     .checkbox();
+    $('.ui.rating.vinhosclass')
+    .rating();
 $(document).on("click", ".direita", function () {
     var id_vinho = $(this).parent().parent().find("#id_vinho").val();
     $('.shapeimgs' + id_vinho).shape('flip right');
@@ -92,6 +101,7 @@ $(document).on("click", ".reporfiltros", function () {
     $(".categoriacheckb").prop("checked", false);
 });
 $(document).on("change", ".categoriacheckb", function () {
+
     var checked = $(".filtroschecks :checkbox:checked");
     var sections = $('.columnvinho');
     if (checked.length) {
@@ -114,7 +124,7 @@ $(document).on("change", ".categoriacheckb", function () {
     if ($(this).is(":checked")) {
         var addcategoriasfiltro = ($(this).attr("id"))
         var addcategoriasfiltronome = ($(this).next('.catenome').text())
-        $(".itemfiltros").append('<a id="categoria' + addcategoriasfiltro + '" class="ui image label selectfiltros">' + addcategoriasfiltronome + '<i id="' + addcategoriasfiltro + '" class="delete icon deletefiltro"></i></a>');
+        $(".itemfiltros").append('<a id="categoria' + addcategoriasfiltro + '" class="ui image label selectfiltros">' + addcategoriasfiltro + '<i id="' + addcategoriasfiltro + '" class="delete icon deletefiltro"></i></a>');
     } else {
         var classcat = "#categoria";
         var dacategoriasfiltro = $(this).attr("id");
@@ -128,7 +138,6 @@ $("#intpesquisa").on("change paste keyup", function () {
     var input = document.getElementById("intpesquisa");
     input = input.value.toLowerCase();
     var divs = document.getElementsByClassName('columnvinho');
-    var checks = $(".categoriacheckb");
     for (i = 0; i < divs.length; i++) {
         if (divs[i].innerText.toLowerCase().includes(input)) {
             divs[i].style.display = "inline-block";

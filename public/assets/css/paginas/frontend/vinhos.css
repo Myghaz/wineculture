@@ -66,7 +66,12 @@ img.banner {
 }
 
 .semirow {
-    padding-top: 0 !important
+    padding-top: 0 !important;
+    height: auto !important;
+}
+
+.filtrosmain {
+    min-height: 710px !important;
 }
 
 .filtrosmain,
@@ -112,6 +117,24 @@ img.banner {
 .ui.toggle.checkbox input:checked~label:before {
     background-color: #742f37 !important;
 }
+
+.ui.slider.checkbox input:focus:checked~label:before {
+    background-color: #742f37 !important;
+}
+
+.ui.slider.checkbox input:checked~label:before {
+    border-color: #742f37 !important;
+}
+
+.ui.slider.checkbox input~label:after {
+
+    background: #742f37;
+}
+
+.ui.slider.checkbox input:checked~label:before {
+    background-color: #742f37 !important;
+}
+
 
 .ui.toggle.checkbox input:checked~label:after {
 
@@ -188,6 +211,7 @@ img.banner {
 
 .pesquisaricon {
     opacity: 1 !important;
+    cursor: pointer;
 }
 
 .listavinhos {
@@ -291,7 +315,7 @@ a.refresh i.animacao {
     margin: auto auto !important;
     margin-top: 50px !important;
     padding: 0 !important;
-    margin-bottom: 135px!important;
+    margin-bottom: 135px !important;
     text-align: center !important;
     font-size: 20px !important;
 }
@@ -388,12 +412,13 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 16px;
     background-image: url("../../../img/paginas/frontend/vinhos/apagarpesquisa.png");
 }
+
 div.pagination {
     margin-top: 20px;
-    position: absolute; 
-    bottom: 55px; 
-    width: 100%; 
-    height: 50px; 
+    position: absolute;
+    bottom: 55px;
+    width: 100%;
+    height: 50px;
 }
 
 .pagination nav {
@@ -421,9 +446,23 @@ nav .page-item.active .page-link {
     background-color: #742f37;
     border: 2px solid #742f37;
 }
-.ui.active.slow{
-    margin-bottom: 40%!important;
+
+.ui.active.slow {
+    margin-bottom: 40% !important;
 }
-.ui.green.loader.loader.loader:after{
-    color: #8f1422!important;
+
+.ui.green.loader.loader.loader:after {
+    color: #8f1422 !important;
+}
+
+.ui.disabled.rating.vinhosclass i {
+    border-color: #742f37 !important
+}
+
+.ui.rating .active.icon {
+    color: white;
+}
+
+.ui.rating .active::before {
+    color: #742f37 !important
 }

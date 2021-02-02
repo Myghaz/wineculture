@@ -8,6 +8,7 @@ use App\Models\Vinhos;
 use App\Models\Vinhosimg;
 use App\Models\category_wine;
 use App\Models\User;
+use App\Models\VinhosClass;
 
 class VinhosController extends Controller
 {
@@ -17,6 +18,8 @@ class VinhosController extends Controller
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
+        $classificacoes = VinhosClass::select('classificacao')->orderBy('classificacao', 'ASC')->distinct()->get();
+        $vinhosclass = VinhosClass::all();
         $produtores_vinho = Vinhos::select('id_produtor')->distinct()->get();
         $vinhos_nome = Vinhos::select('nome')->get();
         $vinhos_categorias = category_wine::select('nome')->get();
@@ -28,6 +31,8 @@ class VinhosController extends Controller
                 'vinhos',
                 'vinhos_img',
                 'categorias',
+                'vinhosclass',
+                'classificacoes',
                 'produtores_vinho',
                 'vinhostotal',
                 'vinhos_nome',
@@ -40,6 +45,8 @@ class VinhosController extends Controller
             'vinhos',
             'vinhos_img',
             'categorias',
+            'vinhosclass',
+            'classificacoes',
             'produtores_vinho',
             'vinhostotal',
             'vinhos_nome',
@@ -54,6 +61,8 @@ class VinhosController extends Controller
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
+        $classificacoes = VinhosClass::select('classificacao')->orderBy('classificacao', 'ASC')->distinct()->get();
+        $vinhosclass = VinhosClass::all();
         $produtores_vinho = Vinhos::select('id_produtor')->distinct()->get();
         $vinhos_nome = Vinhos::select('nome')->get();
         $vinhos_categorias = category_wine::select('nome')->get();
@@ -65,6 +74,8 @@ class VinhosController extends Controller
                 'vinhos',
                 'vinhos_img',
                 'categorias',
+                'vinhosclass',
+                'classificacoes',
                 'produtores_vinho',
                 'vinhostotal',
                 'vinhos_nome',
@@ -76,6 +87,8 @@ class VinhosController extends Controller
             'vinhos',
             'vinhos_img',
             'categorias',
+            'vinhosclass',
+            'classificacoes',
             'produtores_vinho',
             'vinhostotal',
             'vinhos_nome',
@@ -89,6 +102,8 @@ class VinhosController extends Controller
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
+        $classificacoes = VinhosClass::select('classificacao')->orderBy('classificacao', 'ASC')->distinct()->get();
+        $vinhosclass = VinhosClass::all();
         $produtores_vinho = Vinhos::select('id_produtor')->distinct()->get();
         $vinhos_nome = Vinhos::select('nome')->get();
         $vinhos_categorias = category_wine::select('nome')->get();
@@ -101,6 +116,8 @@ class VinhosController extends Controller
                 'vinhos',
                 'vinhos_img',
                 'categorias',
+                'vinhosclass',
+                'classificacoes',
                 'produtores_vinho',
                 'vinhostotal',
                 'vinhos_nome',
@@ -112,6 +129,8 @@ class VinhosController extends Controller
             'vinhos',
             'vinhos_img',
             'categorias',
+            'vinhosclass',
+            'classificacoes',
             'produtores_vinho',
             'vinhostotal',
             'vinhos_nome',
@@ -125,6 +144,8 @@ class VinhosController extends Controller
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
+        $classificacoes = VinhosClass::select('classificacao')->orderBy('classificacao', 'ASC')->distinct()->get();
+        $vinhosclass = VinhosClass::all();
         $produtores_vinho = Vinhos::select('id_produtor')->distinct()->get();
         $vinhos_nome = Vinhos::select('nome')->get();
         $vinhos_categorias = category_wine::select('nome')->get();
@@ -136,6 +157,8 @@ class VinhosController extends Controller
                 'vinhos',
                 'vinhos_img',
                 'categorias',
+                'vinhosclass',
+                'classificacoes',
                 'produtores_vinho',
                 'vinhostotal',
                 'vinhos_nome',
@@ -147,6 +170,8 @@ class VinhosController extends Controller
             'vinhos',
             'vinhos_img',
             'categorias',
+            'vinhosclass',
+            'classificacoes',
             'produtores_vinho',
             'vinhostotal',
             'vinhos_nome',
