@@ -6,7 +6,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <style>
         .header_mail {
-            background-color: #4b1825 !important;
+            background-color: #5f2735 !important;
             width: 100%;
             height: 100px;
             border-radius: 5px 5px 0px 0px;
