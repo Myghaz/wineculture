@@ -11,17 +11,40 @@ use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
-    public function indexFrontend()
+
+
+    public function indexFrontend(Request $request)
     {
+        $blogss = Blog::paginate(12);
         $blogs = Blog::all();
-        $categorias = Category::all();
+        $blogtotal = $blogs->count();
+        $categorias = Category::select('name')->get();
         $users = User::all();
         return view('paginas.frontend.blog', compact([
             'blogs',
             'categorias',
             'users'
         ]));
+
+        if ($request->ajax()) {
+
+            return view('includes.frontend.listablog', compact([
+                'blogs',
+                'categorias',
+                'users',
+                'blogtotal'
+
+            ]))->render();
+        }
+
+        return view('paginas.frontend.blog', compact([
+            'blogs',
+                'categorias',
+                'users',
+                'blogtotal'
+        ]))->render();
     }
+
     /**
      * Display a listing of the resource.
      *
