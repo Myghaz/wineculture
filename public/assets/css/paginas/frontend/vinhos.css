@@ -4,10 +4,20 @@ img.banner {
     object-fit: cover;
 }
 
+
 .banner {
     margin-bottom: 10px;
+    animation: 0.7s ease-in-out 0s 1 banner;
 }
 
+@keyframes banner {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 .breadcrumb {
     background-color: white;
     margin-top: 30px !important;
@@ -33,7 +43,16 @@ img.banner {
 
 .maincontainer {
     margin-top: 50px !important;
+    animation: 0.7s ease-in-out 0s 1 maincontainer;
 }
+@keyframes maincontainer {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 .semicontainer {
     margin-top: 0 !important
@@ -51,6 +70,24 @@ img.banner {
 .filtrosmain,
 .semifiltros {
     margin-right: 35px !important;
+}
+
+.filtrosmain {
+    animation: 0.7s ease-in-out 0s 1 filtrosmain;
+}
+
+@keyframes filtrosmain {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.headervinhos {
+    margin-top: 15px !important;
 }
 
 .filtros {
@@ -156,7 +193,18 @@ img.banner {
 }
 
 .listavinhos {
-    padding: 0 !important
+    padding: 0 !important;
+    animation: 0.7s ease-in-out 0s 1 listavinhos;
+}
+
+@keyframes listavinhos {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .headervinhos {
