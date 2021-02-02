@@ -37,6 +37,11 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descricao">{{$receita->descricao}}</textarea>
       </div>
       <div class="form-group">
+        <label for="exampleFormControlTextarea1">Receita</label>
+        <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"
+            name="resposta">{{ old('preparo', $receita->preparo) }}</textarea>
+    </div>
+      <div class="form-group">
         <label for="exampleFormControlFile1">Submeter Imagem</label>
         <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
       </div>
@@ -47,3 +52,11 @@
 
 
 @endsection
+<script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.ckeditor').ckeditor();
+    });
+
+</script>
