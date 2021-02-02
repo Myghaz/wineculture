@@ -31,7 +31,7 @@
                 <div class="ui attached stackable menu semiheader">
                     <div class="ui container headercontainer">
                         <a class="item">
-                            {{$blogtotal}} Posts encontrados
+                            {{$blogtotall}} Posts encontrados
                         </a>
                         <a class="item refresh">
                             <i id="refreshvinhos" class="sync icon"></i>

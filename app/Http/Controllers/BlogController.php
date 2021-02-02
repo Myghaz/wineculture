@@ -17,7 +17,7 @@ class BlogController extends Controller
     {
         $blogss = Blog::paginate(12);
         $blogs = Blog::all();
-        $blogtotal = $blogs->count();
+        $blogtotall = $blogs->count();
         $categorias = Category::select('name')->get();
         $users = User::all();
         return view('paginas.frontend.blog', compact([
