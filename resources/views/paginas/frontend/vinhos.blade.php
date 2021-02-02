@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="banner">
-	<img class="img-fluid banner" src="http://wineculture_laravel.test/assets/img/paginas/frontend/vinhos/vinhosback.jpg" alt="banner">
+	<img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/vinhos/vinhosback.jpg') }}" alt="banner">
 </div>
 <div class="ui grid">
 	<div class="ui large breadcrumb">
@@ -76,7 +76,7 @@
 									@foreach ($categorias as $key => $categoria)
 									<div class="field">
 										<div class="ui toggle checkbox filtroschecks">
-											<input type="checkbox" class="categoriacheckb" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}" value="{{$categoria->nome}}">
+											<input type="checkbox" class="categoriacheckb" value="My Checkbox value" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}" >
 											<label class="catenome">{{$categoria->nome}}</label>
 										</div>
 									</div>
@@ -120,9 +120,9 @@
 					<div class="right item headervinhospesquisa">
 						<div class="ui search">
 							<div class="ui icon input">
-								<input class="prompt" id="intpesquisa" type="text" placeholder="Pesquisar">
-								<i class="search icon pesquisaricon"></i>
-							</div>
+								<input class="prompt" id="intpesquisa" type="search" placeholder="Pesquisar">
+							</div> 	
+							<i class="search icon pesquisaricon"></i>
 							<div class="results"></div>
 						</div>
 					</div>

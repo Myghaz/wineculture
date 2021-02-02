@@ -42,6 +42,7 @@ $('.ui.search')
         type: 'category',
         source: categoryContent,
         fullTextSearch: false,
+        clearable: true,
         error: {
             source: 'Sem Resultados',
             noResults: 'Sem Resultados'
@@ -118,5 +119,29 @@ $('.categoriacheckb').on("change", function () {
     }
 });
 $("#intpesquisa").on("change paste keyup", function () {
+    var input = document.getElementById("intpesquisa");
+    input = input.value.toLowerCase();
+    var divs = document.getElementsByClassName('columnvinho');
+
+    for (i = 0; i < divs.length; i++) {
+        if (divs[i].innerText.toLowerCase().includes(input)) {
+            divs[i].style.display = "inline-block";
+        } else {
+            divs[i].style.display = "none";
+        }
+    }
+});
+$(".pesquisaricon").on("click", function () {
+  var input = document.getElementById("intpesquisa");
+  input = input.value.toLowerCase();
+    var divs = document.getElementsByClassName('columnvinho');
+
+    for (i = 0; i < divs.length; i++) {
+        if (divs[i].innerText.toLowerCase().includes(input)) {
+            divs[i].style.display = "inline-block";
+        } else {
+            divs[i].style.display = "none";
+        }
+    }
 
 });
