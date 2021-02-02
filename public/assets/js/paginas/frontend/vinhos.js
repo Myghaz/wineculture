@@ -35,6 +35,8 @@ $('.direita')
     .popup({});
 $('.ordenacao')
     .popup({});
+$('#refreshvinhos')
+    .popup({});
 $('.pesquisaricon')
     .popup({});
 $(".reporfiltros").hide();
@@ -54,12 +56,7 @@ $(document).on("click", ".baixo", function () {
     var id_vinho = $(this).parent().parent().find("#id_vinho").val();
     $('.shapedetalhes' + id_vinho).shape('flip down');
 })
-$(document).on("click", "#refreshvinhos", function () {
-    $(this).addClass("animacao");
-    setTimeout(function () {
-        $("#refreshvinhos").removeClass("animacao")
-    }, 1000);
-});
+
 $(document).on('click', '.deletefiltro', function () {
     var sections = $('.columnvinho');
     $('.categoriacheckb').val($(this).is(':checked'));
@@ -140,16 +137,16 @@ $("#intpesquisa").on("change paste keyup", function () {
         }
     }
     var valThis = $(this).val().toLowerCase();
-    $('input[type=checkbox]').each(function(){
+    $('input[type=checkbox]').each(function () {
         var text = $(this).attr('id').toLowerCase();
-        (text.indexOf(valThis) == 0) ? $(this).prop( "checked", true ) : $(this).prop( "checked", false );
-        if (valThis == ""){
-            $('input[type=checkbox]').prop( "checked", false )
+        (text.indexOf(valThis) == 0) ? $(this).prop("checked", true): $(this).prop("checked", false);
+        if (valThis == "") {
+            $('input[type=checkbox]').prop("checked", false)
         }
-   });
-   $('input[type=search]').on('search', function () {
-    $('input[type=checkbox]').prop( "checked", false )
-});
+    });
+    $('input[type=search]').on('search', function () {
+        $('input[type=checkbox]').prop("checked", false)
+    });
 });
 // Search clear button
 

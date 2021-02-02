@@ -28,6 +28,12 @@
 			A Carregar Lista Vinhos</div>
 	</div>
 </div>
+<div class="ui basic modal aordenar">
+	<div class="ui icon header">
+		<div style="width: 250px;" class="ui active slow green double loader"><br><br>
+			A Ordenar Lista Vinhos</div>
+	</div>
+</div>
 <div class="ui grid maincontainer">
 	<div class="row">
 		<div class="three wide column semifiltros"></div>
@@ -38,7 +44,7 @@
 						{{$vinhostotal}} vinhos encontrados
 					</a>
 					<a class="item refresh">
-						<i id="refreshvinhos" class="sync icon"></i>
+						<i id="refreshvinhos" title="Actualizar Lista de Vinhos" class="sync icon"></i>
 					</a>
 					<div title="Filtrar Lista" class="right item ordenacao">
 						<div class="ui labeled icon dropdown">
@@ -153,6 +159,34 @@
 		}
 	});
 	$(document).ready(function() {
+		$(document).on('click', '#refreshvinhos', function() {
+			$(this).addClass("animacao");
+			setTimeout(function() {
+				$("#refreshvinhos").removeClass("animacao")
+			}, 1000);
+
+			event.preventDefault();
+			var page = window.location.href;
+			fetch_refresh(page);
+
+			function fetch_refresh(page) {
+				var _token = $('meta[name="csrf-token"]').attr('content');
+				$.ajax({
+					url: "{{ route('vinhos') }}",
+					method: "GET",
+					data: {
+						_token: _token,
+						page: page
+					},
+					success: function(data) {
+						$('.vinhoscontainer').html(data);
+						$('html, body').animate({
+							scrollTop: $(".breadcrumb").offset().top
+						}, 500);
+					}
+				});
+			}
+		});
 
 		$(document).on('click', '.pagination a', function(event) {
 			event.preventDefault();
@@ -186,34 +220,34 @@
 		}
 	});
 	$(document).ready(function() {
-	$(".itemordenacao").on('click', function() {
-				var ordem = $(this).attr("id");
-				var url;
-				switch (ordem) {
-					case 'padrao':
-						url= "{{ route('vinhos') }}"
-						break;
-					case 'alfabetica':
-						url= "{{ route('vinhos.alfabetica') }}"
-						break;
-					case 'classificacao':
-						url= "{{ route('vinhos.classificacao') }}"
-						break;
-					case 'data':
-						url= "{{ route('vinhos.data') }}"
-						break;
-					default:
-				}
-		
-				event.preventDefault();
-				$('.ui.basic.modal.acarregar')
-					.modal('show')
-					.delay(800)
-					.queue(function() {
-						$(this).modal('hide').dequeue();
-					});
-				var page = window.location.href;
-				fetch_ordem(page);
+		$(".itemordenacao").on('click', function() {
+			var ordem = $(this).attr("id");
+			var url;
+			switch (ordem) {
+				case 'padrao':
+					url = "{{ route('vinhos') }}"
+					break;
+				case 'alfabetica':
+					url = "{{ route('vinhos.alfabetica') }}"
+					break;
+				case 'classificacao':
+					url = "{{ route('vinhos.classificacao') }}"
+					break;
+				case 'data':
+					url = "{{ route('vinhos.data') }}"
+					break;
+				default:
+			}
+
+			event.preventDefault();
+			$('.ui.basic.modal.aordenar')
+				.modal('show')
+				.delay(800)
+				.queue(function() {
+					$(this).modal('hide').dequeue();
+				});
+			var page = window.location.href;
+			fetch_ordem(page);
 
 			function fetch_ordem(page) {
 				var _token = $('meta[name="csrf-token"]').attr('content');
