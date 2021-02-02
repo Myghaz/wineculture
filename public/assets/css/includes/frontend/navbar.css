@@ -5,7 +5,7 @@ html {
     --border-bottom: 2px solid #742f37;
     --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     --box-shadow-footer: 0 -5px 5px -5px #333;
-    ;
+    scroll-behavior: smooth;
 }
 
 .theme-dark {
@@ -20,11 +20,11 @@ html {
 body {
     overflow-x: hidden;
 }
+
 body::-webkit-scrollbar-track {
     border: 1px solid;
     padding: 2px 0;
-    background-color: white 
- 
+    background-color: white
 }
 
 body::-webkit-scrollbar {
@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background:  linear-gradient(0deg,  #5e262d 0%, #9d0214 100%);
+    background: linear-gradient(0deg, #5e262d 0%, #9d0214 100%);
     border: 1px solid #000;
     padding: 5px;
 }
@@ -206,6 +206,7 @@ div.bb a:hover:after {
         margin-top: 0px;
         transform: rotateY(90deg)
     }
+
     to {
         transform: rotateY(360deg);
         margin-top: -7px;
@@ -217,6 +218,7 @@ div.bb a:hover:after {
         margin-top: 0px;
         transform: rotateY(-90deg)
     }
+
     to {
         transform: rotateY(-360deg);
         margin-top: -7px;
@@ -288,11 +290,13 @@ div.bb a:hover:after {
     .navbar ul {
         margin-right: 2%;
     }
+
     .navbar .img {
         margin-left: 2%;
         /*margin-top: 5px;*/
         width: 100px;
     }
+
     .navbar {
         border-radius: 0;
     }
@@ -304,9 +308,11 @@ div.bb a:hover:after {
         position: absolute;
         float: right;
     }
+
     .navbar ul li {
         display: none;
     }
+
     .navbarmin {
         display: flex;
         position: relative;
@@ -316,6 +322,7 @@ div.bb a:hover:after {
         width: 100%;
         background-color: var(--background);
     }
+
     .navbarmin ul {
         left: 0;
         border-top: 1px solid black;
@@ -328,6 +335,7 @@ div.bb a:hover:after {
         z-index: 20;
         list-style: none;
     }
+
     .navbarmin li {
         float: left;
         width: 100%;
@@ -336,6 +344,7 @@ div.bb a:hover:after {
         text-align: center;
         font-size: 16pt;
     }
+
     .navbarmin ul li a {
         font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         text-decoration: none;
@@ -343,10 +352,12 @@ div.bb a:hover:after {
         padding: 10px 10px;
         position: relative;
     }
+
     .navbarmin div.bb a:before,
     div.bb a:after {
         background: none;
     }
+
     .navbarmin .img {
         margin-left: 3.5%;
         width: 130px;

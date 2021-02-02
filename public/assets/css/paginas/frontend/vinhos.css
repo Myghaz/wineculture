@@ -7,12 +7,11 @@ img.banner {
 
 .banner {
     margin-bottom: 10px;
-    animation: 0.7s ease-in-out 0s 1 banner;
 }
 
 @keyframes banner {
     0% {
-      transform: translateY(-100%);
+      transform: translateY(-200%);
     }
     100% {
       transform: translateY(0);
@@ -43,14 +42,13 @@ img.banner {
 
 .maincontainer {
     margin-top: 50px !important;
-    animation: 0.7s ease-in-out 0s 1 maincontainer;
 }
 @keyframes maincontainer {
     0% {
-      transform: translateX(100%);
+      transform: translateY(-200%);
     }
     100% {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
@@ -70,10 +68,6 @@ img.banner {
 .filtrosmain,
 .semifiltros {
     margin-right: 35px !important;
-}
-
-.filtrosmain {
-    animation: 0.7s ease-in-out 0s 1 filtrosmain;
 }
 
 @keyframes filtrosmain {
@@ -194,16 +188,15 @@ img.banner {
 
 .listavinhos {
     padding: 0 !important;
-    animation: 0.7s ease-in-out 0s 1 listavinhos;
 }
 
 @keyframes listavinhos {
     0% {
-        transform: translateY(100%);
+        transform: translateX(100%);
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
@@ -389,4 +382,28 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 16px;
     width: 16px;
     background-image: url("../../../img/paginas/frontend/vinhos/apagarpesquisa.png");
+}
+.pagination{
+    margin-top: 20px;
+}
+.pagination nav{
+    margin: auto auto
+}
+.pagination nav ul{
+    font-size: 20px;
+}
+.pagination nav ul li{
+    padding: 5px;
+}
+.pagination nav ul li .page-link{
+    padding: 15px;
+    border-radius: 5px;
+    color: #742f37;
+    border: 2px solid #742f37;
+}
+nav .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #742f37;
+    border: 2px solid #742f37;
 }

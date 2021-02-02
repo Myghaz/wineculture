@@ -22,7 +22,7 @@
 		<div class="active section">Personal Information</div>
 	</div>
 </div>
-<div class="ui grid maincontainer">
+<div class="ui grid maincontainer" >
 	<div class="row">
 		<div class="three wide column semifiltros"></div>
 		<div class="twelve wide column vinhosheader">
@@ -75,10 +75,10 @@
 								<div class="grouped fields">
 									@foreach ($categorias as $key => $categoria)
 									<div class="field">
-										<div class="ui toggle checkbox filtroschecks">
-											<input type="checkbox" class="categoriacheckb" value="My Checkbox value" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}" >
+										<divonload= class="ui toggle checkbox filtroschecks">
+											<input type="checkbox" class="categoriacheckb" value="My Checkbox value" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}">
 											<label class="catenome">{{$categoria->nome}}</label>
-										</div>
+										</divonload=>
 									</div>
 									@endforeach
 								</div>
@@ -113,20 +113,21 @@
 				<div class="ui container headervinhoscontainer">
 					<div class="item itemfiltros">
 					</div>
-						<a class="ui image label reporfiltros">
+					<a class="ui image label reporfiltros">
 						<i class="trash alternate icon apagarfiltros"></i>
-						</a>
-				
+					</a>
+
 					<div class="right item headervinhospesquisa">
 						<div class="ui search">
 							<div class="ui icon input">
 								<input class="prompt" id="intpesquisa" type="search" placeholder="Pesquisar">
-							</div> 	
+							</div>
 							<i class="search icon pesquisaricon" title="Pesquisar"></i>
 							<div class="results"></div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 			<div class="ui four column grid vinhoscontainer">
 				@foreach ($vinhos as $key=>$vinho)
@@ -163,14 +164,14 @@
 								</div>
 							</div>
 							<div class="side categoriavinhoside">
-						
-									{{$vinho->categoria->nome}}
-							
+
+								{{$vinho->categoria->nome}}
+
 							</div>
 							<div class="side produtorvinhoside">
-						
-									{{$vinho->produtor->name}} {{$vinho->produtor->apelido}}
-							
+
+								{{$vinho->produtor->name}} {{$vinho->produtor->apelido}}
+
 							</div>
 						</div>
 					</div>
@@ -180,11 +181,46 @@
 				</div>
 				@endforeach
 			</div>
+			<div class="pagination">
+			{!! $vinhos->links() !!}
+			</div>
+			
 		</div>
 	</div>
 </div>
 @endsection
 @section('javascript')
+<script>
+	$(document).on('click', '.pagination a', function(event) {
+		event.preventDefault();
+		var page = $(this).attr('href').split('page=')[1];
+		fetch_data(page);
+	});
+
+	function fetch_data(page) {
+		var l = window.location;
+		$.ajax({
+			url: l.origin + l.pathname + "?page=" + page,
+			success: function(vinhoss) {
+			
+				$('body').html(vinhoss);
+				
+			}
+		});
+		
+	}
+
+
+
+
+
+	$( document ).ajaxStop(function() {
+		$('html,body').animate({
+        			scrollTop: $(".breadcrumb").offset().top
+    			}, 'slow').delay('800');
+});
+
+</script>
 <script>
 	var vinhos = [];
 </script>
@@ -208,7 +244,7 @@
 </script>
 @foreach ($vinhos_produtores as $key=>$vinhos_produtor)
 <script>
-	nome1 = @json($vinhos_produtor-> produtor->name);
+	nome1 = @json($vinhos_produtor->produtor->name);
 	nome2 = @json($vinhos_produtor->produtor->apelido);
 	var nomeapelido = nome1.concat(" ", nome2);
 	vinhos_produtores.push(nomeapelido);

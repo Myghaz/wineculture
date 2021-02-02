@@ -11,8 +11,9 @@ use App\Models\User;
 
 class VinhosController extends Controller
 {
-    public function indexFrontend() {
-        $vinhos = Vinhos::all();
+    public function indexFrontend()
+    {
+        $vinhos = Vinhos::paginate(12);
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
@@ -29,8 +30,16 @@ class VinhosController extends Controller
             'vinhos_nome',
             'vinhos_categorias',
             'vinhos_produtores'
-        ]));
+        ]))->render();
     }
+    public function refresh(Request $request)
+    {
+        if ($request->ajax()) {
+            $vinhos = Vinhos::paginate(12);
+            return response()->json(array('vinhoss'=> $vinhos), 200);
+        }
+    }
+
     public function vinhos_detalhes($vinho)
     {
         $vinho_det = Vinhos::find($vinho);
@@ -43,27 +52,27 @@ class VinhosController extends Controller
             'vinho_produtor'
         ]));
     }
-	
-	public function vinhos()
+
+    public function vinhos()
     {
-        $vinhos = Vinhos::all(); 
+        $vinhos = Vinhos::all();
         $vinhosimg = Vinhosimg::all();
         $categorias = category_wine::all();
         $users = User::all();
-		
-		$vinho_select = $vinhos->where('id',1);
-		$vinho_select->all();
-		
+
+        $vinho_select = $vinhos->where('id', 1);
+        $vinho_select->all();
+
         return view('paginas.frontend.vinho_produto', compact([
             'vinhos',
             'vinhosimg',
             'categorias',
             'users',
-			'vinho_select',
+            'vinho_select',
         ]));
     }
 
-	/**public function store(Request $request)
+    /**public function store(Request $request)
     {
         $vinho = new Vinhos();
         $vinho->fill($request->all());
@@ -75,7 +84,7 @@ class VinhosController extends Controller
         return redirect()->route('receitas.index');
     }*/
 
-	
+
     /**
      * Display a listing of the resource.
      *
@@ -83,7 +92,7 @@ class VinhosController extends Controller
      */
     public function index()
     {
-        $vinhos = Vinhos::all(); 
+        $vinhos = Vinhos::all();
         $vinho_img = Vinhosimg::all();
         $categorias = category_wine::all();
         $users = User::all();
@@ -95,9 +104,9 @@ class VinhosController extends Controller
         ]));
     }
 
-    
 
-    
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -106,7 +115,7 @@ class VinhosController extends Controller
      */
     public function create()
     {
-		$vinho = Vinhos::all();
+        $vinho = Vinhos::all();
         return view('paginas.backend.vinhos.create', compact('vinho'));
     }
 
@@ -121,7 +130,7 @@ class VinhosController extends Controller
         $vinho = new Vinhos();
         $vinho->fill($request->all());
 
-        $path= Storage::putFileAs('public\assets\img\vinhos', $request->file('img'), 'vinhos_' . time() . '.' . $request->file('img')->extension());
+        $path = Storage::putFileAs('public\assets\img\vinhos', $request->file('img'), 'vinhos_' . time() . '.' . $request->file('img')->extension());
 
         $vinho->foto = $path;
         $vinho->save();
@@ -153,7 +162,7 @@ class VinhosController extends Controller
         $categorias = category_wine::all();
         $users = User::all();
         $vinho_produtor = User::find($vinho->id_produtor);
-        
+
         return view('paginas.backend.vinhos.edit', compact([
             'vinho',
             'vinho_img',

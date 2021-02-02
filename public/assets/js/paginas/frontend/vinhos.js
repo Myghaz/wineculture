@@ -1,19 +1,11 @@
 $('.baixo')
-  .popup({
-  })
-;
+    .popup({});
 $('.direita')
-  .popup({
-  })
-;
+    .popup({});
 $('.ordenacao')
-  .popup({
-  })
-;
+    .popup({});
 $('.pesquisaricon')
-  .popup({
-  })
-;
+    .popup({});
 $(".reporfiltros").hide();
 $('.ui.accordion')
     .accordion({
@@ -159,5 +151,11 @@ $(".pesquisaricon").on("click", function () {
             divs[i].style.display = "none";
         }
     }
+});
 
+$(window).on('load', function () {
+    $(".listavinhos").css("animation", "0.8s ease-in-out 0s 1 listavinhos")
+    $(".banner").css("animation", "0.8s ease-in-out 0s 1 banner")
+    $(".maincontainer").css("animation", "0.8s ease-in-out 0s 1 maincontainer")
+    $(".filtrosmain").css("animation", "0.8s ease-in-out 0s 1 filtrosmain")
 });
