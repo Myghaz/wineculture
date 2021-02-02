@@ -49,3 +49,4 @@
 <div class="pagination">
     {!! $vinhos->links() !!}
 </div>
+<script src="{{ URL::asset('assets/js/includes/frontend/listavinhos.js') }}"></script>

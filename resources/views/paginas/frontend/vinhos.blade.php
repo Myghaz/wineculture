@@ -43,19 +43,22 @@
 					<div title="Filtrar Lista" class="right item ordenacao">
 						<div class="ui labeled icon dropdown">
 							<i class="filter icon iconfiltro"></i>
-							<span class="text">Filtrar Lista</span>
+							<span id="ordenacao" class="text">Filtrar Lista</span>
 							<div class="menu">
 								<div class="header">
 									<i class="tags icon tagsicon"></i>
 									Ordenar por:
 								</div>
-								<div class="item">
+								<div class="item itemordenacao" id="padrao">
+									Padrão
+								</div>
+								<div class="item itemordenacao" id="alfabetica">
 									Alfabética
 								</div>
-								<div class="item">
+								<div class="item itemordenacao" id="classificacao">
 									Classificação
 								</div>
-								<div class="item">
+								<div class="item itemordenacao" id="data">
 									Data de Postagem
 								</div>
 							</div>
@@ -81,10 +84,10 @@
 								<div class="grouped fields">
 									@foreach ($categorias as $key => $categoria)
 									<div class="field">
-										<divonload= class="ui toggle checkbox filtroschecks">
+										<div class="ui toggle checkbox filtroschecks">
 											<input type="checkbox" class="categoriacheckb" value="My Checkbox value" id="{{$categoria->nome}}" name="categoria{{$categoria->nome}}">
 											<label class="catenome">{{$categoria->nome}}</label>
-										</divonload=>
+										</div>
 									</div>
 									@endforeach
 								</div>
@@ -160,10 +163,10 @@
 					$(this).modal('hide').dequeue();
 				});;
 			var page = $(this).attr('href').split('page=')[1];
-			fetch_data(page);
+			fetchvinhos(page);
 		});
 
-		function fetch_data(page) {
+		function fetchvinhos(page) {
 			var _token = $('meta[name="csrf-token"]').attr('content');
 			$.ajax({
 				url: "{{ route('vinhos') }}",
@@ -175,12 +178,61 @@
 				success: function(data) {
 					$('.vinhoscontainer').html(data);
 					$('html, body').animate({
-       			 		scrollTop: $(".breadcrumb").offset().top
-    				}, 500);
+						scrollTop: $(".breadcrumb").offset().top
+					}, 500);
 				}
 
 			});
 		}
+	});
+	$(document).ready(function() {
+	$(".itemordenacao").on('click', function() {
+				var ordem = $(this).attr("id");
+				var url;
+				switch (ordem) {
+					case 'padrao':
+						url= "{{ route('vinhos') }}"
+						break;
+					case 'alfabetica':
+						url= "{{ route('vinhos.alfabetica') }}"
+						break;
+					case 'classificacao':
+						url= "{{ route('vinhos.classificacao') }}"
+						break;
+					case 'data':
+						url= "{{ route('vinhos.data') }}"
+						break;
+					default:
+				}
+		
+				event.preventDefault();
+				$('.ui.basic.modal.acarregar')
+					.modal('show')
+					.delay(800)
+					.queue(function() {
+						$(this).modal('hide').dequeue();
+					});
+				var page = window.location.href;
+				fetch_ordem(page);
+
+			function fetch_ordem(page) {
+				var _token = $('meta[name="csrf-token"]').attr('content');
+				$.ajax({
+					url: url,
+					method: "GET",
+					data: {
+						_token: _token,
+						page: page
+					},
+					success: function(data) {
+						$('.vinhoscontainer').html(data);
+						$('html, body').animate({
+							scrollTop: $(".breadcrumb").offset().top
+						}, 500);
+					}
+				});
+			}
+		});
 	});
 </script>
 <script>var vinhos = [];
