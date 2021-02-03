@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/footer.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/navbar.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/settings.css') }}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     @yield("links")
 
 
@@ -26,9 +25,11 @@
 <body>
 
     @include('includes.frontend.navbar')
-
-    @include('includes.frontend.settings')
-    @yield("content")
+    <div class="mainncontainer" style="position: relative; min-height: 53%; box-sizing: border-box;">
+        @include('includes.frontend.settings')
+        @yield("content")
+    </div>
+    
     <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
     <script src="{{ URL::asset('assets/js/layouts/frontend/settings.js') }}"></script>
@@ -54,7 +55,6 @@
         }, 1500, 'easeInOutExpo');
         return false;
     });
-
 </script>
 
 </html>

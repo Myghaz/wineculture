@@ -9,7 +9,8 @@ use App\Models\category_wine;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-
+use App\Http\Requests\StoreRequestReceitas;
+use App\Http\Requests\UpdateRequestReceitas;
 
 class ReceitasController extends Controller
 {
@@ -56,20 +57,9 @@ class ReceitasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequestReceitas $request)
     {
-        $fields = $request->validate(
-            [
-                'nome' => 'required',
-                'descricao' => 'required',
-                'preparo' => 'nullable',
-                'id_categoria' => 'required|exists: category_wines,id'
-            ],
-            [
-                'nome' => 'Campo nome não ficou preenchido',
-                'descricao' => 'Campo descrição não ficou preenchido',
-            ]
-        );
+        $fields = $request->validate();
 
         $receita = new Receitas();
         $receita->fill($fields);
@@ -119,7 +109,7 @@ class ReceitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, receitas $receita)
+    public function update(UpdateRequestReceitas $request, receitas $receita)
     {
         $receita->update($request->all());
         if ($request->hasFile('img')) {

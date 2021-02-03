@@ -6,6 +6,7 @@ html {
     --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     --box-shadow-footer: 0 -5px 5px -5px #333;
     scroll-behavior: smooth;
+    height: 100%; 
 }
 
 .theme-dark {
@@ -19,6 +20,7 @@ html {
 
 body {
     overflow-x: hidden;
+    height: 100%;
 }
 
 body::-webkit-scrollbar-track {
