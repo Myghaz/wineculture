@@ -85,7 +85,6 @@
                         {{$user->name}}</span><span>{{$user->apelido}}</span>
                         @endif
                         @endforeach
-
                     </div>
                 </div>
                 <div class="texto">
