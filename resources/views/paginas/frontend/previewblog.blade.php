@@ -25,7 +25,7 @@
         <br><p><big><strong>{{$blog->preview}}</strong></big></p><br>
         {!!$blog->descricao!!}
     </div>
-    <div style="justify-content: center;">
+    <div style="text-align: center;">
         <a href="/blog" role="button" class="botao12">Voltar á Página Inicial</a>
     </div>
 </div>

@@ -5,7 +5,14 @@
 }
 
 .tituloh1 {
-    font-size: 10px !important;
+    font-size: 18px !important;
+    position: relative;
+    width: 100%;
+    margin: auto auto;
+    padding: 10px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
 }
 
 
@@ -359,6 +366,12 @@
 
 .ui.breadcrumb a {
     color: #742f37 !important;
+}
+
+img.banner {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
 }
 
 .breadcrumb .active {
@@ -810,7 +823,7 @@ nav .page-item.active .page-link {
     cursor: pointer !important;
     border: none !important;
     padding: 10px !important;
-    font-size: 20px !important;
+    font-size: 15px !important;
     background: rgba(116, 47, 55) !important;
     color: white !important;
     box-sizing: border-box !important;
