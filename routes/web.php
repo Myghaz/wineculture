@@ -38,7 +38,7 @@ Route::get('/perfil-publico', [MainController::class, 'perfil_publico'])->name('
 //BlogController
 Route::get('/blog', [BlogController::class, 'indexFrontend'])->name('index_blog_frontend');
 
-Route::get('/previewBlog', [BlogController::class, 'previewBlog'])->name('previewBlog');
+Route::get('/previewBlog/{blog}', [BlogController::class, 'previewBlog'])->name('previewBlog');
 
 
 

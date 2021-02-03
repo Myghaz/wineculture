@@ -6,6 +6,8 @@ use App\Models\Contactos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Auth\Events\Validated;
+use App\Http\Requests\StoreContactoRequest;
+use App\Http\Requests\UpdateContactoRequest;
 
 class MensagensController extends Controller
 {
@@ -25,7 +27,8 @@ class MensagensController extends Controller
     {
         $mensagens = Contactos::all();
         $totalmensagens = Contactos::all('id')->count();
-        return view('paginas.backend.contactos.index', compact('mensagens', 'totalmensagens'));
+        $porresponder = Contactos::all()->where('estado', '=', 'Por Responder')->count();
+        return view('paginas.backend.contactos.index', compact('mensagens', 'totalmensagens', 'porresponder'));
     }
 
     /**
@@ -49,16 +52,9 @@ class MensagensController extends Controller
         //
     }
 
-    public function frontend_store(Request $request)
+    public function frontend_store(StoreContactoRequest $request)
     {
-        $fields = $request->validate(
-            [
-                'name' => 'required',
-                'email' => 'required|email',
-                'assunto' => 'required',
-                'mensagem' => 'required'
-            ]
-        );
+        $fields = $request->validated();
         $mensagem = new Contactos();
         $mensagem->fill($fields);
         $mensagem->save();
@@ -94,11 +90,9 @@ class MensagensController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contactos $mensagem)
+    public function update(UpdateContactoRequest $request, Contactos $mensagem)
     {
-        $request->validate([
-            'resposta' => 'required'
-        ]);
+        $request->validated();
 
         $mensagem->update($request->all());
         Mail::send('paginas.frontend.contactosresposta', array(

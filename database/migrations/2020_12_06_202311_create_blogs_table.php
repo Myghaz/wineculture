@@ -19,7 +19,7 @@ class CreateBlogsTable extends Migration
             $table->date('data');
             $table->biginteger('id_user')->unsigned();
             $table->biginteger('id_categoria')->unsigned();
-            $table->string('preview');
+            $table->longText('preview');
             $table->longText('descricao');
             $table->string('img')->nullable();
             $table->timestamps();
