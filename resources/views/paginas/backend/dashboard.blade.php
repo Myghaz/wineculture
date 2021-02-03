@@ -1,6 +1,7 @@
 @extends ('layouts.backend.admin')
 @section('title', 'Dashboard')
 @section('content')
+
 <nav aria-label="breadcrumb bread">
   <ol class="breadcrumb breadcrumb-inverse">
     <li class="breadcrumb-item"><a href="{{ route('admin_dashboard')}}">Admin</a></li>

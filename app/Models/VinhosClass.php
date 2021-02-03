@@ -17,7 +17,7 @@ class VinhosClass extends Model
         'classificacao',
         'total_class',
     ];
-    public function vinho() {
+    public function vinhos() {
         return $this->belongsTo(Vinhos::class, 'id_vinho');
     }
 }
