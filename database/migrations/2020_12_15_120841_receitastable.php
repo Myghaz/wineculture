@@ -20,7 +20,7 @@ class Receitastable extends Migration
             $table->biginteger('id_categoria')->unsigned();
             $table->biginteger('id_user')->unsigned();
             $table->string('descricao');
-            $table->string('preparo')->nullable();
+            $table->text('preparo')->nullable();
             $table->timestamps();
             $table->foreign('id_categoria')
             ->references('id')->on('category_wines');

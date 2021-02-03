@@ -62,6 +62,8 @@ class ReceitasController extends Controller
             [
                 'nome' => 'required',
                 'descricao' => 'required',
+                'preparo' => 'nullable',
+                'id_categoria' => 'required|exists: category_wines,id'
             ],
             [
                 'nome' => 'Campo nome não ficou preenchido',

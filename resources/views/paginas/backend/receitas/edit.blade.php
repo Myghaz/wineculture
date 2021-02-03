@@ -39,7 +39,7 @@
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Receita</label>
         <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"
-            name="resposta">{{ old('preparo', $receita->preparo) }}</textarea>
+            name="preparo">{{ old('preparo', $receita->preparo) }}</textarea>
     </div>
       <div class="form-group">
         <label for="exampleFormControlFile1">Submeter Imagem</label>

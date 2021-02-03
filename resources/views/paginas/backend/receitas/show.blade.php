@@ -35,9 +35,17 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Receita</label>
-        <textarea class="form-control" readonly id="exampleFormControlTextarea1" rows="3" name="descricao">{{$receita->preparo}}</textarea>
+        <textarea class="ckeditor form-control" readonly id="exampleFormControlTextarea1" rows="3" name="descricao">{{$receita->preparo}}</textarea>
       </div>
   </div>
 </div>
 
+<script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.ckeditor').ckeditor();
+    });
+
+</script>
   @endsection

@@ -22,7 +22,7 @@
                         <div class="details col-md-6">
                             <h3 class="product-title">{{ $receita->nome }}</h3>
                             <p class="product-description">{{ $receita->descricao }}</p>
-                            <p class="product-description">{{ $receita->preparo }}</p>
+                            <p class="product-description">{!! $receita->preparo !!}</p>
                             </p>
                             <div class="action">
                                 <a href="{{ route('receitas') }}"><button class="add-to-cart btn btn-default"
