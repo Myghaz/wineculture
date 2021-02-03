@@ -10,12 +10,11 @@
 @endsection
 
 @section("content")
+<br>
+<div class="banner">
+	<img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/blog/blogback.jpg') }}" alt="banner">
+</div>
 <div class="row">
-    <div class="ui grid">
-        <div class="ui large breadcrumb">
-            <a class="section" style="text-decoration: underline">Notícias</a>
-        </div>
-    </div>
     <div class="ui basic modal acarregar">
         <div class="ui icon header">
             <div style="width: 250px;" class="ui active slow green double loader"><br><br>
@@ -76,7 +75,7 @@
                 <img src="{{ url('storage/blog/' .$value->img)}}" />
                 <div style="display: none;" id="text{{$value->id}}">
 
-                    <h1 class="tituloh1" id="titulo">{{$value->titulo}}</h1>
+                    <h1  id="titulo">{{$value->titulo}}</h1>
                     <p id="data">{{$value->created_at}}</p>
                     <div class="autor" id="autor">
                         <img src="http://wineculture.test/wp-content/uploads/2020/10/banner5.jpg" /><span class="nome">
@@ -87,15 +86,19 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="texto">
-                    <h2 id="texto_titulo" class="info">{{$value->titulo}}
+                <div class="texto"><br>
+                    <h2 id="texto_titulo" class="tituloh1" class="info">{{$value->titulo}}
                         <span class="categoria">
                         @foreach($categorias as $categoria)
                         @if ($categoria->id == $value->id_categoria)
                         {{$categoria->name}}
                         @endif
                         @endforeach
-                        </span></h2>
+                        </span>
+                    </h2>
+<div style="text-align: center;">
+                    <p>Autor <em>{{$value->user->name}}</em>  |  Publicado em <em>{{ date('d/m/Y', strtotime($value->created_at))}}</em></p>
+</div>
 <div class="bermaiiis"><br>
                     <a href="{{route('previewBlog',$value)}}" class="bermais">Ler Mais</a>
                 </div></div>
