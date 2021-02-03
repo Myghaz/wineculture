@@ -19,24 +19,33 @@ class receitasseeder extends Seeder
             'id_categoria' => 1,
             'id_user' => 1,
             'descricao' => 'Frango com vinho tinto é a melhor opção para acompanhar com vinho tinto.',
-            'preparo' => 'INGREDIENTES:
-            •	4 sobrecoxas de frango pequenas sem pele
-            •	2 dentes de alho triturados
-            •	1 cebola média picada
-            •	1 colher (chá) de orégano
-            •	1 colher (sopa) de salsinha verde picada
-            •	Pimenta do reino e sal a gosto
-            •	1 colher (sopa) de manteiga
-            •	1 colher (sopa) de óleo de canola ou girassol
-            •	2 xícaras (chá) de vinho tinto
-            MODO DE PREPARO:
-            1- Na véspera, tempere as sobrecoxas com sal, orégano, pimenta do reino, salsinha, alho, cebola e vinho tinto.
-            2- Misture muito bem todos os ingredientes e deixe marinando de um dia para o outro, ou no mínimo 8 horas.
-            3- Em uma panela de fundo largo, coloque a manteiga com o óleo.
-            4- Escorra as sobrecoxas reservando o líquido da marinada, e doure cada peça dos dois lados.
-            5- Na sequência adicione o líquido da marinada, abaixe o fogo, tampe a panela e deixe cozinhar por aproximadamente 40 minutos virando na metade do tempo.
-            6- Sirva a seguir e decore com salsinha picada.
-            '
+            'preparo' => '<p><strong>INGREDIENTES:</strong></p>
+
+            <ul>
+                <li>4 sobrecoxas de frango pequenas sem pele</li>
+                <li>2 dentes de alho triturados</li>
+                <li>1 cebola m&eacute;dia picada</li>
+                <li>1 colher (ch&aacute;) de or&eacute;gano</li>
+                <li>1 colher (sopa) de salsinha verde picada</li>
+                <li>Pimenta do reino e sal a gosto</li>
+                <li>1 colher (sopa) de manteiga</li>
+                <li>1 colher (sopa) de &oacute;leo de canola ou girassol</li>
+                <li>2 x&iacute;caras (ch&aacute;) de vinho tinto</li>
+            </ul>
+
+            <p><strong>MODO DE PREPARO:</strong></p>
+
+            <p>1-&nbsp;Na v&eacute;spera, tempere as sobrecoxas com sal, or&eacute;gano, pimenta do reino, salsinha, alho, cebola e vinho tinto.</p>
+
+            <p>2-&nbsp;Misture muito bem todos os ingredientes e deixe marinando de um dia para o outro, ou no m&iacute;nimo 8 horas.</p>
+
+            <p>3-&nbsp;Em uma panela de fundo largo, coloque a manteiga com o &oacute;leo.</p>
+
+            <p>4-&nbsp;Escorra as sobrecoxas reservando o l&iacute;quido da marinada, e doure cada pe&ccedil;a dos dois lados.</p>
+
+            <p>5-&nbsp;Na sequ&ecirc;ncia adicione o l&iacute;quido da marinada, abaixe o fogo, tampe a panela e deixe cozinhar por aproximadamente 40 minutos virando na metade do tempo.</p>
+
+            <p>6-&nbsp;Sirva a seguir e decore com salsinha picada.</p>'
         ]);
         receitas::create([
             'nome' => 'Salmão e ervas',
