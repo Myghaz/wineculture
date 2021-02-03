@@ -18,11 +18,11 @@
             @endforeach
         </div>
     </div>
-    <div class="ui ignored icon direction buttons imgbtndown">
-        <div class="ui icon button baixo" data-animation="flip" title="Próximo Detalhe" data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
+    <div title="Próximo Detalhe" class="ui ignored icon direction buttons imgbtndown">
+        <div class="ui icon button baixo" data-animation="flip"  data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
     </div>
-    <div class="ui ignored icon direction buttons imgbtnright">
-        <div class="ui icon button direita" title="Próxima Imagem" data-animation="flip" data-direction="right" title="Flip Right"><i class="right long arrow icon"></i></div>
+    <div title="Próxima Imagem" class="ui ignored icon direction buttons imgbtnright">
+        <div class="ui icon button direita" data-animation="flip" data-direction="right" title="Flip Right"><i class="right long arrow icon"></i></div>
     </div>
     <div class="dividervinho"></div>
 

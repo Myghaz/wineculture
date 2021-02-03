@@ -36,9 +36,9 @@ $('.ui.search')
             noResults: 'Sem Resultados'
         }
     })
-$('.baixo')
+$('.imgbtndown')
     .popup({});
-$('.direita')
+$('.imgbtnright')
     .popup({});
 $('.ordenacao')
     .popup({});
@@ -93,11 +93,12 @@ $(document).on('click', '.deletefiltro', function () {
     }
 });
 $(document).on("click", ".reporfiltros", function () {
+    $(".selectfiltros").detach();
     $('.columnvinho').show("slow", function showPrevious() {
         $(this).next("div").show("slow", showPrevious);
         $(".reporfiltros").hide();
     });
-    $(".selectfiltros").detach();
+    
     $(".categoriacheckb").prop("checked", false);
 });
 $(document).on("change", ".categoriacheckb", function () {
