@@ -3,30 +3,22 @@ html {
     --color: #666;
     --acolor: #343a40;
     --services-a-color: #444;
-    --h2color: #742f37;
-}
-
-.theme-dark {
-    --background: #212121;
-    --color: #fff;
-    --acolor: #fff;
-    --services-a-color: #fff;
-    --h2color: #fff;
+    --h2color: #742f37
 }
 
 body {
     font-family: "Open Sans", sans-serif;
     color: #444;
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 a {
-    color: #428bca;
+    color: #428bca
 }
 
 a:hover {
     color: #9eccf4;
-    text-decoration: none;
+    text-decoration: none
 }
 
 h1,
@@ -34,55 +26,16 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.font-primary {
-    font-family: "Raleway", sans-serif;
+h6 {
+    font-family: Raleway, sans-serif
 }
-
-
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-
-.back-to-top {
-    position: fixed;
-    display: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 3px;
-    right: 15px;
-    bottom: 15px;
-    background: #742f37;
-    color: #fff;
-    transition: display 0.5s ease-in-out;
-    z-index: 99999;
-}
-
-.back-to-top i {
-    font-size: 24px;
-    position: absolute;
-    top: 8px;
-    left: 8px;
-}
-
-.back-to-top:hover {
-    color: #fff;
-    background: #b30000;
-    transition: background 0.2s ease-in-out;
-}
-
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
 
 #hero {
     width: 100%;
     height: calc(100vh - 114px);
     padding: 0;
-    margin-top: -20px;
+    margin-top: -20px
 }
-
 
 #hero .carousel-item {
     width: 100%;
@@ -91,12 +44,12 @@ h6,
     background-position: top right;
     background-repeat: no-repeat;
     overflow: hidden;
-    overflow: hidden;
+    overflow: hidden
 }
 
 #hero .carousel-item::before {
     content: '';
-    background-color: rgba(13, 30, 45, 0.6);
+    background-color: rgba(13, 30, 45, .6);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -104,7 +57,7 @@ h6,
     right: 0;
     left: 0;
     bottom: 0;
-    overflow: hidden;
+    overflow: hidden
 }
 
 #hero .carousel-container {
@@ -116,20 +69,20 @@ h6,
     top: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
+    overflow: hidden
 }
 
 #hero .carousel-content {
-    text-align: left;
+    text-align: left
 }
 
-@media (max-width: 992px) {
+@media (max-width:992px) {
     #hero,
     #hero .carousel-item {
-        height: calc(100vh - 70px);
+        height: calc(100vh - 70px)
     }
     #hero .carousel-content.container {
-        padding: 0 50px;
+        padding: 0 50px
     }
 }
 
@@ -137,111 +90,106 @@ h6,
     color: #fff;
     margin-bottom: 30px;
     font-size: 48px;
-    font-weight: 900;
+    font-weight: 900
 }
 
 #hero p {
     width: 80%;
-    -webkit-animation-delay: 0.4s;
-    animation-delay: 0.4s;
-    color: #fff;
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+    color: #fff
 }
 
 #hero .carousel-inner .carousel-item {
     transition-property: opacity;
-    background-position: center top;
+    background-position: center top
 }
 
-#hero .carousel-inner .carousel-item,
 #hero .carousel-inner .active.carousel-item-left,
-#hero .carousel-inner .active.carousel-item-right {
-    opacity: 0;
+#hero .carousel-inner .active.carousel-item-right,
+#hero .carousel-inner .carousel-item {
+    opacity: 0
 }
 
 #hero .carousel-inner .active,
 #hero .carousel-inner .carousel-item-next.carousel-item-left,
 #hero .carousel-inner .carousel-item-prev.carousel-item-right {
     opacity: 1;
-    transition: 0.5s;
+    transition: .5s
 }
 
-#hero .carousel-inner .carousel-item-next,
-#hero .carousel-inner .carousel-item-prev,
 #hero .carousel-inner .active.carousel-item-left,
-#hero .carousel-inner .active.carousel-item-right {
+#hero .carousel-inner .active.carousel-item-right,
+#hero .carousel-inner .carousel-item-next,
+#hero .carousel-inner .carousel-item-prev {
     left: 0;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
 }
 
-#hero .carousel-control-prev,
-#hero .carousel-control-next {
-    width: 10%;
+#hero .carousel-control-next,
+#hero .carousel-control-prev {
+    width: 10%
 }
 
 #hero .carousel-control-next-icon,
 #hero .carousel-control-prev-icon {
-    background: none;
+    background: 0 0;
     font-size: 48px;
     line-height: 1;
     width: auto;
-    height: auto;
+    height: auto
 }
 
 #hero .carousel-indicators li {
-    cursor: pointer;
+    cursor: pointer
 }
 
 #hero .btn-get-started {
-    font-family: "Raleway", sans-serif;
+    font-family: Raleway, sans-serif;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1px;
     display: inline-block;
     padding: 12px 32px;
     border-radius: 5px;
-    transition: 0.5s;
+    transition: .5s;
     line-height: 1;
     margin: 10px;
     color: #fff;
-    -webkit-animation-delay: 0.8s;
-    animation-delay: 0.8s;
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
     border: 0;
-    background: #742f37;
+    background: #742f37
 }
 
 #hero .btn-get-started:hover {
-    background: #742f37;
+    background: #742f37
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     #hero h2 {
-        font-size: 28px;
+        font-size: 28px
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width:1024px) {
     #hero p {
-        width: 60%;
+        width: 60%
     }
-    #hero .carousel-control-prev,
-    #hero .carousel-control-next {
-        width: 5%;
+    #hero .carousel-control-next,
+    #hero .carousel-control-prev {
+        width: 5%
     }
 }
-
-
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
 
 section {
-    padding: 60px 0;
+    padding: 60px 0
 }
 
 .section-title {
     text-align: center;
     padding-bottom: 30px;
-    color: var(--h2color) !important;
+    color: var(--h2color)!important
 }
 
 .section-title h2.serviços {
@@ -249,95 +197,42 @@ section {
     font-weight: 600;
     margin-bottom: 20px;
     padding-bottom: 0;
-    color: var(--h2color) !important;
-    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    color: var(--h2color)!important;
+    transition: all .3s cubic-bezier(.4, 0, .2, 1)
 }
 
 .section-title p {
     margin-bottom: 0;
-    color: var(--h2color) !important;
-    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    z-index: 20;
+    color: var(--h2color)!important;
+    transition: all .3s cubic-bezier(.4, 0, .2, 1);
+    z-index: 20
 }
-
-
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
-
-.breadcrumbs {
-    padding: 15px 0;
-    background-color: #f5f9fc;
-    min-height: 40px;
-}
-
-.breadcrumbs h2 {
-    font-size: 24px;
-    font-weight: 300;
-}
-
-.breadcrumbs ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-}
-
-.breadcrumbs ol li+li {
-    padding-left: 10px;
-}
-
-.breadcrumbs ol li+li::before {
-    display: inline-block;
-    padding-right: 10px;
-    color: #742f37;
-    content: "/";
-}
-
-@media (max-width: 768px) {
-    .breadcrumbs .d-flex {
-        display: block !important;
-    }
-    .breadcrumbs ol {
-        display: block;
-    }
-    .breadcrumbs ol li {
-        display: inline-block;
-    }
-}
-
-
-/*--------------------------------------------------------------
-# About Us
---------------------------------------------------------------*/
 
 .about {
-    padding-bottom: 30px;
+    padding-bottom: 30px
 }
 
 .about .container {
-    box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
+    box-shadow: 0 5px 25px 0 rgba(214, 215, 216, .6)
 }
 
 .about .video-box img {
-    padding: 15px 0;
+    padding: 15px 0
 }
 
 .about .section-title p {
     text-align: left;
     font-style: italic;
     color: var(--color);
-    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all .3s cubic-bezier(.4, 0, .2, 1)
 }
 
 .about .about-content {
-    padding: 40px;
+    padding: 40px
 }
 
 .about .icon-box+.icon-box {
-    margin-top: 40px;
+    margin-top: 40px
 }
 
 .about .icon-box .icon {
@@ -349,20 +244,20 @@ section {
     height: 72px;
     background: #f1f7fb;
     border-radius: 6px;
-    transition: 0.5s;
+    transition: .5s
 }
 
 .about .icon-box .icon i {
     color: #742f37;
-    font-size: 32px;
+    font-size: 32px
 }
 
 .about .icon-box:hover .icon {
-    background: #742f37;
+    background: #742f37
 }
 
 .about .icon-box:hover .icon i {
-    color: #fff;
+    color: #fff
 }
 
 .about .icon-box .title {
@@ -370,17 +265,17 @@ section {
     font-weight: 700;
     margin-bottom: 10px;
     font-size: 18px;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .about .icon-box .title a {
-    transition: 0.3s;
+    transition: .3s;
     color: var(--acolor);
-    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all .3s cubic-bezier(.4, 0, .2, 1)
 }
 
 .about .icon-box .title a:hover {
-    color: #742f37;
+    color: #742f37
 }
 
 .about .icon-box .description {
@@ -388,11 +283,11 @@ section {
     line-height: 24px;
     font-size: 14px;
     color: var(--acolor);
-    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all .3s cubic-bezier(.4, 0, .2, 1)
 }
 
 .about .video-box {
-    position: relative;
+    position: relative
 }
 
 .about .play-btn {
@@ -404,7 +299,7 @@ section {
     position: absolute;
     left: calc(50% - 47px);
     top: calc(50% - 47px);
-    overflow: hidden;
+    overflow: hidden
 }
 
 .about .play-btn::after {
@@ -419,7 +314,7 @@ section {
     border-bottom: 10px solid transparent;
     border-left: 15px solid #fff;
     z-index: 100;
-    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: all .4s cubic-bezier(.55, .055, .675, .19)
 }
 
 .about .play-btn::before {
@@ -442,12 +337,12 @@ section {
     border: 5px solid rgba(116, 47, 55, 1);
     top: -15%;
     left: -15%;
-    background: rgba(198, 16, 0, 0);
+    background: rgba(198, 16, 0, 0)
 }
 
 .about .play-btn:hover::after {
     border-left: 15px solid #742f37;
-    transform: scale(20);
+    transform: scale(20)
 }
 
 .about .play-btn:hover::before {
@@ -465,131 +360,74 @@ section {
     z-index: 200;
     -webkit-animation: none;
     animation: none;
-    border-radius: 0;
+    border-radius: 0
 }
 
 @-webkit-keyframes pulsate-btn {
     0% {
-        transform: scale(0.6, 0.6);
-        opacity: 1;
+        transform: scale(.6, .6);
+        opacity: 1
     }
     100% {
         transform: scale(1, 1);
-        opacity: 0;
+        opacity: 0
     }
 }
 
 @keyframes pulsate-btn {
     0% {
-        transform: scale(0.6, 0.6);
-        opacity: 1;
+        transform: scale(.6, .6);
+        opacity: 1
     }
     100% {
         transform: scale(1, 1);
-        opacity: 0;
+        opacity: 0
     }
 }
-
-
-/*--------------------------------------------------------------
-# About Lists
---------------------------------------------------------------*/
-
-.about-lists {
-    padding: 40px;
-}
-
-.about-lists .row {
-    overflow: hidden;
-}
-
-.about-lists .content-item {
-    padding: 40px;
-    border-left: 1px solid #d9e8f4;
-    border-bottom: 1px solid #d9e8f4;
-    margin: -1px;
-}
-
-.about-lists .content-item span {
-    display: block;
-    font-size: 24px;
-    font-weight: 400;
-    color: #742f37;
-}
-
-.about-lists .content-item h4 {
-    font-size: 28px;
-    font-weight: 400;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.about-lists .content-item p {
-    color: #aaaaaa;
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
-}
-
-@media (max-width: 768px) {
-    .about-lists .content-item {
-        padding: 40px 0;
-    }
-}
-
-
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
 
 .counts {
-    padding-bottom: 30px;
+    padding-bottom: 30px
 }
 
 .counts .count-box {
-    box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
     padding: 30px;
     background: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .counts .count-box i {
     display: block;
     font-size: 64px;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .counts .count-box span {
     font-size: 42px;
     display: block;
     font-weight: 700;
-    color: #742f37;
+    color: #742f37
 }
 
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
+    font-family: Raleway, sans-serif;
+    font-size: 14px
 }
 
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-
 .services {
-    padding-bottom: 30px;
+    padding-bottom: 30px
 }
 
 .services .icon-box {
     margin-bottom: 20px;
-    text-align: center;
+    text-align: center
 }
 
 .services .icon {
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 .services .icon i {
@@ -598,16 +436,16 @@ section {
     margin-bottom: 20px;
     background: #fff;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: .5s;
     color: #742f37;
     font-size: 40px;
     overflow: hidden;
     padding-top: 20px;
-    box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 25px rgba(0, 0, 0, .15)
 }
 
 .services .icon-box:hover .icon i {
-    box-shadow: 0px 0 30px rgba(206, 79, 79, 0.637);
+    box-shadow: 0 0 30px rgba(206, 79, 79, .637)
 }
 
 .services .title {
@@ -615,17 +453,17 @@ section {
     margin-bottom: 15px;
     font-size: 18px;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 15px
 }
 
 .services .title a {
     color: #444;
     color: var(--services-a-color);
-    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all .3s cubic-bezier(.4, 0, .2, 1)
 }
 
 .services .title a:hover {
-    color: #742f37;
+    color: #742f37
 }
 
 .services .title::after {
@@ -636,30 +474,25 @@ section {
     height: 2px;
     background: #742f37;
     bottom: 0;
-    left: calc(50% - 25px);
+    left: calc(50% - 25px)
 }
 
 .services .description {
     line-height: 24px;
     font-size: 14px;
     color: var(--color);
-    transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all .3s cubic-bezier(.4, 0, .2, 1)
 }
 
-
-/*--------------------------------------------------------------
-# Our Portfolio
---------------------------------------------------------------*/
-
 .portfolio .portfolio-item {
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .portfolio #portfolio-flters {
     padding: 0;
     margin: 0 0 35px 0;
     list-style: none;
-    text-align: center;
+    text-align: center
 }
 
 .portfolio #portfolio-flters li {
@@ -674,28 +507,28 @@ section {
     text-transform: uppercase;
     background: #fff;
     margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li.filter-active,
+.portfolio #portfolio-flters li:hover {
     background: #742f37;
-    color: #fff;
+    color: #fff
 }
 
 .portfolio #portfolio-flters li:last-child {
-    margin-right: 0;
+    margin-right: 0
 }
 
 .portfolio .portfolio-wrap {
-    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+    transition: .3s;
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .portfolio .portfolio-wrap img.img-fluid {
-    transition: 0.3s;
+    transition: .3s
 }
 
 .portfolio .portfolio-wrap .portfolio-info {
@@ -709,35 +542,31 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    transition: 0.3s;
+    transition: .3s;
     text-align: center;
-    background: rgba(31, 53, 72, 0.6);
-    padding-bottom: 30px;
-}
-
-.aumentar {
-    animation: animar 0.3s;
+    background: rgba(31, 53, 72, .6);
+    padding-bottom: 30px
 }
 
 @keyframes animar {
     from {
-        transform: scale(0);
+        transform: scale(0)
     }
     to {
-        transform: scale(1);
+        transform: scale(1)
     }
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
     font-size: 20px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
     color: #fff;
     font-size: 14px;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .portfolio .portfolio-wrap .portfolio-info a {
@@ -752,62 +581,38 @@ section {
     width: 36px;
     height: 35px;
     display: inline-block;
-    transition: 0.3s;
+    transition: .3s
 }
 
 .portfolio .portfolio-wrap .portfolio-info a:hover {
     background: #742f37;
-    color: #fff;
+    color: #fff
 }
 
 .portfolio .portfolio-wrap:hover {
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .16)
 }
 
 .portfolio .portfolio-wrap:hover .portfolio-info {
     opacity: 1;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 .portfolio .portfolio-wrap:hover img.img-fluid {
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
 
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-
 .portfolio-details {
-    padding-top: 30px;
+    padding-top: 30px
 }
 
 .portfolio-details .portfolio-details-container {
-    position: relative;
+    position: relative
 }
 
 .portfolio-details .portfolio-details-carousel {
     position: relative;
-    z-index: 1;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-nav,
-.portfolio-details .portfolio-details-carousel .owl-dots {
-    margin-top: 5px;
-    text-align: left;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot {
-    display: inline-block;
-    margin: 0 10px 0 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ddd !important;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot.active {
-    background-color: #742f37 !important;
+    z-index: 1
 }
 
 .portfolio-details .portfolio-info {
@@ -816,8 +621,8 @@ section {
     right: 0;
     bottom: -70px;
     background: #fff;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    z-index: 2;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+    z-index: 2
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -825,77 +630,77 @@ section {
     font-weight: 700;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee
 }
 
 .portfolio-details .portfolio-info ul {
     list-style: none;
     padding: 0;
-    font-size: 15px;
+    font-size: 15px
 }
 
 .portfolio-details .portfolio-info ul li+li {
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .portfolio-details .portfolio-description {
-    padding-top: 50px;
+    padding-top: 50px
 }
 
 .portfolio-details .portfolio-description h2 {
     width: 50%;
     font-size: 26px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .portfolio-details .portfolio-description p {
-    padding: 0 0 0 0;
+    padding: 0
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .portfolio-details .portfolio-description h2 {
-        width: 100%;
+        width: 100%
     }
     .portfolio-details .portfolio-info {
         position: static;
-        margin-top: 30px;
+        margin-top: 30px
     }
 }
 
 .team {
     height: fit-content;
     width: 90%;
-    margin: auto auto;
+    margin: auto auto
 }
 
 .teamcontainer {
-    width: 100%;
+    width: 100%
 }
 
 .team .row {
     display: grid;
-    grid-template-columns: repeat(5, 0.5fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(5, .5fr);
+    grid-gap: 10px
 }
 
 .team .member {
     text-align: center;
     margin-bottom: 80px;
-    position: relative;
+    position: relative
 }
 
 .team .member .pic {
     border-radius: 4px;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .team .member img {
-    transition: all ease-in-out 0.4s;
+    transition: all ease-in-out .4s
 }
 
 .team .member:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
 
 .team .member .member-info {
@@ -903,9 +708,9 @@ section {
     bottom: -48px;
     left: 20px;
     right: 20px;
-    background: linear-gradient(360deg, #742f37 0%, rgba(214, 54, 40, 0.9) 35%, rgba(233, 82, 77, 0.8) 100%);
+    background: linear-gradient(360deg, #742f37 0, rgba(214, 54, 40, .9) 35%, rgba(233, 82, 77, .8) 100%);
     padding: 15px 0;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .team .member h4 {
@@ -914,7 +719,7 @@ section {
     font-size: 16px;
     color: #fff;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 10px
 }
 
 .team .member h4::after {
@@ -925,59 +730,59 @@ section {
     height: 1px;
     background: #fff;
     bottom: 0;
-    left: calc(50% - 25px);
+    left: calc(50% - 25px)
 }
 
 .team .member span {
     font-style: italic;
     display: block;
     font-size: 13px;
-    color: #fff;
+    color: #fff
 }
 
 .team .member .social {
-    margin-top: 15px;
+    margin-top: 15px
 }
 
 .team .member .social a {
-    transition: color 0.3s;
-    color: #fff;
+    transition: color .3s;
+    color: #fff
 }
 
 .team .member .social a:hover {
-    color: #f49e9e;
+    color: #f49e9e
 }
 
 .team .member .social i {
     font-size: 16px;
-    margin: 0 2px;
+    margin: 0 2px
 }
 
-@media (max-width: 1680px) {
+@media (max-width:1680px) {
     .team .row {
-        grid-template-columns: repeat(4, 0.5fr);
+        grid-template-columns: repeat(4, .5fr)
     }
 }
 
-@media (max-width: 1350px) {
+@media (max-width:1350px) {
     .team .row {
-        grid-template-columns: repeat(3, 0.5fr);
+        grid-template-columns: repeat(3, .5fr)
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width:992px) {
     .team .member {
-        margin-bottom: 100px;
+        margin-bottom: 100px
     }
     .team .row {
-        grid-template-columns: repeat(2, 0.5fr);
+        grid-template-columns: repeat(2, .5fr)
     }
 }
 
-@media (max-width: 852px) {
+@media (max-width:852px) {
     .team .row {
-        grid-template-columns: repeat(1, 0.5fr);
+        grid-template-columns: repeat(1, .5fr);
         justify-content: center;
-        align-items: center;
+        align-items: center
     }
 }
