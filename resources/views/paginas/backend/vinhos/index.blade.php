@@ -73,29 +73,41 @@
 </div>
 <script src="{{ URL::asset('assets\js\paginas\backend\vinhos.js') }}"></script>
 
-<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar registo</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-      </div>
-        <div class="modal-body">
-          Tem a certeza que deseja eliminar este registo?
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog"
+            aria-labelledby="deleteConfirmModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar registo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Tem a certeza que deseja eliminar este registo?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <form method="POST" action="#" role="form" class="inline" id="formDelete">
+                            @csrf
+                            @method("DELETE")
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <form method="POST" action="#" role="form" class="inline" id="formDelete">
-                @csrf
-                @method("DELETE")
-                <button type="submit" class="btn btn-danger">Eliminar</button>
-              </form>
-          </div>
-        </div>
-      </div>
-</div>
+        <script>
+            //triggered when modal is about to be shown
+            $('#deleteConfirmModal').on('show.bs.modal', function(e) {
 
+                //get data-route attribute of the clicked element
+                var route = $(e.relatedTarget).data('route');
+
+                //populate the textbox
+                $('#formDelete').attr("action", route);
+            });
+
+        </script>
 
 @endsection
