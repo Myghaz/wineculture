@@ -20,7 +20,7 @@
 
       <div class="form-group">
         <label for="exampleFormControlSelect1">Categoria</label>
-        <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
+        <select class="form-control" id="exampleFormControlSelect1"  name="categoria">
             <option value="">Selecione uma Categoria</option>
             @foreach ($categorias as $categorias)
             <option @if ($vinho->id_categoria==$categorias->id) selected @endif value="{{$categorias->id}}"> {{$categorias->nome}}</option>
@@ -30,7 +30,7 @@
 
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Produtor</label>  
-        <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
+        <select class="form-control" id="exampleFormControlSelect1"  name="produtor">
           <option value="">Selecione um Produtor</option>
           @foreach($users as $key_user => $user)
 					  @if($user->tipouser == 'Produtor')
@@ -83,14 +83,7 @@
 
       </div>
       
-      <div class="form-group">
-        <label for="exampleFormControlFile1">Submeter Imagem</label>
-        <div class="form-group custom-file">
-          <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-          <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-          <div class="invalid-feedback">Ficheiro Inválido</div>
-        </div>
-      </div>
+    
 
       <div class="form-group">
         <label for="exampleFormControlFile1">Submeter Imagem</label>

@@ -7,17 +7,18 @@ use App\Models\category_wine;
 use App\Models\VinhosClass;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Vinhos extends Model
 {
+    use SoftDeletes;
+
     protected $fillable = [
         'nome',
         'id_categoria',
         'img',
         'id_produtor',
         'descricao',
-        'preco',
-        'stock',
         'regiao',
     ];
     public function produtor(){
@@ -26,4 +27,5 @@ class Vinhos extends Model
     public function categoria(){
         return $this->belongsTo(category_wine::class, 'id_categoria');
     }
+   
 }
