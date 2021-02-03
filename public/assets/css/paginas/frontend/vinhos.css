@@ -341,6 +341,18 @@ a.refresh i.animacao {
     border-radius: 5px !important;
 }
 
+.imgbtnright:hover,
+.imgbtndown:hover {
+    border: 2px solid #742f37;
+}
+.imgbtndown  {
+    height: 40px!important;
+    width: 42px!important;
+}
+.imgbtnright {
+    height: 42px!important;
+    width: 42px!important;
+}
 .imgbtnright {
     float: right !important;
 }
@@ -465,4 +477,7 @@ nav .page-item.active .page-link {
 
 .ui.rating .active::before {
     color: #742f37 !important
+}
+.refresh{
+    width: 15px;
 }

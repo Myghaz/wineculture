@@ -47,11 +47,11 @@
                     vigente da Holanda.
                 </p>
             </div>
-            <div class="title tc active">
+            <div class="title tc">
                 <i class="dropdown icon"></i>
                 Biscoitos
             </div>
-            <div class="content active tc">
+            <div class="content tc">
                 <p class="transition mb-4">
                     Empregamos o uso de cookies.
                     Ao acessar a WineCulture, você concorda em usar cookies de acordo com a Política de Privacidade da
@@ -66,11 +66,11 @@
                     Alguns de nossos afiliados / parceiros de publicidade também podem usar cookies.
                 </p>
             </div>
-            <div class="title tc active">
+            <div class="title tc">
                 <i class="dropdown icon"></i>
                 Licença
             </div>
-            <div class="content active tc">
+            <div class="content tc">
                 <p>
                     Salvo indicação em contrário, WineCulture e / ou seus licenciados detêm os direitos de propriedade
                     intelectual
@@ -261,11 +261,11 @@
                     licença de marca registrada.
                 </p>
             </div>
-            <div class="title tc active">
+            <div class="title tc">
                 <i class="dropdown icon"></i>
                 iFrames
             </div>
-            <div class="content active tc">
+            <div class="content tc">
                 <p class="transition mb-4">
                     Sem aprovação prévia e permissão por escrito, você não pode criar quadros em torno de nossas páginas da
                     Web
@@ -273,11 +273,11 @@
                     alterem de qualquer forma a apresentação visual ou aparência de nosso site.
                 </p>
             </div>
-            <div class="title tc active">
+            <div class="title tc">
                 <i class="dropdown icon"></i>
                 Responsabilidade de Conteúdo
             </div>
-            <div class="content active tc">
+            <div class="content tc">
                 <p class="transition">
                     Não seremos responsáveis ​​por qualquer conteúdo que apareça em seu site.
                     Você concorda em nos proteger e nos defender contra todas as reclamações que estão aumentando em seu
@@ -288,11 +288,11 @@
                     de terceiros.
                 </p>
             </div>
-            <div class="title tc active">
+            <div class="title tc">
                 <i class="dropdown icon"></i>
                 A Sua Privacidade?
             </div>
-            <div class="content active tc">
+            <div class="content tc">
                 <p>
                     Leia a
                     <a href="/politica_de_privacidade">
@@ -300,11 +300,11 @@
                     </a>
                 </p>
             </div>
-            <div class="title tc active">
+            <div class="title tc">
                 <i class="dropdown icon"></i>
                 Reserva de direitos
             </div>
-            <div class="content active tc">
+            <div class="content tc">
                 <p class="transition">
                     Nós nos reservamos o direito de solicitar que você remova todos os links ou qualquer link específico
                     para o
@@ -318,11 +318,11 @@
                     vinculação.
                 </p>
             </div>
-            <div class="title tc active">
+            <div class="title tc">
                 <i class="dropdown icon"></i>
                 Remoção de links do nosso site
             </div>
-            <div class="content active tc">
+            <div class="content tc">
                 <p class="transition mb-4">
                     Se você encontrar algum link em nosso site que seja ofensivo por qualquer motivo, você está à vontade
                     para
@@ -337,11 +337,11 @@
                     atualizado.
                 </p>
             </div>
-            <div class="title tc active">
+            <div class="title tc">
                 <i class="dropdown icon"></i>
                 Aviso Legal
             </div>
-            <div class="content active tc">
+            <div class="content tc">
                 <p>
                     Na extensão máxima permitida pela lei aplicável, excluímos todas as representações, garantias e
                     condições

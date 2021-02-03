@@ -56,8 +56,12 @@ class CategorySeeder extends Seeder
             'img' => '10.jpg',
         ]);
         Category::create([
-            'name' => 'Sociedade‎ ',
+            'name' => 'Sociedade‎',
             'img' => '11.jpg',
+        ]);
+        Category::create([
+            'name' => 'Dia de São Valentim',
+            'img' => '12.jpg',
         ]);
     }
 }

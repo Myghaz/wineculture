@@ -1,6 +1,7 @@
 @extends ('layouts.backend.admin')
 @section('title', 'Dashboard')
 @section('content')
+
 <nav aria-label="breadcrumb bread">
   <ol class="breadcrumb breadcrumb-inverse">
     <li class="breadcrumb-item"><a href="{{ route('admin_dashboard')}}">Admin</a></li>
@@ -411,7 +412,7 @@
                 @if ($ultuser->img == "Sem Imagem")
                 <img style="width: 100px; height:100px;" src="/assets/img/users/sem_imagem.jpg" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @else
-                <img style="object-fit: cover;" src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
+                <img style="object-fit: cover; width: 100px; height:100px;" src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @endif
               </div>
 

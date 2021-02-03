@@ -36,9 +36,9 @@ $('.ui.search')
             noResults: 'Sem Resultados'
         }
     })
-$('.baixo')
+$('.imgbtndown')
     .popup({});
-$('.direita')
+$('.imgbtnright')
     .popup({});
 $('.ordenacao')
     .popup({});
@@ -55,7 +55,7 @@ $('.ui.dropdown')
     .dropdown();
 $('.ui.checkbox')
     .checkbox();
-    $('.ui.rating.vinhosclass')
+$('.ui.rating.vinhosclass')
     .rating();
 $(document).on("click", ".direita", function () {
     var id_vinho = $(this).parent().parent().find("#id_vinho").val();
@@ -86,18 +86,20 @@ $(document).on('click', '.deletefiltro', function () {
             });
         });
     } else {
-        sections.show("slow", function showPrevious() {
-            $(this).next("div").show("slow", showPrevious);
-            $(".reporfiltros").hide();
+        $(".reporfiltros").hide();
+        sections.show("fast", function showPrevious() {
+            $(this).next("div").show("fast", showPrevious);
+
         });
     }
 });
 $(document).on("click", ".reporfiltros", function () {
-    $('.columnvinho').show("slow", function showPrevious() {
-        $(this).next("div").show("slow", showPrevious);
-        $(".reporfiltros").hide();
-    });
     $(".selectfiltros").detach();
+    $(".reporfiltros").hide();
+    $('.columnvinho').show("fast", function showPrevious() {
+        $(this).next("div").show("fast", showPrevious);
+    });
+
     $(".categoriacheckb").prop("checked", false);
 });
 $(document).on("change", ".categoriacheckb", function () {
@@ -116,9 +118,9 @@ $(document).on("change", ".categoriacheckb", function () {
         });
 
     } else {
-        sections.show("slow", function showPrevious() {
-            $(this).next("div").show("slow", showPrevious);
-            $(".reporfiltros").hide();
+        $(".reporfiltros").hide();
+        sections.show("fast", function showPrevious() {
+            $(this).next("div").show("fast", showPrevious);
         });
     }
     if ($(this).is(":checked")) {

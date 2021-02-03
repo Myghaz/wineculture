@@ -12040,8 +12040,7 @@ label {
 
 .breadcrumb.breadcrumb-inverse {
     border-color: #873740;
-    border: 1px solid #873740;
-    background-color: rgba(228, 237, 255, 0.6);
+    background-color: white;
 }
 
 .breadcrumb.breadcrumb-inverse .breadcrumb-item {

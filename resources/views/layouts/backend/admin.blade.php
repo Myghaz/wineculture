@@ -41,7 +41,6 @@
         integrity="sha512-bUg5gaqBVaXIJNuebamJ6uex//mjxPk8kljQTdM1SwkNrQD7pjS+PerntUSD+QRWPNJ0tq54/x4zRV8bLrLhZg=="
         crossorigin="anonymous"></script>
 </head>
-
 <body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
 
     <script>
