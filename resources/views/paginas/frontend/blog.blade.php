@@ -4,6 +4,8 @@
 
 @section("links")
 <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/blog.css') }}">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.js"></script>
 
 @endsection
 
@@ -21,9 +23,16 @@
     <div class="ui basic modal acarregar">
         <div class="ui icon header">
             <div style="width: 250px;" class="ui active slow green double loader"><br><br>
-                A Carregar Lista de Posts</div>
+                A Carregar Lista Posts</div>
         </div>
     </div>
+    <div class="ui basic modal aordenar">
+        <div class="ui icon header">
+            <div style="width: 250px;" class="ui active slow green double loader"><br><br>
+                A Ordenar Lista Posts</div>
+        </div>
+    </div>
+</div>
     <div class="ui grid maincontainer">
         <div class="row">
             <div class="three wide column semifiltros"></div>
@@ -62,7 +71,7 @@
             </div>
         </div>
     </div>
-<section class="grelha">
+<section>
     <div class="containerr">
         <div class="card-column column-0">
             @foreach($blogs as $value)
@@ -94,14 +103,12 @@
                         @endif
                         @endforeach
                         </span></h2>
-                    <a class="info">Ler Mais</a>
+                    <a href="{{route('previewBlog')}}">Ler Mais</a>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
-
-
     <div id="cover" class="cover"></div>
 
     <div id="open-content" class="open-content">
@@ -110,6 +117,7 @@
         <div class="text" id="open-content-text"></div>
     </div>
 </section>
+
 </div>
 @section("javascript")
 <script src="{{ URL::asset('assets/js/paginas/frontend/blog.js') }}"></script>

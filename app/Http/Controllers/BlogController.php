@@ -23,7 +23,8 @@ class BlogController extends Controller
         return view('paginas.frontend.blog', compact([
             'blogs',
             'categorias',
-            'users'
+            'users',
+            'blogtotall'
         ]));
 
         if ($request->ajax()) {
@@ -32,7 +33,7 @@ class BlogController extends Controller
                 'blogs',
                 'categorias',
                 'users',
-                'blogtotal'
+                'blogtotall'
 
             ]))->render();
         }
@@ -41,7 +42,7 @@ class BlogController extends Controller
             'blogs',
                 'categorias',
                 'users',
-                'blogtotal'
+                'blogtotall'
         ]))->render();
     }
 
@@ -159,4 +160,11 @@ class BlogController extends Controller
 
         return redirect()->route('blog.index')->with('success', 'Post adicionada com sucesso');
     }
+
+    public function previewBlog(Blog $blog){
+        $categories = Category::all();
+        $blogs = Blog::all();
+        return view('paginas.frontend.previewblog', compact('categories', 'blogs'));
+    }
+
 }
