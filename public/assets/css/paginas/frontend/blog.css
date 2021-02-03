@@ -4,6 +4,10 @@
     overflow: hidden;
 }
 
+.tituloh1 {
+    font-size: 10px !important;
+}
+
 
 /* Cards */
 
@@ -799,4 +803,20 @@ nav .page-item.active .page-link {
 
 .ui.rating .active::before {
     color: #742f37 !important
+}
+
+.bermais {
+    text-align: center !important;
+    cursor: pointer !important;
+    border: none !important;
+    padding: 10px !important;
+    font-size: 20px !important;
+    background: rgba(116, 47, 55) !important;
+    color: white !important;
+    box-sizing: border-box !important;
+}
+
+.bermaiiis {
+    justify-content: center !important;
+    text-align: center;
 }

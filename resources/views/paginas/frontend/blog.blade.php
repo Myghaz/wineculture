@@ -13,11 +13,7 @@
 <div class="row">
     <div class="ui grid">
         <div class="ui large breadcrumb">
-            <a class="section">Home</a>
-            <i class="right chevron icon divider"></i>
-            <a class="section">Registration</a>
-            <i class="right chevron icon divider"></i>
-            <div class="active section">Personal Information</div>
+            <a class="section" style="text-decoration: underline">Notícias</a>
         </div>
     </div>
     <div class="ui basic modal acarregar">
@@ -35,8 +31,7 @@
 </div>
     <div class="ui grid maincontainer">
         <div class="row">
-            <div class="three wide column semifiltros"></div>
-            <div class="twelve wide column vinhosheader">
+            <div class="sixteen wide column vinhosheader">
                 <div class="ui attached stackable menu semiheader">
                     <div class="ui container headercontainer">
                         <a class="item">
@@ -75,15 +70,14 @@
     <div class="containerr">
         <div class="card-column column-0">
             @foreach($blogs as $value)
-            <div class="card card-color-0" id="{{$value->id}}">
+            <div class="card card-color-0">
                 <input type="hidden" name="id" value="{{$value->id}}">
                 <div class="border"></div>
-                <img src="{{ url('assets/img/paginas/frontend/blog/' .$value->img)}}" />
+                <img src="{{ url('storage/blog/' .$value->img)}}" />
                 <div style="display: none;" id="text{{$value->id}}">
 
-                    <h1 id="titulo">{{$value->titulo}}</h1>
+                    <h1 class="tituloh1" id="titulo">{{$value->titulo}}</h1>
                     <p id="data">{{$value->created_at}}</p>
-                    <p id="desc">{{$value->preview}}</p>
                     <div class="autor" id="autor">
                         <img src="http://wineculture.test/wp-content/uploads/2020/10/banner5.jpg" /><span class="nome">
                         @foreach($users as $user)
@@ -103,12 +97,14 @@
                         @endif
                         @endforeach
                         </span></h2>
-                    <a href="{{route('previewBlog')}}">Ler Mais</a>
-                </div>
+<div class="bermaiiis"><br>
+                    <a href="{{route('previewBlog',$value)}}" class="bermais">Ler Mais</a>
+                </div></div>
             </div>
             @endforeach
         </div>
     </div>
+
     <div id="cover" class="cover"></div>
 
     <div id="open-content" class="open-content">
@@ -117,6 +113,7 @@
         <div class="text" id="open-content-text"></div>
     </div>
 </section>
+
 
 </div>
 @section("javascript")

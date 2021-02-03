@@ -161,10 +161,9 @@ class BlogController extends Controller
         return redirect()->route('blog.index')->with('success', 'Post adicionada com sucesso');
     }
 
-    public function previewBlog(Blog $blog){
+    public function previewBlog(blog $blog){
         $categories = Category::all();
-        $blogs = Blog::all();
-        return view('paginas.frontend.previewblog', compact('categories', 'blogs'));
+        return view('paginas.frontend.previewblog', compact('categories', 'blog'));
     }
 
 }
