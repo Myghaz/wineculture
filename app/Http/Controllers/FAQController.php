@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreFAQRequest;
+use App\Http\Requests\UpdateFAQRequest;
 use App\Models\CategoriaPergunta;
 use Illuminate\Http\Request;
 use App\Models\Perguntas;
@@ -45,15 +47,9 @@ class FAQController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreFAQRequest $request)
     {
-        $fields = $request->validate(
-            [
-                'pergunta' => 'required',
-                'resposta' => 'required',
-                'categoria_id' => 'required|exists:categoria_perguntas,id'
-            ]
-        );
+        $fields = $request->validated();
         $pergunta = new Perguntas();
         $pergunta->fill($fields);
         $pergunta->save();
@@ -90,15 +86,9 @@ class FAQController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Perguntas $pergunta)
+    public function update(UpdateFAQRequest $request, Perguntas $pergunta)
     {
-        $fields = $request->validate(
-            [
-                'pergunta' => 'required',
-                'resposta' => 'required',
-                'categoria_id' => 'required|exists:categoria_perguntas,id'
-            ]
-        );
+        $fields = $request->validated();
         $pergunta->update($fields);
         $pergunta->save();
         return redirect()->route('faq.index')

@@ -109,7 +109,7 @@ class VinhosController extends Controller
         $vinhos_categorias = category_wine::select('nome')->get();
         $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
 
-       
+
         if ($request->ajax()) {
 
             return view('includes.frontend.listavinhos', compact([
@@ -265,7 +265,7 @@ class VinhosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {/*
         $vinho = new Vinhos();
         $vinho->fill($request->all());
 
@@ -273,7 +273,7 @@ class VinhosController extends Controller
 
         $vinho->foto = $path;
         $vinho->save();
-        return redirect()->route('vinhos.index');
+        return redirect()->route('vinhos.index');*/
     }
 
     /**
@@ -332,8 +332,9 @@ class VinhosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Vinhos $vinho)
     {
-        //
+        $vinho->delete($vinho);
+        return redirect()->route('vinhos.index')->with('success', 'Pergunta removida com sucesso', compact('vinho'));
     }
 }
