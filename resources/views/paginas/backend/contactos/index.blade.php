@@ -14,6 +14,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="card card-mini mb-4">
+                        <div class="card-body cartao">
+                            <h2 class="mb-1">{{ $porresponder }}</h2>
+                            <p>Perguntas por Responder</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -58,9 +66,15 @@
                                                 {{ $mensagem->estado }}
                                             </td>
                                             <td class="tdhover">
-                                                <a href="{{ route('contactos.show', $mensagem) }}"
-                                                    class="btn btn-xs btn-success btn-p"><i
-                                                        class="fas fa-eye fa-xs"></i></a>
+                                                @if ($mensagem->estado == 'Respondida')
+                                                    <a href="{{ route('contactos.show', $mensagem) }}"
+                                                        class="btn btn-xs btn-success btn-p disabled"><i
+                                                            class="fas fa-eye fa-xs"></i></a>
+                                                @else
+                                                    <a href="{{ route('contactos.show', $mensagem) }}"
+                                                        class="btn btn-xs btn-success btn-p"><i
+                                                            class="fas fa-eye fa-xs"></i></a>
+                                                @endif
                                                 <button type="button" class="btn btn-xs btn-danger btn-p"
                                                     data-toggle="modal" data-target="#deleteConfirmModal"
                                                     data-route="{{ route('contactos.destroy', $mensagem) }}"><i
