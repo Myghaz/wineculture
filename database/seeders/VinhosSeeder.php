@@ -190,7 +190,7 @@ class VinhosSeeder extends Seeder
             'id_produtor' => 31,
             'img' => '18.jpg',
             'descricao'  => "Feito de Touriga Nacional, tem uma leve tonalidade de uvas tintas, com muita fruta, notas de biscoito, ligeiramente floral, excelente frescura e harmonia com grande equilíbrio na boca. Encorpado mas num perfil elegante. É fino, leve e requintado.",
-            'regiao'  => "Dão",
+            'regiao'  => "Alentejo",
 			'qnt_cl'  => 6,
 			'perct_alco'  => 23,
         ]);
@@ -220,7 +220,7 @@ class VinhosSeeder extends Seeder
             'id_produtor' => 34,
             'img' => '21.jpg',
             'descricao'  => "Vinho Espumante Branco, de casta Malvasia Fina. Apresenta um aspecto limpo, com bolha fina e persistente e cor levemente citrina com tons de palha. O aroma é intenso, primoroso a flores de malvasia, com um sabor fresco e muito frutado, prolongado no final. Acompanha mariscos, ostras, peixes, aves e carnes brancas.",
-            'regiao'  => "Távora-Varosa",
+            'regiao'  => "Bairrada",
 			'qnt_cl'  => 75,
 			'perct_alco'  => 23,
         ]);
