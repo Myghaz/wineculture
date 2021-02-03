@@ -478,3 +478,6 @@ nav .page-item.active .page-link {
 .ui.rating .active::before {
     color: #742f37 !important
 }
+.refresh{
+    width: 15px;
+}
