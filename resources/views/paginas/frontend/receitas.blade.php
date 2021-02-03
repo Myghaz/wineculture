@@ -37,7 +37,6 @@
                     <ul class="social">
                         <li><a href="{{ route('receitasin',$value) }}"><i class="fa fa-eye"></i></a></li>
                     </ul>
-                    <span class="product-new-label">Novo</span>
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="#">{{$value->nome}} </a></h3>
