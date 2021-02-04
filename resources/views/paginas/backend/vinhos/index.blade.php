@@ -15,20 +15,19 @@
           <table id="tablevinhos" class="ui celled table" style="width:100%">
             <thead id="tablevinhosthead">
               <tr>
-                
                 <th class="d-none d-lg-table-cell">Imagem</th>
                 <th class="d-none d-lg-table-cell">Nome</th>
                 <th class="d-none d-lg-table-cell">Categoria</th>
                 <th class="d-none d-lg-table-cell">Produtor</th>
-                <th class="d-none d-lg-table-cell">Preco</th>
+                <th class="d-none d-lg-table-cell">Região</th>
                 <th class="d-none d-lg-table-cell">Options</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr id="trv">
                 @foreach($vinhos as $key => $vinho)
                 
-                <td>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">
                   
                   @foreach($vinho_img as $key_img => $vinhos_img)
 						        @if($vinhos_img->id == $vinho->img)
@@ -36,28 +35,20 @@
 						        @endif
 					        @endforeach
                 </td>
-                <td>
-                  <a class="text-dark" href="">{{$vinho->nome}}</a>
-                </td>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">{{$vinho->nome}}</td>
                 @foreach($categorias as $key => $categoria)
                 @if ($vinho->id_categoria == $categoria->id)
-                <td>
-                  <a class="text-dark" href="">{{$categoria->nome}}</a>
-                </td>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">{{$categoria->nome}}</td>
                 @endif
                 @endforeach
                 @foreach($users as $key => $user)
                 @if ($vinho->id_produtor == $user->id)
-                <td>
-                  <a class="text-dark" href="">{{$user->name}} {{$user->apelido}}</a>
-                </td>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">{{$user->name}} {{$user->apelido}}</td>
                 @endif
                 @endforeach
-                <td>
-                  <a class="text-dark" href="">{{number_format((float)$vinho->preco, 2, '.', '')}}€</a>
-                </td>
-                <td class="acoes">
-                  <a href="{{ route('vinhos.show', $vinho) }}" class="btn btn-xs btn-primary btn-p"><i class="fas fa-eye fa-xs"></i></a>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">{{$vinho->regiao}}</td>
+                <td class="tdhover">
+                  <a href="{{ route('vinhos.show', $vinho) }}" class="btn btn-xs btn-success btn-p"><i class="fas fa-eye fa-xs"></i></a>
                   <a href="{{ route('vinhos.edit', $vinho) }}" class="btn btn-xs btn-warning btn-p"><i class="fas fa-pen fa-xs"></i></a>
                   <button type="button" class="btn btn-xs btn-danger btn-p" data-toggle="modal" data-target="#deleteConfirmModal" data-route="{{ route('vinhos.destroy', $vinho) }}"><i class="fas fa-trash fa-xs"></i></button>
                 </td>

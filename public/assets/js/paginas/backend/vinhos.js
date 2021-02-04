@@ -1,17 +1,17 @@
 jQuery.extend(jQuery.fn.dataTableExt.oSort, {
-    'locale-compare-asc': function (a, b) {
+    'locale-compare-asc': function(a, b) {
         return a.localeCompare(b, 'cs', {
             sensitivity: 'case'
         })
     },
-    'locale-compare-desc': function (a, b) {
+    'locale-compare-desc': function(a, b) {
         return b.localeCompare(a, 'cs', {
             sensitivity: 'case'
         })
     }
 })
 
-jQuery.fn.dataTable.ext.type.search['locale-compare'] = function (data) {
+jQuery.fn.dataTable.ext.type.search['locale-compare'] = function(data) {
     return NeutralizeAccent(data);
 }
 
@@ -37,7 +37,7 @@ function NeutralizeAccent(data) {
         data
 }
 jQuery.extend(jQuery.fn.dataTableExt.oSort, {
-    "portugues-pre": function (data) {
+    "portugues-pre": function(data) {
         var a = 'a';
         var e = 'e';
         var i = 'i';
@@ -76,24 +76,24 @@ jQuery.extend(jQuery.fn.dataTableExt.oSort, {
             data = data.split(val).join(special_letters[val]).toLowerCase();
         return data;
     },
-    "portugues-asc": function (a, b) {
+    "portugues-asc": function(a, b) {
         return ((a < b) ? -1 : ((a > b) ? 1 : 0));
     },
-    "portugues-desc": function (a, b) {
+    "portugues-desc": function(a, b) {
         return ((a < b) ? 1 : ((a > b) ? -1 : 0));
     }
 });
 
 
-$(document).ready(function () {
-    jQuery('#datatable-table_filter input').keyup(function () {
+$(document).ready(function() {
+    jQuery('#datatable-table_filter input').keyup(function() {
         table
             .search(
                 jQuery.fn.DataTable.ext.type.search.string(this.value)
             )
             .draw();
     });
-    $(document).ready(function () {
+    $(document).ready(function() {
 
     });
     $('#tablevinhos').dataTable({
@@ -135,5 +135,34 @@ $(document).ready(function () {
             type: 'locale-compare',
             targets: [0, 1, 2, 3, 4, 5]
         }],
+    });
+});
+
+$("#tablefaq thead tr")
+    .clone(true)
+    .appendTo("#tablefaq thead");
+$("#tablefaq thead tr:eq(1) th").each(function(i) {
+    var title = $(this).text();
+    $(this).html(
+        '<input type="text" class="form-control form-control-sm thead' +
+        title +
+        '" placeholder="Pesquisar ' +
+        title +
+        '" />'
+    );
+
+    $("input", this).on("keyup change", function() {
+        if (
+            $("#tablefaq")
+            .DataTable()
+            .column(i)
+            .search() !== this.value
+        ) {
+            $("#tablefaq")
+                .DataTable()
+                .column(i)
+                .search(this.value)
+                .draw();
+        }
     });
 });

@@ -20,7 +20,7 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">Categoria</label>
         <select class="form-control" id="exampleFormControlSelect1" name="id_categoria">
-            <option value="">Selecione uma Categoria</option>
+            
             @foreach ($categorias as $categorias)
             <option value="{{$categorias->id}}"> {{$categorias->nome}}</option>
             @endforeach
@@ -30,7 +30,7 @@
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Produtor</label>  
         <select class="form-control" id="exampleFormControlSelect1" name="id_produtor">
-          <option value="">Selecione um Produtor</option>
+          
           @foreach($users as $key_user => $user)
 					  @if($user->tipouser == 'Produtor')
               <option style="background-image:url('\storage\vinhos\1.jpg')" value="{{$user->id}}">{{$user->name}} {{$user->apelido}}</option>

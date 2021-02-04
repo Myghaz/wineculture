@@ -9,6 +9,8 @@ use App\Models\Vinhosimg;
 use App\Models\category_wine;
 use App\Models\User;
 use App\Models\VinhosClass;
+use App\Http\Requests\StoreVinhosRequest;
+use App\Http\Requests\UpdateVinhosRequest;
 
 class VinhosController extends Controller
 {
@@ -270,10 +272,13 @@ class VinhosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreVinhosRequest $request)
     {
+        $fields = $request->validated();
         $vinho = new Vinhos();
-        $vinho->fill($request->all());
+        $vinho->fill($fields);
+
+        $vinho->id_categoria = $request->id_categoria;
 
         if ($request->hasFile('img')) {
             $photo_path = $request->file('img')->store('public/vinhos');
@@ -334,10 +339,10 @@ class VinhosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Vinhos $vinho)
+    public function update(UpdateVinhosRequest $request, Vinhos $vinho)
     {
-
-        $vinho->update($request->all());
+        $fields = $request->validated();
+        $vinho->update($fields);
         
         $vinho->save();
         return redirect()->route('vinhos.index')->with('success', 'Vinho editado com sucesso', compact('vinho'));

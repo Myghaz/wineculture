@@ -64,6 +64,7 @@
         </div>
 
       </div>
+      <a href="{{ route('vinhos.edit', $vinho) }}" class="btn btn-xs btn-warning btn-p">Editar Vinho</a>
   </div>
 </div>
 
