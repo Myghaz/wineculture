@@ -526,10 +526,7 @@ input.qntclvals2,
 #sidebar, #fecharside {
     display: none;
 }
-#fecharside {
-    right: 50px;
-    position: absolute!important;
-}
+
 
 .thumb,
 .thumb.second {
@@ -571,7 +568,7 @@ input.qntclvals2,
     }
 
     #sidebar {
-        display: inline !important;
+        display: inline;
     }
 
     .ui.grid>.row>[class*="twelve wide"].column {

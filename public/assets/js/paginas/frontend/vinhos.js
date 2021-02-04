@@ -67,8 +67,8 @@ $(document).on('click', '#sidebar', function () {
 });
 $(document).on('click', '#fecharside', function () {
     $('.filtrosmain').css("display", "none")
+    $('#fecharside').css("display", "none")
     
-
 });
 $('.ui.slider.per_alc')
     .slider({
