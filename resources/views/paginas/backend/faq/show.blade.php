@@ -3,7 +3,12 @@
 
 @section('content')
     <div class="content-wrapper">
+
         <div class="content">
+            <a class="backurl" href="{{ url()->previous() }}">
+                <i class="fas fa-arrow-left"></i>
+                <span>Voltar</span>
+            </a>
             <h2>Pergunta</h2>
             <br>
             @if (session('status'))
@@ -23,8 +28,8 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Resposta</label>
-                <label readonly class="form-control" style="height:200px" id="exampleFormControlTextarea1"
-                    value="" name="resposta">{!!  $pergunta->resposta !!}</label>
+                <label readonly class="form-control" style="height:200px" id="exampleFormControlTextarea1" value=""
+                    name="resposta">{!! $pergunta->resposta !!}</label>
             </div>
             <a href="{{ route('faq.edit', $pergunta) }}" class="btn btn-xs btn-warning btn-p">Editar Pergunta</a>
         </div>

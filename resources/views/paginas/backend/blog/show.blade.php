@@ -4,6 +4,10 @@
 @section('content')
 <div class="content-wrapper">
   <div class="content">
+    <a class="backurl" href="{{ url()->previous() }}">
+        <i class="fas fa-arrow-left"></i>
+        <span>Voltar</span>
+    </a>
     <h2>Ver post com ID {{$blog->id}}</h2>
     <br>
     <form action="{{route('blog.index', $blog)}}" method="POST">
@@ -38,7 +42,7 @@
         <input class="form-control" readonly id="exampleFormControlTextarea1" rows="3" name="categoria" value="{{$categorie->name}}"></input>
         @endif
         @endforeach
-      
+
       </div>
 
       <div class="form-group">

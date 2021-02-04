@@ -4,6 +4,10 @@
 @section('content')
 <div class="content-wrapper">
   <div class="content">
+    <a class="backurl" href="{{ url()->previous() }}">
+        <i class="fas fa-arrow-left"></i>
+        <span>Voltar</span>
+    </a>
     <form action="{{route('vinhos.update', $vinho->id)}}" method="POST" enctype="multipart/form-data">
       {{csrf_field()}}
       @method('PUT')
@@ -29,7 +33,7 @@
       </div>
 
       <div class="form-group">
-        <label for="exampleFormControlTextarea1">Produtor</label>  
+        <label for="exampleFormControlTextarea1">Produtor</label>
         <select class="form-control" id="exampleFormControlSelect1"  name="id_produtor">
           
           @foreach($users as $key_user => $user)
@@ -46,7 +50,7 @@
       </div>
 
       <div class="form-row">
-        
+
         <div class="col-md-4 mb-2">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Região</label>
@@ -69,8 +73,8 @@
         </div>
 
       </div>
-      
-    
+
+
 
       <div class="form-group">
         <label for="exampleFormControlFile1">Submeter Imagem</label>

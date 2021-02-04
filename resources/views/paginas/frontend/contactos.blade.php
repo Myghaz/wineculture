@@ -71,7 +71,7 @@
                             @enderror
                     </div>
                     <div>
-                        <button class="form-btn dx merda" type="submit">Submeter</button>
+                        <button class="form-btn dx" type="submit">Submeter</button>
                     </div>
                 </div>
             </form>
