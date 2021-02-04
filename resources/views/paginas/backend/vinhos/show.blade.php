@@ -4,8 +4,11 @@
 @section('content')
 <div class="content-wrapper">
   <div class="content">
+    <a class="backurl" href="{{ url()->previous() }}">
+        <i class="fas fa-arrow-left"></i>
+        <span>Voltar</span>
+    </a>
     <br>
-      
       @if (session('status'))
       <div class="alert alert-success">
         <strong>{{ session('status') }}</strong>
@@ -16,7 +19,7 @@
         <label for="exampleFormControlTextarea1">Nome do vinho</label>
         <input type="text" readonly class="form-control" id="exampleFormControlTextarea1" name="nome" value="{{$vinho->nome}}">
       </div>
-      
+
       <div class="form-group">
         <label for="exampleFormControlTextarea2">Produtor</label>
         @foreach($users as $key => $user)
@@ -39,7 +42,7 @@
         <label for="exampleFormControlTextarea1">Descrição</label>
         <textarea readonly class="ckeditor form-control" id="exampleFormControlTextarea1" rows="6" name="descricao">{{$vinho->descricao}}</textarea>
       </div>
-        
+
       <div class="form-row">
 
         <div class="col-md-4 mb-2">

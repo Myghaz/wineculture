@@ -4,6 +4,10 @@
 @section('content')
     <div class="content-wrapper">
         <div class="content">
+            <a class="backurl" href="{{ url()->previous() }}">
+                <i class="fas fa-arrow-left"></i>
+                <span>Voltar</span>
+            </a>
             <h2>Pergunta</h2>
             <br>
             @if (session('status'))
