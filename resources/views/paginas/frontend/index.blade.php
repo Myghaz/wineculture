@@ -33,7 +33,6 @@
                         <div class="carousel-content container">
                             <h2 class="animate__animated animate__fadeInDown">Bem-Vindo ao <span>WineCulture</span></h2>
                             <p class="animate__animated animate__fadeInUp">Seja Bem-Vindo ao WineCulture, uma ideia formada para o ajudar a entrar na área da vinicultura.</p>
-                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lêr Mais</a>
                         </div>
                     </div>
                 </div>
@@ -44,7 +43,6 @@
                         <div class="carousel-content container">
                             <h2 class="animate__animated animate__fadeInDown">A Nossa Loja</h2>
                             <p class="animate__animated animate__fadeInUp">Visite a nossa loja "WineCulture" onde pode comprar acessórios de roupa, de escritório, pessoais, de vinho e também por fim acessórios de covid-19.</p>
-                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lêr Mais</a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +53,6 @@
                         <div class="carousel-content container">
                             <h2 class="animate__animated animate__fadeInDown">As Nossas Receitas</h2>
                             <p class="animate__animated animate__fadeInUp">A associação WineCulture dispõe de vaárias receitas no qual pode acompanhar com o melhor vinho.</p>
-                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lêr Mais</a>
                         </div>
                     </div>
                 </div>
