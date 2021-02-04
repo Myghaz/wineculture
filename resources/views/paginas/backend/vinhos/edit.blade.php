@@ -20,7 +20,7 @@
 
       <div class="form-group">
         <label for="exampleFormControlSelect1">Categoria</label>
-        <select class="form-control" id="exampleFormControlSelect1"  name="categoria">
+        <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
             <option value="">Selecione uma Categoria</option>
             @foreach ($categorias as $categorias)
             <option @if ($vinho->id_categoria==$categorias->id) selected @endif value="{{$categorias->id}}"> {{$categorias->nome}}</option>
@@ -30,7 +30,7 @@
 
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Produtor</label>  
-        <select class="form-control" id="exampleFormControlSelect1"  name="produtor">
+        <select class="form-control" id="exampleFormControlSelect1"  name="id_produtor">
           <option value="">Selecione um Produtor</option>
           @foreach($users as $key_user => $user)
 					  @if($user->tipouser == 'Produtor')
@@ -46,38 +46,25 @@
       </div>
 
       <div class="form-row">
-        <div class="col-md-4 mb-3">
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Preço</label>
-          <input type="text" class="form-control" name="nome" value="{{number_format((float)$vinho->preco, 2, '.', '')}}">
-        </div>
-        </div>
-
-        <div class="col-md-4 mb-3">
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">País</label>
-          <input type="text" class="form-control" name="nome" value="{{$vinho->pais}}">
-        </div>
-        </div>
         
         <div class="col-md-4 mb-2">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Região</label>
-          <input type="text" class="form-control" name="nome" value="{{$vinho->regiao}}">
+          <input type="text" class="form-control" name="regiao" value="{{$vinho->regiao}}">
         </div>
         </div>
 
         <div class="col-md-4 mb-3">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Quantidade Cilindrica</label>
-          <input type="number" class="form-control" name="nome" value="{{$vinho->qnt_cl}}">
+          <input type="number" class="form-control" name="qnt_cl" value="{{$vinho->qnt_cl}}">
         </div>
         </div>
 
         <div class="col-md-4 mb-3">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Percentagem Álcool</label>
-          <input type="number" class="form-control" name="nome" value="{{$vinho->perct_alco}}">
+          <input type="number" class="form-control" name="perct_alco" value="{{$vinho->perct_alco}}">
         </div>
         </div>
 

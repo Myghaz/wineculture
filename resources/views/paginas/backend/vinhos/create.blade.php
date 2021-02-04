@@ -45,20 +45,6 @@
       </div>
 
       <div class="form-row">
-      
-        <div class="col-md-4 mb-3">
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Preço</label>
-          <input type="number" class="form-control" name="preco" value="{{number_format((float)old('preco'), 2, '.', '')}}">
-        </div>
-        </div>
-
-        <div class="col-md-4 mb-2">
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">País</label>
-          <input type="text" class="form-control" name="pais" value="{{ old('pais') }}">
-        </div>
-        </div>
         
         <div class="col-md-4 mb-2">
         <div class="form-group">
@@ -80,14 +66,6 @@
           <input type="number" class="form-control" name="perct_alco" value="{{ old('perct_alco') }}">
         </div>
         </div>
-        
-        <div class="col-md-4 mb-3">
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Stock [DELETE ME I AM USELESS]</label>
-          <input type="number" class="form-control" name="stock" value="{{ old('stock') }}">
-        </div>
-        </div>
-
       </div>
       
 

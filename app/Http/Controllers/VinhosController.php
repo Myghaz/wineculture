@@ -276,7 +276,7 @@ class VinhosController extends Controller
         $vinho->fill($request->all());
 
         if ($request->hasFile('img')) {
-            $path = $request->file('img')->store('public\storage\vinhos');
+            $photo_path = $request->file('img')->store('public/vinhos');
             $vinho->img = $request->file('img')->hashName();
         }
 
@@ -336,11 +336,11 @@ class VinhosController extends Controller
      */
     public function update(Request $request, Vinhos $vinho)
     {
+
+        $vinho->update($request->all());
         
-        $vinho = Vinhos::all();
-        $vinho_img = Vinhosimg::all();
-        $categorias = category_wine::all();
-        $users = User::all();
+        $vinho->save();
+        return redirect()->route('vinhos.index')->with('success', 'Vinho editado com sucesso', compact('vinho'));
     }
 
     /**

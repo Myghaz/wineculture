@@ -19,6 +19,8 @@ class Vinhos extends Model
         'img',
         'id_produtor',
         'descricao',
+        'qnt_cl',
+        'perct_alco',
         'regiao',
     ];
     public function produtor(){
