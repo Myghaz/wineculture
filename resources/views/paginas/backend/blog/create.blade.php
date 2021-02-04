@@ -22,9 +22,12 @@
         <label for="formGroupExampleInput">Nome do Post</label>
         <input type="text" class="form-control" name="titulo" id="formGroupExampleInput" placeholder="Nome do Post" >
       </div>
-      <div class="form-group">
-        <label for="formGroupExampleInput">Autor</label>
-        <input type="text" class="form-control" name="autor" id="formGroupExampleInput" placeholder="Autor" >
+
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Autor</label>
+        <div class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" name="data" id="staticEmail" value="{{$id_user_auth}}" >
+        </div>
       </div>
       <div class="form-group row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Data</label>
