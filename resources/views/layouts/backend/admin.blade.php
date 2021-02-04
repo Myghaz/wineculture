@@ -233,8 +233,9 @@
             <header class="main-header " id="header">
                 <nav class="navbar navbar-static-top navbar-expand-lg">
                     <button id="sidebar-toggler" class="sidebar-toggle">
+                    <i style="font-size: 20px" class="fas fa-bars"></i>
                         <span class="sr-only">Toggle navigation
-                        <i class="caret"></i>
+                     
                         </span>
                     </button>
                     <!-- search form -->

@@ -19217,3 +19217,6 @@ html[dir="rtl"] .github-link svg {
 .acoes {
     display: flex;
 }
+.sidebar{
+    min-height: 1000px!important;
+}
