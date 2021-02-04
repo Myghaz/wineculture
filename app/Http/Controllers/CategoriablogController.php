@@ -44,7 +44,7 @@ class CategoriablogController extends Controller
         $categories->fill($fields);
 
         if ($request->hasFile('img')) {
-            $photo_path = $request->file('img')->store('storage/categorias');
+            $photo_path = $request->file('img')->store('public/categorias');
             $categories->img = basename($photo_path);
         }
 
@@ -85,6 +85,12 @@ class CategoriablogController extends Controller
     {
         $fields = $request->validated();
         $categories->update($fields);
+
+        if ($request->hasFile('img')) {
+            $photo_path = $request->file('img')->store('public/categorias');
+            $categories->img = basename($photo_path);
+        }
+        
         $categories->save();
         return redirect()->route('categoriasblog.index')
             ->with('success', 'Categoria editada com sucesso', compact('categories'));

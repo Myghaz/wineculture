@@ -25,7 +25,6 @@ class UpdateBlogRequest extends FormRequest
     {
         return [
         'titulo' => 'required',
-        'autor' => 'required',
         'id_categoria' => 'required',
         'data' => 'required',
         'preview' => 'required',
@@ -38,7 +37,6 @@ class UpdateBlogRequest extends FormRequest
     {
         return [
             'titulo.required' => 'Campo titulo é obrigatório',
-            'autor.required' => 'Campo autor é obrigatório',
             'id_categoria.required' => 'Campo categoria é obrigatório',
             'descricao.required' => 'Campo descrição é obrigatório',
             'data.required' => 'Campo data é obrigatório',

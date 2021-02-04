@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreBlogRequest;
 use App\Http\Requests\UpdateBlogRequest;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -113,7 +114,7 @@ class BlogController extends Controller
         $blog->update($fields);
 
         if ($request->hasFile('img')) {
-            $photo_path = $request->file('img')->store('storage/blog');
+            $photo_path = $request->file('img')->store('public/blog');
             $blog->img = basename($photo_path);
         }
 
@@ -149,7 +150,7 @@ class BlogController extends Controller
         $blog->fill($fields);
 
         if ($request->hasFile('img')) {
-            $photo_path = $request->file('img')->store('storage/blog');
+            $photo_path = $request->file('img')->store('public/blog');
             $blog->img = basename($photo_path);
         }
 
