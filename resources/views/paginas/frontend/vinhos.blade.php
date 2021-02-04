@@ -130,12 +130,59 @@
 								<div class="grouped fields">
 									@foreach ($classificacoes as $key => $classificaccao)
 									<div class="field">
-										<div class="ui slider checkbox filtroschecks">
+										<div class="ui toggle checkbox filtroschecks">
 											<input type="checkbox" class="categoriacheckb" value="{{$classificaccao->classificacao}}&nbsp;Estrelas" id="{{$classificaccao->classificacao}}&nbsp;Estrelas" name="class{{$classificaccao->classificacao}}">
-											<label class="catenome"><div class="ui disabled rating vinhosclass" data-rating="{{$classificaccao->classificacao}}" data-max-rating="5"></div></label>
+											<label class="catenome">
+												<div class="ui disabled rating vinhosclass" data-rating="{{$classificaccao->classificacao}}" data-max-rating="5"></div>
+											</label>
 										</div>
 									</div>
 									@endforeach
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item regiao">
+						<a class="active title">
+							<i class="dropdown icon"></i>
+							País
+						</a>
+						<div class="active content">
+							<div class="ui form">
+								<div class="grouped fields">
+									@foreach ($regioes as $key => $regiao)
+									<div class="field">
+										<div class="ui toggle checkbox filtroschecks">
+											<input type="checkbox" class="categoriacheckb" value="{{$regiao->regiao}}" id="{{$regiao->regiao}}" name="regiao{{$regiao->regiao}}">
+											<label class="catenome">{{$regiao->regiao}}</label>
+										</div>
+									</div>
+									@endforeach
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item qnt_cl">
+						<a class="active title">
+							<i class="dropdown icon"></i>
+							Quantidade CL
+						</a>
+						<div class="active content">
+							<div class="ui form">
+								<div class="grouped fields">
+									<div class="field">
+										<div class="ui checkbox filtroschecks filtroschecksqnt_cl">
+											<div class="ui ticked range slider qnt_cl" id="slider-1"></div>
+											<div class="ui input">
+												<div class="gruposliders"> 
+												<li>Mín:</li> 
+												<input readonly type="text" class="qntclvals1">
+												<li>Máx:</li> 
+												<input readonly type="text" class="qntclvals2">
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -204,7 +251,7 @@
 							scrollTop: $(".breadcrumb").offset().top
 						}, 500);
 						$('.ui.rating.vinhosclass')
-    					.rating();
+							.rating();
 						setTimeout(function() {
 							$('body')
 								.toast({
@@ -246,7 +293,7 @@
 						scrollTop: $(".breadcrumb").offset().top
 					}, 500);
 					$('.ui.rating.vinhosclass')
-    				.rating();
+						.rating();
 				}
 
 			});
@@ -297,20 +344,22 @@
 							scrollTop: $(".breadcrumb").offset().top
 						}, 500);
 						$('.ui.rating.vinhosclass')
-    					.rating();
+							.rating();
 					}
 				});
 			}
 		});
 	});
 </script>
-<script>var vinhos = [];
+<script>
+	var vinhos = [];
 </script>
 @foreach ($vinhos as $key=>$vinho)
 <script>
 	vinhos.push(@json($vinho->nome));
 </script>
 @endforeach
+
 
 <script>
 	var vinhos_categorias = [];
@@ -320,6 +369,8 @@
 	vinhos_categorias.push(@json($categoria->nome));
 </script>
 @endforeach
+
+
 <script>
 	var vinhos_classificacoes = [];
 </script>
@@ -330,6 +381,18 @@
 	vinhos_classificacoes.push(classificacaovinho + " Estrelas");
 </script>
 @endforeach
+
+
+<script>
+	var vinhos_regioes = [];
+</script>
+@foreach ($regioes as $key=>$regiao)
+<script>
+	vinhos.push(@json($regiao->regiao));
+</script>
+@endforeach
+
+
 <script>
 	var vinhos_produtores = [];
 </script>

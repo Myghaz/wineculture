@@ -1,5 +1,5 @@
 @foreach ($vinhos as $key=>$vinho)
-<div onload="rate();" name="paginate" class="column columnvinho categoria{{$vinho->categoria->nome}} produtor{{$vinho->id_produtor}} @foreach ($vinhosclass as $key=>$vinhoclass)
+<div data-qntcl="{{$vinho->qnt_cl}}" onload="rate();" name="paginate" class="column columnvinho categoria{{$vinho->categoria->nome}} regiao{{$vinho->regiao}}  produtor{{$vinho->id_produtor}} @foreach ($vinhosclass as $key=>$vinhoclass)
 @if($vinhoclass->id_vinho == $vinho->id) class{{$vinhoclass->classificacao}} @endif
 @endforeach">
 
@@ -19,7 +19,7 @@
         </div>
     </div>
     <div title="Próximo Detalhe" class="ui ignored icon direction buttons imgbtndown">
-        <div class="ui icon button baixo" data-animation="flip"  data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
+        <div class="ui icon button baixo" data-animation="flip" data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
     </div>
     <div title="Próxima Imagem" class="ui ignored icon direction buttons imgbtnright">
         <div class="ui icon button direita" data-animation="flip" data-direction="right" title="Flip Right"><i class="right long arrow icon"></i></div>
@@ -35,20 +35,27 @@
                 </div>
             </div>
             <div class="side categoriavinhoside">
-                {{$vinho->categoria->nome}}
+                <b>Categoria: </b> {{$vinho->categoria->nome}}
             </div>
             <div class="side produtorvinhoside">
-                {{$vinho->produtor->name}} {{$vinho->produtor->apelido}}
+                <b>Produtor: </b> {{$vinho->produtor->name}} {{$vinho->produtor->apelido}}
             </div>
             <div class="side classvinhoside">
                 @foreach ($vinhosclass as $key=>$vinhoclass)
                 @if($vinhoclass->id_vinho == $vinho->id)
+                <b>Classificação: </b>
                 <div class="ui disabled rating vinhosclass" data-rating="{{$vinhoclass->classificacao}}" data-max-rating="5"></div>
                 @endif
                 @endforeach
             </div>
+            <div class="side regiaovinhosside">
+                <b>Região: </b> {{$vinho->regiao}}
+            </div>
+            <div class="side qnt_clvinhosside">
+                <b>Quantidade CL: </b>{{$vinho->qnt_cl}}
+            </div>
             <div class="side datavinhoside">
-                {{ date('d-m-Y', strtotime($vinho->created_at))}}
+                <b>Data de Postagem: </b>{{ date('d-m-Y', strtotime($vinho->created_at))}}
             </div>
         </div>
     </div>

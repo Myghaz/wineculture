@@ -18,6 +18,12 @@ for (var i = 0; i < vinhos_categorias.length; i++) {
         title: vinhos_categorias[i]
     })
 }
+for (var i = 0; i < vinhos_regioes.length; i++) {
+    categoryContent.push({
+        category: 'Região',
+        title: vinhos_regioes[i]
+    })
+}
 for (var i = 0; i < vinhos_produtores.length; i++) {
     categoryContent.push({
         category: 'Produtor',
@@ -36,6 +42,40 @@ $('.ui.search')
             noResults: 'Sem Resultados'
         }
     })
+$('.ui.slider.qnt_cl')
+    .slider({
+        min: 1,
+        max: 150,
+        start: 1,
+        end: 150,
+        step: 1,
+        smooth: true,
+        onChange: function () {
+           
+            var valmin = $(this).slider('get thumb value');
+            var valmax = $(this).slider('get thumb value', 'second');
+            $('.qntclvals1').val(valmin)
+            $('.qntclvals2').val(valmax)
+            $('.ui.slider.qnt_cl').trigger("change");
+        }
+    });
+
+$(document).on('change', '.qnt_cl', function () {
+    qnt1 =  $('.qntclvals1').val()
+    qnt2 =  $('.qntclvals2').val()
+    var limites = $('.columnvinho');
+    limites.each(function () {
+        if (limites.data("qntcl") >= qnt1 && limites.data("qntcl") <= qnt2){
+            $(this).show();
+        }else{
+            $(this).hide();
+        }
+    });
+    
+});
+$('.qntclvals1').val(1)
+$('.qntclvals2').val(150)
+
 $('.imgbtndown')
     .popup({});
 $('.imgbtnright')
@@ -125,7 +165,6 @@ $(document).on("change", ".categoriacheckb", function () {
     }
     if ($(this).is(":checked")) {
         var addcategoriasfiltro = ($(this).attr("id"))
-        var addcategoriasfiltronome = ($(this).next('.catenome').text())
         $(".itemfiltros").append('<a id="categoria' + addcategoriasfiltro + '" class="ui image label selectfiltros">' + addcategoriasfiltro + '<i id="' + addcategoriasfiltro + '" class="delete icon deletefiltro"></i></a>');
     } else {
         var classcat = "#categoria";

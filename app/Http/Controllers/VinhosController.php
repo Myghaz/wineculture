@@ -21,9 +21,11 @@ class VinhosController extends Controller
         $classificacoes = VinhosClass::select('classificacao')->orderBy('classificacao', 'ASC')->distinct()->get();
         $vinhosclass = VinhosClass::all();
         $produtores_vinho = Vinhos::select('id_produtor')->distinct()->get();
+        $regioes = Vinhos::select('regiao')->distinct()->get();
         $vinhos_nome = Vinhos::select('nome')->get();
         $vinhos_categorias = category_wine::select('nome')->get();
         $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
+        $qnts_cl = Vinhos::select('qnt_cl')->distinct()->get();
 
         if ($request->ajax()) {
 
@@ -37,7 +39,9 @@ class VinhosController extends Controller
                 'vinhostotal',
                 'vinhos_nome',
                 'vinhos_categorias',
-                'vinhos_produtores'
+                'vinhos_produtores',
+                'regioes',
+                'qnts_cl'
             ]))->render();
         }
 
@@ -51,7 +55,9 @@ class VinhosController extends Controller
             'vinhostotal',
             'vinhos_nome',
             'vinhos_categorias',
-            'vinhos_produtores'
+            'vinhos_produtores',
+            'regioes',
+            'qnts_cl'
         ]))->render();
     }
 
@@ -67,6 +73,8 @@ class VinhosController extends Controller
         $vinhos_nome = Vinhos::select('nome')->get();
         $vinhos_categorias = category_wine::select('nome')->get();
         $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
+        $regioes = Vinhos::select('regiao')->distinct()->get();
+        $qnts_cl = Vinhos::select('qnt_cl')->distinct()->get();
 
         if ($request->ajax()) {
 
@@ -80,7 +88,9 @@ class VinhosController extends Controller
                 'vinhostotal',
                 'vinhos_nome',
                 'vinhos_categorias',
-                'vinhos_produtores'
+                'vinhos_produtores',
+                'regioes',
+                'qnts_cl'
             ]))->render();
         }
         return view('paginas.frontend.vinhos', compact([
@@ -93,7 +103,9 @@ class VinhosController extends Controller
             'vinhostotal',
             'vinhos_nome',
             'vinhos_categorias',
-            'vinhos_produtores'
+            'vinhos_produtores',
+            'regioes',
+            'qnts_cl'
         ]))->render();
     }
     public function ordemclassificacao(Request $request)
@@ -108,7 +120,8 @@ class VinhosController extends Controller
         $vinhos_nome = Vinhos::select('nome')->get();
         $vinhos_categorias = category_wine::select('nome')->get();
         $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
-
+        $regioes = Vinhos::select('regiao')->distinct()->get();
+        $qnts_cl = Vinhos::select('qnt_cl')->distinct()->get();
 
         if ($request->ajax()) {
 
@@ -122,7 +135,9 @@ class VinhosController extends Controller
                 'vinhostotal',
                 'vinhos_nome',
                 'vinhos_categorias',
-                'vinhos_produtores'
+                'vinhos_produtores',
+                'regioes',
+                'qnts_cl'
             ]))->render();
         }
         return view('paginas.frontend.vinhos', compact([
@@ -135,7 +150,9 @@ class VinhosController extends Controller
             'vinhostotal',
             'vinhos_nome',
             'vinhos_categorias',
-            'vinhos_produtores'
+            'vinhos_produtores',
+            'regioes',
+            'qnts_cl'
         ]))->render();
     }
     public function ordemdata(Request $request)
@@ -150,6 +167,8 @@ class VinhosController extends Controller
         $vinhos_nome = Vinhos::select('nome')->get();
         $vinhos_categorias = category_wine::select('nome')->get();
         $vinhos_produtores = Vinhos::select('id_produtor')->distinct()->get();
+        $regioes = Vinhos::select('regiao')->distinct()->get();
+        $qnts_cl = Vinhos::select('qnt_cl')->distinct()->get();
 
         if ($request->ajax()) {
 
@@ -163,7 +182,9 @@ class VinhosController extends Controller
                 'vinhostotal',
                 'vinhos_nome',
                 'vinhos_categorias',
-                'vinhos_produtores'
+                'vinhos_produtores',
+                'regioes',
+                'qnts_cl'
             ]))->render();
         }
         return view('paginas.frontend.vinhos', compact([
@@ -176,7 +197,9 @@ class VinhosController extends Controller
             'vinhostotal',
             'vinhos_nome',
             'vinhos_categorias',
-            'vinhos_produtores'
+            'vinhos_produtores',
+            'regioes',
+            'qnts_cl'
         ]))->render();
     }
     public function vinhos_detalhes($vinho)
