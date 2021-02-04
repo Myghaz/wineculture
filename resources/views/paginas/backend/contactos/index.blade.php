@@ -59,21 +59,28 @@
                                             </td>
                                             <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';"
                                                 class="tdhover">
-                                                {{ $mensagem->resposta }}
+                                                @if ($mensagem->estado == 'Respondida')
+                                                    {{ $mensagem->resposta }}
+                                                @else
+                                                    --------
+                                                @endif
                                             </td>
                                             <td onclick="window.location.href = '{{ route('contactos.show', ['mensagem' => $mensagem]) }}';"
                                                 class="tdhover">
                                                 {{ $mensagem->estado }}
                                             </td>
                                             <td class="tdhover">
+                                                <a href="{{ route('contactos.show', $mensagem) }}"
+                                                    class="btn btn-xs btn-success btn-p"><i
+                                                        class="fas fa-eye fa-xs"></i></a>
                                                 @if ($mensagem->estado == 'Respondida')
-                                                    <a href="{{ route('contactos.show', $mensagem) }}"
-                                                        class="btn btn-xs btn-success btn-p disabled"><i
-                                                            class="fas fa-eye fa-xs"></i></a>
+                                                    <a href="{{ route('contactos.edit', $mensagem) }}"
+                                                        class="btn btn-xs btn-warning btn-p disabled"><i
+                                                            class="fas fa-pen fa-xs"></i></a>
                                                 @else
-                                                    <a href="{{ route('contactos.show', $mensagem) }}"
-                                                        class="btn btn-xs btn-success btn-p"><i
-                                                            class="fas fa-eye fa-xs"></i></a>
+                                                    <a href="{{ route('contactos.edit', $mensagem) }}"
+                                                        class="btn btn-xs btn-warning btn-p"><i
+                                                            class="fas fa-pen fa-xs"></i></a>
                                                 @endif
                                                 <button type="button" class="btn btn-xs btn-danger btn-p"
                                                     data-toggle="modal" data-target="#deleteConfirmModal"

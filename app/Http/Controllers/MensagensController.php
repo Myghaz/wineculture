@@ -78,9 +78,9 @@ class MensagensController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Contactos $mensagem)
     {
-        //
+        return view('paginas.backend.contactos.edit', compact('mensagem'));
     }
 
     /**
@@ -105,8 +105,7 @@ class MensagensController extends Controller
             $message->to($mensagem->email)
             ->subject('[WineCulture] '. $mensagem->assunto);
         });
-
-        return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);
+        return redirect()->route('contactos.index')->with('success', 'Pergunta foi enviada com sucesso');
     }
 
     /**

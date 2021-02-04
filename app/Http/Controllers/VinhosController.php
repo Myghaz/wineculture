@@ -9,12 +9,14 @@ use App\Models\Vinhosimg;
 use App\Models\category_wine;
 use App\Models\User;
 use App\Models\VinhosClass;
+use App\Http\Requests\StoreVinhosRequest;
+use App\Http\Requests\UpdateVinhosRequest;
 
 class VinhosController extends Controller
 {
     public function indexFrontend(Request $request)
     {
-        $vinhos = Vinhos::paginate(16);
+        $vinhos = Vinhos::paginate(12);
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
@@ -110,7 +112,7 @@ class VinhosController extends Controller
     }
     public function ordemclassificacao(Request $request)
     {
-        $vinhos = Vinhos::join('VinhosClass as vc', 'vc.id_vinho', '=', 'Vinhos.id')->orderBy('vc.classificacao', 'desc')->select('Vinhos.*')->paginate(16);
+        $vinhos = Vinhos::orderBy('created_at', 'DESC')->paginate(12);
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
@@ -278,7 +280,13 @@ class VinhosController extends Controller
     public function create()
     {
         $vinho = Vinhos::all();
-        return view('paginas.backend.vinhos.create', compact('vinho'));
+        $categorias = category_wine::all();
+        $users = User::all();
+        return view('paginas.backend.vinhos.create', compact([
+            'vinho',
+            'categorias',
+            'users'
+        ]));
     }
 
     /**
@@ -287,16 +295,21 @@ class VinhosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {/*
+    public function store(StoreVinhosRequest $request)
+    {
+        $fields = $request->validated();
         $vinho = new Vinhos();
-        $vinho->fill($request->all());
+        $vinho->fill($fields);
 
-        $path = Storage::putFileAs('public\assets\img\vinhos', $request->file('img'), 'vinhos_' . time() . '.' . $request->file('img')->extension());
+        $vinho->id_categoria = $request->id_categoria;
 
-        $vinho->foto = $path;
+        if ($request->hasFile('img')) {
+            $photo_path = $request->file('img')->store('public/vinhos');
+            $vinho->img = $request->file('img')->hashName();
+        }
+
         $vinho->save();
-        return redirect()->route('vinhos.index');*/
+        return redirect()->route('vinhos.index')->with('success', 'Vinho adicionado com sucesso', compact('vinho'));
     }
 
     /**
@@ -305,10 +318,18 @@ class VinhosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Vinhos $vinhos)
+    public function show($vinhos)
     {
-        $vinho = Vinhos::all();
-        return view('paginas.backend.vinhos.show', compact('vinho'));
+        $vinho = Vinhos::find($vinhos);
+        $categorias = category_wine::all();
+        $users = User::all();
+        $vinho_produtor = User::find($vinho->id_produtor);
+        return view('paginas.backend.vinhos.show', compact([
+            'vinho',
+            'categorias',
+            'users',
+            'vinho_produtor'
+        ]));
     }
 
     /**
@@ -341,12 +362,13 @@ class VinhosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateVinhosRequest $request, Vinhos $vinho)
     {
-        $vinho = Vinhos::all();
-        $vinho_img = Vinhosimg::all();
-        $categorias = category_wine::all();
-        $users = User::all();
+        $fields = $request->validated();
+        $vinho->update($fields);
+        
+        $vinho->save();
+        return redirect()->route('vinhos.index')->with('success', 'Vinho editado com sucesso', compact('vinho'));
     }
 
     /**
@@ -358,6 +380,6 @@ class VinhosController extends Controller
     public function destroy(Request $request, Vinhos $vinho)
     {
         $vinho->delete($vinho);
-        return redirect()->route('vinhos.index')->with('success', 'Pergunta removida com sucesso', compact('vinho'));
+        return redirect()->route('vinhos.index')->with('success', 'Vinho removido com sucesso', compact('vinho'));
     }
 }

@@ -1,15 +1,15 @@
 .background {
-    background-image: url("../../../img/paginas/frontend/back.jpg");
+    background-image: url(../../../img/paginas/frontend/back.jpg);
     width: 100%;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: fixed;
+    position: fixed
 }
 
 .hero-image1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../img/paginas/frontend/sobre_vinhos/1.png');
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../../img/paginas/frontend/sobre_vinhos/1.png);
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,18 +18,18 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hero-text h1 {
     position: relative;
     z-index: 10;
     font-size: 50px;
-    color: white;
+    color: #fff
 }
 
 .hero-image2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../img/paginas/frontend/sobre_vinhos/2.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../../img/paginas/frontend/sobre_vinhos/2.png);
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -38,11 +38,11 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hero-image3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../img/paginas/frontend/sobre_vinhos/3.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../../img/paginas/frontend/sobre_vinhos/3.png);
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,11 +51,11 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hero-image4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../img/paginas/frontend/sobre_vinhos/4.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../../img/paginas/frontend/sobre_vinhos/4.png);
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,11 +64,11 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hero-image5 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../img/paginas/frontend/sobre_vinhos/5.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../../img/paginas/frontend/sobre_vinhos/5.png);
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,11 +77,11 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hero-image6 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../img/paginas/frontend/sobre_vinhos/6.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../../img/paginas/frontend/sobre_vinhos/6.png);
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,11 +90,11 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hero-image7 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../img/paginas/frontend/sobre_vinhos/7.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../../img/paginas/frontend/sobre_vinhos/7.png);
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,11 +103,11 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hero-image8 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../img/paginas/frontend/sobre_vinhos/8.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../../img/paginas/frontend/sobre_vinhos/8.png);
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -116,11 +116,11 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hero-image9 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../img/paginas/frontend/sobre_vinhos/9.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../../../img/paginas/frontend/sobre_vinhos/9.png);
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,11 +129,8 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
-
-
-/* The sidebar menu */
 
 .sidenav1 {
     height: auto;
@@ -142,119 +139,70 @@
     z-index: 1;
     overflow-x: hidden;
     padding-top: 92.5px;
-    border-radius: 30px;
+    border-radius: 30px
 }
-
-
-/* The navigation menu links */
 
 .sidenav1 a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
-    color: black;
+    color: #000;
     cursor: pointer;
-    display: block;
+    display: block
 }
-
-
-/* When you mouse over the navigation links, change their color */
 
 .sidenav1 a:hover {
-    color: #cacaca;
+    color: #cacaca
 }
-
-
-/* Style page content */
 
 .main {
     margin-left: 175px;
-    padding: 0px 10px;
-    margin-top: 20px;
+    padding: 0 10px;
+    margin-top: 20px
 }
 
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-
-@media screen and (max-height: 450px) {
+@media screen and (max-height:450px) {
     .sidenav1 {
-        padding-top: 15px;
+        padding-top: 15px
     }
     .sidenav1 a {
-        font-size: 18px;
+        font-size: 18px
     }
 }
 
 .holder>div {
-    display: none;
+    display: none
 }
 
-[dir=one]>.oneTxt,
-[dir=two]>.twoTxt,
-[dir=three]>.threeTxt,
-[dir=four]>.fourTxt,
-[dir=five]>.fiveTxt,
-[dir=six]>.sixTxt,
-[dir=seven]>.sevenTxt,
 [dir=eight]>.eightTxt,
-[dir=nine]>.nineTxt {
-    display: block;
-}
-
-
-/*button */
-
-#myBtn {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Fixed/sticky position */
-    bottom: 20px;
-    /* Place the button at the bottom of the page */
-    right: 30px;
-    /* Place the button 30px from the right */
-    z-index: 99;
-    /* Make sure it does not overlap */
-    border: none;
-    /* Remove borders */
-    outline: none;
-    /* Remove outline */
-    background-color: red;
-    /* Set a background color */
-    color: white;
-    /* Text color */
-    cursor: pointer;
-    /* Add a mouse pointer on hover */
-    padding: 15px;
-    /* Some padding */
-    border-radius: 10px;
-    /* Rounded corners */
-    font-size: 18px;
-    /* Increase font size */
-}
-
-#myBtn:hover {
-    background-color: rgb(124, 123, 123);
-    /* Add a dark-grey background on hover */
+[dir=five]>.fiveTxt,
+[dir=four]>.fourTxt,
+[dir=nine]>.nineTxt,
+[dir=one]>.oneTxt,
+[dir=seven]>.sevenTxt,
+[dir=six]>.sixTxt,
+[dir=three]>.threeTxt,
+[dir=two]>.twoTxt {
+    display: block
 }
 
 .text {
     padding: 1%;
     margin-left: 25px;
-    min-height: 782px;
+    min-height: 782px
 }
 
 .holder div {
-    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+    animation: .5s ease-out 0s 1 slideInFromLeft
 }
 
 @keyframes slideInFromLeft {
     0% {
-        transform: translateY(10%);
+        transform: translateY(10%)
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(0)
     }
 }
 
@@ -262,33 +210,33 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 1%;
-    padding-left: 1%;
+    padding-left: 1%
 }
 
 .all2,
 .sidenav {
-    margin-left: 100px;
+    margin-left: 100px
 }
 
 .all2 {
     margin-left: 50px;
-    margin-right: 100px;
+    margin-right: 100px
 }
 
 .active1 {
-    color: white!important;
+    color: #fff!important;
     background-color: #742f37;
-    border-radius: 30px;
+    border-radius: 30px
 }
 
 .ttext {
-    display: none;
+    display: none
 }
 
 .btn-container {
     margin: auto;
     height: 44px;
-    width: 166.23px;
+    width: 166.23px
 }
 
 .toggle {
@@ -301,9 +249,9 @@
     padding: 8px;
     font-size: 20px;
     background: rgba(116, 47, 55);
-    color: white;
+    color: #fff;
     font-family: cursive;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .toggle:hover {
@@ -315,18 +263,18 @@
     border: none;
     padding: 8px;
     font-size: 20px;
-    background: rgba(116, 47, 55, 0.7);
-    color: white;
+    background: rgba(116, 47, 55, .7);
+    color: #fff;
     font-family: cursive;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .sidenav1 a:hover {
-    background-color: rgba(116, 47, 55, 0.3);
-    border-radius: 30px;
+    background-color: rgba(116, 47, 55, .3);
+    border-radius: 30px
 }
 
 .sidenav1 a:active {
-    background-color: rgba(116, 47, 55, 0.7);
-    border-radius: 30px;
+    background-color: rgba(116, 47, 55, .7);
+    border-radius: 30px
 }

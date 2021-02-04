@@ -4,6 +4,10 @@
 @section('content')
 <div class="content-wrapper">
   <div class="content">
+    <a class="backurl" href="{{ url()->previous() }}">
+        <i class="fas fa-arrow-left"></i>
+        <span>Voltar</span>
+    </a>
     <form action="{{route('vinhos.update', $vinho->id)}}" method="POST" enctype="multipart/form-data">
       {{csrf_field()}}
       @method('PUT')
@@ -21,7 +25,7 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">Categoria</label>
         <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
-            <option value="">Selecione uma Categoria</option>
+            
             @foreach ($categorias as $categorias)
             <option @if ($vinho->id_categoria==$categorias->id) selected @endif value="{{$categorias->id}}"> {{$categorias->nome}}</option>
             @endforeach
@@ -29,9 +33,9 @@
       </div>
 
       <div class="form-group">
-        <label for="exampleFormControlTextarea1">Produtor</label>  
-        <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
-          <option value="">Selecione um Produtor</option>
+        <label for="exampleFormControlTextarea1">Produtor</label>
+        <select class="form-control" id="exampleFormControlSelect1"  name="id_produtor">
+          
           @foreach($users as $key_user => $user)
 					  @if($user->tipouser == 'Produtor')
               <option style="background-image:url('\storage\vinhos\1.jpg')" @if($vinho_produtor->id == $user->id) selected @endif value="{{$user->id}}">{{$user->name}} {{$user->apelido}}</option>
@@ -46,51 +50,31 @@
       </div>
 
       <div class="form-row">
-        <div class="col-md-4 mb-3">
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Preço</label>
-          <input type="text" class="form-control" name="nome" value="{{number_format((float)$vinho->preco, 2, '.', '')}}">
-        </div>
-        </div>
 
-        <div class="col-md-4 mb-3">
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">País</label>
-          <input type="text" class="form-control" name="nome" value="{{$vinho->pais}}">
-        </div>
-        </div>
-        
         <div class="col-md-4 mb-2">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Região</label>
-          <input type="text" class="form-control" name="nome" value="{{$vinho->regiao}}">
+          <input type="text" class="form-control" name="regiao" value="{{$vinho->regiao}}">
         </div>
         </div>
 
         <div class="col-md-4 mb-3">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Quantidade Cilindrica</label>
-          <input type="number" class="form-control" name="nome" value="{{$vinho->qnt_cl}}">
+          <input type="number" class="form-control" name="qnt_cl" value="{{$vinho->qnt_cl}}">
         </div>
         </div>
 
         <div class="col-md-4 mb-3">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Percentagem Álcool</label>
-          <input type="number" class="form-control" name="nome" value="{{$vinho->perct_alco}}">
+          <input type="number" class="form-control" name="perct_alco" value="{{$vinho->perct_alco}}">
         </div>
         </div>
 
       </div>
-      
-      <div class="form-group">
-        <label for="exampleFormControlFile1">Submeter Imagem</label>
-        <div class="form-group custom-file">
-          <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-          <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-          <div class="invalid-feedback">Ficheiro Inválido</div>
-        </div>
-      </div>
+
+
 
       <div class="form-group">
         <label for="exampleFormControlFile1">Submeter Imagem</label>

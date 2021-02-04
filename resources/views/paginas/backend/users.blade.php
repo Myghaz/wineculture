@@ -10,6 +10,10 @@
 
 <div class="content-wrapper">
     <div class="content">
+        <a class="backurl" href="{{ url()->previous() }}">
+            <i class="fas fa-arrow-left"></i>
+            <span>Voltar</span>
+        </a>
         <div class="row">
             <div class="col-xl-4 col-md-12">
                 <!-- Doughnut Chart -->

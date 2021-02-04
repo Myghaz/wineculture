@@ -20,9 +20,6 @@ class CreateVinhosTable extends Migration
             $table->biginteger('id_produtor')->unsigned();
             $table->string('img')->nullable();
             $table->longText('descricao');
-            $table->double('preco');
-            $table->integer('stock');
-            $table->string('pais');
             $table->string('regiao');
 			$table->integer('qnt_cl');
 			$table->integer('perct_alco');
@@ -31,6 +28,7 @@ class CreateVinhosTable extends Migration
             $table->foreign('id_produtor')
             ->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

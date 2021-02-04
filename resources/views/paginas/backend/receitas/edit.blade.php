@@ -4,6 +4,10 @@
 @section('content')
 <div class="content-wrapper">
   <div class="content">
+    <a class="backurl" href="{{ url()->previous() }}">
+        <i class="fas fa-arrow-left"></i>
+        <span>Voltar</span>
+    </a>
     <form action="{{route('receitas.update', $receita->id)}}" method="POST" enctype="multipart/form-data">
       {{csrf_field()}}
       @method('PUT')

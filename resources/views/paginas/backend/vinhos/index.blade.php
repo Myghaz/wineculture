@@ -15,20 +15,19 @@
           <table id="tablevinhos" class="ui celled table" style="width:100%">
             <thead id="tablevinhosthead">
               <tr>
-                
                 <th class="d-none d-lg-table-cell">Imagem</th>
                 <th class="d-none d-lg-table-cell">Nome</th>
                 <th class="d-none d-lg-table-cell">Categoria</th>
                 <th class="d-none d-lg-table-cell">Produtor</th>
-                <th class="d-none d-lg-table-cell">Preco</th>
+                <th class="d-none d-lg-table-cell">Região</th>
                 <th class="d-none d-lg-table-cell">Options</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr id="trv">
                 @foreach($vinhos as $key => $vinho)
                 
-                <td>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">
                   
                   @foreach($vinho_img as $key_img => $vinhos_img)
 						        @if($vinhos_img->id == $vinho->img)
@@ -36,28 +35,20 @@
 						        @endif
 					        @endforeach
                 </td>
-                <td>
-                  <a class="text-dark" href="">{{$vinho->nome}}</a>
-                </td>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">{{$vinho->nome}}</td>
                 @foreach($categorias as $key => $categoria)
                 @if ($vinho->id_categoria == $categoria->id)
-                <td>
-                  <a class="text-dark" href="">{{$categoria->nome}}</a>
-                </td>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">{{$categoria->nome}}</td>
                 @endif
                 @endforeach
                 @foreach($users as $key => $user)
                 @if ($vinho->id_produtor == $user->id)
-                <td>
-                  <a class="text-dark" href="">{{$user->name}} {{$user->apelido}}</a>
-                </td>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">{{$user->name}} {{$user->apelido}}</td>
                 @endif
                 @endforeach
-                <td>
-                  <a class="text-dark" href="">{{number_format((float)$vinho->preco, 2, '.', '')}}€</a>
-                </td>
-                <td class="acoes">
-                  <a href="{{ route('vinhos.show', $vinho) }}" class="btn btn-xs btn-primary btn-p"><i class="fas fa-eye fa-xs"></i></a>
+                <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">{{$vinho->regiao}}</td>
+                <td class="tdhover">
+                  <a href="{{ route('vinhos.show', $vinho) }}" class="btn btn-xs btn-success btn-p"><i class="fas fa-eye fa-xs"></i></a>
                   <a href="{{ route('vinhos.edit', $vinho) }}" class="btn btn-xs btn-warning btn-p"><i class="fas fa-pen fa-xs"></i></a>
                   <button type="button" class="btn btn-xs btn-danger btn-p" data-toggle="modal" data-target="#deleteConfirmModal" data-route="{{ route('vinhos.destroy', $vinho) }}"><i class="fas fa-trash fa-xs"></i></button>
                 </td>
@@ -73,29 +64,41 @@
 </div>
 <script src="{{ URL::asset('assets\js\paginas\backend\vinhos.js') }}"></script>
 
-<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar registo</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-      </div>
-        <div class="modal-body">
-          Tem a certeza que deseja eliminar este registo?
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog"
+            aria-labelledby="deleteConfirmModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar registo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Tem a certeza que deseja eliminar este registo?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <form method="POST" action="#" role="form" class="inline" id="formDelete">
+                            @csrf
+                            @method("DELETE")
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <form method="POST" action="#" role="form" class="inline" id="formDelete">
-                @csrf
-                @method("DELETE")
-                <button type="submit" class="btn btn-danger">Eliminar</button>
-              </form>
-          </div>
-        </div>
-      </div>
-</div>
+        <script>
+            //triggered when modal is about to be shown
+            $('#deleteConfirmModal').on('show.bs.modal', function(e) {
 
+                //get data-route attribute of the clicked element
+                var route = $(e.relatedTarget).data('route');
+
+                //populate the textbox
+                $('#formDelete').attr("action", route);
+            });
+
+        </script>
 
 @endsection
