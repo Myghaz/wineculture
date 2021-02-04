@@ -1,32 +1,29 @@
 .containerr {
     width: 95%;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .tituloh1 {
-    font-size: 18px !important;
+    font-size: 18px!important;
     position: relative;
     width: 100%;
     margin: auto auto;
     padding: 10px 0;
     padding-left: 10px;
     padding-right: 10px;
-    text-align: center;
+    text-align: center
 }
-
-
-/* Cards */
 
 .card-column {
     width: 100%;
     padding: 4%;
     box-sizing: border-box;
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    grid-gap: 30px !important;
+    display: grid!important;
+    grid-template-columns: repeat(4, 1fr)!important;
+    grid-gap: 30px!important;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .card {
@@ -40,17 +37,17 @@
     min-height: 300px;
     margin-bottom: 60px;
     width: 100%;
-    overflow: hidden !important;
+    overflow: hidden!important
 }
 
 .card:hover .texto {
-    margin-bottom: 0px;
-    transition: all .5s !important;
+    margin-bottom: 0;
+    transition: all .5s!important
 }
 
 .card:hover img {
-    transform: scale(1.1) !important;
-    transition: all .4s !important;
+    transform: scale(1.1)!important;
+    transition: all .4s!important
 }
 
 .border {
@@ -58,10 +55,10 @@
     width: 100%;
     min-height: 100%;
     padding: 6px;
-    border: none !important;
-    opacity: 0.5;
+    border: none!important;
+    opacity: .5;
     left: -6px;
-    top: -6px;
+    top: -6px
 }
 
 .texto {
@@ -69,9 +66,9 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(45deg, rgb(93, 13, 13) 0%, rgba(172, 108, 108, 0.4) 100%) !important;
-    transition: all .5s !important;
-    margin-bottom: -53px;
+    background: linear-gradient(45deg, #5d0d0d 0, rgba(172, 108, 108, .4) 100%)!important;
+    transition: all .5s!important;
+    margin-bottom: -53px
 }
 
 .card .info {
@@ -81,16 +78,16 @@
     padding: 10px 0;
     font-size: 20px;
     font-weight: 500;
-    text-align: center;
+    text-align: center
 }
 
 .card p.info {
-    margin-top: -10px;
+    margin-top: -10px
 }
 
 .card h2.info {
     font-size: 20pt;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .card .info span.categoria {
@@ -98,7 +95,7 @@
     font-size: 60%;
     margin-top: 5px;
     font-weight: 600;
-    color: rgb(255, 161, 161);
+    color: #ffa1a1
 }
 
 .card a.info {
@@ -111,7 +108,7 @@
     color: #fff;
     font-size: 13pt;
     width: 25%;
-    margin-left: 37%;
+    margin-left: 37%
 }
 
 .card>img {
@@ -120,37 +117,31 @@
     object-fit: cover;
     vertical-align: middle;
     border-style: none;
-    position: absolute;
+    position: absolute
 }
 
 .card-color-0 {
-    background-color: linear-gradient(45deg, rgb(93, 13, 13) 0%, rgba(172, 108, 108, 0.4) 100%) !important;
+    background-color: linear-gradient(45deg, #5d0d0d 0, rgba(172, 108, 108, .4) 100%)!important
 }
 
 .card-color-1 {
-    background-color: linear-gradient(45deg, rgb(93, 13, 13) 0%, rgba(172, 108, 108, 0.4) 100%) !important;
+    background-color: linear-gradient(45deg, #5d0d0d 0, rgba(172, 108, 108, .4) 100%)!important
 }
 
 .card-color-2 {
-    background-color: #8DAA91;
+    background-color: #8daa91
 }
 
 .card-color-3 {
-    background-color: #888DA7;
+    background-color: #888da7
 }
-
-
-/* The cover (expanding background) */
 
 .cover {
     position: fixed;
-    background: #EB5160;
+    background: #eb5160;
     z-index: 20;
-    transform-origin: 50% 50%;
+    transform-origin: 50% 50%
 }
-
-
-/* The open page content */
 
 .open-content {
     top: 0;
@@ -159,7 +150,7 @@
     height: 100%;
     position: absolute;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none
 }
 
 .open-content img {
@@ -168,7 +159,7 @@
     margin: auto auto;
     object-fit: cover;
     float: left;
-    height: 100%;
+    height: 100%
 }
 
 .open-content .text {
@@ -178,7 +169,7 @@
     height: 100%;
     z-index: -1;
     right: 0;
-    top: 0;
+    top: 0
 }
 
 .open-content .text p {
@@ -186,14 +177,14 @@
     margin-left: auto;
     font-size: 1.2em;
     margin-top: 60px;
-    margin-right: auto;
+    margin-right: auto
 }
 
 .open-content .text h1 {
     font-size: 2em;
     text-align: center;
     padding-left: 30px;
-    margin: .67em 0;
+    margin: .67em 0
 }
 
 .open-content .text .autor {
@@ -204,19 +195,19 @@
     position: absolute;
     text-align: left;
     padding-right: 10px;
-    line-height: 40px;
+    line-height: 40px
 }
 
 .open-content .text .autor span.nome {
     display: block;
-    margin-bottom: -10px;
+    margin-bottom: -10px
 }
 
 .open-content .text .autor img {
     border-radius: 50px;
     height: 65px;
     width: 65px;
-    margin-right: 5px;
+    margin-right: 5px
 }
 
 .close-content {
@@ -225,7 +216,7 @@
     right: 12px;
     top: 12px;
     width: 30px;
-    height: 30px;
+    height: 30px
 }
 
 .close-content span {
@@ -234,602 +225,244 @@
     height: 6px;
     display: block;
     position: absolute;
-    top: 14px;
+    top: 14px
 }
 
 .x-1 {
-    transform: rotate(45deg);
+    transform: rotate(45deg)
 }
 
 .x-2 {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg)
 }
 
-
-/*
-  ** Transitions
-  */
-
 .card {
-    transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+    transition: opacity .2s linear 320ms, transform .2s ease-out 320ms
 }
 
 .border {
-    transition: opacity 200ms linear, transform 200ms ease-out;
+    transition: opacity .2s linear, transform .2s ease-out
 }
 
 .card img {
-    transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+    transition: opacity .2s linear 0s, transform .2s ease-in 0s
 }
 
 .card .info {
-    transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
-}
-
-
-/* Clicked card */
-
-.card.clicked img {
-    transform: translate3d(0px, -40px, 0px);
-    opacity: 0;
-}
-
-.card.clicked .border {
-    opacity: 0;
-    transform: scale(1.3);
-}
-
-.card.out,
-.card.out img {
-    transform: translate3d(0px, -40px, 0px);
-    opacity: 0;
-}
-
-.card.out .info,
-.card.clicked .info {
-    transform: translate3d(0%, -50px, 0px);
-    opacity: 0;
+    transition: opacity .2s linear 120ms, transform .2s ease-in 120ms
 }
 
 .cover {
-    transition: transform 300ms ease-in-out;
+    transition: transform .3s ease-in-out
 }
 
 .open-content {
-    transition: opacity 200ms linear 0ms;
+    transition: opacity .2s linear 0s
 }
 
 .open-content.open {
     opacity: 1;
     pointer-events: all;
-    transition-delay: 1000ms;
+    transition-delay: 1s
 }
 
-@media only screen and (max-width: 1670px) {
+@media only screen and (max-width:1670px) {
     .card-column {
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr)!important
     }
 }
 
-@media only screen and (max-width: 1670px) {
+@media only screen and (max-width:1670px) {
     .card-column {
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr)!important
     }
     .texto {
-        margin-bottom: -1px;
+        margin-bottom: -1px
     }
 }
 
-@media only screen and (max-width: 1314px) {
+@media only screen and (max-width:1314px) {
     .card-column {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr)!important
     }
 }
 
-@media only screen and (max-width: 867px) {
+@media only screen and (max-width:867px) {
     .card-column {
-        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-columns: repeat(1, 1fr)!important
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:600px) {
     .card-column {
         width: 95%;
-        margin: auto auto;
+        margin: auto auto
     }
     .column-1 {
-        padding-top: 0px;
+        padding-top: 0
     }
     .open-content img {
-        margin-top: 40px;
+        margin-top: 40px
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:600px) {
     .card h2.info {
         font-size: 16pt;
-        width: 98%;
+        width: 98%
     }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width:420px) {
     .card a.info {
         width: 35%;
-        margin-left: 33%;
+        margin-left: 33%
     }
-}
-
-.breadcrumb {
-    background-color: white;
-    margin-top: 30px !important;
-}
-
-.ui.breadcrumb a {
-    color: #742f37 !important;
 }
 
 img.banner {
     width: 100%;
     height: 350px;
-    object-fit: cover;
-}
-
-.breadcrumb .active {
-    color: #742f37 !important;
+    object-fit: cover
 }
 
 .grid {
-    padding-left: 100px !important;
-    padding-right: 100px !important;
+    padding-left: 100px!important;
+    padding-right: 100px!important
 }
 
 .grid {
-    padding-left: 100px !important;
-    padding-right: 100px !important;
+    padding-left: 100px!important;
+    padding-right: 100px!important
 }
 
 .maincontainer {
-    margin-top: 50px !important;
+    margin-top: 50px!important
 }
 
 @keyframes maincontainer {
     0% {
-        transform: translateY(-200%);
+        transform: translateY(-200%)
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(0)
     }
-}
-
-.semicontainer {
-    margin-top: 0 !important
 }
 
 .row {
-    width: 100% !important;
-    margin: auto auto !important;
-}
-
-.semirow {
-    padding-top: 0 !important;
-    height: auto !important;
-}
-
-.filtrosmain {
-    min-height: 710px !important;
-}
-
-.filtrosmain,
-.semifiltros {
-    margin-right: 35px !important;
+    width: 100%!important;
+    margin: auto auto!important
 }
 
 @keyframes filtrosmain {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-100%)
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0)
     }
-}
-
-.headervinhos {
-    margin-top: 15px !important;
-}
-
-.filtros {
-    height: 600px;
-}
-
-.filtrosmenu {
-    width: 100% !important;
-}
-
-.ui.toggle.checkbox input:focus:checked~label:before {
-    background-color: #742f37 !important;
-}
-
-.ui.toggle.checkbox input:checked~label:before {
-    border-color: #742f37 !important;
-}
-
-.ui.toggle.checkbox input~label:after {
-    background: #742f37;
-}
-
-.ui.toggle.checkbox input:checked~label:before {
-    background-color: #742f37 !important;
-}
-
-.ui.slider.checkbox input:focus:checked~label:before {
-    background-color: #742f37 !important;
-}
-
-.ui.slider.checkbox input:checked~label:before {
-    border-color: #742f37 !important;
-}
-
-.ui.slider.checkbox input~label:after {
-    background: #742f37;
-}
-
-.ui.slider.checkbox input:checked~label:before {
-    background-color: #742f37 !important;
-}
-
-.ui.toggle.checkbox input:checked~label:after {
-    background: white;
 }
 
 .vinhosheader {
-    padding: 0 !important;
+    padding: 0!important
 }
 
-.headercontainer,
-.headervinhoscontainer {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.headervinhoscontainer {
-    overflow-y: auto !important;
-    width: 82% !important;
-    height: 60px !important;
-}
-
-.headervinhoscontainer::-webkit-scrollbar-track {
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 2px 0;
-    background-color: white
-}
-
-.headervinhoscontainer::-webkit-scrollbar {
-    height: 7px;
-}
-
-.headervinhoscontainer::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: linear-gradient(0deg, #5e262d 0%, #9d0214 100%);
-    border: 1px solid #000;
-}
-
-.headervinhoscontainer::-webkit-scrollbar-thumb:hover {
-    background-color: #3f171b;
-}
-
-.semiheader,
-.headervinhos {
-    border: none !important;
-    height: 40px !important;
+.headercontainer {
+    margin: 0!important;
+    padding: 0!important
 }
 
 .semiheader {
-    border-bottom: 2px solid #742f37 !important;
+    border: none!important;
+    height: 40px!important
+}
+
+.semiheader {
+    border-bottom: 2px solid #742f37!important
 }
 
 .ui.menu .item:before {
-    background: none;
+    background: 0 0
 }
 
 .headercontainer a.item,
-.headervinhoscontainer a.item,
 .ordenacao {
-    border: none !important
+    border: none!important
 }
 
 .ordenacao {
-    position: absolute !important;
-    right: 0 !important;
+    position: absolute!important;
+    right: 0!important
 }
 
 .iconfiltro,
-.tagsicon,
-.pesquisaricon {
-    color: #742f37;
-}
-
-.pesquisaricon {
-    opacity: 1 !important;
-    cursor: pointer;
-}
-
-.listavinhos {
-    padding: 0 !important;
+.tagsicon {
+    color: #742f37
 }
 
 @keyframes listavinhos {
     0% {
-        transform: translateX(100%);
+        transform: translateX(100%)
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0)
     }
-}
-
-.headervinhos {
-    margin-top: 15px !important;
-}
-
-.selectfiltros {
-    background-color: #742f37 !important;
-    color: white !important;
-    padding: 1em !important;
-}
-
-.reporfiltros {
-    background-color: white !important;
-    padding: 1em !important;
-    color: black !important;
-    border: 2px solid #742f37 !important;
-    margin-left: 15px !important;
-    height: 37px;
-    display: none;
-    margin-top: 12px !important;
-}
-
-.reporfiltros i.apagarfiltros {
-    font-size: 20px !important;
-    margin: 0 !important;
-    line-height: 10px !important
-}
-
-.itemfiltros {
-    border: none !important;
-    padding: 0 !important;
-}
-
-.headervinhospesquisa {
-    border: none !important;
-    position: absolute !important;
-    right: 0 !important;
-    padding: 0 !important;
-}
-
-.headervinhospesquisa input {
-    border: none !important;
-    border-radius: 0 !important;
-    border-bottom: 2px solid #742f37 !important;
-}
-
-.results .category {
-    position: absolute !important;
-    margin-left: -96px !important;
-}
-
-.results .category .name {
-    border: 2px solid #742f37 !important;
-    border-right: none !important;
-    color: black !important;
-}
-
-.results .category .results {
-    border: 2px solid #742f37 !important
 }
 
 a.refresh {
-    padding-left: 0 !important
+    padding-left: 0!important
 }
 
 a.refresh:hover {
-    background-color: unset !important
-}
-
-a.refresh i.animacao {
-    animation: rotation 2s infinite linear;
+    background-color: unset!important
 }
 
 @keyframes rotation {
     50% {
-        transform: rotate(360deg);
+        transform: rotate(360deg)
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(0)
     }
 }
 
-.vinhoscontainer {
-    margin: auto auto !important;
-    margin-top: 50px !important;
-    padding: 0 !important;
-    margin-bottom: 135px !important;
-    text-align: center !important;
-    font-size: 20px !important;
-}
-
-.vinhoscontainer img {
-    height: 250px !important;
-    object-fit: contain !important
-}
-
-.columnvinho {
-    box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
-}
-
-.dividervinho {
-    width: 90%;
-    margin: 25px auto;
-    margin-bottom: 15px;
-}
-
-.imgbtnright,
-.imgbtndown {
-    margin-top: 2px !important;
-    border-radius: 5px !important;
-}
-
-.imgbtnright:hover,
-.imgbtndown:hover {
-    border: 2px solid #742f37;
-}
-
-.imgbtndown {
-    height: 40px!important;
-    width: 42px!important;
-}
-
-.imgbtnright {
-    height: 42px!important;
-    width: 42px!important;
-}
-
-.imgbtnright {
-    float: right !important;
-}
-
-.imgbtndown {
-    float: left !important;
-}
-
-.imgbtnright .direita,
-.imgbtndown .baixo {
-    background-color: white !important;
-}
-
-.imgbtnright i,
-.imgbtndown i {
-    color: #742f37 !important;
-}
-
-.ui.cube.shape .side {
-    background-color: unset !important;
-    padding: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.shapedetalhes {
-    display: inline-block;
-    margin-top: 15px;
-    color: black !important;
-}
-
-.shapevinho {
-    height: 250px !important;
-}
-
-.shapedetalhes .sides {
-    height: 50px
-}
-
-.shapedetalhes .sides .side {
-    height: 50px
-}
-
-.sides.sidesdetalhes .side {
-    height: 50px !important
-}
-
-.imgvinho {
-    width: 100% !important;
-    height: 350px;
-    object-fit: cover;
-    transition: transform .4s;
-}
-
-input[type="search"] {
+input[type=search] {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    -webkit-appearance: searchfield;
+    -webkit-appearance: searchfield
 }
 
-input[type="search"]::-webkit-search-cancel-button {
+input[type=search]::-webkit-search-cancel-button {
     -webkit-appearance: none;
     cursor: pointer;
     background-repeat: no-repeat;
     object-fit: cover;
     height: 16px;
     width: 16px;
-    background-image: url("../../../img/paginas/frontend/vinhos/apagarpesquisa.png");
-}
-
-div.pagination {
-    margin-top: 20px;
-    position: absolute;
-    bottom: 55px;
-    width: 100%;
-    height: 50px;
-}
-
-.pagination nav {
-    margin: auto auto
-}
-
-.pagination nav ul {
-    font-size: 20px;
-}
-
-.pagination nav ul li {
-    padding: 5px;
-}
-
-.pagination nav ul li .page-link {
-    padding: 15px;
-    border-radius: 5px;
-    color: #742f37;
-    border: 2px solid #742f37;
-}
-
-nav .page-item.active .page-link {
-    z-index: 1;
-    color: #fff;
-    background-color: #742f37;
-    border: 2px solid #742f37;
+    background-image: url(../../../img/paginas/frontend/vinhos/apagarpesquisa.png)
 }
 
 .ui.active.slow {
-    margin-bottom: 40% !important;
+    margin-bottom: 40%!important
 }
 
 .ui.green.loader.loader.loader:after {
-    color: #8f1422 !important;
-}
-
-.ui.disabled.rating.vinhosclass i {
-    border-color: #742f37 !important
-}
-
-.ui.rating .active.icon {
-    color: white;
-}
-
-.ui.rating .active::before {
-    color: #742f37 !important
+    color: #8f1422!important
 }
 
 .bermais {
-    text-align: center !important;
-    cursor: pointer !important;
-    border: none !important;
-    padding: 10px !important;
-    font-size: 15px !important;
-    background: rgba(116, 47, 55) !important;
-    color: white !important;
-    box-sizing: border-box !important;
+    text-align: center!important;
+    cursor: pointer!important;
+    border: none!important;
+    padding: 10px!important;
+    font-size: 15px!important;
+    background: rgba(116, 47, 55)!important;
+    color: #fff!important;
+    box-sizing: border-box!important
 }
 
 .bermaiiis {
-    justify-content: center !important;
-    text-align: center;
+    justify-content: center!important;
+    text-align: center
 }
