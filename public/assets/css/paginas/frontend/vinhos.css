@@ -72,6 +72,7 @@ img.banner {
 
 .filtrosmain {
     min-height: 1120px !important;
+    margin-bottom: 100px !important;
 }
 
 .filtrosmain,
@@ -370,8 +371,7 @@ a.refresh i.animacao {
 }
 
 .imgbtnright i,
-.imgbtndown i
-{
+.imgbtndown i {
     color: #742f37 !important;
 }
 
@@ -386,6 +386,7 @@ a.refresh i.animacao {
     display: inline-block;
     margin-top: 15px;
     color: black !important;
+    font-size: 19px !important;
 }
 
 .shapevinho {
@@ -492,7 +493,9 @@ nav .page-item.active .page-link {
 }
 
 input.qntclvals1,
-input.qntclvals2 {
+input.qntclvals2,
+.per_alcvals1,
+.per_alcvals2 {
     width: 21% !important;
     color: black !important;
     text-align: center !important;
@@ -501,7 +504,8 @@ input.qntclvals2 {
     border-radius: 0 !important;
 }
 
-.filtroschecksqnt_cl {
+.filtroschecksqnt_cl,
+.filtroschecksperc_alc {
     width: 100% !important;
 }
 
@@ -511,12 +515,126 @@ input.qntclvals2 {
     padding: 5px !important;
     text-align: center !important;
 }
-.gruposliders li{
+
+.gruposliders li {
     list-style: none;
     display: inline;
     line-height: 40px;
     margin-right: 5px;
 }
-.thumb, .thumb.second{
-background-color: #742f37!important;
+
+#sidebar, #fecharside {
+    display: none;
+}
+#fecharside {
+    right: 50px;
+    position: absolute!important;
+}
+
+.thumb,
+.thumb.second {
+    background-color: #742f37 !important;
+}
+
+@media screen and (max-width: 1796px) {
+
+    .semicontainer,
+    .maincontainer {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .ui.grid>.row>[class*="twelve wide"].column {
+        width: 78% !important;
+    }
+
+    .ui.grid>.row>[class*="three wide"].column {
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1548px) {
+    .ui.grid>.row>[class*="three wide"].column {
+        display: none;
+        width: 45% !important;
+        margin-top: 17px !important;
+        position: static !important;
+        flex-direction: column !important;
+        z-index: 20 !important;
+        width: 100% !important;
+    }
+
+    .itemfiltros,
+    .reporfiltros {
+        display: none !important;
+    }
+
+    #sidebar {
+        display: inline !important;
+    }
+
+    .ui.grid>.row>[class*="twelve wide"].column {
+        width: 98% !important;
+        margin: auto auto !important;
+    }
+
+    .shapedetalhes {
+        margin: auto auto;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1354px) {
+    .ui[class*="four column"].grid>.column:not(.row) {
+        width: 31% !important;
+    }
+
+    .ui.grid>.row {
+
+        margin: auto auto !important;
+    }
+
+    .vinhoscontainer {
+        margin: auto auto;
+        margin-top: 100px !important;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1018px) {
+    .ui[class*="four column"].grid>.column:not(.row) {
+        width: 45% !important;
+    }
+
+    .ui.grid>.row>[class*="twelve wide"].column,
+    .semicontainer {
+        width: 100% !important;
+        margin: auto auto !important;
+    }
+
+    .semicontainer {
+        margin-top: 50px !important;
+    }
+}
+
+@media screen and (max-width: 844px) {
+    .ui.stackable.menu .item {
+        width: auto !important;
+    }
+
+    .refresh {
+        width: 90% !important;
+        left: 20px !important;
+    }
+}
+
+@media screen and (max-width: 714px) {
+    .ui[class*="four column"].grid>.column:not(.row) {
+        width: 85% !important;
+    }
+
 }

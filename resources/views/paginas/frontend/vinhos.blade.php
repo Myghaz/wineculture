@@ -44,7 +44,9 @@
 						{{$vinhostotal}} vinhos encontrados
 					</a>
 					<a class="item refresh">
-						<i id="refreshvinhos" title="Actualizar Lista de Vinhos" class="sync icon"></i>
+					<i id="sidebar" class="bars icon"></i>
+					<i id="refreshvinhos" title="Actualizar Lista de Vinhos" class="sync icon"></i>
+					<i id="fecharside" class="close icon"></i>
 					</a>
 					<div title="Filtrar Lista" class="right item ordenacao">
 						<div class="ui labeled icon dropdown">
@@ -179,6 +181,31 @@
 												<input readonly type="text" class="qntclvals1">
 												<li>Máx:</li> 
 												<input readonly type="text" class="qntclvals2">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item per_alc">
+						<a class="active title">
+							<i class="dropdown icon"></i>
+							Percentagem Álcool
+						</a>
+						<div class="active content">
+							<div class="ui form">
+								<div class="grouped fields">
+									<div class="field">
+										<div class="ui checkbox filtroschecks filtroschecksperc_alc">
+											<div class="ui ticked range slider per_alc" id="slider-1"></div>
+											<div class="ui input">
+												<div class="gruposliders"> 
+												<li>Mín:</li> 
+												<input readonly type="text" class="per_alcvals1">
+												<li>Máx:</li> 
+												<input readonly type="text" class="per_alcvals2">
 												</div>
 											</div>
 										</div>

@@ -51,7 +51,7 @@ $('.ui.slider.qnt_cl')
         step: 1,
         smooth: true,
         onChange: function () {
-           
+
             var valmin = $(this).slider('get thumb value');
             var valmax = $(this).slider('get thumb value', 'second');
             $('.qntclvals1').val(valmin)
@@ -60,21 +60,64 @@ $('.ui.slider.qnt_cl')
         }
     });
 
+
+$(document).on('click', '#sidebar', function () {
+    $('.filtrosmain').css("display", "inline")
+    $('#fecharside').css("display", "inline")
+});
+$(document).on('click', '#fecharside', function () {
+    $('.filtrosmain').css("display", "none")
+    
+
+});
+$('.ui.slider.per_alc')
+    .slider({
+        min: 1,
+        max: 100,
+        start: 1,
+        end: 100,
+        step: 1,
+        smooth: true,
+        onChange: function () {
+            var valmin = $(this).slider('get thumb value');
+            var valmax = $(this).slider('get thumb value', 'second');
+            $('.per_alcvals1').val(valmin)
+            $('.per_alcvals2').val(valmax)
+            $('.ui.slider.per_alc').trigger("change");
+        }
+    });
+
 $(document).on('change', '.qnt_cl', function () {
-    qnt1 =  $('.qntclvals1').val()
-    qnt2 =  $('.qntclvals2').val()
+    qnt1 = $('.qntclvals1').val()
+    qnt2 = $('.qntclvals2').val()
     var limites = $('.columnvinho');
     limites.each(function () {
-        if (limites.data("qntcl") >= qnt1 && limites.data("qntcl") <= qnt2){
+        if (limites.data("qntcl") >= qnt1 && limites.data("qntcl") <= qnt2) {
             $(this).show();
-        }else{
+        } else {
             $(this).hide();
         }
     });
-    
+
+});
+$(document).on('change', '.per_alc', function () {
+    qntper1 = $('.per_alcvals1').val()
+    qntper2 = $('.per_alcvals2').val()
+    var limitesper = $('.columnvinho');
+    limitesper.each(function () {
+        if (limitesper.data("peral") >= qntper1 && limitesper.data("peral") <= qntper2 == true) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
+
 });
 $('.qntclvals1').val(1)
 $('.qntclvals2').val(150)
+
+$('.per_alcvals1').val(1)
+$('.per_alcvals2').val(100)
 
 $('.imgbtndown')
     .popup({});

@@ -1,5 +1,5 @@
 @foreach ($vinhos as $key=>$vinho)
-<div data-qntcl="{{$vinho->qnt_cl}}" onload="rate();" name="paginate" class="column columnvinho categoria{{$vinho->categoria->nome}} regiao{{$vinho->regiao}}  produtor{{$vinho->id_produtor}} @foreach ($vinhosclass as $key=>$vinhoclass)
+<div data-qntcl="{{$vinho->qnt_cl}}" data-peral="{{$vinho->perct_alco}}" onload="rate();" name="paginate" class="column columnvinho categoria{{$vinho->categoria->nome}} regiao{{$vinho->regiao}}  produtor{{$vinho->id_produtor}} @foreach ($vinhosclass as $key=>$vinhoclass)
 @if($vinhoclass->id_vinho == $vinho->id) class{{$vinhoclass->classificacao}} @endif
 @endforeach">
 
@@ -18,13 +18,15 @@
             @endforeach
         </div>
     </div>
+    
+    <div class="dividervinho">    </div>
     <div title="Próximo Detalhe" class="ui ignored icon direction buttons imgbtndown">
         <div class="ui icon button baixo" data-animation="flip" data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
     </div>
     <div title="Próxima Imagem" class="ui ignored icon direction buttons imgbtnright">
         <div class="ui icon button direita" data-animation="flip" data-direction="right" title="Flip Right"><i class="right long arrow icon"></i></div>
     </div>
-    <div class="dividervinho"></div>
+
 
     <div class="ui cube shape shapedetalhes shapedetalhes{{$vinho->id}}">
         <input type="hidden" id="id_vinho" value="{{$vinho->id}}">
@@ -53,6 +55,9 @@
             </div>
             <div class="side qnt_clvinhosside">
                 <b>Quantidade CL: </b>{{$vinho->qnt_cl}}
+            </div>
+            <div class="side per_aclvinhosside">
+                <b>Percentagem Álcool: </b>{{$vinho->perct_alco}}%
             </div>
             <div class="side datavinhoside">
                 <b>Data de Postagem: </b>{{ date('d-m-Y', strtotime($vinho->created_at))}}
