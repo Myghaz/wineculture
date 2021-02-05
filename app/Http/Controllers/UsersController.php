@@ -54,8 +54,8 @@ class UsersController extends Controller
 
         $total_users_utls_12meses = $user_utl_1_total + $user_utl_2_total + $user_utl_3_total + $user_utl_4_total + $user_utl_5_total + $user_utl_6_total + $user_utl_7_total + $user_utl_8_total + $user_utl_9_total + $user_utl_10_total + $user_utl_11_total + $user_utl_12_total;
         $totalProdutores = User::whereYear('created_at', '=', 2020)->where('tipouser', '=', 'Produtor')->count();
-        
-        return view('paginas.backend.users', compact([
+
+        return view('paginas.backend.users.index', compact([
             'users',
             'user_utl_12_total',
             'user_utl_11_total',
@@ -78,12 +78,7 @@ class UsersController extends Controller
     }
     public function frontend_store(Request $request)
     {
-       
-    }
-    public function user_destroy(user $user)
-    {
-        $user->delete();
-        return redirect()->route('users.index');
+
     }
 
     /**
@@ -147,8 +142,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, User $user)
     {
-        //
+        $user->delete($user);
+        return redirect()->route('users.index')->with('success', 'Utilizador removido com sucesso', compact('user'));
     }
 }

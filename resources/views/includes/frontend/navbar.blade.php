@@ -1,5 +1,5 @@
 <div class="navv">
-    <div class="navbar bb" id="navbar">
+    <div class="navbar fixed-top bb" id="navbar">
         <div class="img" id="imgnav"> </div>
         <ul>
             <li @if (Route::currentRouteName()=='index' ) class="active" @endif><a href="/">Início</a></li>
