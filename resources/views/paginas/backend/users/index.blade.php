@@ -2,18 +2,15 @@
 @section('title', 'Dashboard')
 @section('content')
     <nav aria-label="breadcrumb bread">
-        <ol class="breadcrumb breadcrumb-inverse">
-            <li class="breadcrumb-item"><a href="{{ route('admin_dashboard') }}">Admin</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Utilizadores</li>
-        </ol>
-    </nav>
+    <ol class="breadcrumb breadcrumb-inverse">
+        <a data-toggle="tooltip" title="Voltar" href="{{ url()->previous() }}" class="voltar"><i class="fas fa-arrow-left"></i></a>
+        <li class="breadcrumb-item"><a href="{{ route('admin_dashboard')}}">Admin</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Utilizadores</li>
+    </ol>
+</nav>
 
     <div class="content-wrapper">
         <div class="content">
-            <a class="backurl" href="{{ url()->previous() }}">
-                <i class="fas fa-arrow-left"></i>
-                <span>Voltar</span>
-            </a>
             <div class="row">
                 <div class="col-xl-4 col-md-12">
                     <!-- Doughnut Chart -->
