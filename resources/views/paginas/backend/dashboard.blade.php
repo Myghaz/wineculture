@@ -140,7 +140,6 @@
             <table id="tableausers" class="ui celled table" style="width:100%">
               <thead id="tableausersthead">
                 <tr>
-                  <th>ID</th>
                   <th class="d-none d-lg-table-cell">Imagem</th>
                   <th>Nome</th>
                   <th class="d-none d-lg-table-cell">Apelido</th>
@@ -151,7 +150,6 @@
               <tbody>
                 <tr>
                   @foreach($users as $key => $user)
-                  <td>{{$user->id}}</td>
                   <td>
                     @if ($user->img == "Sem Imagem")
                     <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
@@ -178,7 +176,6 @@
             <table id="tableaprodutores" class="ui celled table" style="width:100%">
               <thead id="tableprodutoresthead">
                 <tr>
-                  <th class="d-none d-lg-table-cell">ID</th>
                   <th class="d-none d-lg-table-cell">Imagem</th>
                   <th class="d-none d-lg-table-cell">Nome</th>
                   <th class="d-none d-lg-table-cell">Apelido</th>
@@ -188,7 +185,6 @@
               <tbody>
                 <tr>
                   @foreach($produtores as $key => $produtor)
-                  <td>{{$produtor->id}}</td>
                   <td>
                     @if ($produtor->img == "Sem Imagem")
                     <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle w-45" alt=">{{$produtor->name}} {{$produtor->apelido}}">
