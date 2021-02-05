@@ -89,10 +89,44 @@ $(document).ready(function() {
             .search(jQuery.fn.DataTable.ext.type.search.string(this.value))
             .draw();
     });
-    $(document).ready(function() {});
-
     $("#tablecategoriablog").dataTable({
         dom: "lBfrtip",
+        buttons: [{
+            text: '<i class="fas fa-plus fa-lg"></i>',
+            className: 'adicionarbtn',
+            id: 'addbtn',
+            action: function (e, dt, button, config) {
+                $('#addmodal').modal('show')
+            }
+        },
+        {
+            extend: 'excel',
+            text: '<i class="fas fa-file-excel fa-lg"></i>',
+            className: 'excelbtn',
+            id: 'excelbtn',
+            exportOptions: {
+                columns: [1]
+            }
+        },
+        {
+            extend: 'pdf',
+            text: '<i class="fas fa-file-pdf fa-lg"></i>',
+            className: 'pdfbtn',
+            id: 'pdfbtn',
+            exportOptions: {
+                columns: [1]
+            }
+        },
+        {
+            extend: 'print',
+            text: '<i class="fas fa-print fa-lg"></i>',
+            className: 'printbtn',
+            id: 'printbtn',
+            exportOptions: {
+                columns: [1]
+            }
+        }
+    ],
         scrollY: "1000",
         scrollCollapse: true,
         autoWidth: true,
@@ -137,4 +171,12 @@ $(document).ready(function() {
             }
         });
     });
+});
+$(document).ready(function () {
+    $(".adicionarbtn").removeClass("dt-button adicionarbtn").addClass("btn btn-outline-success");
+    $(".editarbtn").removeClass("dt-button editarbtn").addClass("btn btn-outline-info");
+    $(".eliminarbtn").removeClass("dt-button eliminarbtn").addClass("btn btn-outline-danger");
+    $(".excelbtn").removeClass("dt-button excelbtn").addClass("btn btn-outline-success");
+    $(".pdfbtn").removeClass("dt-button pdfbtn").addClass("btn btn-outline-danger");
+    $(".printbtn").removeClass("dt-button printbtn").addClass("btn btn-outline-dark");
 });

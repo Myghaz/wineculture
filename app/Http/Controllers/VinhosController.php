@@ -277,17 +277,6 @@ class VinhosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $vinho = Vinhos::all();
-        $categorias = category_wine::all();
-        $users = User::all();
-        return view('paginas.backend.vinhos.create', compact([
-            'vinho',
-            'categorias',
-            'users'
-        ]));
-    }
 
     /**
      * Store a newly created resource in storage.

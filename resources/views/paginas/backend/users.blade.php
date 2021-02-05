@@ -3,6 +3,7 @@
 @section('content')
 <nav aria-label="breadcrumb bread">
     <ol class="breadcrumb breadcrumb-inverse">
+        <a data-toggle="tooltip" title="Voltar" href="{{ url()->previous() }}" class="voltar"><i class="fas fa-arrow-left"></i></a>
         <li class="breadcrumb-item"><a href="{{ route('admin_dashboard')}}">Admin</a></li>
         <li class="breadcrumb-item active" aria-current="page">Utilizadores</li>
     </ol>
@@ -10,10 +11,6 @@
 
 <div class="content-wrapper">
     <div class="content">
-        <a class="backurl" href="{{ url()->previous() }}">
-            <i class="fas fa-arrow-left"></i>
-            <span>Voltar</span>
-        </a>
         <div class="row">
             <div class="col-xl-4 col-md-12">
                 <!-- Doughnut Chart -->
@@ -134,7 +131,7 @@
     </div>
 
     <script>
- var user_utl_12_total = {{$user_utl_12_total}};
+        var user_utl_12_total = {{$user_utl_12_total}};
         var user_utl_11_total = {{$user_utl_11_total}};
         var user_utl_10_total = {{$user_utl_10_total}};
         var user_utl_9_total = {{$user_utl_9_total}};

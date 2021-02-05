@@ -1,31 +1,19 @@
 @extends ('layouts.backend.admin')
+
 @section('title', 'Contactos')
 
 @section('content')
+<nav aria-label="breadcrumb bread">
+  <ol class="breadcrumb breadcrumb-inverse">
+    <a data-toggle="tooltip" title="Voltar" href="{{ url()->previous() }}" class="voltar"><i class="fas fa-arrow-left"></i></a>
+    <li class="breadcrumb-item"><a href="{{ route('admin_dashboard')}}">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Mensagens</li>
+  </ol>
+</nav>
     <div class="content-wrapper">
         <div class="content">
-            <!-- Top Statistics -->
-            <div class="row">
-                <div class="col-xl-3 col-sm-6">
-                    <div class="card card-mini mb-4">
-                        <div class="card-body cartao">
-                            <h2 class="mb-1">{{ $totalmensagens }}</h2>
-                            <p>Total de Perguntas</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="card card-mini mb-4">
-                        <div class="card-body cartao">
-                            <h2 class="mb-1">{{ $porresponder }}</h2>
-                            <p>Perguntas por Responder</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-12">
-                    <!-- Recent Order Table -->
                     <div class="card card-table-border-none" id="users">
                         <div class="card-header justify-content-between">
                             <h2>Mensagens</h2>

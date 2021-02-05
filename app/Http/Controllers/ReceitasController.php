@@ -24,7 +24,8 @@ class ReceitasController extends Controller
         $receitas = receitas::all();
         $category_wines = category_wine::all();
         $Users = User::all();
-        return view('paginas.backend.receitas.index', compact('receitas', 'category_wines', 'Users'));
+        $categories_wines = category_wine::all();
+        return view('paginas.backend.receitas.index', compact('receitas', 'category_wines', 'Users', 'categories_wines'));
     }
     public function indexFrontend()
     {
@@ -45,11 +46,6 @@ class ReceitasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $categories_wines = category_wine::all();
-        return view('paginas.backend.receitas.create', compact('categories_wines'));
-    }
 
     /**
      * Store a newly created resource in storage.

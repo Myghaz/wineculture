@@ -25,7 +25,7 @@
 <body>
 
     @include('includes.frontend.navbar')
-    <div class="mainncontainer" style="position: relative; min-height: 53%; box-sizing: border-box;">
+    <div class="mainncontainer" style="position: relative; min-height: 57%; box-sizing: border-box;">
         @include('includes.frontend.settings')
         @yield("content")
     </div>

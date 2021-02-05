@@ -25,12 +25,6 @@ class CategoriaFAQController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
-    {
-        $categorias = CategoriaPergunta::all();
-        return view('paginas.backend.categoriasFAQ.create', compact('categorias'));
-    }
-
     /**
      * Store a newly created resource in storage.
      *

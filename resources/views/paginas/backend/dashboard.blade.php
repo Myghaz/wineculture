@@ -4,6 +4,7 @@
 
 <nav aria-label="breadcrumb bread">
   <ol class="breadcrumb breadcrumb-inverse">
+    <a data-toggle="tooltip" title="Voltar" href="{{ url()->previous() }}" class="voltar"><i class="fas fa-arrow-left"></i></a>
     <li class="breadcrumb-item"><a href="{{ route('admin_dashboard')}}">Admin</a></li>
     <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
   </ol>

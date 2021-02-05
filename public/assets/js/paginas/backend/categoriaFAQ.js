@@ -92,6 +92,42 @@ $(document).ready(function() {
     $(document).ready(function() {});
 
     $("#tablecategoriaFAQ").dataTable({
+        buttons: [{
+            text: '<i class="fas fa-plus fa-lg"></i>',
+            className: 'adicionarbtn',
+            id: 'addbtn',
+            action: function(e, dt, button, config) {
+                $('#addmodal').modal('show')
+            }
+        },
+            {
+                extend: 'excel',
+                text: '<i class="fas fa-file-excel fa-lg"></i>',
+                className: 'excelbtn',
+                id: 'excelbtn',
+                exportOptions: {
+                    columns: [0, 1]
+                }
+            },
+            {
+                extend: 'pdf',
+                text: '<i class="fas fa-file-pdf fa-lg"></i>',
+                className: 'pdfbtn',
+                id: 'pdfbtn',
+                exportOptions: {
+                    columns: [0, 1]
+                }
+            },
+            {
+                extend: 'print',
+                text: '<i class="fas fa-print fa-lg"></i>',
+                className: 'printbtn',
+                id: 'printbtn',
+                exportOptions: {
+                    columns: [0, 1]
+                }
+            }
+        ],
         dom: "lBfrtip",
         scrollY: "1000",
         scrollCollapse: true,
@@ -125,3 +161,12 @@ $(document).ready(function() {
         ]
     });
 });
+$(document).ready(function() {
+    $(".adicionarbtn").removeClass("dt-button adicionarbtn").addClass("btn btn-outline-success");
+    $(".editarbtn").removeClass("dt-button editarbtn").addClass("btn btn-outline-info");
+    $(".eliminarbtn").removeClass("dt-button eliminarbtn").addClass("btn btn-outline-danger");
+    $(".excelbtn").removeClass("dt-button excelbtn").addClass("btn btn-outline-success");
+    $(".pdfbtn").removeClass("dt-button pdfbtn").addClass("btn btn-outline-danger");
+    $(".printbtn").removeClass("dt-button printbtn").addClass("btn btn-outline-dark");
+});
+
