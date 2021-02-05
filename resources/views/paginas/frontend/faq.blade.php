@@ -11,7 +11,6 @@
 @section('content')
     <div class="bannerrrr">
         <img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/faq-banner.jpg') }}" alt="banner">
-    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-10 perguntas main">

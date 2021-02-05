@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-4 footer-nav pages_ul">
         <div class="row">
-            <div class="col-md-4 ml-5">
+            <div class="col-md-5 ml-md-5">
                 <ul class="pages ">
                     <li><a href="{{ route('index') }}">Início</a></li>
                     <li><a href="{{ route('sobre') }}">Sobre</a></li>
@@ -16,7 +16,7 @@
                     <li><a href="{{ route('index_blog_frontend') }}">Notícias</a></li>
                 </ul>
             </div>
-            <div class="col-md-5 ml-5" style="margin-right: 0px">
+            <div class="col-md-5 ml-md-2" style="margin-right: 0px">
                 <ul class="pages">
                     <li><a href="{{ route('receitas') }}">Receitas</a></li>
                     <li><a target="_blank" href="http://wineculture.test">Loja</a></li>
