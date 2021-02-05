@@ -27,7 +27,7 @@ class StoreRequestReceitas extends FormRequest
             'nome' => 'required|min:3|max:20|',
             'descricao' => 'required',
             'preparo' => 'nullable',
-            'id_categoria' => 'required|exists: category_wines,id'
+            'id_categoria' => 'required|exists:category_wines,id'
         ];
     }
     public function messages()

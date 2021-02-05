@@ -59,7 +59,7 @@ class ReceitasController extends Controller
      */
     public function store(StoreRequestReceitas $request)
     {
-        $fields = $request->validate();
+        $fields = $request->validated();
 
         $receita = new Receitas();
         $receita->fill($fields);
@@ -111,7 +111,8 @@ class ReceitasController extends Controller
      */
     public function update(UpdateRequestReceitas $request, receitas $receita)
     {
-        $receita->update($request->all());
+        $fields = $request->validated();
+        $receita->update($fields);
         if ($request->hasFile('img')) {
             if (!empty($receita->foto)) {
                 Storage::disk('public')->delete('receitas/' . $receita->foto);

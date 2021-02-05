@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Http\Request;
+use App\Http\Requests\StoreCategoriaBlogRequest;
+use App\Http\Requests\UpdateCategoriaBlogRequest;
 
 class CategoriablogController extends Controller
 {
@@ -34,20 +36,15 @@ class CategoriablogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCategoriaBlogRequest $request)
     {
 
-        $fields = $request->validate(
-            [
-                'name' => 'required',
-                'img' => 'required'
-            ],
-        );
+        $fields = $request->validated();
         $categories = new Category();
         $categories->fill($fields);
 
         if ($request->hasFile('img')) {
-            $photo_path = $request->file('img')->store('storage/categorias');
+            $photo_path = $request->file('img')->store('public/categorias');
             $categories->img = basename($photo_path);
         }
 
@@ -84,15 +81,16 @@ class CategoriablogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $categories)
+    public function update(UpdateCategoriaBlogRequest $request, Category $categories)
     {
-        $fields = $request->validate(
-            [
-                'name' => 'required',
-                'img' => 'required'
-            ]
-        );
+        $fields = $request->validated();
         $categories->update($fields);
+
+        if ($request->hasFile('img')) {
+            $photo_path = $request->file('img')->store('public/categorias');
+            $categories->img = basename($photo_path);
+        }
+        
         $categories->save();
         return redirect()->route('categoriasblog.index')
             ->with('success', 'Categoria editada com sucesso', compact('categories'));

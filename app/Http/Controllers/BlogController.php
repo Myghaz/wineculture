@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\User;
 use App\Models\Category;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\StoreBlogRequest;
+use App\Http\Requests\UpdateBlogRequest;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -105,11 +108,17 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(UpdateBlogRequest $request, Blog $blog)
     {
+        $fields = $request->validated();
+        $blog->update($fields);
 
-        $blog->update($request->all());
+        if ($request->hasFile('img')) {
+            $photo_path = $request->file('img')->store('public/blog');
+            $blog->img = basename($photo_path);
+        }
 
+        $blog->save();
         return redirect()->route('blog.index')
             ->with('success', 'Post was updated successfully', compact('blog'));
     }
@@ -134,20 +143,9 @@ class BlogController extends Controller
         return view('paginas.backend.blog.create', compact('categories', 'id_user_auth'));
     }
 
-    public function store(Request $request)
+    public function store(StoreBlogRequest $request)
     {
-        $fields = $request->validate(
-            [
-                'id_categoria' => 'required',
-                'titulo' => 'required',
-                'data' => 'required',
-                'preview' => 'required',
-                'descricao' => 'required',
-                'img' => 'required',
-                'id_user' => 'required',
-
-            ],
-        );
+        $fields = $request->validated();
         $blog = new Blog();
         $blog->fill($fields);
 
