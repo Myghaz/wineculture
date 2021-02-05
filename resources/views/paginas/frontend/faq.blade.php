@@ -11,14 +11,6 @@
 @section('content')
     <div class="bannerrrr">
         <img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/faq-banner.jpg') }}" alt="banner">
-    </div>
-    <div class="ui grid">
-        <div class="ui large breadcrumb">
-            <a href="{{route('index')}}" class="section">WineCulture</a>
-            <i class="right chevron icon divider"></i>
-            <div class="active section">FAQ</div>
-        </div>
-    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-10 perguntas main">
