@@ -1,5 +1,4 @@
 
-@extends("paginas.frontend.layout")
 @section("links")
 <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/error404.css') }}">
 @endsection
@@ -14,6 +13,7 @@
     </div>
 </div>
 @endsection
+
 @extends('errors::minimal')
 @section('title', __('Not Found'))
 @section('code', '404')

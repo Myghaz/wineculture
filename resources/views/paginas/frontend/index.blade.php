@@ -224,7 +224,6 @@
             </div>
 
             <div class="row portfolio-container">
-
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
                         <img src="/assets/img/paginas/frontend/index/portfolio/vin-1.jpg" class="img-fluid" alt="">
@@ -238,7 +237,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
                         <img src="/assets/img/paginas/frontend/index/portfolio/marc-1.jpg" class="img-fluid" alt="">
@@ -252,7 +250,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
                         <img src="/assets/img/paginas/frontend/index/portfolio/vin-2.jpg" class="img-fluid" alt="">
@@ -266,7 +263,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                     <div class="portfolio-wrap">
                         <img src="/assets/img/paginas/frontend/index/portfolio/rec-2.jpg" class="img-fluid" alt="">
@@ -280,7 +276,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
                         <img src="/assets/img/paginas/frontend/index/portfolio/marc-2.jpg" class="img-fluid" alt="">
@@ -294,7 +289,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
                         <img src="/assets/img/paginas/frontend/index/portfolio/vin-3.jpg" class="img-fluid" alt="">
@@ -308,7 +302,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                     <div class="portfolio-wrap">
                         <img src="/assets/img/paginas/frontend/index/portfolio/rec-1.jpg" class="img-fluid" alt="">
@@ -322,7 +315,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                     <div class="portfolio-wrap">
                         <img src="/assets/img/paginas/frontend/index/portfolio/rec-3.jpg" class="img-fluid" alt="">
@@ -336,7 +328,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
                         <img src="/assets/img/paginas/frontend/index/portfolio/marc-3.jpg" class="img-fluid" alt="">
@@ -350,108 +341,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-        </div>
-    </section>
-    <!-- End Our Portfolio Section -->
-
-    <!-- ======= Our Team Section ======= -->
-    <section id="team" class="team">
-        <div class="teamcontainer">
-
-            <div class="section-title">
-                <h2>Nossa Equipa</h2>
-                <p>Somos uma equipa de 5 jovens muito empenhados a trabalhar neste projeto. Venha nos conhecer.</p>
-            </div>
-
-            <div class="row">
-
-                <div data-aos="fade-up">
-                    <div class="member">
-                        <div class="pic"><img src="/assets/img/paginas/frontend/index/team/team-1.jpg" width="300" height="300" alt=""></div>
-                        <div class="member-info">
-                            <h4>Sérgio Silvestre</h4>
-                            <span>Full-Stack Developer</span>
-                            <div class="social">
-                                <a href=""><i class="icofont-twitter"></i></a>
-                                <a href=""><i class="icofont-facebook"></i></a>
-                                <a href=""><i class="icofont-instagram"></i></a>
-                                <a href=""><i class="icofont-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="member">
-                        <div class="pic "><img src="/assets/img/paginas/frontend/index/team/team-2.jpg " width="300" height="300" alt=" "></div>
-                        <div class="member-info ">
-                            <h4>Guilherme Meireles</h4>
-                            <span>Front-end Developer</span>
-                            <div class="social ">
-                                <a href=" "><i class="icofont-twitter "></i></a>
-                                <a href=" "><i class="icofont-facebook "></i></a>
-                                <a href=" "><i class="icofont-instagram "></i></a>
-                                <a href=" "><i class="icofont-linkedin "></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <div class="member">
-                        <div class="pic ">
-                            <img src="/assets/img/paginas/frontend/index/team/team-3.jpg " width="300" height="300" alt=" ">
-                        </div>
-                        <div class="member-info ">
-                            <h4>José Parreira</h4>
-                            <span>Full-Stack Developer</span>
-                            <div class="social ">
-                                <a href=" "><i class="icofont-twitter "></i></a>
-                                <a href=" "><i class="icofont-facebook "></i></a>
-                                <a href=" "><i class="icofont-instagram "></i></a>
-                                <a href=" "><i class="icofont-linkedin "></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="member">
-                        <div class="pic "><img src="/assets/img/paginas/frontend/index/team/team-4.jpg " width="300" height="300" alt=" "></div>
-                        <div class="member-info ">
-                            <h4>Miguel Pereira</h4>
-                            <span>Back-end Developer</span>
-                            <div class="social ">
-                                <a href=" "><i class="icofont-twitter "></i></a>
-                                <a href=" "><i class="icofont-facebook "></i></a>
-                                <a href=" "><i class="icofont-instagram "></i></a>
-                                <a href=" "><i class="icofont-linkedin "></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="member">
-                        <div class="pic "><img src="/assets/img/paginas/frontend/index/team/team-5.jpg " width="300" height="300" alt=" "></div>
-                        <div class="member-info ">
-                            <h4>Pedro Monteiro</h4>
-                            <span>Designer</span>
-                            <div class="social ">
-                                <a href=" "><i class="icofont-twitter "></i></a>
-                                <a href=" "><i class="icofont-facebook "></i></a>
-                                <a href=" "><i class="icofont-instagram "></i></a>
-                                <a href=" "><i class="icofont-linkedin "></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </section>
 </main>

@@ -1,40 +1,62 @@
 <link rel="stylesheet" href="{{ URL::asset('assets/css/includes/frontend/footer.css') }}">
 
+
 <div class="row">
-    <div class="col-md-4 footer-brand animated fadeInLeft">
-        <h2>Logo</h2>
-        <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies.
-            Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut
-            sem.</p>
-        <p>© 2014 BS3 UI Kit, All rights reserved</p>
+    <div class="col-md-3 footer-brand">
+        <img class="logo_footer" src="{{ asset('assets\img\logos\wineculture_logo_darkmode.png') }}" alt="" srcset="">
     </div>
-    <div class="col-md-3 footer-nav animated fadeInUp">
-        <h4>Menu —</h4>
-        <div class="col-md-6">
-            <ul class="pages">
-                <li><a href="#">Travel</a></li>
-                <li><a href="#">Nature</a></li>
-                <li><a href="#">Explores</a></li>
-                <li><a href="#">Science</a></li>
-                <li><a href="#">Advice</a></li>
-            </ul>
+    <div class="col-md-4 footer-nav pages_ul">
+        <div class="row">
+            <div class="col-md-4 ml-5">
+                <ul class="pages ">
+                    <li><a href="{{ route('index') }}">Início</a></li>
+                    <li><a href="{{ route('sobre') }}">Sobre</a></li>
+                    <li><a href="{{ route('vinhos') }}">Vinhos</a></li>
+                    <li><a href="{{ route('sobre_vinhos') }}">Sobre Vinhos</a></li>
+                    <li><a href="{{ route('index_blog_frontend') }}">Notícias</a></li>
+                </ul>
+            </div>
+            <div class="col-md-5 ml-5" style="margin-right: 0px">
+                <ul class="pages">
+                    <li><a href="{{ route('receitas') }}">Receitas</a></li>
+                    <li><a target="_blank" href="http://wineculture.test">Loja</a></li>
+                    <li><a href="{{ route('faq') }}">FAQ</a></li>
+                    <li><a href="{{ route('pdp') }}">Politica de Privacidade</a></li>
+                    <li><a href="{{ route('termos_condicoes') }}">Termos e Condições</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="col-md-3 footer-nav animated fadeInUp">
-        <div class="col-md-9">
-            <ul class="list">
-                <li><a href="#">Politica de Privacidade</a></li>
-                <li><a href="#">Termos e Condições</a></li>
-            </ul>
+    <div class="col-md-3 footer-nav footer-social">
+        <div class="col-md-12">
+            <h4>Contactos:</h4>
+            <div class="contacts_footer">
+                <ul>
+                    <li>
+                        <a href="{{ route('contactos') }}">Fale Connosco</a>
+                    </li>
+                    <li>
+                        Telefone:&nbsp;&nbsp;<i class="fa fa-phone"></i>&nbsp;
+                        (+351) 244 830 010
+                    </li>
+                    <li>
+                        Telemóvel:&nbsp;<i class="fa fa-phone">&nbsp;</i>
+                        967 830 010
+                    </li>
+                    <li>
+                        Email:&nbsp;<i class="fa fa-envelope"></i>&nbsp;
+                        wineculture@wineculture.com
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="col-md-2 footer-social animated fadeInDown">
-        <h4>Follow Us</h4>
+    <div class="col-md-2 footer-social">
+        <h4>Redes Sociais:</h4>
         <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">RSS</a></li>
+            <li><i class="fa fa-facebook-square socials_icon"></i><a href="">Facebook</a></li>
+            <li><i class="fa fa-twitter socials_icon"></i><a href="">Twitter</a></li>
+            <li><i class="fa fa-instagram socials_icon"></i><a href="">Instagram</a></li>
         </ul>
     </div>
 </div>

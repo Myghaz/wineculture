@@ -1,0 +1,9 @@
+.garrafa img{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 600px;
+    width: 800px;
+    transform: scaleX(-1);
+    transform: rotate(-180);
+}

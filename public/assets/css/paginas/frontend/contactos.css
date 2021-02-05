@@ -85,8 +85,8 @@ html {
 }
 #rowcontactos {
     color: var(--color);
-    padding-top: 50px!important;
-    padding-bottom: 50px!important;
+    padding-top: 100px!important;
+    padding-bottom: 70px!important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -139,4 +139,12 @@ textarea.form-control {
     font-size: 14pt !important;
     display: unset !important;
     padding: 5px !important;
+}
+
+@media only screen and (max-width: 991px) {
+    .bruv {
+        border: none;
+        width: 96%;
+        border-bottom: 1px solid black;
+    }
 }

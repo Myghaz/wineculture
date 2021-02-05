@@ -10,13 +10,6 @@
 @endsection
 
 @section('content')
-    <div class="ui grid">
-        <div class="ui large breadcrumb">
-            <a href="{{route('index')}}" class="section">WineCulture</a>
-            <i class="right chevron icon divider"></i>
-            <div class="active section">Contactos</div>
-        </div>
-    </div>
     <div class="container">
         <div id="rowcontactos" class="row">
             <div class="col-md-3">
@@ -36,7 +29,7 @@
                     <a class="icon" href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
                 </div>
             </div>
-            <form method="POST" role="form" id="form-registo" class="col-md-8 cenas"
+            <form method="POST" role="form" id="form-registo" class="col-md-8 mt-4 cenas"
                 action="{{ route('contactos_frontend_store') }}">
                 @csrf
                 <div>
