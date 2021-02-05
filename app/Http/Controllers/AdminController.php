@@ -21,6 +21,13 @@ class AdminController extends Controller
     {
         return view('paginas.backend.admin');
     }
+    public function chat()
+    {
+        $id_user_auth = Auth::id();
+        $mensagens = Mensagens::select('id_envio')->distinct('id_envio')->where('id_destino', Auth::id())->get();
+        $mensagens_chat = Mensagens::where('id_destino', Auth::id())->orWhere('id_envio', Auth::id())->orderBy('created_at', 'ASC')->get();
+        return view('paginas.backend.chat', compact(['mensagens', 'mensagens_chat', 'id_user_auth']));
+    }
 
     public function dashboard()
     {
@@ -106,15 +113,7 @@ class AdminController extends Controller
                 $produtores = User::where('tipouser', '=', 'Produtor')->get();
                 $prosdwp = WPPosts::where('post_status', '=', 'publish')->where('post_type', 'product')->get();
 
-                //Ir buscar seguidores e publicacoes da pagina do instagram
-
-
-                $mensagens = Mensagens::select('id_envio')->distinct('id_envio')->where('id_destino', Auth::id())->get();
-                $mensagens_chat = Mensagens::where('id_destino', Auth::id())->orWhere('id_envio', Auth::id())->orderBy('created_at', 'ASC')->get();
                 $id_user_auth = Auth::id();
-
-
-
                 $ultimos_users = DB::table('users')->latest('created_at')->take(4)->orderBy('created_at', 'ASC')->get();
                 $total_posts = Blog::all();
                 $total_posts_count = $total_posts->count();
@@ -172,8 +171,6 @@ class AdminController extends Controller
                     'prosdwp',
                     'wp_prods',
                     'wp_prodsStock',
-                    'mensagens',
-                    'mensagens_chat',
                     'id_user_auth',
                     'ultimos_users',
                     'total_posts_count',

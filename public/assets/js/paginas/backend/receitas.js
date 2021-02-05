@@ -97,6 +97,42 @@ $(document).ready(function () {
 
     $("#tablereceitas").dataTable({
         dom: "lBfrtip",
+        buttons: [{
+                text: '<i class="fas fa-plus fa-lg"></i>',
+                className: 'adicionarbtn',
+                id: 'addbtn',
+                action: function (e, dt, button, config) {
+                    $('#addmodal').modal('show')
+                }
+            },
+            {
+                extend: 'excel',
+                text: '<i class="fas fa-file-excel fa-lg"></i>',
+                className: 'excelbtn',
+                id: 'excelbtn',
+                exportOptions: {
+                    columns: [1, 2, 3, 4]
+                }
+            },
+            {
+                extend: 'pdf',
+                text: '<i class="fas fa-file-pdf fa-lg"></i>',
+                className: 'pdfbtn',
+                id: 'pdfbtn',
+                exportOptions: {
+                    columns: [1, 2, 3, 4]
+                }
+            },
+            {
+                extend: 'print',
+                text: '<i class="fas fa-print fa-lg"></i>',
+                className: 'printbtn',
+                id: 'printbtn',
+                exportOptions: {
+                    columns: [1, 2, 3, 4]
+                }
+            }
+        ],
         scrollY: "350px",
         orderCellsTop: true,
         scrollCollapse: true,
@@ -149,4 +185,12 @@ $('#tablereceitas thead tr:eq(1) th').each(function (i) {
                 .draw();
         }
     });
+});
+$(document).ready(function () {
+    $(".adicionarbtn").removeClass("dt-button adicionarbtn").addClass("btn btn-outline-success");
+    $(".editarbtn").removeClass("dt-button editarbtn").addClass("btn btn-outline-info");
+    $(".eliminarbtn").removeClass("dt-button eliminarbtn").addClass("btn btn-outline-danger");
+    $(".excelbtn").removeClass("dt-button excelbtn").addClass("btn btn-outline-success");
+    $(".pdfbtn").removeClass("dt-button pdfbtn").addClass("btn btn-outline-danger");
+    $(".printbtn").removeClass("dt-button printbtn").addClass("btn btn-outline-dark");
 });

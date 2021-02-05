@@ -57,8 +57,12 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::all();
+        $id_user_auth = Auth::id();
+        $categories = Category::all();
         return view('paginas.backend.blog.index', compact([
-            'blogs'
+            'blogs',
+            'id_user_auth',
+            'categories'
         ]));
     }
 
@@ -135,14 +139,6 @@ class BlogController extends Controller
 
         return redirect()->route('blog.index')->with('success', 'Post successfully deleted', compact('blog'));
     }
-
-    public function create(Blog $blog)
-    {
-        $categories = Category::all();
-        $id_user_auth = Auth::id();
-        return view('paginas.backend.blog.create', compact('categories', 'id_user_auth'));
-    }
-
     public function store(StoreBlogRequest $request)
     {
         $fields = $request->validated();

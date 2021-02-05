@@ -1,28 +1,4 @@
-var activechat;
 
-$(".media-left").css("display", "none");
-$(".media-right").css("display", "none");
-$(document).ready(function () {
-    $(".media-message").click(function (event) {
-        activechat = (event.target.id);
-       
-        $("#idmediachat").val(activechat);
-        $( ".simplebar-content" ).attr("id","simple" + activechat);
-      
-        $(".media-left").css("display", "none");
-        $(".media-right").css("display", "none");
-        $('.' + activechat).css("display", "flex");
-
-
-        $("#chat-right-content").animate({
-            scrollTop: $('#chat-right-content').prop("scrollHeight")
-        }, 1000);
-    });
-});
-$('#chatbox a').click(function (e) {
-    e.preventDefault();
-    return false;
-});
 
 var canvas = document.getElementById("usersgrafico");
 var ctx = canvas.getContext("2d");
@@ -556,13 +532,40 @@ $(document).ready(function () {
 
     $('#tableausers').dataTable({
         dom: 'lBfrtip',
+        buttons: [{
+                extend: 'excel',
+                text: '<i class="fas fa-file-excel fa-lg"></i>',
+                className: 'excelbtn',
+                id: 'excelbtn',
+                exportOptions: {
+                    columns: [1, 2, 3, 4]
+                }
+            },
+            {
+                extend: 'pdf',
+                text: '<i class="fas fa-file-pdf fa-lg"></i>',
+                className: 'pdfbtn',
+                id: 'pdfbtn',
+                exportOptions: {
+                    columns: [1, 2, 3, 4]
+                }
+            },
+            {
+                extend: 'print',
+                text: '<i class="fas fa-print fa-lg"></i>',
+                className: 'printbtn',
+                id: 'printbtn',
+                exportOptions: {
+                    columns: [1, 2, 3, 4]
+                }
+            }
+        ],
         "scrollY": "850px",
         "scrollCollapse": true,
         "autoWidth": true,
         "columns": [{
                 "type": "num"
             },
-            null,
             null,
             null,
             null,
@@ -586,23 +589,50 @@ $(document).ready(function () {
         },
         "columnDefs": [{
             type: 'portugues',
-            targets: [0, 1, 2, 3, 4, 5]
+            targets: [0, 1, 2, 3, 4]
         }],
         "columnDefs": [{
             type: 'locale-compare',
-            targets: [0, 1, 2, 3, 4, 5]
+            targets: [0, 1, 2, 3, 4]
         }],
     });
 
     $('#tableaprodutores').dataTable({
         dom: 'lBfrtip',
+        buttons: [{
+            extend: 'excel',
+            text: '<i class="fas fa-file-excel fa-lg"></i>',
+            className: 'excelbtn',
+            id: 'excelbtn',
+            exportOptions: {
+                columns: [1, 2, 3]
+            }
+        },
+        {
+            extend: 'pdf',
+            text: '<i class="fas fa-file-pdf fa-lg"></i>',
+            className: 'pdfbtn',
+            id: 'pdfbtn',
+            exportOptions: {
+                columns: [1, 2, 3]
+            }
+        },
+        {
+            extend: 'print',
+            text: '<i class="fas fa-print fa-lg"></i>',
+            className: 'printbtn',
+            id: 'printbtn',
+            exportOptions: {
+                columns: [1, 2, 3]
+            }
+        }
+    ],
         "scrollY": "850px",
         "scrollCollapse": true,
         "autoWidth": true,
         "columns": [{
                 "type": "num"
             },
-            null,
             null,
             null,
             null
@@ -625,16 +655,44 @@ $(document).ready(function () {
         },
         "columnDefs": [{
             type: 'portugues',
-            targets: [0, 1, 2, 3, 4]
+            targets: [0, 1, 2, 3]
         }],
         "columnDefs": [{
             type: 'locale-compare',
-            targets: [0, 1, 2, 3, 4]
+            targets: [0, 1, 2, 3]
         }],
     });
 
     $('#tableaprods_wp').dataTable({
         dom: 'lBfrtip',
+        buttons: [{
+                extend: 'excel',
+                text: '<i class="fas fa-file-excel fa-lg"></i>',
+                className: 'excelbtn',
+                id: 'excelbtn',
+                exportOptions: {
+                    columns: [0, 1, 2]
+                }
+            },
+            {
+                extend: 'pdf',
+                text: '<i class="fas fa-file-pdf fa-lg"></i>',
+                className: 'pdfbtn',
+                id: 'pdfbtn',
+                exportOptions: {
+                    columns: [0, 1, 2]
+                }
+            },
+            {
+                extend: 'print',
+                text: '<i class="fas fa-print fa-lg"></i>',
+                className: 'printbtn',
+                id: 'printbtn',
+                exportOptions: {
+                    columns: [0, 1, 2]
+                }
+            }
+        ],
         "scrollY": "350px",
         "scrollCollapse": true,
         "autoWidth": true,
@@ -777,4 +835,11 @@ $("#btnprods_wp-rep").click(function () {
     document.getElementById("titulotable").innerHTML = "Tabela de Produtos (WordPress)";
     $($.fn.dataTable.tables(true)).DataTable()
         .columns.adjust();
+});
+$(document).ready(function () {
+    $(".editarbtn").removeClass("dt-button editarbtn").addClass("btn btn-outline-info");
+    $(".eliminarbtn").removeClass("dt-button eliminarbtn").addClass("btn btn-outline-danger");
+    $(".excelbtn").removeClass("dt-button excelbtn").addClass("btn btn-outline-success");
+    $(".pdfbtn").removeClass("dt-button pdfbtn").addClass("btn btn-outline-danger");
+    $(".printbtn").removeClass("dt-button printbtn").addClass("btn btn-outline-dark");
 });

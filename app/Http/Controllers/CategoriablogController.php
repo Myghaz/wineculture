@@ -24,11 +24,6 @@ class CategoriablogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
-    {
-        $categories = Category::all();
-        return view('paginas.backend.categoriasblog.create', compact('categories'));
-    }
 
     /**
      * Store a newly created resource in storage.

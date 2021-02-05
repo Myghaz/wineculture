@@ -101,6 +101,8 @@ Route::middleware('auth', 'verified')->prefix('admin')->group(function () {
 
         Route::get('dashboard', [AdminController::class, 'dashboard'])->name('admin_dashboard');
 
+        Route::get('chat', [AdminController::class, 'chat'])->name('admin_chat');
+
         Route::post('dashboard', [ChatController::class, 'backend_store'])->name('dashboard.post');
 
         Route::get('dashboard/refresh', [ChatController::class, 'refresh'])->name('dashboard.refresh');

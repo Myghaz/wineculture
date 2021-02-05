@@ -273,6 +273,35 @@ $(document).ready(function() {
     
 $('#tableausers').dataTable({
     dom: 'lBfrtip',
+    buttons: [
+    {
+        extend: 'excel',
+        text: '<i class="fas fa-file-excel fa-lg"></i>',
+        className: 'excelbtn',
+        id: 'excelbtn',
+        exportOptions: {
+            columns: [1, 2, 3]
+        }
+    },
+    {
+        extend: 'pdf',
+        text: '<i class="fas fa-file-pdf fa-lg"></i>',
+        className: 'pdfbtn',
+        id: 'pdfbtn',
+        exportOptions: {
+            columns: [1, 2, 3]
+        }
+    },
+    {
+        extend: 'print',
+        text: '<i class="fas fa-print fa-lg"></i>',
+        className: 'printbtn',
+        id: 'printbtn',
+        exportOptions: {
+            columns: [1, 2, 3]
+        }
+    }
+],
     "scrollY": "350px",
     "scrollCollapse": true,
     "orderCellsTop": true,
@@ -330,4 +359,10 @@ $('#tableausers thead tr:eq(1) th').each( function (i) {
         }
     } );
 } );
-
+$(document).ready(function () {
+    $(".editarbtn").removeClass("dt-button editarbtn").addClass("btn btn-outline-info");
+    $(".eliminarbtn").removeClass("dt-button eliminarbtn").addClass("btn btn-outline-danger");
+    $(".excelbtn").removeClass("dt-button excelbtn").addClass("btn btn-outline-success");
+    $(".pdfbtn").removeClass("dt-button pdfbtn").addClass("btn btn-outline-danger");
+    $(".printbtn").removeClass("dt-button printbtn").addClass("btn btn-outline-dark");
+});

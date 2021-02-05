@@ -19,7 +19,8 @@ class FAQController extends Controller
     {
         $perguntas = Perguntas::all();
         $totalperguntas = Perguntas::all('id')->count();
-        return view('paginas.backend.faq.index', compact('perguntas', 'totalperguntas'));
+        $categorias = CategoriaPergunta::all();
+        return view('paginas.backend.faq.index', compact('perguntas', 'totalperguntas', 'categorias'));
     }
 
     public function indexFrontend()
@@ -34,12 +35,6 @@ class FAQController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
-    {
-        $categorias = CategoriaPergunta::all();
-        $pergunta = Perguntas::all();
-        return view('paginas.backend.faq.create', compact('pergunta', 'categorias'));
-    }
 
     /**
      * Store a newly created resource in storage.
