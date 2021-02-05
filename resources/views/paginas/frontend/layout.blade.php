@@ -29,11 +29,11 @@
         @include('includes.frontend.settings')
         @yield("content")
     </div>
-    
+
     <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
     <script src="{{ URL::asset('assets/js/layouts/frontend/settings.js') }}"></script>
-    <footer>
+    <footer class="footer-bs">
         @include('includes.frontend.footer')
     </footer>
     @yield("javascript")
