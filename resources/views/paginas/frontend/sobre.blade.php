@@ -35,7 +35,7 @@
 </div>
 
 <!-- ======= Our Team Section ======= -->
-<section id="team" class="team">
+<!--<section id="team" class="team">
         <div class="teamcontainer">
 
             <div class="section-title">
@@ -111,7 +111,7 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="300">
+                <div data-aos="fade-up" data-aos-delay="400">
                     <div class="member">
                         <div class="pic "><img src="/assets/img/paginas/frontend/index/team/team-5.jpg " width="300" height="300" alt=" "></div>
                         <div class="member-info ">
@@ -130,6 +130,102 @@
             </div>
 
         </div>
+    </section>-->
+    
+    <section>
+
+    <div class="section-title mb-0" data-aos="fade-up" data-aos-delay="50">
+        <h2>Nossa Equipa</h2>
+        <p>Somos uma equipa de 5 jovens muito empenhados a trabalhar neste projeto. Venha nos conhecer.</p>
+    </div>
+
+    <div class="cont s--inactive" data-aos="fade-up" data-aos-delay="150">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Sérgio Silvestre</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Full-Stack Developer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Guilherme Meireles</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Front-End Developer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">José Parreira</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Full-Stack Developer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Miguel Pereira</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Back-end Developer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Pedro Monteiro</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Designer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+  </div>
+  <!-- cont inner end -->
+</div>
+
     </section>
 
 @endsection
