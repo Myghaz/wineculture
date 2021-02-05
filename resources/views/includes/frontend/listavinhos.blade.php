@@ -2,7 +2,7 @@
 <div data-qntcl="{{$vinho->qnt_cl}}" data-peral="{{$vinho->perct_alco}}" onload="rate();" name="paginate" class="column columnvinho categoria{{$vinho->categoria->nome}} regiao{{$vinho->regiao}}  produtor{{$vinho->id_produtor}} @foreach ($vinhosclass as $key=>$vinhoclass)
 @if($vinhoclass->id_vinho == $vinho->id) class{{$vinhoclass->classificacao}} @endif
 @endforeach">
-
+<a href="{{route('vinho',$vinho)}}">
     <div class="ui cube shape shapevinho shapeimgs{{$vinho->id}}">
         <input type="hidden" id="id_vinho" value="{{$vinho->id}}">
         <div class="sides">
@@ -64,6 +64,7 @@
             </div>
         </div>
     </div>
+    </a>
 </div>
 @endforeach
 <div class="pagination">

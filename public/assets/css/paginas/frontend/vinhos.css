@@ -328,7 +328,17 @@ a.refresh i.animacao {
 
 .columnvinho {
     box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
+
+.columnvinho img{
+    transition: transform .2s ease-in-out;
+}
+.columnvinho:hover img{
+    transform: scale(1.1);
+    
+}
+
 
 .dividervinho {
     width: 90%;

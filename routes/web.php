@@ -75,7 +75,7 @@ Route::get('/vinhos/classificacao', [VinhosController::class, 'ordemclassificaca
 
 Route::get('/vinhos/data', [VinhosController::class, 'ordemdata'])->name('vinhos.data');
 
-
+Route::get('/vinho{vinho}', [VinhosController::class, 'vinho'])->name('vinho');
 
 
 
@@ -123,20 +123,6 @@ Route::middleware('auth', 'verified')->prefix('admin')->group(function () {
 
         Route::resource('categoriasblog', CategoriablogController::class)->parameters(['categoriasblog' => 'categories']);
 });
-
-
-
-//Users Admin
-
-
-
-
-
-
-///not mexer nisto
-
-Route::resource('/admin/vinhos', VinhosController::class);
-
 
 
 Route::resource('/admin/categoria_vinho', VinhosController::class);

@@ -204,7 +204,7 @@ class VinhosController extends Controller
             'qnts_cl'
         ]))->render();
     }
-    public function vinhos_detalhes($vinho)
+    public function vinho($vinho)
     {
         $vinho_det = Vinhos::find($vinho);
         $vinho_cat = category_wine::find($vinho_det->id_categoria);
@@ -236,19 +236,6 @@ class VinhosController extends Controller
         ]));
     }
 
-    /**public function store(Request $request)
-    {
-        $vinho = new Vinhos();
-        $vinho->fill($request->all());
-
-        $path= Storage::putFileAs('public\assets\img\vinhos', $request->file('img'), 'vinhos_' . time() . '.' . $request->file('img')->extension());
-
-        $vinho->foto = $path;
-        $vinho->save();
-        return redirect()->route('receitas.index');
-    }*/
-
-
     /**
      * Display a listing of the resource.
      *
@@ -267,9 +254,6 @@ class VinhosController extends Controller
             'users'
         ]));
     }
-
-
-
 
 
     /**
