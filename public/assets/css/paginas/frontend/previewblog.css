@@ -1,9 +1,12 @@
+
 body {
     background-image: url(/assets/img/paginas/frontend/back.jpg)!important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    color: #444;
 }
 
 .all {

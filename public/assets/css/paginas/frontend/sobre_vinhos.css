@@ -1,3 +1,8 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444;
+}
+
 .background {
     background-image: url(../../../img/paginas/frontend/back.jpg);
     width: 100%;

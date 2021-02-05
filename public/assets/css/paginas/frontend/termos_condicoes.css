@@ -1,5 +1,10 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444;
+}
+
 #rowtd {
-    padding-top: 50px!important;
+    padding-top: 100px!important;
     padding-bottom: 50px!important;
 }
 
