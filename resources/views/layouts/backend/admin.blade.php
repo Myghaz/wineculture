@@ -198,7 +198,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/">
+                                        <a href="{{route('admin_chat')}}">
                                             <i class="mdi mdi-message"></i> Chat
                                         </a>
                                     </li>
