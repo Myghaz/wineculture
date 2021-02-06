@@ -14,24 +14,137 @@
 <div class="container">
 
   <div class="mt-5 ml-3 mr-3 pb-4 pl-3 pr-3" data-aos="fade-up" data-aos-delay="150">
-    <h2><b>A Nossa Instituição</b></h2>
-    <br><br>
-    <p>
-      A WineCulture é uma instituição sem fins lucrativos, com o objetivo de promover a vinicultura nacional.<br><br>
-      Com o nosso website nós listamos todos os nossos vinhos, com toda a sua informação e com o seu acompanhamento perfeito.<br><br>
+    <div class="row">
 
-      A nossa instituição é excelente para os produtores de vinho de Portugal, se for um produtor Português pode contactar-nos para publicar os seus vinhos, promovendo assim a vinicultura nacional.<br><br>
-      Temos também uma parte comercial onde vendemos mercadoria como acessórios pessoais, de escritório, vestuário e produtos para se proteger durante a pandemia.<br><br>
-      Conte conosco para descobrir a vinicultura nacional!
-    </p>
+      <div class="col-md-5 mt-5" >
+        <h2 class="sobre_color mb-5"><b>WineCulture</b></h2>
+        <p>
+          A WineCulture é uma instituição sem fins lucrativos, com o objetivo de promover a vinicultura nacional.<br><br>
+          Com o nosso website nós listamos todos os nossos vinhos, com toda a sua informação e com o seu acompanhamento perfeito.<br><br>
+
+          A nossa instituição é excelente para os produtores de vinho de Portugal, se for um produtor Português pode contactar-nos para publicar os seus vinhos, promovendo assim a vinicultura nacional.<br><br>
+          Temos também uma parte comercial onde vendemos mercadoria como acessórios pessoais, de escritório, vestuário e produtos para se proteger durante a pandemia.<br><br>
+          Conte conosco para descobrir a vinicultura nacional!
+        </p>
+      </div>
+      
+      <div class="col mt-5"></div>
+      <div class="col mt-5 sobre_divider"></div>
+
+      <div class="col-md-5 mt-5">
+        <h2 class="sobre_color mb-5"><b>Missão</b></h2>
+        <p>
+          A WineCulture é uma instituição sem fins lucrativos, com o objetivo de promover a vinicultura nacional.<br><br>
+          Com o nosso website nós listamos todos os nossos vinhos, com toda a sua informação e com o seu acompanhamento perfeito.<br><br>
+
+          A nossa instituição é excelente para os produtores de vinho de Portugal, se for um produtor Português pode contactar-nos para publicar os seus vinhos, promovendo assim a vinicultura nacional.<br><br>
+          Temos também uma parte comercial onde vendemos mercadoria como acessórios pessoais, de escritório, vestuário e produtos para se proteger durante a pandemia.<br><br>
+          Conte conosco para descobrir a vinicultura nacional!
+        </p>
+      </div>
+    </div>
   </div>
-
-  <div class="p-3 m-3 mb-5 text-center" data-aos="fade-up" data-aos-delay="50">
+  
+  <div class="p-3 m-3 mb-5 mt-5 text-center" data-aos="fade-up" data-aos-delay="50">
     <div class="embed-responsive embed-responsive-16by9">
       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/35Q00Tz6NnQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 
+  <div class="mt-5 ml-3 mr-3 pb-4 pl-3 pr-3" data-aos="fade-up" data-aos-delay="50">
+    <h2 class="sobre_color"><b>Nossa Equipa</b></h2>
+  </div>
+
+  <section>
+  
+    <div class="cont s--inactive mb-5" data-aos="fade-up" data-aos-delay="150">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Sérgio Silvestre</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Full-Stack Developer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Guilherme Meireles</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Front-End Developer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">José Parreira</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Full-Stack Developer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Miguel Pereira</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Back-end Developer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">Pedro Monteiro</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Designer</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+  </div>
+  <!-- cont inner end -->
+</div>
+
+    </section>
 </div>
 
 <!-- ======= Our Team Section ======= -->
@@ -132,101 +245,7 @@
         </div>
     </section>-->
     
-    <section>
-
-    <div class="section-title mb-0" data-aos="fade-up" data-aos-delay="50">
-        <h2>Nossa Equipa</h2>
-        <p>Somos uma equipa de 5 jovens muito empenhados a trabalhar neste projeto. Venha nos conhecer.</p>
-    </div>
-
-    <div class="cont s--inactive" data-aos="fade-up" data-aos-delay="150">
-  <!-- cont inner start -->
-  <div class="cont__inner">
-    <!-- el start -->
-    <div class="el">
-      <div class="el__overflow">
-        <div class="el__inner">
-          <div class="el__bg"></div>
-          <div class="el__preview-cont">
-            <h2 class="el__heading">Sérgio Silvestre</h2>
-          </div>
-          <div class="el__content">
-            <div class="el__text">Full-Stack Developer</div>
-            <div class="el__close-btn"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- el end -->
-    <!-- el start -->
-    <div class="el">
-      <div class="el__overflow">
-        <div class="el__inner">
-          <div class="el__bg"></div>
-          <div class="el__preview-cont">
-            <h2 class="el__heading">Guilherme Meireles</h2>
-          </div>
-          <div class="el__content">
-            <div class="el__text">Front-End Developer</div>
-            <div class="el__close-btn"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- el end -->
-    <!-- el start -->
-    <div class="el">
-      <div class="el__overflow">
-        <div class="el__inner">
-          <div class="el__bg"></div>
-          <div class="el__preview-cont">
-            <h2 class="el__heading">José Parreira</h2>
-          </div>
-          <div class="el__content">
-            <div class="el__text">Full-Stack Developer</div>
-            <div class="el__close-btn"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- el end -->
-    <!-- el start -->
-    <div class="el">
-      <div class="el__overflow">
-        <div class="el__inner">
-          <div class="el__bg"></div>
-          <div class="el__preview-cont">
-            <h2 class="el__heading">Miguel Pereira</h2>
-          </div>
-          <div class="el__content">
-            <div class="el__text">Back-end Developer</div>
-            <div class="el__close-btn"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- el end -->
-    <!-- el start -->
-    <div class="el">
-      <div class="el__overflow">
-        <div class="el__inner">
-          <div class="el__bg"></div>
-          <div class="el__preview-cont">
-            <h2 class="el__heading">Pedro Monteiro</h2>
-          </div>
-          <div class="el__content">
-            <div class="el__text">Designer</div>
-            <div class="el__close-btn"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- el end -->
-  </div>
-  <!-- cont inner end -->
-</div>
-
-    </section>
+    
 
 @endsection
 @section("javascript")
