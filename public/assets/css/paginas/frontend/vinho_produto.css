@@ -3,7 +3,7 @@ body {
     color: #444;
 }
 
-.prod-cat li a{
+.prod-cat li a {
     border-bottom: 1px dashed #d9d9d9;
 }
 
@@ -132,7 +132,6 @@ body {
 .container_img {
     max-width: 30em;
     margin: 0 auto;
-    padding: 1em;
 }
 
 
@@ -154,9 +153,12 @@ body {
 .gallery__hero {
     overflow: hidden;
     position: relative;
-    padding: 2em;
     margin: 0 0 0.3333333333em;
     background: #fff;
+}
+
+.gallery__hero img {
+    width: 100px;
 }
 
 .gallery__thumbs {
@@ -168,14 +170,18 @@ body {
     display: inline-block;
     width: 20%;
     padding: 0.5em;
-    opacity: 0.75;
+    opacity: 0.2;
     transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .gallery__thumbs a:hover {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 .gallery__thumbs a.is-active {
-    opacity: 0.2;
+    opacity: 0.75;
+}
+
+.gallery__thumbs img {
+    width: 30px;
 }
