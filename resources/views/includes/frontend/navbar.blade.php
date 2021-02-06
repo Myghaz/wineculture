@@ -15,7 +15,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto py-4 py-md-0">
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='index' )  @endif">
-                                <a class="nav-link" data-toggle="dropdown" href="{{ route('index') }}">Início</a>
+                                <a class="nav-link" data-toggle="dropdown" href="/">Início</a>
                             </li>
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='sobre_vinhos' ) active @endif">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
