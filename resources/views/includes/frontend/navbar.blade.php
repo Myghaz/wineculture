@@ -5,7 +5,8 @@
                 <nav class="navbar navbar-expand-md navbar-light">
 
                     <a class="navbar-brand" href="{{ route('index') }}"><img
-                            src="{{ asset('assets\img\logos\wineculture_logo_lightmode.png') }}" alt=""></a>
+                            src="{{ asset('assets\img\logos\wineculture_logo_lightmode.png') }}" alt="">
+                    </a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -14,8 +15,8 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto py-4 py-md-0">
-                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='index' )  @endif">
-                                <a class="nav-link" data-toggle="dropdown" href="/">Início</a>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='index' ) active @endif">
+                                <a class="nav-link" href="{{ route('index') }}">Início</a>
                             </li>
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='sobre_vinhos' ) active @endif">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
@@ -24,6 +25,9 @@
                                     <a class="dropdown-item" href="{{ route('sobre_vinhos') }}">Sobre Vinhos</a>
                                     <a class="dropdown-item" href="{{ route('vinhos') }}">Tipos de Vinhos</a>
                                 </div>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='receitas' ) active @endif">
+                                <a class="nav-link" href="{{ route('receitas') }}">Receitas</a>
                             </li>
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='index_blog_frontend' ) active @endif">
                                 <a class="nav-link" href="{{ route('index_blog_frontend') }}">Notícias</a>
@@ -40,9 +44,10 @@
                             @if (!Auth::check())
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{{ route('login') }}">Login</a>
-                                </li>@elseif (Auth::user()->tipouser=="Administrador")
+                            </li>@elseif (Auth::user()->tipouser=="Administrador")
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" class="nav-link" href="{{ route('admin_dashboard') }}">Admin</a>
+                                    <a class="nav-link" class="nav-link"
+                                        href="{{ route('admin_dashboard') }}">Admin</a>
                                 </li>
                             @endif
                         </ul>

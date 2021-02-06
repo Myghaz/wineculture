@@ -57,7 +57,7 @@
                         <i class="dropdown icon"></i>
                         O que são cookies?
                     </div>
-                    <div class="content">
+                    <div class="content pdp">
                         <p>
                             Como é prática comum em quase todos os sites profissionais, este site usa cookies, que são
                             pequenos arquivos
@@ -74,7 +74,7 @@
                         <i class="dropdown icon"></i>
                         Como usamos os cookies?
                     </div>
-                    <div class="content">
+                    <div class="content pdp">
                         <p>
                             Utilizamos cookies por vários motivos, detalhados abaixo. Infelizmente, na maioria dos
                             casos,
@@ -94,7 +94,7 @@
                         <i class="dropdown icon"></i>
                         Desativar cookies
                     </div>
-                    <div class="content">
+                    <div class="content pdp">
                         <p>
                             Você pode impedir a configuração de cookies ajustando as configurações do seu navegador
                             (consulte a Ajuda do
@@ -111,7 +111,7 @@
                         <i class="dropdown icon"></i>
                         Cookies que definimos
                     </div>
-                    <div class="content">
+                    <div class="content pdp">
                         <p>
                         <ul>
                             <h3 class="header_li">Cookies relacionados à conta</h3>
@@ -189,7 +189,7 @@
                         <i class="dropdown icon"></i>
                         Cookies de Terceiros
                     </div>
-                    <div class="content">
+                    <div class="content pdp">
                         <p>
                             Em alguns casos especiais, também usamos cookies fornecidos por terceiros confiáveis. A
                             seção a
