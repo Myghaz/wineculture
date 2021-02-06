@@ -1,3 +1,8 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444;
+}
+
 hr {
     overflow: visible;
     box-sizing: content-box;

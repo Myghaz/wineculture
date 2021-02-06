@@ -7,18 +7,18 @@ span.toggledark {
     top: 20px;
     right: 25px;
     font-size: 150%;
-    z-index: 20;
+    z-index: 500;
 }
 
 span.toggledark:before {
     content: "\f0eb";
-    font-family: 'FontAwesome'; 
-    color: black;  
+    font-family: 'FontAwesome';
+    color: black;
 }
 
 span.toggledark.active:before {
     content: "\f0eb";
-    font-family: 'FontAwesome'; 
+    font-family: 'FontAwesome';
     color: white;
 }
 
@@ -52,7 +52,7 @@ span.wave.active {
 .defs{
     position: fixed;
     top: 0;
-    z-index: 20;
+    z-index: 500;
 }
 
 .pie {
@@ -183,4 +183,3 @@ span.wave.active {
   .active .hamburger path:nth-child(5) {
     transform: rotate(-45deg);
   }
-  

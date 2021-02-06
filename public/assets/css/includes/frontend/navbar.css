@@ -1,357 +1,251 @@
-html {
-    --background: #FFF;
-    --color: black;
-    --background-image: url("../../../img/layouts/wineculture_logo_lightmode.png");
-    --border-bottom: 2px solid #742f37;
-    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    --box-shadow-footer: 0 -5px 5px -5px #333;
-    scroll-behavior: smooth;
-    height: 100%; 
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+/* Please ❤ this if you like it! */
+/* #Primary ================================================== */
+::selection {
+    color: #fff;
+    background-color: #8167a9;
 }
-
-.theme-dark {
-    --background: #212121;
-    --color: #FFF;
-    --background-image: url("../../../img/layouts/wineculture_logo_darkmode.png");
-    --border-bottom: 2px solid white;
-    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
-    --box-shadow-footer: 0 -5px 5px -5px #ffffff;
+::-moz-selection {
+    color: #fff;
+    background-color: #8167a9;
 }
-
-body {
-    overflow-x: hidden;
-    height: 100%;
-}
-
-body::-webkit-scrollbar-track {
-    border: 1px solid;
-    padding: 2px 0;
-    background-color: white
-}
-
-body::-webkit-scrollbar {
-    width: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: linear-gradient(0deg, #5e262d 0%, #9d0214 100%);
-    border: 1px solid #000;
-    padding: 5px;
-}
-
-.navv {
-    width: 100%;
-    margin: auto;
-    box-shadow: var(--box-shadow);
-    top: 0;
-    z-index: 20;
-    position: sticky;
-    position: -webkit-sticky;
-}
-
-
-/* --- NAVBAR ---*/
-
-.navbar {
-    display: flex;
-    position: relative;
-    align-items: center;
-    height: 75px;
-    background: var(--background);
-    font-size: 13.5pt;
-    box-shadow: var(--box-shadow);
-    padding: 0 300px;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    z-index: 20;
-}
-
-.img {
-    height: 100%;
-    width: 7%;
-    cursor: pointer;
-    margin-left: 17%;
-    background-image: var(--background-image);
-    background-size: cover;
-    background-position: 40% 40%;
-    z-index: 20;
-}
-
-.navbar ul {
-    flex: 1;
-    text-align: right;
-    margin-right: 17%;
-    padding-top: 18px;
-    z-index: 20;
-}
-
-.navbar ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 5px;
-}
-
-.navbar ul li a {
-    font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    text-decoration: none;
-    color: var(--color);
-    padding: 10px 10px;
-    position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-}
-
-.navbar button {
-    color: var(--color);
-}
-
-.navbar ul li.active a {
-    border-bottom: var(--border-bottom);
-    content: '';
-    width: 100%;
-    height: 100%;
-    transition: all 0.2s;
-}
-
-.navbar ul li a:hover::after {
-    height: 100%;
-}
-
-div.bb a:before,
-div.bb a:after {
-    border-bottom: var(--border-bottom);
-    position: absolute;
-    content: '';
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-}
-
-div.bb a:before {
-    left: 0px;
-    top: 0px;
-}
-
-div.bb a:after {
-    right: 0px;
-    bottom: 0px;
-}
-
-div.bb a:hover:before,
-div.bb a:hover:after {
+/* #Navigation ================================================== */
+.start-header {
     opacity: 1;
+    box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.25);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.fa-caret-down{
+    margin-right:5px;
+}
+
+.navigation-wrap {
+    position: fixed;
     width: 100%;
-    transition: all 0.2s;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
-
-.menu {
-    right: 0;
-    margin-right: 20px;
-    font-size: 20pt;
-    display: none;
+.navbar {
+    padding: 0;
 }
-
-
-/* The container <div> - needed to position the dropdown content */
-
-.dropdown {
+.navbar-brand img {
+    height: 67px;
+    width: auto;
+    margin: 0px !;
+}
+.navbar-toggler {
+    float: right;
+    border: none;
+}
+.navbar-toggler:
+.navbar-toggler:focus {
+    outline: none;
+}
+.navbar-light .navbar-toggler-icon {
+    width: 24px;
+    height: 17px;
+    background-image: none;
     position: relative;
+    border-bottom: 1px solid #000;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after,
+.navbar-light .navbar-toggler-icon:before {
+    width: 24px;
+    position: absolute;
+    height: 1px;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: 2;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after {
+    top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+    transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+    transform: translateY(8px) rotate(-45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    border-color: transparent;
+}
+.nav-link {
+    color: #212121 !important;
+    font-weight: 500;
+    transition: all 200ms linear;
+}
+.nav-item:hover .nav-link {
+    color: #4b1825 !important;
+}
+.nav-item.active .nav-link {
+    font-weight: 600;
+    color: #4b1825 !important;
+}
+.nav-link {
+    position: relative;
+    padding: 5px 0 !important;
     display: inline-block;
 }
-
-
-/* Dropdown Content (Hidden by Default) */
-
-.dropdown-content {
+.nav-item:after {
     position: absolute;
-    width: 250px;
-    margin-left: -65px;
-    z-index: 1;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #4b1825;
+    opacity: 0;
+    transition: all 200ms linear;
+}
+.nav-item:hover:after {
+    bottom: 0;
+    opacity: 1;
+}
+.nav-item.active:hover:after {
+    opacity: 0;
+}
+.nav-item {
+    position: relative;
+    font-size: 20px !important;
+    transition: all 200ms ease-in-out;
+}
+/* #Primary style ================================================== */
+.bg-light {
+    background-color: #fff !important;
+    transition: all 200ms linear;
+}
+.nav-item .dropdown-menu {
+    transform: translate3d(0, 10px, 0);
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+    transition: all 300ms ease-in-out;
+}
+.nav-item.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 999px;
+    transform: translate3d(0, 0px, 0);
+}
+.dropdown-menu {
+    padding: 10px !important;
+    margin: 0;
+    font-size: 19px;
+    letter-spacing: 1px;
+    color: #212121;
+    background-color: #fcfaff;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    transition: all 200ms linear;
+}
+.dropdown-toggle::after {
     display: none;
 }
-
-.stage {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 26px 0;
+.dropdown-item {
+    padding: 3px 15px;
+    color: #212121;
+    border-radius: 2px;
+    transition: all 200ms linear;
 }
-
-.p1,
-.p2,
-.p3,
-.p4 {
-    font-size: 28px;
-    text-align: center;
-    margin-top: -7px;
-    cursor: pointer;
-    width: 100%;
-    background: white;
-    color: black;
-    border-radius: 10px;
-    font-family: Century Gothic;
-    letter-spacing: 5px;
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #fff;
+    background-color: #4b1825;
 }
-
-.p1,
-.p3 {
-    animation-name: rotdireita;
-    animation-duration: 0.7s;
-}
-
-.p2,
-.p4 {
-    animation-name: rotesquerda;
-    animation-duration: 0.7s;
-}
-
-@keyframes rotdireita {
-    from {
-        margin-top: 0px;
-        transform: rotateY(90deg)
+/* #Media ================================================== */
+@media (max-width: 767px) {
+    .navbar-brand img {
+        height: 67px;
+        width: auto;
+        margin-left: 100%;
     }
-    to {
-        transform: rotateY(360deg);
-        margin-top: -7px;
-    }
-}
 
-@keyframes rotesquerda {
-    from {
-        margin-top: 0px;
-        transform: rotateY(-90deg)
-    }
-    to {
-        transform: rotateY(-360deg);
-        margin-top: -7px;
-    }
-}
-
-.div {
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    width: 200px;
-    height: 40px;
-    margin-top: 4%;
-    transition-duration: 0.2s;
-}
-
-.p:hover {
-    background: white;
-    color: black;
-}
-
-.div:nth-child(odd) {
-    transform: perspective(400px) rotateY(25deg);
-}
-
-.div:nth-child(even) {
-    transform: perspective(400px) rotateY(-25deg);
-}
-
-.div:hover {
-    transform: rotateY(0);
-    background: white;
-    color: black;
-    box-shadow: 0px 0px 0px;
-}
-
-
-/* Links inside the dropdown */
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-
-/* Change color of dropdown links on hover */
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1
-}
-
-
-/* Show the dropdown menu on hover */
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-
-@media screen and (max-width: 1492px) {
-    .navbar ul {
-        margin-right: 2%;
-    }
-    .navbar .img {
-        margin-left: 2%;
-        /*margin-top: 5px;*/
-        width: 100px;
-    }
-    .navbar {
-        border-radius: 0;
-    }
-}
-
-@media screen and (max-width: 1020px) {
-    .menu {
-        display: inline;
-        position: absolute;
-        float: right;
-    }
-    .navbar ul li {
+    .nav-item:after {
         display: none;
     }
-    .navbarmin {
-        display: flex;
-        position: relative;
-        align-items: center;
-        height: 75px;
-        font-size: 13.5pt;
-        width: 100%;
-        background-color: var(--background);
-    }
-    .navbarmin ul {
-        left: 0;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-        margin-top: 560px;
+    .nav-item::before {
         position: absolute;
-        width: 100%;
-        background-color: var(--background);
-        padding-top: 70px;
-        z-index: 20;
-        list-style: none;
+        display: block;
+        top: 15px;
+        left: 0;
+        width: 12px;
+        height: 1px;
+        content: "";
+        border: none;
+        background-color: #000;
     }
-    .navbarmin li {
-        float: left;
-        width: 100%;
-        clear: left;
-        margin-bottom: 50px;
-        text-align: center;
-        font-size: 16pt;
+    .dropdown-toggle::after {
+        position: absolute;
+        display: block;
+        top: 10px;
+        left: -23px;
+        width: 1px;
+        height: 11px;
+        content: "";
+        border: none;
+        background-color: #000;
+        transition: all 200ms linear;
     }
-    .navbarmin ul li a {
-        font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        text-decoration: none;
-        color: #000;
-        padding: 10px 10px;
-        position: relative;
+    .dropdown-toggle[aria-expanded="true"]::after {
+        transform: rotate(90deg);
+        opacity: 0;
     }
-    .navbarmin div.bb a:before,
-    div.bb a:after {
-        background: none;
+    .dropdown-menu {
+        padding: 0 !important;
+        background-color: transparent;
+        box-shadow: none;
+        transition: all 600ms linear;
     }
-    .navbarmin .img {
-        margin-left: 3.5%;
-        width: 130px;
+    .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
     }
+    body.dark .nav-item::before {
+        background-color: #fff;
+    }
+    body.dark .dropdown-toggle::after {
+        background-color: #fff;
+    }
+    body.dark .dropdown-menu {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .fa-caret-down{
+        margin-right:5px;
+        display: none;
+    }
+}
+/* #Link to page ================================================== */
+.logo {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: block;
+    z-index: 100;
+    transition: all 250ms linear;
+}
+.logo img {
+    height: 26px;
+    width: auto;
+    display: block;
+    filter: brightness(10%);
+    transition: all 250ms linear;
+}
+body.dark .logo img {
+    filter: brightness(100%);
 }

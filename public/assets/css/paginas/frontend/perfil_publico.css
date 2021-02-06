@@ -1,4 +1,7 @@
-
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444;
+}
 
 header.header-left {
     background-image: url("https://images.pexels.com/photos/1731427/pexels-photo-1731427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
