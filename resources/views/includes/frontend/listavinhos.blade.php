@@ -19,7 +19,7 @@
         </div>
     </div>
     
-    <div class="dividervinho">    </div>
+    <div class="dividervinho"></div>
     <div title="Próximo Detalhe" class="ui ignored icon direction buttons imgbtndown">
         <div class="ui icon button baixo" data-animation="flip" data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
     </div>

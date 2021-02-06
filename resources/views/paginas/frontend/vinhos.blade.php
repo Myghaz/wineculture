@@ -15,11 +15,9 @@
 </div>
 <div class="ui grid">
 	<div class="ui large breadcrumb">
-		<a class="section">Home</a>
+		<a class="section">Início</a>
 		<i class="right chevron icon divider"></i>
-		<a class="section">Registration</a>
-		<i class="right chevron icon divider"></i>
-		<div class="active section">Personal Information</div>
+		<div class="active section">Lista de Vinhos</div>
 	</div>
 </div>
 <div class="ui basic modal acarregar">

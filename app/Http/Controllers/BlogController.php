@@ -18,8 +18,7 @@ class BlogController extends Controller
 
     public function indexFrontend(Request $request)
     {
-        $blogss = Blog::paginate(12);
-        $blogs = Blog::all();
+        $blogs = Blog::paginate(16);
         $blogtotall = $blogs->count();
         $categorias = Category::select('name')->get();
         $users = User::all();

@@ -3,16 +3,16 @@
 @section('title', 'Blog')
 
 @section("links")
-<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/blog.css') }}">
+
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.css">
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.js"></script>
-
+<link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/blog.css') }}">
 @endsection
 
 @section("content")
-<br>
+
 <div class="banner">
-	<img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/blog/blogback.jpg') }}" alt="banner">
+    <img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/blog/blogback.jpg') }}" alt="banner">
 </div>
 <div class="row">
     <div class="ui basic modal acarregar">
@@ -28,35 +28,34 @@
         </div>
     </div>
 </div>
-    <div class="ui grid maincontainer">
-        <div class="row">
-            <div class="sixteen wide column vinhosheader">
-                <div class="ui attached stackable menu semiheader">
-                    <div class="ui container headercontainer">
-                        <a class="item">
-                            {{$blogtotall}} Posts encontrados
-                        </a>
-                        <a class="item refresh">
-                            <i id="refreshvinhos" class="sync icon"></i>
-                        </a>
-                        <div title="Filtrar Lista" class="right item ordenacao">
-                            <div class="ui labeled icon dropdown">
-                                <i class="filter icon iconfiltro"></i>
-                                <span class="text">Filtrar Lista</span>
-                                <div class="menu">
-                                    <div class="header">
-                                        <i class="tags icon tagsicon"></i>
-                                        Ordenar por:
-                                    </div>
-                                    <div class="item">
-                                        Alfabética
-                                    </div>
-                                    <div class="item">
-                                        Classificação
-                                    </div>
-                                    <div class="item">
-                                        Data de Postagem
-                                    </div>
+<div class="ui grid maincontainer">
+    <div class="row">
+        <div class="sixteen wide column vinhosheader">
+            <div class="ui attached stackable menu semiheader">
+                <div class="ui container headercontainer">
+                    <a class="item">
+                        {{$blogtotall}} Posts encontrados
+                    </a>
+                    <a class="item refresh">
+                        <i id="refreshvinhos" class="sync icon"></i>
+                    </a>
+                    <div title="Filtrar Lista" class="right item ordenacao">
+                        <div class="ui labeled icon dropdown">
+                            <i class="filter icon iconfiltro"></i>
+                            <span class="text">Filtrar Lista</span>
+                            <div class="menu">
+                                <div class="header">
+                                    <i class="tags icon tagsicon"></i>
+                                    Ordenar por:
+                                </div>
+                                <div class="item">
+                                    Alfabética
+                                </div>
+                                <div class="item">
+                                    Classificação
+                                </div>
+                                <div class="item">
+                                    Data de Postagem
                                 </div>
                             </div>
                         </div>
@@ -65,23 +64,23 @@
             </div>
         </div>
     </div>
+</div>
 <section>
     <div class="containerr">
         <div class="card-column column-0">
             @foreach($blogs as $value)
             <div class="card card-color-0">
                 <input type="hidden" name="id" value="{{$value->id}}">
-                <div class="border"></div>
                 <img src="{{ url('storage/blog/' .$value->img)}}" />
                 <div style="display: none;" id="text{{$value->id}}">
 
-                    <h1  id="titulo">{{$value->titulo}}</h1>
+                    <h1 id="titulo">{{$value->titulo}}</h1>
                     <p id="data">{{$value->created_at}}</p>
                     <div class="autor" id="autor">
                         <img src="http://wineculture.test/wp-content/uploads/2020/10/banner5.jpg" /><span class="nome">
-                        @foreach($users as $user)
-                        @if ($user->id == $value->id_user)
-                        {{$user->name}}</span><span>{{$user->apelido}}</span>
+                            @foreach($users as $user)
+                            @if ($user->id == $value->id_user)
+                            {{$user->name}}</span><span>{{$user->apelido}}</span>
                         @endif
                         @endforeach
                     </div>
@@ -89,19 +88,21 @@
                 <div class="texto"><br>
                     <h2 id="texto_titulo" class="tituloh1" class="info">{{$value->titulo}}
                         <span class="categoria">
-                        @foreach($categorias as $categoria)
-                        @if ($categoria->id == $value->id_categoria)
-                        {{$categoria->name}}
-                        @endif
-                        @endforeach
+                            @foreach($categorias as $categoria)
+                            @if ($categoria->id == $value->id_categoria)
+                            {{$categoria->name}}
+                            @endif
+                            @endforeach
                         </span>
                     </h2>
-<div style="text-align: center;">
-                    <p>Autor <em>{{$value->user->name}}</em>  |  Publicado em <em>{{ date('d/m/Y', strtotime($value->created_at))}}</em></p>
-</div>
-<div class="bermaiiis"><br>
-                    <a href="{{route('previewBlog',$value)}}" class="bermais">Ler Mais</a>
-                </div></div>
+
+                    <div class="bermaiiis">
+                        <a href="{{route('previewBlog',$value)}}" class="bermais">Lêr Mais</i></a>
+                    </div>
+                </div>
+                <div class="autorblog">
+                    <p>Autor: <em>{{$value->user->name}}</em> | Publicado em <em>{{ date('d/m/Y', strtotime($value->created_at))}}</em></p>
+                </div>
             </div>
             @endforeach
         </div>
