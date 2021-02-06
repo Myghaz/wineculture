@@ -39,6 +39,10 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Receita</label>
+        <textarea class="ckeditor form-control" readonly id="exampleFormControlTextarea1" rows="3" name="descricao">{{$receita->ingre}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Receita</label>
         <textarea class="ckeditor form-control" readonly id="exampleFormControlTextarea1" rows="3" name="descricao">{{$receita->preparo}}</textarea>
       </div>
   </div>

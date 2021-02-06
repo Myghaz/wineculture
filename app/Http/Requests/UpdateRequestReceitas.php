@@ -26,6 +26,7 @@ class UpdateRequestReceitas extends FormRequest
         return [
             'nome' => 'required|min:3|max:20|',
             'descricao' => 'required',
+            'ingre' => 'nullable',
             'preparo' => 'nullable',
             'id_categoria' => 'required|exists:category_wines,id'
         ];

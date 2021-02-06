@@ -26,7 +26,9 @@ class StoreRequestReceitas extends FormRequest
         return [
             'nome' => 'required|min:3|max:20|',
             'descricao' => 'required',
+            'ingre' => 'nullable',
             'preparo' => 'nullable',
+            'foto' => 'required',
             'id_categoria' => 'required|exists:category_wines,id'
         ];
     }
@@ -35,6 +37,7 @@ class StoreRequestReceitas extends FormRequest
         return [
             'nome.required' => 'Nome obrigatório!',
             'descricao.required' => 'Descrição obrigatória',
+            'foto.required' => 'Foto obrigatória',
             'id_categoria.required' => 'Categoria obrigatória'
         ];
     }

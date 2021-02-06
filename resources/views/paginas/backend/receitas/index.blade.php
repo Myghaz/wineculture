@@ -136,6 +136,10 @@
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descricao"></textarea>
                     </div>
                     <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Ingredientes</label>
+                        <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3" name="ingre"></textarea>
+                    </div>
+                    <div class="form-group">
                         <label for="exampleFormControlTextarea1">Receita</label>
                         <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3" name="preparo"></textarea>
                     </div>
