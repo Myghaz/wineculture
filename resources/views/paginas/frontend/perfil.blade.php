@@ -85,8 +85,9 @@
                         </div>
                     </div>
                     <div style="background-color: white;" class="card-body">
-                        <form action="" method="POST">
+                        <form action="{{route('users.update', Auth::user()->id)}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
+                            @method('PUT')
                             <h6 class="heading-small text-muted mb-4">Informação do Utilizador</h6>
                             <div class="pl-lg-4">
                                 <div class="row">
@@ -102,13 +103,13 @@
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-nome">Nome</label>
-                                            <input type="text" id="input-nome" class="form-control form-control-alternative" readonly placeholder="{{Auth::user()->name}}">
+                                            <input type="text" name="name" id="input-nome" class="form-control form-control-alternative" value="{{Auth::user()->name}}">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
-                                            <label class="form-control-label" for="input-apelido">Apelido Nome</label>
-                                            <input type="text" id="input-apelido" class="form-control form-control-alternative" readonly placeholder="{{Auth::user()->apelido}}">
+                                            <label class="form-control-label" for="input-apelido">Apelido</label>
+                                            <input type="text" name="apelido" id="input-apelido" class="form-control form-control-alternative" value="{{Auth::user()->apelido}}">
                                         </div>
                                     </div>
                                 </div>
@@ -120,7 +121,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-nasci">Data de Nascimento</label>
-                                            <input name="data_nasc" type="date" id="input-nasci" class="form-control form-control-alternative" placeholder="{{Auth::user()->data_nasc}}">
+                                            <input name="data_nasc" type="date" id="input-nasci" class="form-control form-control-alternative" value="{{Auth::user()->data_nasc}}">
                                         </div>
                                     </div>
                                 </div>
@@ -129,10 +130,9 @@
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-genero">Género</label>
                                             <select name="genero" class="form-control" id="input-genero">
-                                                <option selected disabled value="Nao Revelar">Não Revelar</option>
-                                                <option value="Masculino">Masculino</option>
-                                                <option value="Feminino">Feminino</option>
-                                                <option value="Nao Revelar">Não Revelar</option>
+                                                <option @if (Auth::user()->genero=="Nao Revelar") selected @endif value="Nao Revelar">Não Revelar</option>
+                                                <option @if (Auth::user()->genero=="Masculino") selected @endif value="Masculino">Masculino</option>
+                                                <option @if (Auth::user()->genero=="Feminino") selected @endif value="Feminino">Feminino</option>
                                             </select>
                                         </div>
                                     </div>
@@ -140,10 +140,9 @@
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-pais">Pais</label>
                                             <select name="pais" class="form-control" id="input-pais">
-                                                <option selected disabled value="{{Auth::user()->pais}}">{{Auth::user()->pais}}</option>
-                                                <option value="Portugal">Portugal</option>
-                                                <option value="Espanha">Espanha</option>
-                                                <option value="França">França</option>
+                                                <option @if (Auth::user()->pais=="Portugal") selected @endif value="Portugal">Portugal</option>
+                                                <option @if (Auth::user()->pais=="Espanha") selected @endif value="Espanha">Espanha</option>
+                                                <option @if (Auth::user()->pais=="França") selected @endif value="França">França</option>
                                             </select>
                                         </div>
                                     </div>
