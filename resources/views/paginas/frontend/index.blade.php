@@ -208,8 +208,8 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
             <div class="section-title">
-                <h2>Portefólio</h2>
-                <p>Neste Portefólio dispomos de algumas imagens que achamos mais relevantes ao objetivo da associação WineCulture.</p>
+                <h2>Portfólio</h2>
+                <p>Neste Portfólio dispomos de algumas imagens que achamos mais relevantes ao objetivo da associação WineCulture.</p>
             </div>
 
             <div class="row">
