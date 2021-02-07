@@ -16,7 +16,7 @@ class VinhosController extends Controller
 {
     public function indexFrontend(Request $request)
     {
-        $vinhos = Vinhos::paginate(12);
+        $vinhos = Vinhos::paginate(16);
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
@@ -65,7 +65,7 @@ class VinhosController extends Controller
 
     public function ordemalfabetica(Request $request)
     {
-        $vinhos = Vinhos::orderBy('nome', 'ASC')->paginate(12);
+        $vinhos = Vinhos::orderBy('nome', 'ASC')->paginate(16);
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
@@ -112,7 +112,7 @@ class VinhosController extends Controller
     }
     public function ordemclassificacao(Request $request)
     {
-        $vinhos = Vinhos::orderBy('created_at', 'DESC')->paginate(12);
+        $vinhos = Vinhos::orderBy('created_at', 'DESC')->paginate(16);
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();
@@ -159,7 +159,7 @@ class VinhosController extends Controller
     }
     public function ordemdata(Request $request)
     {
-        $vinhos = Vinhos::all()->orderBy('created_at', 'DESC')->paginate(12);
+        $vinhos = Vinhos::all()->orderBy('created_at', 'DESC')->paginate(16);
         $vinhostotal = $vinhos->count();
         $vinhos_img = Vinhosimg::all();
         $categorias = category_wine::all();

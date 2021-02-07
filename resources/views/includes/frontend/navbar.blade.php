@@ -20,10 +20,10 @@
                             </li>
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='sobre_vinhos' ) active @endif">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                    aria-haspopup="true" aria-expanded="false"><i class="fa fa-caret-down"></i>Vinho</a>
+                                    aria-haspopup="true" aria-expanded="false">Vinho</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="{{ route('sobre_vinhos') }}">Sobre Vinhos</a>
-                                    <a class="dropdown-item" href="{{ route('vinhos') }}">Tipos de Vinhos</a>
+                                    <a class="dropdown-item" href="{{ route('vinhos') }}">Lista de Vinhos</a>
                                 </div>
                             </li>
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='receitas' ) active @endif">
