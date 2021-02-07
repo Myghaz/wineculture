@@ -19,7 +19,7 @@
                                 <a class="nav-link" href="{{ route('index') }}">Início</a>
                             </li>
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 @if (Route::currentRouteName()=='sobre_vinhos' ) active @endif">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                <a class="nav-link ui popup popupvinhosnav" href="#" role="button"
                                     aria-haspopup="true" aria-expanded="false">Vinho</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="{{ route('sobre_vinhos') }}">Sobre Vinhos</a>
@@ -57,3 +57,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('.boundary.example.button.popupvinhosnav')
+        .popup({
+            boundary: '.boundary.example .segment'
+        });
+
+</script>

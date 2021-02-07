@@ -10,8 +10,9 @@
 
 @section("content")
 <div class="imgbanner_div">
-<img class="imgbanner" src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
+    <img class="imgbanner" src="assets\img\paginas\frontend\receitas\banner-vinho1.jpg" alt="">
 </div>
+
 <div id="containerreceitas" class="container">
     <br>
     <div class="row portfolio">
@@ -64,9 +65,9 @@
         var targets = $('.portfolio-item'),
             buttons = $('.filter-button').click(function() {
                 var value = $(this).data('filter');
-                if (value == "*"){
+                if (value == "*") {
                     buttons.removeClass('filter-active');
-                }else
+                } else
                     $('.filter-tudo').removeClass('filter-active');
 
                 $(this).toggleClass('filter-active');

@@ -134,7 +134,7 @@ $('.ui.accordion')
     .accordion({
         exclusive: false
     });
-$('.ui.dropdown.ordemdrop')
+$('.ui.dropdown')
     .dropdown();
 $('.ui.checkbox')
     .checkbox();

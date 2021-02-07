@@ -10,9 +10,15 @@
 @endsection
 
 @section("content")
-
 <div class="banner">
     <img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/blog/blogback.jpg') }}" alt="banner">
+</div>
+<div class="ui grid bread">
+	<div class="ui large breadcrumb">
+		<a  href="{{route('index')}}" class="section">Início</a>
+		<i class="right chevron icon divider"></i>
+		<div class="active section">Notícias</div>
+	</div>
 </div>
 <div class="row">
     <div class="ui basic modal acarregar">
@@ -34,32 +40,8 @@
             <div class="ui attached stackable menu semiheader">
                 <div class="ui container headercontainer">
                     <a class="item">
-                        {{$blogtotall}} Posts encontrados
+                        {{$blogtotall}} Notícias encontradas
                     </a>
-                    <a class="item refresh">
-                        <i id="refreshvinhos" class="sync icon"></i>
-                    </a>
-                    <div title="Filtrar Lista" class="right item ordenacao">
-                        <div class="ui labeled icon dropdown">
-                            <i class="filter icon iconfiltro"></i>
-                            <span class="text">Filtrar Lista</span>
-                            <div class="menu">
-                                <div class="header">
-                                    <i class="tags icon tagsicon"></i>
-                                    Ordenar por:
-                                </div>
-                                <div class="item">
-                                    Alfabética
-                                </div>
-                                <div class="item">
-                                    Classificação
-                                </div>
-                                <div class="item">
-                                    Data de Postagem
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
