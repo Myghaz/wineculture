@@ -14,7 +14,7 @@
 </div>
 <div class="ui grid bread">
 	<div class="ui large breadcrumb">
-		<a class="section">Início</a>
+		<a  href="{{route('index')}}" class="section">Início</a>
 		<i class="right chevron icon divider"></i>
 		<div class="active section">Lista de Vinhos</div>
 	</div>
