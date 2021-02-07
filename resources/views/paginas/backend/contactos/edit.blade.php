@@ -35,12 +35,10 @@
                 <textarea readonly class="form-control" style="height:140px" id="exampleFormControlTextarea1" rows="3"
                     value="" name="resposta1">{{ $mensagem->mensagem }}</textarea>
             </div>
-
             <div class="form-group">
                 <button type="button" id="btncollapse" class="btn btn-xs btn-warning btn-p first" data-toggle="collapse"
                     data-target="#collapseExample">Responder a Mensagem</button>
             </div>
-
             <form method="POST" action="{{ route('contactos.update', $mensagem) }}">
                 @csrf
                 @method('PATCH')
@@ -67,13 +65,13 @@
 
 
 
-<script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
-<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.ckeditor').ckeditor();
-    });
+    <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+    <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.ckeditor').ckeditor();
+        });
 
-</script>
+    </script>
 
 @endsection
