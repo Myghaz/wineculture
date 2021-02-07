@@ -1,5 +1,5 @@
 .cartao {
-    height:110px;
+    height: 110px;
 }
 
 table #trv td.tdhover:hover {
@@ -7,7 +7,7 @@ table #trv td.tdhover:hover {
     cursor: pointer;
 }
 
-table tbody>tr:hover td.tdhover{
+table tbody>tr:hover td.tdhover {
     color: white!important;
     background: #873740;
 }
