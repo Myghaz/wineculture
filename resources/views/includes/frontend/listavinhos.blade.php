@@ -18,7 +18,7 @@
             @endforeach
         </div>
     </div>
-    
+    </a>
     <div class="dividervinho"></div>
     <div title="Próximo Detalhe" class="ui ignored icon direction buttons imgbtndown">
         <div class="ui icon button baixo" data-animation="flip" data-direction="right" title="Flip Right"><i class="down long arrow icon"></i></div>
@@ -27,7 +27,7 @@
         <div class="ui icon button direita" data-animation="flip" data-direction="right" title="Flip Right"><i class="right long arrow icon"></i></div>
     </div>
 
-
+    <a href="{{route('vinho',$vinho)}}">
     <div class="ui cube shape shapedetalhes shapedetalhes{{$vinho->id}}">
         <input type="hidden" id="id_vinho" value="{{$vinho->id}}">
         <div class="sides sidesdetalhes">

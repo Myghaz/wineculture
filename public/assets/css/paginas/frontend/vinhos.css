@@ -631,6 +631,11 @@ input.qntclvals2,
     .semicontainer {
         margin-top: 50px !important;
     }
+    .bread{
+        width: 100%!important;
+        margin: 0!important;
+        padding:0!important;
+    }
 }
 
 @media screen and (max-width: 844px) {

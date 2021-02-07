@@ -3,7 +3,6 @@
 @section('title', 'Vinhos')
 
 @section('links')
-
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.css">
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.js"></script>
 <link rel="stylesheet" href="{{ URL::asset('assets/css/paginas/frontend/vinhos.css') }}">
@@ -13,7 +12,7 @@
 <div class="banner">
 	<img class="img-fluid banner" src="{{ URL::asset('assets/img/paginas/frontend/vinhos/vinhosback.jpg') }}" alt="banner">
 </div>
-<div class="ui grid">
+<div class="ui grid bread">
 	<div class="ui large breadcrumb">
 		<a class="section">Início</a>
 		<i class="right chevron icon divider"></i>
