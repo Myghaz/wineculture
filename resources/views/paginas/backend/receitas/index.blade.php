@@ -40,13 +40,15 @@
                                     </td>
                                     @foreach ($category_wines as $category_wine)
                                     @if ($receita->id_categoria == $category_wine->id)
-                                    <td class="tdhover d-none d-lg-table-cell">{{ $category_wine->nome }}</td>
+                                    <td class="tdhover ">
+                                        <a class="none d-lg-table-cell">{{ $category_wine->nome }}</a>
+                                    </td>
                                     @endif
                                     @endforeach
                                     @foreach ($Users as $User)
                                     @if ($receita->id_user == $User->id)
-                                    <td class="tdhover d-none d-lg-table-cell">{{ $User->name }}
-                                        {{ $User->apelido }}
+                                    <td class="tdhover">
+                                        <a class="none d-lg-table-cell">{{ $User->name }} {{ $User->apelido }}</a>
                                     </td>
                                     @endif
                                     @endforeach
