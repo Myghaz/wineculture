@@ -17,7 +17,7 @@
         <!-- Header container -->
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
-                <div class="col-lg-7 col-md-10">
+                <div class="col-lg-7 col-md-10 mt-5">
                     <h1 class="display-2 text-white">Olá {{Auth::user()->name}}</h1>
                     <p class="text-white mt-0 mb-5">Este é o seu perfil. Aqui pode consultar os seus dados pessoais.</p>
                 </div>
@@ -129,7 +129,7 @@
                                     <div class="col-lg-4">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-genero">Género</label>
-                                            <select name="genero" class="form-control" id="input-genero">
+                                            <select name="genero" class="form-control select_form" id="input-genero">
                                                 <option @if (Auth::user()->genero=="Nao Revelar") selected @endif value="Nao Revelar">Não Revelar</option>
                                                 <option @if (Auth::user()->genero=="Masculino") selected @endif value="Masculino">Masculino</option>
                                                 <option @if (Auth::user()->genero=="Feminino") selected @endif value="Feminino">Feminino</option>
@@ -138,8 +138,8 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group focused">
-                                            <label class="form-control-label" for="input-pais">Pais</label>
-                                            <select name="pais" class="form-control" id="input-pais">
+                                            <label class="form-control-label" for="input-pais">País</label>
+                                            <select name="pais" class="form-control select_form" id="input-pais">
                                                 <option @if (Auth::user()->pais=="Portugal") selected @endif value="Portugal">Portugal</option>
                                                 <option @if (Auth::user()->pais=="Espanha") selected @endif value="Espanha">Espanha</option>
                                                 <option @if (Auth::user()->pais=="França") selected @endif value="França">França</option>

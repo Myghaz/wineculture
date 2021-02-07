@@ -31,7 +31,7 @@ class StoreVinhosRequest extends FormRequest
             'descricao'  => "required",
             'regiao'  => "required",
 			'qnt_cl'  => "required",
-			'perct_alco'  => 'required|gt:0|lt:100',
+			'perct_alco'  => 'required|gt:0|lt:101',
         ];
     }
     public function messages()
