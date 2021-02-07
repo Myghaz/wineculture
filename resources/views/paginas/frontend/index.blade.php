@@ -172,7 +172,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon"><i class="icofont-grapes"></i></div>
-                    <h4 class="title"><a href="">Melhores Vinhos</a></h4>
+                    <h4 class="title"><a href="/vinhos">Melhores Vinhos</a></h4>
                     <p class="description">Todos os vinhos expostos nos site são premium e certificados pela team WineCulture</p>
                 </div>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
@@ -187,7 +187,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
                     <div class="icon"><i class="icofont-culinary"></i></div>
-                    <h4 class="title"><a href="">Melhores Receitas</a></h4>
+                    <h4 class="title"><a href="/receitas">Melhores Receitas</a></h4>
                     <p class="description">Dispomos das melhores receitas para acompanhar com um certo tipo de vinho-</p>
                 </div>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
@@ -232,7 +232,6 @@
                             <p>Vinhos</p>
                             <div class="portfolio-links">
                                 <a href="/assets/img/paginas/frontend/index/portfolio/vin-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="icofont-eye"></i></a>
-                                <a href="" title="More Details"><i class="icofont-external-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -245,7 +244,6 @@
                             <p>Marcas</p>
                             <div class="portfolio-links">
                                 <a href="/assets/img/paginas/frontend/index/portfolio/marc-1.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
-                                <a href="" title="More Details"><i class="icofont-external-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -258,7 +256,6 @@
                             <p>Vinhos</p>
                             <div class="portfolio-links">
                                 <a href="/assets/img/paginas/frontend/index/portfolio/vin-2.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-eye"></i></a>
-                                <a href="" title="More Details"><i class="icofont-external-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -271,7 +268,6 @@
                             <p>Receitas</p>
                             <div class="portfolio-links">
                                 <a href="/assets/img/paginas/frontend/index/portfolio/rec-2.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-eye"></i></a>
-                                <a href="" title="More Details"><i class="icofont-external-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -284,7 +280,6 @@
                             <p>Marcas</p>
                             <div class="portfolio-links">
                                 <a href="/assets/img/paginas/frontend/index/portfolio/marc-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-eye"></i></a>
-                                <a href="" title="More Details"><i class="icofont-external-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -297,7 +292,6 @@
                             <p>Vinhos</p>
                             <div class="portfolio-links">
                                 <a href="/assets/img/paginas/frontend/index/portfolio/vin-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="icofont-eye"></i></a>
-                                <a href="" title="More Details"><i class="icofont-external-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -310,7 +304,6 @@
                             <p>Receitas</p>
                             <div class="portfolio-links">
                                 <a href="/assets/img/paginas/frontend/index/portfolio/rec-1.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="icofont-eye"></i></a>
-                                <a href="" title="More Details"><i class="icofont-external-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -323,7 +316,6 @@
                             <p>Receitas</p>
                             <div class="portfolio-links">
                                 <a href="/assets/img/paginas/frontend/index/portfolio/rec-3.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-eye"></i></a>
-                                <a href="" title="More Details"><i class="icofont-external-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -336,7 +328,6 @@
                             <p>Marcas</p>
                             <div class="portfolio-links">
                                 <a href="/assets/img/paginas/frontend/index/portfolio/marc-3.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
-                                <a href="" title="More Details"><i class="icofont-external-link"></i></a>
                             </div>
                         </div>
                     </div>
