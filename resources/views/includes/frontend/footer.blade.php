@@ -37,15 +37,15 @@
                     </li>
                     <li>
                         Telefone:&nbsp;&nbsp;<i class="fa fa-phone"></i>&nbsp;
-                        (+351) 244 830 010
+                        <a href="tel:(+351) 244 830 010">(+351) 244 830 010</a>
                     </li>
                     <li>
                         Telemóvel:&nbsp;<i class="fa fa-phone">&nbsp;</i>
-                        967 830 010
+                        <a href="tel:967 830 010">967 830 010</a>
                     </li>
                     <li>
                         Email:&nbsp;<i class="fa fa-envelope"></i>&nbsp;
-                        wineculture@wineculture.com
+                        <a href="mailto:wineculture@wineculture.com">wineculture@wineculture.com</a>
                     </li>
                 </ul>
             </div>
@@ -54,9 +54,9 @@
     <div class="col-md-2 footer-social">
         <h4>Redes Sociais:</h4>
         <ul>
-            <li><i class="fa fa-facebook-square socials_icon"></i><a href="">Facebook</a></li>
-            <li><i class="fa fa-twitter socials_icon"></i><a href="">Twitter</a></li>
-            <li><i class="fa fa-instagram socials_icon"></i><a href="">Instagram</a></li>
+            <li><a href=""><i class="fa fa-facebook-square socials_icon"></i>Facebook</a></li>
+            <li><a href=""><i class="fa fa-twitter socials_icon"></i>Twitter</a></li>
+            <li><a href=""><i class="fa fa-instagram socials_icon"></i>Instagram</a></li>
         </ul>
     </div>
 </div>
