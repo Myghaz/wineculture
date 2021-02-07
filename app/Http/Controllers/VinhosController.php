@@ -209,11 +209,14 @@ class VinhosController extends Controller
         $vinho_det = Vinhos::find($vinho);
         $vinho_cat = category_wine::find($vinho_det->id_categoria);
         $vinho_produtor = User::find($vinho_det->id_produtor);
+        $vinhos_image = Vinhosimg::all();
+        $vinhos_foto = $vinhos_image->where('id_vinho', $vinho);
 
         return view('paginas.frontend.vinho_produto', compact([
             'vinho_det',
             'vinho_cat',
-            'vinho_produtor'
+            'vinho_produtor',
+            'vinhos_foto'
         ]));
     }
 

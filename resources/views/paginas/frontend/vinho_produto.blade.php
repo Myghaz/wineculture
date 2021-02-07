@@ -8,7 +8,7 @@
 
 @section("content")
 
-<div class="container" style="margin-top:100px">
+<div class="container conte">
 
   <div class="row">
 
@@ -27,15 +27,16 @@
 
   <!--Gallery Thumbs-->
   <div class="gallery__thumbs">
-      <a href="\storage\vinhos\{{$vinho_det->img}}" data-gallery="thumb" class="is-active">
+      
+      @foreach($vinhos_foto as $key => $foto)
+      <!--<a href="\storage\vinhos\{{$vinho_det->img}}" data-gallery="thumb" class="is-active">
         <img src="\storage\vinhos\{{$vinho_det->img}}">
+      </a>-->
+      <a href="\storage\vinhos\{{$foto->img}}" data-gallery="thumb">
+        <img class="vinhomini_img" src="\storage\vinhos\{{$foto->img}}">
       </a>
-      <a href="\storage\vinhos\{{$vinho_det->img}}" data-gallery="thumb">
-        <img src="\storage\vinhos\{{$vinho_det->img}}">
-      </a>
-      <a href="\storage\vinhos\{{$vinho_det->img}}" data-gallery="thumb">
-        <img src="\storage\vinhos\{{$vinho_det->img}}">
-      </a>
+      @endforeach
+      
   </div>
   <!--Gallery Thumbs-->
 
