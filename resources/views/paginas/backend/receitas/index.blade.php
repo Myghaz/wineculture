@@ -36,24 +36,24 @@
                                 <tr id="trv">
                                     <td class="tdhover d-none d-lg-table-cell"><img src="{{asset('storage/receitas/'.$receita->foto) }}" class="rounded-circle w-45" style="width: 60px; height: 60px; object-fit: cover;"></td>
                                     <td class="tdhover">
-                                        <a class="none d-lg-table-cell" >{{ $receita->nome }}</a>
+                                        <a class="d-none d-lg-table-cell" >{{ $receita->nome }}</a>
                                     </td>
                                     @foreach ($category_wines as $category_wine)
                                     @if ($receita->id_categoria == $category_wine->id)
                                     <td class="tdhover ">
-                                        <a class="none d-lg-table-cell">{{ $category_wine->nome }}</a>
+                                        <a class="d-none d-lg-table-cell">{{ $category_wine->nome }}</a>
                                     </td>
                                     @endif
                                     @endforeach
                                     @foreach ($Users as $User)
                                     @if ($receita->id_user == $User->id)
                                     <td class="tdhover">
-                                        <a class="none d-lg-table-cell">{{ $User->name }} {{ $User->apelido }}</a>
+                                        <a class="d-none d-lg-table-cell">{{ $User->name }} {{ $User->apelido }}</a>
                                     </td>
                                     @endif
                                     @endforeach
                                     <td class="tdhover">
-                                        <a class="none d-lg-table-cell tdhover">{{ $receita->descricao }}</a>
+                                        <a class="d-none d-lg-table-cell tdhover">{{ $receita->descricao }}</a>
                                     </td>
                                     <td class="tdhover">
                                         <div class="acoes">
