@@ -54,7 +54,7 @@
                                         <a class="text-dark" href="">{{ $receita->descricao }}</a>
                                     </td>
                                     <td class="acoes">
-                                        <a href="{{ route('receitas.show', $receita) }}" class="btn btn-xs btn-primary btn-p"><i class="fas fa-eye fa-xs"></i></a>
+                                        <a href="{{ route('receitas.show', $receita) }}" class="btn btn-xs btn-success btn-p"><i class="fas fa-eye fa-xs"></i></a>
                                         <a href="{{ route('receitas.edit', $receita) }}" class="btn btn-xs btn-warning btn-p"><i class="fas fa-pen fa-xs"></i></a>
                                         <button type="button" class="btn btn-xs btn-danger btn-p" data-toggle="modal" data-target="#deleteConfirmModal" data-route="{{ route('receitas.destroy', $receita) }}"><i class="fas fa-trash fa-xs" data-toggle="tooltip" data-placement="top" title="Eliminar"></i></button>
                                     </td>
@@ -134,6 +134,10 @@
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Descrição</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descricao"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Ingredientes</label>
+                        <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3" name="ingre"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Receita</label>

@@ -123,7 +123,7 @@
                         </li>
                         <li @if (Route::currentRouteName()=='contactos.index' ) class="has-sub active expand" @else class="has-sub" @endif>
                             <a href="{{ route('contactos.index') }}" class="sidenav-item-link"> <i class="fas fa-envelope"></i>
-                                <span class="nav-text">Vinhos</span>
+                                <span class="nav-text">Mensagens</span>
                             </a>
                         </li>
                         <li @if (Route::currentRouteName()=='vinhos.index' ) class="has-sub active expand" @else class="has-sub" @endif>

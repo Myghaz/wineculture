@@ -16,6 +16,7 @@ class receitas extends Model
         'foto',
         'tipovinho',
         'descricao',
+        'ingre',
         'preparo',
         'id_categoria'
     ];

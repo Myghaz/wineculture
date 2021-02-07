@@ -89,7 +89,7 @@ html {
 }
 #rowcontactos {
     color: var(--color);
-    padding-top: 100px!important;
+    padding-top: 120px!important;
     padding-bottom: 70px!important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

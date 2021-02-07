@@ -13,11 +13,11 @@ body {
 }
 
 a {
-    color: #428bca
+    color: #742f37
 }
 
 a:hover {
-    color: #9eccf4;
+    color: #742f37;
     text-decoration: none
 }
 
@@ -144,28 +144,6 @@ h6 {
     cursor: pointer
 }
 
-#hero .btn-get-started {
-    font-family: Raleway, sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 12px 32px;
-    border-radius: 5px;
-    transition: .5s;
-    line-height: 1;
-    margin: 10px;
-    color: #fff;
-    -webkit-animation-delay: .8s;
-    animation-delay: .8s;
-    border: 0;
-    background: #742f37
-}
-
-#hero .btn-get-started:hover {
-    background: #742f37
-}
-
 @media (max-width:768px) {
     #hero h2 {
         font-size: 28px
@@ -183,7 +161,7 @@ h6 {
 }
 
 section {
-    padding: 60px 0;
+    padding: 60px 0
 }
 
 .section-title {
@@ -570,7 +548,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-info a {
-    color: #428bca;
+    color: #742f37;
     margin: 0 4px;
     font-size: 18px;
     line-height: 1;
@@ -674,88 +652,10 @@ section {
     margin: auto auto
 }
 
-.teamcontainer {
-    width: 100%
-}
-
 .team .row {
     display: grid;
     grid-template-columns: repeat(5, .5fr);
     grid-gap: 10px
-}
-
-.team .member {
-    text-align: center;
-    margin-bottom: 80px;
-    position: relative
-}
-
-.team .member .pic {
-    border-radius: 4px;
-    overflow: hidden
-}
-
-.team .member img {
-    transition: all ease-in-out .4s
-}
-
-.team .member:hover img {
-    transform: scale(1.1)
-}
-
-.team .member .member-info {
-    position: absolute;
-    bottom: -48px;
-    left: 20px;
-    right: 20px;
-    background: linear-gradient(360deg, #742f37 0, rgba(214, 54, 40, .9) 35%, rgba(233, 82, 77, .8) 100%);
-    padding: 15px 0;
-    border-radius: 4px
-}
-
-.team .member h4 {
-    font-weight: 700;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #fff;
-    position: relative;
-    padding-bottom: 10px
-}
-
-.team .member h4::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 1px;
-    background: #fff;
-    bottom: 0;
-    left: calc(50% - 25px)
-}
-
-.team .member span {
-    font-style: italic;
-    display: block;
-    font-size: 13px;
-    color: #fff
-}
-
-.team .member .social {
-    margin-top: 15px
-}
-
-.team .member .social a {
-    transition: color .3s;
-    color: #fff
-}
-
-.team .member .social a:hover {
-    color: #f49e9e
-}
-
-.team .member .social i {
-    font-size: 16px;
-    margin: 0 2px
 }
 
 @media (max-width:1680px) {
@@ -771,9 +671,6 @@ section {
 }
 
 @media (max-width:992px) {
-    .team .member {
-        margin-bottom: 100px
-    }
     .team .row {
         grid-template-columns: repeat(2, .5fr)
     }

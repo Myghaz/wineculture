@@ -19,7 +19,7 @@ class receitasseeder extends Seeder
             'id_categoria' => 1,
             'id_user' => 1,
             'descricao' => 'Frango com vinho tinto é a melhor opção para acompanhar com vinho tinto.',
-            'preparo' => '<p><strong>INGREDIENTES:</strong></p>
+            'ingre' => '<p><strong>INGREDIENTES:</strong></p>
 
             <ul>
                 <li>4 sobrecoxas de frango pequenas sem pele</li>
@@ -32,7 +32,8 @@ class receitasseeder extends Seeder
                 <li>1 colher (sopa) de &oacute;leo de canola ou girassol</li>
                 <li>2 x&iacute;caras (ch&aacute;) de vinho tinto</li>
             </ul>
-
+',
+            'preparo' => '
             <p><strong>MODO DE PREPARO:</strong></p>
 
             <p>1-&nbsp;Na v&eacute;spera, tempere as sobrecoxas com sal, or&eacute;gano, pimenta do reino, salsinha, alho, cebola e vinho tinto.</p>
@@ -53,7 +54,7 @@ class receitasseeder extends Seeder
             'id_categoria' => 2,
             'id_user' => 1,
             'descricao' => 'Aconselhamos um vinho verde com Salmão.',
-            'preparo' => '<p><strong>INGREDIENTES:</strong></p>
+            'ingre' => '<p><strong>INGREDIENTES:</strong></p>
 
             <ul>
                 <li>1 emb. de Medalh&otilde;es de Salm&atilde;o Pescanova</li>
@@ -63,8 +64,8 @@ class receitasseeder extends Seeder
                 <li>Cebolinho q.b.</li>
                 <li>1 lim&atilde;o</li>
                 <li>50 ml de vinho branco</li>
-            </ul>
-
+            </ul>',
+            'preparo' => '
             <p><strong>MODO DE PREPARO:</strong></p>
 
             <p>1. Descongele os Medalh&otilde;es de Salm&atilde;o, tempere com sal e reserve.</p>
@@ -79,7 +80,7 @@ class receitasseeder extends Seeder
             'id_categoria' => 5,
             'id_user' => 1,
             'descricao' => 'Camarão à Paulista é uma boa combinação com um bom espumante',
-            'preparo' => '<p><strong>INGREDIENTES:</strong></p>
+            'ingre' => '<p><strong>INGREDIENTES:</strong></p>
 
             <ul>
                 <li>&frac12; kg de camar&otilde;es</li>
@@ -88,8 +89,8 @@ class receitasseeder extends Seeder
                 <li>2 colheres de azeite de oliva</li>
                 <li>1 pitada de sal</li>
                 <li>&Oacute;leo para fritar</li>
-            </ul>
-
+            </ul>',
+            'preparo' => '
             <p><strong>MODO DE PREPARO:</strong></p>
 
             <p>1-&nbsp;Lave os camar&otilde;es, retire a cabe&ccedil;a e deixe a casca.</p>
@@ -114,15 +115,15 @@ class receitasseeder extends Seeder
             'id_categoria' => 4,
             'id_user' => 1,
             'descricao' => 'Risoto de polvo é a melhor combinação com um bom vinho branco.',
-            'preparo' => '<p><strong>INGREDIENTES:</strong></p>
+            'ingre' => '<p><strong>INGREDIENTES:</strong></p>
 
             <ul>
                 <li>1 kg de polvo congelado</li>
                 <li>2 cebolas</li>
                 <li>Colorau, sal, coentros, salsa e azeite</li>
                 <li>300 gr de arroz para risotto (150g para duas pessoas)</li>
-            </ul>
-
+            </ul>',
+            'preparo' => '
             <p><strong>MODO DE PREPARO:</strong></p>
 
             <p>1-&nbsp;Cozer o polvo na panela de press&atilde;o com 1 cebola cortada ao meio, depois de descascada.</p>
@@ -141,7 +142,7 @@ class receitasseeder extends Seeder
             'id_categoria' => 1,
             'id_user' => 1,
             'descricao' => 'Bife de Chouriço é a melhor opção para acompanhar com vinho tinto.',
-            'preparo' => '<p><strong>INGREDIENTES:</strong></p>
+            'ingre' => '<p><strong>INGREDIENTES:</strong></p>
 
             <ul>
                 <li>2 bifes de chouri&ccedil;o de bom tamanho (6cm)</li>
@@ -153,8 +154,8 @@ class receitasseeder extends Seeder
                 <li>&frac12; colher de caf&eacute; mostarda dijon</li>
                 <li>1 colher caf&eacute; de sal</li>
                 <li>&frac14; colher caf&eacute; pimenta do reino</li>
-            </ul>
-
+            </ul>',
+            'preparo' => '
             <p><strong>MODO DE PREPARO:</strong></p>
 
             <p>1-&nbsp;Prepare os bifes deste modo: deixe por 2 horas a carne fora da geladeira, recobertos por uma fina camada de &oacute;leo e a pimenta.</p>
@@ -173,13 +174,13 @@ class receitasseeder extends Seeder
             'id_categoria' => 1,
             'id_user' => 1,
             'descricao' => 'A castanha assada não pode faltar com um bom vinho tinto.',
-            'preparo' => '<p><strong>INGREDIENTES:</strong></p>
+            'ingre' => '<p><strong>INGREDIENTES:</strong></p>
 
             <ul>
                 <li>1 kg de castanhas</li>
                 <li>1 colher de sopa de sal grosso</li>
-            </ul>
-
+            </ul>',
+            'preparo' => '
             <p><strong>MODO DE PREPARO:</strong></p>
 
             <p>1-&nbsp;Preaque&ccedil;a o forno a 200&ordm; C.</p>
@@ -196,7 +197,7 @@ class receitasseeder extends Seeder
             'id_categoria' => 3,
             'id_user' => 1,
             'descricao' => 'Sushi é a melhor combinação para o Rosé.',
-            'preparo' => '<p><strong>INGREDIENTES:</strong></p>
+            'ingre' => '<p><strong>INGREDIENTES:</strong></p>
 
             <ul>
                 <li>2 lombos de Salm&atilde;o</li>
@@ -213,8 +214,9 @@ class receitasseeder extends Seeder
                 <li>Sementes de S&eacute;samo</li>
                 <li>Arroz de sushi</li>
             </ul>
-
-            <p><strong>MODO DE PREPARO:</strong></p>
+',
+            'preparo' =>
+            '<p><strong>MODO DE PREPARO:</strong></p>
 
             <p><strong>Umas horas antes:</strong></p>
 

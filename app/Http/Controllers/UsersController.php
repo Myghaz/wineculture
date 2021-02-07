@@ -20,10 +20,12 @@ class UsersController extends Controller
         if (!Auth::check()) {
             return redirect()->route('login');
         } else {
+        $user = User::find(Auth::user()->id);
         $blogs = Blog::where('id_user', '=', Auth::user()->id)->count();
         $receitas = receitas::where('id_user', '=', Auth::user()->id)->count();
 
         return view('paginas.frontend.perfil', compact([
+            'user',
             'blogs',
             'receitas'
         ]));
@@ -80,6 +82,17 @@ class UsersController extends Controller
     {
 
     }
+    
+    public function perfil_edit(Request $request,User $user)
+    {
+        $users = User::find(Auth::user()->id);
+
+        
+        $user->update($request->all());
+        
+        $user->save();
+        return redirect()->route('perfil')->with('success', 'Perfil editado com sucesso', compact('user'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -131,9 +144,17 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        
+        $user->update($request->all());
+        
+        $user->genero = $request->genero;
+        $user->pais = $request->pais;
+        $user->data_nasc = $request->data_nasc;
+
+        $user->save();
+        return redirect()->route('perfil')->with('success', 'Perfil editado com sucesso', compact('user'));
     }
 
     /**

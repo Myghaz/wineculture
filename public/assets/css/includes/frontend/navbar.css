@@ -3,11 +3,11 @@
 /* #Primary ================================================== */
 ::selection {
     color: #fff;
-    background-color: #8167a9;
+    background-color: #4b1825;
 }
 ::-moz-selection {
     color: #fff;
-    background-color: #8167a9;
+    background-color: #4b1825;
 }
 /* #Navigation ================================================== */
 .start-header {

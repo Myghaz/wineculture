@@ -41,6 +41,11 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descricao">{{$receita->descricao}}</textarea>
       </div>
       <div class="form-group">
+        <label for="exampleFormControlTextarea1">Ingredientes</label>
+        <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"
+            name="ingre">{{ old('preparo', $receita->ingre) }}</textarea>
+    </div>
+      <div class="form-group">
         <label for="exampleFormControlTextarea1">Receita</label>
         <textarea class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"
             name="preparo">{{ old('preparo', $receita->preparo) }}</textarea>
