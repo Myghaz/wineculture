@@ -60,7 +60,9 @@
       <span class="tagged_as"><strong>Região:</strong> <a rel="tag" href="#">
           {{$vinho_det->regiao}}
         </a></span>
-      <span class="tagged_as"><strong>Produtor:</strong> <a rel="tag" href="#">
+      <span class="tagged_as"><strong>Produtor:</strong>
+      <img class="img-fluid rounded-circle mb-2" style="width:32px; height:32px" src="/assets/img/users/{{$vinho_produtor->img}}">
+      <a rel="tag" href="{{ route('perfil_publico') }}">
           {{$vinho_produtor->name}} 
           {{$vinho_produtor->apelido}}
         </a></span>
