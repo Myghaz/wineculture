@@ -9,285 +9,107 @@ body {
     object-fit: cover
 }
 
-*,
-:after,
-:before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
-}
-
-.cont {
-    position: relative;
-    overflow: hidden;
-    height: 35vh
-}
-
-.cont__inner {
-    position: relative;
-    height: 100%
-}
-
-.cont__inner:hover .el__bg:after {
-    opacity: 1
-}
-
-.el {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 19.2%;
-    height: 100%;
-    background: #252525;
-    transition: transform .3s .4s, width .7s, opacity .6s .7s, z-index 0s 1.3s;
-    will-change: transform, width, opacity
-}
-
-.el:not(.s--active) {
-    cursor: pointer
-}
-
-.el__overflow {
-    overflow: hidden;
-    position: relative;
-    height: 100%
-}
-
-.el__inner {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-    transition: transform 1s
-}
-
-.cont.s--inactive .el__inner {
-    transform: translate3d(0, 100%, 0)
-}
-
-.el__bg {
-    position: relative;
-    width: calc(100vw - 140px);
-    height: 100%;
-    transition: transform .6s .7s;
-    will-change: transform
-}
-
-.el__bg:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -5%;
-    width: 100%;
-    height: 110%;
-    background-size: cover;
-    background-position: center center;
-    transition: transform 1s;
-    transform: translate3d(0, 0, 0) scale(1)
-}
-
-.cont.s--inactive .el__bg:before {
-    transform: translate3d(0, -100%, 0) scale(1.2)
-}
-
-.el__bg:after {
-    content: "";
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .3);
-    opacity: 0;
-    transition: opacity .5s
-}
-
-.el__preview-cont {
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transition: all .3s 1.2s
-}
-
-.cont.s--inactive .el__preview-cont {
-    opacity: 0;
-    transform: translateY(10px)
-}
-
-.el__heading {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 18px
-}
-
-.el__content {
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .1s
-}
-
-.el__text {
-    text-transform: uppercase;
-    font-size: 40px;
-    color: #fff
-}
-
-.el__close-btn {
-    z-index: -1;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 60px;
-    height: 60px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0s .45s;
-    cursor: pointer
-}
-
-.el__close-btn:after,
-.el__close-btn:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: 8px;
-    margin-top: -4px;
-    background: #fff;
-    opacity: 0;
-    transition: opacity 0s
-}
-
-.el__close-btn:before {
-    transform: rotate(45deg) translateX(100%)
-}
-
-.el__close-btn:after {
-    transform: rotate(-45deg) translateX(100%)
-}
-
-.el:nth-child(1) {
-    transform: translate3d(0, 0, 0);
-    transform-origin: 50% 50%
-}
-
-.el:nth-child(1) .el__inner {
-    transition-delay: 0s
-}
-
-.el:nth-child(1) .el__bg {
-    transform: translate3d(0, 0, 0)
-}
-
-.el:nth-child(1) .el__bg:before {
-    transition-delay: 0s;
-    background-position: 30%!important;
-    background-size: contain;
-    background-image: url(/assets/img/paginas/frontend/index/team/team-1.jpg)
-}
-
-.el:nth-child(2) {
-    transform: translate3d(105.2083333333%, 0, 0);
-    transform-origin: 155.2083333333% 50%
-}
-
-.el:nth-child(2) .el__inner {
-    transition-delay: .1s
-}
-
-.el:nth-child(2) .el__bg {
-    transform: translate3d(-19.2%, 0, 0)
-}
-
-.el:nth-child(2) .el__bg:before {
-    transition-delay: .1s;
-    background-position: 23%!important;
-    background-size: contain;
-    background-image: url(/assets/img/paginas/frontend/index/team/team-2.jpg)
-}
-
-.el:nth-child(3) {
-    transform: translate3d(210.4166666667%, 0, 0);
-    transform-origin: 260.4166666667% 50%
-}
-
-.el:nth-child(3) .el__inner {
-    transition-delay: .2s
-}
-
-.el:nth-child(3) .el__bg {
-    transform: translate3d(-38.4%, 0, 0)
-}
-
-.el:nth-child(3) .el__bg:before {
-    transition-delay: .2s;
-    background-position: 20%!important;
-    background-size: contain;
-    background-image: url(/assets/img/paginas/frontend/index/team/team-3.jpg)
-}
-
-.el:nth-child(4) {
-    transform: translate3d(315.625%, 0, 0);
-    transform-origin: 365.625% 50%
-}
-
-.el:nth-child(4) .el__inner {
-    transition-delay: .3s
-}
-
-.el:nth-child(4) .el__bg {
-    transform: translate3d(-57.6%, 0, 0)
-}
-
-.el:nth-child(4) .el__bg:before {
-    transition-delay: .3s;
-    background-position: 6%!important;
-    background-size: contain;
-    background-image: url(/assets/img/paginas/frontend/index/team/team-4.jpg)
-}
-
-.el:nth-child(5) {
-    transform: translate3d(420.8333333333%, 0, 0);
-    transform-origin: 470.8333333333% 50%
-}
-
-.el:nth-child(5) .el__inner {
-    transition-delay: .4s
-}
-
-.el:nth-child(5) .el__bg {
-    transform: translate3d(-76.8%, 0, 0)
-}
-
-.el:nth-child(5) .el__bg:before {
-    transition-delay: .4s;
-    background-position: 0!important;
-    background-size: contain;
-    background-image: url(/assets/img/paginas/frontend/index/team/team-5.jpg)
-}
-
-.el:hover .el__bg:after {
-    opacity: 0
-}
-
 .sobre_color {
     color: #842d35
 }
 
 .sobre_divider {
     border-left: 5px solid #842d35
+}
+
+.team-img img {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    width: 100%
+}
+
+.team-img,
+.team-member {
+    position: relative;
+    overflow: hidden
+}
+
+.team-title {
+    margin: 30px 0 7px
+}
+
+.overlay {
+    background-color: rgba(20, 20, 20, .7);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+.team-details {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 5%;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+.team-details p {
+    color: #fff
+}
+
+.team-img:hover .team-details {
+    opacity: 1;
+    margin-top: -80px
+}
+
+.team-img:hover .overlay {
+    opacity: 1
+}
+
+.socials a {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    background-color: transparent
+}
+
+.socials i {
+    line-height: 37px;
+    color: #616161;
+    font-size: 14px;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    transition: all .2s linear
+}
+
+.team-details .socials i {
+    color: #fff
+}
+
+.socials a:hover i {
+    color: #fff;
+    background-color: #355c7d
+}
+
+@media (min-width:768px) {
+    .col-md-3 {
+        flex: 0 0 20%!important
+    }
 }
