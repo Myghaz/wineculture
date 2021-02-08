@@ -32,9 +32,8 @@
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
                                 <a href="#">
-
                                     @if (Auth::user()->img == "Sem Imagem")
-                                    <img src="\storage\users\sem_imagem.jpg" class="rounded" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
+                                    <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
                                     @else
                                     <img src="\storage\users\{{Auth::user()->img}}" class="rounded" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
                                     @endif

@@ -38,7 +38,7 @@
                 <p><i class="fa fa-phone">&nbsp;&nbsp;</i>967 830 010</p>
                 <h5>Email:</h5>
                 <p>
-                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;wineculture@wineculture.com
+                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;wineculture@gmail.com
                 </p>
                 <h6>Segue-nos:</h6>
                 <div class="icon">

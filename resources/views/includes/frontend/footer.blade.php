@@ -45,7 +45,7 @@
                     </li>
                     <li>
                         Email:&nbsp;<i class="fa fa-envelope"></i>&nbsp;
-                        <a href="mailto:wineculture@wineculture.com">wineculture@wineculture.com</a>
+                        <a href="mailto:wineculture@gmail.com">wineculture@gmail.com</a>
                     </li>
                 </ul>
             </div>

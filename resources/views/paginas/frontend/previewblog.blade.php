@@ -21,7 +21,7 @@
     <img class="class2" src="{{ url('storage/blog/' .$blog->img)}}"></img>
     <div class="text">
         <h1>{{$blog->titulo}}</h1>
-        <p>Publicado por <em>{{$blog->user->name}}</em> | Publicado em <em>{{ date('d-m-Y', strtotime($blog->created_at))}}</em> ás <em>{{ date('H:m', strtotime($blog->created_at))}}</em></p>
+        <p>Publicado por <em><a href="{{ route('perfil_publico', $blog->user) }}">{{$blog->user->name}}</a></em> | Publicado em <em>{{ date('d-m-Y', strtotime($blog->created_at))}}</em> ás <em>{{ date('H:m', strtotime($blog->created_at))}}</em></p>
         <br><p><big><strong>{{$blog->preview}}</strong></big></p><br>
         {!!$blog->descricao!!}
     </div>

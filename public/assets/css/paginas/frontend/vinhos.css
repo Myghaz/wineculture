@@ -24,19 +24,6 @@ img.banner {
     }
 }
 
-.breadcrumb {
-    background-color: white;
-    margin-top: 30px !important;
-}
-
-.ui.breadcrumb a {
-    color: #742f37 !important;
-}
-
-.breadcrumb .active {
-    color: #742f37 !important;
-}
-
 .grid {
     padding-left: 100px !important;
     padding-right: 100px !important;
@@ -630,11 +617,6 @@ input.qntclvals2,
 
     .semicontainer {
         margin-top: 50px !important;
-    }
-    .bread{
-        width: 100%!important;
-        margin: 0!important;
-        padding:0!important;
     }
 }
 

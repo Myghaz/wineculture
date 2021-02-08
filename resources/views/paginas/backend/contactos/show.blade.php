@@ -39,7 +39,13 @@
                 <textarea id="" readonly class="ckeditor form-control" id="exampleFormControlTextarea2" rows="5" value=""
                     name="resposta">{{ $mensagem->resposta }}</textarea>
             </div>
+            @if ($mensagem->estado == 'Respondida')
+                <a href="{{ route('contactos.edit', $mensagem) }}" class="btn btn-xs btn-warning btn-p disabled">Responder a Pergunta</a>
+            @else
+                <a href="{{ route('contactos.edit', $mensagem) }}" class="btn btn-xs btn-warning btn-p">Responder a Pergunta</a>
+            @endif
         </div>
+
     </div>
 
 

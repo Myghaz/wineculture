@@ -14,6 +14,7 @@ use Database\Seeders\VinhosimgSeeder;
 use Database\Seeders\CategoryWineSeeder;
 use Database\Seeders\CategoriasFAQSeeder;
 use Database\Seeders\VinhosClassSeeder;
+use Database\Seeders\AmizadesSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -36,5 +37,6 @@ class DatabaseSeeder extends Seeder
         $this->call(VinhosimgSeeder::class);
         $this->call(VinhosimgSeeder::class);
         $this->call(VinhosClassSeeder::class);
+        $this->call(AmizadesSeeder::class);
     }
 }

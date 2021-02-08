@@ -32,9 +32,25 @@ body::-webkit-scrollbar-thumb {
     background: linear-gradient(0deg, #5e262d 0%, #9d0214 100%);
   
 }
+.breadcrumb {
+    background-color: white;
+    margin-top: 30px !important;
+}
 
- 
+.ui.breadcrumb a {
+    color: #742f37 !important;
+}
 
+.breadcrumb .active {
+    color: #742f37 !important;
+}
+@media screen and (max-width: 1018px) {
+    .bread{
+        width: 100%!important;
+        margin: 0!important;
+        padding:0!important;
+    }
+}
 .fa-caret-down{
     margin-right:5px;
 }
@@ -60,7 +76,6 @@ body::-webkit-scrollbar-thumb {
     float: right;
     border: none;
 }
-.navbar-toggler:
 .navbar-toggler:focus {
     outline: none;
 }
