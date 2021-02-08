@@ -33,33 +33,35 @@
                             </thead>
                             <tbody>
                                 @foreach ($receitas as $receita)
-                                <tr>
-                                    <td class="d-none d-lg-table-cell"><img src="{{asset('storage/receitas/'.$receita->foto) }}" class="rounded-circle w-45" style="width: 60px; height: 60px; object-fit: cover;"></td>
-                                    <td>
-                                        <a class="text-dark" href="">{{ $receita->nome }}</a>
+                                <tr id="trv">
+                                    <td class="tdhover d-none d-lg-table-cell"><img src="{{asset('storage/receitas/'.$receita->foto) }}" class="rounded-circle w-45" style="width: 60px; height: 60px; object-fit: cover;"></td>
+                                    <td class="tdhover">
+                                        <a class="d-none d-lg-table-cell" >{{ $receita->nome }}</a>
                                     </td>
                                     @foreach ($category_wines as $category_wine)
                                     @if ($receita->id_categoria == $category_wine->id)
-                                    <td class="d-none d-lg-table-cell">{{ $category_wine->nome }}</td>
+                                    <td class="tdhover ">
+                                        <a class="d-none d-lg-table-cell">{{ $category_wine->nome }}</a>
+                                    </td>
                                     @endif
                                     @endforeach
                                     @foreach ($Users as $User)
                                     @if ($receita->id_user == $User->id)
-                                    <td class="d-none d-lg-table-cell">{{ $User->name }}
-                                        {{ $User->apelido }}
+                                    <td class="tdhover">
+                                        <a class="d-none d-lg-table-cell">{{ $User->name }} {{ $User->apelido }}</a>
                                     </td>
                                     @endif
                                     @endforeach
-                                    <td>
-                                        <a class="text-dark" href="">{{ $receita->descricao }}</a>
+                                    <td class="tdhover">
+                                        <a class="d-none d-lg-table-cell tdhover">{{ $receita->descricao }}</a>
                                     </td>
-                                    <td class="acoes">
+                                    <td class="tdhover">
+                                        <div class="acoes">
                                         <a href="{{ route('receitas.show', $receita) }}" class="btn btn-xs btn-success btn-p"><i class="fas fa-eye fa-xs"></i></a>
                                         <a href="{{ route('receitas.edit', $receita) }}" class="btn btn-xs btn-warning btn-p"><i class="fas fa-pen fa-xs"></i></a>
                                         <button type="button" class="btn btn-xs btn-danger btn-p" data-toggle="modal" data-target="#deleteConfirmModal" data-route="{{ route('receitas.destroy', $receita) }}"><i class="fas fa-trash fa-xs" data-toggle="tooltip" data-placement="top" title="Eliminar"></i></button>
+                                    </div>
                                     </td>
-
-
                                 </tr>
                                 @endforeach
                             </tbody>

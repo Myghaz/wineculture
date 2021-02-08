@@ -8,6 +8,7 @@
 .contacts_footer {
     font-size: 18px;
 }
+
 .socials_icon {
     margin-right: 10px;
 }
@@ -44,7 +45,7 @@
 }
 
 .footer-nav {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .footer-bs {
@@ -52,20 +53,24 @@
     padding: 20px 20px 10px 20px;
     color: rgba(255, 255, 255, 1);
 }
+
 .footer-bs .footer-brand,
 .footer-bs .footer-nav,
 .footer-bs .footer-social,
 .footer-bs .footer-ns {
     padding: 10px 25px;
 }
+
 .footer-bs .footer-nav,
 .footer-bs .footer-social,
 .footer-bs .footer-ns {
     border-color: transparent;
 }
+
 .footer-bs .footer-brand h2 {
     margin: 0px 0px 10px;
 }
+
 .footer-bs .footer-brand p {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.7);
@@ -75,17 +80,20 @@
     list-style: none;
     padding: 0px;
 }
+
 .footer-bs .footer-nav ul.pages li {
     padding: 5px 0px;
 }
+
 .footer-bs .footer-nav ul.pages a {
     color: rgba(255, 255, 255, 1);
-    font-weight: bold;
 }
+
 .footer-bs .footer-nav ul.pages a:hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
 }
+
 .footer-bs .footer-nav h4 {
     font-size: 11px;
     letter-spacing: 3px;
@@ -96,12 +104,15 @@
     list-style: none;
     padding: 0px;
 }
+
 .footer-bs .footer-nav ul.list li {
     padding: 5px 0px;
 }
+
 .footer-bs .footer-nav ul.list a {
     color: rgba(255, 255, 255, 0.8);
 }
+
 .footer-bs .footer-nav ul.list a:hover {
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
@@ -111,16 +122,20 @@
     list-style: none;
     padding: 0px;
 }
+
 .footer-bs .footer-social h4 {
     font-size: 24px;
     letter-spacing: 3px;
 }
+
 .footer-bs .footer-social li {
     padding: 5px 4px;
 }
+
 .footer-bs .footer-social a {
     color: rgba(255, 255, 255, 1);
 }
+
 .footer-bs .footer-social a:hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
@@ -131,6 +146,7 @@
     letter-spacing: 3px;
     margin-bottom: 10px;
 }
+
 .footer-bs .footer-ns p {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.7);

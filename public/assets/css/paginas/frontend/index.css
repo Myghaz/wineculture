@@ -277,7 +277,7 @@ section {
     position: absolute;
     left: calc(50% - 47px);
     top: calc(50% - 47px);
-    overflow: hidden
+    overflow: hidden;
 }
 
 .about .play-btn::after {
@@ -423,7 +423,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-    box-shadow: 0 0 30px rgba(206, 79, 79, .637)
+    box-shadow: 0 0 30px rgba(206, 79, 79, .300)
 }
 
 .services .title {

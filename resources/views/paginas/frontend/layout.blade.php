@@ -36,7 +36,7 @@
     <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
     <script src="{{ URL::asset('assets/js/layouts/frontend/settings.js') }}"></script>
-   
+
     <footer class="footer-bs" styles="width:100%">
         @include('includes.frontend.footer')
     </footer>

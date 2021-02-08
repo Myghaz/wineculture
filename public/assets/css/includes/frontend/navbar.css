@@ -17,6 +17,23 @@
     transition: all 0.3s ease-out;
     font-family: "Open Sans", sans-serif !important;
 }
+body::-webkit-scrollbar-track {
+    border-radius: 5px;
+    padding: 2px 0;
+    background-color: white
+}
+
+body::-webkit-scrollbar {
+    width: 9px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(0deg, #5e262d 0%, #9d0214 100%);
+  
+}
+
+ 
 
 .fa-caret-down{
     margin-right:5px;
