@@ -7,7 +7,7 @@
 @endsection
 
 @section("content")
-<div class="main-content" style="margin-bottom: 100px;">
+<div class="main-content">
     <!-- Top navbar -->
 
     <!-- Header -->
@@ -35,9 +35,9 @@
                                 <a href="#">
 
                                     @if (Auth::user()->img == "Sem Imagem")
-                                    <img src="/assets/img/users/sem_imagem.jpg" cclass="rounded-circle" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
+                                    <img src="\storage\users\sem_imagem.jpg" class="rounded" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
                                     @else
-                                    <img src="/assets/img/users/{{Auth::user()->img}}" class="rounded-circle" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
+                                    <img src="\storage\users\{{Auth::user()->img}}" class="rounded" alt="{{Auth::user()->name}} {{Auth::user()->apelido}}">
                                     @endif
                                 </a>
                             </div>
@@ -79,12 +79,12 @@
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">Conta</h3>
+                                <h1 class="mb-0">A sua conta</h1>
                             </div>
 
                         </div>
                     </div>
-                    <div style="background-color: white;" class="card-body">
+                    <div class="card-body">
                         <form action="{{route('users.update', Auth::user()->id)}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
                             @method('PUT')
@@ -125,8 +125,21 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="row">
-                                    <div class="col-lg-4">
+                                    <div class="col-md-12">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="exampleFormControlFile1">Submeter Foto</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="customFile" name="img">
+                                                <label class="custom-file-label file_label_a" for="customFile">Escolher foto</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-genero">Género</label>
                                             <select name="genero" class="form-control select_form" id="input-genero">
@@ -136,7 +149,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-pais">País</label>
                                             <select name="pais" class="form-control select_form" id="input-pais">
@@ -146,6 +159,7 @@
                                             </select>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-registo">Data de Registo</label>
@@ -154,6 +168,7 @@
                                             <button type="submit" class="btn btn-info">Editar Perfil</button>
                                         </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </form>

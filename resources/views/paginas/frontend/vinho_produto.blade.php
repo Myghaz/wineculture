@@ -47,12 +47,26 @@
 
 </div>
   <div class="col-md-8 mb-5">
-    <h1 class="pro-d-title mb-4">
+    <h1 class="pro-d-title mb-0">
       {{$vinho_det->nome}}
     </h1>
-    <p>
+    <div class="rate float-left">
+      <input type="radio" id="star5" name="rate" value="5" />
+      <label for="star5" title="text">5 stars</label>
+      <input type="radio" id="star4" name="rate" value="4" />
+      <label for="star4" title="text">4 stars</label>
+      <input type="radio" id="star3" name="rate" value="3" />
+      <label for="star3" title="text">3 stars</label>
+      <input type="radio" id="star2" name="rate" value="2" />
+      <label for="star2" title="text">2 stars</label>
+      <input type="radio" id="star1" name="rate" value="1" />
+      <label for="star1" title="text">1 star</label>
+    </div><br>
+    <hr class="my-4">
+    <p class="mt-4">
       {{$vinho_det->descricao}}
     </p>
+    <hr class="my-3">
     <div class="product_meta">
       <span class="posted_in"><strong>Categoria:</strong> <a rel="tag" href="#">
           {{$vinho_cat->nome}}
@@ -67,7 +81,8 @@
           {{$vinho_produtor->apelido}}
         </a></span>
     </div>
-    <div class="product_meta2">
+    <hr class="my-1">
+    <div class="product_meta">
       <span class="posted_in"><strong>Percentagem Álcool: </strong>{{$vinho_det->perct_alco}}%</span>
       <span class="posted_in"><strong>Quantidade CL: </strong>{{$vinho_det->qnt_cl}}CL</span>
     </div>
