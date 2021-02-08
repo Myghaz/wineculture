@@ -92,9 +92,9 @@ class MensagensController extends Controller
      */
     public function update(UpdateContactoRequest $request, Contactos $mensagem)
     {
-        $request->validated();
-
-        $mensagem->update($request->all());
+        $fields = $request->validated();
+        $mensagem->estado='Respondida';
+        $mensagem->fill($fields);
         Mail::send('paginas.frontend.contactosresposta', array(
             'resposta' => $request->input('resposta'),
             'email' => $mensagem->email,
@@ -103,8 +103,9 @@ class MensagensController extends Controller
             'pergunta' => $mensagem->mensagem,
         ), function ($message) use ($mensagem) {
             $message->to($mensagem->email)
-            ->subject('[WineCulture] '. $mensagem->assunto);
+                ->subject('[WineCulture] ' . $mensagem->assunto);
         });
+        $mensagem->save();
         return redirect()->route('contactos.index')->with('success', 'Pergunta foi enviada com sucesso');
     }
 
