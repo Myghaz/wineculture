@@ -25,7 +25,6 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">Categoria</label>
         <select class="form-control" id="exampleFormControlSelect1"  name="id_categoria">
-            
             @foreach ($categorias as $categorias)
             <option @if ($vinho->id_categoria==$categorias->id) selected @endif value="{{$categorias->id}}"> {{$categorias->nome}}</option>
             @endforeach

@@ -153,6 +153,11 @@ class UsersController extends Controller
         $user->pais = $request->pais;
         $user->data_nasc = $request->data_nasc;
 
+        if ($request->hasFile('img')) {
+            $photo_path = $request->file('img')->store('public\users');
+            $user->img = $request->file('img')->hashName();
+        }
+
         $user->save();
         return redirect()->route('perfil')->with('success', 'Perfil editado com sucesso', compact('user'));
     }

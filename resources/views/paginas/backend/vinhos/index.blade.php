@@ -36,12 +36,7 @@
                     @foreach($vinhos as $key => $vinho)
 
                     <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">
-
-                      @foreach($vinho_img as $key_img => $vinhos_img)
-                      @if($vinhos_img->id == $vinho->img)
-                      <img src="\storage\vinhos\{{$vinhos_img->img}}" style="width:65px; height:65px; object-fit: cover; object-position: 0% 90%;" class="rounded-circle w-45" alt=">{{$vinho->nome}}">
-                      @endif
-                      @endforeach
+                      <img src="\storage\vinhos\{{$vinho->img}}" style="width:65px; height:65px; object-fit: cover; object-position: 0% 90%;" class="rounded-circle w-45" alt="{{$vinho->nome}}">
                     </td>
                     <td onclick="window.location.href = '{{ route('vinhos.show', $vinho) }}';" class="tdhover">{{$vinho->nome}}</td>
                     @foreach($categorias as $key => $categoria)

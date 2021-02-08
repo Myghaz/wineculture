@@ -275,16 +275,22 @@ class VinhosController extends Controller
     {
         $fields = $request->validated();
         $vinho = new Vinhos();
+        $vinho_foto = new Vinhosimg();
         $vinho->fill($fields);
 
         $vinho->id_categoria = $request->id_categoria;
-
+                
         if ($request->hasFile('img')) {
             $photo_path = $request->file('img')->store('public/vinhos');
             $vinho->img = $request->file('img')->hashName();
+            $vinho_foto->img = $request->file('img')->hashName();
         }
 
         $vinho->save();
+        $vinho_foto->id_vinho = $vinho->id;
+
+        $vinho_foto->save();
+
         return redirect()->route('vinhos.index')->with('success', 'Vinho adicionado com sucesso', compact('vinho'));
     }
 
@@ -343,6 +349,11 @@ class VinhosController extends Controller
         $fields = $request->validated();
         $vinho->update($fields);
         
+        if ($request->hasFile('img')) {
+            $photo_path = $request->file('img')->store('public/vinhos');
+            $vinho->img = $request->file('img')->hashName();
+        }
+
         $vinho->save();
         return redirect()->route('vinhos.index')->with('success', 'Vinho editado com sucesso', compact('vinho'));
     }
