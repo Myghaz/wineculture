@@ -67,7 +67,7 @@
           </a></span>
         <span class="tagged_as"><strong>Produtor:</strong>
           <img class="img-fluid rounded-circle mb-2 produtor_icon" src="\storage\users\{{$vinho_produtor->img}}">
-          <a rel="tag" href="{{ route('perfil_publico') }}">
+          <a href="{{ route('perfil_publico', $vinho_det->produtor) }}">
             {{$vinho_produtor->name}}
             {{$vinho_produtor->apelido}}
           </a></span>
