@@ -224,3 +224,8 @@ body {
 .rate>label:hover~input:checked~label {
     color: #ffc800;
 }
+
+.produtor_icon {
+    width: 32px;
+    height: 32px;
+}

@@ -8,7 +8,6 @@
 
 @section("content")
 <div class="main-content">
-    <!-- Top navbar -->
 
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center">
@@ -125,7 +124,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group focused">
@@ -156,6 +155,10 @@
                                                 <option @if (Auth::user()->pais=="Portugal") selected @endif value="Portugal">Portugal</option>
                                                 <option @if (Auth::user()->pais=="Espanha") selected @endif value="Espanha">Espanha</option>
                                                 <option @if (Auth::user()->pais=="França") selected @endif value="França">França</option>
+                                                <option @if (Auth::user()->pais=="Reino Unido") selected @endif value="Reino Unido">Reino Unido</option>
+                                                <option @if (Auth::user()->pais=="Alemanha") selected @endif value="Alemanha">Alemanha</option>
+                                                <option @if (Auth::user()->pais=="Suíça") selected @endif value="Suíça">Suíça</option>
+                                                <option @if (Auth::user()->pais=="Itália") selected @endif value="Itália">Itália</option>
                                             </select>
                                         </div>
                                     </div>
@@ -168,7 +171,7 @@
                                             <button type="submit" class="btn btn-info">Editar Perfil</button>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </form>

@@ -169,9 +169,9 @@
                             <li class="dropdown user-menu">
                                 <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                     @if (Auth::user()->img == 'Sem Imagem')
-                                    <img src="/assets/img/users/sem_imagem.jpg" class="user-image" alt="{{ Auth::user()->name }} {{ Auth::user()->apelido }}">
+                                    <img src="\storage\users\sem_imagem.jpg" class="user-image" alt="{{ Auth::user()->name }} {{ Auth::user()->apelido }}">
                                     @else
-                                    <img src="/assets/img/users/{{ Auth::user()->img }}" class="user-image" alt="{{ Auth::user()->name }} {{ Auth::user()->apelido }}">
+                                    <img src="\storage\users\{{ Auth::user()->img }}" class="user-image" alt="{{ Auth::user()->name }} {{ Auth::user()->apelido }}">
                                     @endif
                                     <span class="d-none d-lg-inline-block">{{ Auth::user()->name }} </span>
                                 </button>
@@ -179,9 +179,9 @@
                                     <!-- User image -->
                                     <li class="dropdown-header">
                                         @if (Auth::user()->img == 'Sem Imagem')
-                                        <img src="/assets/img/users/sem_imagem.jpg" class="img-circle" alt="{{ Auth::user()->name }} {{ Auth::user()->apelido }}">
+                                        <img src="\storage\users\sem_imagem.jpg" class="img-circle" alt="{{ Auth::user()->name }} {{ Auth::user()->apelido }}">
                                         @else
-                                        <img src="/assets/img/users/{{ Auth::user()->img }}" class="img-circle" alt="{{ Auth::user()->name }} {{ Auth::user()->apelido }}">
+                                        <img src="\storage\users\{{ Auth::user()->img }}" class="img-circle" alt="{{ Auth::user()->name }} {{ Auth::user()->apelido }}">
                                         @endif
                                         <div class="d-inline-block">
                                             {{ Auth::user()->name }} {{ Auth::user()->apelido }}<small class="pt-1">{{ Auth::user()->email }}</small>
