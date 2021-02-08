@@ -82,7 +82,7 @@
             <div class="row no-gutters">
                 <div class="col-lg-6 video-box">
                     <img src="/assets/img/paginas/frontend/index/about.jpg" class="img-fluid" alt="">
-                    <a href="" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+                    <a href="https://www.youtube.com/embed/35Q00Tz6NnQ" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
                 </div>
 
                 <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
