@@ -6,7 +6,9 @@ use App\Models\Blog;
 use App\Models\CategoriaPergunta;
 use App\Models\Perguntas;
 use App\Models\Vinhos;
+use Illuminate\Http\Request;
 use App\Models\receitas;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,10 +32,13 @@ class MainController extends Controller
     {
         return view('paginas.frontend.pdp');
     }
-    public function perfil_publico()
+    public function perfil_publico($perfil)
     {
+        $user_perfil = User::find($perfil);
+        $userreceitascount = receitas::where("id_user", $perfil)->count();
+        $userblogcount = Blog::where("id_user", $perfil)->count();
         $array = [];
-        $users = receitas::where("id_user", Auth::id())->get();
+        $users = receitas::where("id_user", $perfil)->get();
 
         foreach ($users as $key => $user) {
             $object = (object) [
@@ -83,7 +88,7 @@ class MainController extends Controller
                 return (($a->created_at < $b->created_at) ? -1 : 1);
             }
         );
-        return view('paginas.frontend.perfil_publico', compact(['array']));
+        return view('paginas.frontend.perfil_publico', compact(['array', 'user_perfil','userreceitascount','userblogcount']));
     }
 
     public function termos_condicoes(){

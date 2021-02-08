@@ -32,7 +32,7 @@ Route::get('/politica_de_privacidade', [MainController::class, 'pdp'])->name('pd
 Route::get('/termos_condicoes', [MainController::class, 'termos_condicoes'])->name('termos_condicoes');
 
 
-Route::get('/perfil-publico', [MainController::class, 'perfil_publico'])->name('perfil_publico');
+Route::get('/perfil-publico/{perfil}', [MainController::class, 'perfil_publico'])->name('perfil_publico');
 
 
 //BlogController
