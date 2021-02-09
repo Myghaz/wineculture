@@ -11,9 +11,8 @@
         </a>
     </div>
     <div class="pie pie2" onclick="document.body.classList.remove('active')">
-        <a href="/chat">
+        <a href="/">
             <div class="pie-color pie-color2">
-                <img src="/assets/img/paginas/frontend/chat.png" class="chat" title="Chat"></img>
             </div>
         </a>
     </div>

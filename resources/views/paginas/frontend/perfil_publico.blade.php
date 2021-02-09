@@ -1,6 +1,6 @@
 @extends("paginas.frontend.layout")
 
-@section('title', 'Politica de Privacidade')
+@section('title', 'Perfil Público')
 
 @section("links")
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.css">

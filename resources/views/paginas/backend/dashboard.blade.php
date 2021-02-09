@@ -118,7 +118,7 @@
             <div class="table-real-menu-rep">
               <button title="Utilizadores" id="btnusers-rep"" value=" Utilizadores" class="table-menu-item-repos"> <i id="table-users" class="fa fa-users"></i> </button>
               <button title="Produtores" id="btnprodutores-rep" value="Produtores" class="table-menu-item-repos"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
-              <button title="Produtos(WordPress)" id="btnprods_wp-rep" value="Loja" class="table-menu-item-repos"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
+              <button title="Produtos(WordPress)"  value="Loja" class="table-menu-item-repos"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
               <!--  <button title="Compras" id="btncompras-rep"" value="Loja" class="table-menu-item-repos"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button> -->
             </div>
             <nav class="table-item-menu">
@@ -131,7 +131,7 @@
               <div class="table-real-menu">
                 <button title="Utilizadores" id="btnusers" value="Utilizadores" class="table-menu-item"> <i id="table-users" class="fa fa-users"></i> </button>
                 <button title="Produtores" id="btnprodutores" value="Produtores" class="table-menu-item"> <i id="table-produtores" class="fas fa-user-tie"></i> </button>
-                <button title="Produtos(WordPress)" id="btnprods_wp" value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
+                <button title="Produtos(WordPress)" value="Loja" class="table-menu-item"> <i id="table-produtoswp" class="fa fa-shopping-cart"></i> </button>
                 <!-- <button title="Compras" id="btncompras" value="Loja" class="table-menu-item"> <i id="table-compras" class="fa fa-dollar-sign"></i> </button> -->
               </div>
             </nav>
@@ -143,7 +143,6 @@
                   <th class="d-none d-lg-table-cell">Imagem</th>
                   <th>Nome</th>
                   <th class="d-none d-lg-table-cell">Apelido</th>
-                  <th class="d-none d-lg-table-cell">Email</th>
                   <th class="d-none d-lg-table-cell">Tipo de Utilizador</th>
                 </tr>
               </thead>
@@ -152,9 +151,9 @@
                   @foreach($users as $key => $user)
                   <td>
                     @if ($user->img == "Sem Imagem")
-                    <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
+                    <img  src="{{asset('storage/users/sem_imagem.jpg')}}" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
                     @else
-                    <img src="/assets/img/users/{{$user->img}}" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
+                    <img  src="{{asset('storage/users/'.$user->img) }}" class="rounded-circle w-45" alt=">{{$user->name}} {{$user->apelido}}">
                     @endif
                   </td>
                   <td>
@@ -162,9 +161,6 @@
                   </td>
                   <td>
                     <a class="text-dark" href="">{{$user->apelido}}</a>
-                  </td>
-                  <td>
-                    <a class="text-dark" href="">{{$user->email}}</a>
                   </td>
                   <td>
                     <a class="text-dark" href="">{{$user->tipouser}}</a>
@@ -179,7 +175,6 @@
                   <th class="d-none d-lg-table-cell">Imagem</th>
                   <th class="d-none d-lg-table-cell">Nome</th>
                   <th class="d-none d-lg-table-cell">Apelido</th>
-                  <th class="d-none d-lg-table-cell">Email</th>
                 </tr>
               </thead>
               <tbody>
@@ -187,9 +182,9 @@
                   @foreach($produtores as $key => $produtor)
                   <td>
                     @if ($produtor->img == "Sem Imagem")
-                    <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle w-45" alt=">{{$produtor->name}} {{$produtor->apelido}}">
+                    <img src="{{asset('storage/users/sem_imagem.jpg')}}" class="rounded-circle w-45" alt=">{{$produtor->name}} {{$produtor->apelido}}">
                     @else
-                    <img src="/assets/img/users/{{$produtor->img}}" class="rounded-circle w-45" alt=">{{$produtor->name}} {{$produtor->apelido}}">
+                    <img src="{{asset('storage/users/'.$produtor->img) }}" class="rounded-circle w-45" alt=">{{$produtor->name}} {{$produtor->apelido}}">
                     @endif
                   </td>
                   <td>
@@ -198,7 +193,6 @@
                   <td>
                     <a class="text-dark" href="">{{$produtor->apelido}}</a>
                   </td>
-                  <td class="d-none d-lg-table-cell">{{$produtor->email}}</td>
                 </tr>
                 @endforeach
               </tbody>
@@ -274,9 +268,9 @@
             <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
               <div class="image mb-3 mt-n9">
                 @if ($ultuser->img == "Sem Imagem")
-                <img style="width: 100px; height:100px;" src="/assets/img/users/sem_imagem.jpg" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
+                <img style="width: 100px; height:100px;" src="{{asset('storage/users/sem_imagem') }}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @else
-                <img style="object-fit: cover; width: 100px; height:100px;" src="/assets/img/users/{{$ultuser->img}}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
+                <img style="object-fit: cover; width: 100px; height:100px;" src="{{asset('storage/users/'.$ultuser->img) }}" class="img-fluid rounded-circle" alt="{{$ultuser->name}} {{$ultuser->apelido}}">
                 @endif
               </div>
 
@@ -351,7 +345,7 @@
           <div class="card-body text-center p-4">
             <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
               <div class="image mb-3 mt-n9">
-                <img style="object-fit: cover; width: 100px; height:100px;" src="/assets/img/categorias/{{$categoria->img}}" class="img-fluid rounded-circle" alt="{{$categoria->name}}">
+                <img style="object-fit: cover; width: 100px; height:100px;" src="{{asset('storage/categorias/'.$categoria->img) }}" class="img-fluid rounded-circle" alt="{{$categoria->name}}">
               </div>
 
               <h5 class="card-title text-dark">{{$categoria->name}}</h5>
@@ -400,7 +394,7 @@
           <div class="card-body text-center p-4">
             <a href="javascript:0" data-toggle="modal" data-target="#modal-contact" class="text-secondary d-inline-block mb-3">
               <div class="image mb-3 mt-n9">
-                <img style="object-fit: cover; width: 100px; height:100px;" src="/assets/img/vinhos/{{$categoria_vinho->img}}" class="img-fluid rounded-circle" alt="{{$categoria_vinho->nome}}">
+                <img style="object-fit: contain; width: 100px; height:100px;" src="{{asset('storage/vinhos/'.$categoria_vinho->img) }}" class="img-fluid rounded-circle" alt="{{$categoria_vinho->nome}}">
               </div>
 
               <h5 class="card-title text-dark">{{$categoria_vinho->nome}}</h5>
@@ -439,40 +433,6 @@
       @endforeach
     </div>
 
-
-    <h2 class="titulo">Ultimos Produtos Adicionados</h2>
-    <div class="row ultusers">
-      @foreach($total_produtoswp as $key => $produtoswp)
-
-      <div class="col-lg-6 col-xl-4 col-xxl-3">
-        <div class="card card-default mt-6">
-          <div style="height: 305px;" class="card-body text-center p-4">
-            <a target="_blank" href="http://wineculture.test/?post_type=product&#038;p={{$produtoswp->ID}}" class="text-secondary d-inline-block mb-3">
-              <div class="image mb-3 mt-n9">
-                @foreach($prodsimg as $key => $prodimg)
-                @if ($produtoswp->ID == $prodimg->post_parent)
-                <img style="width: 100px; height:100px; object-fit: cover;" src="{{$prodimg->guid}}" class="img-fluid rounded-circle" alt="{{$produtoswp->post_title}}">
-                @endif
-                @endforeach
-              </div>
-              <h6 style="width: 100%;" class="card-title text-dark">{{$produtoswp->post_title}}</h6>
-              <ul class="list-unstyled">
-                <li class="d-flex mb-1">
-                  <i class="mdi mdi-calendar-check mr-1"></i>
-                  <span>Data de Criação: {{ date('d-m-Y', strtotime($produtoswp->post_date))}}</span>
-                </li>
-              </ul>
-            </a>
-            <p class="card-text text-center mb-3">{{$produtoswp->post_content}}</p>
-            <div class="row justify-content-center">
-
-            </div>
-          </div>
-        </div>
-      </div>
-      @endforeach
-    </div>
-    <p id="test"></p>
   </div>
  <script>
     var totalUsersJan = {{$totalUsersJan}};

@@ -8,6 +8,7 @@ use App\Models\Perguntas;
 use App\Models\Vinhos;
 use Illuminate\Http\Request;
 use App\Models\receitas;
+use App\Models\Mensagens;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -50,8 +51,9 @@ class MainController extends Controller
                 'tabela' => 'receitas'
             ];
             $array[] = $object;
+         
         }
-        $users = Vinhos::where("id_produtor", Auth::id())->get();
+        $users = Vinhos::where("id_produtor",  $perfil)->get();
 
         foreach ($users as $key => $user) {
             $object = (object) [
@@ -64,7 +66,7 @@ class MainController extends Controller
             ];
             $array[] = $object;
         }
-        $users = Blog::where("id_user", Auth::id())->get();
+        $users = Blog::where("id_user",  $perfil)->get();
 
         foreach ($users as $key => $user) {
             $object = (object) [
@@ -88,6 +90,7 @@ class MainController extends Controller
                 return (($a->created_at < $b->created_at) ? -1 : 1);
             }
         );
+        
         return view('paginas.frontend.perfil_publico', compact(['array', 'user_perfil','userreceitascount','userblogcount']));
     }
 
