@@ -18,9 +18,8 @@ class FAQController extends Controller
     public function index()
     {
         $perguntas = Perguntas::all();
-        $totalperguntas = Perguntas::all('id')->count();
         $categorias = CategoriaPergunta::all();
-        return view('paginas.backend.faq.index', compact('perguntas', 'totalperguntas', 'categorias'));
+        return view('paginas.backend.faq.index', compact('perguntas', 'categorias'));
     }
 
     public function indexFrontend()
@@ -98,7 +97,7 @@ class FAQController extends Controller
      */
     public function destroy(Request $request, Perguntas $pergunta)
     {
-        $pergunta->delete($pergunta);
+        $pergunta->delete();
         return redirect()->route('faq.index')->with('success', 'Pergunta removida com sucesso', compact('pergunta'));
     }
 }
