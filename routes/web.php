@@ -35,6 +35,8 @@ Route::get('/termos_condicoes', [MainController::class, 'termos_condicoes'])->na
 Route::get('/perfil-publico/{perfil}', [MainController::class, 'perfil_publico'])->name('perfil_publico');
 
 
+
+
 //BlogController
 Route::get('/blog', [BlogController::class, 'indexFrontend'])->name('index_blog_frontend');
 
@@ -77,13 +79,6 @@ Route::get('/vinhos/data', [VinhosController::class, 'ordemdata'])->name('vinhos
 
 Route::get('/vinho{vinho}', [VinhosController::class, 'vinho'])->name('vinho');
 
-
-//ChatController
-Route::get('chat', [AdminController::class, 'chat'])->name('admin_chat');
-
-Route::post('dashboard', [ChatController::class, 'backend_store'])->name('dashboard.post');
-
-Route::get('dashboard/refresh', [ChatController::class, 'refresh'])->name('dashboard.refresh');
 
 
 /////         Autenticação      /////

@@ -110,10 +110,10 @@
                                         @foreach ($users as $key => $user)
                                             <td>
                                                 @if ($user->img == 'Sem Imagem')
-                                                    <img src="/assets/img/users/sem_imagem.jpg" class="rounded-circle w-45"
+                                                    <img src="{{asset('storage/users/sem_imagem') }}" class="rounded-circle w-45"
                                                         alt=">{{ $user->name }} {{ $user->apelido }}">
                                                 @else
-                                                    <img src="/assets/img/users/{{ $user->img }}"
+                                                    <img src="{{asset('storage/users/'.$user->img) }}"
                                                         class="rounded-circle w-45"
                                                         alt=">{{ $user->name }} {{ $user->apelido }}">
                                                 @endif
