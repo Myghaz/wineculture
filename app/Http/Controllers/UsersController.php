@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Receitas;
+use App\Http\Requests\UpdateUsersRequest;
 
 class UsersController extends Controller
 {
@@ -83,17 +84,6 @@ class UsersController extends Controller
 
     }
     
-    public function perfil_edit(Request $request,User $user)
-    {
-        $users = User::find(Auth::user()->id);
-
-        
-        $user->update($request->all());
-        
-        $user->save();
-        return redirect()->route('perfil')->with('success', 'Perfil editado com sucesso', compact('user'));
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -144,10 +134,10 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UpdateUsersRequest $request, User $user)
     {
-        
-        $user->update($request->all());
+        $fields = $request->validated();
+        $user->update($fields);
         
         $user->genero = $request->genero;
         $user->pais = $request->pais;
