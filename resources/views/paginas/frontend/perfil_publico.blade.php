@@ -10,7 +10,7 @@
 
 @section("content")
 <header class="header-left">
-<img  src="{{ URL::asset('assets/img/paginas/frontend/perfil_publico/back.jpg') }}" alt="Banner">
+    <img src="{{ URL::asset('assets/img/paginas/frontend/perfil_publico/back.jpg') }}" alt="Banner">
 </header>
 <main>
     <div class="ui grid bread">
@@ -34,10 +34,6 @@
                     <div class="stat col-xs-4">
                         <p class="number-stat">{{$userblogcount}}</p>
                         <p class="desc-stat">Notícias</p>
-                    </div>
-                    <div class="stat col-xs-4" style="padding-left: 50px;">
-                        <p class="number-stat">38</p>
-                        <p class="desc-stat">Uploads</p>
                     </div>
                 </div>
             </div>
@@ -74,7 +70,7 @@
                     </div>
                 </section>
                 @else
-                <p class="sematividade">Sem Atividade no Website</p> 
+                <p class="sematividade">Sem Atividade no Website</p>
                 @endif
             </div>
 

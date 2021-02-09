@@ -75,7 +75,7 @@
           </div>
         </div>
         <h6 class="team-title">Sérgio Silvestre</h6>
-        <span>Full-Stack Developer</span>
+        <span>Back-End Developer</span>
       </div>
     </div>
     <!-- end team member -->
@@ -119,7 +119,7 @@
           </div>
         </div>
         <h6 class="team-title">José Parreira</h6>
-        <span>Full-Stack Developer</span>
+        <span>Front-End Developer</span>
       </div>
     </div>
     
@@ -140,7 +140,7 @@
           </div>
         </div>
         <h6 class="team-title">Miguel Pereira</h6>
-        <span>Back-End Developer</span>
+        <span>Full-Stack Developer</span>
       </div>
     </div>
     <div class="col-md-3 col-sm-6 team-wrap">

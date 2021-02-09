@@ -25,9 +25,9 @@ class UsersSeeder extends Seeder
     {
         User::create([
             'tipouser' => 'Administrador',
-            'email' => 'administrador1@gmail.com',
+            'email' => 'admin@gmail.com',
             'password' => bcrypt('123456'),
-            'name' => 'Admin',
+            'name' => 'WineCulture',
             'apelido' => 'Um',
             'data_nasc' => Carbon::parse('2000-06-26'),
             'genero' => 'Masculino',
@@ -94,11 +94,11 @@ class UsersSeeder extends Seeder
             'created_at' => Carbon::parse('2020-06-05'),
         ]);
         User::create([
-            'tipouser' => 'Administrador',
-            'email' => 'Admin@gmail.com',
+            'tipouser' => 'Utilizador',
+            'email' => 'utilizador3@gmail.com',
             'password' => bcrypt('123456'),
-            'name' => 'Admin',
-            'apelido' => 'WIneculture',
+            'name' => 'Tres',
+            'apelido' => 'Wineculture',
             'data_nasc' => Carbon::parse('2004-11-25'),
             'genero' => 'Nao Revelar',
             'pais' => 'Portugal',

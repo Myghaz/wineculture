@@ -350,7 +350,17 @@ blockquote {
     color: #36465d;
 }
 
-
+.addfriend{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    line-height: 47px;
+    font-size: 20px!important;
+    color: #742f37;
+}
 
 .nav {
     display: inline-flex;

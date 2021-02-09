@@ -78,7 +78,12 @@ Route::get('/vinhos/data', [VinhosController::class, 'ordemdata'])->name('vinhos
 Route::get('/vinho{vinho}', [VinhosController::class, 'vinho'])->name('vinho');
 
 
+//ChatController
+Route::get('chat', [AdminController::class, 'chat'])->name('admin_chat');
 
+Route::post('dashboard', [ChatController::class, 'backend_store'])->name('dashboard.post');
+
+Route::get('dashboard/refresh', [ChatController::class, 'refresh'])->name('dashboard.refresh');
 
 
 /////         Autenticação      /////
@@ -128,4 +133,3 @@ Route::middleware('auth', 'verified')->prefix('admin')->group(function () {
 Route::resource('/admin/categoria_vinho', VinhosController::class);
 
 //mensagens
-
