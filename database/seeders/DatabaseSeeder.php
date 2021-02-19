@@ -34,7 +34,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MensagensSeeder::class);
         $this->call(VinhosSeeder::class);
         $this->call(VinhosimgSeeder::class);
-        $this->call(VinhosimgSeeder::class);
         $this->call(VinhosClassSeeder::class);
     }
 }
