@@ -34,7 +34,6 @@
     </div>
 
     <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="{{ URL::asset('assets/js/layouts/frontend/navbar.js') }}"></script>
     <script src="{{ URL::asset('assets/js/layouts/frontend/settings.js') }}"></script>
 
